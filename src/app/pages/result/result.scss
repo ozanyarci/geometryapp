@@ -1,0 +1,305 @@
+@use '../../ui/shell' as s;
+
+:host {
+  display: block;
+  padding-bottom: calc(40px + var(--safe-bottom));
+}
+
+.top-bar {
+  @include s.top-bar;
+  margin-bottom: 18px;
+
+  &__inner {
+    @include s.shell;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: var(--tap);
+  }
+
+  &__back {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--tap);
+    height: var(--tap);
+    margin-inline-start: -12px;
+    color: var(--blueprint);
+    font-size: 22px;
+    text-decoration: none;
+  }
+
+  &__kicker {
+    @include s.label;
+  }
+}
+
+.content {
+  @include s.shell;
+}
+
+/* --- Score summary ------------------------------------------------------- */
+
+.score {
+  @include s.card;
+  padding: 20px 16px;
+  text-align: center;
+
+  &__ratio {
+    font-family: var(--display);
+    letter-spacing: -0.03em;
+
+    strong {
+      font-size: 56px;
+      font-weight: 800;
+      color: var(--blueprint);
+    }
+
+    span {
+      font-size: 24px;
+      color: var(--ink-soft);
+      margin-inline-start: 4px;
+    }
+  }
+
+  &__message {
+    margin-top: 4px;
+    font-size: 16px;
+    color: var(--ink-soft);
+  }
+
+  &__breakdown {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1px;
+    margin: 18px 0 0;
+    background: var(--hair);
+    border: 1px solid var(--hair);
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      padding: 10px 2px;
+      background: var(--card);
+    }
+
+    dt {
+      font-family: var(--mono);
+      font-size: 9.5px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      order: 2;
+    }
+
+    dd {
+      margin: 0;
+      font-family: var(--mono);
+      font-size: 18px;
+      font-variant-numeric: tabular-nums;
+      order: 1;
+    }
+
+    .correct {
+      color: var(--olive);
+    }
+
+    .wrong {
+      color: var(--danger);
+    }
+  }
+}
+
+.section-title {
+  @include s.label;
+  color: var(--ink-soft);
+  margin: 26px 0 10px;
+}
+
+/* --- Question-by-question review ----------------------------------------- */
+
+.review {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item {
+  @include s.card;
+  overflow: hidden;
+
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    min-height: 58px;
+    padding: 10px 14px;
+    background: none;
+    border: 0;
+    text-align: start;
+    cursor: pointer;
+  }
+
+  &__badge {
+    flex: none;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--hair);
+    color: var(--ink-soft);
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 700;
+
+    &--correct {
+      border-color: var(--olive);
+      background: var(--olive-soft);
+      color: var(--olive);
+    }
+
+    &--wrong {
+      border-color: var(--danger);
+      background: var(--danger-soft);
+      color: var(--danger);
+    }
+  }
+
+  &__info {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &__topic {
+    @include s.label;
+    font-size: 10px;
+    color: var(--ink-soft);
+  }
+
+  &__answers {
+    font-family: var(--mono);
+    font-size: 13px;
+  }
+
+  &__toggle {
+    flex: none;
+    font-family: var(--mono);
+    font-size: 20px;
+    color: var(--blueprint);
+  }
+
+  &__body {
+    padding: 0 14px 16px;
+    border-top: 1px solid var(--hair);
+  }
+
+  &__stem {
+    margin-top: 12px;
+    line-height: 1.55;
+  }
+
+  &__ask {
+    margin-top: 10px;
+    font-weight: 600;
+    line-height: 1.55;
+  }
+}
+
+.given {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1.8;
+  border-inline-start: 2px solid var(--blueprint);
+  padding-inline-start: 10px;
+  margin-top: 14px;
+  color: var(--blueprint);
+}
+
+.solution__steps {
+  margin: 16px 0 0;
+  padding-inline-start: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 2px solid var(--ink);
+  padding-top: 14px;
+
+  li {
+    line-height: 1.55;
+
+    &::marker {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--olive);
+    }
+  }
+
+  strong {
+    display: block;
+    font-family: var(--display);
+    font-size: 14px;
+    color: var(--ink);
+  }
+
+  span {
+    display: block;
+    margin-top: 3px;
+    font-size: 15.5px;
+    color: var(--ink-soft);
+  }
+}
+
+/* --- Actions ------------------------------------------------------------- */
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+
+  // Moving on is the expected next step, so it takes the full first row.
+  &__next {
+    @include s.button-primary;
+    flex: 1 1 100%;
+  }
+
+  &__retry {
+    @include s.button-secondary;
+    flex: 1 1 0;
+  }
+
+  &__unit {
+    @include s.button-secondary;
+    flex: 1 1 0;
+  }
+}
+
+.next-hint {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-soft);
+  text-align: center;
+  margin-top: 12px;
+}
+
+@media (min-width: 768px) {
+  .score__ratio strong {
+    font-size: 68px;
+  }
+
+  .item__body {
+    padding: 0 20px 20px;
+  }
+}

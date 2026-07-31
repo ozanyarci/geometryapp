@@ -1,0 +1,177 @@
+<header class="top-bar">
+  <div class="top-bar__inner">
+    <button
+      type="button"
+      class="top-bar__back"
+      (click)="exitDialogOpen.set(true)"
+      aria-label="Modülden çık"
+    >
+      ←
+    </button>
+
+    <span class="top-bar__progress">
+      <strong>{{ store.index() + 1 }}</strong> / {{ store.total() }}
+    </span>
+
+    @if (store.module(); as m) {
+      <span class="top-bar__module">Modül {{ m.order }}</span>
+    }
+
+    @if (practiceMode()) {
+      <span class="top-bar__badge">Çalışma</span>
+    } @else {
+      <span class="top-bar__timer" role="timer" aria-label="Geçen süre">
+        {{ formatDuration(store.elapsedSeconds()) }}
+      </span>
+      <button type="button" class="top-bar__finish" (click)="requestFinish()">Bitir</button>
+    }
+  </div>
+
+  <nav class="dots" aria-label="Soru listesi">
+    @for (question of store.questions(); track question.id; let i = $index) {
+      <button
+        type="button"
+        class="dot"
+        [class]="dotClass(i)"
+        [attr.aria-label]="i + 1 + '. soru'"
+        [attr.aria-current]="i === store.index() ? 'true' : null"
+        (click)="store.goToQuestion(i)"
+      >
+        {{ i + 1 }}
+      </button>
+    }
+  </nav>
+</header>
+
+<main class="content">
+  @if (store.currentQuestion(); as question) {
+    <article class="question">
+      <div class="question__head">
+        <span class="question__number">{{ store.index() + 1 }}</span>
+        <span class="question__topic">{{ question.topic }}</span>
+      </div>
+
+      @if (question.figure) {
+        <app-figure [figure]="question.figure" />
+      }
+
+      @if (question.given?.length) {
+        <div class="given">
+          @for (line of question.given; track line) {
+            <span>{{ line }}</span>
+          }
+        </div>
+      }
+
+      @for (paragraph of question.stem; track paragraph) {
+        <p class="question__stem">{{ paragraph }}</p>
+      }
+
+      @if (question.ask) {
+        <p class="question__ask">{{ question.ask }}</p>
+      }
+
+      <ul class="choices">
+        @for (choice of question.choices; track choice.key) {
+          <li>
+            <button
+              type="button"
+              class="choice"
+              [class]="choiceClass(choice.key)"
+              [attr.aria-disabled]="store.currentLocked()"
+              [attr.aria-pressed]="store.currentAnswer() === choice.key"
+              (click)="answer(choice.key)"
+            >
+              <span class="choice__letter">{{ choice.key }}</span>
+              <span class="choice__text">{{ choice.text }}</span>
+            </button>
+          </li>
+        }
+      </ul>
+
+      @if (practiceMode() && !feedbackVisible()) {
+        <button type="button" class="hint-button" (click)="store.toggleHint()">
+          {{ store.hintRevealed() ? 'İpucunu gizle' : 'İpucu' }}
+        </button>
+
+        @if (store.hintRevealed()) {
+          <p class="hint">{{ question.hint }}</p>
+        }
+      }
+
+      @if (feedbackVisible()) {
+        <p class="feedback" [class.feedback--wrong]="!answerIsCorrect()" role="status">
+          @if (answerIsCorrect()) {
+            Doğru cevap.
+          } @else {
+            Yanlış — doğru cevap {{ question.answer }} şıkkı.
+          }
+        </p>
+
+        <section class="solution" aria-label="Çözüm">
+          <h2 class="solution__title">Çözüm</h2>
+
+          @if (question.solutionFigure) {
+            <app-figure [figure]="question.solutionFigure" />
+          }
+
+          <ol class="solution__steps">
+            @for (step of question.solution; track step.title) {
+              <li>
+                <strong>{{ step.title }}</strong>
+                <span>{{ step.detail }}</span>
+              </li>
+            }
+          </ol>
+        </section>
+      }
+    </article>
+  }
+</main>
+
+<footer class="bottom-bar">
+  <div class="bottom-bar__inner">
+    <button
+      type="button"
+      class="bottom-bar__nav"
+      [disabled]="store.isFirstQuestion()"
+      (click)="store.previous()"
+    >
+      ← Önceki
+    </button>
+
+    <button type="button" class="bottom-bar__forward" (click)="forward()">
+      {{ store.isLastQuestion() ? 'Bitir' : 'Sonraki →' }}
+    </button>
+  </div>
+</footer>
+
+@if (exitDialogOpen()) {
+  <div class="backdrop" (click)="exitDialogOpen.set(false)"></div>
+  <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="exit-heading">
+    <h2 class="dialog__title" id="exit-heading">Çıkmak istediğine emin misin?</h2>
+    <p class="dialog__text">Bu modüldeki cevapların kaydedilmeden silinecek.</p>
+    <div class="dialog__buttons">
+      <button type="button" class="dialog__cancel" (click)="exitDialogOpen.set(false)">
+        Devam et
+      </button>
+      <button type="button" class="dialog__confirm" (click)="confirmExit()">Çık</button>
+    </div>
+  </div>
+}
+
+@if (finishDialogOpen()) {
+  <div class="backdrop" (click)="finishDialogOpen.set(false)"></div>
+  <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="finish-heading">
+    <h2 class="dialog__title" id="finish-heading">Modülü bitirelim mi?</h2>
+    <p class="dialog__text">
+      {{ blankCount() }} soruyu boş bıraktın. Boş sorular yanlış sayılmaz ama net hesabına girmez.
+    </p>
+    <div class="dialog__buttons">
+      <button type="button" class="dialog__cancel" (click)="finishDialogOpen.set(false)">
+        Geri dön
+      </button>
+      <button type="button" class="dialog__confirm" (click)="finish()">Bitir</button>
+    </div>
+  </div>
+}

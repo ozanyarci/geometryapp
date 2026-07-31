@@ -1,0 +1,70 @@
+@if (unit; as u) {
+  <header class="top-bar">
+    <div class="top-bar__inner">
+      <a class="top-bar__back" routerLink="/" aria-label="Ana sayfaya dön">←</a>
+      <span class="top-bar__kicker">{{ u.subtitle }}</span>
+    </div>
+  </header>
+
+  <main class="content">
+    <h1 class="title">{{ u.title }}</h1>
+    <p class="description">{{ u.description }}</p>
+
+    <p class="question-count">
+      {{ u.modules.length }} modül · {{ questionCount() }} soru
+      @if (doneCount() > 0) {
+        · {{ doneCount() }} modülü denedin
+      }
+    </p>
+
+    <h2 class="section-title">Modüller</h2>
+    <p class="hint-text">
+      Her modül {{ u.modules[0].questions.length }} sorudan oluşur. Modülü bitirince çözümlerini
+      görür, sonra bir sonrakine geçersin.
+    </p>
+
+    <ul class="module-list">
+      @for (row of rows(); track row.module.id) {
+        <li>
+          <a class="module" [routerLink]="['/unit', u.id, 'module', row.module.id]">
+            <div class="module__order">{{ row.module.order }}</div>
+            <div class="module__text">
+              <h3 class="module__name">{{ row.module.title }}</h3>
+              <p class="module__summary">{{ row.module.summary }}</p>
+
+              <div class="module__status">
+                <div
+                  class="bar"
+                  role="progressbar"
+                  [attr.aria-valuenow]="row.best"
+                  [attr.aria-valuemin]="0"
+                  [attr.aria-valuemax]="row.total"
+                  [attr.aria-label]="row.module.title + ' modülündeki ilerleme'"
+                >
+                  <span
+                    class="bar__fill"
+                    [style.inline-size.%]="percentage(row.best, row.total)"
+                  ></span>
+                </div>
+                <span class="module__score">
+                  @if (row.attempted) {
+                    {{ row.best }} / {{ row.total }}
+                  } @else {
+                    {{ row.total }} soru
+                  }
+                </span>
+              </div>
+            </div>
+            <span class="module__arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+      }
+    </ul>
+  </main>
+} @else {
+  <main class="content empty">
+    <h1 class="title">Ünite bulunamadı</h1>
+    <p class="description">Aradığın ünite kaldırılmış ya da adresi değişmiş olabilir.</p>
+    <a class="start" routerLink="/">Ana sayfaya dön</a>
+  </main>
+}

@@ -1,0 +1,212 @@
+/* ==========================================================================
+   Global styles.
+   Keeps the "blueprint / technical drawing" look of the source test, with
+   mobile-first scaling and a dark theme added on top.
+   ========================================================================== */
+
+:root {
+  --paper: #e4ebee;
+  --paper-deep: #d5e0e5;
+  --card: #fafcfc;
+  --ink: #13212c;
+  --ink-soft: #5a6c77;
+  --hair: #c2d0d7;
+  --blueprint: #1d5b85;
+  --blueprint-soft: #e2edf4;
+  --olive: #5f6d33;
+  --olive-soft: #eaeedd;
+  --danger: #a2382a;
+  --danger-soft: #f7e4e1;
+  --figure-bg: #f1f5f7;
+  --grid-line: rgba(29, 91, 133, 0.1);
+  --shadow: 0 1px 0 rgba(19, 33, 44, 0.06);
+
+  --display: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --body: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* Base size for touch targets. */
+  --tap: 46px;
+  --radius: 2px;
+  --gutter: 14px;
+  --shell: 720px;
+
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #101a21;
+    --paper-deep: #0a1116;
+    --card: #17242d;
+    --ink: #dfe9ee;
+    --ink-soft: #8fa4b0;
+    --hair: #2c3f4b;
+    --blueprint: #67b2df;
+    --blueprint-soft: #16303f;
+    --olive: #a9bd6e;
+    --olive-soft: #1e2a1c;
+    --danger: #e08272;
+    --danger-soft: #33201d;
+    --figure-bg: #14202a;
+    --grid-line: rgba(103, 178, 223, 0.12);
+    --shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.5;
+  overscroll-behavior-y: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Body text steps up slightly on tablets. */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--display);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  margin: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--blueprint);
+  outline-offset: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   Figure ink.
+   These rules target SVG injected via innerHTML, which sits outside component
+   style encapsulation — so they must be declared globally.
+   -------------------------------------------------------------------------- */
+
+.figure-svg {
+  /* Markers inside the SVG resolve currentColor from here. */
+  color: var(--ink);
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.figure-svg .ln {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.7;
+  stroke-linecap: round;
+}
+
+.figure-svg .arc {
+  fill: none;
+  stroke: var(--blueprint);
+  stroke-width: 1.4;
+}
+
+/* Construction lines added for the solution, drawn dashed so they read as
+   annotation rather than part of the given figure. */
+.figure-svg .aux {
+  fill: none;
+  stroke: var(--blueprint);
+  stroke-width: 1.5;
+  stroke-dasharray: 7 5;
+  stroke-linecap: round;
+}
+
+.figure-svg .aux-head {
+  fill: none;
+  stroke: var(--blueprint);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.figure-svg .tick {
+  stroke: var(--blueprint);
+  stroke-width: 1.4;
+  stroke-linecap: round;
+}
+
+.figure-svg .par {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.figure-svg .pt {
+  fill: var(--ink);
+}
+
+.figure-svg text {
+  font-family: var(--mono);
+  font-size: 16px;
+  fill: var(--ink);
+}
+
+.figure-svg text.val {
+  fill: var(--blueprint);
+  font-size: 15px;
+}
+
+/* --------------------------------------------------------------------------
+   Utilities
+   -------------------------------------------------------------------------- */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

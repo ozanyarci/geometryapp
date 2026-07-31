@@ -1,0 +1,8 @@
+<router-outlet />
+
+@if (updateReady()) {
+  <div class="update-bar" role="status">
+    <span>Uygulamanın yeni sürümü hazır.</span>
+    <button type="button" (click)="reloadApp()">Güncelle</button>
+  </div>
+}

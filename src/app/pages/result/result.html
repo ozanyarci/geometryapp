@@ -1,0 +1,140 @@
+<header class="top-bar">
+  <div class="top-bar__inner">
+    <a class="top-bar__back" [routerLink]="['/unit', unitId()]" aria-label="Modül listesine dön"
+      >←</a
+    >
+    <span class="top-bar__kicker">
+      @if (store.module(); as m) {
+        Modül {{ m.order }} · Sonuç
+      } @else {
+        Sonuç
+      }
+    </span>
+  </div>
+</header>
+
+<main class="content">
+  <section class="score" aria-label="Test sonucu">
+    <p class="score__ratio">
+      <strong>{{ store.correctCount() }}</strong>
+      <span>/ {{ store.total() }}</span>
+    </p>
+    <p class="score__message">{{ message() }}</p>
+
+    <dl class="score__breakdown">
+      <div>
+        <dt>Doğru</dt>
+        <dd class="correct">{{ store.correctCount() }}</dd>
+      </div>
+      <div>
+        <dt>Yanlış</dt>
+        <dd class="wrong">{{ store.wrongCount() }}</dd>
+      </div>
+      <div>
+        <dt>Boş</dt>
+        <dd>{{ store.blankCount() }}</dd>
+      </div>
+      <div>
+        <dt>Net</dt>
+        <dd>{{ store.net() | number: '1.0-2' }}</dd>
+      </div>
+      <div>
+        <dt>Süre</dt>
+        <dd>{{ formatDuration(store.elapsedSeconds()) }}</dd>
+      </div>
+    </dl>
+  </section>
+
+  <h2 class="section-title">Soru soru inceleme</h2>
+
+  <ol class="review">
+    @for (result of store.results(); track result.question.id; let i = $index) {
+      <li class="item">
+        <button
+          type="button"
+          class="item__head"
+          [attr.aria-expanded]="isOpen(result.question.id)"
+          (click)="toggleSolution(result.question.id)"
+        >
+          <span
+            class="item__badge"
+            [class.item__badge--correct]="result.isCorrect"
+            [class.item__badge--wrong]="!result.isCorrect && !result.isBlank"
+          >
+            {{ i + 1 }}
+          </span>
+
+          <span class="item__info">
+            <span class="item__topic">{{ result.question.topic }}</span>
+            <span class="item__answers">
+              @if (result.isBlank) {
+                Boş bıraktın · Doğru: {{ result.question.answer }}
+              } @else if (result.isCorrect) {
+                Cevabın: {{ result.selected }} · Doğru
+              } @else {
+                Cevabın: {{ result.selected }} · Doğru: {{ result.question.answer }}
+              }
+            </span>
+          </span>
+
+          <span class="item__toggle" aria-hidden="true">
+            {{ isOpen(result.question.id) ? '−' : '+' }}
+          </span>
+        </button>
+
+        @if (isOpen(result.question.id)) {
+          <div class="item__body">
+            @if (result.question.figure) {
+              <app-figure [figure]="result.question.figure" />
+            }
+
+            @if (result.question.given?.length) {
+              <div class="given">
+                @for (line of result.question.given; track line) {
+                  <span>{{ line }}</span>
+                }
+              </div>
+            }
+
+            @for (paragraph of result.question.stem; track paragraph) {
+              <p class="item__stem">{{ paragraph }}</p>
+            }
+
+            @if (result.question.ask) {
+              <p class="item__ask">{{ result.question.ask }}</p>
+            }
+
+            @if (result.question.solutionFigure) {
+              <app-figure [figure]="result.question.solutionFigure" />
+            }
+
+            <ol class="solution__steps">
+              @for (step of result.question.solution; track step.title) {
+                <li>
+                  <strong>{{ step.title }}</strong>
+                  <span>{{ step.detail }}</span>
+                </li>
+              }
+            </ol>
+          </div>
+        }
+      </li>
+    }
+  </ol>
+
+  <div class="actions">
+    @if (next(); as n) {
+      <a class="actions__next" [routerLink]="['/unit', unitId(), 'module', n.id]">
+        Sonraki modül →
+      </a>
+    }
+    <button type="button" class="actions__retry" (click)="retry()">Tekrar çöz</button>
+    <a class="actions__unit" [routerLink]="['/unit', unitId()]">Modül listesi</a>
+  </div>
+
+  @if (next(); as n) {
+    <p class="next-hint">Sırada: {{ n.order }}. modül — {{ n.title }}</p>
+  } @else {
+    <p class="next-hint">Bu ünitenin son modülüydü. Tebrikler!</p>
+  }
+</main>

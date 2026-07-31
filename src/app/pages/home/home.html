@@ -1,0 +1,73 @@
+<header class="intro">
+  <div class="intro__inner">
+    <p class="intro__kicker">YKS · TYT / AYT Hazırlık</p>
+    <h1 class="intro__title">Geometri</h1>
+    <p class="intro__subtitle">Çözümlü soru bankası</p>
+  </div>
+</header>
+
+<main class="content">
+  <section class="summary" aria-label="Genel ilerleme">
+    <div class="summary__box">
+      <span class="summary__value">{{ solvedQuestions() }}</span>
+      <span class="summary__label">Doğru</span>
+    </div>
+    <div class="summary__box">
+      <span class="summary__value">{{ totalQuestions() }}</span>
+      <span class="summary__label">Toplam soru</span>
+    </div>
+    <div class="summary__box">
+      <span class="summary__value">
+        {{ percentage(solvedQuestions(), attemptedQuestions()) }}<small>%</small>
+      </span>
+      <span class="summary__label">Başarı</span>
+    </div>
+  </section>
+
+  <h2 class="section-title">Üniteler</h2>
+
+  <ul class="unit-list">
+    @for (row of units(); track row.unit.id) {
+      <li>
+        <a class="unit" [routerLink]="['/unit', row.unit.id]">
+          <div class="unit__order">{{ row.unit.order }}</div>
+          <div class="unit__text">
+            <p class="unit__kicker">{{ row.unit.subtitle }}</p>
+            <h3 class="unit__name">{{ row.unit.title }}</h3>
+            <p class="unit__description">{{ row.unit.description }}</p>
+            <p class="unit__meta">{{ row.moduleCount }} modül · {{ row.questionCount }} soru</p>
+
+            <div class="unit__status">
+              <div
+                class="bar"
+                role="progressbar"
+                [attr.aria-valuenow]="row.best"
+                [attr.aria-valuemin]="0"
+                [attr.aria-valuemax]="row.questionCount"
+                [attr.aria-label]="row.unit.title + ' ünitesindeki ilerleme'"
+              >
+                <span
+                  class="bar__fill"
+                  [style.inline-size.%]="percentage(row.best, row.questionCount)"
+                ></span>
+              </div>
+              <span class="unit__score">{{ row.best }} / {{ row.questionCount }}</span>
+            </div>
+          </div>
+          <span class="unit__arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+    }
+
+    <li>
+      <div class="unit unit--upcoming" aria-disabled="true">
+        <div class="unit__order">2</div>
+        <div class="unit__text">
+          <p class="unit__kicker">Ünite 2</p>
+          <h3 class="unit__name">Üçgenler</h3>
+          <p class="unit__description">Yakında eklenecek.</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</main>

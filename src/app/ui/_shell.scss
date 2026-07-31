@@ -1,0 +1,79 @@
+// Layout and component mixins shared across pages.
+
+@mixin shell {
+  width: 100%;
+  max-width: var(--shell);
+  margin-inline: auto;
+  padding-inline: calc(var(--gutter) + var(--safe-left));
+  padding-inline-end: calc(var(--gutter) + var(--safe-right));
+}
+
+@mixin card {
+  background: var(--card);
+  border: 1px solid var(--hair);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+@mixin label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--blueprint);
+}
+
+@mixin button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: var(--tap);
+  padding: 0 18px;
+  border-radius: var(--radius);
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+
+@mixin button-primary {
+  @include button-base;
+  background: var(--blueprint);
+  border: 1px solid var(--blueprint);
+  color: var(--card);
+
+  &:not(:disabled):active {
+    background: color-mix(in srgb, var(--blueprint) 82%, black);
+  }
+}
+
+@mixin button-secondary {
+  @include button-base;
+  background: transparent;
+  border: 1px solid var(--hair);
+  color: var(--ink);
+
+  &:not(:disabled):active {
+    background: var(--paper-deep);
+  }
+}
+
+// Sticky back-and-title strip at the top of a page.
+@mixin top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--hair);
+  padding-top: var(--safe-top);
+}

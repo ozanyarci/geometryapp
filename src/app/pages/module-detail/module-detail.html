@@ -1,0 +1,63 @@
+@if (found; as f) {
+  <header class="top-bar">
+    <div class="top-bar__inner">
+      <a class="top-bar__back" [routerLink]="['/unit', f.unit.id]" aria-label="Modül listesine dön"
+        >←</a
+      >
+      <span class="top-bar__kicker">{{ f.unit.title }} · Modül {{ f.module.order }}</span>
+    </div>
+  </header>
+
+  <main class="content">
+    <h1 class="title">{{ f.module.title }}</h1>
+    <p class="description">{{ f.module.summary }}</p>
+
+    <ul class="topics" aria-label="Bu modüldeki konular">
+      @for (topic of topics(); track topic) {
+        <li>{{ topic }}</li>
+      }
+    </ul>
+
+    <p class="question-count">{{ f.module.questions.length }} soru</p>
+
+    <h2 class="section-title" id="mode-heading">Nasıl çalışmak istersin?</h2>
+
+    <div class="modes" role="radiogroup" aria-labelledby="mode-heading">
+      @for (option of modes; track option.mode) {
+        <button
+          type="button"
+          class="mode"
+          role="radio"
+          [class.mode--selected]="selectedMode() === option.mode"
+          [attr.aria-checked]="selectedMode() === option.mode"
+          (click)="selectMode(option.mode)"
+        >
+          <span class="mode__marker" aria-hidden="true"></span>
+          <span class="mode__text">
+            <span class="mode__name">{{ option.name }}</span>
+            <span class="mode__description">{{ option.description }}</span>
+          </span>
+        </button>
+      }
+    </div>
+
+    @if (record(); as r) {
+      <div class="record">
+        <span class="record__label">En iyi sonucun</span>
+        <span class="record__value">{{ r.bestCorrect }} / {{ r.total }} doğru</span>
+        @if (r.bestSeconds !== undefined) {
+          <span class="record__value">{{ formatDuration(r.bestSeconds) }} süre</span>
+        }
+        <span class="record__value">{{ r.attempts }} deneme</span>
+      </div>
+    }
+
+    <button type="button" class="start" (click)="start()">Başla</button>
+  </main>
+} @else {
+  <main class="content empty">
+    <h1 class="title">Modül bulunamadı</h1>
+    <p class="description">Aradığın modül kaldırılmış ya da adresi değişmiş olabilir.</p>
+    <a class="start" routerLink="/">Ana sayfaya dön</a>
+  </main>
+}
