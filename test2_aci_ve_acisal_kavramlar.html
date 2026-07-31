@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Açı ve Açısal Kavramlar — Test 2</title>
+<style>
+  :root{
+    --paper:#E4EBEE;
+    --card:#FAFCFC;
+    --ink:#13212C;
+    --hair:#C2D0D7;
+    --blueprint:#1D5B85;
+    --olive:#6C7A3C;
+    --display:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    --body:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;padding:18px 14px 48px;background:var(--paper);color:var(--ink);
+    font-family:var(--body);font-size:17px;line-height:1.5;-webkit-text-size-adjust:100%}
+  header{max-width:720px;margin:0 auto 22px;border-bottom:2px solid var(--ink);padding-bottom:10px}
+  header .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--blueprint)}
+  header h1{font-family:var(--display);font-weight:800;letter-spacing:-.02em;
+    font-size:clamp(26px,8vw,40px);margin:2px 0 0;text-transform:uppercase}
+  header p{font-family:var(--mono);font-size:12px;color:#5A6C77;margin:6px 0 0}
+
+  main{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+  .q{background:var(--card);border:1px solid var(--hair);padding:14px 14px 16px}
+  .q > .num{font-family:var(--mono);font-size:14px;font-weight:700;color:var(--blueprint);
+    border:1px solid var(--blueprint);width:32px;height:30px;
+    display:flex;align-items:center;justify-content:center;margin-bottom:10px}
+  .stem{margin:0}
+  .ask{margin:10px 0 0;font-weight:600}
+  .given{font-family:var(--mono);font-size:13px;line-height:2;
+    border-left:2px solid var(--blueprint);padding-left:10px;margin:12px 0 0;color:#26414F}
+  .frac{display:inline-flex;flex-direction:column;vertical-align:-0.55em;line-height:1.05;
+    text-align:center;margin:0 2px}
+  .frac span:first-child{border-bottom:1px solid currentColor;padding:0 3px}
+
+  .fig{margin:12px -4px 0;padding:8px 4px;background-color:#F1F5F7;
+    background-image:linear-gradient(rgba(29,91,133,.10) 1px,transparent 1px),
+                     linear-gradient(90deg,rgba(29,91,133,.10) 1px,transparent 1px);
+    background-size:16px 16px;border:1px solid var(--hair)}
+  .fig svg{display:block;width:100%;height:auto}
+  .fig figcaption{font-family:var(--mono);font-size:10px;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--blueprint);padding:2px 4px 0}
+
+  .opts{list-style:none;display:flex;flex-wrap:wrap;gap:6px 16px;margin:14px 0 0;padding:0;
+    font-family:var(--mono);font-size:15px}
+  .opts li{white-space:nowrap}
+  .opts b{color:var(--blueprint);font-weight:700;margin-right:3px}
+
+  .ln{fill:none;stroke:var(--ink);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .thin{stroke-width:1.3}
+  .arc{fill:none;stroke:var(--blueprint);stroke-width:1.4}
+  .par{fill:none;stroke:var(--ink);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .pt{fill:var(--ink)}
+  text{font-family:var(--mono);font-size:15px;fill:var(--ink)}
+  text.val{fill:var(--blueprint);font-size:14px}
+  text.sm{fill:var(--blueprint);font-size:13px}
+
+  details{max-width:720px;margin:22px auto 0;border-top:2px solid var(--ink);padding-top:12px}
+  summary{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--olive);cursor:pointer}
+  details ol{font-family:var(--mono);font-size:13.5px;padding-left:24px;line-height:1.9}
+  details ol b{color:var(--olive)}
+  summary:focus-visible{outline:2px solid var(--blueprint);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="kicker">Bölüm 1 · Test 2</div>
+  <h1>Açı ve Açısal Kavramlar</h1>
+  <p>7 soru · dairesel grafik, tümler & bütünler, paralellik, açı küme kesişimi</p>
+</header>
+
+<main>
+
+<!-- 1 -->
+<section class="q">
+  <div class="num">1</div>
+  <figure class="fig">
+    <svg viewBox="0 0 320 160" role="img" aria-label="Dairesel grafikte x, 160° ve 115° açı ölçüleri">
+      <circle cx="160" cy="80" r="60" fill="none" stroke="#13212C" stroke-width="1.7"/>
+      <line class="ln" x1="160" y1="80" x2="220" y2="80"/>
+      <line class="ln" x1="160" y1="80" x2="103.6" y2="100.5"/>
+      <line class="ln" x1="160" y1="80" x2="154.8" y2="20.2"/>
+
+      <path class="arc" d="M190,80 A30,30 0 0 1 131.8,90.3"/>
+      <text class="sm" x="165" y="115" text-anchor="middle">160°</text>
+
+      <path class="arc" d="M131.8,90.3 A30,30 0 0 1 157.4,50.1"/>
+      <text class="sm" x="125" y="60" text-anchor="middle">115°</text>
+
+      <path class="arc" d="M157.4,50.1 A30,30 0 0 1 190,80"/>
+      <text class="val" x="180" y="55" text-anchor="middle">x</text>
+
+      <circle class="pt" cx="160" cy="80" r="3.2"/>
+    </svg>
+    <figcaption>Şekil 1</figcaption>
+  </figure>
+  <p class="given">Yandaki dairesel grafikte x, 160° ve 115° açı ölçüleri verilmiştir.</p>
+  <p class="ask">Yukarıdaki verilere göre, x kaç derecedir?</p>
+  <ul class="opts"><li><b>A)</b> 75</li><li><b>B)</b> 80</li><li><b>C)</b> 85</li><li><b>D)</b> 90</li><li><b>E)</b> 95</li></ul>
+</section>
+
+<!-- 2 -->
+<section class="q">
+  <div class="num">2</div>
+  <p class="stem">Bir açının bütünleyeninin ölçüsü, tümlerinin ölçüsünün 4 katından 15° eksiktir.</p>
+  <p class="ask">Buna göre, bu açının ölçüsü kaç derecedir?</p>
+  <ul class="opts"><li><b>A)</b> 45</li><li><b>B)</b> 50</li><li><b>C)</b> 55</li><li><b>D)</b> 60</li><li><b>E)</b> 65</li></ul>
+</section>
+
+<!-- 3 -->
+<section class="q">
+  <div class="num">3</div>
+  <p class="stem">Bir açının tümlerinin ölçüsü ile bütünlerinin ölçüsü toplamı 190°'dir.</p>
+  <p class="ask">Buna göre, bu açının bütünleyeninin ölçüsü kaç derecedir?</p>
+  <ul class="opts"><li><b>A)</b> 120</li><li><b>B)</b> 130</li><li><b>C)</b> 140</li><li><b>D)</b> 150</li><li><b>E)</b> 160</li></ul>
+</section>
+
+<!-- 4 -->
+<section class="q">
+  <div class="num">4</div>
+  <figure class="fig">
+    <svg viewBox="0 0 340 160" role="img" aria-label="AB ve CD paralel doğruları arasında kesenler ve açılar">
+      <defs><marker id="t4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0,1 L9,5 L0,9" fill="none" stroke="#13212C" stroke-width="1.6" stroke-linecap="round"/></marker></defs>
+
+      <line class="ln" x1="20" y1="30" x2="310" y2="30" marker-start="url(#t4)" marker-end="url(#t4)"/>
+      <line class="ln" x1="20" y1="120" x2="310" y2="120" marker-start="url(#t4)" marker-end="url(#t4)"/>
+      
+      <line class="ln" x1="45" y1="165" x2="175" y2="5" marker-start="url(#t4)" marker-end="url(#t4)"/>
+      <line class="ln" x1="170" y1="5" x2="300" y2="165" marker-start="url(#t4)" marker-end="url(#t4)"/>
+
+      <path class="par" d="M270,24 L277,30 L270,36"/>
+      <path class="par" d="M270,114 L277,120 L270,126"/>
+
+      <path class="arc" d="M110,30 A25,25 0 0 0 129,13"/>
+      <text class="sm" x="105" y="18" text-anchor="middle">a</text>
+
+      <path class="arc" d="M66,120 A25,25 0 0 0 88.5,140"/>
+      <text class="sm" x="65" y="145" text-anchor="middle">2b</text>
+
+      <path class="arc" d="M194,30 A25,25 0 0 0 216,48"/>
+      <text class="sm" x="216" y="24">3a</text>
+
+      <path class="arc" d="M239,120 A25,25 0 0 0 252,102"/>
+      <text class="sm" x="260" y="112">b</text>
+
+      <circle class="pt" cx="125" cy="30" r="3.2"/>
+      <circle class="pt" cx="213" cy="30" r="3.2"/>
+      <circle class="pt" cx="81" cy="120" r="3.2"/>
+      <circle class="pt" cx="264" cy="120" r="3.2"/>
+
+      <text x="35" y="22">K</text>
+      <text x="125" y="22" text-anchor="middle">A</text>
+      <text x="213" y="22" text-anchor="middle">B</text>
+      <text x="81" y="140" text-anchor="middle">C</text>
+      <text x="264" y="140" text-anchor="middle">D</text>
+      <text x="40" y="140">L</text>
+    </svg>
+    <figcaption>Şekil 4</figcaption>
+  </figure>
+  <p class="given">AB // CD<br>m(CAK) = a<br>m(ACL) = 2b<br>m(ABD) = 3a<br>m(CDB) = b</p>
+  <p class="ask">Yukarıdaki verilere göre, <span class="frac"><span>b</span><span>a</span></span> oranı kaçtır?</p>
+  <ul class="opts"><li><b>A)</b> 1/2</li><li><b>B)</b> 1</li><li><b>C)</b> 3/2</li><li><b>D)</b> 2</li><li><b>E)</b> 3</li></ul>
+</section>
+
+<!-- 5 -->
+<section class="q">
+  <div class="num">5</div>
+  <figure class="fig">
+    <svg viewBox="0 0 340 160" role="img" aria-label="Kolları karşılıklı paralel BA C ve ED F açıları">
+      <defs><marker id="t5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0,1 L9,5 L0,9" fill="none" stroke="#13212C" stroke-width="1.6" stroke-linecap="round"/></marker></defs>
+
+      <line class="ln" x1="70" y1="125" x2="135" y2="30" marker-end="url(#t5)"/>
+      <line class="ln" x1="70" y1="125" x2="200" y2="125" marker-end="url(#t5)"/>
+
+      <line class="ln" x1="180" y1="115" x2="245" y2="20" marker-end="url(#t5)"/>
+      <line class="ln" x1="180" y1="115" x2="310" y2="115" marker-end="url(#t5)"/>
+
+      <path class="par" d="M100,75 L106,70 L112,77"/>
+      <path class="par" d="M210,65 L216,60 L222,67"/>
+
+      <path class="par" d="M140,119 L147,125 L140,131"/>
+      <path class="par" d="M250,109 L257,115 L250,121"/>
+
+      <path class="arc" d="M96,125 A30,30 0 0 0 87,100"/>
+      <text class="sm" x="110" y="110">5x − 12°</text>
+
+      <path class="arc" d="M206,115 A30,30 0 0 0 197,90"/>
+      <text class="sm" x="220" y="100">3x + 24°</text>
+
+      <circle class="pt" cx="70" cy="125" r="3.2"/>
+      <circle class="pt" cx="180" cy="115" r="3.2"/>
+
+      <text x="60" y="135">B</text>
+      <text x="135" y="20">A</text>
+      <text x="200" y="142">C</text>
+      <text x="170" y="125">D</text>
+      <text x="245" y="12">E</text>
+      <text x="310" y="132">F</text>
+    </svg>
+    <figcaption>Şekil 5</figcaption>
+  </figure>
+  <p class="given">[BA // [DE<br>[BC // [DF<br>m(ABC) = 5x − 12°<br>m(EDF) = 3x + 24°</p>
+  <p class="ask">Yukarıdaki verilere göre, m(ABC) kaç derecedir?</p>
+  <ul class="opts"><li><b>A)</b> 68</li><li><b>B)</b> 72</li><li><b>C)</b> 75</li><li><b>D)</b> 78</li><li><b>E)</b> 84</li></ul>
+</section>
+
+<!-- 6 -->
+<section class="q">
+  <div class="num">6</div>
+  <figure class="fig">
+    <svg viewBox="0 0 340 170" role="img" aria-label="A noktasından çıkan dik ışınlar ve ABC dik üçgeni">
+      <defs><marker id="t6" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0,1 L9,5 L0,9" fill="none" stroke="#13212C" stroke-width="1.6" stroke-linecap="round"/></marker></defs>
+
+      <line class="ln" x1="160" y1="95" x2="80" y2="30" marker-end="url(#t6)"/>
+      <line class="ln" x1="160" y1="95" x2="270" y2="95"/>
+      <line class="ln" x1="160" y1="95" x2="95" y2="150" marker-end="url(#t6)"/>
+      <line class="ln" x1="160" y1="95" x2="225" y2="150"/>
+      <line class="ln" x1="260" y1="95" x2="225" y2="150"/>
+
+      <path class="ln thin" d="M150.3,87.1 L158.4,77.3 L168.1,85.3"/>
+      <path class="ln thin" d="M151.7,102.2 L159.2,111.2 L167.6,104.0"/>
+      <path class="ln thin" d="M250,95 L250,105 L260,105"/>
+
+      <path class="arc" d="M136.3,115.1 A30,30 0 1 1 130.3,70.8"/>
+      <text class="sm" x="100" y="95" text-anchor="middle">160°</text>
+
+      <path class="arc" d="M232,139 A20,20 0 0 1 225,130"/>
+      <text class="val" x="215" y="132" text-anchor="end">x</text>
+
+      <circle class="pt" cx="160" cy="95" r="3.2"/>
+      <circle class="pt" cx="260" cy="95" r="3.2"/>
+      <circle class="pt" cx="225" cy="150" r="3.2"/>
+
+      <text x="70" y="25">L</text>
+      <text x="85" y="162">K</text>
+      <text x="165" y="85">A</text>
+      <text x="270" y="90">B</text>
+      <text x="235" y="160">C</text>
+    </svg>
+    <figcaption>Şekil 6</figcaption>
+  </figure>
+  <p class="given">[AL ⊥ [AB<br>[AK ⊥ [AC<br>[CB ⊥ [AB<br>m(KAL) = 160°</p>
+  <p class="ask">Yukarıdaki verilere göre, m(BCA) = x kaç derecedir?</p>
+  <ul class="opts"><li><b>A)</b> 65</li><li><b>B)</b> 70</li><li><b>C)</b> 75</li><li><b>D)</b> 80</li><li><b>E)</b> 85</li></ul>
+</section>
+
+<!-- 7 -->
+<section class="q">
+  <div class="num">7</div>
+  <figure class="fig">
+    <svg viewBox="0 0 340 170" role="img" aria-label="Kesişen ABC ve KLM açılarının P Q R S kesişim noktaları">
+      <defs><marker id="t7" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0,1 L9,5 L0,9" fill="none" stroke="#13212C" stroke-width="1.6" stroke-linecap="round"/></marker></defs>
+
+      <line class="ln" x1="60" y1="130" x2="150" y2="20" marker-end="url(#t7)"/>
+      <line class="ln" x1="60" y1="130" x2="300" y2="130" marker-end="url(#t7)"/>
+
+      <line class="ln" x1="220" y1="140" x2="90" y2="20" marker-end="url(#t7)"/>
+      <line class="ln" x1="220" y1="140" x2="300" y2="65" marker-end="url(#t7)"/>
+
+      <circle class="pt" cx="120" cy="56.7" r="3.5"/>
+      <text class="sm" x="105" y="55">P</text>
+
+      <circle class="pt" cx="136.2" cy="24.4" r="3.5"/>
+      <text class="sm" x="145" y="25">Q</text>
+
+      <circle class="pt" cx="209.2" cy="130" r="3.5"/>
+      <text class="sm" x="205" y="150">R</text>
+
+      <circle class="pt" cx="289.3" cy="130" r="3.5"/>
+      <text class="sm" x="290" y="150">S</text>
+
+      <circle class="pt" cx="60" cy="130" r="3.2"/>
+      <circle class="pt" cx="220" cy="140" r="3.2"/>
+
+      <text x="45" y="145">B</text>
+      <text x="155" y="15">A</text>
+      <text x="305" y="145">C</text>
+
+      <text x="220" y="160">L</text>
+      <text x="80" y="15">K</text>
+      <text x="305" y="60">M</text>
+    </svg>
+    <figcaption>Şekil 7</figcaption>
+  </figure>
+  <p class="given">Yandaki şekilde ABC açısı ile KLM açısı veriliyor.</p>
+  <p class="ask">Yukarıdaki verilere göre, ABC açısı ile KLM açısının kesişimi (ABC ∩ KLM) aşağıdakilerden hangisidir?</p>
+  <ul class="opts"><li><b>A)</b> {P, Q}</li><li><b>B)</b> {R, S}</li><li><b>C)</b> {P, Q, R, S}</li><li><b>D)</b> PQRS dörtgeni</li><li><b>E)</b> {B, L}</li></ul>
+</section>
+
+</main>
+
+<details>
+  <summary>Cevap anahtarı ve kısa çözümler</summary>
+  <ol>
+    <li><b>C</b> — Dairesel grafik toplamı 360°'dir: x + 160 + 115 = 360 → x + 275 = 360 → x = 85°</li>
+    <li><b>C</b> — Açıya x diyelim. Bütünleyeni (180 − x), tümleri (90 − x). 180 − x = 4(90 − x) − 15 → 3x = 165 → x = 55°</li>
+    <li><b>C</b> — (90 − x) + (180 − x) = 190 → 270 − 2x = 190 → 2x = 80 → x = 40°; Bütünleyeni = 180 − 40 = 140°</li>
+    <li><b>D</b> — Karşı durumlu açılardan: a + 2b = 180 ve 3a + b = 180. İkinci denklemden b = 180 − 3a yazıp 1. denklemde yerine koyarsak a + 360 − 6a = 180 → 5a = 180 → a = 36°, b = 72°. Buradan b/a = 72/36 = 2</li>
+    <li><b>D</b> — Kolları aynı yönlü paralel açılar eşittir: 5x − 12 = 3x + 24 → 2x = 36 → x = 18°; m(ABC) = 5(18) − 12 = 78°</li>
+    <li><b>B</b> — A noktası etrafında m(KAL) + m(BAC) = 180° → 160° + m(BAC) = 180° → m(BAC) = 20°. ABC dik üçgeninde x = 90 − 20 = 70°</li>
+    <li><b>C</b> — Açılar ışınların noktalar kümesidir. İki açının kesişimi ışınlarının kesiştiği 4 ayrık noktadır: {P, Q, R, S}</li>
+  </ol>
+</details>
+
+</body>
+</html>
