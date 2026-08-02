@@ -43,8 +43,7 @@ export class ProgressStore {
   /** Whether the student has finished the module at least once, in either mode. */
   isAttempted(moduleId: string): boolean {
     return (
-      this.record(moduleId, 'practice') !== undefined ||
-      this.record(moduleId, 'test') !== undefined
+      this.record(moduleId, 'practice') !== undefined || this.record(moduleId, 'test') !== undefined
     );
   }
 

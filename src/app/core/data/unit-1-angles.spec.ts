@@ -27,8 +27,11 @@ describe('question bank integrity', () => {
       });
 
       for (const module of unit.modules) {
-        it(`${module.id} holds five questions and a summary`, () => {
-          expect(module.questions.length).toBe(5);
+        // Modules are five questions by default; a closing set may run longer,
+        // but never long enough to be a sitting of its own.
+        it(`${module.id} holds a short run of questions and a summary`, () => {
+          expect(module.questions.length).toBeGreaterThanOrEqual(5);
+          expect(module.questions.length).toBeLessThanOrEqual(8);
           expect(module.title.trim()).not.toBe('');
           expect(module.summary.trim()).not.toBe('');
         });
@@ -86,14 +89,14 @@ describe('question bank integrity', () => {
 describe('unit 1 modules', () => {
   const unit = UNITS.find((u) => u.id === 'angles')!;
 
-  it('splits twenty-five questions into five modules of five', () => {
-    expect(unit.modules.length).toBe(5);
-    expect(unitQuestions(unit).length).toBe(25);
+  it('splits thirty-eight questions into seven modules', () => {
+    expect(unit.modules.length).toBe(7);
+    expect(unitQuestions(unit).length).toBe(38);
   });
 
   it('uses every question in the bank exactly once', () => {
     const ids = unitQuestions(unit).map((question) => question.id);
-    const expected = Array.from({ length: 25 }, (_, i) => `angles-${i + 1}`);
+    const expected = Array.from({ length: 38 }, (_, i) => `angles-${i + 1}`);
     expect([...ids].sort()).toEqual([...expected].sort());
   });
 });
@@ -128,4 +131,18 @@ describe('unit 1 answer key', () => {
   it('23 — x + 90 + 28 = 180, x = 62 → B', () => expect(answerOf('angles-23')).toBe('B'));
   it('24 — 5x = 90, m(CAD) = 54 → D', () => expect(answerOf('angles-24')).toBe('D'));
   it('25 — 70 grad = 63°, π/10 = 18°, α = 135 → C', () => expect(answerOf('angles-25')).toBe('C'));
+  it('26 — x + 128 + 147 = 360 → C', () => expect(answerOf('angles-26')).toBe('C'));
+  it('27 — 270 − 2x = 190, x = 40 → A', () => expect(answerOf('angles-27')).toBe('A'));
+  it('28 — x = 20, 70 − 20 = 50 → D', () => expect(answerOf('angles-28')).toBe('D'));
+  it('29 — a = 72, b = 36, a/b = 2 → E', () => expect(answerOf('angles-29')).toBe('E'));
+  it('30 — 9x − 20 = 5x + 8, m(FCD) = 43 → B', () => expect(answerOf('angles-30')).toBe('B'));
+  it('31 — m(BAC) = 35, x = 55 → D', () => expect(answerOf('angles-31')).toBe('D'));
+  it('32 — açı = iki ışının birleşimi → B', () => expect(answerOf('angles-32')).toBe('B'));
+  it('33 — 180 − 55 − 40 = 85 → A', () => expect(answerOf('angles-33')).toBe('A'));
+  it('34 — 3y = 105, α = 180 − 4y = 40 → D', () => expect(answerOf('angles-34')).toBe('D'));
+  it('35 — α = 125 + 20 = 145 → C', () => expect(answerOf('angles-35')).toBe('C'));
+  it('36 — m(ACD) = 360 − 145 − 135 = 80, α = 100 → E', () =>
+    expect(answerOf('angles-36')).toBe('E'));
+  it('37 — x + y = 90, α = 180 − 90 − 38 = 52 → B', () => expect(answerOf('angles-37')).toBe('B'));
+  it('38 — m(ACF) = 65, α = 180 − 65 = 115 → D', () => expect(answerOf('angles-38')).toBe('D'));
 });

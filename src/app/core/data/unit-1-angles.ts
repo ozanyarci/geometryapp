@@ -372,6 +372,104 @@ const Q25_AUX_SVG = `
 `;
 
 /**
+ * Question 35's double zigzag. The two middle angles are only given in terms of
+ * one another, so their arcs stay unlabelled and the relation lives in the stem.
+ */
+const q35Svg = (suffix: string) => `
+  <defs>
+    <marker id="arrow-q35-${suffix}" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,1 L9,5 L0,9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    </marker>
+  </defs>
+
+  <line class="ln" x1="33.9" y1="115.2" x2="378.2" y2="115.2" marker-start="url(#arrow-q35-${suffix})" marker-end="url(#arrow-q35-${suffix})"/>
+  <path class="ln" d="M121.2,115.2 L183.8,25.8 L245.2,157.7 L305.9,115.2"/>
+
+  <path class="arc" d="M142.1,85.4 A36.4,36.4 0 0 0 84.8,115.2"/>
+  <text class="val" x="92" y="72" text-anchor="middle">125°</text>
+
+  <path class="arc" d="M165.7,51.6 A31.5,31.5 0 0 0 197.1,54.4"/>
+  <path class="arc" d="M271,139.6 A31.5,31.5 0 0 0 231.9,129.1"/>
+
+  <path class="arc" d="M342.3,115.2 A36.4,36.4 0 0 1 276.1,136.1"/>
+  <text class="val" x="322" y="171" text-anchor="middle">α</text>
+
+  <circle class="pt" cx="60.6" cy="115.2" r="3.2"/>
+  <circle class="pt" cx="121.2" cy="115.2" r="3.2"/>
+  <circle class="pt" cx="305.9" cy="115.2" r="3.2"/>
+  <circle class="pt" cx="345.5" cy="115.2" r="3.2"/>
+  <circle class="pt" cx="183.8" cy="25.8" r="3.2"/>
+  <circle class="pt" cx="245.2" cy="157.7" r="3.2"/>
+
+  <text x="60.6" y="136" text-anchor="middle">B</text>
+  <text x="121.2" y="136" text-anchor="middle">A</text>
+  <text x="300" y="105" text-anchor="end">C</text>
+  <text x="345.5" y="105" text-anchor="middle">D</text>
+  <text x="183.8" y="17" text-anchor="middle">E</text>
+  <text x="245.2" y="177" text-anchor="middle">F</text>
+`;
+
+/** The e and f parallels question 35's solution draws through E and F. */
+const Q35_AUX_SVG = `
+  <line class="aux" x1="112" y1="25.8" x2="258" y2="25.8"/>
+  <text class="val" x="104" y="30" text-anchor="end">e</text>
+
+  <line class="aux" x1="180" y1="157.7" x2="322" y2="157.7"/>
+  <text class="val" x="330" y="150">f</text>
+`;
+
+/** Question 36's corner C, which falls outside the two parallel rays. */
+const q36Svg = (suffix: string) => `
+  <defs>
+    <marker id="arrow-q36-${suffix}" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,1 L9,5 L0,9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    </marker>
+  </defs>
+
+  <line class="ln" x1="236.2" y1="30.5" x2="370.1" y2="30.5" marker-end="url(#arrow-q36-${suffix})"/>
+  <line class="ln" x1="236.2" y1="188.4" x2="382.1" y2="188.4" marker-end="url(#arrow-q36-${suffix})"/>
+  <line class="ln" x1="236.2" y1="30.5" x2="143.3" y2="95.5"/>
+  <line class="ln" x1="236.2" y1="188.4" x2="96.8" y2="49.1" marker-end="url(#arrow-q36-${suffix})"/>
+
+  <path class="par" d="M290.1,23.3 L298.5,30.5 L290.1,37.6"/>
+  <path class="par" d="M296.1,181.2 L304.5,188.4 L296.1,195.6"/>
+
+  <path class="arc" d="M272,30.5 A35.8,35.8 0 0 1 206.9,51"/>
+  <text class="val" x="254" y="88" text-anchor="middle">145°</text>
+
+  <path class="arc" d="M272,188.4 A35.8,35.8 0 0 0 210.9,163.1"/>
+  <text class="val" x="259" y="143" text-anchor="middle">135°</text>
+
+  <path class="arc" d="M172.6,75 A35.8,35.8 0 0 0 118,70.2"/>
+  <text class="val" x="148" y="49" text-anchor="middle">α</text>
+
+  <circle class="pt" cx="236.2" cy="30.5" r="3.2"/>
+  <circle class="pt" cx="328.4" cy="30.5" r="3.2"/>
+  <circle class="pt" cx="143.3" cy="95.5" r="3.2"/>
+  <circle class="pt" cx="236.2" cy="188.4" r="3.2"/>
+  <circle class="pt" cx="340.3" cy="188.4" r="3.2"/>
+
+  <text x="229" y="24" text-anchor="end">A</text>
+  <text x="328.4" y="21" text-anchor="middle">B</text>
+  <text x="134" y="110" text-anchor="end">C</text>
+  <text x="242" y="207">D</text>
+  <text x="340.3" y="207" text-anchor="middle">E</text>
+  <text x="90" y="43" text-anchor="end">F</text>
+`;
+
+/** The [Cd ray question 36's solution draws through the corner point C. */
+const Q36_AUX_SVG = `
+  <defs>
+    <marker id="arrow-q36-aux" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path class="aux-head" d="M0,1 L9,5 L0,9"/>
+    </marker>
+  </defs>
+
+  <line class="aux" x1="143.3" y1="95.5" x2="255" y2="95.5" marker-end="url(#arrow-q36-aux)"/>
+  <text class="val" x="263" y="104">d</text>
+`;
+
+/**
  * The question bank, in id order. Nothing here is shown to a student directly —
  * the modules at the bottom of the file choose the order and the grouping.
  */
@@ -2013,6 +2111,954 @@ const QUESTIONS: readonly Question[] = [
       },
     ],
   },
+
+  // ---------------------------------------------------------------- 26
+  {
+    id: 'angles-26',
+    topic: 'Tam açı',
+    figure: {
+      viewBox: '40 40 320 320',
+      caption: 'Şekil 26',
+      label:
+        'Merkezinden çıkan üç ışının I, II ve III bölgelerine ayırdığı daire; merkezdeki açı ölçüleri sırasıyla x, 147° ve 128°.',
+      svg: `
+          <circle class="ln" cx="200" cy="200" r="140" fill="none"/>
+          <line class="ln" x1="200" y1="200" x2="340" y2="200"/>
+          <line class="ln" x1="200" y1="200" x2="212.2" y2="60.5"/>
+          <line class="ln" x1="200" y1="200" x2="82.6" y2="276.2"/>
+
+          <!-- One arc per sector, all at the same radius, so the three central
+               angles read as a ring around the centre point. -->
+          <path class="arc" d="M255,200 A55,55 0 0 0 204.8,145.2"/>
+          <path class="arc" d="M204.8,145.2 A55,55 0 0 0 153.9,230"/>
+          <path class="arc" d="M153.9,230 A55,55 0 0 0 255,200"/>
+
+          <circle class="pt" cx="200" cy="200" r="3.6"/>
+
+          <text x="303" y="167" text-anchor="middle">I</text>
+          <text class="val" x="255" y="154" text-anchor="middle">x</text>
+          <text x="92" y="224" text-anchor="middle">III</text>
+          <text class="val" x="121" y="158" text-anchor="middle">128°</text>
+          <text x="166" y="299" text-anchor="middle">II</text>
+          <text class="val" x="231" y="309" text-anchor="middle">147°</text>
+        `,
+    },
+    stem: [
+      'Yukarıdaki dairesel grafikte merkezden çıkan üç ışın, daireyi I, II ve III bölgelerine ayırmıştır.',
+    ],
+    ask: 'Buna göre, x kaç derecedir?',
+    choices: [
+      { key: 'A', text: '75' },
+      { key: 'B', text: '80' },
+      { key: 'C', text: '85' },
+      { key: 'D', text: '90' },
+      { key: 'E', text: '95' },
+    ],
+    answer: 'C',
+    hint: 'Bir noktanın çevresindeki açıların ölçüleri toplamı 360°’dir.',
+    solution: [
+      {
+        title: 'Tam açıyı hatırla',
+        detail:
+          'Bir noktanın çevresini tam olarak dolaşan açıya tam açı denir ve ölçüsü 360°’dir. Dairesel grafikte bütün dilimlerin merkez açıları bu 360°’yi paylaşır.',
+      },
+      {
+        title: 'Denklemi kur',
+        detail: 'Merkezdeki üç açı I, II ve III bölgelerine aittir: x + 128 + 147 = 360 yazılır.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'x + 275 = 360 → x = 85° bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 27
+  {
+    id: 'angles-27',
+    topic: 'Tümler ve bütünler açılar',
+    stem: ['Bir açının bütünleyeninin ölçüsü ile tümleyeninin ölçüsü toplamı 190°’dir.'],
+    ask: 'Buna göre, bu açının ölçüsü kaç derecedir?',
+    choices: [
+      { key: 'A', text: '40' },
+      { key: 'B', text: '45' },
+      { key: 'C', text: '50' },
+      { key: 'D', text: '55' },
+      { key: 'E', text: '60' },
+    ],
+    answer: 'A',
+    hint: 'Açının ölçüsüne x dersen bütünleyeni 180 − x, tümleyeni 90 − x olur.',
+    solution: [
+      {
+        title: 'Tanımları yaz',
+        detail:
+          'Ölçüsü x olan açının bütünleyeni 180 − x, tümleyeni ise 90 − x’tir. Tümleyeninin olabilmesi için x < 90 olmalıdır.',
+      },
+      {
+        title: 'Denklemi kur',
+        detail: 'Toplamları 190° verildiğinden (180 − x) + (90 − x) = 190 olur.',
+      },
+      {
+        title: 'Denklemi çöz',
+        detail: '270 − 2x = 190 → 2x = 80 → x = 40° bulunur.',
+      },
+      {
+        title: 'Kontrol et',
+        detail:
+          'Bütünleyeni 180 − 40 = 140°, tümleyeni 90 − 40 = 50°’dir. Toplamları 140 + 50 = 190° olduğundan sonuç doğrudur.',
+      },
+      {
+        title: 'Pratik yol',
+        detail:
+          'Bütünleyen ile tümleyenin toplamı her zaman 270 − 2x’tir. Yani 270’ten verilen toplamı çıkarıp yarısını almak yeterlidir: (270 − 190) / 2 = 40°.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 28
+  {
+    id: 'angles-28',
+    topic: 'Tümler ve bütünler açılar',
+    stem: ['Bir açının ölçüsü, bütünleyeninin ölçüsünden 140° küçüktür.'],
+    ask: 'Buna göre bu açının ölçüsü, tümleyeninin ölçüsünden kaç derece küçüktür?',
+    choices: [
+      { key: 'A', text: '35' },
+      { key: 'B', text: '40' },
+      { key: 'C', text: '45' },
+      { key: 'D', text: '50' },
+      { key: 'E', text: '55' },
+    ],
+    answer: 'D',
+    hint: 'Önce açının kendi ölçüsünü bul; sorulan fark ondan sonra tek çıkarma işlemidir.',
+    solution: [
+      {
+        title: 'Bütünleyeni yaz',
+        detail: 'Açının ölçüsüne x dersek bütünleyeninin ölçüsü 180 − x olur.',
+      },
+      {
+        title: 'Denklemi kur',
+        detail: 'Açı, bütünleyeninden 140° küçük olduğundan x = (180 − x) − 140 denklemi yazılır.',
+      },
+      {
+        title: 'Denklemi çöz',
+        detail: 'x = 40 − x → 2x = 40 → x = 20° bulunur.',
+      },
+      {
+        title: 'Tümleyenini bul',
+        detail: 'Tümleyeninin ölçüsü 90 − 20 = 70°’dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Aradaki fark 70 − 20 = 50° bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 29
+  {
+    id: 'angles-29',
+    topic: 'Paralel doğrular ve kesen',
+    figure: {
+      viewBox: '0 0 400 183',
+      caption: 'Şekil 29',
+      label:
+        'Paralel AB ve CD doğruları ile bunları kesen AC ve BD doğru parçaları; A, C, B ve D köşelerindeki açılar sırasıyla a, 3b, b ve 2a.',
+      svg: `
+          <defs>
+            <marker id="arrow-q29" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,1 L9,5 L0,9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </marker>
+          </defs>
+
+          <line class="ln" x1="67" y1="28" x2="383" y2="28" marker-start="url(#arrow-q29)" marker-end="url(#arrow-q29)"/>
+          <line class="ln" x1="61" y1="150" x2="311" y2="150" marker-start="url(#arrow-q29)" marker-end="url(#arrow-q29)"/>
+          <line class="ln" x1="166.7" y1="27.8" x2="126.9" y2="150"/>
+          <line class="ln" x1="333.3" y1="27.8" x2="165" y2="150"/>
+
+          <path class="arc" d="M137.7,27.8 A29,29 0 0 0 157.7,55.4"/>
+          <text class="val" x="128" y="64" text-anchor="middle">a</text>
+          <path class="arc" d="M135.9,122.4 A29,29 0 0 0 97.9,150"/>
+          <text class="val" x="96" y="117" text-anchor="middle">3b</text>
+          <path class="arc" d="M300.3,27.8 A33,33 0 0 0 306.6,47.1"/>
+          <text class="val" x="282" y="49" text-anchor="middle">b</text>
+          <path class="arc" d="M188.4,132.9 A29,29 0 0 0 136,150"/>
+          <text class="val" x="169" y="108">2a</text>
+
+          <circle class="pt" cx="94" cy="28" r="3.2"/>
+          <circle class="pt" cx="166.7" cy="27.8" r="3.2"/>
+          <circle class="pt" cx="333.3" cy="27.8" r="3.2"/>
+          <circle class="pt" cx="83" cy="150" r="3.2"/>
+          <circle class="pt" cx="126.9" cy="150" r="3.2"/>
+          <circle class="pt" cx="165" cy="150" r="3.2"/>
+
+          <text x="94" y="19" text-anchor="middle">K</text>
+          <text x="167" y="19" text-anchor="middle">A</text>
+          <text x="333" y="19" text-anchor="middle">B</text>
+          <text x="83" y="169" text-anchor="middle">L</text>
+          <text x="125" y="169" text-anchor="middle">C</text>
+          <text x="169" y="169" text-anchor="middle">D</text>
+        `,
+    },
+    given: ['AB // CD', 'm(CAK) = a, m(ACL) = 3b', 'm(ABD) = b, m(CDB) = 2a'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, a / b oranı kaçtır?',
+    choices: [
+      { key: 'A', text: '1/3' },
+      { key: 'B', text: '1/2' },
+      { key: 'C', text: '2/3' },
+      { key: 'D', text: '3/2' },
+      { key: 'E', text: '2' },
+    ],
+    answer: 'E',
+    hint: 'Her kesen için, paralel doğruların arasında ve kesenin aynı tarafında kalan iki açı bütünlerdir.',
+    solution: [
+      {
+        title: 'AC kesenini kullan',
+        detail:
+          'AB // CD ve AC bir kesendir. m(CAK) = a ile m(ACL) = 3b açıları, kesenin aynı tarafında kalan iç açılardır (yan iç açılar); ölçüleri toplamı 180°’dir: a + 3b = 180.',
+      },
+      {
+        title: 'BD kesenini kullan',
+        detail:
+          'Aynı biçimde BD keseninde m(ABD) = b ile m(CDB) = 2a yan iç açılardır: 2a + b = 180.',
+      },
+      {
+        title: 'Sistemi çöz',
+        detail:
+          'İkinci denklemden b = 180 − 2a bulunur. Birincide yerine yazalım: a + 3(180 − 2a) = 180 → a + 540 − 6a = 180 → 5a = 360 → a = 72°.',
+      },
+      {
+        title: 'b’yi bul',
+        detail: 'b = 180 − 2 · 72 = 36° olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'a / b = 72 / 36 = 2 bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 30
+  {
+    id: 'angles-30',
+    topic: 'Kenarları paralel açılar',
+    figure: {
+      viewBox: '0 0 400 244',
+      caption: 'Şekil 30',
+      label:
+        'A ve C noktalarından çıkan, kenarları karşılıklı paralel iki açı: [AK ile [CF paralel, [AE ile [CD paraleldir.',
+      svg: `
+          <defs>
+            <marker id="arrow-q30" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,1 L9,5 L0,9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </marker>
+          </defs>
+
+          <line class="ln" x1="75" y1="212.5" x2="375" y2="212.5" marker-end="url(#arrow-q30)"/>
+          <line class="ln" x1="75" y1="112.5" x2="375" y2="112.5" marker-end="url(#arrow-q30)"/>
+          <line class="ln" x1="75" y1="112.5" x2="166.4" y2="27.3" marker-end="url(#arrow-q30)"/>
+          <line class="ln" x1="75" y1="212.5" x2="230.4" y2="67.6" marker-end="url(#arrow-q30)"/>
+
+          <path class="par" d="M317.5,105 L326.5,112.5 L317.5,120"/>
+          <path class="par" d="M317.5,205 L326.5,212.5 L317.5,220"/>
+
+          <path class="arc" d="M110,112.5 A35,35 0 0 0 100.6,88.6"/>
+          <text class="val" x="115" y="88">9x − 20</text>
+          <path class="arc" d="M110,212.5 A35,35 0 0 0 100.6,188.6"/>
+          <text class="val" x="115" y="188">5x + 8</text>
+
+          <circle class="pt" cx="75" cy="112.5" r="3.2"/>
+          <circle class="pt" cx="182.3" cy="112.5" r="3.2"/>
+          <circle class="pt" cx="312.5" cy="112.5" r="3.2"/>
+          <circle class="pt" cx="75" cy="212.5" r="3.2"/>
+          <circle class="pt" cx="312.5" cy="212.5" r="3.2"/>
+
+          <text x="67" y="119" text-anchor="end">A</text>
+          <text x="176" y="106" text-anchor="end">B</text>
+          <text x="312" y="104" text-anchor="middle">E</text>
+          <text x="67" y="219" text-anchor="end">C</text>
+          <text x="312" y="233" text-anchor="middle">D</text>
+          <text x="159" y="21" text-anchor="end">K</text>
+          <text x="237" y="63">F</text>
+        `,
+    },
+    given: ['[AK // [CF', '[CD // [AE', 'm(BAK) = 9x − 20', 'm(FCD) = 5x + 8'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, m(FCD) kaç derecedir?',
+    choices: [
+      { key: 'A', text: '42' },
+      { key: 'B', text: '43' },
+      { key: 'C', text: '44' },
+      { key: 'D', text: '45' },
+      { key: 'E', text: '46' },
+    ],
+    answer: 'B',
+    hint: 'Kenarları karşılıklı paralel ve aynı yöne bakan iki açının ölçüleri eşittir.',
+    solution: [
+      {
+        title: 'Kenarları paralel açıları tanı',
+        detail:
+          'BAK açısının kenarları [AB ile [AK, FCD açısının kenarları [CD ile [CF’dir. [AE // [CD ve [AK // [CF verildiğinden bu iki açının kenarları karşılıklı paraleldir.',
+      },
+      {
+        title: 'Eşit mi, bütünler mi?',
+        detail:
+          'Kenarları karşılıklı paralel açılarda, kenarlar ikişer ikişer aynı yöne bakıyorsa açılar eş; biri ters yöne bakıyorsa bütünlerdir. Burada [AB ile [CD sağa, [AK ile [CF yukarı-sağa baktığından açılar eştir.',
+      },
+      {
+        title: 'Denklemi kur',
+        detail: 'm(BAK) = m(FCD) olduğundan 9x − 20 = 5x + 8 yazılır.',
+      },
+      {
+        title: 'Denklemi çöz',
+        detail: '9x − 5x = 8 + 20 → 4x = 28 → x = 7 bulunur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'm(FCD) = 5 · 7 + 8 = 43° bulunur. (Kontrol: 9 · 7 − 20 = 43 ✓)',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 31
+  {
+    id: 'angles-31',
+    topic: 'Dik açı ve dik üçgen',
+    figure: {
+      viewBox: '0 0 400 334',
+      caption: 'Şekil 31',
+      label:
+        'A noktasından çıkan [AL ve [AK ışınları ile B köşesi dik olan ABC üçgeni; KAL açısı 145°, BCA açısı x.',
+      svg: `
+          <defs>
+            <marker id="arrow-q31" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,1 L9,5 L0,9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </marker>
+          </defs>
+
+          <line class="ln" x1="133.3" y1="146.7" x2="133.3" y2="16" marker-end="url(#arrow-q31)"/>
+          <line class="ln" x1="133.3" y1="146.7" x2="56" y2="256" marker-end="url(#arrow-q31)"/>
+          <path class="ln" d="M133.3,146.7 L360,146.7 L360,305.3 Z"/>
+
+          <path class="ln" d="M146.7,146.7 L146.7,133.3 L133.3,133.3"/>
+          <path class="ln" d="M124.1,159.7 L137.2,168.9 L146.4,155.9"/>
+          <path class="ln" d="M344,146.7 L344,162.7 L360,162.7"/>
+
+          <path class="arc" d="M133.3,103.7 A43,43 0 0 0 108.6,181.9"/>
+          <text class="val" x="66" y="132" text-anchor="middle">145°</text>
+
+          <path class="arc" d="M360,260.3 A45,45 0 0 0 323.1,279.5"/>
+          <text class="val" x="328" y="257" text-anchor="middle">x</text>
+
+          <circle class="pt" cx="133.3" cy="146.7" r="3.2"/>
+          <circle class="pt" cx="360" cy="146.7" r="3.2"/>
+          <circle class="pt" cx="360" cy="305.3" r="3.2"/>
+          <circle class="pt" cx="133.3" cy="26.7" r="3.2"/>
+          <circle class="pt" cx="64.5" cy="245" r="3.2"/>
+
+          <text x="155" y="137">A</text>
+          <text x="360" y="133" text-anchor="middle">B</text>
+          <text x="368" y="324">C</text>
+          <text x="144" y="32">L</text>
+          <text x="69" y="265">K</text>
+        `,
+    },
+    given: ['[AL ⊥ [AB', '[AK ⊥ [AC', '[CB] ⊥ [AB]', 'm(KAL) = 145°'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, m(BCA) = x kaç derecedir?',
+    choices: [
+      { key: 'A', text: '40' },
+      { key: 'B', text: '45' },
+      { key: 'C', text: '50' },
+      { key: 'D', text: '55' },
+      { key: 'E', text: '60' },
+    ],
+    answer: 'D',
+    hint: 'A noktasının çevresindeki dört açının ölçüleri toplamı 360°’dir.',
+    solution: [
+      {
+        title: 'A’nın çevresini dolaş',
+        detail:
+          'A noktasının çevresinde KAL, LAB, BAC ve CAK açıları yan yana sıralanır. Bir noktanın çevresindeki açıların ölçüleri toplamı 360°’dir.',
+      },
+      {
+        title: 'Dik açıları yerleştir',
+        detail: '[AL ⊥ [AB olduğundan m(LAB) = 90°, [AK ⊥ [AC olduğundan m(CAK) = 90°’dir.',
+      },
+      {
+        title: 'BAC açısını bul',
+        detail: '145 + 90 + m(BAC) + 90 = 360 → m(BAC) = 360 − 325 = 35° bulunur.',
+      },
+      {
+        title: 'Dik üçgeni kullan',
+        detail: 'ABC üçgeninde m(ABC) = 90° olduğundan diğer iki açı tümlerdir: m(BAC) + x = 90.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'x = 90 − 35 = 55° bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 32
+  {
+    id: 'angles-32',
+    topic: 'Açı kavramı',
+    figure: {
+      viewBox: '0 0 400 287',
+      caption: 'Şekil 32',
+      label:
+        'K köşeli MKN açısı ile P köşeli MPL açısı; ışınlar M, L, T ve N noktalarında kesişiyor.',
+      svg: `
+          <defs>
+            <marker id="arrow-q32" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,1 L9,5 L0,9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </marker>
+          </defs>
+
+          <line class="ln" x1="66.7" y1="220" x2="373.3" y2="220" marker-end="url(#arrow-q32)"/>
+          <line class="ln" x1="66.7" y1="220" x2="200.7" y2="28.9" marker-end="url(#arrow-q32)"/>
+          <line class="ln" x1="200" y1="260" x2="158.3" y2="23.6" marker-end="url(#arrow-q32)"/>
+          <line class="ln" x1="200" y1="260" x2="67.2" y2="148.5" marker-end="url(#arrow-q32)"/>
+
+          <circle class="pt" cx="66.7" cy="220" r="3.2"/>
+          <circle class="pt" cx="152.3" cy="220" r="3.2"/>
+          <circle class="pt" cx="192.9" cy="220" r="3.2"/>
+          <circle class="pt" cx="200" cy="260" r="3.2"/>
+          <circle class="pt" cx="98.4" cy="174.8" r="3.2"/>
+          <circle class="pt" cx="167.5" cy="76.1" r="3.2"/>
+
+          <text x="61" y="241" text-anchor="end">K</text>
+          <text x="149" y="243" text-anchor="middle">T</text>
+          <text x="203" y="211">N</text>
+          <text x="208" y="279">P</text>
+          <text x="88" y="171" text-anchor="end">L</text>
+          <text x="175" y="69">M</text>
+        `,
+    },
+    stem: ['Yukarıdaki şekilde K köşeli MKN açısı ile P köşeli MPL açısı verilmiştir.'],
+    ask: 'Buna göre, MKN ∩ MPL kesişimi aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: '{K, P}' },
+      { key: 'B', text: '{M, L, T, N}' },
+      { key: 'C', text: '{L, K}' },
+      { key: 'D', text: '{T, P}' },
+      { key: 'E', text: 'MLTN dörtgeni' },
+    ],
+    answer: 'B',
+    hint: 'Bir açı yalnızca iki ışının birleşimidir; ışınların arasında kalan bölge açıya dahil değildir.',
+    solution: [
+      {
+        title: 'Açının tanımını hatırla',
+        detail:
+          'Bir açı, başlangıç noktaları ortak olan iki ışının birleşimidir. İç bölge açıya ait olmadığından kesişim de bir bölge değil, noktalardan oluşan bir küme olur.',
+      },
+      {
+        title: 'Açıları ışınlarına ayır',
+        detail:
+          'MKN açısı [KM ile [KN ışınlarının, MPL açısı ise [PM ile [PL ışınlarının birleşimidir.',
+      },
+      {
+        title: 'Işınları ikişer ikişer kesiştir',
+        detail: '[KM ∩ [PM = {M}, [KM ∩ [PL = {L}, [KN ∩ [PM = {N}, [KN ∩ [PL = {T} bulunur.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'Bütün kesişimleri birleştirirsek MKN ∩ MPL = {M, L, T, N} olur. MLTN dörtgeni bir bölge belirttiğinden yanlıştır; kesişim yalnızca bu dört noktadır.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 33
+  {
+    id: 'angles-33',
+    topic: 'Paralel doğrular ve kesen',
+    figure: {
+      viewBox: '0 0 400 250',
+      caption: 'Şekil 33',
+      label:
+        'Paralel AB ve CD doğruları ile bunları kesen KC ve AD doğruları; kesenler E noktasında kesişiyor.',
+      svg: `
+          <defs>
+            <marker id="arrow-q33" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,1 L9,5 L0,9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </marker>
+          </defs>
+
+          <line class="ln" x1="50" y1="56.25" x2="350" y2="56.25" marker-start="url(#arrow-q33)" marker-end="url(#arrow-q33)"/>
+          <line class="ln" x1="50" y1="206.25" x2="350" y2="206.25" marker-start="url(#arrow-q33)" marker-end="url(#arrow-q33)"/>
+          <line class="ln" x1="268.9" y1="15.25" x2="122" y2="224.6" marker-start="url(#arrow-q33)" marker-end="url(#arrow-q33)"/>
+          <line class="ln" x1="98.1" y1="56.25" x2="294.1" y2="220.75" marker-end="url(#arrow-q33)"/>
+
+          <path class="par" d="M317.5,48.75 L326.25,56.25 L317.5,63.75"/>
+          <path class="par" d="M317.5,198.75 L326.25,206.25 L317.5,213.75"/>
+
+          <path class="arc" d="M275.1,56.25 A35,35 0 0 0 260.2,27.6"/>
+          <text class="val" x="291" y="36" text-anchor="middle">55°</text>
+
+          <path class="arc" d="M250.1,183.75 A35,35 0 0 0 241.9,206.25"/>
+          <text class="val" x="222" y="194" text-anchor="middle">40°</text>
+
+          <path class="arc" d="M206.1,104.6 A32.5,32.5 0 0 0 162.6,110.4"/>
+          <text class="val" x="181" y="88" text-anchor="middle">α</text>
+
+          <circle class="pt" cx="98.1" cy="56.25" r="3.2"/>
+          <circle class="pt" cx="240.1" cy="56.25" r="3.2"/>
+          <circle class="pt" cx="300" cy="56.25" r="3.2"/>
+          <circle class="pt" cx="134.9" cy="206.25" r="3.2"/>
+          <circle class="pt" cx="276.9" cy="206.25" r="3.2"/>
+          <circle class="pt" cx="187.5" cy="131.25" r="3.2"/>
+
+          <text x="98.1" y="46" text-anchor="middle">A</text>
+          <text x="232" y="46" text-anchor="end">B</text>
+          <text x="306" y="46">L</text>
+          <text x="277" y="15">K</text>
+          <text x="142" y="230">C</text>
+          <text x="268" y="228" text-anchor="end">D</text>
+          <text x="171" y="140" text-anchor="end">E</text>
+        `,
+    },
+    given: ['AB // CD', 'm(KBL) = 55°', 'm(ADC) = 40°', 'm(AEB) = α'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, α kaç derecedir?',
+    choices: [
+      { key: 'A', text: '85' },
+      { key: 'B', text: '90' },
+      { key: 'C', text: '95' },
+      { key: 'D', text: '100' },
+      { key: 'E', text: '105' },
+    ],
+    answer: 'A',
+    hint: 'AEB üçgeninin diğer iki açısını bul: biri ters açı, öteki iç ters açıyla gelir.',
+    solution: [
+      {
+        title: 'Ters açıyı kullan',
+        detail:
+          'K, B, E, C noktaları doğrusal ve A, B, L noktaları doğrusaldır. Bu iki doğru B’de kesiştiğinden m(KBL) ile m(ABE) ters açılardır: m(ABE) = 55°.',
+      },
+      {
+        title: 'İç ters açıyı kullan',
+        detail:
+          'AB // CD ve AD kesendir. E noktası [AD üzerinde olduğundan m(BAE) = m(BAD) olur; m(BAD) ile m(ADC) ise iç ters açılardır: m(BAE) = 40°.',
+      },
+      {
+        title: 'Üçgende açı toplamı',
+        detail: 'ABE üçgeninde m(BAE) + m(ABE) + α = 180 → 40 + 55 + α = 180 olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'α = 180 − 95 = 85° bulunur.',
+      },
+      {
+        title: 'Başka bir yol',
+        detail:
+          'E’den paralellere paralel bir doğru çizersen α, iç ters açılarla 55° ve 40°’lik iki parçaya ayrılan doğrusal açının geri kalanıdır: α = 180 − 55 − 40 = 85°.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 34
+  {
+    id: 'angles-34',
+    topic: 'Açıortay ve paralel doğrular',
+    figure: {
+      viewBox: '0 0 400 200',
+      caption: 'Şekil 34',
+      label:
+        'Paralel AB ve CD doğruları arasında ACE üçgeni; A ve C köşelerindeki açıortaylar eş işaretlerle gösterilmiş.',
+      svg: `
+          <defs>
+            <marker id="arrow-q34" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,1 L9,5 L0,9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </marker>
+          </defs>
+
+          <line class="ln" x1="75" y1="31.25" x2="362.5" y2="31.25" marker-start="url(#arrow-q34)" marker-end="url(#arrow-q34)"/>
+          <line class="ln" x1="75" y1="168.75" x2="362.5" y2="168.75" marker-start="url(#arrow-q34)" marker-end="url(#arrow-q34)"/>
+          <path class="ln" d="M175,31.25 L125,168.75 L241.5,87.1 Z"/>
+
+          <path class="par" d="M322.5,23.75 L331.25,31.25 L322.5,38.75"/>
+          <path class="par" d="M322.5,161.25 L331.25,168.75 L322.5,176.25"/>
+
+          <path class="arc" d="M137.5,31.25 A37.5,37.5 0 0 0 162.2,66.5"/>
+          <line class="tick" x1="149.4" y1="49.1" x2="139.1" y2="56.4"/>
+          <path class="arc" d="M162.2,66.5 A37.5,37.5 0 0 0 203.7,55.4"/>
+          <line class="tick" x1="183.1" y1="61.4" x2="186.4" y2="73.5"/>
+
+          <path class="arc" d="M217.1,66.6 A55,55 0 0 0 230,31.25"/>
+          <text class="val" x="245" y="61">α</text>
+
+          <path class="arc" d="M167.5,168.75 A42.5,42.5 0 0 0 159.8,144.35"/>
+          <line class="tick" x1="160.4" y1="160.9" x2="172.6" y2="158.25"/>
+          <line class="tick" x1="158.5" y1="154.9" x2="170" y2="150.1"/>
+          <path class="arc" d="M159.8,144.35 A42.5,42.5 0 0 0 139.5,128.85"/>
+          <line class="tick" x1="149.5" y1="142" x2="158" y2="132.75"/>
+          <line class="tick" x1="144.5" y1="138.1" x2="151.25" y2="127.6"/>
+
+          <path class="arc" d="M214.7,64.6 A35,35 0 0 0 212.8,107.2"/>
+          <text class="val" x="184" y="90" text-anchor="middle">75°</text>
+
+          <circle class="pt" cx="175" cy="31.25" r="3.2"/>
+          <circle class="pt" cx="287.5" cy="31.25" r="3.2"/>
+          <circle class="pt" cx="125" cy="168.75" r="3.2"/>
+          <circle class="pt" cx="300" cy="168.75" r="3.2"/>
+          <circle class="pt" cx="241.5" cy="87.1" r="3.2"/>
+
+          <text x="175" y="21" text-anchor="middle">A</text>
+          <text x="287.5" y="21" text-anchor="middle">B</text>
+          <text x="120" y="188" text-anchor="end">C</text>
+          <text x="300" y="188" text-anchor="middle">D</text>
+          <text x="249" y="81">E</text>
+        `,
+    },
+    given: [
+      'AB // CD',
+      '[AC ve [CE açıortaydır (şekildeki eş işaretli açılar)',
+      'm(AEC) = 75°',
+      'm(BAE) = α',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, α kaç derecedir?',
+    choices: [
+      { key: 'A', text: '25' },
+      { key: 'B', text: '30' },
+      { key: 'C', text: '35' },
+      { key: 'D', text: '40' },
+      { key: 'E', text: '45' },
+    ],
+    answer: 'D',
+    hint: 'ACD açısına 2y de: hem [CE onu ikiye böler, hem de iç ters açıyla A köşesine taşınır.',
+    solution: [
+      {
+        title: 'Açıortayı adlandır',
+        detail:
+          '[CE, ACD açısını iki eş parçaya böldüğünden m(ACE) = m(ECD) = y diyelim; buradan m(ACD) = 2y olur.',
+      },
+      {
+        title: 'Açıyı A’ya taşı',
+        detail:
+          'AB // CD ve AC kesendir. m(ACD) ile A köşesinde [AC’nin sol kolla yaptığı açı iç ters açılardır; yani bu açı da 2y’dir.',
+      },
+      {
+        title: 'İkinci açıortayı kullan',
+        detail:
+          '[AC bu açıyı CAE açısıyla eşitlediğinden (açıortay olduğundan) m(CAE) = 2y bulunur.',
+      },
+      {
+        title: 'AEC üçgeninde topla',
+        detail: 'm(CAE) + m(ACE) + m(AEC) = 180 → 2y + y + 75 = 180 → 3y = 105 → y = 35° bulunur.',
+      },
+      {
+        title: 'A’daki doğrusal açıyı yaz',
+        detail:
+          'Sol kol, [AC, [AE ve [AB sırasıyla geldiğinden 2y + 2y + α = 180 → 4 · 35 + α = 180 olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'α = 180 − 140 = 40° bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 35
+  {
+    id: 'angles-35',
+    topic: 'Paralel doğrularda zikzak',
+    figure: {
+      viewBox: '0 0 400 188',
+      caption: 'Şekil 35',
+      label:
+        'B, A, C, D doğrusu ile doğrunun üstünde E, altında F köşesi olan A-E-F-C kırık çizgisi.',
+      svg: q35Svg('q'),
+    },
+    solutionFigure: {
+      viewBox: '0 0 400 188',
+      caption: 'Şekil 35 — yardımcı çizim',
+      label:
+        'Aynı şekilde, E ve F kırılma noktalarından doğruya paralel kesik çizgili e ve f doğruları çizilmiştir.',
+      svg: q35Svg('s') + Q35_AUX_SVG,
+    },
+    given: ['B, A, C, D doğrusal', 'm(BAE) = 125°', 'm(EFC) = m(AEF) + 20°', 'm(FCD) = α'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, α kaç derecedir?',
+    choices: [
+      { key: 'A', text: '155' },
+      { key: 'B', text: '150' },
+      { key: 'C', text: '145' },
+      { key: 'D', text: '140' },
+      { key: 'E', text: '135' },
+    ],
+    answer: 'C',
+    hint: 'm(AEF) = a de ve iki kırılma noktasından da paralel çiz; a sonunda sadeleşir.',
+    solution: [
+      {
+        title: 'Kırılma noktalarından paralel çiz',
+        detail:
+          'E ve F noktalarından BD doğrusuna paralel e ve f doğrularını çizelim: BD // e // f olur.',
+      },
+      {
+        title: 'A’daki açıyı E’ye taşı',
+        detail:
+          'AE keseninde m(BAE) = 125° ile e doğrusunun sol kolunun [EA ile yaptığı açı yan iç açılardır: 180 − 125 = 55° bulunur.',
+      },
+      {
+        title: 'E’deki açıyı yaz',
+        detail:
+          'E, doğrunun üstünde, F ise altındadır; bu yüzden e’nin sol kolu EAF açısının dışında kalır. m(AEF) = a dersek e’nin sol kolu ile [EF arasındaki açı 55 + a olur.',
+      },
+      {
+        title: 'Açıyı f’ye taşı',
+        detail:
+          'e // f ve EF kesendir. e’nin sol kolu ile [EF arasındaki açı, f’nin sağ kolu ile [FE arasındaki açıya iç ters açı olarak eşittir: yine 55 + a.',
+      },
+      {
+        title: 'F’de farkı al',
+        detail:
+          'm(EFC) = a + 20 olduğundan f’nin sağ kolu ile [FC arasındaki açı (55 + a) − (a + 20) = 35° olur. Görüldüğü gibi a sadeleşti.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'f // BD ve FC kesendir; bu 35°, C köşesinde [CF ile sol kol arasındaki açıya eşittir. Doğrusal açıdan α = 180 − 35 = 145° bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 36
+  {
+    id: 'angles-36',
+    topic: 'Paralel doğrularda zikzak',
+    figure: {
+      viewBox: '0 0 400 221',
+      caption: 'Şekil 36',
+      label:
+        'Paralel [AB ve [DE ışınları ile bunların dışında kalan C köşesi; D, C, F noktaları doğrusal.',
+      svg: q36Svg('q'),
+    },
+    solutionFigure: {
+      viewBox: '0 0 400 221',
+      caption: 'Şekil 36 — yardımcı çizim',
+      label:
+        'Aynı şekilde, C köşesinden [AB ile aynı yöne bakan kesik çizgili [Cd yardımcı ışını çizilmiştir.',
+      svg: q36Svg('s') + Q36_AUX_SVG,
+    },
+    given: ['[AB // [DE', 'm(BAC) = 145°', 'm(CDE) = 135°', 'D, C, F doğrusal', 'm(ACF) = α'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, α kaç derecedir?',
+    choices: [
+      { key: 'A', text: '120' },
+      { key: 'B', text: '115' },
+      { key: 'C', text: '110' },
+      { key: 'D', text: '105' },
+      { key: 'E', text: '100' },
+    ],
+    answer: 'E',
+    hint: 'Kırılma noktası paralellerin dışında kaldığında üç açının toplamı 360°’dir.',
+    solution: [
+      {
+        title: 'C’den paralel çiz',
+        detail:
+          'C noktasından [AB ile aynı yöne (sağa) bakan [Cd ışınını çizelim: [Cd // [AB // [DE olur.',
+      },
+      {
+        title: 'Üstteki parçayı bul',
+        detail:
+          'AC keseninde [AB ile [Cd aynı yöne baktığından m(BAC) ile m(ACd) yan iç açılardır: m(ACd) = 180 − 145 = 35°.',
+      },
+      {
+        title: 'Alttaki parçayı bul',
+        detail:
+          'CD keseninde aynı biçimde m(CDE) ile m(dCD) yan iç açılardır: m(dCD) = 180 − 135 = 45°.',
+      },
+      {
+        title: 'ACD açısını topla',
+        detail:
+          '[Cd ışını ACD açısının içinde kaldığından m(ACD) = 35 + 45 = 80° bulunur. Kısayolu şudur: köşe paralellerin dışındayken m(BAC) + m(ACD) + m(CDE) = 360°’dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'D, C, F doğrusal olduğundan m(ACD) ile m(ACF) bütünlerdir: α = 180 − 80 = 100° bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 37
+  {
+    id: 'angles-37',
+    topic: 'Açıortay ve üçgen',
+    figure: {
+      viewBox: '0 0 400 207',
+      caption: 'Şekil 37',
+      label:
+        'D, C, E doğrusu üzerindeki C noktasından çıkan [CA, [CK, [CB ışınları ve ABC üçgeni; eş açılar işaretli.',
+      svg: `
+          <defs>
+            <marker id="arrow-q37" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,1 L9,5 L0,9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </marker>
+          </defs>
+
+          <line class="ln" x1="40" y1="173.3" x2="373.3" y2="173.3" marker-start="url(#arrow-q37)" marker-end="url(#arrow-q37)"/>
+          <line class="ln" x1="186.7" y1="173.3" x2="213.3" y2="22.3" marker-end="url(#arrow-q37)"/>
+          <path class="ln" d="M75.2,40.5 L186.7,173.3 L290.4,86.3 Z"/>
+
+          <path class="arc" d="M146.7,173.3 A40,40 0 0 1 161,142.7"/>
+          <line class="tick" x1="156.5" y1="159.2" x2="144.4" y2="153.6"/>
+          <path class="arc" d="M161,142.7 A40,40 0 0 1 193.6,133.9"/>
+          <line class="tick" x1="178.1" y1="141.1" x2="174.6" y2="128.2"/>
+
+          <path class="arc" d="M196.4,118.2 A56,56 0 0 1 229.6,137.3"/>
+          <line class="tick" x1="213.4" y1="132.2" x2="221" y2="120.5"/>
+          <line class="tick" x1="208.9" y1="129.6" x2="215.3" y2="117.2"/>
+          <path class="arc" d="M229.6,137.3 A56,56 0 0 1 242.7,173.3"/>
+          <line class="tick" x1="233.6" y1="159" x2="246.9" y2="154.9"/>
+          <line class="tick" x1="231.8" y1="154.2" x2="244.7" y2="148.7"/>
+
+          <path class="arc" d="M104.3,75.2 A45.3,45.3 0 0 0 119.5,49.9"/>
+          <text class="val" x="137" y="80" text-anchor="middle">38°</text>
+
+          <path class="arc" d="M248.6,77.4 A42.7,42.7 0 0 0 257.7,113.7"/>
+          <text class="val" x="227" y="108" text-anchor="middle">α</text>
+
+          <circle class="pt" cx="186.7" cy="173.3" r="3.2"/>
+          <circle class="pt" cx="66.7" cy="173.3" r="3.2"/>
+          <circle class="pt" cx="333.3" cy="173.3" r="3.2"/>
+          <circle class="pt" cx="75.2" cy="40.5" r="3.2"/>
+          <circle class="pt" cx="290.4" cy="86.3" r="3.2"/>
+
+          <text x="66.7" y="34.7" text-anchor="end">A</text>
+          <text x="299" y="80">B</text>
+          <text x="186.7" y="194.7" text-anchor="middle">C</text>
+          <text x="66.7" y="194.7" text-anchor="middle">D</text>
+          <text x="333.3" y="194.7" text-anchor="middle">E</text>
+          <text x="221" y="16">K</text>
+        `,
+    },
+    given: ['D, C, E doğrusal', 'm(ECB) = m(BCK)', 'm(KCA) = m(ACD)', 'm(BAC) = 38°', 'm(ABC) = α'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, α kaç derecedir?',
+    choices: [
+      { key: 'A', text: '48' },
+      { key: 'B', text: '52' },
+      { key: 'C', text: '56' },
+      { key: 'D', text: '60' },
+      { key: 'E', text: '64' },
+    ],
+    answer: 'B',
+    hint: 'C köşesindeki dört açının toplamı 180°; eşleri kullanınca m(ACB) tek adımda çıkar.',
+    solution: [
+      {
+        title: 'Açıları adlandır',
+        detail: 'm(ACD) = m(ACK) = y ve m(KCB) = m(BCE) = x diyelim.',
+      },
+      {
+        title: 'Doğrusal açıyı yaz',
+        detail:
+          'D, C, E doğrusal olduğundan C köşesindeki dört açı 180°’yi paylaşır: y + y + x + x = 180 → 2(x + y) = 180 → x + y = 90 bulunur.',
+      },
+      {
+        title: 'ACB açısını bul',
+        detail:
+          '[CK ışını ACB açısının içinde kaldığından m(ACB) = m(ACK) + m(KCB) = y + x = 90° olur; yani [CA ⊥ [CB’dir.',
+      },
+      {
+        title: 'Üçgende açı toplamı',
+        detail: 'ABC üçgeninde m(BAC) + m(ACB) + α = 180 → 38 + 90 + α = 180 olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'α = 180 − 128 = 52° bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 38
+  {
+    id: 'angles-38',
+    topic: 'Kenarları dik açılar',
+    figure: {
+      viewBox: '0 0 400 263',
+      caption: 'Şekil 38',
+      label:
+        'C noktasından çıkan [CE, [CF, [CK ışınları ile C’den geçen AC doğrusu; [BD ışını [CF’ye paraleldir.',
+      svg: `
+          <defs>
+            <marker id="arrow-q38" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,1 L9,5 L0,9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </marker>
+          </defs>
+
+          <line class="ln" x1="261.5" y1="16.4" x2="187.5" y2="175"/>
+          <line class="ln" x1="245.6" y1="50.4" x2="387.5" y2="50.4" marker-end="url(#arrow-q38)"/>
+          <line class="ln" x1="187.5" y1="175" x2="375" y2="175" marker-end="url(#arrow-q38)"/>
+          <line class="ln" x1="187.5" y1="175" x2="74.25" y2="122.1" marker-end="url(#arrow-q38)"/>
+          <line class="ln" x1="187.5" y1="175" x2="187.5" y2="247.5" marker-end="url(#arrow-q38)"/>
+
+          <path class="par" d="M303.75,42.9 L312.5,50.4 L303.75,57.9"/>
+          <path class="par" d="M291.25,167.5 L300,175 L291.25,182.5"/>
+
+          <path class="ln" d="M194.4,160.25 L179.6,153.4 L172.75,168.1"/>
+          <path class="ln" d="M203.75,175 L203.75,191.25 L187.5,191.25"/>
+
+          <path class="arc" d="M280.6,50.4 A35,35 0 0 0 260.4,18.7"/>
+          <text class="val" x="295" y="26">65°</text>
+
+          <path class="arc" d="M149,157 A42.5,42.5 0 0 0 187.5,217.5"/>
+          <text class="val" x="132" y="214" text-anchor="middle">α</text>
+
+          <circle class="pt" cx="261.5" cy="16.4" r="3.2"/>
+          <circle class="pt" cx="245.6" cy="50.4" r="3.2"/>
+          <circle class="pt" cx="350" cy="50.4" r="3.2"/>
+          <circle class="pt" cx="187.5" cy="175" r="3.2"/>
+          <circle class="pt" cx="337.5" cy="175" r="3.2"/>
+          <circle class="pt" cx="74.25" cy="122.1" r="3.2"/>
+
+          <text x="269" y="14">A</text>
+          <text x="238" y="45" text-anchor="end">B</text>
+          <text x="350" y="41" text-anchor="middle">D</text>
+          <text x="201" y="165">C</text>
+          <text x="345" y="166">F</text>
+          <text x="67" y="116" text-anchor="end">E</text>
+          <text x="197" y="240">K</text>
+        `,
+    },
+    given: ['[CA ⊥ [CE', '[CF ⊥ [CK', '[BD // [CF', 'm(ABD) = 65°', 'm(ECK) = α'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, α kaç derecedir?',
+    choices: [
+      { key: 'A', text: '130' },
+      { key: 'B', text: '125' },
+      { key: 'C', text: '120' },
+      { key: 'D', text: '115' },
+      { key: 'E', text: '110' },
+    ],
+    answer: 'D',
+    hint: 'Kenarları karşılıklı dik iki açı ya eşittir ya da bütündür.',
+    solution: [
+      {
+        title: 'Yöndeş açıyı bul',
+        detail:
+          '[BD // [CF ve AC kesendir. B ile C aynı taraftaki köşeler olduğundan m(ABD) ile m(ACF) yöndeş açılardır: m(ACF) = 65°.',
+      },
+      {
+        title: 'Kenarları dik açıları tanı',
+        detail:
+          '[CE ⊥ [CA ve [CK ⊥ [CF olduğundan ECK açısının kenarları, ACF açısının kenarlarına karşılıklı diktir. Böyle iki açı ya eşittir ya da bütündür.',
+      },
+      {
+        title: 'Hangisi olduğunu seç',
+        detail:
+          'ACF dar, ECK ise geniş açı olduğundan bunlar eşit olamaz; bütündürler: α = 180 − 65 = 115° bulunur.',
+      },
+      {
+        title: 'İstersen doğrudan hesapla',
+        detail:
+          'C çevresinde m(ECA) + m(ACF) + m(FCK) = 90 + 65 + 90 = 245° eder. Tam açı 360° olduğundan α = 360 − 245 = 115° bulunur.',
+      },
+    ],
+  },
 ];
 
 /** Looks questions up by id so the modules below read as a running order. */
@@ -2071,6 +3117,30 @@ export const UNIT_1_ANGLES: Unit = {
       summary:
         'Kırılma noktasından paralel çizme yöntemi: paralellerin dışında kalan köşeler, çoklu kırılma ve grad-radyan karışımı.',
       questions: pick('angles-21', 'angles-25', 'angles-8', 'angles-12', 'angles-17'),
+    },
+    {
+      id: 'angles-m6',
+      order: 6,
+      title: 'Karma tekrar',
+      summary:
+        'Üniteyi kapatan yedi soruluk karma set: tam açı, tümler-bütünler denklemleri, yan iç açılar, kenarları paralel açılar ve açının küme olarak kesişimi.',
+      questions: pick(
+        'angles-26',
+        'angles-27',
+        'angles-28',
+        'angles-29',
+        'angles-30',
+        'angles-31',
+        'angles-32',
+      ),
+    },
+    {
+      id: 'angles-m7',
+      order: 7,
+      title: 'Paralel doğrularda karma test',
+      summary:
+        'İki keseni olan paralel doğrular, açıortayla kurulan üçgenler, çift kırılmalı zikzaklar ve kenarları karşılıklı dik açılar.',
+      questions: pick('angles-33', 'angles-34', 'angles-35', 'angles-36', 'angles-37', 'angles-38'),
     },
   ],
 };
