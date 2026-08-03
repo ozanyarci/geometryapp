@@ -89,14 +89,14 @@ describe('question bank integrity', () => {
 describe('unit 1 modules', () => {
   const unit = UNITS.find((u) => u.id === 'angles')!;
 
-  it('splits thirty-eight questions into seven modules', () => {
-    expect(unit.modules.length).toBe(7);
-    expect(unitQuestions(unit).length).toBe(38);
+  it('splits seventy-four questions into thirteen modules', () => {
+    expect(unit.modules.length).toBe(13);
+    expect(unitQuestions(unit).length).toBe(74);
   });
 
   it('uses every question in the bank exactly once', () => {
     const ids = unitQuestions(unit).map((question) => question.id);
-    const expected = Array.from({ length: 38 }, (_, i) => `angles-${i + 1}`);
+    const expected = Array.from({ length: 74 }, (_, i) => `angles-${i + 1}`);
     expect([...ids].sort()).toEqual([...expected].sort());
   });
 });
@@ -145,4 +145,42 @@ describe('unit 1 answer key', () => {
     expect(answerOf('angles-36')).toBe('E'));
   it('37 — x + y = 90, α = 180 − 90 − 38 = 52 → B', () => expect(answerOf('angles-37')).toBe('B'));
   it('38 — m(ACF) = 65, α = 180 − 65 = 115 → D', () => expect(answerOf('angles-38')).toBe('D'));
+  it('39 — 15x + 30 = 180, m(BAC) = 40 → C', () => expect(answerOf('angles-39')).toBe('C'));
+  it('40 — m(FCD) = 55, m(FDC) = 35, 180 − 35 = 145 → C', () =>
+    expect(answerOf('angles-40')).toBe('C'));
+  it('41 — m(BDF) = 120, α = 180 − 120 = 60 → C', () => expect(answerOf('angles-41')).toBe('C'));
+  it('42 — 90 − 52 = 38 → C', () => expect(answerOf('angles-42')).toBe('C'));
+  it('43 — 3x = 90, α = 360 − 120 − 90 = 150 → C', () => expect(answerOf('angles-43')).toBe('C'));
+  it('44 — a = 60, b = 30, x = 180 − 30 = 150 → C', () => expect(answerOf('angles-44')).toBe('C'));
+  it('45 — x = 70 − 40 = 30 → B', () => expect(answerOf('angles-45')).toBe('B'));
+  it('46 — m(BAC) = 40, 4x = 140, x = 35 → A', () => expect(answerOf('angles-46')).toBe('A'));
+  it('47 — m(FBE) = 125, x = 360 − 230 = 130 → D', () => expect(answerOf('angles-47')).toBe('D'));
+  it('48 — 35 + α + 70 = 180, α = 75 → B', () => expect(answerOf('angles-48')).toBe('B'));
+  it('49 — m(CEd) = 75, α = 180 − 75 = 105 → E', () => expect(answerOf('angles-49')).toBe('E'));
+  it('50 — m(BAD) = 60, m(FAd) = 100 → D', () => expect(answerOf('angles-50')).toBe('D'));
+  it('51 — m(KAL) = 105, α = 180 − 105 = 75 → C', () => expect(answerOf('angles-51')).toBe('C'));
+  it('52 — a = 2b, 3b = 126, a = 84 → B', () => expect(answerOf('angles-52')).toBe('B'));
+  it('53 — m(AKE) = 30, m(CKd) = 55, 180 − 55 = 125 → D', () =>
+    expect(answerOf('angles-53')).toBe('D'));
+  it('54 — 2t + 40 = t + 85, α = 130 → A', () => expect(answerOf('angles-54')).toBe('A'));
+  it('55 — a sadeleşir, m(EFC) = 30 → C', () => expect(answerOf('angles-55')).toBe('C'));
+  it('56 — 144 − 132 = 12 → E', () => expect(answerOf('angles-56')).toBe('E'));
+  it('57 — m(ABC) = 53, x = 180 − 74 − 53 = 53 → D', () => expect(answerOf('angles-57')).toBe('D'));
+  it('58 — 2a + 2b = 540, a = 150 → B', () => expect(answerOf('angles-58')).toBe('B'));
+  it('59 — m(BAC) = 50, m(AFB) = 90 − 25 = 65 → E', () => expect(answerOf('angles-59')).toBe('E'));
+  it('60 — x sadeleşir, m(BCM) = 135 → C', () => expect(answerOf('angles-60')).toBe('C'));
+  it('61 — x = 30, y = 30 + 55 = 85 → A', () => expect(answerOf('angles-61')).toBe('A'));
+  it('62 — t sadeleşir, α = 90 → D', () => expect(answerOf('angles-62')).toBe('D'));
+  it('63 — (225 − α)/2 + 25 + α = 180, α = 85 → D', () => expect(answerOf('angles-63')).toBe('D'));
+  it('64 — a + b = 115, α = 180 − 115 = 65 → B', () => expect(answerOf('angles-64')).toBe('B'));
+  it('65 — y = 130, x = 60, fark 70 → E', () => expect(answerOf('angles-65')).toBe('E'));
+  it('66 — m(PAB) + m(KDC) = 200, α = 100 → C', () => expect(answerOf('angles-66')).toBe('C'));
+  it('67 — y − x = 180 − 40 − 95 = 45 → A', () => expect(answerOf('angles-67')).toBe('A'));
+  it('68 — 65 + 85 = 150, α = 180 − 150 = 30 → D', () => expect(answerOf('angles-68')).toBe('D'));
+  it('69 — 880 − 2x = 720, x = 80 → B', () => expect(answerOf('angles-69')).toBe('B'));
+  it('70 — β = 230 − 2α → D', () => expect(answerOf('angles-70')).toBe('D'));
+  it('71 — a/2 + b/2 = 55, a + b = 110 → E', () => expect(answerOf('angles-71')).toBe('E'));
+  it('72 — 25 = 80 − (180 − α), α = 125 → C', () => expect(answerOf('angles-72')).toBe('C'));
+  it('73 — m(DKA) = 44, m(KAD) = 68, x = 68 → A', () => expect(answerOf('angles-73')).toBe('A'));
+  it('74 — m(BCE) = 120, m(CED) = 75, α = 25 → D', () => expect(answerOf('angles-74')).toBe('D'));
 });
