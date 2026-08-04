@@ -3,11 +3,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ChoiceKey } from '../../core/models';
 import { QuizStore, formatDuration } from '../../core/quiz-store';
 import { FigureView } from '../../ui/figure/figure';
+import { ScratchPad } from '../../ui/scratch-pad/scratch-pad';
 
 @Component({
   selector: 'app-quiz',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [FigureView],
+  imports: [FigureView, ScratchPad],
   templateUrl: './quiz.html',
   styleUrl: './quiz.scss',
 })

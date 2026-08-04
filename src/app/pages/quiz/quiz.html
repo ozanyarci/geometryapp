@@ -51,25 +51,27 @@
         <span class="question__topic">{{ question.topic }}</span>
       </div>
 
-      @if (question.figure) {
-        <app-figure [figure]="question.figure" />
-      }
+      <app-scratch-pad [key]="question.id">
+        @if (question.figure) {
+          <app-figure [figure]="question.figure" />
+        }
 
-      @if (question.given?.length) {
-        <div class="given">
-          @for (line of question.given; track line) {
-            <span>{{ line }}</span>
-          }
-        </div>
-      }
+        @if (question.given?.length) {
+          <div class="given">
+            @for (line of question.given; track line) {
+              <span>{{ line }}</span>
+            }
+          </div>
+        }
 
-      @for (paragraph of question.stem; track paragraph) {
-        <p class="question__stem">{{ paragraph }}</p>
-      }
+        @for (paragraph of question.stem; track paragraph) {
+          <p class="question__stem">{{ paragraph }}</p>
+        }
 
-      @if (question.ask) {
-        <p class="question__ask">{{ question.ask }}</p>
-      }
+        @if (question.ask) {
+          <p class="question__ask">{{ question.ask }}</p>
+        }
+      </app-scratch-pad>
 
       <ul class="choices">
         @for (choice of question.choices; track choice.key) {
