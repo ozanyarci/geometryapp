@@ -1,0 +1,12 @@
+# Cloudflare Pages: cache kuralları.
+# Hash'li js/css dosyaları varsayılan olarak uzun süre cache'lenir. Buradaki
+# dosyalar ise sürüm kontrolünü belirlediği için her istekte doğrulanmalı;
+# aksi halde kullanıcılar eski service worker sürümünde takılı kalır.
+/index.html
+  Cache-Control: no-cache
+/ngsw.json
+  Cache-Control: no-cache
+/ngsw-worker.js
+  Cache-Control: no-cache
+/manifest.webmanifest
+  Cache-Control: no-cache

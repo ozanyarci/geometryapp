@@ -1,0 +1,4 @@
+# Cloudflare Pages: SPA fallback.
+# Statik dosyalar önce servis edilir; eşleşmeyen yollar (derin linkler ve
+# sayfa yenileme) Angular router'a devredilmek üzere index.html'e döner.
+/*    /index.html   200
