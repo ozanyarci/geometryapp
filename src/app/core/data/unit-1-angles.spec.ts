@@ -184,3 +184,53 @@ describe('unit 1 answer key', () => {
   it('73 — m(DKA) = 44, m(KAD) = 68, x = 68 → A', () => expect(answerOf('angles-73')).toBe('A'));
   it('74 — m(BCE) = 120, m(CED) = 75, α = 25 → D', () => expect(answerOf('angles-74')).toBe('D'));
 });
+
+describe('unit 2 modules', () => {
+  const unit = UNITS.find((u) => u.id === 'triangles')!;
+
+  it('splits twenty-four questions into four modules', () => {
+    expect(unit.modules.length).toBe(4);
+    expect(unitQuestions(unit).length).toBe(24);
+  });
+
+  it('uses every question in the bank exactly once', () => {
+    const ids = unitQuestions(unit).map((question) => question.id);
+    const expected = Array.from({ length: 24 }, (_, i) => `triangles-${i + 1}`);
+    expect([...ids].sort()).toEqual([...expected].sort());
+  });
+});
+
+describe('unit 2 answer key', () => {
+  const unit = UNITS.find((u) => u.id === 'triangles')!;
+  const answerOf = (id: string) => unitQuestions(unit).find((q) => q.id === id)?.answer;
+
+  // Worked through by hand and verified against the source test.
+  it('1 — β = 30 + α ve α + 2β = 180, α = 40 → B', () => expect(answerOf('triangles-1')).toBe('B'));
+  it('2 — 2x − 70 = x, x = 70 → D', () => expect(answerOf('triangles-2')).toBe('D'));
+  it('3 — m(ABC) = 360 − 2·140 = 80, x = 50 → A', () => expect(answerOf('triangles-3')).toBe('A'));
+  it('4 — 42 + (58 + α) + α = 180, α = 40 → C', () => expect(answerOf('triangles-4')).toBe('C'));
+  it('5 — 3β = 120, m(BAC) = 100 → E', () => expect(answerOf('triangles-5')).toBe('E'));
+  it('6 — 150 − 2β = β + 30, β = 40, α = 110 → D', () => expect(answerOf('triangles-6')).toBe('D'));
+  it('7 — taban açıları 50, α = 180 − 80 − 35 = 65 → D', () =>
+    expect(answerOf('triangles-7')).toBe('D'));
+  it('8 — m(BCD) = 72, α = 72 − 60 = 12 → B', () => expect(answerOf('triangles-8')).toBe('B'));
+  it('9 — m(C) = 50, x = 90 + 25 = 115 → E', () => expect(answerOf('triangles-9')).toBe('E'));
+  it('10 — α = 2θ ve θ = 2α − 45, α = 30 → C', () => expect(answerOf('triangles-10')).toBe('C'));
+  it('11 — α = 90 + (A − B)/2 = 105 → A', () => expect(answerOf('triangles-11')).toBe('A'));
+  it('12 — m(BAE) = 70, α = (180 − 70)/2 = 55 → D', () =>
+    expect(answerOf('triangles-12')).toBe('D'));
+  it('13 — |FA| = |FB| = |AE|, α = (180 − 40)/2 = 70 → D', () =>
+    expect(answerOf('triangles-13')).toBe('D'));
+  it('14 — m(CDE) = 50, α = 50/2 = 25 → B', () => expect(answerOf('triangles-14')).toBe('B'));
+  it('15 — m(C) = 50, x = (180 − 50)/2 = 65 → E', () => expect(answerOf('triangles-15')).toBe('E'));
+  it('16 — 2(x + 35 + 25) = 180, x = 30 → C', () => expect(answerOf('triangles-16')).toBe('C'));
+  it('17 — merkez açı 130, çevre açı 65 → A', () => expect(answerOf('triangles-17')).toBe('A'));
+  it('18 — m(ABC) = 40, α = 2·40 = 80 → D', () => expect(answerOf('triangles-18')).toBe('D'));
+  it('19 — c sadeleşir, α = 180 − 118 = 62 → E', () => expect(answerOf('triangles-19')).toBe('E'));
+  it('20 — m(BAC) = 84, α = 84 − 66 = 18 → B', () => expect(answerOf('triangles-20')).toBe('B'));
+  it('21 — 180 − 2β = β − 18, β = 66, α = 96 → D', () =>
+    expect(answerOf('triangles-21')).toBe('D'));
+  it('22 — x − 30 = 90 − x/2, x = 80 → A', () => expect(answerOf('triangles-22')).toBe('A'));
+  it('23 — m(CBA) = 35, α = 90 − 35 = 55 → C', () => expect(answerOf('triangles-23')).toBe('C'));
+  it('24 — m(ACB) = 65, m(DCB) = 50, α = 40 → D', () => expect(answerOf('triangles-24')).toBe('D'));
+});

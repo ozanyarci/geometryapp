@@ -168,19 +168,6 @@
   &:active {
     background: var(--paper-deep);
   }
-
-  &--upcoming {
-    opacity: 0.5;
-
-    .unit__order {
-      border-color: var(--hair);
-      color: var(--ink-soft);
-    }
-
-    &:active {
-      background: var(--card);
-    }
-  }
 }
 
 .bar {

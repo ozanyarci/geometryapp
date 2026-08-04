@@ -49,6 +49,7 @@ src/app/
     models.ts              Question, Choice, Unit, Figure, SolutionStep types
     data/
       unit-1-angles.ts     Unit 1 questions, SVG figures and solutions (Turkish content)
+      unit-2-triangles.ts  Unit 2 questions, SVG figures and solutions (Turkish content)
     curriculum.ts          Unit registry
     quiz-store.ts          Signal-based quiz engine (mode, answers, scoring, timer)
     progress-store.ts      Durable progress via localStorage
@@ -67,9 +68,8 @@ Routes: `/`, `/unit/:id`, `/unit/:id/question`, `/unit/:id/result`.
 
 ## Adding a unit
 
-1. Create a file such as `src/app/core/data/unit-2-triangles.ts` exporting a `Unit`.
+1. Create a file such as `src/app/core/data/unit-3-polygons.ts` exporting a `Unit`.
 2. Append it to the `UNITS` array in `src/app/core/curriculum.ts`, in curriculum order.
-3. Remove the "Yakında" placeholder in `src/app/pages/home/home.html`.
 
 Nothing else needs changing — routing, progress tracking and the result screen pick
 the unit up automatically.
