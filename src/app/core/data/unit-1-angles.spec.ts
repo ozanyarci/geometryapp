@@ -189,14 +189,14 @@ describe('unit 1 answer key', () => {
 describe('unit 2 modules', () => {
   const unit = UNITS.find((u) => u.id === 'triangles')!;
 
-  it('splits thirty-six questions into six modules', () => {
-    expect(unit.modules.length).toBe(6);
-    expect(unitQuestions(unit).length).toBe(36);
+  it('splits forty-two questions into seven modules', () => {
+    expect(unit.modules.length).toBe(7);
+    expect(unitQuestions(unit).length).toBe(42);
   });
 
   it('uses every question in the bank exactly once', () => {
     const ids = unitQuestions(unit).map((question) => question.id);
-    const expected = Array.from({ length: 36 }, (_, i) => `triangles-${i + 1}`);
+    const expected = Array.from({ length: 42 }, (_, i) => `triangles-${i + 1}`);
     expect([...ids].sort()).toEqual([...expected].sort());
   });
 });
@@ -249,4 +249,12 @@ describe('unit 2 answer key', () => {
     expect(answerOf('triangles-34')).toBe('E'));
   it('35 — 180 − 4α = 64, α = 29 → A', () => expect(answerOf('triangles-35')).toBe('A'));
   it('36 — m(ABC) = m(ADB) = 68 → B', () => expect(answerOf('triangles-36')).toBe('B'));
+  it('37 — m(ACE) = x + (90 − x) = 90 → E', () => expect(answerOf('triangles-37')).toBe('E'));
+  it('38 — m(BAC) = 30, m(BCA) = 80, x = 70 → A', () => expect(answerOf('triangles-38')).toBe('A'));
+  it('39 — m(BDC) = 110, x + 65 + 70 = 180, x = 45 → B', () =>
+    expect(answerOf('triangles-39')).toBe('B'));
+  it('40 — x = 90 + 64/2 = 122 → D', () => expect(answerOf('triangles-40')).toBe('D'));
+  it('41 — CD, [AB]’nin orta dikmesi, x = 60/2 = 30 → C', () =>
+    expect(answerOf('triangles-41')).toBe('C'));
+  it('42 — m(ACB) = 52 + 32 = 84, α = 96 → A', () => expect(answerOf('triangles-42')).toBe('A'));
 });
