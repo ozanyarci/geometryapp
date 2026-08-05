@@ -6713,6 +6713,85 @@ const QUESTIONS: readonly Question[] = [
       },
     ],
   },
+
+  // ---------------------------------------------------------------- 75
+  {
+    id: 'angles-75',
+    topic: 'Paralel doğrularda zikzak',
+    figure: {
+      viewBox: '0 48 400 304',
+      caption: 'Şekil 75',
+      label:
+        'Paralel d₁ ve d₂ doğruları arasında, d₁ üzerindeki A ile d₂ üzerindeki B noktasını birleştiren, P köşesinde kırılan bir zikzak.',
+      svg: `
+          <defs>
+            <marker id="arrow-q75" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,1 L9,5 L0,9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </marker>
+          </defs>
+
+          <line class="ln" x1="60" y1="80" x2="380" y2="80" marker-start="url(#arrow-q75)" marker-end="url(#arrow-q75)"/>
+          <line class="ln" x1="60" y1="320" x2="380" y2="320" marker-start="url(#arrow-q75)" marker-end="url(#arrow-q75)"/>
+          <path class="ln" d="M250,80 L217.8,200 L318.5,320"/>
+
+          <path class="arc" d="M240.7,114.8 A36,36 0 0 1 214,80"/>
+          <text class="val" x="204" y="120.3" text-anchor="middle">3x</text>
+
+          <path class="arc" d="M282.5,320 A36,36 0 0 1 295.4,292.4"/>
+          <text class="val" x="266" y="300.5" text-anchor="middle">2x</text>
+
+          <path class="arc" d="M225.6,171 A30,30 0 0 1 237.1,223"/>
+          <text class="val" x="270.6" y="193.3" text-anchor="middle">125°</text>
+
+          <circle class="pt" cx="250" cy="80" r="3.2"/>
+          <circle class="pt" cx="217.8" cy="200" r="3.2"/>
+          <circle class="pt" cx="318.5" cy="320" r="3.2"/>
+
+          <text x="258" y="70">A</text>
+          <text x="327.5" y="340">B</text>
+          <text x="207.8" y="195" text-anchor="end">P</text>
+          <text x="380" y="68" text-anchor="end">d₁</text>
+          <text x="380" y="342" text-anchor="end">d₂</text>
+        `,
+    },
+    given: ['d₁ // d₂', 'A ∈ d₁ ve B ∈ d₂', 'm(APB) = 125°'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, x kaç derecedir?',
+    choices: [
+      { key: 'A', text: '20' },
+      { key: 'B', text: '22' },
+      { key: 'C', text: '25' },
+      { key: 'D', text: '28' },
+      { key: 'E', text: '30' },
+    ],
+    answer: 'C',
+    hint: 'P noktasından d₁’e paralel bir doğru çizersen kırık açı ikiye ayrılır.',
+    solution: [
+      {
+        title: 'Yardımcı paralel çiz',
+        detail:
+          'P noktasından d₁ ve d₂’ye paralel bir d doğrusu çizilir. Bu doğru, m(APB) açısını iki parçaya ayırır.',
+      },
+      {
+        title: 'Üstteki parçayı bul',
+        detail:
+          'd // d₁ ve PA kesen olduğundan, d ile [PA arasındaki açı ile 3x iç ters açılardır: bu parça 3x’tir.',
+      },
+      {
+        title: 'Alttaki parçayı bul',
+        detail:
+          'd // d₂ ve PB kesen olduğundan, d ile [PB arasındaki açı ile 2x iç ters açılardır: bu parça 2x’tir.',
+      },
+      {
+        title: 'Zikzak kuralını yaz',
+        detail: 'İki parçanın toplamı kırık açıyı verir: 3x + 2x = 125°.',
+      },
+      {
+        title: 'Sonuç',
+        detail: '5x = 125 → x = 25° bulunur. Kontrol: 75° + 50° = 125°’dir.',
+      },
+    ],
+  },
 ];
 
 /** Looks questions up by id so the modules below read as a running order. */
@@ -6770,7 +6849,7 @@ export const UNIT_1_ANGLES: Unit = {
       title: 'Paralel doğrularda zikzak',
       summary:
         'Kırılma noktasından paralel çizme yöntemi: paralellerin dışında kalan köşeler, çoklu kırılma ve grad-radyan karışımı.',
-      questions: pick('angles-21', 'angles-25', 'angles-8', 'angles-12', 'angles-17'),
+      questions: pick('angles-21', 'angles-25', 'angles-8', 'angles-12', 'angles-17', 'angles-75'),
     },
     {
       id: 'angles-m6',
