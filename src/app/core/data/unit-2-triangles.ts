@@ -4484,6 +4484,532 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+
+  // ---------------------------------------------------------------- 55
+  {
+    id: 'triangles-55',
+    topic: 'İç açıortayların kesim noktası',
+    figure: {
+      viewBox: '0 43 400 284',
+      caption: 'Şekil 55',
+      label:
+        'ABC üçgeninde B ve C köşelerinin iç açıortayları üçgenin içindeki D noktasında kesişiyor; A köşesi de D ile birleştirilmiş.',
+      svg: `
+          <path class="ln" d="M170.4,74.1 L40,300 L360,300 L170.4,74.1"/>
+          <path class="ln" d="M40,300 L183,217.5"/>
+          <path class="ln" d="M360,300 L183,217.5"/>
+          <path class="ln" d="M170.4,74.1 L183,217.5"/>
+
+          <path class="arc" d="M61,263.6 A42,42 0 0 1 76.4,279"/>
+          <line class="tick" x1="65.5" y1="274.5" x2="73.9" y2="266.1"/>
+          <path class="arc" d="M76.4,279 A42,42 0 0 1 82,300"/>
+          <line class="tick" x1="74.8" y1="290.7" x2="86.4" y2="287.6"/>
+
+          <path class="arc" d="M327.4,284.8 A36,36 0 0 1 336.9,272.4"/>
+          <line class="tick" x1="335" y1="283.4" x2="325" y2="276.8"/>
+          <line class="tick" x1="337.5" y1="280.1" x2="328.5" y2="272.2"/>
+          <path class="arc" d="M324,300 A36,36 0 0 1 327.4,284.8"/>
+          <line class="tick" x1="330.3" y1="295.6" x2="318.5" y2="293.8"/>
+          <line class="tick" x1="331.2" y1="291.5" x2="319.7" y2="288.1"/>
+
+          <path class="arc" d="M153.4,103.5 A34,34 0 0 0 173.4,108"/>
+          <text class="val" x="159.2" y="129.9" text-anchor="middle">α</text>
+
+          <path class="arc" d="M160.5,230.5 A26,26 0 0 0 206.5,228.4"/>
+          <text class="val" x="185" y="268.4" text-anchor="middle">125°</text>
+
+          <circle class="pt" cx="170.4" cy="74.1" r="3.2"/>
+          <circle class="pt" cx="40" cy="300" r="3.2"/>
+          <circle class="pt" cx="360" cy="300" r="3.2"/>
+          <circle class="pt" cx="183" cy="217.5" r="3.2"/>
+
+          <text x="170.4" y="62.1" text-anchor="middle">A</text>
+          <text x="32" y="318" text-anchor="end">B</text>
+          <text x="368" y="318">C</text>
+          <text x="196" y="211.5">D</text>
+        `,
+    },
+    given: ['ABC bir üçgen', '[BD] ve [CD] açıortay', 'm(BDC) = 125°'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, m(BAD) = α kaç derecedir?',
+    choices: [
+      { key: 'A', text: '25' },
+      { key: 'B', text: '30' },
+      { key: 'C', text: '35' },
+      { key: 'D', text: '40' },
+      { key: 'E', text: '45' },
+    ],
+    answer: 'C',
+    hint: 'İki iç açıortayın kesim noktasından üçüncü açıortay da geçer.',
+    solution: [
+      {
+        title: 'D noktasını tanı',
+        detail:
+          '[BD] ve [CD] iç açıortayları D noktasında kesiştiğinden D, ABC üçgeninin iç teğet çemberinin merkezidir; dolayısıyla [AD] de A köşesinin açıortayıdır.',
+      },
+      {
+        title: 'Yarım açılara ad ver',
+        detail:
+          'm(ABC) = 2b ve m(ACB) = 2c olsun. Açıortaylar yüzünden BDC üçgeninde m(DBC) = b, m(DCB) = c olur.',
+      },
+      {
+        title: 'BDC üçgenini yaz',
+        detail: 'BDC üçgeninde b + c = 180 − m(BDC) = 180 − 125 = 55° bulunur.',
+      },
+      {
+        title: 'A açısını bul',
+        detail: 'ABC üçgeninde m(BAC) + 2b + 2c = 180 → m(BAC) = 180 − 2 · 55 = 70° olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: '[AD] açıortay olduğundan α = m(BAD) = 70 / 2 = 35° bulunur.',
+      },
+      {
+        title: 'Kısa yol',
+        detail:
+          'İki iç açıortay arasındaki açı m(BDC) = 90 + m(BAC) / 2 bağıntısını sağlar: 125 = 90 + m(BAC) / 2 → m(BAC) = 70 ve α = 35°.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 56
+  {
+    id: 'triangles-56',
+    topic: 'İkizkenar üçgende zincirleme açı',
+    figure: {
+      viewBox: '0 100 400 229',
+      caption: 'Şekil 56',
+      label:
+        'İkizkenar ABC üçgeninde [BC] üzerindeki D noktası A ile birleştirilmiş; [AC] üzerindeki E noktası da D ile birleştirilmiş ve |AD| = |AE|.',
+      svg: `
+          <path class="ln" d="M200,130 L30,300 L370,300 L200,130"/>
+          <path class="ln" d="M200,130 L279.3,300"/>
+          <path class="ln" d="M279.3,300 L332.6,262.6"/>
+
+          <line class="tick" x1="102.2" y1="236.2" x2="93.8" y2="227.8"/>
+          <line class="tick" x1="306.2" y1="227.8" x2="297.8" y2="236.2"/>
+
+          <line class="tick" x1="244" y1="210.2" x2="233.1" y2="215.3"/>
+          <line class="tick" x1="246.1" y1="214.7" x2="235.3" y2="219.8"/>
+          <line class="tick" x1="268.8" y1="190.3" x2="260.3" y2="198.8"/>
+          <line class="tick" x1="272.3" y1="193.8" x2="263.8" y2="202.3"/>
+
+          <path class="arc" d="M174.5,155.5 A36,36 0 0 0 215.2,162.6"/>
+          <text class="val" x="190.6" y="188.2" text-anchor="middle">α</text>
+
+          <path class="arc" d="M303.8,282.8 A30,30 0 0 1 309.3,300"/>
+          <text class="val" x="330.8" y="288.8" text-anchor="middle">35°</text>
+
+          <circle class="pt" cx="200" cy="130" r="3.2"/>
+          <circle class="pt" cx="30" cy="300" r="3.2"/>
+          <circle class="pt" cx="370" cy="300" r="3.2"/>
+          <circle class="pt" cx="279.3" cy="300" r="3.2"/>
+          <circle class="pt" cx="332.6" cy="262.6" r="3.2"/>
+
+          <text x="200" y="118" text-anchor="middle">A</text>
+          <text x="22" y="318" text-anchor="end">B</text>
+          <text x="378" y="318">C</text>
+          <text x="279.3" y="320" text-anchor="middle">D</text>
+          <text x="341.6" y="257.6">E</text>
+        `,
+    },
+    given: ['ABC bir üçgen', '|AB| = |AC|', 'D ∈ [BC] ve E ∈ [AC]', '|AD| = |AE|', 'm(EDC) = 35°'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, m(BAD) = α kaç derecedir?',
+    choices: [
+      { key: 'A', text: '60' },
+      { key: 'B', text: '65' },
+      { key: 'C', text: '70' },
+      { key: 'D', text: '75' },
+      { key: 'E', text: '80' },
+    ],
+    answer: 'C',
+    hint: 'm(ADC) açısını hem ABD üçgeninin dış açısı olarak hem de m(ADE) + m(EDC) olarak yaz.',
+    solution: [
+      {
+        title: 'Taban açılarına ad ver',
+        detail: '|AB| = |AC| olduğundan m(ABC) = m(ACB) = β’dir.',
+      },
+      {
+        title: 'ADC dış açısı',
+        detail:
+          'ABD üçgeninde m(ADC), D köşesinin dış açısıdır ve uzak iki iç açının toplamına eşittir: m(ADC) = β + α.',
+      },
+      {
+        title: 'ADE açısını yaz',
+        detail: 'E, ADC açısının içinde kaldığından m(ADE) = m(ADC) − m(EDC) = β + α − 35° olur.',
+      },
+      {
+        title: 'AED dış açısı',
+        detail:
+          'DEC üçgeninde m(AED), E köşesinin dış açısıdır: m(AED) = m(EDC) + m(ECD) = 35 + β bulunur.',
+      },
+      {
+        title: 'İkizkenarlığı kullan',
+        detail:
+          '|AD| = |AE| olduğundan ADE üçgeninde taban açıları eşittir: β + α − 35 = 35 + β yazılır.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'β sadeleşir ve α = 2 · 35 = 70° bulunur; sonuç β’den bağımsızdır.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 57
+  {
+    id: 'triangles-57',
+    topic: 'Ardışık ikizkenar üçgenler',
+    figure: {
+      viewBox: '0 137 400 192',
+      caption: 'Şekil 57',
+      label:
+        'ABC üçgeninde [BC] üzerindeki D noktası A ile, [AC] üzerindeki E noktası da D ile birleştirilmiş.',
+      svg: `
+          <path class="ln" d="M141,167.8 L30,300 L370,300 L141,167.8"/>
+          <path class="ln" d="M141,167.8 L164.3,300"/>
+          <path class="ln" d="M164.3,300 L267.1,240.6"/>
+
+          <line class="tick" x1="146.7" y1="234.9" x2="158.5" y2="232.8"/>
+          <line class="tick" x1="97.1" y1="306" x2="97.1" y2="294"/>
+
+          <line class="tick" x1="220.9" y1="274.3" x2="214.9" y2="263.9"/>
+          <line class="tick" x1="216.5" y1="276.8" x2="210.5" y2="266.4"/>
+          <line class="tick" x1="319.4" y1="263.9" x2="313.4" y2="274.3"/>
+          <line class="tick" x1="323.7" y1="266.4" x2="317.7" y2="276.8"/>
+
+          <path class="arc" d="M121.7,190.7 A30,30 0 0 0 166.9,182.8"/>
+          <text class="val" x="127.5" y="223" text-anchor="middle">100°</text>
+
+          <path class="arc" d="M159.4,272.4 A28,28 0 0 1 188.5,286"/>
+          <text class="val" x="184.6" y="261.5" text-anchor="middle">70°</text>
+
+          <path class="arc" d="M330,300 A40,40 0 0 1 335.4,280"/>
+          <text class="val" x="314" y="290" text-anchor="middle">α</text>
+
+          <circle class="pt" cx="141" cy="167.8" r="3.2"/>
+          <circle class="pt" cx="30" cy="300" r="3.2"/>
+          <circle class="pt" cx="370" cy="300" r="3.2"/>
+          <circle class="pt" cx="164.3" cy="300" r="3.2"/>
+          <circle class="pt" cx="267.1" cy="240.6" r="3.2"/>
+
+          <text x="141" y="155.8" text-anchor="middle">A</text>
+          <text x="22" y="318" text-anchor="end">B</text>
+          <text x="378" y="318">C</text>
+          <text x="164.3" y="320" text-anchor="middle">D</text>
+          <text x="276.1" y="234.6">E</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      'D ∈ [BC] ve E ∈ [AC]',
+      '|DA| = |DB|',
+      '|ED| = |EC|',
+      'm(BAC) = 100°',
+      'm(ADE) = 70°',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, m(ACB) = α kaç derecedir?',
+    choices: [
+      { key: 'A', text: '20' },
+      { key: 'B', text: '25' },
+      { key: 'C', text: '30' },
+      { key: 'D', text: '35' },
+      { key: 'E', text: '40' },
+    ],
+    answer: 'C',
+    hint: 'B, D, C doğrusal olduğundan D köşesindeki üç açının toplamı 180°’dir.',
+    solution: [
+      {
+        title: 'İki ikizkenar üçgeni yaz',
+        detail:
+          '|DA| = |DB| olduğundan ABD üçgeninde m(DAB) = m(ABC) = β; |ED| = |EC| olduğundan DEC üçgeninde m(EDC) = m(ACB) = α olur.',
+      },
+      {
+        title: 'ADB açısını bul',
+        detail: 'ABD üçgeninde m(ADB) = 180 − 2β yazılır.',
+      },
+      {
+        title: 'D’deki doğrusal açı',
+        detail:
+          'B, D, C doğrusal olduğundan m(ADB) + m(ADE) + m(EDC) = 180 → (180 − 2β) + 70 + α = 180 olur.',
+      },
+      {
+        title: 'Birinci denklem',
+        detail: 'Sadeleştirince α = 2β − 70 bulunur.',
+      },
+      {
+        title: 'Üçgenin açı toplamı',
+        detail: 'ABC üçgeninde 100 + β + α = 180 → β + α = 80 yazılır.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'β + (2β − 70) = 80 → 3β = 150, β = 50 ve α = 80 − 50 = 30° bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 58
+  {
+    id: 'triangles-58',
+    topic: 'Eşit uzunluklarla kurulan ikizkenar üçgenler',
+    figure: {
+      viewBox: '0 72 400 257',
+      caption: 'Şekil 58',
+      label:
+        'ABC üçgeninde [AB] üzerindeki E noktası C ile birleştirilmiş; [BC] üzerindeki D noktası da E ile birleştirilmiş ve C’den A, E, D noktalarına olan uzaklıklar eşit.',
+      svg: `
+          <path class="ln" d="M200,103.4 L35,300 L365,300 L200,103.4"/>
+          <path class="ln" d="M365,300 L142.7,171.7"/>
+          <path class="ln" d="M142.7,171.7 L108.3,300"/>
+
+          <line class="tick" x1="277.9" y1="205.5" x2="287.1" y2="197.8"/>
+          <line class="tick" x1="250.8" y1="241" x2="256.8" y2="230.6"/>
+          <line class="tick" x1="236.7" y1="306" x2="236.7" y2="294"/>
+
+          <path class="arc" d="M114.4,205.4 A44,44 0 0 0 131.3,214.2"/>
+          <text class="val" x="101.1" y="256.5" text-anchor="middle">25°</text>
+
+          <circle class="pt" cx="200" cy="103.4" r="3.2"/>
+          <circle class="pt" cx="35" cy="300" r="3.2"/>
+          <circle class="pt" cx="365" cy="300" r="3.2"/>
+          <circle class="pt" cx="108.3" cy="300" r="3.2"/>
+          <circle class="pt" cx="142.7" cy="171.7" r="3.2"/>
+
+          <text x="200" y="91.4" text-anchor="middle">A</text>
+          <text x="27" y="318" text-anchor="end">B</text>
+          <text x="373" y="318">C</text>
+          <text x="108.3" y="320" text-anchor="middle">D</text>
+          <text x="133.7" y="166.7" text-anchor="end">E</text>
+        `,
+    },
+    given: ['ABC bir üçgen', 'E ∈ [AB] ve D ∈ [BC]', '|CA| = |CE| = |CD|', 'm(BED) = 25°'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, ACB açısının ölçüsü kaç derecedir?',
+    choices: [
+      { key: 'A', text: '30' },
+      { key: 'B', text: '40' },
+      { key: 'C', text: '45' },
+      { key: 'D', text: '50' },
+      { key: 'E', text: '60' },
+    ],
+    answer: 'D',
+    hint: 'Önce CAE, sonra CED ikizkenar üçgenini yaz; E köşesindeki doğrusal açı ikisini birleştirir.',
+    solution: [
+      {
+        title: 'Açılara ad ver',
+        detail: 'm(BAC) = A, m(ABC) = B ve m(ACB) = C olsun; A + B + C = 180°’dir.',
+      },
+      {
+        title: 'CAE ikizkenar üçgeni',
+        detail:
+          '|CA| = |CE| olduğundan m(CEA) = m(CAE) = A ve tepe açısı m(ACE) = 180 − 2A bulunur.',
+      },
+      {
+        title: 'ECD açısını bul',
+        detail:
+          'm(ECD) = C − m(ACE) = C − 180 + 2A olur. A + B + C = 180 olduğundan C − 180 = −A − B ve m(ECD) = A − B bulunur.',
+      },
+      {
+        title: 'CED ikizkenar üçgeni',
+        detail:
+          '|CE| = |CD| olduğundan taban açıları eşittir: m(CED) = m(CDE) = (180 − (A − B)) / 2 = 90 − (A − B) / 2.',
+      },
+      {
+        title: 'E’deki doğrusal açı',
+        detail:
+          'A, E, B doğrusal olduğundan m(BED) = 180 − m(AEC) − m(CED) = 180 − A − 90 + (A − B) / 2 = 90 − (A + B) / 2 olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'A + B = 180 − C olduğundan m(BED) = 90 − (180 − C) / 2 = C / 2’dir. Buradan C = 2 · 25 = 50° bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 59
+  {
+    id: 'triangles-59',
+    topic: 'İki orta dikmeyle kurulan ikizkenar üçgenler',
+    figure: {
+      viewBox: '0 98 400 231',
+      caption: 'Şekil 59',
+      label:
+        'ABC üçgeninde A’dan [BC] kenarına inen [AH] yüksekliği çizilmiş; [BC] üzerindeki E noktası A ile birleştirilmiş ve E’den [AC] kenarına [ED] dikmesi inmiş.',
+      svg: `
+          <path class="ln" d="M106.3,128.7 L30,300 L370,300 L106.3,128.7"/>
+          <path class="ln" d="M106.3,128.7 L106.3,300"/>
+          <path class="ln" d="M106.3,128.7 L182.5,300"/>
+          <path class="ln" d="M182.5,300 L238.1,214.4"/>
+
+          <path class="ln" d="M117.3,300 L117.3,289 L106.3,289"/>
+          <path class="ln" d="M232.1,223.6 L241.4,229.6 L247.4,220.4"/>
+
+          <line class="tick" x1="68.1" y1="294" x2="68.1" y2="306"/>
+          <line class="tick" x1="144.4" y1="294" x2="144.4" y2="306"/>
+
+          <line class="tick" x1="173.4" y1="165.1" x2="166.8" y2="175.2"/>
+          <line class="tick" x1="177.6" y1="167.9" x2="171" y2="177.9"/>
+          <line class="tick" x1="305.2" y1="250.8" x2="298.7" y2="260.9"/>
+          <line class="tick" x1="309.4" y1="253.5" x2="302.9" y2="263.6"/>
+
+          <path class="arc" d="M92.4,159.8 A34,34 0 0 0 106.3,162.7"/>
+          <text class="val" x="86.4" y="227.6" text-anchor="middle">24°</text>
+
+          <path class="arc" d="M328,300 A42,42 0 0 1 334.8,277.1"/>
+          <text class="val" x="312.5" y="288" text-anchor="middle">α</text>
+
+          <circle class="pt" cx="106.3" cy="128.7" r="3.2"/>
+          <circle class="pt" cx="30" cy="300" r="3.2"/>
+          <circle class="pt" cx="370" cy="300" r="3.2"/>
+          <circle class="pt" cx="106.3" cy="300" r="3.2"/>
+          <circle class="pt" cx="182.5" cy="300" r="3.2"/>
+          <circle class="pt" cx="238.1" cy="214.4" r="3.2"/>
+
+          <text x="106.3" y="116.7" text-anchor="middle">A</text>
+          <text x="22" y="318" text-anchor="end">B</text>
+          <text x="378" y="318">C</text>
+          <text x="106.3" y="320" text-anchor="middle">H</text>
+          <text x="182.5" y="320" text-anchor="middle">E</text>
+          <text x="247.1" y="208.4">D</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      'B, H, E, C doğrusal',
+      '[AH] ⊥ [BC] ve [ED] ⊥ [AC]',
+      '|BH| = |HE|',
+      'D ∈ [AC] ve |AD| = |DC|',
+      'm(BAH) = 24°',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, m(ACB) = α kaç derecedir?',
+    choices: [
+      { key: 'A', text: '29' },
+      { key: 'B', text: '31' },
+      { key: 'C', text: '33' },
+      { key: 'D', text: '35' },
+      { key: 'E', text: '37' },
+    ],
+    answer: 'C',
+    hint: 'Hem [AH] hem de [ED] birer orta dikmedir; her biri bir ikizkenar üçgen doğurur.',
+    solution: [
+      {
+        title: 'ABH dik üçgeni',
+        detail: 'm(AHB) = 90° ve m(BAH) = 24° olduğundan m(ABH) = 90 − 24 = 66° bulunur.',
+      },
+      {
+        title: '[AH] orta dikmedir',
+        detail:
+          '|BH| = |HE| ve [AH] ⊥ [BE] olduğundan [AH], [BE] parçasının orta dikmesidir; buradan |AB| = |AE| olur.',
+      },
+      {
+        title: 'ABE ikizkenar üçgeni',
+        detail: '|AB| = |AE| olduğundan m(AEB) = m(ABE) = 66°’dir.',
+      },
+      {
+        title: '[ED] orta dikmedir',
+        detail:
+          '|AD| = |DC| ve [ED] ⊥ [AC] olduğundan [ED], [AC] parçasının orta dikmesidir; buradan |EA| = |EC| ve AEC üçgeninde m(EAC) = m(ECA) = α olur.',
+      },
+      {
+        title: 'Dış açı bağıntısı',
+        detail:
+          'B, E, C doğrusal olduğundan m(AEB), AEC üçgeninin E köşesindeki dış açısıdır: 66 = α + α.',
+      },
+      {
+        title: 'Sonuç',
+        detail: '2α = 66 → α = 33° bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 60
+  {
+    id: 'triangles-60',
+    topic: 'Açıortay ve yükseklikle kurulan ikizkenar üçgen',
+    figure: {
+      viewBox: '0 68 400 259',
+      caption: 'Şekil 60',
+      label:
+        'ABC üçgeninde B köşesinden [AC] kenarına inen [BH] yüksekliği ile B köşesinin açıortayı [BN] çizilmiş; H ve N noktaları [AC] üzerindedir.',
+      svg: `
+          <path class="ln" d="M160.8,90.8 L40,300 L370,300 L160.8,90.8"/>
+          <path class="ln" d="M40,300 L205,135"/>
+          <path class="ln" d="M40,300 L249.2,179.2"/>
+
+          <path class="ln" d="M212.8,142.8 L205,150.6 L197.2,142.8"/>
+
+          <line class="tick" x1="106.8" y1="196.2" x2="96.4" y2="190.2"/>
+          <line class="tick" x1="104.3" y1="200.6" x2="93.9" y2="194.6"/>
+          <line class="tick" x1="139.4" y1="235.7" x2="145.4" y2="246.1"/>
+          <line class="tick" x1="143.8" y1="233.2" x2="149.8" y2="243.6"/>
+
+          <path class="arc" d="M66,255 A52,52 0 0 1 76.8,263.2"/>
+          <text class="val" x="89.9" y="239.9" text-anchor="middle">x</text>
+
+          <circle class="pt" cx="160.8" cy="90.8" r="3.2"/>
+          <circle class="pt" cx="40" cy="300" r="3.2"/>
+          <circle class="pt" cx="370" cy="300" r="3.2"/>
+          <circle class="pt" cx="205" cy="135" r="3.2"/>
+          <circle class="pt" cx="249.2" cy="179.2" r="3.2"/>
+
+          <text x="151.8" y="86.8" text-anchor="end">A</text>
+          <text x="32" y="318" text-anchor="end">B</text>
+          <text x="378" y="318">C</text>
+          <text x="212" y="129">H</text>
+          <text x="257.2" y="175.2">N</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      'H ∈ [AC] ve N ∈ [AC]',
+      '[BH] ⊥ [AC]',
+      '[BN], ABC açısının açıortayı',
+      '|AB| = |BN|',
+      'm(BAC) = m(ACB) + 30°',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, m(ABH) = x kaç derecedir?',
+    choices: [
+      { key: 'A', text: '5' },
+      { key: 'B', text: '10' },
+      { key: 'C', text: '15' },
+      { key: 'D', text: '20' },
+      { key: 'E', text: '25' },
+    ],
+    answer: 'C',
+    hint: 'Önce BNC üçgeninde m(BNC) açısını yaz; C açısı sadeleşir.',
+    solution: [
+      {
+        title: 'Açılara ad ver',
+        detail:
+          'm(ACB) = c dersek m(BAC) = c + 30 ve üçgenin açı toplamından m(ABC) = 180 − (2c + 30) = 150 − 2c olur.',
+      },
+      {
+        title: 'Açıortayı kullan',
+        detail: '[BN] açıortay olduğundan m(NBC) = (150 − 2c) / 2 = 75 − c bulunur.',
+      },
+      {
+        title: 'BNC üçgeni',
+        detail: 'BNC üçgeninde m(BNC) = 180 − c − (75 − c) = 105° olur; c sadeleşir.',
+      },
+      {
+        title: 'BNA açısı',
+        detail: 'A, N, C doğrusal olduğundan m(BNA) = 180 − 105 = 75° bulunur.',
+      },
+      {
+        title: 'İkizkenarlığı kullan',
+        detail:
+          '|AB| = |BN| olduğundan ABN üçgeninde m(BAN) = m(BNA) = 75°’dir. Buradan c + 30 = 75 → c = 45 ve m(BAC) = 75° olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'ABH dik üçgeninde m(AHB) = 90° olduğundan x = 90 − 75 = 15° bulunur.',
+      },
+    ],
+  },
 ];
 
 /** Looks questions up by id so the modules below read as a running order. */
@@ -4642,6 +5168,21 @@ export const UNIT_2_TRIANGLES: Unit = {
         'triangles-52',
         'triangles-53',
         'triangles-54',
+      ),
+    },
+    {
+      id: 'triangles-m10',
+      order: 10,
+      title: 'Üçgende açılar — Test 7',
+      summary:
+        'İç açıortayların kesim noktası, birbirini izleyen ikizkenar üçgenler, eşit uzunluklarla kurulan açı bağıntıları ve orta dikmelerle yüksekliğin birlikte kullanıldığı sorular.',
+      questions: pick(
+        'triangles-55',
+        'triangles-56',
+        'triangles-57',
+        'triangles-58',
+        'triangles-59',
+        'triangles-60',
       ),
     },
   ],

@@ -83,6 +83,14 @@ describe('unit 2 answer key', () => {
   it('52 — m(ADC) = 360 − 2·140 = 80 → C', () => expect(answerOf('triangles-52')).toBe('C'));
   it('53 — m(ADC) = 114, α = 33 → A', () => expect(answerOf('triangles-53')).toBe('A'));
   it('54 — m(BAD) = 140, x = 140 − 60 = 80 → B', () => expect(answerOf('triangles-54')).toBe('B'));
+  it('55 — 125 = 90 + A/2, A = 70, α = 35 → C', () => expect(answerOf('triangles-55')).toBe('C'));
+  it('56 — β sadeleşir, α = 2 · 35 = 70 → C', () => expect(answerOf('triangles-56')).toBe('C'));
+  it('57 — α = 2β − 70 ve β + α = 80, β = 50, α = 30 → C', () =>
+    expect(answerOf('triangles-57')).toBe('C'));
+  it('58 — m(BED) = C/2, C = 2 · 25 = 50 → D', () => expect(answerOf('triangles-58')).toBe('D'));
+  it('59 — m(AEB) = 66 = 2α, α = 33 → C', () => expect(answerOf('triangles-59')).toBe('C'));
+  it('60 — m(BNC) = 105, m(BAC) = 75, x = 90 − 75 = 15 → C', () =>
+    expect(answerOf('triangles-60')).toBe('C'));
 
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
