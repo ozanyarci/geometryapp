@@ -91,6 +91,15 @@ describe('unit 2 answer key', () => {
   it('59 — m(AEB) = 66 = 2α, α = 33 → C', () => expect(answerOf('triangles-59')).toBe('C'));
   it('60 — m(BNC) = 105, m(BAC) = 75, x = 90 − 75 = 15 → C', () =>
     expect(answerOf('triangles-60')).toBe('C'));
+  it('61 — m(BAH) = 20, m(BAN) = 74/2 = 37, α = 17 → B', () =>
+    expect(answerOf('triangles-61')).toBe('B'));
+  it('62 — y sadeleşir, α = 90 + 40/2 = 110 → D', () => expect(answerOf('triangles-62')).toBe('D'));
+  it('63 — α = (m(BAC) + m(CDE))/2 = 150/2 = 75 → A', () =>
+    expect(answerOf('triangles-63')).toBe('A'));
+  it('64 — 3x + 30 = 180, x = 50, α = 180 − 77 − 27 = 76 → C', () =>
+    expect(answerOf('triangles-64')).toBe('C'));
+  it('65 — m(ABD) = 3x = 66, x = 22 → D', () => expect(answerOf('triangles-65')).toBe('D'));
+  it('66 — 64 + 90 + 90 + α = 360, α = 116 → E', () => expect(answerOf('triangles-66')).toBe('E'));
 
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
