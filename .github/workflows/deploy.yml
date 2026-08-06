@@ -28,6 +28,11 @@ jobs:
 
       - run: npm ci
 
+      # Soru bankası testleri build'den önce koşar: cevap anahtarı eksik ya da
+      # bozuk bir soru derlenebildiği için build'e takılmaz, ama yayına da
+      # çıkmamalı. Test kırmızıysa deploy işi hiç başlamaz.
+      - run: npm test -- --no-watch
+
       # Proje sayfası ozanyarci.github.io/geometryapp/ altında servis edildiği
       # için varlık yolları bu ön eke göre üretilmeli.
       - run: npm run build -- --base-href /geometryapp/
