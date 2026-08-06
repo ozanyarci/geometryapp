@@ -6803,6 +6803,12 @@ function pick(...ids: readonly string[]): Question[] {
   });
 }
 
+/**
+ * The whole bank, exported for the integrity tests: they check that the ids run
+ * in sequence and that no question was left behind without a module to sit in.
+ */
+export const ANGLES_BANK: readonly Question[] = QUESTIONS;
+
 export const UNIT_1_ANGLES: Unit = {
   id: 'angles',
   order: 1,

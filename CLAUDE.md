@@ -67,11 +67,15 @@ For each one, in order:
      arithmetically; the last step states the result.
    - `topic` — short Turkish phrase naming the skill.
 3. Draw the figure (below).
-4. Add the questions to a module. Prefer appending a new module at the end of the
-   unit rather than growing an existing one, so past results stay comparable. If
-   the batch is smaller than 5, leave the questions in the bank unattached and
-   say so — an under-filled module fails the tests.
-5. Run `npm test`.
+4. Add one line to the unit's `*.spec.ts` answer key stating the arithmetic that
+   reaches the answer — this is where the key gets checked a second time, and a
+   question with no line there fails the suite.
+5. Add the questions to a module. Prefer appending a new module at the end of the
+   unit rather than growing an existing one, so past results stay comparable.
+   Every question in the bank must belong to exactly one module; a batch smaller
+   than 5 cannot form a module of its own, so hold it back and say so rather than
+   leaving the questions stranded.
+6. Run `npm test`.
 
 ## Drawing figures
 
@@ -110,12 +114,20 @@ both halves of the rule: no `class="aux` in `figure`, at least one in
 
 ## Tests
 
-`unit-1-angles.spec.ts` validates every unit in `UNITS`, not just unit 1 — id
-uniqueness, module numbering and size, five A–E choices, an answer key that
-exists, a non-empty solution and hint, a populated figure, and the aux-line rule.
-Adding a unit to `curriculum.ts` puts it under these checks automatically. Run
-`npm test` before every push; it catches exactly the mistakes this content is
-prone to.
+`question-bank.spec.ts` validates every unit in `UNITS` — id uniqueness, module
+numbering and size, five A–E choices, an answer key that exists, a non-empty
+solution and hint, the aux-line rule, bank ids running `unit-1..n` with no gaps,
+every banked question sitting in exactly one module, and figure shape (four-number
+`viewBox` of a usable width, SVG *contents* rather than a nested `<svg>` element,
+`Şekil N` caption). Adding a unit to `curriculum.ts` puts it under these checks
+automatically.
+
+`unit-1-angles.spec.ts` and `unit-2-triangles.spec.ts` hold one answer-key line
+per question, each restating the arithmetic, plus a check that no question in the
+unit is missing its line.
+
+Run `npm test` before every push — a push is a publish, and these checks catch
+exactly the mistakes this content is prone to.
 
 ## Deploying
 
