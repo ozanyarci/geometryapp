@@ -90,6 +90,12 @@ For each one, in order:
   e.g. `'0 -6 400 332'`.
 - Keep vertex labels *outside* the shape, and leave ~18 units of margin for them
   — `text-anchor="end"` on the left, default on the right, `middle` on top.
+- **A hash mark means the piece it sits on.** If another line cuts the side, the
+  mark no longer says what the whole side measures — it says what that piece
+  measures. So mark a divided side only when the equality really is about the
+  piece (`|BD| = |DC|` on the two halves of `[BC]` is fine); when the equality is
+  about the whole side, leave the ticks off both sides of the pair and let
+  `given` carry it. A lone mark asserts nothing, so a pair always goes together.
 - `label` is what a screen reader says: one Turkish sentence describing the
   construction and the given equalities.
 - `caption` is `'Şekil N'`, numbered within the unit.

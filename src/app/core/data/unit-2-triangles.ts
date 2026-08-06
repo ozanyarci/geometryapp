@@ -340,13 +340,6 @@ const QUESTIONS: Question[] = [
           <path class="ln" d="M200,189.3 L320,290"/>
           <path class="ln" d="M267.8,132.4 L240,290"/>
 
-          <line class="tick" x1="143.9" y1="244.2" x2="136.1" y2="235.1"/>
-          <line class="tick" x1="263.9" y1="235.1" x2="256.1" y2="244.2"/>
-          <line class="tick" x1="164" y1="296" x2="164" y2="284"/>
-          <line class="tick" x1="156" y1="296" x2="156" y2="284"/>
-          <line class="tick" x1="247.3" y1="214.1" x2="259.1" y2="216.2"/>
-          <line class="tick" x1="248.7" y1="206.2" x2="260.5" y2="208.3"/>
-
           <path class="arc" d="M246.8,251.2 A20,20 0 0 0 265.6,244.4"/>
           <text class="val" x="264.7" y="276" text-anchor="middle">60°</text>
 
@@ -425,10 +418,6 @@ const QUESTIONS: Question[] = [
 
           <line class="tick" x1="153.9" y1="182.6" x2="146.1" y2="173.5"/>
           <line class="tick" x1="253.9" y1="173.5" x2="246.1" y2="182.6"/>
-          <line class="tick" x1="174.4" y1="224.1" x2="163.1" y2="220"/>
-          <line class="tick" x1="171.6" y1="231.6" x2="160.3" y2="227.5"/>
-          <line class="tick" x1="210.9" y1="264.5" x2="216.9" y2="274.9"/>
-          <line class="tick" x1="217.8" y1="260.5" x2="223.8" y2="270.9"/>
 
           <path class="arc" d="M160.2,169.5 A52,52 0 0 0 182.2,185"/>
           <text class="val" x="154.1" y="206.6" text-anchor="middle">30°</text>
@@ -2623,9 +2612,6 @@ const QUESTIONS: Question[] = [
           <path class="ln" d="M40,300 L296.5,221.6"/>
           <path class="ln" d="M200,251.1 L360,300"/>
 
-          <line class="tick" x1="124.7" y1="205" x2="115.3" y2="197.4"/>
-          <line class="tick" x1="284.7" y1="197.4" x2="275.3" y2="205"/>
-
           <line class="tick" x1="115.9" y1="270.5" x2="119.4" y2="282"/>
           <line class="tick" x1="120.6" y1="269.1" x2="124.1" y2="280.5"/>
           <line class="tick" x1="279.4" y1="269.1" x2="275.9" y2="280.5"/>
@@ -3987,9 +3973,6 @@ const QUESTIONS: Question[] = [
           <path class="ln" d="M160.7,228.1 L315,300"/>
           <path class="ln" d="M258.9,145.7 L248.1,268.8"/>
 
-          <line class="tick" x1="170.8" y1="227.5" x2="163.1" y2="218.3"/>
-          <line class="tick" x1="195" y1="294" x2="195" y2="306"/>
-
           <path class="arc" d="M110.2,270.4 A46,46 0 0 1 121,300"/>
           <text class="val" x="137" y="282.4" text-anchor="middle">40°</text>
 
@@ -4081,9 +4064,6 @@ const QUESTIONS: Question[] = [
           <path class="ln" d="M264.3,310.7 L323.6,147.7"/>
           <path class="ln" d="M70,240 L264.3,310.7"/>
           <path class="ln" d="M252,306.3 L256.5,294 L268.7,298.5"/>
-
-          <line class="tick" x1="128.9" y1="198.4" x2="121.1" y2="189.3"/>
-          <line class="tick" x1="238.9" y1="189.3" x2="231.1" y2="198.4"/>
 
           <path class="arc" d="M163.1,161.8 A22,22 0 0 0 196.9,161.8"/>
           <text class="val" x="180" y="190.7" text-anchor="middle">100°</text>
@@ -4419,7 +4399,6 @@ const QUESTIONS: Question[] = [
 
           <line class="tick" x1="135.2" y1="216.4" x2="124.8" y2="210.4"/>
           <line class="tick" x1="180" y1="294" x2="180" y2="306"/>
-          <line class="tick" x1="235.2" y1="210.4" x2="224.8" y2="216.4"/>
           <line class="tick" x1="271.9" y1="87" x2="276" y2="98.2"/>
 
           <path class="arc" d="M115.2,270.4 A46,46 0 0 1 126,300"/>
@@ -4585,9 +4564,6 @@ const QUESTIONS: Question[] = [
           <path class="ln" d="M200,130 L30,300 L370,300 L200,130"/>
           <path class="ln" d="M200,130 L279.3,300"/>
           <path class="ln" d="M279.3,300 L332.6,262.6"/>
-
-          <line class="tick" x1="102.2" y1="236.2" x2="93.8" y2="227.8"/>
-          <line class="tick" x1="306.2" y1="227.8" x2="297.8" y2="236.2"/>
 
           <line class="tick" x1="244" y1="210.2" x2="233.1" y2="215.3"/>
           <line class="tick" x1="246.1" y1="214.7" x2="235.3" y2="219.8"/>
@@ -5258,14 +5234,6 @@ const QUESTIONS: Question[] = [
           <path class="ln" d="M180,121.2 L30,300 L330,300 L180,121.2"/>
           <path class="ln" d="M30,300 L299.7,168.5"/>
           <path class="ln" d="M299.7,168.5 L330,300"/>
-
-          <line class="tick" x1="145.4" y1="153.1" x2="154.6" y2="160.9"/>
-          <line class="tick" x1="205.4" y1="160.9" x2="214.6" y2="153.1"/>
-
-          <line class="tick" x1="175" y1="294" x2="175" y2="306"/>
-          <line class="tick" x1="185" y1="294" x2="185" y2="306"/>
-          <line class="tick" x1="166.7" y1="226.7" x2="172" y2="237.5"/>
-          <line class="tick" x1="157.7" y1="231.1" x2="163" y2="241.8"/>
 
           <path class="arc" d="M63.4,260.2 A52,52 0 0 1 76.7,277.2"/>
           <text class="val" x="92" y="257" text-anchor="middle">24°</text>
