@@ -194,6 +194,13 @@ button {
    the text still scrolls the page while the pad is active.
    -------------------------------------------------------------------------- */
 
+/* `touch-action` has no effect on a non-replaced inline box, and a component
+   element is inline by default — without this the browser goes on panning and
+   cancels the stroke a few pixels in. */
+.scratch-draw {
+  display: block;
+}
+
 app-scratch-pad.pad--active .scratch-draw {
   touch-action: none;
   cursor: crosshair;
