@@ -27,8 +27,6 @@ const QUESTIONS: Question[] = [
           <path class="ln" d="M200,25.3 L100,300 L300,300 Z"/>
           <path class="ln" d="M100,300 L253.2,171.4"/>
 
-          <line class="tick" x1="155.6" y1="164.7" x2="144.4" y2="160.6"/>
-          <line class="tick" x1="255.6" y1="160.6" x2="244.4" y2="164.7"/>
           <line class="tick" x1="196" y1="294" x2="196" y2="306"/>
           <line class="tick" x1="204" y1="294" x2="204" y2="306"/>
           <line class="tick" x1="169.7" y1="233.7" x2="177.4" y2="242.9"/>
@@ -2158,9 +2156,6 @@ const QUESTIONS: Question[] = [
       svg: `
           <path class="ln" d="M200,52.7 L110,300 L290,300 Z"/>
           <path class="ln" d="M110,300 L253.4,199.6"/>
-
-          <line class="tick" x1="160.6" y1="178.4" x2="149.4" y2="174.3"/>
-          <line class="tick" x1="250.6" y1="174.3" x2="239.4" y2="178.4"/>
 
           <path class="arc" d="M188.4,84.7 A34,34 0 0 0 211.6,84.7"/>
           <text class="val" x="200" y="111.7" text-anchor="middle">x</text>
