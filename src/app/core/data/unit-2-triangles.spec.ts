@@ -183,6 +183,19 @@ describe('unit 2 answer key', () => {
   it('108 — BD = 4√2, m(BDC) = 75 − 45 = 30, BC = 2√2, x² = 32 − 8 = 24, x = 2√6 → D', () =>
     expect(answerOf('triangles-108')).toBe('D'));
 
+  it('109 — |DA| = |DC| ⇒ m(ADB) = 30, AD = 4, BD = 2√3, x = 4 + 2√3 → B', () =>
+    expect(answerOf('triangles-109')).toBe('B'));
+  it('110 — (a+9)² − a² = 289 − 100, a = 6, x² = 100 − 36 = 64, x = 8 → C', () =>
+    expect(answerOf('triangles-110')).toBe('C'));
+  it('111 — m(BAC) = 90, BD = 2·6 = 12, m(DBC) = m(DCB) = 30 ⇒ DC = DB = 12 → E', () =>
+    expect(answerOf('triangles-111')).toBe('E'));
+  it('112 — dik açı C’de: hipotenüs 8; dik açı A’da: hipotenüs 2·8 = 16, 16/8 = 2 → D', () =>
+    expect(answerOf('triangles-112')).toBe('D'));
+  it('113 — yeni uzaklık 12 + 4 = 16, h² = 400 − 256 = 144, h = 12 → B', () =>
+    expect(answerOf('triangles-113')).toBe('B'));
+  it('114 — AD = BD ⇒ m(BAD) = x, m(BAH) = 90 − x, 2x − 90 = 20, x = 55 → C', () =>
+    expect(answerOf('triangles-114')).toBe('C'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
