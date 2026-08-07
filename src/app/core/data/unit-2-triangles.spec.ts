@@ -235,6 +235,19 @@ describe('unit 2 answer key', () => {
   it('132 — 81 + a² = (a+1)², a = 40, çevre 9 + 40 + 41 = 90 → D', () =>
     expect(answerOf('triangles-132')).toBe('D'));
 
+  it('133 — 6² = 3·AC, AC = 12, x² = 144 − 36 = 108, x = 6√3 → C', () =>
+    expect(answerOf('triangles-133')).toBe('C'));
+  it('134 — AB² = 169 − 144 = 25, x² = 25 − 16 = 9, x = 3 → B', () =>
+    expect(answerOf('triangles-134')).toBe('B'));
+  it('135 — BD² = 169 − 144 = 25, BC = 5 + 11 = 16, AC² = 144 + 256 = 400, 20 − 5 = 15 → D', () =>
+    expect(answerOf('triangles-135')).toBe('D'));
+  it('136 — AD = DC → A = 2C, 3C = 90, C = 30, BD = 6/2 = 3, BC = 3 + 6 = 9 → D', () =>
+    expect(answerOf('triangles-136')).toBe('D'));
+  it('137 — AC = 2x, 64 + (2x−4)² = 4x², 80 = 16x, x = 5 → E', () =>
+    expect(answerOf('triangles-137')).toBe('E'));
+  it('138 — c = 25 − a, 225 + a² = 625 − 50a + a², a = 8 → C', () =>
+    expect(answerOf('triangles-138')).toBe('C'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
