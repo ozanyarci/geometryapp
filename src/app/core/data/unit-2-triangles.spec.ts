@@ -112,6 +112,17 @@ describe('unit 2 answer key', () => {
     expect(answerOf('triangles-71')).toBe('C'));
   it('72 — m(DFE) = 35, x + 35 + 65 = 180, x = 80 → C', () =>
     expect(answerOf('triangles-72')).toBe('C'));
+  it('73 — m(ABC) = 90 − x, m(BAC) = 90, m(AFD) = 90 − x = 68, x = 22 → C', () =>
+    expect(answerOf('triangles-73')).toBe('C'));
+  it('74 — m(DAB) = 90 + x/2, (90 + x/2) + 27 + 28 = 180, x = 70 → C', () =>
+    expect(answerOf('triangles-74')).toBe('C'));
+  it('75 — m(ADC) = m(DAC) = 50, |CD| = |CA| = |CB|, x = (180 − 140)/2 = 20 → B', () =>
+    expect(answerOf('triangles-75')).toBe('B'));
+  it('76 — c − b = (70 − 34)/2 = 18, x = 34 + 18 = 52 → D', () =>
+    expect(answerOf('triangles-76')).toBe('D'));
+  it('77 — |EA| = |EC|, m(FAC) = 25, m(ACF) = 60, x = 180 − 85 = 95 → C', () =>
+    expect(answerOf('triangles-77')).toBe('C'));
+  it('78 — α = (a + b)/2 = 140/2 = 70 → D', () => expect(answerOf('triangles-78')).toBe('D'));
 
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
