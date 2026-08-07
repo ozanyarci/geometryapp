@@ -209,6 +209,32 @@ describe('unit 2 answer key', () => {
   it('120 — AB² = 841 − 441 = 400, AD² = 400 − 256 = 144, AD = 12 → C', () =>
     expect(answerOf('triangles-120')).toBe('C'));
 
+  it('121 — (2x)² + (2x+7)² = (2x+9)², x² − 2x − 8 = 0, x = 4, BC = 17 → C', () =>
+    expect(answerOf('triangles-121')).toBe('C'));
+  it('122 — AC² = 64 + 36 = 100, x² = 100 − 25 = 75, x = 5√3 → D', () =>
+    expect(answerOf('triangles-122')).toBe('D'));
+  it('123 — x² = BD·DC = 4 · 16 = 64, x = 8 → B', () =>
+    expect(answerOf('triangles-123')).toBe('B'));
+  it('124 — AM = 12/2 = 6, MD = 6 + 2 = 8, x² = 36 + 64 = 100, x = 10 → D', () =>
+    expect(answerOf('triangles-124')).toBe('D'));
+  it('125 — a² + 144 = (a+4)², a = 16, BC = 20, çevre 16 + 12 + 20 = 48 → E', () =>
+    expect(answerOf('triangles-125')).toBe('E'));
+  it('126 — AH² = 100 − 36 = 64, x² = 64 + 225 = 289, x = 17 → A', () =>
+    expect(answerOf('triangles-126')).toBe('A'));
+
+  it('127 — (x+2)² + (x−3)² = (x+7)², x² − 16x − 36 = 0, x = 18, BC = 25 → D', () =>
+    expect(answerOf('triangles-127')).toBe('D'));
+  it('128 — AC² = 49 + 576 = 625, x² = 625 − 400 = 225, x = 15 → C', () =>
+    expect(answerOf('triangles-128')).toBe('C'));
+  it('129 — BC = 4 + 12 = 16, x² = BH·BC = 4 · 16 = 64, x = 8 → A', () =>
+    expect(answerOf('triangles-129')).toBe('A'));
+  it('130 — BC = 10, AM = 5, MD = 8 − 5 = 3, x² = 25 + 9 = 34, x = √34 → C', () =>
+    expect(answerOf('triangles-130')).toBe('C'));
+  it('131 — BH² = 225 − 144 = 81, HC² = 169 − 144 = 25, BC = 9 + 5 = 14 → E', () =>
+    expect(answerOf('triangles-131')).toBe('E'));
+  it('132 — 81 + a² = (a+1)², a = 40, çevre 9 + 40 + 41 = 90 → D', () =>
+    expect(answerOf('triangles-132')).toBe('D'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
