@@ -196,6 +196,19 @@ describe('unit 2 answer key', () => {
   it('114 — AD = BD ⇒ m(BAD) = x, m(BAH) = 90 − x, 2x − 90 = 20, x = 55 → C', () =>
     expect(answerOf('triangles-114')).toBe('C'));
 
+  it('115 — x² + 4x² = 225, x² = 45, x = 3√5, BC = 2x = 6√5 → D', () =>
+    expect(answerOf('triangles-115')).toBe('D'));
+  it('116 — AB = 3√2/√2 = 3, ABD’de 3 = x·√3/2, x = 6/√3 = 2√3 → B', () =>
+    expect(answerOf('triangles-116')).toBe('B'));
+  it('117 — a² + (a+3)² = (a+6)², a² − 6a − 27 = 0, a = 9, 9 + 12 + 15 = 36 → C', () =>
+    expect(answerOf('triangles-117')).toBe('C'));
+  it('118 — AH² = 25 − 9 = 16, x² = 16 + 64 = 80, x = 4√5 → C', () =>
+    expect(answerOf('triangles-118')).toBe('C'));
+  it('119 — x + 2 = 3x/2, x = 4, AC = 3x = 12 → D', () =>
+    expect(answerOf('triangles-119')).toBe('D'));
+  it('120 — AB² = 841 − 441 = 400, AD² = 400 − 256 = 144, AD = 12 → C', () =>
+    expect(answerOf('triangles-120')).toBe('C'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
