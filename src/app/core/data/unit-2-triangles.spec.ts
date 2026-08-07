@@ -171,6 +171,17 @@ describe('unit 2 answer key', () => {
     expect(answerOf('triangles-101')).toBe('B'));
   it('102 — (x+2)² = x² + (x−2)², x = 8, BE = 16, AB² = 64 + 256 = 320, AB = 8√5 → E', () =>
     expect(answerOf('triangles-102')).toBe('E'));
+  it('103 — AD = √(400 − 144) = 16, DC = 16, AC = 16√2, BC = 28, EC = 14√2, x = 2√2 → B', () =>
+    expect(answerOf('triangles-103')).toBe('B'));
+  it('104 — BD² = 225 + 400 = 625, x² = 625 − 576 = 49, x = 7 → C', () =>
+    expect(answerOf('triangles-104')).toBe('C'));
+  it('105 — BH = 6√3, HC = 6, x = 6√3 + 6 → D', () => expect(answerOf('triangles-105')).toBe('D'));
+  it('106 — m(BDC) = 90, AC = 16, AB² = 4·16 = 64, BC² = 12·16 = 192, 8 + 8√3 → B', () =>
+    expect(answerOf('triangles-106')).toBe('B'));
+  it('107 — DB = DC = x, 36 + (8 − x)² = x², 16x = 100, x = 25/4 → C', () =>
+    expect(answerOf('triangles-107')).toBe('C'));
+  it('108 — BD = 4√2, m(BDC) = 75 − 45 = 30, BC = 2√2, x² = 32 − 8 = 24, x = 2√6 → D', () =>
+    expect(answerOf('triangles-108')).toBe('D'));
 
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
