@@ -147,6 +147,30 @@ describe('unit 2 answer key', () => {
     expect(answerOf('triangles-89')).toBe('A'));
   it('90 — B, E, D, C aynı çember üzerinde, α = m(ECB) = 90 − 70 = 20 → B', () =>
     expect(answerOf('triangles-90')).toBe('B'));
+  it('91 — AH² = 100 − 36 = 64, x² = 289 − 64 = 225, x = 15 → A', () =>
+    expect(answerOf('triangles-91')).toBe('A'));
+  it('92 — b² − c² = 121 − 25 = 96, b − c = 96/24 = 4, c = 10 → C', () =>
+    expect(answerOf('triangles-92')).toBe('C'));
+  it('93 — BH = √(169 − 144) = 5, HC = √(400 − 144) = 16, BC = 21 → B', () =>
+    expect(answerOf('triangles-93')).toBe('B'));
+  it('94 — AC² = AB² + 65 ve AB² + AC² = 169, AB² = 52, x = 2√13 → D', () =>
+    expect(answerOf('triangles-94')).toBe('D'));
+  it('95 — AC = 25, 25x/2 = 15·20/2 = 150, x = 12 → A', () =>
+    expect(answerOf('triangles-95')).toBe('A'));
+  it('96 — x² + (x+7)² = (x+8)², x² − 2x − 15 = 0, x = 5, BC = 13 → D', () =>
+    expect(answerOf('triangles-96')).toBe('D'));
+  it('97 — m(BAD) = 45, AB = 8√2/√2 = 8, x = 2·8 = 16 → C', () =>
+    expect(answerOf('triangles-97')).toBe('C'));
+  it('98 — AC = 2·6 = 12, DC = 6/2 = 3, x = 12 − 3 = 9 → E', () =>
+    expect(answerOf('triangles-98')).toBe('E'));
+  it('99 — AC² = 64 + 36 = 100, x² = 100 − 25 = 75, x = 5√3 → B', () =>
+    expect(answerOf('triangles-99')).toBe('B'));
+  it('100 — AH = 6, CH = 8, HB = 12 − 6 = 6, x² = 64 + 36 = 100, x = 10 → C', () =>
+    expect(answerOf('triangles-100')).toBe('C'));
+  it('101 — (a+2)² + a² = (a+4)², a = 6, BC = 8√5, x² = 100 − 80 = 20, x = 2√5 → B', () =>
+    expect(answerOf('triangles-101')).toBe('B'));
+  it('102 — (x+2)² = x² + (x−2)², x = 8, BE = 16, AB² = 64 + 256 = 320, AB = 8√5 → E', () =>
+    expect(answerOf('triangles-102')).toBe('E'));
 
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
