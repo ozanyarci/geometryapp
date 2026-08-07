@@ -123,6 +123,18 @@ describe('unit 2 answer key', () => {
   it('77 — |EA| = |EC|, m(FAC) = 25, m(ACF) = 60, x = 180 − 85 = 95 → C', () =>
     expect(answerOf('triangles-77')).toBe('C'));
   it('78 — α = (a + b)/2 = 140/2 = 70 → D', () => expect(answerOf('triangles-78')).toBe('D'));
+  it('79 — açıortay = kenarortay, |AB| = |AC|, m(BAC) = 40, α = 180 − 40 − 25 = 115 → C', () =>
+    expect(answerOf('triangles-79')).toBe('C'));
+  it('80 — A − C < 140 − A − C, C sadeleşir, 2A < 140, A ≤ 69 → D', () =>
+    expect(answerOf('triangles-80')).toBe('D'));
+  it('81 — α + γ = 80 ve β + 2γ = 125 ve α + β = 55, 3α = 90, α = 30 → A', () =>
+    expect(answerOf('triangles-81')).toBe('A'));
+  it('82 — m(DBC) = 50, m(BDC) = 105, α = 180 − 105 − 50 = 25 → B', () =>
+    expect(answerOf('triangles-82')).toBe('B'));
+  it('83 — (180 − 2x) + 36 + (90 − x) = 180, 3x = 126, x = 42 → D', () =>
+    expect(answerOf('triangles-83')).toBe('D'));
+  it('84 — m(BAD) = (180 − 2x) − x = 24, 3x = 156, x = 52 → B', () =>
+    expect(answerOf('triangles-84')).toBe('B'));
 
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
