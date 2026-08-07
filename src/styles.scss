@@ -186,6 +186,27 @@ button {
 }
 
 /* --------------------------------------------------------------------------
+   Scratch-pad drawing zones.
+   `.scratch-draw` marks the parts of a question the pen may draw on — the
+   figure, not the prose. The rules live here because they target content
+   projected into ScratchPad, which sits outside its style encapsulation.
+   Everything else keeps its normal touch behaviour, so a finger dragged over
+   the text still scrolls the page while the pad is active.
+   -------------------------------------------------------------------------- */
+
+app-scratch-pad.pad--active .scratch-draw {
+  touch-action: none;
+  cursor: crosshair;
+}
+
+app-scratch-pad.pad--active.pad--erasing .scratch-draw {
+  cursor:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28'%3E%3Cg transform='rotate(-45 14 14)'%3E%3Crect x='5' y='9.5' width='18' height='9' rx='1.5' fill='%23ffffff' stroke='%2313212c' stroke-width='1.6'/%3E%3Cpath d='M14 9.5V18.5' stroke='%2313212c' stroke-width='1.4'/%3E%3C/g%3E%3C/svg%3E")
+      14 14,
+    cell;
+}
+
+/* --------------------------------------------------------------------------
    Utilities
    -------------------------------------------------------------------------- */
 

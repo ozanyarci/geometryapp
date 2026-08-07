@@ -53,7 +53,7 @@
 
       <app-scratch-pad [key]="question.id">
         @if (question.figure) {
-          <app-figure [figure]="question.figure" />
+          <app-figure class="scratch-draw" [figure]="question.figure" />
         }
 
         @if (question.given?.length) {

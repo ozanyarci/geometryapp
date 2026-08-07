@@ -41,6 +41,11 @@ const ERASER_WIDTH = 24;
  * devices or scroll the page mid-stroke on others. With the toggle the surface
  * only intercepts input while the student asked for it, and the answer choices
  * — which sit outside this component — stay tappable throughout.
+ *
+ * Even while active, input is taken only over elements marked `.scratch-draw`
+ * — the figure and the blank grid. The question text is left alone so a finger
+ * dragged across it still scrolls the page, which on a phone is the difference
+ * between a usable pad and one the student keeps switching off.
  */
 @Component({
   selector: 'app-scratch-pad',
@@ -50,22 +55,21 @@ const ERASER_WIDTH = 24;
     '[class.pad--erasing]': "tool() === 'eraser'",
   },
   template: `
-    <div class="pad__surface" #surface>
+    <div
+      class="pad__surface"
+      #surface
+      (pointerdown)="onPointerDown($event)"
+      (pointermove)="onPointerMove($event)"
+      (pointerup)="onPointerUp($event)"
+      (pointercancel)="onPointerUp($event)"
+    >
       <div class="pad__content"><ng-content /></div>
 
       @if (active()) {
-        <div class="pad__space" aria-hidden="true"></div>
+        <div class="pad__space scratch-draw" aria-hidden="true"></div>
       }
 
-      <canvas
-        #canvas
-        class="pad__canvas"
-        aria-hidden="true"
-        (pointerdown)="onPointerDown($event)"
-        (pointermove)="onPointerMove($event)"
-        (pointerup)="onPointerUp($event)"
-        (pointercancel)="onPointerUp($event)"
-      ></canvas>
+      <canvas #canvas class="pad__canvas" aria-hidden="true"></canvas>
     </div>
 
     <div class="pad__tools">
@@ -121,30 +125,14 @@ const ERASER_WIDTH = 24;
       background-size: 16px 16px;
     }
 
+    /* The canvas only shows the ink; input is taken by the drawing zones under
+       it, so a gesture that starts on the prose still scrolls the page. */
     .pad__canvas {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
       pointer-events: none;
-    }
-
-    /* While active the surface swallows input so a stroke never scrolls the
-       page or lands on whatever sits under the pen. */
-    :host(.pad--active) .pad__canvas {
-      pointer-events: auto;
-      touch-action: none;
-      cursor: crosshair;
-    }
-
-    /* An eraser glyph drawn white-on-dark so it stays visible over the diagram
-       in both themes. The hotspot sits at its centre, which is where the
-       erased circle is actually centred. */
-    :host(.pad--active.pad--erasing) .pad__canvas {
-      cursor:
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28'%3E%3Cg transform='rotate(-45 14 14)'%3E%3Crect x='5' y='9.5' width='18' height='9' rx='1.5' fill='%23ffffff' stroke='%2313212c' stroke-width='1.6'/%3E%3Cpath d='M14 9.5V18.5' stroke='%2313212c' stroke-width='1.4'/%3E%3C/g%3E%3C/svg%3E")
-          14 14,
-        cell;
     }
 
     /* Preventing the pointer event stops selection for pen and touch but not
@@ -268,11 +256,17 @@ export class ScratchPad implements AfterViewInit, OnDestroy {
   /* --- Drawing ----------------------------------------------------------- */
 
   protected onPointerDown(event: PointerEvent): void {
-    if (this.pointerId !== null) return;
+    if (this.pointerId !== null || !this.active()) return;
+
+    // Only the figure and the blank grid take the pen. Over the question text a
+    // gesture is left alone, which is what keeps the page scrollable on a phone
+    // while the pad is open.
+    const target = event.target as Element | null;
+    if (target?.closest('.scratch-draw') == null) return;
 
     event.preventDefault();
     this.pointerId = event.pointerId;
-    this.canvas().nativeElement.setPointerCapture(event.pointerId);
+    this.surface().nativeElement.setPointerCapture(event.pointerId);
 
     // A pen's eraser end (button 5) erases without touching the toolbar.
     const erase = this.tool() === 'eraser' || event.buttons === 32;
@@ -301,7 +295,7 @@ export class ScratchPad implements AfterViewInit, OnDestroy {
   protected onPointerUp(event: PointerEvent): void {
     if (event.pointerId !== this.pointerId) return;
 
-    this.canvas().nativeElement.releasePointerCapture(event.pointerId);
+    this.surface().nativeElement.releasePointerCapture(event.pointerId);
     this.pointerId = null;
     this.live = null;
   }
