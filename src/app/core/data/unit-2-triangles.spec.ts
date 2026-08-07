@@ -135,6 +135,18 @@ describe('unit 2 answer key', () => {
     expect(answerOf('triangles-83')).toBe('D'));
   it('84 — m(BAD) = (180 − 2x) − x = 24, 3x = 156, x = 52 → B', () =>
     expect(answerOf('triangles-84')).toBe('B'));
+  it('85 — AKE üçgeninde m(AKE) = 180 − A − C = B = 80, x = 180 − 80 = 100 → E', () =>
+    expect(answerOf('triangles-85')).toBe('E'));
+  it('86 — |HD| = |AD| = |DC| = |BH|, m(BHD) = 180 − 50 = 130, α = (180 − 130)/2 = 25 → B', () =>
+    expect(answerOf('triangles-86')).toBe('B'));
+  it('87 — |DF| = |FE| ⇒ [AF] açıortay ve yükseklik, B = C = 70, 110 − α = 70, α = 40 → C', () =>
+    expect(answerOf('triangles-87')).toBe('C'));
+  it('88 — m(BEC) = 144, c/2 + 180 − 2c = 144, c = 24, α = 180 − 24 = 156 → D', () =>
+    expect(answerOf('triangles-88')).toBe('D'));
+  it('89 — |AD| = |AB| = |AE|, m(AED) = (180 − 50)/2 = 65, α = 65 − 60 = 5 → A', () =>
+    expect(answerOf('triangles-89')).toBe('A'));
+  it('90 — B, E, D, C aynı çember üzerinde, α = m(ECB) = 90 − 70 = 20 → B', () =>
+    expect(answerOf('triangles-90')).toBe('B'));
 
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
