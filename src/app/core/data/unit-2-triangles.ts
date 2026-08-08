@@ -13984,6 +13984,651 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+
+  // ---------------------------------------------------------------- 169
+  {
+    id: 'triangles-169',
+    topic: 'Hipotenüsün orta dikmesi ve Pisagor',
+    figure: {
+      viewBox: '0 -6 400 336',
+      caption: 'Şekil 169',
+      label:
+        'B köşesindeki açısı dik olan ABC üçgeninde D noktası [AB] üzerinde, H noktası [AC] üzerindedir; [DH] ⊥ [AC] ve |AH| = |HC|’dir. |AD| = 25 cm, |BC| = 24 cm ve |DB| = x’tir.',
+      svg: `
+          <path class="ln" d="M98,18 L98,290 L302,290 Z"/>
+          <path class="ln" d="M98,230.5 L200,154"/>
+          <path class="ln" d="M98,277 L111,277 L111,290"/>
+          <path class="ln" d="M207.8,164.4 L197.4,172.2 L189.6,161.8"/>
+
+          <path class="tick" d="M144.2,89.6 L153.8,82.4"/>
+          <path class="tick" d="M246.2,225.6 L255.8,218.4"/>
+
+          <circle class="pt" cx="98" cy="18" r="3.2"/>
+          <circle class="pt" cx="98" cy="290" r="3.2"/>
+          <circle class="pt" cx="302" cy="290" r="3.2"/>
+          <circle class="pt" cx="98" cy="230.5" r="3.2"/>
+          <circle class="pt" cx="200" cy="154" r="3.2"/>
+
+          <text class="val" x="90" y="128" text-anchor="end">25</text>
+          <text class="val" x="90" y="266" text-anchor="end">x</text>
+          <text class="val" x="200" y="312" text-anchor="middle">24</text>
+
+          <text x="98" y="10" text-anchor="middle">A</text>
+          <text x="90" y="234" text-anchor="end">D</text>
+          <text x="90" y="312" text-anchor="end">B</text>
+          <text x="310" y="312">C</text>
+          <text x="208" y="150">H</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 -6 400 336',
+      caption: 'Şekil 169 — [DC] çizildi',
+      label:
+        'Aynı şekilde D noktası C ile birleştirilmiştir; [DH] orta dikme olduğundan |DA| = |DC| olur ve DBC üçgeni B’de diktir.',
+      svg: `
+          <path class="ln" d="M98,18 L98,290 L302,290 Z"/>
+          <path class="ln" d="M98,230.5 L200,154"/>
+          <path class="ln" d="M98,277 L111,277 L111,290"/>
+          <path class="ln" d="M207.8,164.4 L197.4,172.2 L189.6,161.8"/>
+          <path class="aux" d="M98,230.5 L302,290"/>
+
+          <path class="tick" d="M144.2,89.6 L153.8,82.4"/>
+          <path class="tick" d="M246.2,225.6 L255.8,218.4"/>
+          <path class="tick" d="M92,124.25 L104,124.25"/>
+          <path class="tick" d="M198.3,266 L201.7,254.5"/>
+
+          <circle class="pt" cx="98" cy="18" r="3.2"/>
+          <circle class="pt" cx="98" cy="290" r="3.2"/>
+          <circle class="pt" cx="302" cy="290" r="3.2"/>
+          <circle class="pt" cx="98" cy="230.5" r="3.2"/>
+          <circle class="pt" cx="200" cy="154" r="3.2"/>
+
+          <text class="val" x="86" y="128" text-anchor="end">25</text>
+          <text class="val" x="90" y="266" text-anchor="end">x</text>
+          <text class="val" x="200" y="312" text-anchor="middle">24</text>
+          <text class="val" x="216" y="252">25</text>
+
+          <text x="98" y="10" text-anchor="middle">A</text>
+          <text x="90" y="234" text-anchor="end">D</text>
+          <text x="90" y="312" text-anchor="end">B</text>
+          <text x="310" y="312">C</text>
+          <text x="208" y="150">H</text>
+        `,
+    },
+    given: [
+      'ABC bir dik üçgen',
+      '[AB] ⊥ [BC]',
+      'D ∈ [AB] ve H ∈ [AC]',
+      '[DH] ⊥ [AC]',
+      '|AH| = |HC|',
+      '|AD| = 25 cm',
+      '|BC| = 24 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |DB| = x kaç cm’dir?',
+    choices: [
+      { key: 'A', text: '5' },
+      { key: 'B', text: '6' },
+      { key: 'C', text: '7' },
+      { key: 'D', text: '8' },
+      { key: 'E', text: '9' },
+    ],
+    answer: 'C',
+    hint: '[DH] hem [AC]’yi ortalıyor hem de ona dik; bu, D’nin A ile C’ye eşit uzaklıkta olması demektir.',
+    solution: [
+      {
+        title: 'Orta dikmeyi tanı',
+        detail:
+          'H, [AC]’nin orta noktası ve [DH] ⊥ [AC] olduğundan [DH], [AC]’nin orta dikmesidir. Orta dikme üzerindeki her nokta uçlara eşit uzaklıktadır.',
+      },
+      {
+        title: 'Eşit uzaklık',
+        detail: 'D orta dikme üzerinde olduğundan |DC| = |DA| = 25 cm olur.',
+      },
+      {
+        title: 'DBC üçgeninde Pisagor',
+        detail:
+          'D, [AB] üzerinde olduğundan DBC üçgeni de B’de diktir: |DC|² = |DB|² + |BC|² → 25² = x² + 24².',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'x² = 625 − 576 = 49 olduğundan x = 7 cm bulunur. (7-24-25 üçgeni.)',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 170
+  {
+    id: 'triangles-170',
+    topic: 'Yükseklik üzerinde kenarın orta dikmesi',
+    figure: {
+      viewBox: '0 28 400 292',
+      caption: 'Şekil 170',
+      label:
+        'ABC üçgeninde A’dan [BC] üzerine inen dikmenin ayağı H, [BC]’nin orta noktasıdır. [AH] üzerindeki K noktasından [AC]’nin orta noktası E’ye çizilen [KE], [AC]’ye diktir. |AH| = 25 cm, |BC| = 30 cm ve |HK| = x’tir.',
+      svg: `
+          <path class="ln" d="M200,55 L65,280 L335,280 Z"/>
+          <path class="ln" d="M200,55 L200,280"/>
+          <path class="ln" d="M200,208 L267.5,167.5"/>
+          <path class="ln" d="M200,267 L213,267 L213,280"/>
+          <path class="ln" d="M273.7,177.8 L263.4,183.9 L257.2,173.7"/>
+
+          <path class="tick" d="M132.5,274 L132.5,286"/>
+          <path class="tick" d="M267.5,274 L267.5,286"/>
+          <path class="tick" d="M228.6,114.3 L238.9,108.2"/>
+          <path class="tick" d="M296.1,226.8 L306.4,220.7"/>
+
+          <circle class="pt" cx="200" cy="55" r="3.2"/>
+          <circle class="pt" cx="65" cy="280" r="3.2"/>
+          <circle class="pt" cx="335" cy="280" r="3.2"/>
+          <circle class="pt" cx="200" cy="280" r="3.2"/>
+          <circle class="pt" cx="200" cy="208" r="3.2"/>
+          <circle class="pt" cx="267.5" cy="167.5" r="3.2"/>
+
+          <text class="val" x="192" y="250" text-anchor="end">x</text>
+
+          <text x="200" y="47" text-anchor="middle">A</text>
+          <text x="57" y="302" text-anchor="end">B</text>
+          <text x="343" y="302">C</text>
+          <text x="200" y="302" text-anchor="middle">H</text>
+          <text x="192" y="206" text-anchor="end">K</text>
+          <text x="276" y="164">E</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 28 400 292',
+      caption: 'Şekil 170 — [KC] çizildi',
+      label:
+        'Aynı şekilde K noktası C ile birleştirilmiştir; [KE] orta dikme olduğundan |KA| = |KC| olur ve KHC üçgeni H’de diktir.',
+      svg: `
+          <path class="ln" d="M200,55 L65,280 L335,280 Z"/>
+          <path class="ln" d="M200,55 L200,280"/>
+          <path class="ln" d="M200,208 L267.5,167.5"/>
+          <path class="ln" d="M200,267 L213,267 L213,280"/>
+          <path class="ln" d="M273.7,177.8 L263.4,183.9 L257.2,173.7"/>
+          <path class="aux" d="M200,208 L335,280"/>
+
+          <path class="tick" d="M132.5,274 L132.5,286"/>
+          <path class="tick" d="M267.5,274 L267.5,286"/>
+          <path class="tick" d="M228.6,114.3 L238.9,108.2"/>
+          <path class="tick" d="M296.1,226.8 L306.4,220.7"/>
+          <path class="tick" d="M194,131.5 L206,131.5"/>
+          <path class="tick" d="M264.7,249.3 L270.3,238.7"/>
+
+          <circle class="pt" cx="200" cy="55" r="3.2"/>
+          <circle class="pt" cx="65" cy="280" r="3.2"/>
+          <circle class="pt" cx="335" cy="280" r="3.2"/>
+          <circle class="pt" cx="200" cy="280" r="3.2"/>
+          <circle class="pt" cx="200" cy="208" r="3.2"/>
+          <circle class="pt" cx="267.5" cy="167.5" r="3.2"/>
+
+          <text class="val" x="192" y="250" text-anchor="end">x</text>
+          <text class="val" x="240" y="298" text-anchor="middle">15</text>
+
+          <text x="200" y="47" text-anchor="middle">A</text>
+          <text x="57" y="302" text-anchor="end">B</text>
+          <text x="343" y="302">C</text>
+          <text x="200" y="302" text-anchor="middle">H</text>
+          <text x="192" y="206" text-anchor="end">K</text>
+          <text x="276" y="164">E</text>
+        `,
+    },
+    given: [
+      '[AH] ⊥ [BC]',
+      '[KE] ⊥ [AC]',
+      'K ∈ [AH]',
+      '|BH| = |HC|',
+      '|AE| = |EC|',
+      '|AH| = 25 cm',
+      '|BC| = 30 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |HK| = x kaç cm’dir?',
+    choices: [
+      { key: 'A', text: '6' },
+      { key: 'B', text: '7' },
+      { key: 'C', text: '8' },
+      { key: 'D', text: '9' },
+      { key: 'E', text: '10' },
+    ],
+    answer: 'C',
+    hint: '[KE], [AC]’nin orta dikmesidir; buradan |KA| = |KC| çıkar ve KHC üçgeninde Pisagor yazılabilir.',
+    solution: [
+      {
+        title: 'Orta dikmeyi tanı',
+        detail:
+          'E, [AC]’nin orta noktası ve [KE] ⊥ [AC] olduğundan [KE], [AC]’nin orta dikmesidir. Dolayısıyla |KA| = |KC| olur.',
+      },
+      {
+        title: 'İki parçayı x cinsinden yaz',
+        detail:
+          'K, [AH] üzerinde olduğundan |KA| = |AH| − |HK| = 25 − x’tir. O hâlde |KC| = 25 − x olur.',
+      },
+      {
+        title: 'KHC üçgeninde Pisagor',
+        detail:
+          '|BH| = |HC| ve |BC| = 30 olduğundan |HC| = 15 cm’dir. [AH] ⊥ [BC] olduğundan KHC üçgeni H’de diktir: |KC|² = |HK|² + |HC|² → (25 − x)² = x² + 15².',
+      },
+      {
+        title: 'Denklemi çöz',
+        detail: '625 − 50x + x² = x² + 225 → 50x = 400.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'x = 8 cm bulunur. (Kontrol: |KA| = |KC| = 17 ve 8² + 15² = 17².)',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 171
+  {
+    id: 'triangles-171',
+    topic: 'Aynı doğruya dik iki kenar arasındaki uzaklık',
+    figure: {
+      viewBox: '0 30 400 274',
+      caption: 'Şekil 171',
+      label:
+        'Yatay çizilen [BC] doğru parçasının B ucunda yukarı doğru [AB], C ucunda aşağı doğru [CD] diktir; A ile D birleştirilmiştir. |AB| = 9 cm, |BC| = 20 cm ve |DC| = 6 cm’dir.',
+      svg: `
+          <path class="ln" d="M60,54 L60,180 L340,180 L340,264"/>
+          <path class="ln" d="M60,54 L340,264"/>
+          <path class="ln" d="M60,167 L73,167 L73,180"/>
+          <path class="ln" d="M340,193 L327,193 L327,180"/>
+
+          <circle class="pt" cx="60" cy="54" r="3.2"/>
+          <circle class="pt" cx="60" cy="180" r="3.2"/>
+          <circle class="pt" cx="340" cy="180" r="3.2"/>
+          <circle class="pt" cx="340" cy="264" r="3.2"/>
+
+          <text class="val" x="52" y="122" text-anchor="end">9</text>
+          <text class="val" x="150" y="202" text-anchor="middle">20</text>
+          <text class="val" x="348" y="230">6</text>
+
+          <text x="52" y="50" text-anchor="end">A</text>
+          <text x="52" y="196" text-anchor="end">B</text>
+          <text x="348" y="174">C</text>
+          <text x="348" y="288">D</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 30 400 274',
+      caption: 'Şekil 171 — ABCF dikdörtgeni tamamlandı',
+      label:
+        'Aynı şekilde A’dan [BC]’ye paralel bir doğru çizilip [DC]’nin C’den öteye uzantısını F noktasında kesmesi sağlanmıştır; ABCF bir dikdörtgendir ve AFD üçgeni F’de diktir.',
+      svg: `
+          <path class="ln" d="M60,54 L60,180 L340,180 L340,264"/>
+          <path class="ln" d="M60,54 L340,264"/>
+          <path class="ln" d="M60,167 L73,167 L73,180"/>
+          <path class="ln" d="M340,193 L327,193 L327,180"/>
+          <path class="aux" d="M60,54 L340,54"/>
+          <path class="aux" d="M340,54 L340,180"/>
+          <path class="aux" d="M327,54 L327,67 L340,67"/>
+
+          <circle class="pt" cx="60" cy="54" r="3.2"/>
+          <circle class="pt" cx="60" cy="180" r="3.2"/>
+          <circle class="pt" cx="340" cy="180" r="3.2"/>
+          <circle class="pt" cx="340" cy="264" r="3.2"/>
+          <circle class="pt" cx="340" cy="54" r="3.2"/>
+
+          <text class="val" x="52" y="122" text-anchor="end">9</text>
+          <text class="val" x="150" y="202" text-anchor="middle">20</text>
+          <text class="val" x="348" y="230">6</text>
+          <text class="val" x="200" y="46" text-anchor="middle">20</text>
+          <text class="val" x="348" y="122">9</text>
+
+          <text x="52" y="50" text-anchor="end">A</text>
+          <text x="52" y="196" text-anchor="end">B</text>
+          <text x="332" y="174" text-anchor="end">C</text>
+          <text x="348" y="288">D</text>
+          <text x="348" y="46">F</text>
+        `,
+    },
+    given: [
+      '[AB] ⊥ [BC]',
+      '[DC] ⊥ [CB]',
+      'A ile D, [BC] doğrusunun farklı taraflarında',
+      '|AB| = 9 cm',
+      '|BC| = 20 cm',
+      '|DC| = 6 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |AD| kaç cm’dir?',
+    choices: [
+      { key: 'A', text: '21' },
+      { key: 'B', text: '23' },
+      { key: 'C', text: '25' },
+      { key: 'D', text: '27' },
+      { key: 'E', text: '29' },
+    ],
+    answer: 'C',
+    hint: 'A’dan [BC]’ye paralel çizip [DC]’nin uzantısını kes: dik kenarları 20 ve 9 + 6 olan bir dik üçgen doğar.',
+    solution: [
+      {
+        title: 'Dikdörtgeni tamamla',
+        detail:
+          'A’dan [BC]’ye paralel çizilen doğru, [DC]’nin C’den öteye uzantısını F’de kessin. m(B) = m(C) = 90° olduğundan ABCF bir dikdörtgendir.',
+      },
+      {
+        title: 'Kenarları oku',
+        detail: 'Dikdörtgende |AF| = |BC| = 20 cm ve |FC| = |AB| = 9 cm olur.',
+      },
+      {
+        title: 'FD uzunluğu',
+        detail:
+          'A ile D, [BC]’nin farklı taraflarında olduğundan C, [FD] üzerindedir: |FD| = |FC| + |CD| = 9 + 6 = 15 cm.',
+      },
+      {
+        title: 'AFD üçgeninde Pisagor',
+        detail: '[AF] ⊥ [FD] olduğundan |AD|² = 20² + 15² = 400 + 225 = 625.',
+      },
+      {
+        title: 'Sonuç',
+        detail: '|AD| = √625 = 25 cm bulunur. (15-20-25 üçgeni, 3-4-5 üçgeninin beş katıdır.)',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 172
+  {
+    id: 'triangles-172',
+    topic: '135°’lik açıyı dikme ile çözme',
+    figure: {
+      viewBox: '0 62 400 224',
+      caption: 'Şekil 172',
+      label:
+        'ABC geniş açılı bir üçgendir; B köşesindeki açı 135°, C köşesindeki açı 30°’dir. |AC| = 20 cm ve |AB| = x’tir.',
+      svg: `
+          <path class="ln" d="M50,90 L210,250 L327.1,250 Z"/>
+
+          <path class="arc" d="M240,250 A30,30 0 0 0 188.8,228.8"/>
+          <text class="val" x="225" y="216" text-anchor="middle">135°</text>
+
+          <path class="arc" d="M285.1,250 A42,42 0 0 1 290.7,229"/>
+          <text class="val" x="267" y="238" text-anchor="middle">30°</text>
+
+          <circle class="pt" cx="50" cy="90" r="3.2"/>
+          <circle class="pt" cx="210" cy="250" r="3.2"/>
+          <circle class="pt" cx="327.1" cy="250" r="3.2"/>
+
+          <text class="val" x="198" y="152" text-anchor="middle">20</text>
+          <text class="val" x="114" y="188" text-anchor="end">x</text>
+
+          <text x="50" y="82" text-anchor="middle">A</text>
+          <text x="210" y="272" text-anchor="middle">B</text>
+          <text x="335" y="272">C</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 62 400 224',
+      caption: 'Şekil 172 — [AH] dikmesi indirildi',
+      label:
+        'Aynı şekilde A’dan [BC] doğrusuna indirilen dikmenin ayağı H, B’nin dışındadır; m(ABH) = 45° ve AHC üçgeni H’de diktir.',
+      svg: `
+          <path class="ln" d="M50,90 L210,250 L327.1,250 Z"/>
+          <path class="aux" d="M50,90 L50,250"/>
+          <path class="aux" d="M50,250 L210,250"/>
+          <path class="aux" d="M50,237 L63,237 L63,250"/>
+
+          <path class="arc" d="M240,250 A30,30 0 0 0 188.8,228.8"/>
+          <text class="val" x="225" y="216" text-anchor="middle">135°</text>
+
+          <path class="arc" d="M285.1,250 A42,42 0 0 1 290.7,229"/>
+          <text class="val" x="267" y="238" text-anchor="middle">30°</text>
+
+          <path class="arc" d="M182,250 A28,28 0 0 1 190.2,230.2"/>
+          <text class="val" x="166" y="236" text-anchor="middle">45°</text>
+
+          <circle class="pt" cx="50" cy="90" r="3.2"/>
+          <circle class="pt" cx="210" cy="250" r="3.2"/>
+          <circle class="pt" cx="327.1" cy="250" r="3.2"/>
+          <circle class="pt" cx="50" cy="250" r="3.2"/>
+
+          <text class="val" x="198" y="152" text-anchor="middle">20</text>
+          <text class="val" x="114" y="188" text-anchor="end">x</text>
+          <text class="val" x="42" y="176" text-anchor="end">10</text>
+
+          <text x="50" y="82" text-anchor="middle">A</text>
+          <text x="210" y="272" text-anchor="middle">B</text>
+          <text x="335" y="272">C</text>
+          <text x="50" y="272" text-anchor="middle">H</text>
+        `,
+    },
+    given: ['ABC bir üçgen', 'm(ABC) = 135°', 'm(ACB) = 30°', '|AC| = 20 cm'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |AB| = x kaç cm’dir?',
+    choices: [
+      { key: 'A', text: '10' },
+      { key: 'B', text: '8√2' },
+      { key: 'C', text: '10√2' },
+      { key: 'D', text: '10√3' },
+      { key: 'E', text: '12√2' },
+    ],
+    answer: 'C',
+    hint: 'A’dan [BC] doğrusuna dikme indir; ayak B’nin dışına düşer ve 30°’lik ile 45°’lik iki tanıdık dik üçgen doğar.',
+    solution: [
+      {
+        title: 'Dikmeyi indir',
+        detail:
+          'A’dan [BC] doğrusuna indirilen dikmenin ayağı H olsun. m(ABC) = 135° geniş açı olduğundan H, B’nin C’den uzak tarafında kalır.',
+      },
+      {
+        title: 'AHC üçgeni',
+        detail:
+          'H’de dik olan AHC üçgeninde m(ACH) = 30°’dir. 30°’nin karşısındaki dik kenar hipotenüsün yarısı olduğundan |AH| = |AC| / 2 = 20 / 2 = 10 cm.',
+      },
+      {
+        title: 'ABH üçgeni',
+        detail:
+          'B, [HC] üzerinde olduğundan m(ABH) = 180° − 135° = 45°’dir. H’de dik olan ABH üçgeni ikizkenar dik üçgendir ve hipotenüsü |AB| = |AH| · √2 olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'x = 10 · √2 = 10√2 cm bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 173
+  {
+    id: 'triangles-173',
+    topic: 'Köşegenleri dik kesişen dik yamukta Öklid bağıntısı',
+    figure: {
+      viewBox: '0 24 440 240',
+      caption: 'Şekil 173',
+      label:
+        'B ve C köşelerindeki açıları dik olan bir dik yamukta [BA] ile [CD] aynı yöne bakar; köşegenler [AC] ile [BD], E noktasında dik kesişir. |AE| = 2 cm, |BE| = 4 cm ve |ED| = x’tir.',
+      svg: `
+          <path class="ln" d="M46,58 L131,58"/>
+          <path class="ln" d="M46,58 L46,228"/>
+          <path class="ln" d="M46,228 L386,228"/>
+          <path class="ln" d="M131,58 L46,228"/>
+          <path class="ln" d="M46,58 L386,228"/>
+          <path class="ln" d="M59,58 L59,71 L46,71"/>
+          <path class="ln" d="M46,215 L59,215 L59,228"/>
+          <path class="ln" d="M119.4,81.3 L108.6,75.9 L103.3,86.6"/>
+
+          <circle class="pt" cx="46" cy="58" r="3.2"/>
+          <circle class="pt" cx="131" cy="58" r="3.2"/>
+          <circle class="pt" cx="46" cy="228" r="3.2"/>
+          <circle class="pt" cx="386" cy="228" r="3.2"/>
+          <circle class="pt" cx="114" cy="92" r="3.2"/>
+
+          <text class="val" x="132" y="84">2</text>
+          <text class="val" x="74" y="88" text-anchor="end">4</text>
+          <text class="val" x="256" y="152">x</text>
+
+          <text x="38" y="50" text-anchor="end">B</text>
+          <text x="139" y="50">A</text>
+          <text x="38" y="250" text-anchor="end">C</text>
+          <text x="394" y="250">D</text>
+          <text x="98" y="112" text-anchor="end">E</text>
+        `,
+    },
+    given: [
+      '[AB] ⊥ [BC]',
+      '[BC] ⊥ [CD]',
+      '[AC] ⊥ [BD]',
+      'E, [AC] ile [BD]’nin kesişim noktası',
+      '|AE| = 2 cm',
+      '|BE| = 4 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |ED| = x kaç cm’dir?',
+    choices: [
+      { key: 'A', text: '10' },
+      { key: 'B', text: '12' },
+      { key: 'C', text: '14' },
+      { key: 'D', text: '16' },
+      { key: 'E', text: '18' },
+    ],
+    answer: 'D',
+    hint: 'ABC üçgeninde [BE], hipotenüse ait yüksekliktir; aynı bağıntıyı bir kez de BCD üçgeninde [CE] için yaz.',
+    solution: [
+      {
+        title: 'İlk dik üçgeni seç',
+        detail:
+          'ABC üçgeni B’de diktir ve [BE] ⊥ [AC] olduğundan [BE], hipotenüse ait yüksekliktir.',
+      },
+      {
+        title: 'Yüksekliğe ait Öklid bağıntısı',
+        detail: '|BE|² = |AE| · |EC| → 4² = 2 · |EC| → |EC| = 16 / 2 = 8 cm.',
+      },
+      {
+        title: 'İkinci dik üçgen',
+        detail:
+          'BCD üçgeni C’de diktir ve E, [BD] üzerinde olup [CE] ⊥ [BD]’dir; yani [CE] de bu üçgende hipotenüse ait yüksekliktir.',
+      },
+      {
+        title: 'Bağıntıyı tekrar yaz',
+        detail: '|CE|² = |BE| · |ED| → 8² = 4 · x → x = 64 / 4.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x = 16 cm bulunur. (Kontrol: |BC|² = |BE| · |BD| = 4 · 20 = 80 ve |AB|² = 2 · 10 = 20; 20 + 80 = 100 = |AC|².)',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 174
+  {
+    id: 'triangles-174',
+    topic: 'Hipotenüsün orta noktasından dik kenara uzaklık',
+    figure: {
+      viewBox: '0 30 400 256',
+      caption: 'Şekil 174',
+      label:
+        'B köşesindeki açısı dik olan ABC üçgeninde D noktası [BC] üzerinde, E noktası [AC]’nin orta noktasıdır; D ile E birleştirilmiştir. |BD| = 2 cm, |DC| = 10 cm, |ED| = 4√2 cm ve |AB| = x’tir.',
+      svg: `
+          <path class="ln" d="M56,58 L56,250 L344,250 Z"/>
+          <path class="ln" d="M200,154 L104,250"/>
+          <path class="ln" d="M56,237 L69,237 L69,250"/>
+
+          <path class="tick" d="M124.7,111 L131.3,101"/>
+          <path class="tick" d="M268.7,207 L275.3,197"/>
+
+          <circle class="pt" cx="56" cy="58" r="3.2"/>
+          <circle class="pt" cx="56" cy="250" r="3.2"/>
+          <circle class="pt" cx="344" cy="250" r="3.2"/>
+          <circle class="pt" cx="104" cy="250" r="3.2"/>
+          <circle class="pt" cx="200" cy="154" r="3.2"/>
+
+          <text class="val" x="48" y="158" text-anchor="end">x</text>
+          <text class="val" x="80" y="272" text-anchor="middle">2</text>
+          <text class="val" x="224" y="272" text-anchor="middle">10</text>
+          <text class="val" x="138" y="214" text-anchor="end">4√2</text>
+
+          <text x="56" y="50" text-anchor="middle">A</text>
+          <text x="48" y="272" text-anchor="end">B</text>
+          <text x="352" y="272">C</text>
+          <text x="104" y="272" text-anchor="middle">D</text>
+          <text x="208" y="150">E</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 30 400 256',
+      caption: 'Şekil 174 — [EF] dikmesi çizildi',
+      label:
+        'Aynı şekilde E’den [BC] üzerine inen dikmenin ayağı F, [BC]’nin orta noktasıdır; [EF] orta taban olduğundan |EF| = |AB| / 2’dir.',
+      svg: `
+          <path class="ln" d="M56,58 L56,250 L344,250 Z"/>
+          <path class="ln" d="M200,154 L104,250"/>
+          <path class="ln" d="M56,237 L69,237 L69,250"/>
+          <path class="aux" d="M200,154 L200,250"/>
+          <path class="aux" d="M200,237 L213,237 L213,250"/>
+
+          <path class="tick" d="M124.7,111 L131.3,101"/>
+          <path class="tick" d="M268.7,207 L275.3,197"/>
+
+          <circle class="pt" cx="56" cy="58" r="3.2"/>
+          <circle class="pt" cx="56" cy="250" r="3.2"/>
+          <circle class="pt" cx="344" cy="250" r="3.2"/>
+          <circle class="pt" cx="104" cy="250" r="3.2"/>
+          <circle class="pt" cx="200" cy="154" r="3.2"/>
+          <circle class="pt" cx="200" cy="250" r="3.2"/>
+
+          <text class="val" x="48" y="158" text-anchor="end">x</text>
+          <text class="val" x="80" y="272" text-anchor="middle">2</text>
+          <text class="val" x="224" y="272" text-anchor="middle">10</text>
+          <text class="val" x="138" y="214" text-anchor="end">4√2</text>
+          <text class="val" x="208" y="206">x/2</text>
+          <text class="val" x="152" y="240" text-anchor="middle">4</text>
+
+          <text x="56" y="50" text-anchor="middle">A</text>
+          <text x="48" y="272" text-anchor="end">B</text>
+          <text x="352" y="272">C</text>
+          <text x="104" y="272" text-anchor="middle">D</text>
+          <text x="208" y="150">E</text>
+          <text x="200" y="272" text-anchor="middle">F</text>
+        `,
+    },
+    given: [
+      'ABC bir dik üçgen',
+      '[AB] ⊥ [BC]',
+      'D ∈ [BC]',
+      '|AE| = |EC|',
+      '|BD| = 2 cm',
+      '|DC| = 10 cm',
+      '|ED| = 4√2 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |AB| = x kaç cm’dir?',
+    choices: [
+      { key: 'A', text: '6' },
+      { key: 'B', text: '7' },
+      { key: 'C', text: '8' },
+      { key: 'D', text: '9' },
+      { key: 'E', text: '10' },
+    ],
+    answer: 'C',
+    hint: 'E’den [BC]’ye dikme in: ayak [BC]’nin orta noktasıdır ve dikmenin boyu |AB|’nin yarısına eşittir.',
+    solution: [
+      {
+        title: 'Dikmeyi in',
+        detail:
+          'E’den [BC] üzerine inen dikmenin ayağı F olsun. [EF] ⊥ [BC] ve [AB] ⊥ [BC] olduğundan [EF] ∥ [AB]’dir.',
+      },
+      {
+        title: 'Orta tabanı tanı',
+        detail:
+          'E, [AC]’nin orta noktası ve [EF] ∥ [AB] olduğundan F de [BC]’nin orta noktasıdır; [EF] orta tabandır ve |EF| = |AB| / 2 = x / 2 olur.',
+      },
+      {
+        title: 'DF uzunluğu',
+        detail:
+          '|BC| = |BD| + |DC| = 2 + 10 = 12 cm olduğundan |BF| = 6 cm’dir. D, B ile F arasında kaldığından |DF| = |BF| − |BD| = 6 − 2 = 4 cm.',
+      },
+      {
+        title: 'EFD üçgeninde Pisagor',
+        detail:
+          'EFD üçgeni F’de diktir: |ED|² = |DF|² + |EF|² → (4√2)² = 4² + (x/2)² → 32 = 16 + x²/4.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'x² / 4 = 16 → x² = 64 olduğundan x = 8 cm bulunur.',
+      },
+    ],
+  },
 ];
 
 /** Looks questions up by id so the modules below read as a running order. */
@@ -14427,6 +15072,21 @@ export const UNIT_2_TRIANGLES: Unit = {
         'triangles-166',
         'triangles-167',
         'triangles-168',
+      ),
+    },
+    {
+      id: 'triangles-m29',
+      order: 29,
+      title: 'Dik üçgenler — Test 7',
+      summary:
+        'Hipotenüsün orta dikmesi, yükseklik üzerinde kurulan orta dikme, aynı doğruya dik iki kenar arasındaki uzaklık, 135°’lik açıyı dikmeyle çözme, köşegenleri dik kesişen dik yamukta Öklid bağıntısı ve hipotenüsün orta noktasından dik kenara uzaklık.',
+      questions: pick(
+        'triangles-169',
+        'triangles-170',
+        'triangles-171',
+        'triangles-172',
+        'triangles-173',
+        'triangles-174',
       ),
     },
   ],

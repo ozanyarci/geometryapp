@@ -312,6 +312,19 @@ describe('unit 2 answer key', () => {
   it('168 — 121 − 4x² = 25 − x², 3x² = 96, x² = 32, x = 4√2 → B', () =>
     expect(answerOf('triangles-168')).toBe('B'));
 
+  it('169 — orta dikme: DC = DA = 25, x² = 625 − 576 = 49, x = 7 → C', () =>
+    expect(answerOf('triangles-169')).toBe('C'));
+  it('170 — KC = KA = 25 − x, HC = 15, (25 − x)² = x² + 225, 50x = 400, x = 8 → C', () =>
+    expect(answerOf('triangles-170')).toBe('C'));
+  it('171 — AF = 20, FD = 9 + 6 = 15, AD² = 400 + 225 = 625, AD = 25 → C', () =>
+    expect(answerOf('triangles-171')).toBe('C'));
+  it('172 — AH = 20/2 = 10, m(ABH) = 45, x = 10√2 → C', () =>
+    expect(answerOf('triangles-172')).toBe('C'));
+  it('173 — 16 = 2·EC, EC = 8, 64 = 4·x, x = 16 → D', () =>
+    expect(answerOf('triangles-173')).toBe('D'));
+  it('174 — BC = 12, BF = 6, DF = 4, 32 = 16 + x²/4, x² = 64, x = 8 → C', () =>
+    expect(answerOf('triangles-174')).toBe('C'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
