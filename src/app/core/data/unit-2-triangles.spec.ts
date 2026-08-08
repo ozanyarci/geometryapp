@@ -261,6 +261,18 @@ describe('unit 2 answer key', () => {
   it('144 — DH = 5√3/2 + 2√3 = 9√3/2, HC = 9/2, BH = 5/2, x = 7 → C', () =>
     expect(answerOf('triangles-144')).toBe('C'));
 
+  it('145 — BC² = 25 − 9 = 16, BC = 4, AB = 1 + 3 = 4, x² = 16 + 16 = 32, x = 4√2 → A', () =>
+    expect(answerOf('triangles-145')).toBe('A'));
+  it('146 — AB = 10, BD² = 8·10 = 80, x² = 144 − 80 = 64, x = 8 → C', () =>
+    expect(answerOf('triangles-146')).toBe('C'));
+  it('147 — BD = 2·5 = 10, x = 10/√2 = 5√2 → B', () => expect(answerOf('triangles-147')).toBe('B'));
+  it('148 — 169 − a² = 225 − (14−a)², a = 5, x² = 169 − 25 = 144, x = 12 → C', () =>
+    expect(answerOf('triangles-148')).toBe('C'));
+  it('149 — 36 = a(a+5), a = 4, BC = 9, x² = 5·9 = 45, x = 3√5 → A', () =>
+    expect(answerOf('triangles-149')).toBe('A'));
+  it('150 — BC = 30, AB = 30/√3 = 10√3, BD = 18/√3 = 6√3, x = 4√3 → C', () =>
+    expect(answerOf('triangles-150')).toBe('C'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
