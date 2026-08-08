@@ -286,6 +286,19 @@ describe('unit 2 answer key', () => {
   it('156 — 144 = BH·9, BH = 16, BC = 25, x² = 16·25 = 400, x = 20 → D', () =>
     expect(answerOf('triangles-156')).toBe('D'));
 
+  it('157 — m(HBC) = 60, BH = 10·cos60 = 5, AH = 3 + 5 = 8, sin α = 8/(8√2), α = 45 → C', () =>
+    expect(answerOf('triangles-157')).toBe('C'));
+  it('158 — BD = 10 = AD, AE² = 100 − 36 = 64, x² = 64 + 16 = 80, x = 4√5 → B', () =>
+    expect(answerOf('triangles-158')).toBe('B'));
+  it('159 — AD = BD = 25, AC = AD = 25, DH = 7, AH = 24, BH = 32, x² = 1024 + 576 = 1600 → D', () =>
+    expect(answerOf('triangles-159')).toBe('D'));
+  it('160 — 2α + 2β = 180 → m(DBE) = 90, 36 = 4·DE, DE = 9, HE = 5, x² = 5·9 = 45 → B', () =>
+    expect(answerOf('triangles-160')).toBe('B'));
+  it('161 — AC = 4√2, m(DAC) = 45 + 45 = 90, m(DCA) = 15 + 45 = 60, x = 4√2·√3 = 4√6 → D', () =>
+    expect(answerOf('triangles-161')).toBe('D'));
+  it('162 — parçalar 30°, B = 60, C = 30, AH = (a/2·a√3/2)/a = a√3/4, oran √3/4 → B', () =>
+    expect(answerOf('triangles-162')).toBe('B'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
