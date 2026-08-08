@@ -299,6 +299,19 @@ describe('unit 2 answer key', () => {
   it('162 — parçalar 30°, B = 60, C = 30, AH = (a/2·a√3/2)/a = a√3/4, oran √3/4 → B', () =>
     expect(answerOf('triangles-162')).toBe('B'));
 
+  it('163 — 36 = 3m·4m, m² = 3, x² = m·4m = 12, x = 2√3 → C', () =>
+    expect(answerOf('triangles-163')).toBe('C'));
+  it('164 — 36 + 25 = 16 + x², x² = 45, x = 3√5 → C', () =>
+    expect(answerOf('triangles-164')).toBe('C'));
+  it('165 — PA = 10√3/3, PB = 10√3/3 + 4√3 = 22√3/3, x = √3·PB = 22 → C', () =>
+    expect(answerOf('triangles-165')).toBe('C'));
+  it('166 — BH² = 48, BH = 4√3, HC = 4, AH = 12, x = 16 → C', () =>
+    expect(answerOf('triangles-166')).toBe('C'));
+  it('167 — AC = 2·17 = 34, x² = 1156 − 256 = 900, x = 30 → D', () =>
+    expect(answerOf('triangles-167')).toBe('D'));
+  it('168 — 121 − 4x² = 25 − x², 3x² = 96, x² = 32, x = 4√2 → B', () =>
+    expect(answerOf('triangles-168')).toBe('B'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
