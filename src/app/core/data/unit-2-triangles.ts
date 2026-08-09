@@ -19397,6 +19397,645 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+  // ---------------------------------------------------------------- 224
+  {
+    id: 'triangles-224',
+    topic: 'Kenarın orta dikmesi ve Pisagor bağıntısı',
+    figure: {
+      viewBox: '0 150 400 190',
+      caption: 'Şekil 224',
+      label:
+        'A köşesindeki açısı dik olan ABC üçgeninde [BC] kenarının orta noktası E, [AC] kenarı üzerindeki bir nokta ise D’dir. [DE] kenarı [BC] kenarına diktir. |AB| 8, |AD| 6, |DC| ise x ile gösterilmiştir.',
+      svg: `
+          <path class="ln" d="M110.83,178.37 L50,300 L354.1,300 Z"/>
+          <path class="ln" d="M202.05,300 L202.06,223.98"/>
+
+          <path class="ln" d="M105.02,190 L116.65,195.81 L122.46,184.18"/>
+          <path class="ln" d="M202.05,288 L214.05,288 L214.05,300"/>
+
+          <path class="tick" d="M126.03,294 L126.03,306"/>
+          <path class="tick" d="M278.08,294 L278.08,306"/>
+
+          <circle class="pt" cx="110.83" cy="178.37" r="3.2"/>
+          <circle class="pt" cx="50" cy="300" r="3.2"/>
+          <circle class="pt" cx="354.1" cy="300" r="3.2"/>
+          <circle class="pt" cx="202.06" cy="223.98" r="3.2"/>
+          <circle class="pt" cx="202.05" cy="300" r="3.2"/>
+
+          <text class="val" x="73" y="244" text-anchor="end">8</text>
+          <text class="val" x="162" y="194">6</text>
+          <text class="val" x="287" y="256">x</text>
+
+          <text x="110.83" y="170" text-anchor="middle">A</text>
+          <text x="42" y="324" text-anchor="end">B</text>
+          <text x="362" y="324">C</text>
+          <text x="194" y="220" text-anchor="end">D</text>
+          <text x="202" y="324" text-anchor="middle">E</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 150 400 190',
+      caption: 'Şekil 224 — [DB] çizildi',
+      label:
+        'Aynı şekle, D noktasını B köşesine birleştiren kesikli [DB] doğru parçası eklenmiştir.',
+      svg: `
+          <path class="ln" d="M110.83,178.37 L50,300 L354.1,300 Z"/>
+          <path class="ln" d="M202.05,300 L202.06,223.98"/>
+
+          <path class="aux" d="M202.06,223.98 L50,300"/>
+
+          <path class="ln" d="M105.02,190 L116.65,195.81 L122.46,184.18"/>
+          <path class="ln" d="M202.05,288 L214.05,288 L214.05,300"/>
+
+          <path class="tick" d="M126.03,294 L126.03,306"/>
+          <path class="tick" d="M278.08,294 L278.08,306"/>
+
+          <circle class="pt" cx="110.83" cy="178.37" r="3.2"/>
+          <circle class="pt" cx="50" cy="300" r="3.2"/>
+          <circle class="pt" cx="354.1" cy="300" r="3.2"/>
+          <circle class="pt" cx="202.06" cy="223.98" r="3.2"/>
+          <circle class="pt" cx="202.05" cy="300" r="3.2"/>
+
+          <text class="val" x="73" y="244" text-anchor="end">8</text>
+          <text class="val" x="162" y="194">6</text>
+          <text class="val" x="287" y="256">x</text>
+
+          <text x="110.83" y="170" text-anchor="middle">A</text>
+          <text x="42" y="324" text-anchor="end">B</text>
+          <text x="362" y="324">C</text>
+          <text x="194" y="220" text-anchor="end">D</text>
+          <text x="202" y="324" text-anchor="middle">E</text>
+        `,
+    },
+    given: [
+      'ABC üçgeninde m(BAC) = 90°',
+      'D ∈ [AC], E ∈ [BC]',
+      '[DE] ⊥ [BC]',
+      '|BE| = |EC|',
+      '|AB| = 8 cm, |AD| = 6 cm',
+      '|DC| = x',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |DC| = x kaç cm’dir?',
+    choices: [
+      { key: 'A', text: '6' },
+      { key: 'B', text: '8' },
+      { key: 'C', text: '4√5' },
+      { key: 'D', text: '10' },
+      { key: 'E', text: '12' },
+    ],
+    answer: 'D',
+    hint: '[DE], [BC] kenarının orta dikmesidir; D noktasını B’ye birleştirdiğinde ne elde edersin?',
+    solution: [
+      {
+        title: 'Orta dikmeyi tanı',
+        detail:
+          '[DE] hem [BC] kenarına dik hem de onu ortalıyor (|BE| = |EC|). Yani [DE], [BC] kenarının orta dikmesidir.',
+      },
+      {
+        title: 'Orta dikmenin özelliği',
+        detail:
+          'Bir doğru parçasının orta dikmesi üzerindeki her nokta, parçanın uç noktalarına eşit uzaklıktadır. D bu orta dikme üzerinde olduğundan |DB| = |DC| = x olur.',
+      },
+      {
+        title: 'Dik üçgeni kur',
+        detail:
+          'm(BAC) = 90° ve D ∈ [AC] olduğundan ABD üçgeni de A’da diktir. Dik kenarları |AB| = 8 cm ve |AD| = 6 cm’dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'Pisagor bağıntısıyla |DB|² = 8² + 6² = 64 + 36 = 100, yani |DB| = 10 cm’dir. |DC| = |DB| olduğundan x = 10 cm bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 225
+  {
+    id: 'triangles-225',
+    topic: 'İkizkenar dik üçgende iç doğru parçası',
+    figure: {
+      viewBox: '0 12 400 334',
+      caption: 'Şekil 225',
+      label:
+        'B köşesindeki açısı dik ve |AB| = |BC| olan ABC ikizkenar dik üçgeninde [AC] kenarı üzerinde bir D noktası alınmıştır. |AD| 6, |DC| 8, |BD| ise x ile gösterilmiştir.',
+      svg: `
+          <path class="ln" d="M75,37.8 L75,315 L352.2,315 Z"/>
+          <path class="ln" d="M75,315 L193.8,156.6"/>
+
+          <path class="ln" d="M87,315 L87,303 L75,303"/>
+
+          <circle class="pt" cx="75" cy="37.8" r="3.2"/>
+          <circle class="pt" cx="75" cy="315" r="3.2"/>
+          <circle class="pt" cx="352.2" cy="315" r="3.2"/>
+          <circle class="pt" cx="193.8" cy="156.6" r="3.2"/>
+
+          <text class="val" x="142" y="93">6</text>
+          <text class="val" x="281" y="231">8</text>
+          <text class="val" x="127" y="241" text-anchor="end">x</text>
+
+          <text x="75" y="30" text-anchor="middle">A</text>
+          <text x="67" y="339" text-anchor="end">B</text>
+          <text x="360" y="339">C</text>
+          <text x="202" y="152">D</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 12 400 334',
+      caption: 'Şekil 225 — D’den iki dik kenara dikmeler indirildi',
+      label:
+        'Aynı şekle, D noktasından [BC] kenarına indirilen ve ayağı F olan kesikli dikme ile [AB] kenarına indirilen ve ayağı G olan kesikli dikme eklenmiştir.',
+      svg: `
+          <path class="ln" d="M75,37.8 L75,315 L352.2,315 Z"/>
+          <path class="ln" d="M75,315 L193.8,156.6"/>
+
+          <path class="aux" d="M193.8,156.6 L193.8,315"/>
+          <path class="aux" d="M193.8,156.6 L75,156.6"/>
+          <path class="aux-head" d="M181.8,315 L181.8,303 L193.8,303"/>
+          <path class="aux-head" d="M75,168.6 L87,168.6 L87,156.6"/>
+
+          <path class="ln" d="M87,315 L87,303 L75,303"/>
+
+          <circle class="pt" cx="75" cy="37.8" r="3.2"/>
+          <circle class="pt" cx="75" cy="315" r="3.2"/>
+          <circle class="pt" cx="352.2" cy="315" r="3.2"/>
+          <circle class="pt" cx="193.8" cy="156.6" r="3.2"/>
+          <circle class="pt" cx="193.8" cy="315" r="3.2"/>
+          <circle class="pt" cx="75" cy="156.6" r="3.2"/>
+
+          <text class="val" x="142" y="93">6</text>
+          <text class="val" x="281" y="231">8</text>
+          <text class="val" x="127" y="241" text-anchor="end">x</text>
+
+          <text x="75" y="30" text-anchor="middle">A</text>
+          <text x="67" y="339" text-anchor="end">B</text>
+          <text x="360" y="339">C</text>
+          <text x="202" y="152">D</text>
+          <text x="193.8" y="339" text-anchor="middle">F</text>
+          <text x="67" y="161" text-anchor="end">G</text>
+        `,
+    },
+    given: [
+      'ABC üçgeninde m(ABC) = 90°',
+      '|AB| = |BC|',
+      'D ∈ [AC]',
+      '|AD| = 6 cm, |DC| = 8 cm',
+      '|BD| = x',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |BD| = x kaç cm’dir?',
+    choices: [
+      { key: 'A', text: '7' },
+      { key: 'B', text: '5√2' },
+      { key: 'C', text: '4√5' },
+      { key: 'D', text: '7√2' },
+      { key: 'E', text: '10' },
+    ],
+    answer: 'B',
+    hint: 'Taban açıları 45°’dir; D’den iki dik kenara birer dikme indirdiğinde iki ikizkenar dik üçgen ile bir dikdörtgen çıkar.',
+    solution: [
+      {
+        title: 'Taban açılarını bul',
+        detail:
+          '|AB| = |BC| ve m(ABC) = 90° olduğundan ABC ikizkenar dik üçgendir: m(BAC) = m(BCA) = (180° − 90°) / 2 = 45°.',
+      },
+      {
+        title: 'Dikmeleri indir',
+        detail:
+          'D’den [AB] kenarına inen dikmenin ayağı G, [BC] kenarına inen dikmenin ayağı F olsun. AGD üçgeni G’de dik ve m(GAD) = 45° olduğundan ikizkenardır: |AG| = |GD| = 6 / √2 = 3√2 cm. Aynı biçimde DFC üçgeninde |DF| = |FC| = 8 / √2 = 4√2 cm.',
+      },
+      {
+        title: 'Dikdörtgenden yararlan',
+        detail:
+          'BFDG dörtgeninin dört açısı da diktir, yani bir dikdörtgendir. Karşılıklı kenarlar eşit olduğundan |BG| = |DF| = 4√2 cm ve |GD| = 3√2 cm’dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'BGD üçgeni G’de diktir: x² = |BG|² + |GD|² = (4√2)² + (3√2)² = 32 + 18 = 50, yani x = √50 = 5√2 cm bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 226
+  {
+    id: 'triangles-226',
+    topic: 'Eşkenar üçgende kenar uzantısı ve dikme',
+    figure: {
+      viewBox: '0 20 400 352',
+      caption: 'Şekil 226',
+      label:
+        'Eşkenar ABC üçgeninde [BA] kenarının A tarafındaki uzantısında bir D noktası alınmış, D’den [BC] kenarına bir dikme indirilmiştir. Dikmenin ayağı F, [AC] kenarını kestiği nokta ise E’dir. |DE| 6 kök 3, |EF| 2 kök 3, |BF| ise x ile gösterilmiştir.',
+      svg: `
+          <path class="ln" d="M200,156.13 L95,338 L305,338 Z"/>
+          <path class="ln" d="M200,156.13 L263,47"/>
+          <path class="ln" d="M263,47 L263,338"/>
+
+          <path class="ln" d="M251,338 L251,326 L263,326"/>
+
+          <circle class="pt" cx="200" cy="156.13" r="3.2"/>
+          <circle class="pt" cx="95" cy="338" r="3.2"/>
+          <circle class="pt" cx="305" cy="338" r="3.2"/>
+          <circle class="pt" cx="263" cy="47" r="3.2"/>
+          <circle class="pt" cx="263" cy="265.25" r="3.2"/>
+          <circle class="pt" cx="263" cy="338" r="3.2"/>
+
+          <text class="val" x="271" y="157">6√3</text>
+          <text class="val" x="255" y="302" text-anchor="end">2√3</text>
+          <text class="val" x="179" y="362" text-anchor="middle">x</text>
+
+          <text x="263" y="39" text-anchor="middle">D</text>
+          <text x="192" y="152" text-anchor="end">A</text>
+          <text x="87" y="362" text-anchor="end">B</text>
+          <text x="313" y="362">C</text>
+          <text x="255" y="262" text-anchor="end">E</text>
+          <text x="263" y="362" text-anchor="middle">F</text>
+        `,
+    },
+    given: [
+      'ABC bir eşkenar üçgen',
+      'A ∈ [BD] ve F ∈ [BC]',
+      '[DF] ⊥ [BC]',
+      'E, [DF] ile [AC] kenarının kesim noktası',
+      '|DE| = 6√3 cm, |EF| = 2√3 cm',
+      '|BF| = x',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |BF| = x kaç cm’dir?',
+    choices: [
+      { key: 'A', text: '8' },
+      { key: 'B', text: '9' },
+      { key: 'C', text: '10' },
+      { key: 'D', text: '12' },
+      { key: 'E', text: '15' },
+    ],
+    answer: 'A',
+    hint: 'DBF ve ECF üçgenlerinin ikisi de F’de dik ve 60°’lik açıya sahiptir; kenarı a diyerek iki denklem kur.',
+    solution: [
+      {
+        title: 'İki dik üçgeni ayır',
+        detail:
+          'Eşkenar üçgenin kenarına a diyelim. DBF üçgeni F’de diktir ve m(DBF) = m(ABC) = 60°’dir. ECF üçgeni de F’de diktir ve m(ECF) = m(ACB) = 60°’dir.',
+      },
+      {
+        title: 'Dik kenarları yaz',
+        detail:
+          '30°-60°-90° üçgeninde 60°’nin karşısındaki kenar, 30°’nin karşısındakinin √3 katıdır. DBF üçgeninde |DF| = |BF| · √3 = x√3, ECF üçgeninde ise |EF| = |FC| · √3 olur.',
+      },
+      {
+        title: 'İkinci bilinmeyeni bul',
+        detail:
+          '|EF| = 2√3 olduğundan |FC| · √3 = 2√3, yani |FC| = 2 cm’dir. F ∈ [BC] olduğundan a = x + 2 yazılır.',
+      },
+      {
+        title: 'Denklemi kur',
+        detail:
+          'E ∈ [DF] olduğundan |DF| = |DE| + |EF| = 6√3 + 2√3 = 8√3 cm’dir. |DF| = x√3 eşitliğinden x√3 = 8√3 elde edilir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'x√3 = 8√3 denkleminden x = 8 cm bulunur (bu arada a = 8 + 2 = 10 cm’dir).',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 227
+  {
+    id: 'triangles-227',
+    topic: 'Aynı doğru üzerine kurulan iki eşkenar üçgen',
+    figure: {
+      viewBox: '0 104 400 232',
+      caption: 'Şekil 227',
+      label:
+        'A, B, C noktaları aynı doğru üzerindedir. [AB] üzerine EAB eşkenar üçgeni, [BC] üzerine ise aynı yönde DBC eşkenar üçgeni kurulmuştur. |AB| 5, |BC| 8, |ED| ise x ile gösterilmiştir.',
+      svg: `
+          <path class="ln" d="M97.5,191.75 L35,300 L160,300 Z"/>
+          <path class="ln" d="M260,126.8 L160,300 L360,300 Z"/>
+          <path class="ln" d="M97.5,191.75 L260,126.8"/>
+
+          <circle class="pt" cx="35" cy="300" r="3.2"/>
+          <circle class="pt" cx="160" cy="300" r="3.2"/>
+          <circle class="pt" cx="360" cy="300" r="3.2"/>
+          <circle class="pt" cx="97.5" cy="191.75" r="3.2"/>
+          <circle class="pt" cx="260" cy="126.8" r="3.2"/>
+
+          <text class="val" x="97.5" y="324" text-anchor="middle">5</text>
+          <text class="val" x="260" y="324" text-anchor="middle">8</text>
+          <text class="val" x="178" y="152" text-anchor="middle">x</text>
+
+          <text x="27" y="324" text-anchor="end">A</text>
+          <text x="160" y="324" text-anchor="middle">B</text>
+          <text x="368" y="324">C</text>
+          <text x="97.5" y="184" text-anchor="middle">E</text>
+          <text x="268" y="122">D</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 104 400 232',
+      caption: 'Şekil 227 — D’den [BE] kenarına dikme indirildi',
+      label:
+        'Aynı şekle, D noktasından [BE] kenarına indirilen ve ayağı H olan kesikli dikme eklenmiştir.',
+      svg: `
+          <path class="ln" d="M97.5,191.75 L35,300 L160,300 Z"/>
+          <path class="ln" d="M260,126.8 L160,300 L360,300 Z"/>
+          <path class="ln" d="M97.5,191.75 L260,126.8"/>
+
+          <path class="aux" d="M260,126.8 L110,213.4"/>
+          <path class="aux-head" d="M120.39,207.4 L126.39,217.79 L116,223.79"/>
+
+          <circle class="pt" cx="35" cy="300" r="3.2"/>
+          <circle class="pt" cx="160" cy="300" r="3.2"/>
+          <circle class="pt" cx="360" cy="300" r="3.2"/>
+          <circle class="pt" cx="97.5" cy="191.75" r="3.2"/>
+          <circle class="pt" cx="260" cy="126.8" r="3.2"/>
+          <circle class="pt" cx="110" cy="213.4" r="3.2"/>
+
+          <text class="val" x="97.5" y="324" text-anchor="middle">5</text>
+          <text class="val" x="260" y="324" text-anchor="middle">8</text>
+          <text class="val" x="178" y="152" text-anchor="middle">x</text>
+
+          <text x="27" y="324" text-anchor="end">A</text>
+          <text x="160" y="324" text-anchor="middle">B</text>
+          <text x="368" y="324">C</text>
+          <text x="97.5" y="184" text-anchor="middle">E</text>
+          <text x="268" y="122">D</text>
+          <text x="104" y="231" text-anchor="end">H</text>
+        `,
+    },
+    given: [
+      'EAB ve DBC birer eşkenar üçgen',
+      'A, B, C noktaları doğrusal',
+      '|AB| = 5 cm, |BC| = 8 cm',
+      '|ED| = x',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |ED| = x kaç cm’dir?',
+    choices: [
+      { key: 'A', text: '5' },
+      { key: 'B', text: '6' },
+      { key: 'C', text: '7' },
+      { key: 'D', text: '6√3' },
+      { key: 'E', text: '13' },
+    ],
+    answer: 'C',
+    hint: 'Önce m(EBD) açısını bul, sonra D’den [BE] kenarına bir dikme indir.',
+    solution: [
+      {
+        title: 'B köşesindeki açıyı bul',
+        detail:
+          'Eşkenar üçgenlerin açıları 60°’dir: m(EBA) = m(DBC) = 60°. A, B, C doğrusal olduğundan m(EBA) + m(EBD) + m(DBC) = 180°, yani m(EBD) = 180° − 60° − 60° = 60° bulunur.',
+      },
+      {
+        title: 'Kenarları belirle',
+        detail:
+          'EAB eşkenar olduğundan |BE| = |AB| = 5 cm, DBC eşkenar olduğundan |BD| = |BC| = 8 cm’dir.',
+      },
+      {
+        title: 'Dikmeyi indir',
+        detail:
+          'D’den [BE] kenarına indirilen dikmenin ayağı H olsun. BHD üçgeni H’de dik ve m(HBD) = 60° olduğundan bir 30°-60°-90° üçgenidir: |BH| = |BD| / 2 = 4 cm ve |DH| = 8 · √3/2 = 4√3 cm.',
+      },
+      {
+        title: 'EH parçasını bul',
+        detail:
+          '|BH| = 4 cm < |BE| = 5 cm olduğundan H noktası [BE] üzerindedir: |EH| = |BE| − |BH| = 5 − 4 = 1 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'EHD üçgeni H’de diktir: x² = |EH|² + |DH|² = 1² + (4√3)² = 1 + 48 = 49, yani x = 7 cm bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 228
+  {
+    id: 'triangles-228',
+    topic: 'Eşkenar üçgende kenarlara uzaklıklar ve alan',
+    figure: {
+      viewBox: '0 14 400 320',
+      caption: 'Şekil 228',
+      label:
+        'Eşkenar ABC üçgeninin [AB] kenarı üzerinde bir D noktası alınmış, D’den [AC] kenarına inen dikmenin ayağı E, [BC] kenarına inen dikmenin ayağı ise F ile gösterilmiştir. |DE| 5, |DF| 7 cm’dir.',
+      svg: `
+          <path class="ln" d="M202.4,36 L50,300 L354.8,300 Z"/>
+          <path class="ln" d="M138.9,146 L234.2,91"/>
+          <path class="ln" d="M138.9,146 L138.9,300"/>
+
+          <path class="ln" d="M223.81,97 L229.81,107.39 L240.2,101.39"/>
+          <path class="ln" d="M138.9,288 L150.9,288 L150.9,300"/>
+
+          <circle class="pt" cx="202.4" cy="36" r="3.2"/>
+          <circle class="pt" cx="50" cy="300" r="3.2"/>
+          <circle class="pt" cx="354.8" cy="300" r="3.2"/>
+          <circle class="pt" cx="138.9" cy="146" r="3.2"/>
+          <circle class="pt" cx="234.2" cy="91" r="3.2"/>
+          <circle class="pt" cx="138.9" cy="300" r="3.2"/>
+
+          <text class="val" x="192" y="112">5</text>
+          <text class="val" x="131" y="228" text-anchor="end">7</text>
+
+          <text x="202.4" y="28" text-anchor="middle">A</text>
+          <text x="42" y="324" text-anchor="end">B</text>
+          <text x="363" y="324">C</text>
+          <text x="131" y="142" text-anchor="end">D</text>
+          <text x="242" y="87">E</text>
+          <text x="138.9" y="324" text-anchor="middle">F</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 14 400 320',
+      caption: 'Şekil 228 — [DC] çizildi',
+      label:
+        'Aynı şekle, D noktasını C köşesine birleştiren ve eşkenar üçgeni ADC ile DBC üçgenlerine ayıran kesikli [DC] doğru parçası eklenmiştir.',
+      svg: `
+          <path class="ln" d="M202.4,36 L50,300 L354.8,300 Z"/>
+          <path class="ln" d="M138.9,146 L234.2,91"/>
+          <path class="ln" d="M138.9,146 L138.9,300"/>
+
+          <path class="aux" d="M138.9,146 L354.8,300"/>
+
+          <path class="ln" d="M223.81,97 L229.81,107.39 L240.2,101.39"/>
+          <path class="ln" d="M138.9,288 L150.9,288 L150.9,300"/>
+
+          <circle class="pt" cx="202.4" cy="36" r="3.2"/>
+          <circle class="pt" cx="50" cy="300" r="3.2"/>
+          <circle class="pt" cx="354.8" cy="300" r="3.2"/>
+          <circle class="pt" cx="138.9" cy="146" r="3.2"/>
+          <circle class="pt" cx="234.2" cy="91" r="3.2"/>
+          <circle class="pt" cx="138.9" cy="300" r="3.2"/>
+
+          <text class="val" x="192" y="112">5</text>
+          <text class="val" x="131" y="228" text-anchor="end">7</text>
+
+          <text x="202.4" y="28" text-anchor="middle">A</text>
+          <text x="42" y="324" text-anchor="end">B</text>
+          <text x="363" y="324">C</text>
+          <text x="131" y="142" text-anchor="end">D</text>
+          <text x="242" y="87">E</text>
+          <text x="138.9" y="324" text-anchor="middle">F</text>
+        `,
+    },
+    given: [
+      'ABC bir eşkenar üçgen',
+      'D ∈ [AB], E ∈ [AC], F ∈ [BC]',
+      '[DE] ⊥ [AC] ve [DF] ⊥ [BC]',
+      '|DE| = 5 cm, |DF| = 7 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, ABC eşkenar üçgeninin çevresi kaç cm’dir?',
+    choices: [
+      { key: 'A', text: '18√3' },
+      { key: 'B', text: '20√3' },
+      { key: 'C', text: '24√3' },
+      { key: 'D', text: '27√3' },
+      { key: 'E', text: '32√3' },
+    ],
+    answer: 'C',
+    hint: '[DC] çizildiğinde eşkenar üçgen iki üçgene ayrılır; iki parçanın alanı toplamı bütünün alanına eşittir.',
+    solution: [
+      {
+        title: 'Üçgeni ikiye ayır',
+        detail:
+          'Eşkenar üçgenin kenarına a diyelim ve [DC] doğru parçasını çizelim. D ∈ [AB] olduğundan ABC üçgeni, ADC ve DBC üçgenlerine ayrılır.',
+      },
+      {
+        title: 'Parçaların alanları',
+        detail:
+          '[DE] ⊥ [AC] olduğundan ADC üçgeninde [AC] tabanına ait yükseklik |DE| = 5 cm’dir: Alan(ADC) = a · 5 / 2. Aynı biçimde [DF] ⊥ [BC] olduğundan Alan(DBC) = a · 7 / 2’dir.',
+      },
+      {
+        title: 'Alanları eşitle',
+        detail:
+          'Toplamları bütünün alanına eşittir: a · 5/2 + a · 7/2 = a²√3 / 4. Sol taraf 6a olduğundan 6a = a²√3 / 4 yazılır.',
+      },
+      {
+        title: 'Kenarı bul',
+        detail:
+          'a ≠ 0 olduğundan iki taraf a’ya bölünür: 6 = a√3 / 4, yani a = 24 / √3 = 8√3 cm bulunur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Eşkenar üçgenin çevresi 3a = 3 · 8√3 = 24√3 cm’dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 229
+  {
+    id: 'triangles-229',
+    topic: 'İkizkenar üçgende tabanı bölen nokta',
+    figure: {
+      viewBox: '0 98 400 240',
+      caption: 'Şekil 229',
+      label:
+        '|AB| = |AC| olan ikizkenar ABC üçgeninin [BC] tabanı üzerinde bir D noktası alınmıştır. |BD| 2, |DC| 10, m(ADC) 60°, |AD| ise x ile gösterilmiştir. Eşit olan [AB] ve [AC] kenarları birer çentikle işaretlenmiştir.',
+      svg: `
+          <path class="ln" d="M201,119.9 L45,300 L357,300 Z"/>
+          <path class="ln" d="M201,119.9 L97,300"/>
+
+          <path class="arc" d="M123,300 A26,26 0 0,0 110,277.48"/>
+
+          <path class="tick" d="M118.46,206.07 L127.54,213.93"/>
+          <path class="tick" d="M283.54,206.07 L274.46,213.93"/>
+
+          <circle class="pt" cx="201" cy="119.9" r="3.2"/>
+          <circle class="pt" cx="45" cy="300" r="3.2"/>
+          <circle class="pt" cx="357" cy="300" r="3.2"/>
+          <circle class="pt" cx="97" cy="300" r="3.2"/>
+
+          <text class="val" x="132" y="292">60°</text>
+          <text class="val" x="157" y="205">x</text>
+          <text class="val" x="69" y="324" text-anchor="middle">2</text>
+          <text class="val" x="227" y="324" text-anchor="middle">10</text>
+
+          <text x="201" y="112" text-anchor="middle">A</text>
+          <text x="37" y="324" text-anchor="end">B</text>
+          <text x="365" y="324">C</text>
+          <text x="99" y="324" text-anchor="middle">D</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 98 400 240',
+      caption: 'Şekil 229 — A’dan tabana yükseklik indirildi',
+      label:
+        'Aynı şekle, A köşesinden [BC] tabanına indirilen ve ayağı tabanın orta noktası H olan kesikli yükseklik eklenmiştir.',
+      svg: `
+          <path class="ln" d="M201,119.9 L45,300 L357,300 Z"/>
+          <path class="ln" d="M201,119.9 L97,300"/>
+
+          <path class="aux" d="M201,119.9 L201,300"/>
+          <path class="aux-head" d="M189,300 L189,288 L201,288"/>
+
+          <path class="arc" d="M123,300 A26,26 0 0,0 110,277.48"/>
+
+          <path class="tick" d="M118.46,206.07 L127.54,213.93"/>
+          <path class="tick" d="M283.54,206.07 L274.46,213.93"/>
+
+          <circle class="pt" cx="201" cy="119.9" r="3.2"/>
+          <circle class="pt" cx="45" cy="300" r="3.2"/>
+          <circle class="pt" cx="357" cy="300" r="3.2"/>
+          <circle class="pt" cx="97" cy="300" r="3.2"/>
+          <circle class="pt" cx="201" cy="300" r="3.2"/>
+
+          <text class="val" x="132" y="292">60°</text>
+          <text class="val" x="157" y="205">x</text>
+          <text class="val" x="69" y="324" text-anchor="middle">2</text>
+          <text class="val" x="227" y="324" text-anchor="middle">10</text>
+
+          <text x="201" y="112" text-anchor="middle">A</text>
+          <text x="37" y="324" text-anchor="end">B</text>
+          <text x="365" y="324">C</text>
+          <text x="99" y="324" text-anchor="middle">D</text>
+          <text x="205" y="324">H</text>
+        `,
+    },
+    given: [
+      'ABC bir ikizkenar üçgen',
+      '|AB| = |AC|',
+      'D ∈ [BC]',
+      '|BD| = 2 cm, |DC| = 10 cm',
+      'm(ADC) = 60°',
+      '|AD| = x',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |AD| = x kaç cm’dir?',
+    choices: [
+      { key: 'A', text: '6' },
+      { key: 'B', text: '4√3' },
+      { key: 'C', text: '7' },
+      { key: 'D', text: '8' },
+      { key: 'E', text: '6√2' },
+    ],
+    answer: 'D',
+    hint: 'İkizkenar üçgende tepe köşesinden tabana inen yükseklik tabanı ortalar; önce bu ayağın D’ye uzaklığını bul.',
+    solution: [
+      {
+        title: 'Yüksekliği indir',
+        detail:
+          'A köşesinden [BC] tabanına indirilen yüksekliğin ayağı H olsun. İkizkenar üçgende (|AB| = |AC|) bu yükseklik aynı zamanda kenarortaydır: |BH| = |HC|.',
+      },
+      {
+        title: 'H noktasının yerini bul',
+        detail: '|BC| = |BD| + |DC| = 2 + 10 = 12 cm olduğundan |BH| = 12 / 2 = 6 cm’dir.',
+      },
+      {
+        title: 'HD uzunluğu',
+        detail:
+          'D ve H noktalarının ikisi de [BC] üzerindedir ve |BD| = 2 < |BH| = 6 olduğundan D, B ile H arasındadır: |DH| = 6 − 2 = 4 cm.',
+      },
+      {
+        title: '30°-60°-90° üçgeni',
+        detail:
+          'H noktası [DC] üzerinde olduğundan m(ADH) = m(ADC) = 60°’dir. ADH üçgeni H’de dik olduğundan bir 30°-60°-90° üçgenidir ve 30°’nin karşısındaki dik kenar |DH|’dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '30°’nin karşısındaki dik kenar hipotenüsün yarısı olduğundan x = |AD| = 2 · |DH| = 2 · 4 = 8 cm bulunur.',
+      },
+    ],
+  },
 ];
 
 /** Looks questions up by id so the modules below read as a running order. */
@@ -19976,6 +20615,21 @@ export const UNIT_2_TRIANGLES: Unit = {
         'triangles-221',
         'triangles-222',
         'triangles-223',
+      ),
+    },
+    {
+      id: 'triangles-m38',
+      order: 38,
+      title: 'İkizkenar ve eşkenar üçgen — Test 1',
+      summary:
+        'Kenarın orta dikmesiyle taşınan uzunluk, ikizkenar dik üçgende iç doğru parçası, eşkenar üçgenin kenar uzantısına inen dikme, aynı doğru üzerine kurulan iki eşkenar üçgen, kenarlara uzaklıklardan bulunan çevre ve tabanı bölen noktadan çıkan 30°-60°-90° üçgeni.',
+      questions: pick(
+        'triangles-224',
+        'triangles-225',
+        'triangles-226',
+        'triangles-227',
+        'triangles-228',
+        'triangles-229',
       ),
     },
   ],

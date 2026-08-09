@@ -431,6 +431,19 @@ describe('unit 2 answer key', () => {
   it('223 — |BD| = 4, |BH| = 3, |HD| = 1, |AH| = 3√3, x² = 27 + 1 = 28, x = 2√7 → C', () =>
     expect(answerOf('triangles-223')).toBe('C'));
 
+  it('224 — [DE] orta dikme ⇒ |DB| = |DC| = x, x² = 8² + 6² = 100, x = 10 → D', () =>
+    expect(answerOf('triangles-224')).toBe('D'));
+  it('225 — |GD| = 6/√2 = 3√2, |BG| = |DF| = 8/√2 = 4√2, x² = 18 + 32 = 50, x = 5√2 → B', () =>
+    expect(answerOf('triangles-225')).toBe('B'));
+  it('226 — |FC| = 2√3/√3 = 2, |DF| = 6√3 + 2√3 = 8√3 = x√3, x = 8 → A', () =>
+    expect(answerOf('triangles-226')).toBe('A'));
+  it('227 — m(EBD) = 60, |BH| = 4, |DH| = 4√3, |EH| = 5 − 4 = 1, x² = 1 + 48 = 49, x = 7 → C', () =>
+    expect(answerOf('triangles-227')).toBe('C'));
+  it('228 — 5a/2 + 7a/2 = a²√3/4, a = 24/√3 = 8√3, çevre 24√3 → C', () =>
+    expect(answerOf('triangles-228')).toBe('C'));
+  it('229 — |BH| = 6, |DH| = 6 − 2 = 4, m(ADH) = 60, x = 2·4 = 8 → D', () =>
+    expect(answerOf('triangles-229')).toBe('D'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
