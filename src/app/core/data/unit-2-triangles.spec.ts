@@ -351,6 +351,19 @@ describe('unit 2 answer key', () => {
   it('186 — m(APC) = 45, CT = TP = 6, AT = 4, x² = 16 + 36 = 52, x = 2√13 → B', () =>
     expect(answerOf('triangles-186')).toBe('B'));
 
+  it('187 — (x + 4)² − x² = 225 − 169 = 56, 8x = 40, x = 5 → D', () =>
+    expect(answerOf('triangles-187')).toBe('D'));
+  it('188 — yatay 5 + 7 = 12, düşey 9 − 4 = 5, x² = 144 + 25 = 169, x = 13 → C', () =>
+    expect(answerOf('triangles-188')).toBe('C'));
+  it('189 — D′ simetriği, AD′² = 16² + (9 + 3)² = 256 + 144 = 400, en kısa 20 → B', () =>
+    expect(answerOf('triangles-189')).toBe('B'));
+  it('190 — (5 + x)·√3/2 = 6√3, 5 + x = 12, x = 7 → A', () =>
+    expect(answerOf('triangles-190')).toBe('A'));
+  it('191 — BM = 24/2 = 12, m(BMH) = 2·15 = 30, x = 12/2 = 6 → D', () =>
+    expect(answerOf('triangles-191')).toBe('D'));
+  it('192 — m(C) = 30, DC = √3·FC = 3·AB − √3·BF, AB − AE = DC/2 = 7, x = 14 → E', () =>
+    expect(answerOf('triangles-192')).toBe('E'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
