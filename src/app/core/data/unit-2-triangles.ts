@@ -15286,6 +15286,605 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+
+  // ---------------------------------------------------------------- 181
+  {
+    id: 'triangles-181',
+    topic: 'Dik üçgende ardışık yükseklikler',
+    figure: {
+      viewBox: '0 158 400 172',
+      caption: 'Şekil 181',
+      label:
+        'A köşesindeki açısı dik olan ABC üçgeninde A’dan hipotenüse inen dikmenin ayağı H’dir. H’den [AB] üzerine inen dikmenin ayağı D, [AC] üzerine inen dikmenin ayağı E’dir. |DB| = 4 cm, |EC| = 32 cm, |DH| = x ve |HE| = y’dir.',
+      svg: `
+          <path class="ln" d="M106.6,174.8 L44,300 L357,300 Z"/>
+          <path class="ln" d="M106.6,174.8 L106.6,300"/>
+          <path class="ln" d="M56.5,275 L106.6,300"/>
+          <path class="ln" d="M106.6,300 L156.7,199.8"/>
+
+          <path class="ln" d="M101.2,185.5 L111.9,190.9 L117.3,180.2"/>
+          <path class="ln" d="M106.6,288 L118.6,288 L118.6,300"/>
+          <path class="ln" d="M61,266.1 L69.9,270.5 L65.5,279.5"/>
+          <path class="ln" d="M147.8,195.3 L143.3,204.3 L152.2,208.8"/>
+
+          <circle class="pt" cx="106.6" cy="174.8" r="3.2"/>
+          <circle class="pt" cx="44" cy="300" r="3.2"/>
+          <circle class="pt" cx="357" cy="300" r="3.2"/>
+          <circle class="pt" cx="106.6" cy="300" r="3.2"/>
+          <circle class="pt" cx="56.5" cy="275" r="3.2"/>
+          <circle class="pt" cx="156.7" cy="199.8" r="3.2"/>
+
+          <text class="val" x="40" y="296" text-anchor="end">4</text>
+          <text class="val" x="266" y="262">32</text>
+          <text class="val" x="80" y="281" text-anchor="middle">x</text>
+          <text class="val" x="142" y="252">y</text>
+
+          <text x="106.6" y="167" text-anchor="middle">A</text>
+          <text x="36" y="322" text-anchor="end">B</text>
+          <text x="106.6" y="322" text-anchor="middle">H</text>
+          <text x="365" y="322">C</text>
+          <text x="48" y="270" text-anchor="end">D</text>
+          <text x="164" y="196">E</text>
+        `,
+    },
+    given: [
+      'BAC bir dik üçgen',
+      'm(BAC) = 90°',
+      '[AH] ⊥ [BC]',
+      '[HD] ⊥ [AB]',
+      '[HE] ⊥ [AC]',
+      '|DB| = 4 cm',
+      '|EC| = 32 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, x + y toplamı kaç cm’dir?',
+    choices: [
+      { key: 'A', text: '18' },
+      { key: 'B', text: '20' },
+      { key: 'C', text: '24' },
+      { key: 'D', text: '27' },
+      { key: 'E', text: '30' },
+    ],
+    answer: 'C',
+    hint: 'ADHE dörtgeninin dört açısı da diktir; kenarlarını x ve y ile yazdıktan sonra ABH ve ACH üçgenlerinde Öklid bağıntısını kullan.',
+    solution: [
+      {
+        title: 'ADHE bir dikdörtgen',
+        detail:
+          'm(BAC) = 90°, [HD] ⊥ [AB] ve [HE] ⊥ [AC] olduğundan ADHE dörtgeninin dört açısı da diktir, yani ADHE bir dikdörtgendir. Karşılıklı kenarları eşit olduğundan |AD| = |HE| = y ve |AE| = |HD| = x’tir.',
+      },
+      {
+        title: 'ABH üçgeninde Öklid',
+        detail:
+          '[AH] ⊥ [BC] olduğundan ABH üçgeni H’de diktir ve [HD], bu üçgende [AB] hipotenüsüne ait yüksekliktir: |HD|² = |AD| · |DB| → x² = y · 4.',
+      },
+      {
+        title: 'ACH üçgeninde Öklid',
+        detail:
+          'ACH üçgeni de H’de diktir ve [HE], [AC] hipotenüsüne ait yüksekliktir: |HE|² = |AE| · |EC| → y² = x · 32.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'Birinci bağıntıdan y = x²/4’tür. Bunu ikinciye koyarsak x⁴/16 = 32x, yani x³ = 512 ve x = 8 cm bulunur. Buradan y = 64/4 = 16 cm olur; x + y = 8 + 16 = 24 cm’dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 182
+  {
+    id: 'triangles-182',
+    topic: 'Dik açılı dörtgende 120°’lik açı',
+    figure: {
+      viewBox: '0 82 400 244',
+      caption: 'Şekil 182',
+      label:
+        'ABCD dörtgeninde B köşesindeki açı diktir ve m(ADC) = 120°’dir. |AD| = 14 cm, |DC| = 16 cm, |BC| = 24 cm ve |AB| = x’tir.',
+      svg: `
+          <path class="ln" d="M62,185 L62,300 L338,300 L220.8,158.2 Z"/>
+
+          <path class="ln" d="M62,288 L74,288 L74,300"/>
+
+          <path class="arc" d="M191.2,163.2 A30,30 0 0 0 239.9,181.3"/>
+          <text class="val" x="201" y="211" text-anchor="middle">120°</text>
+
+          <circle class="pt" cx="62" cy="185" r="3.2"/>
+          <circle class="pt" cx="62" cy="300" r="3.2"/>
+          <circle class="pt" cx="338" cy="300" r="3.2"/>
+          <circle class="pt" cx="220.8" cy="158.2" r="3.2"/>
+
+          <text class="val" x="54" y="246" text-anchor="end">x</text>
+          <text class="val" x="200" y="322" text-anchor="middle">24</text>
+          <text class="val" x="138" y="164" text-anchor="middle">14</text>
+          <text class="val" x="289" y="226">16</text>
+
+          <text x="54" y="189" text-anchor="end">A</text>
+          <text x="54" y="322" text-anchor="end">B</text>
+          <text x="346" y="322">C</text>
+          <text x="228" y="152">D</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 82 400 244',
+      caption: 'Şekil 182 — [CD] uzatıldı ve [AK] ⊥ [KC] çizildi',
+      label:
+        'Aynı şekilde [CD] doğru parçası D’nin ötesine K noktasına kadar uzatılmış, A’dan bu doğruya [AK] dikmesi indirilmiş ve [AC] köşegeni çizilmiştir.',
+      svg: `
+          <path class="ln" d="M62,185 L62,300 L338,300 L220.8,158.2 Z"/>
+          <path class="aux" d="M220.8,158.2 L169.5,96.1"/>
+          <path class="aux" d="M62,185 L169.5,96.1"/>
+          <path class="aux" d="M62,185 L338,300"/>
+
+          <path class="ln" d="M62,288 L74,288 L74,300"/>
+          <path class="aux-head" d="M161,103.1 L168,111.6 L176.5,104.6"/>
+
+          <path class="arc" d="M195.2,162.5 A26,26 0 0 1 204.2,138.1"/>
+          <text class="val" x="176" y="141" text-anchor="middle">60°</text>
+
+          <circle class="pt" cx="62" cy="185" r="3.2"/>
+          <circle class="pt" cx="62" cy="300" r="3.2"/>
+          <circle class="pt" cx="338" cy="300" r="3.2"/>
+          <circle class="pt" cx="220.8" cy="158.2" r="3.2"/>
+          <circle class="pt" cx="169.5" cy="96.1" r="3.2"/>
+
+          <text class="val" x="54" y="246" text-anchor="end">x</text>
+          <text class="val" x="200" y="322" text-anchor="middle">24</text>
+          <text class="val" x="138" y="164" text-anchor="middle">14</text>
+          <text class="val" x="289" y="226">16</text>
+          <text class="val" x="203" y="122">7</text>
+          <text class="val" x="108" y="134" text-anchor="end">7√3</text>
+          <text class="val" x="208" y="254">26</text>
+
+          <text x="54" y="189" text-anchor="end">A</text>
+          <text x="54" y="322" text-anchor="end">B</text>
+          <text x="346" y="322">C</text>
+          <text x="228" y="152">D</text>
+          <text x="160" y="102" text-anchor="end">K</text>
+        `,
+    },
+    given: [
+      'ABCD bir dörtgen',
+      '[AB] ⊥ [BC]',
+      'm(ADC) = 120°',
+      '|AD| = 14 cm',
+      '|DC| = 16 cm',
+      '|BC| = 24 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |AB| = x kaç cm’dir?',
+    choices: [
+      { key: 'A', text: '8' },
+      { key: 'B', text: '9' },
+      { key: 'C', text: '10' },
+      { key: 'D', text: '12' },
+      { key: 'E', text: '15' },
+    ],
+    answer: 'C',
+    hint: '[CD] kenarını D’nin ötesine uzatıp A’dan bu doğruya dikme in: 120°’nin bütünleri 60°’lik bir dik üçgen verir.',
+    solution: [
+      {
+        title: 'Dikmeyi kur',
+        detail:
+          '[CD] doğru parçasını D’nin ötesine uzatalım ve A’dan bu doğruya [AK] dikmesini indirelim. m(ADK) = 180° − 120° = 60° olduğundan AKD üçgeni 30°-60°-90° üçgenidir.',
+      },
+      {
+        title: 'AKD üçgeni',
+        detail:
+          '30°’lik açının karşısındaki dik kenar hipotenüsün yarısıdır: |DK| = |AD| / 2 = 14 / 2 = 7 cm ve |AK| = 7√3 cm bulunur.',
+      },
+      {
+        title: 'Köşegeni hesapla',
+        detail:
+          '[AC] köşegenini çizelim. K, C, D noktaları aynı doğru üzerinde olduğundan |KC| = |KD| + |DC| = 7 + 16 = 23 cm’dir. AKC üçgeni K’de diktir: |AC|² = (7√3)² + 23² = 147 + 529 = 676 olduğundan |AC| = 26 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'ABC üçgeni B’de diktir: x² = |AC|² − |BC|² = 676 − 576 = 100 olduğundan x = 10 cm bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 183
+  {
+    id: 'triangles-183',
+    topic: '15°’lik açılı dik üçgen',
+    figure: {
+      viewBox: '0 204 400 128',
+      caption: 'Şekil 183',
+      label:
+        'A köşesindeki açısı dik olan BAC üçgeninde |AB| = 5 cm, m(ACB) = 15° ve |AC| = x’tir.',
+      svg: `
+          <path class="ln" d="M66.7,222.7 L46,300 L355.1,300 Z"/>
+
+          <path class="ln" d="M63.6,234.3 L75.2,237.4 L78.3,225.8"/>
+
+          <path class="arc" d="M285.1,300 A70,70 0 0 1 287.5,281.9"/>
+          <text class="val" x="246" y="287" text-anchor="middle">15°</text>
+
+          <circle class="pt" cx="66.7" cy="222.7" r="3.2"/>
+          <circle class="pt" cx="46" cy="300" r="3.2"/>
+          <circle class="pt" cx="355.1" cy="300" r="3.2"/>
+
+          <text class="val" x="46" y="268" text-anchor="end">5</text>
+          <text class="val" x="208" y="250" text-anchor="middle">x</text>
+
+          <text x="66.7" y="214" text-anchor="middle">A</text>
+          <text x="38" y="322" text-anchor="end">B</text>
+          <text x="363" y="322">C</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 204 400 128',
+      caption: 'Şekil 183 — [BD] çizildi',
+      label:
+        'Aynı şekilde [AC] üzerinde m(DBC) = 15° olacak biçimde bir D noktası işaretlenip [BD] çizilmiştir; DBC üçgeni ikizkenardır.',
+      svg: `
+          <path class="ln" d="M66.7,222.7 L46,300 L355.1,300 Z"/>
+          <path class="aux" d="M46,300 L200.6,258.6"/>
+
+          <path class="ln" d="M63.6,234.3 L75.2,237.4 L78.3,225.8"/>
+
+          <path class="arc" d="M285.1,300 A70,70 0 0 1 287.5,281.9"/>
+          <text class="val" x="246" y="287" text-anchor="middle">15°</text>
+
+          <path class="arc" d="M96.2,286.5 A52,52 0 0 1 98,300"/>
+          <text class="val" x="130" y="294" text-anchor="middle">15°</text>
+
+          <path class="arc" d="M162,248.2 A40,40 0 0 0 161.9,269"/>
+          <text class="val" x="136" y="258" text-anchor="middle">30°</text>
+
+          <line class="tick" x1="121.8" y1="273.5" x2="124.9" y2="285.1"/>
+          <line class="tick" x1="276.4" y1="273.5" x2="279.5" y2="285.1"/>
+
+          <circle class="pt" cx="66.7" cy="222.7" r="3.2"/>
+          <circle class="pt" cx="46" cy="300" r="3.2"/>
+          <circle class="pt" cx="355.1" cy="300" r="3.2"/>
+          <circle class="pt" cx="200.6" cy="258.6" r="3.2"/>
+
+          <text class="val" x="46" y="268" text-anchor="end">5</text>
+
+          <text x="66.7" y="214" text-anchor="middle">A</text>
+          <text x="38" y="322" text-anchor="end">B</text>
+          <text x="363" y="322">C</text>
+          <text x="200.6" y="250" text-anchor="middle">D</text>
+        `,
+    },
+    given: ['BAC bir dik üçgen', 'm(BAC) = 90°', '|AB| = 5 cm', 'm(ACB) = 15°'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |AC| = x kaç cm’dir?',
+    choices: [
+      { key: 'A', text: '5 + 5√3' },
+      { key: 'B', text: '10√3' },
+      { key: 'C', text: '10 + 5√3' },
+      { key: 'D', text: '15' },
+      { key: 'E', text: '5 + 10√3' },
+    ],
+    answer: 'C',
+    hint: '[AC] üzerinde m(DBC) = 15° olacak şekilde bir D noktası al: DBC ikizkenar olur ve ABD üçgeninde 30° görünür.',
+    solution: [
+      {
+        title: 'İkizkenarı kur',
+        detail:
+          '[AC] üzerinde m(DBC) = 15° olacak biçimde bir D noktası alalım. m(DBC) = m(DCB) = 15° olduğundan DBC üçgeni ikizkenardır ve |DB| = |DC|’dir.',
+      },
+      {
+        title: 'Dış açı',
+        detail: 'm(ADB), DBC üçgeninin D köşesindeki dış açısıdır: m(ADB) = 15° + 15° = 30°.',
+      },
+      {
+        title: 'ABD üçgeni',
+        detail:
+          'ABD üçgeni A’da diktir ve m(ADB) = 30°’dir. 30°’lik açının karşısındaki dik kenar |AB| = 5 cm olduğundan hipotenüs |BD| = 2 · 5 = 10 cm ve |AD| = 5√3 cm bulunur.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '|DC| = |DB| = 10 cm olduğundan x = |AD| + |DC| = 5√3 + 10, yani x = 10 + 5√3 cm’dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 184
+  {
+    id: 'triangles-184',
+    topic: 'Hipotenüse ait yükseklik ve 15°',
+    figure: {
+      viewBox: '0 204 400 128',
+      caption: 'Şekil 184',
+      label:
+        'A köşesindeki açısı dik olan BAC üçgeninde A’dan hipotenüse inen dikmenin ayağı H’dir. |AH| = 4 cm, m(ACB) = 15° ve |BC| = x’tir.',
+      svg: `
+          <path class="ln" d="M61.4,220 L40,300 L360,300 Z"/>
+          <path class="ln" d="M61.4,220 L61.4,300"/>
+
+          <path class="ln" d="M58.3,231.6 L69.9,234.7 L73,223.1"/>
+          <path class="ln" d="M61.4,288 L73.4,288 L73.4,300"/>
+
+          <path class="arc" d="M290,300 A70,70 0 0 1 292.4,281.9"/>
+          <text class="val" x="250" y="289" text-anchor="middle">15°</text>
+
+          <circle class="pt" cx="61.4" cy="220" r="3.2"/>
+          <circle class="pt" cx="40" cy="300" r="3.2"/>
+          <circle class="pt" cx="360" cy="300" r="3.2"/>
+          <circle class="pt" cx="61.4" cy="300" r="3.2"/>
+
+          <text class="val" x="70" y="264">4</text>
+          <text class="val" x="200" y="322" text-anchor="middle">x</text>
+
+          <text x="61.4" y="212" text-anchor="middle">A</text>
+          <text x="32" y="322" text-anchor="end">B</text>
+          <text x="368" y="322">C</text>
+          <text x="61.4" y="322" text-anchor="middle">H</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 204 400 128',
+      caption: 'Şekil 184 — [AM] kenarortayı çizildi',
+      label:
+        'Aynı şekilde hipotenüsün orta noktası M işaretlenip [AM] kenarortayı çizilmiştir; |MA| = |MC| olduğundan m(AMH) = 30°’dir.',
+      svg: `
+          <path class="ln" d="M61.4,220 L40,300 L360,300 Z"/>
+          <path class="ln" d="M61.4,220 L61.4,300"/>
+          <path class="aux" d="M61.4,220 L200,300"/>
+
+          <path class="ln" d="M58.3,231.6 L69.9,234.7 L73,223.1"/>
+          <path class="ln" d="M61.4,288 L73.4,288 L73.4,300"/>
+
+          <path class="arc" d="M290,300 A70,70 0 0 1 292.4,281.9"/>
+          <text class="val" x="250" y="289" text-anchor="middle">15°</text>
+
+          <path class="arc" d="M162,300 A38,38 0 0 1 167.1,281"/>
+          <text class="val" x="140" y="284" text-anchor="middle">30°</text>
+
+          <circle class="pt" cx="61.4" cy="220" r="3.2"/>
+          <circle class="pt" cx="40" cy="300" r="3.2"/>
+          <circle class="pt" cx="360" cy="300" r="3.2"/>
+          <circle class="pt" cx="61.4" cy="300" r="3.2"/>
+          <circle class="pt" cx="200" cy="300" r="3.2"/>
+
+          <text class="val" x="70" y="264">4</text>
+          <text class="val" x="118" y="250" text-anchor="end">8</text>
+
+          <text x="61.4" y="212" text-anchor="middle">A</text>
+          <text x="32" y="322" text-anchor="end">B</text>
+          <text x="368" y="322">C</text>
+          <text x="61.4" y="322" text-anchor="middle">H</text>
+          <text x="200" y="322" text-anchor="middle">M</text>
+        `,
+    },
+    given: ['BAC bir dik üçgen', 'm(BAC) = 90°', '[AH] ⊥ [BC]', '|AH| = 4 cm', 'm(ACB) = 15°'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |BC| = x kaç cm’dir?',
+    choices: [
+      { key: 'A', text: '12' },
+      { key: 'B', text: '8√3' },
+      { key: 'C', text: '14' },
+      { key: 'D', text: '16' },
+      { key: 'E', text: '8√5' },
+    ],
+    answer: 'D',
+    hint: 'Hipotenüsün orta noktasını işaretle: oraya çizilen kenarortay hipotenüsün yarısına eşittir ve 15°’yi 30°’ye çevirir.',
+    solution: [
+      {
+        title: 'Kenarortayı çiz',
+        detail:
+          'Hipotenüsün orta noktası M olsun ve [AM] kenarortayını çizelim. Dik üçgende hipotenüse ait kenarortay hipotenüsün yarısıdır: |MA| = |MB| = |MC| = x/2.',
+      },
+      {
+        title: '30°’yi yakala',
+        detail:
+          '|MA| = |MC| olduğundan AMC üçgeni ikizkenardır ve m(MAC) = m(MCA) = 15°’dir. m(AMH), bu üçgenin M köşesindeki dış açısıdır: m(AMH) = 15° + 15° = 30°.',
+      },
+      {
+        title: 'AMH üçgeni',
+        detail:
+          'AMH üçgeni H’de diktir ve m(AMH) = 30°’dir. 30°’lik açının karşısındaki dik kenar |AH| = 4 cm olduğundan hipotenüs |AM| = 2 · 4 = 8 cm bulunur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: '|AM| = x/2 olduğundan x = 2 · 8 = 16 cm’dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 185
+  {
+    id: 'triangles-185',
+    topic: 'Öklid bağıntısı ile alan',
+    figure: {
+      viewBox: '0 2 400 332',
+      caption: 'Şekil 185',
+      label:
+        'B köşesindeki açısı dik olan ABC üçgeninde B’den hipotenüse inen dikmenin ayağı H’dir. |BH| = 6 cm, |AH| = x ve |HC| = y’dir.',
+      svg: `
+          <path class="ln" d="M120,18.8 L120,300 L307.5,300 Z"/>
+          <path class="ln" d="M120,300 L249.8,213.5"/>
+
+          <path class="ln" d="M120,288 L132,288 L132,300"/>
+          <path class="ln" d="M240.7,219.6 L246.8,228.7 L255.9,222.6"/>
+
+          <circle class="pt" cx="120" cy="18.8" r="3.2"/>
+          <circle class="pt" cx="120" cy="300" r="3.2"/>
+          <circle class="pt" cx="307.5" cy="300" r="3.2"/>
+          <circle class="pt" cx="249.8" cy="213.5" r="3.2"/>
+
+          <text class="val" x="172" y="110" text-anchor="end">x</text>
+          <text class="val" x="288" y="250">y</text>
+          <text class="val" x="182" y="272" text-anchor="middle">6</text>
+
+          <text x="120" y="11" text-anchor="middle">A</text>
+          <text x="112" y="322" text-anchor="end">B</text>
+          <text x="315" y="322">C</text>
+          <text x="258" y="206">H</text>
+        `,
+    },
+    given: [
+      'ABC bir dik üçgen',
+      '[AB] ⊥ [BC]',
+      '[BH] ⊥ [AC]',
+      '|BH| = 6 cm',
+      '|AH| = x',
+      '|HC| = y',
+      'x² + y² = 97 cm²',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki şekilde verilenlere göre, ABC üçgeninin alanı kaç cm²’dir?',
+    choices: [
+      { key: 'A', text: '30' },
+      { key: 'B', text: '36' },
+      { key: 'C', text: '39' },
+      { key: 'D', text: '42' },
+      { key: 'E', text: '45' },
+    ],
+    answer: 'C',
+    hint: 'Yükseklik hipotenüsün iki parçasının geometrik ortasıdır; (x + y)² açılımında x · y’yi yerine koy.',
+    solution: [
+      {
+        title: 'Öklid bağıntısı',
+        detail:
+          '[BH], hipotenüse ait yüksekliktir: |BH|² = |AH| · |HC| → 6² = x · y olduğundan x · y = 36’dır.',
+      },
+      {
+        title: 'Hipotenüsü bul',
+        detail:
+          '(x + y)² = x² + y² + 2xy = 97 + 2 · 36 = 97 + 72 = 169 olduğundan x + y = 13, yani |AC| = 13 cm’dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'ABC üçgeninin alanını [AC] tabanı ve ona ait [BH] yüksekliğiyle yazalım: Alan = |AC| · |BH| / 2 = 13 · 6 / 2 = 39 cm² bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 186
+  {
+    id: 'triangles-186',
+    topic: 'Dış açıortayların oluşturduğu üçgen',
+    figure: {
+      viewBox: '0 8 400 322',
+      caption: 'Şekil 186',
+      label:
+        'B köşesindeki açısı dik olan ABC üçgeninde [BA] ve [BC] kenarları K ve L yönünde uzatılmıştır. [AP] ile [CP], üçgenin A ve C köşelerindeki dış açıortaylarıdır; |AP| = 10 cm, |PC| = 6√2 cm ve |AC| = x’tir.',
+      svg: `
+          <path class="ln" d="M70,208.3 L70,300 L289.6,300 Z"/>
+          <path class="ln" d="M70,208.3 L70,152"/>
+          <path class="ln" d="M289.6,300 L338,300"/>
+          <path class="ln" d="M70,208.3 L344.6,25.4"/>
+          <path class="ln" d="M289.6,300 L344.6,25.4"/>
+
+          <path class="ln" d="M70,288 L82,288 L82,300"/>
+
+          <path class="arc" d="M70,170.3 A38,38 0 0 1 101.6,187.2"/>
+          <path class="arc" d="M101.6,187.2 A38,38 0 0 1 105.1,223"/>
+
+          <path class="arc" d="M258.2,286.9 A34,34 0 0 1 296.3,266.7"/>
+          <path class="arc" d="M296.3,266.7 A34,34 0 0 1 323.6,300"/>
+
+          <circle class="pt" cx="70" cy="208.3" r="3.2"/>
+          <circle class="pt" cx="70" cy="300" r="3.2"/>
+          <circle class="pt" cx="289.6" cy="300" r="3.2"/>
+          <circle class="pt" cx="344.6" cy="25.4" r="3.2"/>
+
+          <text class="val" x="196" y="110" text-anchor="middle">10</text>
+          <text class="val" x="326" y="160">6√2</text>
+          <text class="val" x="176" y="272" text-anchor="middle">x</text>
+
+          <text x="62" y="212" text-anchor="end">A</text>
+          <text x="62" y="322" text-anchor="end">B</text>
+          <text x="289.6" y="322" text-anchor="middle">C</text>
+          <text x="70" y="144" text-anchor="middle">K</text>
+          <text x="338" y="322" text-anchor="middle">L</text>
+          <text x="352" y="20">P</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 8 400 322',
+      caption: 'Şekil 186 — [CT] ⊥ [AP] çizildi',
+      label:
+        'Aynı şekilde C’den [AP] üzerine [CT] dikmesi indirilmiştir; m(APC) = 45° olduğundan PTC ikizkenar dik üçgendir.',
+      svg: `
+          <path class="ln" d="M70,208.3 L70,300 L289.6,300 Z"/>
+          <path class="ln" d="M70,208.3 L70,152"/>
+          <path class="ln" d="M289.6,300 L338,300"/>
+          <path class="ln" d="M70,208.3 L344.6,25.4"/>
+          <path class="ln" d="M289.6,300 L344.6,25.4"/>
+          <path class="aux" d="M289.6,300 L179.9,135.1"/>
+
+          <path class="ln" d="M70,288 L82,288 L82,300"/>
+          <path class="aux-head" d="M172.8,139.9 L179.4,149.8 L189.3,143.2"/>
+
+          <path class="arc" d="M70,170.3 A38,38 0 0 1 101.6,187.2"/>
+          <path class="arc" d="M101.6,187.2 A38,38 0 0 1 105.1,223"/>
+
+          <path class="arc" d="M258.2,286.9 A34,34 0 0 1 296.3,266.7"/>
+          <path class="arc" d="M296.3,266.7 A34,34 0 0 1 323.6,300"/>
+
+          <path class="arc" d="M311.3,47.6 A40,40 0 0 0 336.7,64.6"/>
+          <text class="val" x="310" y="77" text-anchor="middle">45°</text>
+
+          <circle class="pt" cx="70" cy="208.3" r="3.2"/>
+          <circle class="pt" cx="70" cy="300" r="3.2"/>
+          <circle class="pt" cx="289.6" cy="300" r="3.2"/>
+          <circle class="pt" cx="344.6" cy="25.4" r="3.2"/>
+          <circle class="pt" cx="179.9" cy="135.1" r="3.2"/>
+
+          <text class="val" x="116" y="166" text-anchor="end">4</text>
+          <text class="val" x="270" y="74">6</text>
+          <text class="val" x="244" y="222">6</text>
+          <text class="val" x="176" y="272" text-anchor="middle">x</text>
+
+          <text x="62" y="212" text-anchor="end">A</text>
+          <text x="62" y="322" text-anchor="end">B</text>
+          <text x="289.6" y="322" text-anchor="middle">C</text>
+          <text x="70" y="144" text-anchor="middle">K</text>
+          <text x="338" y="322" text-anchor="middle">L</text>
+          <text x="352" y="20">P</text>
+          <text x="172" y="128" text-anchor="end">T</text>
+        `,
+    },
+    given: [
+      'ABC bir dik üçgen',
+      'm(ABC) = 90°',
+      '[AP] ve [CP], ABC üçgeninin dış açıortaylarıdır',
+      '|AP| = 10 cm',
+      '|PC| = 6√2 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki şekilde verilenlere göre, |AC| = x kaç cm’dir?',
+    choices: [
+      { key: 'A', text: '7' },
+      { key: 'B', text: '2√13' },
+      { key: 'C', text: '8' },
+      { key: 'D', text: '5√2' },
+      { key: 'E', text: '10' },
+    ],
+    answer: 'B',
+    hint: 'Önce APC üçgeninin P köşesindeki açısını bul; dış açıortaylar A ile C’deki açıların yarılarının bütünlerini verir.',
+    solution: [
+      {
+        title: 'P köşesindeki açı',
+        detail:
+          'A’daki dış açı 180° − m(A) olduğundan onun yarısı m(PAC) = 90° − m(A)/2’dir. Aynı biçimde m(PCA) = 90° − m(C)/2’dir.',
+      },
+      {
+        title: '45°’yi bul',
+        detail:
+          'ABC üçgeni B’de dik olduğundan m(A) + m(C) = 90°’dir. APC üçgeninde m(APC) = 180° − [(90° − m(A)/2) + (90° − m(C)/2)] = (m(A) + m(C))/2 = 45° bulunur.',
+      },
+      {
+        title: 'Dikmeyi indir',
+        detail:
+          'C’den [AP] üzerine [CT] dikmesini indirelim. PTC üçgeni T’de dik ve m(TPC) = 45° olduğundan ikizkenardır: |CT| = |TP| = |PC| / √2 = 6√2 / √2 = 6 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '|AT| = |AP| − |TP| = 10 − 6 = 4 cm’dir. ATC üçgeni T’de diktir: x² = |AT|² + |CT|² = 4² + 6² = 16 + 36 = 52 olduğundan x = 2√13 cm bulunur.',
+      },
+    ],
+  },
 ];
 
 /** Looks questions up by id so the modules below read as a running order. */
@@ -15759,6 +16358,21 @@ export const UNIT_2_TRIANGLES: Unit = {
         'triangles-178',
         'triangles-179',
         'triangles-180',
+      ),
+    },
+    {
+      id: 'triangles-m31',
+      order: 31,
+      title: 'Dik üçgenler — Test 9',
+      summary:
+        'Yükseklik ayağından dik kenarlara inen dikmeler, 120°’lik açıyı dikmeyle çözme, 15°’lik açıyı ikizkenar kurarak 30°’ye çevirme, hipotenüse ait kenarortay, Öklid bağıntısıyla alan ve dış açıortayların oluşturduğu 45°’lik açı.',
+      questions: pick(
+        'triangles-181',
+        'triangles-182',
+        'triangles-183',
+        'triangles-184',
+        'triangles-185',
+        'triangles-186',
       ),
     },
   ],

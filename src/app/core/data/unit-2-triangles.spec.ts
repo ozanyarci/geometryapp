@@ -338,6 +338,19 @@ describe('unit 2 answer key', () => {
   it('180 — BC = 50, AH = 24, BH = 18, HD = 18 − 8 = 10, x² = 576 + 100 = 676, x = 26 → C', () =>
     expect(answerOf('triangles-180')).toBe('C'));
 
+  it('181 — ADHE dikdörtgen, x² = 4y ve y² = 32x, x³ = 512, x = 8, y = 16, x + y = 24 → C', () =>
+    expect(answerOf('triangles-181')).toBe('C'));
+  it('182 — DK = 7, AK = 7√3, KC = 23, AC² = 147 + 529 = 676, x² = 676 − 576 = 100, x = 10 → C', () =>
+    expect(answerOf('triangles-182')).toBe('C'));
+  it('183 — DB = DC = 10, AD = 5√3, x = 10 + 5√3 → C', () =>
+    expect(answerOf('triangles-183')).toBe('C'));
+  it('184 — m(AMH) = 30, AM = 2·4 = 8, x = 2·8 = 16 → D', () =>
+    expect(answerOf('triangles-184')).toBe('D'));
+  it('185 — xy = 36, (x + y)² = 97 + 72 = 169, AC = 13, alan = 13·6/2 = 39 → C', () =>
+    expect(answerOf('triangles-185')).toBe('C'));
+  it('186 — m(APC) = 45, CT = TP = 6, AT = 4, x² = 16 + 36 = 52, x = 2√13 → B', () =>
+    expect(answerOf('triangles-186')).toBe('B'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
