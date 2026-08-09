@@ -416,6 +416,21 @@ describe('unit 2 answer key', () => {
   it('216 — |HC| = 6, |AH| = 8, Alan(AHC) = 24 = 10x/2, x = 24/5 → B', () =>
     expect(answerOf('triangles-216')).toBe('B'));
 
+  it('217 — m(A) = 30, |AD| = 6·√3/2 = 3√3, x = 6 − 3√3 → B', () =>
+    expect(answerOf('triangles-217')).toBe('B'));
+  it('218 — a√3/2 = 9, a = 6√3, |AH| = 9, |DH| = 6√3 + 3√3 = 9√3, x² = 81 + 243 = 324, x = 18 → D', () =>
+    expect(answerOf('triangles-218')).toBe('D'));
+  it('219 — m(DAC) = 30, |DC| = 6, m(DCE) = 60, x = 6·√3/2 = 3√3 → A', () =>
+    expect(answerOf('triangles-219')).toBe('A'));
+  it('220 — |AM| = |MP| = 5 + 4 = 9, |MB| = |KN| = 3, a = 12, çevre 36 → E', () =>
+    expect(answerOf('triangles-220')).toBe('E'));
+  it('221 — |EC| = 2√3/√3 = 2, |BE| = 5√3/(√3/2) = 10, a = 12, alan = 144√3/4 = 36√3 → C', () =>
+    expect(answerOf('triangles-221')).toBe('C'));
+  it('222 — |AE| = 12, |EH| = 9·12/15 = 7,2, |BH| = 5,4, |DH|² = 9,6·5,4 = 51,84, x = 7,2 + 7,2 = 14,4 → A', () =>
+    expect(answerOf('triangles-222')).toBe('A'));
+  it('223 — |BD| = 4, |BH| = 3, |HD| = 1, |AH| = 3√3, x² = 27 + 1 = 28, x = 2√7 → C', () =>
+    expect(answerOf('triangles-223')).toBe('C'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
