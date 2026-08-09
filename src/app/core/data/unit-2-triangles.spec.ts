@@ -403,6 +403,19 @@ describe('unit 2 answer key', () => {
   it('210 — DG = 8(8 + p)/b, BG = 8|p − 8|/b, BD² = 128(p² + 64)/b² = 128, BD = 8√2 → C', () =>
     expect(answerOf('triangles-210')).toBe('C'));
 
+  it('211 — |BH| = 4, |AH| = 4√3, |HC| = 4 + 7 = 11, x² = 48 + 121 = 169, x = 13 → C', () =>
+    expect(answerOf('triangles-211')).toBe('C'));
+  it('212 — BDE eşkenar, |BE| = 4, a = 6, 9√3 − 4√3 = 5√3 → C', () =>
+    expect(answerOf('triangles-212')).toBe('C'));
+  it('213 — |CH| = 5, |AH| = 12, |BH| = √(400 − 144) = 16, x = 16 − 5 = 11 → D', () =>
+    expect(answerOf('triangles-213')).toBe('D'));
+  it('214 — a = 12, |BG| = |CF|/2 ve |BG| = |AF| = x, 3x = 12, x = 4 → C', () =>
+    expect(answerOf('triangles-214')).toBe('C'));
+  it('215 — 11 + |DC|/2 = 6 + |DC|, |DC| = 10, |DH|² = 75, x² = 121 + 75 = 196, x = 14 → C', () =>
+    expect(answerOf('triangles-215')).toBe('C'));
+  it('216 — |HC| = 6, |AH| = 8, Alan(AHC) = 24 = 10x/2, x = 24/5 → B', () =>
+    expect(answerOf('triangles-216')).toBe('B'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
