@@ -456,6 +456,19 @@ describe('unit 2 answer key', () => {
   it('235 — |AD| = 8, |AE| = 5, |AH| = 2,5, |EH| = 5√3/2, x² = 30,25 + 18,75 = 49, x = 7 → B', () =>
     expect(answerOf('triangles-235')).toBe('B'));
 
+  it('236 — |PD| + |PE| = |BD| + |AD| = |AB| = 13, |BH| = √(169 − 144) = 5, |BC| = 10, alan = 10·12/2 = 60 → C', () =>
+    expect(answerOf('triangles-236')).toBe('C'));
+  it('237 — alan = 15·9/2 + 15·3/2 = 67,5 + 22,5 = 90 → D', () =>
+    expect(answerOf('triangles-237')).toBe('D'));
+  it('238 — a²√3/4 = 27√3, a = 6√3, h = 9, 2 + 2 + x = 9, x = 5 → C', () =>
+    expect(answerOf('triangles-238')).toBe('C'));
+  it('239 — |AD|² = |DH|·|DC|: 108 = (m − 6)(2m − 6), m = 12, x² = 12·18 = 216, x = 6√6 → D', () =>
+    expect(answerOf('triangles-239')).toBe('D'));
+  it('240 — |BD| = 8, |BH| = 7,5, |HD| = 0,5, x² = 675/4 + 1/4 = 169, x = 13 → C', () =>
+    expect(answerOf('triangles-240')).toBe('C'));
+  it('241 — |BK| = (20 − 2x)(20 − x)/20, |AK| = x(20 − x)/10, 10/(20 − x) = (20 − 2x)/(20 − x), x = 5 → B', () =>
+    expect(answerOf('triangles-241')).toBe('B'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
