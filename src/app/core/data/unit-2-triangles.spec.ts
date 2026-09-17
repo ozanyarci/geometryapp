@@ -549,6 +549,19 @@ describe('unit 2 answer key', () => {
   it('278 — m(ABH) = 30, |AH| = 8/2 = 4, alan = 10·4/2 = 20 → D', () =>
     expect(answerOf('triangles-278')).toBe('D'));
 
+  it('279 — |AH| = 10·sin45 = 5√2, A(ADC) = 6·5√2/2 = 15√2 → C', () =>
+    expect(answerOf('triangles-279')).toBe('C'));
+  it('280 — m(BAC) = 90, A(ABC) = 9·6√3/2 = 27√3; |DK| = d/2, |DL| = d√3/2 ⇒ A(ABD) = 9d/4, A(ADC) = 9d/2, A(ABD) = 27√3/3 = 9√3 → B', () =>
+    expect(answerOf('triangles-280')).toBe('B'));
+  it('281 — A(ABD) = |AD|·6/2 = 3|BD|, A(ADC) = A(ABD)·|DC|/|BD| = 3|BD|·8/|BD| = 24 → D', () =>
+    expect(answerOf('triangles-281')).toBe('D'));
+  it('282 — A(BNC) = 8·10/2 = 40, |BE|/|BC| = 3/4, A(BEN) = 40·3/4 = 30 → D', () =>
+    expect(answerOf('triangles-282')).toBe('D'));
+  it('283 — [AD] // [EC] ⇒ A(EAD) = A(CAD) = 7·6/2 = 21 → C', () =>
+    expect(answerOf('triangles-283')).toBe('C'));
+  it('284 — |HC| = h, A(DHC) = (9h/2)/2 = 9h/4, |EC| = 3h/4, A(EBC) = (3h/4)·4/2 = 3h/2, oran = 3/2 → E', () =>
+    expect(answerOf('triangles-284')).toBe('E'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
