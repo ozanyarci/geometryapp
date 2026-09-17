@@ -482,6 +482,21 @@ describe('unit 2 answer key', () => {
   it('247 — |BH| = |HD| = 4, |AH| = 20/2 = 10, |HC| = 10√3, x = 10√3 − 4 → B', () =>
     expect(answerOf('triangles-247')).toBe('B'));
 
+  it('248 — [DF] orta dikme ⇒ |DA| = |DC| = 13, |AB|² = 169 − 25 = 144, |AC|² = 144 + 64 = 208, |FC| = 4√13/2 = 2√13 → C', () =>
+    expect(answerOf('triangles-248')).toBe('C'));
+  it('249 — |BH| = 6, |HD| = 6 − 3 = 3, x² − y² = (h² + 36) − (h² + 9) = 27 → D', () =>
+    expect(answerOf('triangles-249')).toBe('D'));
+  it('250 — |DE| = 2√3/√3 = 2 = |AE|, |FC| = 2, |EC| = 4, |AC| = 6, çevre = 18 → C', () =>
+    expect(answerOf('triangles-250')).toBe('C'));
+  it('251 — |AB| = |AC| = 12, |BH|² = 144 − 81 = 63, x² = 63 + 9 = 72, x = 6√2 → C', () =>
+    expect(answerOf('triangles-251')).toBe('C'));
+  it('252 — uzaklıklar 2·sin60 = √3, 6·sin60 = 3√3 ve 4√3; toplam 8√3 = a√3/2, a = 16, alan = 64√3 → D', () =>
+    expect(answerOf('triangles-252')).toBe('D'));
+  it('253 — M, [FE] orta noktası ⇒ |MA| = |MF| = 6, m(AMC) = 2α = m(ACM), |AC| = 6, alan = 9√3 → C', () =>
+    expect(answerOf('triangles-253')).toBe('C'));
+  it('254 — DAC ≅ ECB (K.A.K.) ⇒ m(PBC) + m(PCB) = θ + (60 − θ) = 60, x = 120 → C', () =>
+    expect(answerOf('triangles-254')).toBe('C'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
