@@ -111,6 +111,13 @@
     min-width: 0;
   }
 
+  &__resume {
+    @include s.label;
+    display: block;
+    font-size: 10px;
+    margin-bottom: 4px;
+  }
+
   &__name {
     font-size: 19px;
     line-height: 1.25;
@@ -147,6 +154,12 @@
 
   &:active {
     background: var(--paper-deep);
+  }
+
+  // The module the student left, so the scrolled-to card is recognisable.
+  &--last {
+    border-color: var(--blueprint);
+    background: var(--blueprint-soft);
   }
 }
 

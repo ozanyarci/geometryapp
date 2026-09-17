@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { findModule } from '../../core/curriculum';
+import { LastModuleStore } from '../../core/last-module-store';
 import { QuizMode } from '../../core/models';
 import { ProgressStore } from '../../core/progress-store';
 import { QuizStore, formatDuration } from '../../core/quiz-store';
@@ -37,6 +38,7 @@ export class ModuleDetail {
   private readonly router = inject(Router);
   private readonly quiz = inject(QuizStore);
   private readonly progress = inject(ProgressStore);
+  private readonly lastModules = inject(LastModuleStore);
 
   private readonly params = inject(ActivatedRoute).snapshot.paramMap;
 
@@ -59,6 +61,13 @@ export class ModuleDetail {
   });
 
   protected readonly formatDuration = formatDuration;
+
+  constructor() {
+    // Opening a module is what the unit list scrolls back to later on.
+    if (this.found) {
+      this.lastModules.remember(this.found.unit.id, this.found.module.id);
+    }
+  }
 
   protected selectMode(mode: QuizMode): void {
     this.selectedMode.set(mode);

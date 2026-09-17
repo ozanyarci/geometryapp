@@ -26,9 +26,17 @@
     <ul class="module-list">
       @for (row of rows(); track row.module.id) {
         <li>
-          <a class="module" [routerLink]="['/unit', u.id, 'module', row.module.id]">
+          <a
+            class="module"
+            [class.module--last]="row.isLast"
+            [attr.data-module-id]="row.module.id"
+            [routerLink]="['/unit', u.id, 'module', row.module.id]"
+          >
             <div class="module__order">{{ row.module.order }}</div>
             <div class="module__text">
+              @if (row.isLast) {
+                <span class="module__resume">Kaldığın yer</span>
+              }
               <h3 class="module__name">{{ row.module.title }}</h3>
               <p class="module__summary">{{ row.module.summary }}</p>
 
