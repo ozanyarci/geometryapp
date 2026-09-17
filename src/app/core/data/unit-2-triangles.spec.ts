@@ -510,6 +510,19 @@ describe('unit 2 answer key', () => {
   it('260 — BED eşkenar ⇒ |ED| = |DF| = t, m(FDC) = 30, m(DFC) = 90, t = (a − t)√3/2, a = 4 + 2√3, t = 2√3, alan = t²/2 = 6 → B', () =>
     expect(answerOf('triangles-260')).toBe('B'));
 
+  it('261 — |CE| = 4 + 5 = 9 = |BD| ⇒ |AB| = |AC|, BEF ≅ CDF, |BE| = √(25 − 16) = 3, (x + 3)² = x² + 81, x = 12 → C', () =>
+    expect(answerOf('triangles-261')).toBe('C'));
+  it('262 — a = x + 5, |AE| = 2x, |BP| = 5/2, |BR| = (3x + 5)/2, |BF| = (3x + 10)/4 = 4, x = 2 → C', () =>
+    expect(answerOf('triangles-262')).toBe('C'));
+  it('263 — m·x/2 + m·5/2 = m·12/2 ⇒ |KF| + |KL| = |BC| = 12, x = 7 → C', () =>
+    expect(answerOf('triangles-263')).toBe('C'));
+  it('264 — P ∈ [AC] orta dikmesi, t² + 36 = (10 − t)², t = 16/5; m(BTM) > 90° ⇒ min |PB| = 16/5 → D', () =>
+    expect(answerOf('triangles-264')).toBe('D'));
+  it('265 — paraleller arası uzaklık 4√3, |CT| = 4√3, |TD| = 8 − 4√3, x = (8 − 4√3) + 4 = 12 − 4√3 → A', () =>
+    expect(answerOf('triangles-265')).toBe('A'));
+  it('266 — m(ABE) = 30 + 60 = 90, |BE| = 8, x² = 36 + 64 = 100, x = 10 → C', () =>
+    expect(answerOf('triangles-266')).toBe('C'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
