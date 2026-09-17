@@ -523,6 +523,32 @@ describe('unit 2 answer key', () => {
   it('266 — m(ABE) = 30 + 60 = 90, |BE| = 8, x² = 36 + 64 = 100, x = 10 → C', () =>
     expect(answerOf('triangles-266')).toBe('C'));
 
+  it('267 — A(ABC) = 18·4/2 = 36 = 9x/2, x = |AH| = 8 → C', () =>
+    expect(answerOf('triangles-267')).toBe('C'));
+  it('268 — A(ABDC) = |AD|(|BH| + |HC|)/2 = 4·14/2 = 28 → D', () =>
+    expect(answerOf('triangles-268')).toBe('D'));
+  it('269 — m² + h² = 225 ve (14 − m)² + h² = 169, m = 9, h = 12, A(ADC) = 6·12/2 = 36 → A', () =>
+    expect(answerOf('triangles-269')).toBe('A'));
+  it('270 — 36 = |HC|(9 + |HC|), |HC| = 3, |BC| = 12, |AH| = √27 = 3√3, alan = 12·3√3/2 = 18√3 → E', () =>
+    expect(answerOf('triangles-270')).toBe('E'));
+  it('271 — m(ACB) = 60, |BC| = 8√3/√3 = 8, A(ABC) = 32√3, A(BCD) = 16√3, toplam 48√3 → B', () =>
+    expect(answerOf('triangles-271')).toBe('B'));
+  it('272 — A(ACD) = 18·2/3 = 12, [AD] üç eş parça ⇒ A(CEF) = 12/3 = 4 → C', () =>
+    expect(answerOf('triangles-272')).toBe('C'));
+
+  it('273 — A(ABD) = 48/4 = 12, |AE|/|AD| = 2/3, A(ABE) = 12·2/3 = 8 → B', () =>
+    expect(answerOf('triangles-273')).toBe('B'));
+  it('274 — |CH| = |AC|/2 = 5, alan = 12·5/2 = 30 → D', () =>
+    expect(answerOf('triangles-274')).toBe('D'));
+  it('275 — |AD|/|AB| = 4/12 = 1/3, alan oranı 1/9, A(ABC) = 9·12 = 108 → E', () =>
+    expect(answerOf('triangles-275')).toBe('E'));
+  it('276 — |BC| = 15, alan = 9·12/2 = 54 = 15x/2, x = 108/15 = 36/5 → A', () =>
+    expect(answerOf('triangles-276')).toBe('A'));
+  it('277 — |AE|/|AD| = 3/4, A(ABD) = 12·4/3 = 16, kenarortay ⇒ A(ABC) = 32 → C', () =>
+    expect(answerOf('triangles-277')).toBe('C'));
+  it('278 — m(ABH) = 30, |AH| = 8/2 = 4, alan = 10·4/2 = 20 → D', () =>
+    expect(answerOf('triangles-278')).toBe('D'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)

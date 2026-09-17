@@ -23640,6 +23640,885 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+
+  // ---------------------------------------------------------------- 267
+  {
+    id: 'triangles-267',
+    topic: 'Aynı alanın iki farklı taban ile yazılması',
+    figure: {
+      viewBox: '0 45 400 245',
+      caption: 'Şekil 267',
+      label:
+        'Geniş açılı ABC üçgeninde A köşesinden [BC] kenarının B tarafındaki uzantısına indirilen dikmenin ayağı H, B köşesinden [AC] kenarına indirilen dikmenin ayağı ise T ile gösterilmiştir. |AC| 18 birim, |BT| 4 birim, |BC| 9 birim ve |AH| ise x birimdir.',
+      svg: `
+          <path class="ln" d="M28,82 L177.61,250 L366.61,250 Z"/>
+          <path class="ln" d="M28,82 L28,250 L177.61,250"/>
+          <path class="ln" d="M177.61,250 L214.95,174.75"/>
+
+          <path class="ln" d="M28,238 L40,238 L40,250"/>
+          <path class="ln" d="M210.06,184.61 L200.21,179.72 L205.09,169.86"/>
+
+          <circle class="pt" cx="28" cy="82" r="3.2"/>
+          <circle class="pt" cx="177.61" cy="250" r="3.2"/>
+          <circle class="pt" cx="366.61" cy="250" r="3.2"/>
+          <circle class="pt" cx="28" cy="250" r="3.2"/>
+          <circle class="pt" cx="214.95" cy="174.75" r="3.2"/>
+
+          <text class="val" x="20" y="166" text-anchor="end">x</text>
+          <text class="val" x="182" y="150">18</text>
+          <text class="val" x="188" y="216" text-anchor="end">4</text>
+          <text class="val" x="272" y="242" text-anchor="middle">9</text>
+
+          <text x="28" y="74" text-anchor="middle">A</text>
+          <text x="28" y="274" text-anchor="middle">H</text>
+          <text x="177.61" y="274" text-anchor="middle">B</text>
+          <text x="366.61" y="274" text-anchor="middle">C</text>
+          <text x="224" y="171">T</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      '[AH] ⊥ [BC uzantısı]',
+      '[BT] ⊥ [AC]',
+      '|AC| = 18 cm',
+      '|BT| = 4 cm',
+      '|BC| = 9 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |AH| = x kaç cm’dir?',
+    choices: [
+      { key: 'A', text: '6' },
+      { key: 'B', text: '7' },
+      { key: 'C', text: '8' },
+      { key: 'D', text: '9' },
+      { key: 'E', text: '10' },
+    ],
+    answer: 'C',
+    hint: 'Bir üçgenin alanı hangi kenar taban seçilirse seçilsin değişmez; alanı önce [AC] tabanı ile yaz.',
+    solution: [
+      {
+        title: '[AC] tabanıyla alan',
+        detail:
+          '[BT], [AC] kenarına ait yüksekliktir. Buna göre A(ABC) = |AC| · |BT| / 2 = 18 · 4 / 2 = 36 cm² bulunur.',
+      },
+      {
+        title: '[BC] tabanıyla alan',
+        detail:
+          '[AH], [BC] doğrusuna dik olduğundan x = |AH|, [BC] kenarına ait yüksekliktir. Yüksekliğin ayağı kenarın uzantısına düşse de bağıntı değişmez: A(ABC) = |BC| · |AH| / 2 = 9 · x / 2’dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'İki ifade aynı alanı verdiğinden 9x / 2 = 36, yani 9x = 72 ve x = 8 cm’dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 268
+  {
+    id: 'triangles-268',
+    topic: 'Ortak tabanlı iki üçgenle dörtgen alanı',
+    figure: {
+      viewBox: '0 0 400 290',
+      caption: 'Şekil 268',
+      label:
+        'ABC üçgeninde A köşesinden [BC] kenarına indirilen yüksekliğin ayağı H’dir. [AH] üzerinde alınan D noktası B ve C köşeleriyle birleştirilerek ABDC dörtgeni elde edilmiştir. |AD| 4 birim, |BC| ise 14 birimdir.',
+      svg: `
+          <path class="ln" d="M150,25 L25,250 L375,250 Z"/>
+          <path class="ln" d="M150,25 L150,250"/>
+          <path class="ln" d="M25,250 L150,125 L375,250"/>
+
+          <path class="ln" d="M150,238 L162,238 L162,250"/>
+
+          <circle class="pt" cx="150" cy="25" r="3.2"/>
+          <circle class="pt" cx="25" cy="250" r="3.2"/>
+          <circle class="pt" cx="375" cy="250" r="3.2"/>
+          <circle class="pt" cx="150" cy="250" r="3.2"/>
+          <circle class="pt" cx="150" cy="125" r="3.2"/>
+
+          <text class="val" x="142" y="78" text-anchor="end">4</text>
+          <text class="val" x="270" y="242" text-anchor="middle">14</text>
+
+          <text x="150" y="18" text-anchor="middle">A</text>
+          <text x="25" y="274" text-anchor="middle">B</text>
+          <text x="375" y="274" text-anchor="middle">C</text>
+          <text x="150" y="274" text-anchor="middle">H</text>
+          <text x="163" y="148">D</text>
+        `,
+    },
+    given: ['ABC bir üçgen', '[AH] ⊥ [BC]', 'D ∈ [AH]', '|AD| = 4 cm', '|BC| = 14 cm'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, ABDC dörtgeninin alanı kaç cm²’dir?',
+    choices: [
+      { key: 'A', text: '21' },
+      { key: 'B', text: '24' },
+      { key: 'C', text: '26' },
+      { key: 'D', text: '28' },
+      { key: 'E', text: '30' },
+    ],
+    answer: 'D',
+    hint: 'Dörtgeni [AD] köşegeniyle iki üçgene ayır; her ikisinin de tabanı [AD] olur.',
+    solution: [
+      {
+        title: 'Dörtgeni [AD] ile ayır',
+        detail:
+          'ABDC dörtgeni [AD] doğru parçasıyla ABD ve ADC üçgenlerine ayrılır: A(ABDC) = A(ABD) + A(ADC).',
+      },
+      {
+        title: 'Yükseklikler |BH| ve |HC|',
+        detail:
+          '[AD], AH doğrusu üzerindedir ve bu doğru [BC]’ye diktir. Bu yüzden B noktasının AD doğrusuna uzaklığı |BH|, C noktasının uzaklığı ise |HC|’dir. Buradan A(ABD) = |AD| · |BH| / 2 ve A(ADC) = |AD| · |HC| / 2 olur.',
+      },
+      {
+        title: 'Toplama',
+        detail:
+          'İki alanı toplarsak A(ABDC) = |AD| · (|BH| + |HC|) / 2 elde edilir. H, [BC] üzerinde olduğundan |BH| + |HC| = |BC| = 14 cm’dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'A(ABDC) = 4 · 14 / 2 = 28 cm² bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 269
+  {
+    id: 'triangles-269',
+    topic: 'Ortak yükseklikli üçgenlerde alan',
+    figure: {
+      viewBox: '0 10 400 280',
+      caption: 'Şekil 269',
+      label:
+        'ABC üçgeninde [BC] kenarı üzerinde alınan D noktası A köşesiyle birleştirilmiştir. |AB| 15 birim, |AD| 13 birim, |BD| 14 birim ve |DC| 6 birimdir.',
+      svg: `
+          <path class="ln" d="M182.5,40 L25,250 L375,250 Z"/>
+          <path class="ln" d="M182.5,40 L270,250"/>
+
+          <circle class="pt" cx="182.5" cy="40" r="3.2"/>
+          <circle class="pt" cx="25" cy="250" r="3.2"/>
+          <circle class="pt" cx="270" cy="250" r="3.2"/>
+          <circle class="pt" cx="375" cy="250" r="3.2"/>
+
+          <text class="val" x="95" y="145" text-anchor="end">15</text>
+          <text class="val" x="237" y="145">13</text>
+          <text class="val" x="147.5" y="242" text-anchor="middle">14</text>
+          <text class="val" x="322.5" y="242" text-anchor="middle">6</text>
+
+          <text x="182.5" y="33" text-anchor="middle">A</text>
+          <text x="25" y="274" text-anchor="middle">B</text>
+          <text x="270" y="274" text-anchor="middle">D</text>
+          <text x="375" y="274" text-anchor="middle">C</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      'D ∈ [BC]',
+      '|AB| = 15 cm',
+      '|AD| = 13 cm',
+      '|BD| = 14 cm',
+      '|DC| = 6 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(ADC) kaç cm²’dir?',
+    choices: [
+      { key: 'A', text: '36' },
+      { key: 'B', text: '40' },
+      { key: 'C', text: '42' },
+      { key: 'D', text: '45' },
+      { key: 'E', text: '48' },
+    ],
+    answer: 'A',
+    hint: 'A köşesinden [BC] kenarına bir yükseklik indir; bu yükseklik hem ABD hem de ADC üçgeninin yüksekliğidir.',
+    solution: [
+      {
+        title: 'Yüksekliği kur',
+        detail:
+          'A köşesinden [BC] kenarına indirilen yüksekliğin ayağına H, |AH| = h ve |BH| = m diyelim. Bu yükseklik ABD ve ADC üçgenlerinin ikisinde de ortaktır.',
+      },
+      {
+        title: 'İki Pisagor bağıntısı',
+        detail:
+          'ABH dik üçgeninde m² + h² = 15² = 225, ADH dik üçgeninde ise (14 − m)² + h² = 13² = 169’dur.',
+      },
+      {
+        title: 'h uzunluğu',
+        detail:
+          'İki denklemi taraf tarafa çıkarırsak m² − (14 − m)² = 56, yani 28m − 196 = 56 ve m = 9 bulunur. Buradan h² = 225 − 81 = 144, yani h = 12 cm’dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'ADC üçgeninin tabanı |DC| = 6 cm, bu tabana ait yüksekliği ise h = 12 cm’dir: A(ADC) = 6 · 12 / 2 = 36 cm².',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 270
+  {
+    id: 'triangles-270',
+    topic: 'Dik üçgende Öklid bağıntısı ve alan',
+    figure: {
+      viewBox: '0 60 400 240',
+      caption: 'Şekil 270',
+      label:
+        'A köşesindeki açısı dik olan ABC üçgeninde A’dan hipotenüs [BC]’ye indirilen yüksekliğin ayağı H’dir. |BH| 9 birim, |AC| ise 6 birimdir.',
+      svg: `
+          <path class="ln" d="M287.5,98.45 L25,250 L375,250 Z"/>
+          <path class="ln" d="M287.5,98.45 L287.5,250"/>
+
+          <path class="ln" d="M277.1,104.45 L283.1,114.84 L293.5,108.84"/>
+          <path class="ln" d="M287.5,238 L299.5,238 L299.5,250"/>
+
+          <circle class="pt" cx="287.5" cy="98.45" r="3.2"/>
+          <circle class="pt" cx="25" cy="250" r="3.2"/>
+          <circle class="pt" cx="287.5" cy="250" r="3.2"/>
+          <circle class="pt" cx="375" cy="250" r="3.2"/>
+
+          <text class="val" x="156.25" y="242" text-anchor="middle">9</text>
+          <text class="val" x="341" y="171">6</text>
+
+          <text x="287.5" y="91" text-anchor="middle">A</text>
+          <text x="25" y="274" text-anchor="middle">B</text>
+          <text x="287.5" y="274" text-anchor="middle">H</text>
+          <text x="375" y="274" text-anchor="middle">C</text>
+        `,
+    },
+    given: ['ABC bir dik üçgen', 'm(BAC) = 90°', '[AH] ⊥ [BC]', '|BH| = 9 cm', '|AC| = 6 cm'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(ABC) kaç cm²’dir?',
+    choices: [
+      { key: 'A', text: '9√3' },
+      { key: 'B', text: '12√3' },
+      { key: 'C', text: '15√3' },
+      { key: 'D', text: '16√3' },
+      { key: 'E', text: '18√3' },
+    ],
+    answer: 'E',
+    hint: 'Öklid’in dik kenar bağıntısı |AC|² = |HC| · |BC| ile önce |HC| uzunluğunu bul.',
+    solution: [
+      {
+        title: 'Dik kenar bağıntısı',
+        detail:
+          '|HC| = k diyelim. Öklid bağıntısına göre |AC|² = |HC| · |BC|, yani 6² = k · (9 + k) olur.',
+      },
+      {
+        title: 'k uzunluğu',
+        detail:
+          'k² + 9k − 36 = 0 denkleminin çarpanlara ayrılmış hâli (k + 12)(k − 3) = 0’dır. Uzunluk pozitif olacağından k = |HC| = 3 cm ve |BC| = 9 + 3 = 12 cm bulunur.',
+      },
+      {
+        title: 'Yükseklik bağıntısı',
+        detail:
+          'Yine Öklid bağıntısından |AH|² = |BH| · |HC| = 9 · 3 = 27, yani |AH| = 3√3 cm’dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'A(ABC) = |BC| · |AH| / 2 = 12 · 3√3 / 2 = 18√3 cm² bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 271
+  {
+    id: 'triangles-271',
+    topic: 'Eşkenar üçgen ve dik üçgenden oluşan dörtgende alan',
+    figure: {
+      viewBox: '0 55 400 195',
+      caption: 'Şekil 271',
+      label:
+        'A ve C yukarıda, B ve D aşağıda olacak biçimde çizilen ABDC dörtgeninde [BC] köşegeni çizilmiştir. BCD üçgeninin üç kenarı eş işaretlerle eşkenar olarak gösterilmiştir, B köşesindeki açı diktir ve [AC] ile [BD] ok işaretleriyle paralel gösterilmiştir. |AB| 8√3 birimdir.',
+      svg: `
+          <path class="ln" d="M25,78.76 L235,200 L375,200 L305,78.76 Z"/>
+          <path class="ln" d="M235,200 L305,78.76"/>
+
+          <path class="ln" d="M224.61,194 L230.61,183.61 L241,189.61"/>
+
+          <line class="tick" x1="264.8" y1="136.38" x2="275.2" y2="142.38"/>
+          <line class="tick" x1="345.2" y1="136.38" x2="334.8" y2="142.38"/>
+          <line class="tick" x1="305" y1="206" x2="305" y2="194"/>
+
+          <path class="par" d="M158,72.76 L165,78.76 L158,84.76"/>
+          <path class="par" d="M323,194 L330,200 L323,206"/>
+
+          <circle class="pt" cx="25" cy="78.76" r="3.2"/>
+          <circle class="pt" cx="235" cy="200" r="3.2"/>
+          <circle class="pt" cx="305" cy="78.76" r="3.2"/>
+          <circle class="pt" cx="375" cy="200" r="3.2"/>
+
+          <text class="val" x="120" y="146" text-anchor="end">8√3</text>
+
+          <text x="25" y="71" text-anchor="middle">A</text>
+          <text x="305" y="71" text-anchor="middle">C</text>
+          <text x="235" y="224" text-anchor="middle">B</text>
+          <text x="375" y="224" text-anchor="middle">D</text>
+        `,
+    },
+    given: ['BCD eşkenar üçgen', 'ABC dik üçgen, m(ABC) = 90°', '[AC] // [BD]', '|AB| = 8√3 cm'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, ABDC dörtgeninin alanı kaç cm²’dir?',
+    choices: [
+      { key: 'A', text: '32√3' },
+      { key: 'B', text: '48√3' },
+      { key: 'C', text: '54√3' },
+      { key: 'D', text: '60√3' },
+      { key: 'E', text: '64√3' },
+    ],
+    answer: 'B',
+    hint: '[AC] // [BD] olduğundan [BC] keseni ile oluşan iç ters açılar eşittir: m(ACB) = m(DBC) = 60°.',
+    solution: [
+      {
+        title: 'm(ACB) = 60°',
+        detail:
+          'BCD eşkenar üçgen olduğundan m(DBC) = 60°’dir. [AC] // [BD] ve [BC] kesen olduğundan m(ACB) ile m(DBC) iç ters açılardır, yani m(ACB) = 60°’dir.',
+      },
+      {
+        title: '|BC| uzunluğu',
+        detail:
+          'ABC üçgeninde m(ABC) = 90° ve m(ACB) = 60° olduğundan bu bir 30°-60°-90° üçgenidir. 60°’nin karşısındaki dik kenar |AB| = 8√3 ise 30°’nin karşısındaki dik kenar |BC| = 8√3 / √3 = 8 cm olur.',
+      },
+      {
+        title: 'İki parçanın alanı',
+        detail:
+          'A(ABC) = |AB| · |BC| / 2 = 8√3 · 8 / 2 = 32√3 cm²’dir. Kenarı 8 cm olan eşkenar BCD üçgeninin alanı ise 8² · √3 / 4 = 16√3 cm²’dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'ABDC dörtgeni [BC] köşegeniyle bu iki üçgene ayrıldığından A(ABDC) = 32√3 + 16√3 = 48√3 cm² bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 272
+  {
+    id: 'triangles-272',
+    topic: 'Üç eş parçaya bölünen kesende alan',
+    figure: {
+      viewBox: '0 0 400 300',
+      caption: 'Şekil 272',
+      label:
+        'ABC üçgeninde [BC] kenarı üzerinde alınan D noktası A ile birleştirilmiştir; |DC|, |BD|’nin iki katıdır. [AD] üzerinde A’dan başlayarak F ve E noktaları alınmış ve |AF| = |FE| = |ED| eşitlikleri eş işaretlerle gösterilmiştir. C köşesi hem F hem de E ile birleştirilmiştir.',
+      svg: `
+          <path class="ln" d="M83.33,26.67 L25,260 L375,260 Z"/>
+          <path class="ln" d="M83.33,26.67 L141.67,260"/>
+          <path class="ln" d="M375,260 L102.78,104.44"/>
+          <path class="ln" d="M375,260 L122.22,182.22"/>
+
+          <line class="tick" x1="98.88" y1="64.1" x2="87.23" y2="67.01"/>
+          <line class="tick" x1="118.32" y1="141.88" x2="106.68" y2="144.79"/>
+          <line class="tick" x1="137.77" y1="219.66" x2="126.12" y2="222.57"/>
+
+          <circle class="pt" cx="83.33" cy="26.67" r="3.2"/>
+          <circle class="pt" cx="25" cy="260" r="3.2"/>
+          <circle class="pt" cx="375" cy="260" r="3.2"/>
+          <circle class="pt" cx="141.67" cy="260" r="3.2"/>
+          <circle class="pt" cx="102.78" cy="104.44" r="3.2"/>
+          <circle class="pt" cx="122.22" cy="182.22" r="3.2"/>
+
+          <text x="83.33" y="20" text-anchor="middle">A</text>
+          <text x="25" y="284" text-anchor="middle">B</text>
+          <text x="141.67" y="284" text-anchor="middle">D</text>
+          <text x="375" y="284" text-anchor="middle">C</text>
+          <text x="94" y="101" text-anchor="end">F</text>
+          <text x="113" y="179" text-anchor="end">E</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      'D ∈ [BC] ve |DC| = 2 · |BD|',
+      'F, E ∈ [AD] ve |AF| = |FE| = |ED|',
+      'A(ABC) = 18 cm²',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(CEF) kaç cm²’dir?',
+    choices: [
+      { key: 'A', text: '2' },
+      { key: 'B', text: '3' },
+      { key: 'C', text: '4' },
+      { key: 'D', text: '5' },
+      { key: 'E', text: '6' },
+    ],
+    answer: 'C',
+    hint: 'Önce A(ACD)’yi bul: ABD ile ACD üçgenlerinin A köşesinden [BC]’ye olan yükseklikleri ortaktır.',
+    solution: [
+      {
+        title: '|DC| = 2|BD| ⇒ |DC| = 2|BC| / 3',
+        detail:
+          '|BD| = k dersek |DC| = 2k ve |BC| = 3k olur. ABD ile ACD üçgenlerinin A köşesinden [BC]’ye olan yükseklikleri aynı olduğundan alanları tabanlarıyla orantılıdır.',
+      },
+      {
+        title: 'A(ACD) = 12 cm²',
+        detail:
+          'A(ACD) / A(ABC) = |DC| / |BC| = 2k / 3k = 2 / 3 olduğundan A(ACD) = 18 · 2 / 3 = 12 cm²’dir.',
+      },
+      {
+        title: 'ACD üçgenini üçe böl',
+        detail:
+          'ACD üçgeninde F ve E noktaları [AD] kenarını üç eş parçaya ayırır. AFC, FEC ve EDC üçgenlerinin tepe noktası C ortaktır, dolayısıyla C’nin AD doğrusuna uzaklığı olan yükseklikleri de ortaktır. Tabanları |AF| = |FE| = |ED| eşit olduğundan üç üçgenin alanı da eşittir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'A(CEF) = A(ACD) / 3 = 12 / 3 = 4 cm² bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 273
+  {
+    id: 'triangles-273',
+    topic: 'Tabanda ve kesende oranların alana taşınması',
+    figure: {
+      viewBox: '0 0 400 300',
+      caption: 'Şekil 273',
+      label:
+        'ABC üçgeninde [BC] kenarı üzerinde B’ye yakın bir D noktası alınmış ve A ile birleştirilmiştir; |DC|, |BD|’nin üç katıdır. [AD] üzerinde alınan E noktası B ile birleştirilmiştir ve |AE|, |ED|’nin iki katıdır.',
+      svg: `
+          <path class="ln" d="M170.83,26.67 L25,260 L375,260 Z"/>
+          <path class="ln" d="M170.83,26.67 L112.5,260"/>
+          <path class="ln" d="M25,260 L131.94,182.22"/>
+
+          <circle class="pt" cx="170.83" cy="26.67" r="3.2"/>
+          <circle class="pt" cx="25" cy="260" r="3.2"/>
+          <circle class="pt" cx="375" cy="260" r="3.2"/>
+          <circle class="pt" cx="112.5" cy="260" r="3.2"/>
+          <circle class="pt" cx="131.94" cy="182.22" r="3.2"/>
+
+          <text x="170.83" y="20" text-anchor="middle">A</text>
+          <text x="25" y="284" text-anchor="middle">B</text>
+          <text x="112.5" y="284" text-anchor="middle">D</text>
+          <text x="375" y="284" text-anchor="middle">C</text>
+          <text x="142" y="178">E</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      'D ∈ [BC] ve |DC| = 3 · |BD|',
+      'E ∈ [AD] ve |AE| = 2 · |ED|',
+      'A(ABC) = 48 cm²',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(ABE) kaç cm²’dir?',
+    choices: [
+      { key: 'A', text: '6' },
+      { key: 'B', text: '8' },
+      { key: 'C', text: '9' },
+      { key: 'D', text: '10' },
+      { key: 'E', text: '12' },
+    ],
+    answer: 'B',
+    hint: 'Önce ABD üçgeninin alanını bul, sonra aynı mantığı ABD içindeki [AD] tabanına uygula.',
+    solution: [
+      {
+        title: 'A(ABD) = 12 cm²',
+        detail:
+          '|BD| = k dersek |DC| = 3k ve |BC| = 4k olur. ABD ile ABC üçgenlerinin A’dan [BC]’ye olan yükseklikleri ortak olduğundan A(ABD) / A(ABC) = |BD| / |BC| = 1 / 4, yani A(ABD) = 48 / 4 = 12 cm²’dir.',
+      },
+      {
+        title: '[AD] tabanına geç',
+        detail:
+          'ABE ile ABD üçgenlerini [AE] ve [AD] tabanlarıyla düşünelim. Her ikisinin tepe noktası B ortak olduğundan B’nin AD doğrusuna uzaklığı olan yükseklikleri de ortaktır.',
+      },
+      {
+        title: 'Oran',
+        detail:
+          '|AE| = 2 · |ED| olduğundan |AD| = |AE| + |ED| = 3 · |ED| ve |AE| / |AD| = 2 / 3’tür.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'A(ABE) = A(ABD) · 2 / 3 = 12 · 2 / 3 = 8 cm² bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 274
+  {
+    id: 'triangles-274',
+    topic: '30°’lik açıdan alan hesabı',
+    figure: {
+      viewBox: '0 60 400 240',
+      caption: 'Şekil 274',
+      label:
+        'ABC üçgeninde A köşesi solda, B köşesi sağda ve C köşesi yukarıdadır. A köşesindeki açı 30° olarak işaretlenmiştir. |AB| 12 birim, |AC| ise 10 birimdir.',
+      svg: `
+          <path class="ln" d="M25,250 L375,250 L277.59,104.17 Z"/>
+
+          <path class="arc" d="M77,250 A52,52 0 0 0 70.03,224"/>
+          <text class="val" x="106" y="224" text-anchor="middle">30°</text>
+
+          <circle class="pt" cx="25" cy="250" r="3.2"/>
+          <circle class="pt" cx="375" cy="250" r="3.2"/>
+          <circle class="pt" cx="277.59" cy="104.17" r="3.2"/>
+
+          <text class="val" x="200" y="242" text-anchor="middle">12</text>
+          <text class="val" x="140" y="170" text-anchor="end">10</text>
+
+          <text x="25" y="274" text-anchor="middle">A</text>
+          <text x="375" y="274" text-anchor="middle">B</text>
+          <text x="277.59" y="97" text-anchor="middle">C</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 60 400 240',
+      caption: 'Şekil 274 — C’den [AB]’ye yükseklik indirildi',
+      label:
+        'Aynı şekle, C köşesinden [AB] kenarına indirilen ve ayağı H olan kesikli yükseklik eklenmiştir; ACH dik üçgeninde 30°’nin karşısındaki dik kenar |CH| = 5 birimdir.',
+      svg: `
+          <path class="ln" d="M25,250 L375,250 L277.59,104.17 Z"/>
+
+          <path class="aux" d="M277.59,104.17 L277.59,250"/>
+          <path class="aux-head" d="M265.59,250 L265.59,238 L277.59,238"/>
+
+          <path class="arc" d="M77,250 A52,52 0 0 0 70.03,224"/>
+          <text class="val" x="106" y="224" text-anchor="middle">30°</text>
+
+          <circle class="pt" cx="25" cy="250" r="3.2"/>
+          <circle class="pt" cx="375" cy="250" r="3.2"/>
+          <circle class="pt" cx="277.59" cy="104.17" r="3.2"/>
+          <circle class="pt" cx="277.59" cy="250" r="3.2"/>
+
+          <text class="val" x="200" y="242" text-anchor="middle">12</text>
+          <text class="val" x="140" y="170" text-anchor="end">10</text>
+          <text class="val" x="288" y="182">5</text>
+
+          <text x="25" y="274" text-anchor="middle">A</text>
+          <text x="375" y="274" text-anchor="middle">B</text>
+          <text x="277.59" y="97" text-anchor="middle">C</text>
+          <text x="277.59" y="274" text-anchor="middle">H</text>
+        `,
+    },
+    given: ['ABC bir üçgen', 'm(BAC) = 30°', '|AB| = 12 cm', '|AC| = 10 cm'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(ABC) kaç cm²’dir?',
+    choices: [
+      { key: 'A', text: '20' },
+      { key: 'B', text: '24' },
+      { key: 'C', text: '25' },
+      { key: 'D', text: '30' },
+      { key: 'E', text: '36' },
+    ],
+    answer: 'D',
+    hint: 'C köşesinden [AB] kenarına bir dikme indir; oluşan 30°-60°-90° üçgeninde 30°’nin karşısındaki dik kenar hipotenüsün yarısıdır.',
+    solution: [
+      {
+        title: 'Yüksekliği kur',
+        detail:
+          'C köşesinden [AB] kenarına bir dikme indirip ayağına H diyelim. ACH üçgeninde m(CAH) = 30° ve m(AHC) = 90° olduğundan bu bir 30°-60°-90° üçgenidir.',
+      },
+      {
+        title: '|CH| = 5 cm',
+        detail:
+          'Bu üçgende hipotenüs |AC| = 10 cm’dir. 30°’nin karşısındaki dik kenar hipotenüsün yarısı olduğundan |CH| = 10 / 2 = 5 cm bulunur.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '[AB] tabanına ait yükseklik |CH| = 5 cm olduğundan A(ABC) = |AB| · |CH| / 2 = 12 · 5 / 2 = 30 cm²’dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 275
+  {
+    id: 'triangles-275',
+    topic: 'Paralel kesitte benzerlik ve alan oranı',
+    figure: {
+      viewBox: '0 0 400 320',
+      caption: 'Şekil 275',
+      label:
+        'ABC üçgeninde [AB] kenarı üzerinde D, [AC] kenarı üzerinde E noktaları alınmış ve birleştirilmiştir. [DE] ile [BC] ok işaretleriyle paralel gösterilmiştir. |AD| 4 birim, |DB| ise 8 birimdir.',
+      svg: `
+          <path class="ln" d="M175,25.19 L25,285 L375,285 Z"/>
+          <path class="ln" d="M125,111.79 L241.67,111.79"/>
+
+          <path class="par" d="M176.33,105.79 L183.33,111.79 L176.33,117.79"/>
+          <path class="par" d="M193,279 L200,285 L193,291"/>
+
+          <circle class="pt" cx="175" cy="25.19" r="3.2"/>
+          <circle class="pt" cx="25" cy="285" r="3.2"/>
+          <circle class="pt" cx="375" cy="285" r="3.2"/>
+          <circle class="pt" cx="125" cy="111.79" r="3.2"/>
+          <circle class="pt" cx="241.67" cy="111.79" r="3.2"/>
+
+          <text class="val" x="140" y="70" text-anchor="end">4</text>
+          <text class="val" x="65" y="200" text-anchor="end">8</text>
+
+          <text x="175" y="18" text-anchor="middle">A</text>
+          <text x="25" y="309" text-anchor="middle">B</text>
+          <text x="375" y="309" text-anchor="middle">C</text>
+          <text x="114" y="108" text-anchor="end">D</text>
+          <text x="252" y="108">E</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      'D ∈ [AB], E ∈ [AC]',
+      '[DE] // [BC]',
+      '|AD| = 4 cm, |DB| = 8 cm',
+      'A(ADE) = 12 cm²',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(ABC) kaç cm²’dir?',
+    choices: [
+      { key: 'A', text: '27' },
+      { key: 'B', text: '36' },
+      { key: 'C', text: '72' },
+      { key: 'D', text: '96' },
+      { key: 'E', text: '108' },
+    ],
+    answer: 'E',
+    hint: 'Benzer üçgenlerin alanları oranı, benzerlik oranının karesine eşittir.',
+    solution: [
+      {
+        title: 'Benzerlik',
+        detail:
+          '[DE] // [BC] olduğundan yöndeş açılar eşittir: m(ADE) = m(ABC) ve m(AED) = m(ACB). A açısı ortak olduğuna göre ADE üçgeni ile ABC üçgeni benzerdir.',
+      },
+      {
+        title: 'Benzerlik oranı',
+        detail:
+          '|AB| = |AD| + |DB| = 4 + 8 = 12 cm olduğundan oran |AD| / |AB| = 4 / 12 = 1 / 3’tür.',
+      },
+      {
+        title: 'Alan oranı',
+        detail:
+          'Benzer üçgenlerde alanların oranı benzerlik oranının karesidir: A(ADE) / A(ABC) = (1 / 3)² = 1 / 9.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'A(ABC) = 9 · A(ADE) = 9 · 12 = 108 cm² bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 276
+  {
+    id: 'triangles-276',
+    topic: 'Dik üçgende hipotenüse ait yükseklik ve alan',
+    figure: {
+      viewBox: '0 45 400 245',
+      caption: 'Şekil 276',
+      label:
+        'A köşesindeki açısı dik olan ABC üçgeninde A’dan hipotenüs [BC]’ye indirilen yüksekliğin ayağı H’dir. |AB| 9 birim, |AC| 12 birim ve |AH| ise x birimdir.',
+      svg: `
+          <path class="ln" d="M151,82 L25,250 L375,250 Z"/>
+          <path class="ln" d="M151,82 L151,250"/>
+
+          <path class="ln" d="M143.8,91.6 L153.4,98.8 L160.6,89.2"/>
+          <path class="ln" d="M151,238 L163,238 L163,250"/>
+
+          <circle class="pt" cx="151" cy="82" r="3.2"/>
+          <circle class="pt" cx="25" cy="250" r="3.2"/>
+          <circle class="pt" cx="151" cy="250" r="3.2"/>
+          <circle class="pt" cx="375" cy="250" r="3.2"/>
+
+          <text class="val" x="78" y="166" text-anchor="end">9</text>
+          <text class="val" x="273" y="166">12</text>
+          <text class="val" x="160" y="170">x</text>
+
+          <text x="151" y="75" text-anchor="middle">A</text>
+          <text x="25" y="274" text-anchor="middle">B</text>
+          <text x="151" y="274" text-anchor="middle">H</text>
+          <text x="375" y="274" text-anchor="middle">C</text>
+        `,
+    },
+    given: ['ABC bir dik üçgen', 'm(BAC) = 90°', '[AH] ⊥ [BC]', '|AB| = 9 cm', '|AC| = 12 cm'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |AH| = x kaç cm’dir?',
+    choices: [
+      { key: 'A', text: '36/5' },
+      { key: 'B', text: '15/2' },
+      { key: 'C', text: '8' },
+      { key: 'D', text: '9' },
+      { key: 'E', text: '12' },
+    ],
+    answer: 'A',
+    hint: 'Aynı alanı önce iki dik kenarla, sonra hipotenüs ve ona ait yükseklikle yaz.',
+    solution: [
+      {
+        title: 'Hipotenüs',
+        detail:
+          'ABC dik üçgeninde Pisagor bağıntısı: |BC|² = 9² + 12² = 81 + 144 = 225, yani |BC| = 15 cm’dir.',
+      },
+      {
+        title: 'Dik kenarlarla alan',
+        detail:
+          'Dik açının kenarları birbirinin yüksekliğidir: A(ABC) = |AB| · |AC| / 2 = 9 · 12 / 2 = 54 cm².',
+      },
+      {
+        title: 'Hipotenüsle alan',
+        detail:
+          '[AH] ⊥ [BC] olduğundan aynı alan A(ABC) = |BC| · |AH| / 2 = 15 · x / 2 biçiminde de yazılır.',
+      },
+      {
+        title: 'Sonuç',
+        detail: '15x / 2 = 54 ⇒ 15x = 108 ⇒ x = 108 / 15 = 36 / 5 cm bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 277
+  {
+    id: 'triangles-277',
+    topic: 'Kenarortay ve kesende alan',
+    figure: {
+      viewBox: '0 0 400 330',
+      caption: 'Şekil 277',
+      label:
+        'ABC üçgeninde [AD] kenarortayı çizilmiş, |BD| = |DC| eşitliği eş işaretlerle gösterilmiştir. [AD] üzerinde alınan E noktası B ile birleştirilmiştir ve |AE|, |ED|’nin üç katıdır.',
+      svg: `
+          <path class="ln" d="M141.67,27.5 L25,290 L375,290 Z"/>
+          <path class="ln" d="M141.67,27.5 L200,290"/>
+          <path class="ln" d="M25,290 L185.42,224.38"/>
+
+          <line class="tick" x1="112.5" y1="284" x2="112.5" y2="296"/>
+          <line class="tick" x1="287.5" y1="284" x2="287.5" y2="296"/>
+
+          <circle class="pt" cx="141.67" cy="27.5" r="3.2"/>
+          <circle class="pt" cx="25" cy="290" r="3.2"/>
+          <circle class="pt" cx="200" cy="290" r="3.2"/>
+          <circle class="pt" cx="375" cy="290" r="3.2"/>
+          <circle class="pt" cx="185.42" cy="224.38" r="3.2"/>
+
+          <text x="141.67" y="20" text-anchor="middle">A</text>
+          <text x="25" y="314" text-anchor="middle">B</text>
+          <text x="200" y="314" text-anchor="middle">D</text>
+          <text x="375" y="314" text-anchor="middle">C</text>
+          <text x="196" y="220">E</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      '[AD] kenarortay, |BD| = |DC|',
+      'E ∈ [AD] ve |AE| = 3 · |ED|',
+      'A(ABE) = 12 cm²',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(ABC) kaç cm²’dir?',
+    choices: [
+      { key: 'A', text: '24' },
+      { key: 'B', text: '28' },
+      { key: 'C', text: '32' },
+      { key: 'D', text: '36' },
+      { key: 'E', text: '40' },
+    ],
+    answer: 'C',
+    hint: 'Önce ABD üçgeninin alanını bul; ABE ile ABD üçgenlerinin B köşesinden AD doğrusuna olan yükseklikleri ortaktır.',
+    solution: [
+      {
+        title: '|AE| / |AD| = 3 / 4',
+        detail:
+          '|ED| = k dersek |AE| = 3k ve |AD| = |AE| + |ED| = 4k olur, yani |AE| / |AD| = 3 / 4’tür.',
+      },
+      {
+        title: 'A(ABD) = 16 cm²',
+        detail:
+          'ABE ile ABD üçgenlerinin tepe noktası B ortaktır, dolayısıyla B’nin AD doğrusuna uzaklığı olan yükseklikleri de ortaktır. Alanları tabanlarıyla orantılı olduğundan A(ABE) / A(ABD) = 3 / 4, yani 12 / A(ABD) = 3 / 4 ve A(ABD) = 16 cm²’dir.',
+      },
+      {
+        title: 'Kenarortay alanı ikiye böler',
+        detail:
+          '[AD] kenarortay olduğundan |BD| = |DC|’dir. ABD ve ADC üçgenlerinin A’dan [BC]’ye olan yükseklikleri ortak, tabanları eşit olduğundan alanları da eşittir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'A(ABC) = 2 · A(ABD) = 2 · 16 = 32 cm² bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 278
+  {
+    id: 'triangles-278',
+    topic: 'Geniş açılı üçgende dışarı düşen yükseklik',
+    figure: {
+      viewBox: '0 90 400 155',
+      caption: 'Şekil 278',
+      label:
+        'Geniş açılı ABC üçgeninde B köşesi [BC] kenarının solunda, A köşesi ise daha da solda ve yukarıdadır. B köşesindeki açı 150° olarak işaretlenmiştir. |AB| 8 birim, |BC| ise 10 birimdir.',
+      svg: `
+          <path class="ln" d="M25,117.3 L168.24,200 L375,200 Z"/>
+
+          <path class="arc" d="M194.24,200 A26,26 0 0 0 145.72,187"/>
+          <text class="val" x="179.63" y="153" text-anchor="middle">150°</text>
+
+          <circle class="pt" cx="25" cy="117.3" r="3.2"/>
+          <circle class="pt" cx="168.24" cy="200" r="3.2"/>
+          <circle class="pt" cx="375" cy="200" r="3.2"/>
+
+          <text class="val" x="86" y="162" text-anchor="end">8</text>
+          <text class="val" x="271.62" y="192" text-anchor="middle">10</text>
+
+          <text x="25" y="110" text-anchor="middle">A</text>
+          <text x="168.24" y="224" text-anchor="middle">B</text>
+          <text x="375" y="224" text-anchor="middle">C</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 90 400 155',
+      caption: 'Şekil 278 — [CB] uzantısına A’dan dikme indirildi',
+      label:
+        'Aynı şekle, [CB] kenarının B ötesindeki uzantısı ile A’dan bu uzantıya indirilen ve ayağı H olan kesikli yükseklik eklenmiştir; ABH üçgeninde B köşesindeki açı 30°, |AH| ise 4 birimdir.',
+      svg: `
+          <path class="ln" d="M25,117.3 L168.24,200 L375,200 Z"/>
+
+          <path class="aux" d="M168.24,200 L25,200"/>
+          <path class="aux" d="M25,117.3 L25,200"/>
+          <path class="aux-head" d="M25,188 L37,188 L37,200"/>
+
+          <path class="arc" d="M194.24,200 A26,26 0 0 0 145.72,187"/>
+          <text class="val" x="179.63" y="153" text-anchor="middle">150°</text>
+
+          <path class="arc" d="M124.24,200 A44,44 0 0 1 130.14,178"/>
+          <text class="val" x="104" y="188" text-anchor="middle">30°</text>
+
+          <circle class="pt" cx="25" cy="117.3" r="3.2"/>
+          <circle class="pt" cx="168.24" cy="200" r="3.2"/>
+          <circle class="pt" cx="375" cy="200" r="3.2"/>
+          <circle class="pt" cx="25" cy="200" r="3.2"/>
+
+          <text class="val" x="16" y="162" text-anchor="end">4</text>
+          <text class="val" x="271.62" y="192" text-anchor="middle">10</text>
+
+          <text x="25" y="110" text-anchor="middle">A</text>
+          <text x="168.24" y="224" text-anchor="middle">B</text>
+          <text x="375" y="224" text-anchor="middle">C</text>
+          <text x="25" y="224" text-anchor="middle">H</text>
+        `,
+    },
+    given: ['ABC bir üçgen', 'm(ABC) = 150°', '|AB| = 8 cm', '|BC| = 10 cm'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(ABC) kaç cm²’dir?',
+    choices: [
+      { key: 'A', text: '12' },
+      { key: 'B', text: '16' },
+      { key: 'C', text: '18' },
+      { key: 'D', text: '20' },
+      { key: 'E', text: '24' },
+    ],
+    answer: 'D',
+    hint: 'B köşesindeki açı geniş olduğundan yükseklik üçgenin dışına düşer: A’dan [CB]’nin uzantısına bir dikme indir.',
+    solution: [
+      {
+        title: 'Yüksekliği dışarıda kur',
+        detail:
+          'm(ABC) = 150° geniş bir açı olduğundan A’dan [BC]’ye ait yükseklik, [CB] kenarının B ötesindeki uzantısına düşer. Ayağına H diyelim.',
+      },
+      {
+        title: 'm(ABH) = 30°',
+        detail:
+          '[BH ile [BC ters ışınlar olduğundan m(ABH) ile m(ABC) bütünlerdir: m(ABH) = 180° − 150° = 30°.',
+      },
+      {
+        title: '|AH| = 4 cm',
+        detail:
+          'ABH üçgeninde m(AHB) = 90° ve m(ABH) = 30° olduğundan bu bir 30°-60°-90° üçgenidir. Hipotenüs |AB| = 8 cm olduğuna göre 30°’nin karşısındaki dik kenar |AH| = 8 / 2 = 4 cm’dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '[BC] tabanına ait yükseklik |AH| = 4 cm olduğundan A(ABC) = |BC| · |AH| / 2 = 10 · 4 / 2 = 20 cm² bulunur.',
+      },
+    ],
+  },
 ];
 
 /** Looks questions up by id so the modules below read as a running order. */
@@ -24325,6 +25204,36 @@ export const UNIT_2_TRIANGLES: Unit = {
         'triangles-264',
         'triangles-265',
         'triangles-266',
+      ),
+    },
+    {
+      id: 'triangles-m45',
+      order: 45,
+      title: 'Üçgende alanlar — taban ve yükseklik',
+      summary:
+        'Aynı alanın iki farklı tabanla yazılması, ortak tabanlı iki üçgenin kurduğu dörtgen, ortak yükseklikten gelen alan oranı, Öklid bağıntısıyla tamamlanan dik üçgen, eşkenar üçgenle birleşen dik üçgen ve kesende üç eş parçaya bölünen alan.',
+      questions: pick(
+        'triangles-267',
+        'triangles-268',
+        'triangles-269',
+        'triangles-270',
+        'triangles-271',
+        'triangles-272',
+      ),
+    },
+    {
+      id: 'triangles-m46',
+      order: 46,
+      title: 'Üçgende alanlar — Test 1',
+      summary:
+        'Tabanda ve kesende oranların alana taşınması, 30°’lik açıdan inen yükseklik, paralel kesitte benzerlik–alan ilişkisi, hipotenüse ait yükseklik, kenarortayın alanı ikiye bölmesi ve geniş açılı üçgende dışarı düşen yükseklik.',
+      questions: pick(
+        'triangles-273',
+        'triangles-274',
+        'triangles-275',
+        'triangles-276',
+        'triangles-277',
+        'triangles-278',
       ),
     },
   ],
