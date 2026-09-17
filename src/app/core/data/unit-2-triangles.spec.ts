@@ -497,6 +497,19 @@ describe('unit 2 answer key', () => {
   it('254 — DAC ≅ ECB (K.A.K.) ⇒ m(PBC) + m(PCB) = θ + (60 − θ) = 60, x = 120 → C', () =>
     expect(answerOf('triangles-254')).toBe('C'));
 
+  it('255 — m(ADC) = 75, |DH| = |HC| = 6, |AH| = 6·tan75 = 12 + 6√3 = |BH|, x = |BH| − 6 = 6 + 6√3 → C', () =>
+    expect(answerOf('triangles-255')).toBe('C'));
+  it('256 — |KM| = x/2, |AM| = x√3/2, |AK| = x(√3 − 1)/2 = 7(√3 − 1), x = 14 → C', () =>
+    expect(answerOf('triangles-256')).toBe('C'));
+  it('257 — AP // BC ⇒ |PD| = |PE| = 3, |AP| = √(25 − 9) = 4 = |HF|, |BH| = 10, |BC| = 20, x = 6 → D', () =>
+    expect(answerOf('triangles-257')).toBe('D'));
+  it('258 — m(AEB) = 75, m(BED) = 105, |AE|/|ED| = sin45/sin15 = 2√2/(√6 − √2) = √3 + 1 → C', () =>
+    expect(answerOf('triangles-258')).toBe('C'));
+  it('259 — (a₁ + a₂ + a₃)√3/2 = 12√3 ⇒ a₁ + a₂ + a₃ = 24, çevreler toplamı = 3·24 = 72 → D', () =>
+    expect(answerOf('triangles-259')).toBe('D'));
+  it('260 — BED eşkenar ⇒ |ED| = |DF| = t, m(FDC) = 30, m(DFC) = 90, t = (a − t)√3/2, a = 4 + 2√3, t = 2√3, alan = t²/2 = 6 → B', () =>
+    expect(answerOf('triangles-260')).toBe('B'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
