@@ -640,6 +640,19 @@ describe('unit 2 answer key', () => {
   it('320 — |AH| = 4√3·(√3/2) = 6, |BC| = 9 + 5 = 14, alan = 14·6/2 = 42 → C', () =>
     expect(answerOf('triangles-320')).toBe('C'));
 
+  it('321 — m(HBC) = 180 − 135 = 45, |CH| = 4√2·(√2/2) = 4, A(AEC) = 5·4/2 = 10 → B', () =>
+    expect(answerOf('triangles-321')).toBe('B'));
+  it('322 — 54 = u·3 ⇒ u = 18, a + b − c = 2r = 6, 2c = 36 − 6 = 30, c = 15 → C', () =>
+    expect(answerOf('triangles-322')).toBe('C'));
+  it('323 — h = 5·12/|BC|, |EF| = |BC|/3, alan = (|BC|/3)·(60/|BC|)/2 = 10 → D', () =>
+    expect(answerOf('triangles-323')).toBe('D'));
+  it('324 — m(ABD) = 60, |AD| = 2√3·√3 = 6, alan = 2·(2√3·6/2) = 12√3 → C', () =>
+    expect(answerOf('triangles-324')).toBe('C'));
+  it('325 — A(ABD) = 6·(5/2) = 15, A(ADC) = 25 − 15 = 10, |BD|/|DC| = 15/10 = 3/2 → B', () =>
+    expect(answerOf('triangles-325')).toBe('B'));
+  it('326 — |FK|² = 3·9 = 27 ⇒ |FK| = 3√3, |AD| = |DE| = 12, |DB| = 6, |FC| = 18 − 6 = 12, alan = 12·3√3/2 = 18√3 → E', () =>
+    expect(answerOf('triangles-326')).toBe('E'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
