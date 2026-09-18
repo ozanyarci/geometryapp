@@ -627,6 +627,19 @@ describe('unit 2 answer key', () => {
   it('314 — h = 12/2 = 6, A(ADC) = 5·6/2 = 15 → B', () =>
     expect(answerOf('triangles-314')).toBe('B'));
 
+  it('315 — a² = b² + c², (b − c)² = a² − 2bc = a² − 84 ⇒ bc = 42, alan = 42/2 = 21 → A', () =>
+    expect(answerOf('triangles-315')).toBe('A'));
+  it('316 — A(ABD) = 3S/4, D’nin yüksekliği h/4 ⇒ A(DCE) = |BC|·(h/4)/2 = S/4, oran 3 → C', () =>
+    expect(answerOf('triangles-316')).toBe('C'));
+  it('317 — |AC| = √(225 + 64) = 17, x + r = 15, y + r = 8, x + y = 17 ⇒ r = 3, |AE| = x = 12 → C', () =>
+    expect(answerOf('triangles-317')).toBe('C'));
+  it('318 — |AB|² = 12, |BC|² = 48, |AC|² = 48 − 12 = 36, A(DAC) = 36√3/4 = 9√3 → D', () =>
+    expect(answerOf('triangles-318')).toBe('D'));
+  it('319 — A(DEC)/A(ABC) = (|CD|/|CA|)·(|CF|/|CD|) = |CF|/|CA| = 1/3, alan = 45/3 = 15 → C', () =>
+    expect(answerOf('triangles-319')).toBe('C'));
+  it('320 — |AH| = 4√3·(√3/2) = 6, |BC| = 9 + 5 = 14, alan = 14·6/2 = 42 → C', () =>
+    expect(answerOf('triangles-320')).toBe('C'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
