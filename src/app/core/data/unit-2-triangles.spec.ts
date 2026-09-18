@@ -653,6 +653,19 @@ describe('unit 2 answer key', () => {
   it('326 — |FK|² = 3·9 = 27 ⇒ |FK| = 3√3, |AD| = |DE| = 12, |DB| = 6, |FC| = 18 − 6 = 12, alan = 12·3√3/2 = 18√3 → E', () =>
     expect(answerOf('triangles-326')).toBe('E'));
 
+  it('327 — ABD ~ ACE (dik açı + α), oran |AB|/|AC| = 1/2, alan oranı (1/2)² = 1/4 → C', () =>
+    expect(answerOf('triangles-327')).toBe('C'));
+  it('328 — a² = 324 ⇒ a = 18, (18 − k)/2 = k ⇒ k = 6, |DH| = 12√3, |EH| = 6√3, |DE| = 6√3, |MH| = 3, alan = 6√3·3/2 = 9√3 → C', () =>
+    expect(answerOf('triangles-328')).toBe('C'));
+  it('329 — alan = 12h/2 ≤ 12·5/2 = 30, eşitlik m(BAC) = 90° ⇒ |BC| = √(25 + 144) = 13 → B', () =>
+    expect(answerOf('triangles-329')).toBe('B'));
+  it('330 — m(BKC) = 90 + 90/2 = 135, |CH| = 4·(√2/2) = 2√2, alan = 5·2√2/2 = 5√2 → B', () =>
+    expect(answerOf('triangles-330')).toBe('B'));
+  it('331 — m(ADH) = 60 ⇒ |DH| = 1, |AH| = √3; 19 = 3 + |BH|² ⇒ |BH| = 4, |BD| = 3, |BC| = 6, alan = 6√3/2 = 3√3 → B', () =>
+    expect(answerOf('triangles-331')).toBe('B'));
+  it('332 — |AC| = 8, |BC| = 10, DEC ~ BAC oran 1/2 ⇒ |DE| = 3, |EC| = 4, |BE| = 6, alan = 6·3/2 = 9 → C', () =>
+    expect(answerOf('triangles-332')).toBe('C'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
