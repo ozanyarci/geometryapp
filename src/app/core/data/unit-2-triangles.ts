@@ -29362,6 +29362,602 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+  {
+    id: 'triangles-333',
+    topic: 'İç teğet çember merkezinin ayırdığı alanlar',
+    figure: {
+      viewBox: '0 142 400 166',
+      caption: 'Şekil 333',
+      label:
+        'A köşesinde dik olan ABC üçgeninin içine iç teğet çember çizilmiştir; çemberin merkezi O noktasıdır ve O, üçgenin üç köşesine birleştirilmiştir.',
+      svg: `
+          <path class="ln" d="M86.1,164.6 L38,280 L363,280 Z"/>
+          <circle class="ln" cx="113" cy="230" r="50"/>
+          <path class="ln" d="M113,230 L86.1,164.6"/>
+          <path class="ln" d="M113,230 L38,280"/>
+          <path class="ln" d="M113,230 L363,280"/>
+
+          <path class="ln" d="M81.1,176.6 L93.1,181.6 L98.1,169.6"/>
+
+          <circle class="pt" cx="86.1" cy="164.6" r="3.2"/>
+          <circle class="pt" cx="38" cy="280" r="3.2"/>
+          <circle class="pt" cx="363" cy="280" r="3.2"/>
+          <circle class="pt" cx="113" cy="230" r="3.2"/>
+
+          <text x="86.1" y="156" text-anchor="middle">A</text>
+          <text x="30" y="298" text-anchor="end">B</text>
+          <text x="371" y="298">C</text>
+          <text x="122" y="224">O</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 142 400 166',
+      caption: 'Şekil 333 — O’dan üç kenara inen yarıçaplar çizildi',
+      label:
+        'Aynı şekle O merkezinden üç kenara inen yarıçaplar kesikli çizgiyle eklenmiştir; her biri değdiği kenara diktir ve uzunlukları r ile gösterilmiştir.',
+      svg: `
+          <path class="ln" d="M86.1,164.6 L38,280 L363,280 Z"/>
+          <circle class="ln" cx="113" cy="230" r="50"/>
+          <path class="ln" d="M113,230 L86.1,164.6"/>
+          <path class="ln" d="M113,230 L38,280"/>
+          <path class="ln" d="M113,230 L363,280"/>
+
+          <path class="ln" d="M81.1,176.6 L93.1,181.6 L98.1,169.6"/>
+
+          <path class="aux" d="M113,230 L113,280"/>
+          <path class="aux" d="M113,230 L66.9,210.8"/>
+          <path class="aux" d="M113,230 L132.2,183.9"/>
+          <path class="aux-head" d="M100,280 L100,267 L113,267"/>
+
+          <text class="val" x="122" y="262">r</text>
+          <text class="val" x="82" y="211" text-anchor="end">r</text>
+          <text class="val" x="130" y="207">r</text>
+
+          <circle class="pt" cx="86.1" cy="164.6" r="3.2"/>
+          <circle class="pt" cx="38" cy="280" r="3.2"/>
+          <circle class="pt" cx="363" cy="280" r="3.2"/>
+          <circle class="pt" cx="113" cy="230" r="3.2"/>
+
+          <text x="86.1" y="156" text-anchor="middle">A</text>
+          <text x="30" y="298" text-anchor="end">B</text>
+          <text x="371" y="298">C</text>
+          <text x="122" y="224">O</text>
+        `,
+    },
+    given: [
+      'ABC bir dik üçgen',
+      'm(BAC) = 90°',
+      'O, ABC üçgeninin iç teğet çemberinin merkezidir',
+      'A(ABO) / A(ACO) = 5 / 12',
+      'A(ABC) = 90 cm²',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(OBC) kaç cm²’dir?',
+    choices: [
+      { key: 'A', text: '30' },
+      { key: 'B', text: '35' },
+      { key: 'C', text: '36' },
+      { key: 'D', text: '39' },
+      { key: 'E', text: '45' },
+    ],
+    answer: 'D',
+    hint: 'O noktasının üç kenara uzaklığı da iç teğet çemberin yarıçapı r’dir; o hâlde üç küçük üçgenin alanları kenarlarıyla orantılıdır.',
+    solution: [
+      {
+        title: 'Üç üçgenin alanını r ile yaz',
+        detail:
+          'O iç teğet çemberin merkezi olduğundan O’nun [AB], [AC] ve [BC] kenarlarına uzaklığı da r’dir. Bu uzaklıklar birer yüksekliktir: A(ABO) = |AB| · r / 2, A(ACO) = |AC| · r / 2, A(OBC) = |BC| · r / 2.',
+      },
+      {
+        title: 'Kenar oranını bul',
+        detail:
+          'Üç alanın hepsinde r / 2 ortak çarpan olduğundan alanlar kenarlarla orantılıdır: A(ABO) / A(ACO) = |AB| / |AC| = 5 / 12’dir.',
+      },
+      {
+        title: 'Üçüncü kenarı hesapla',
+        detail:
+          '|AB| = 5k, |AC| = 12k olsun. m(BAC) = 90° olduğundan |BC|² = (5k)² + (12k)² = 169k² ⇒ |BC| = 13k’dır.',
+      },
+      {
+        title: 'Alanı kenarlar arasında paylaştır',
+        detail:
+          'Üç üçgenin alanları 5k : 12k : 13k, yani 5 : 12 : 13 oranındadır ve toplamları A(ABC) = 90 cm²’dir. Toplam 5 + 12 + 13 = 30 birim eder.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'A(OBC) = 90 · 13 / 30 = 39 cm² bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'triangles-334',
+    topic: 'Hipotenüse ait yükseklik ve 15°’lik açı',
+    figure: {
+      viewBox: '0 170 400 144',
+      caption: 'Şekil 334',
+      label:
+        'A köşesinde dik olan ABC üçgeninde B, H ve C noktaları soldan sağa aynı yatay doğru üzerindedir; A’dan [BC]’ye inen yüksekliğin ayağı H’dir, uzunluğu 5 birimdir ve C köşesindeki açı 15°’dir.',
+      svg: `
+          <path class="ln" d="M57.1,197.5 L35,280 L365,280 Z"/>
+          <path class="ln" d="M57.1,197.5 L57.1,280"/>
+
+          <path class="ln" d="M53.7,210.1 L66.3,213.4 L69.7,200.9"/>
+          <path class="ln" d="M44.1,280 L44.1,267 L57.1,267"/>
+
+          <path class="arc" d="M305,280 A60,60 0 0 1 307.1,264.5"/>
+          <text class="val" x="290" y="274" text-anchor="middle">15°</text>
+
+          <text class="val" x="64" y="244">5</text>
+
+          <circle class="pt" cx="57.1" cy="197.5" r="3.2"/>
+          <circle class="pt" cx="35" cy="280" r="3.2"/>
+          <circle class="pt" cx="365" cy="280" r="3.2"/>
+          <circle class="pt" cx="57.1" cy="280" r="3.2"/>
+
+          <text x="57.1" y="189" text-anchor="middle">A</text>
+          <text x="27" y="298" text-anchor="end">B</text>
+          <text x="373" y="298">C</text>
+          <text x="57.1" y="298" text-anchor="middle">H</text>
+        `,
+    },
+    given: ['BAC bir dik üçgen', '[AH] ⊥ [BC]', 'm(ACB) = 15°', '|AH| = 5 cm'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(ABC) kaç cm²’dir?',
+    choices: [
+      { key: 'A', text: '25' },
+      { key: 'B', text: '40' },
+      { key: 'C', text: '50' },
+      { key: 'D', text: '60' },
+      { key: 'E', text: '75' },
+    ],
+    answer: 'C',
+    hint: 'Tabanı [BC] al: yükseklik zaten |AH| = 5 cm. Geriye [BC]’yi, yani |BH| + |HC| toplamını bulmak kalıyor.',
+    solution: [
+      {
+        title: 'Açıları yerleştir',
+        detail:
+          'm(BAC) = 90° ve m(ACB) = 15° olduğundan m(ABC) = 75°’dir. AHC üçgeni H’de dik olduğundan m(HAC) = 75°, AHB üçgeninde ise m(HAB) = 15° olur.',
+      },
+      {
+        title: 'İki parçayı yükseklik cinsinden yaz',
+        detail:
+          'AHC dik üçgeninde tan15° = |AH| / |HC| ⇒ |HC| = 5 / tan15°. AHB dik üçgeninde tan15° = |BH| / |AH| ⇒ |BH| = 5 · tan15°.',
+      },
+      {
+        title: 'Toplamı sadeleştir',
+        detail:
+          'tan15° = 2 − √3 ve 1 / tan15° = 2 + √3 olduğundan |BC| = |BH| + |HC| = 5(2 − √3) + 5(2 + √3) = 5 · 4 = 20 cm’dir. (√3’lü terimler birbirini götürür.)',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'A(ABC) = |BC| · |AH| / 2 = 20 · 5 / 2 = 50 cm² bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'triangles-335',
+    topic: 'Kesişen doğruların ayırdığı üçgen ve dörtgen alanları',
+    figure: {
+      viewBox: '0 36 400 274',
+      caption: 'Şekil 335',
+      label:
+        'ABC üçgeninde F noktası [BC] üzerindedir; [FD] doğru parçası [AC] kenarını E noktasında keser ve D noktası üçgenin dışında, A ile C’yi birleştiren doğrunun üstünde kalır. D noktası A ve C köşelerine birleştirilmiştir.',
+      svg: `
+          <path class="ln" d="M113.7,60.4 L32,280 L368,280 Z"/>
+          <path class="ln" d="M116,280 L239.7,60.4"/>
+          <path class="ln" d="M113.7,60.4 L239.7,60.4"/>
+          <path class="ln" d="M239.7,60.4 L368,280"/>
+
+          <text class="val" x="144" y="116" text-anchor="middle">4</text>
+          <text class="val" x="235" y="110" text-anchor="middle">3</text>
+          <text class="val" x="141" y="203" text-anchor="middle">6</text>
+          <text class="val" x="271" y="226" text-anchor="middle">8</text>
+          <text class="val" x="74" y="298" text-anchor="middle">3</text>
+          <text class="val" x="242" y="298" text-anchor="middle">9</text>
+
+          <circle class="pt" cx="113.7" cy="60.4" r="3.2"/>
+          <circle class="pt" cx="32" cy="280" r="3.2"/>
+          <circle class="pt" cx="368" cy="280" r="3.2"/>
+          <circle class="pt" cx="239.7" cy="60.4" r="3.2"/>
+          <circle class="pt" cx="198.4" cy="133.6" r="3.2"/>
+          <circle class="pt" cx="116" cy="280" r="3.2"/>
+
+          <text x="113.7" y="50" text-anchor="middle">A</text>
+          <text x="24" y="298" text-anchor="end">B</text>
+          <text x="376" y="298">C</text>
+          <text x="239.7" y="50" text-anchor="middle">D</text>
+          <text x="184" y="145" text-anchor="end">E</text>
+          <text x="116" y="298" text-anchor="middle">F</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 36 400 274',
+      caption: 'Şekil 335 — [AF] köşegeni çizildi',
+      label:
+        'Aynı şekle A köşesinden F noktasına giden doğru parçası kesikli çizgiyle eklenmiştir; bu parça ABFE dörtgenini ABF ve AFE üçgenlerine ayırır.',
+      svg: `
+          <path class="ln" d="M113.7,60.4 L32,280 L368,280 Z"/>
+          <path class="ln" d="M116,280 L239.7,60.4"/>
+          <path class="ln" d="M113.7,60.4 L239.7,60.4"/>
+          <path class="ln" d="M239.7,60.4 L368,280"/>
+
+          <path class="aux" d="M113.7,60.4 L116,280"/>
+
+          <text class="val" x="144" y="116" text-anchor="middle">4</text>
+          <text class="val" x="235" y="110" text-anchor="middle">3</text>
+          <text class="val" x="141" y="203" text-anchor="middle">6</text>
+          <text class="val" x="271" y="226" text-anchor="middle">8</text>
+          <text class="val" x="74" y="298" text-anchor="middle">3</text>
+          <text class="val" x="242" y="298" text-anchor="middle">9</text>
+
+          <circle class="pt" cx="113.7" cy="60.4" r="3.2"/>
+          <circle class="pt" cx="32" cy="280" r="3.2"/>
+          <circle class="pt" cx="368" cy="280" r="3.2"/>
+          <circle class="pt" cx="239.7" cy="60.4" r="3.2"/>
+          <circle class="pt" cx="198.4" cy="133.6" r="3.2"/>
+          <circle class="pt" cx="116" cy="280" r="3.2"/>
+
+          <text x="113.7" y="50" text-anchor="middle">A</text>
+          <text x="24" y="298" text-anchor="end">B</text>
+          <text x="376" y="298">C</text>
+          <text x="239.7" y="50" text-anchor="middle">D</text>
+          <text x="184" y="145" text-anchor="end">E</text>
+          <text x="116" y="298" text-anchor="middle">F</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      'F ∈ [BC] ve E, [AC] ile [FD]’nin kesim noktasıdır',
+      '|AE| = 4 cm',
+      '|ED| = 3 cm',
+      '|EF| = 6 cm',
+      '|EC| = 8 cm',
+      '|BF| = 3 cm',
+      '|FC| = 9 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(AED) / A(ABFE) oranı kaçtır?',
+    choices: [
+      { key: 'A', text: '1/6' },
+      { key: 'B', text: '1/4' },
+      { key: 'C', text: '1/3' },
+      { key: 'D', text: '2/5' },
+      { key: 'E', text: '3/8' },
+    ],
+    answer: 'B',
+    hint: 'E köşesinde oluşan açılar ya ortak ya da ters açı olduğundan, E’den çıkan iki kenarı bilinen her üçgenin alanı iki kenarın çarpımıyla orantılıdır.',
+    solution: [
+      {
+        title: 'E köşesindeki açıyı ortak çarpan yap',
+        detail:
+          'AC ve FD doğruları E’de kesişir; aralarındaki açıya θ diyelim. AED, AEF ve EFC üçgenlerinin E köşesindeki açıları θ ya da onun ters açısı olduğundan hepsinin sinüsü aynıdır. Böylece her birinin alanı, E’den çıkan iki kenarın çarpımının yarısı çarpı sinθ olur.',
+      },
+      {
+        title: 'Üç üçgeni tek çarpanla yaz',
+        detail:
+          'A(AED) = 4 · 3 · sinθ / 2 = 6sinθ, A(AEF) = 4 · 6 · sinθ / 2 = 12sinθ ve A(EFC) = 6 · 8 · sinθ / 2 = 24sinθ’dır.',
+      },
+      {
+        title: 'ABF üçgeninin alanını bul',
+        detail:
+          'Önce A(AFC) = A(AEF) + A(EFC) = 12sinθ + 24sinθ = 36sinθ olur. ABF ve AFC üçgenlerinin A köşesinden [BC]’ye inen yükseklikleri ortaktır; o hâlde alanları tabanlarıyla orantılıdır: A(ABF) / A(AFC) = |BF| / |FC| = 3 / 9 = 1 / 3 ⇒ A(ABF) = 12sinθ.',
+      },
+      {
+        title: 'Dörtgeni topla',
+        detail:
+          '[AF] köşegeni ABFE dörtgenini ABF ve AFE üçgenlerine ayırır: A(ABFE) = 12sinθ + 12sinθ = 24sinθ’dır.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'A(AED) / A(ABFE) = 6sinθ / 24sinθ = 1 / 4 bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'triangles-336',
+    topic: 'Ters açıların oluşturduğu iki üçgende alan farkı',
+    figure: {
+      viewBox: '0 12 400 236',
+      caption: 'Şekil 336',
+      label:
+        'A, C, E noktaları ile B, C, D noktaları C’de kesişen iki doğru üzerinde sıralanmıştır; soldaki ABC üçgeninin alanı S₁, sağdaki DCE üçgeninin alanı S₂ olarak gösterilmiştir.',
+      svg: `
+          <path class="ln" d="M66.1,83 L329.1,214.5"/>
+          <path class="ln" d="M47.3,186.3 L347.8,36.1"/>
+          <path class="ln" d="M66.1,83 L47.3,186.3"/>
+          <path class="ln" d="M347.8,36.1 L329.1,214.5"/>
+
+          <text class="val" x="112" y="96" text-anchor="end">5</text>
+          <text class="val" x="92" y="182" text-anchor="end">6</text>
+          <text class="val" x="266" y="70">10</text>
+          <text class="val" x="255" y="192">9</text>
+
+          <text x="86" y="140" text-anchor="middle">S₁</text>
+          <text x="276" y="132" text-anchor="middle">S₂</text>
+
+          <circle class="pt" cx="66.1" cy="83" r="3.2"/>
+          <circle class="pt" cx="47.3" cy="186.3" r="3.2"/>
+          <circle class="pt" cx="160" cy="130" r="3.2"/>
+          <circle class="pt" cx="347.8" cy="36.1" r="3.2"/>
+          <circle class="pt" cx="329.1" cy="214.5" r="3.2"/>
+
+          <text x="58" y="78" text-anchor="end">A</text>
+          <text x="39" y="198" text-anchor="end">B</text>
+          <text x="156" y="150" text-anchor="end">C</text>
+          <text x="347.8" y="26" text-anchor="middle">D</text>
+          <text x="337" y="230">E</text>
+        `,
+    },
+    given: [
+      'A, C, E doğrusal ve B, C, D doğrusaldır',
+      '|CA| = 5 cm, |CB| = 6 cm',
+      '|CD| = 10 cm, |CE| = 9 cm',
+      'A(ABC) = S₁ cm²',
+      'A(DCE) = S₂ cm²',
+      'S₂ − S₁ = 24 cm²',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(DCE) kaç cm²’dir?',
+    choices: [
+      { key: 'A', text: '30' },
+      { key: 'B', text: '32' },
+      { key: 'C', text: '36' },
+      { key: 'D', text: '40' },
+      { key: 'E', text: '45' },
+    ],
+    answer: 'C',
+    hint: 'C köşesindeki iki açı ters açıdır; iki üçgenin alanını da aynı sinüs cinsinden yazıp farkı al.',
+    solution: [
+      {
+        title: 'Ters açıları eşitle',
+        detail:
+          'A, C, E ve B, C, D doğrusal olduğundan ACB açısı ile ECD açısı ters açılardır ve eşittir. Ortak ölçülerine θ diyelim.',
+      },
+      {
+        title: 'İki alanı sinθ cinsinden yaz',
+        detail:
+          'Bir üçgenin alanı, bir köşesinden çıkan iki kenarın çarpımının yarısı ile aradaki açının sinüsünün çarpımıdır: S₁ = 5 · 6 · sinθ / 2 = 15sinθ ve S₂ = 10 · 9 · sinθ / 2 = 45sinθ’dır.',
+      },
+      {
+        title: 'Farktan sinθ’yı çöz',
+        detail: 'S₂ − S₁ = 45sinθ − 15sinθ = 30sinθ = 24 ⇒ sinθ = 24 / 30 = 4 / 5’tir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'S₂ = 45 · (4 / 5) = 36 cm² bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'triangles-337',
+    topic: 'Kenarortayın yarı hipotenüse eşitliği ve dik üçgen alanı',
+    figure: {
+      viewBox: '0 120 400 190',
+      caption: 'Şekil 337',
+      label:
+        'ABC üçgeninde B, D ve C noktaları soldan sağa aynı yatay doğru üzerindedir; D noktası [BC]’nin orta noktasıdır. E noktası [AC] üzerindedir, [AD] ile [DE] birbirine diktir ve |BD|, |DC|, |AD| parçalarının eşitliği çentiklerle gösterilmiştir.',
+      svg: `
+          <path class="ln" d="M99.4,143.2 L35,272 L357,272 Z"/>
+          <path class="ln" d="M99.4,143.2 L196,272"/>
+          <path class="ln" d="M196,272 L260.4,223.7"/>
+
+          <path class="ln" d="M188.2,261.6 L198.6,253.8 L206.4,264.2"/>
+
+          <line class="tick" x1="115.5" y1="266" x2="115.5" y2="278"/>
+          <line class="tick" x1="276.5" y1="266" x2="276.5" y2="278"/>
+          <line class="tick" x1="142.9" y1="211.2" x2="152.5" y2="204"/>
+
+          <text class="val" x="175" y="174" text-anchor="middle">10</text>
+          <text class="val" x="305" y="240" text-anchor="middle">6</text>
+
+          <circle class="pt" cx="99.4" cy="143.2" r="3.2"/>
+          <circle class="pt" cx="35" cy="272" r="3.2"/>
+          <circle class="pt" cx="357" cy="272" r="3.2"/>
+          <circle class="pt" cx="196" cy="272" r="3.2"/>
+          <circle class="pt" cx="260.4" cy="223.7" r="3.2"/>
+
+          <text x="99.4" y="133" text-anchor="middle">A</text>
+          <text x="27" y="290" text-anchor="end">B</text>
+          <text x="365" y="290">C</text>
+          <text x="196" y="290" text-anchor="middle">D</text>
+          <text x="269" y="220">E</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 120 400 190',
+      caption: 'Şekil 337 — D’den [AC]’ye inen dikme çizildi',
+      label:
+        'Aynı şekle D noktasından [AC] kenarına inen dikme kesikli çizgiyle eklenmiştir; ayağı, [AC]’nin orta noktası olan M’dir ve oradaki dik açı işaretlenmiştir.',
+      svg: `
+          <path class="ln" d="M99.4,143.2 L35,272 L357,272 Z"/>
+          <path class="ln" d="M99.4,143.2 L196,272"/>
+          <path class="ln" d="M196,272 L260.4,223.7"/>
+
+          <path class="ln" d="M188.2,261.6 L198.6,253.8 L206.4,264.2"/>
+
+          <path class="aux" d="M196,272 L228.2,207.6"/>
+          <path class="aux-head" d="M222.8,218.3 L233.6,223.7 L238.9,213"/>
+
+          <line class="tick" x1="115.5" y1="266" x2="115.5" y2="278"/>
+          <line class="tick" x1="276.5" y1="266" x2="276.5" y2="278"/>
+          <line class="tick" x1="142.9" y1="211.2" x2="152.5" y2="204"/>
+
+          <text class="val" x="175" y="174" text-anchor="middle">10</text>
+          <text class="val" x="305" y="240" text-anchor="middle">6</text>
+
+          <circle class="pt" cx="99.4" cy="143.2" r="3.2"/>
+          <circle class="pt" cx="35" cy="272" r="3.2"/>
+          <circle class="pt" cx="357" cy="272" r="3.2"/>
+          <circle class="pt" cx="196" cy="272" r="3.2"/>
+          <circle class="pt" cx="260.4" cy="223.7" r="3.2"/>
+          <circle class="pt" cx="228.2" cy="207.6" r="3.2"/>
+
+          <text x="99.4" y="133" text-anchor="middle">A</text>
+          <text x="27" y="290" text-anchor="end">B</text>
+          <text x="365" y="290">C</text>
+          <text x="196" y="290" text-anchor="middle">D</text>
+          <text x="269" y="220">E</text>
+          <text x="232" y="200">M</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      'D ∈ [BC] ve E ∈ [AC]',
+      '[AD] ⊥ [DE]',
+      '|BD| = |DC| = |AD|',
+      '|AE| = 10 cm',
+      '|EC| = 6 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, ABC üçgeninin alanı kaç cm²’dir?',
+    choices: [
+      { key: 'A', text: '48' },
+      { key: 'B', text: '56' },
+      { key: 'C', text: '60' },
+      { key: 'D', text: '64' },
+      { key: 'E', text: '72' },
+    ],
+    answer: 'D',
+    hint: '|AD| = |BD| = |DC| olması D’yi ABC’nin çevrel çemberinin merkezi yapar; [BC] o çemberin çapıdır.',
+    solution: [
+      {
+        title: 'A köşesinin dik olduğunu göster',
+        detail:
+          '|BD| = |DC| olduğundan D, [BC]’nin orta noktasıdır; ayrıca |AD| = |BD| = |DC| olduğundan A, B ve C noktaları D merkezli bir çember üzerindedir. [BC] bu çemberin çapı olduğundan çapı gören BAC açısı 90°’dir.',
+      },
+      {
+        title: 'Orta taban çiz',
+        detail:
+          '[AC]’nin orta noktası M olsun. D, [BC]’nin orta noktası olduğundan [DM], ABC üçgeninin orta tabanıdır: [DM] // [AB] ve |DM| = |AB| / 2’dir. [AB] ⊥ [AC] olduğundan [DM] ⊥ [AC] olur.',
+      },
+      {
+        title: 'Öklid bağıntısını uygula',
+        detail:
+          '|AC| = |AE| + |EC| = 10 + 6 = 16 cm ⇒ |AM| = 8 cm ve |ME| = |AE| − |AM| = 10 − 8 = 2 cm’dir. ADE üçgeni D’de diktir ve [DM] bu üçgende hipotenüse ait yüksekliktir: |DM|² = |AM| · |ME| = 8 · 2 = 16 ⇒ |DM| = 4 cm.',
+      },
+      {
+        title: '[AB] kenarını bul',
+        detail: '|AB| = 2 · |DM| = 2 · 4 = 8 cm’dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'ABC üçgeni A’da dik olduğundan dik kenarları taban ve yükseklik alabiliriz: A(ABC) = |AB| · |AC| / 2 = 8 · 16 / 2 = 64 cm² bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'triangles-338',
+    topic: 'Çapı gören açı ve dörtgen alanı',
+    figure: {
+      viewBox: '0 14 400 310',
+      caption: 'Şekil 338',
+      label:
+        'ABC üçgeninde D noktası [AC] üzerinde, E noktası [BC] üzerindedir ve D ile E birleştirilmiştir; |BE|, |EC| ve |DE| parçalarının eşitliği çentiklerle gösterilmiştir.',
+      svg: `
+          <path class="ln" d="M167,36 L35,300 L365,300 Z"/>
+          <path class="ln" d="M246.2,141.6 L200,300"/>
+
+          <line class="tick" x1="117.5" y1="294" x2="117.5" y2="306"/>
+          <line class="tick" x1="282.5" y1="294" x2="282.5" y2="306"/>
+          <line class="tick" x1="217.3" y1="219.1" x2="228.9" y2="222.5"/>
+
+          <text class="val" x="221" y="83" text-anchor="middle">4</text>
+          <text class="val" x="320" y="215" text-anchor="middle">6</text>
+
+          <circle class="pt" cx="167" cy="36" r="3.2"/>
+          <circle class="pt" cx="35" cy="300" r="3.2"/>
+          <circle class="pt" cx="365" cy="300" r="3.2"/>
+          <circle class="pt" cx="246.2" cy="141.6" r="3.2"/>
+          <circle class="pt" cx="200" cy="300" r="3.2"/>
+
+          <text x="167" y="26" text-anchor="middle">A</text>
+          <text x="27" y="318" text-anchor="end">B</text>
+          <text x="373" y="318">C</text>
+          <text x="255" y="137">D</text>
+          <text x="200" y="318" text-anchor="middle">E</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 14 400 310',
+      caption: 'Şekil 338 — [BD] köşegeni çizildi',
+      label:
+        'Aynı şekle B köşesinden D noktasına giden köşegen kesikli çizgiyle eklenmiştir; D köşesindeki dik açı işaretlenmiş ve |BD| uzunluğu 8 olarak gösterilmiştir.',
+      svg: `
+          <path class="ln" d="M167,36 L35,300 L365,300 Z"/>
+          <path class="ln" d="M246.2,141.6 L200,300"/>
+
+          <path class="aux" d="M35,300 L246.2,141.6"/>
+          <path class="aux-head" d="M235.8,149.4 L243.6,159.8 L254,152"/>
+
+          <line class="tick" x1="117.5" y1="294" x2="117.5" y2="306"/>
+          <line class="tick" x1="282.5" y1="294" x2="282.5" y2="306"/>
+          <line class="tick" x1="217.3" y1="219.1" x2="228.9" y2="222.5"/>
+
+          <text class="val" x="221" y="83" text-anchor="middle">4</text>
+          <text class="val" x="320" y="215" text-anchor="middle">6</text>
+          <text class="val" x="130" y="211" text-anchor="end">8</text>
+
+          <circle class="pt" cx="167" cy="36" r="3.2"/>
+          <circle class="pt" cx="35" cy="300" r="3.2"/>
+          <circle class="pt" cx="365" cy="300" r="3.2"/>
+          <circle class="pt" cx="246.2" cy="141.6" r="3.2"/>
+          <circle class="pt" cx="200" cy="300" r="3.2"/>
+
+          <text x="167" y="26" text-anchor="middle">A</text>
+          <text x="27" y="318" text-anchor="end">B</text>
+          <text x="373" y="318">C</text>
+          <text x="255" y="137">D</text>
+          <text x="200" y="318" text-anchor="middle">E</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      'D ∈ [AC] ve E ∈ [BC]',
+      '|BE| = |EC| = |DE|',
+      '|AD| = 4 cm',
+      '|DC| = 6 cm',
+      '|BC| = 10 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(ABED) kaç cm²’dir?',
+    choices: [
+      { key: 'A', text: '20' },
+      { key: 'B', text: '24' },
+      { key: 'C', text: '26' },
+      { key: 'D', text: '28' },
+      { key: 'E', text: '32' },
+    ],
+    answer: 'D',
+    hint: '|BE| = |EC| = |DE| olması D’yi, [BC] çaplı çemberin üzerine taşır; çapı gören açı 90°’dir.',
+    solution: [
+      {
+        title: 'D köşesindeki açıyı bul',
+        detail:
+          '|BE| = |EC| olduğundan E, [BC]’nin orta noktasıdır ve |BE| = |EC| = 5 cm’dir. |DE| de bunlara eşit olduğundan D noktası, merkezi E ve yarıçapı 5 cm olan çember üzerindedir. [BC] bu çemberin çapıdır, çapı gören BDC açısı ise 90°’dir.',
+      },
+      {
+        title: 'BDC üçgeninin alanını hesapla',
+        detail:
+          'BDC üçgeni D’de diktir: |BD|² = |BC|² − |DC|² = 100 − 36 = 64 ⇒ |BD| = 8 cm. Buradan A(BDC) = |BD| · |DC| / 2 = 8 · 6 / 2 = 24 cm²’dir.',
+      },
+      {
+        title: 'ABD üçgeninin alanını bul',
+        detail:
+          'ABD ve BDC üçgenlerinin tabanları [AD] ile [DC], yükseklikleri ise B noktasının AC doğrusuna uzaklığı olarak ortaktır. O hâlde A(ABD) / A(BDC) = |AD| / |DC| = 4 / 6 ⇒ A(ABD) = 24 · 4 / 6 = 16 cm²’dir.',
+      },
+      {
+        title: 'BDE üçgeninin alanını bul',
+        detail:
+          '[DE], BDC üçgeninde [BC] kenarına ait kenarortaydır ve kenarortay üçgeni eşit alanlı iki parçaya böler: A(BDE) = A(BDC) / 2 = 24 / 2 = 12 cm²’dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '[BD] köşegeni ABED dörtgenini ABD ve BDE üçgenlerine ayırır: A(ABED) = 16 + 12 = 28 cm² bulunur.',
+      },
+    ],
+  },
 ];
 
 /** Looks questions up by id so the modules below read as a running order. */
@@ -30212,6 +30808,21 @@ export const UNIT_2_TRIANGLES: Unit = {
         'triangles-330',
         'triangles-331',
         'triangles-332',
+      ),
+    },
+    {
+      id: 'triangles-m56',
+      order: 56,
+      title: 'Üçgende alanlar — Test 11',
+      summary:
+        'İç teğet çember merkezinin kenarlarla orantılı olarak ayırdığı alanlar, 15’lik açıyla hipotenüse inen yükseklik, kesişen doğruların üçgen ve dörtgen alanları, ters açıların alan farkı, çapı gören dik açı ve orta tabanla kurulan Öklid bağıntısı.',
+      questions: pick(
+        'triangles-333',
+        'triangles-334',
+        'triangles-335',
+        'triangles-336',
+        'triangles-337',
+        'triangles-338',
       ),
     },
   ],
