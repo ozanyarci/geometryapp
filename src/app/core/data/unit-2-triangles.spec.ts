@@ -666,6 +666,19 @@ describe('unit 2 answer key', () => {
   it('332 — |AC| = 8, |BC| = 10, DEC ~ BAC oran 1/2 ⇒ |DE| = 3, |EC| = 4, |BE| = 6, alan = 6·3/2 = 9 → C', () =>
     expect(answerOf('triangles-332')).toBe('C'));
 
+  it('333 — alanlar r/2 ortak çarpanıyla kenarlarla orantılı: 5 : 12 : 13, 90·13/30 = 39 → D', () =>
+    expect(answerOf('triangles-333')).toBe('D'));
+  it('334 — |BC| = 5·tan15 + 5/tan15 = 5(2 − √3) + 5(2 + √3) = 20, alan = 20·5/2 = 50 → C', () =>
+    expect(answerOf('triangles-334')).toBe('C'));
+  it('335 — E’de ortak/ters açı: AED = 6sinθ, AEF = 12sinθ, EFC = 24sinθ, ABF = (3/9)·36sinθ = 12sinθ, oran 6/24 = 1/4 → B', () =>
+    expect(answerOf('triangles-335')).toBe('B'));
+  it('336 — S₁ = 15sinθ, S₂ = 45sinθ, 30sinθ = 24 ⇒ sinθ = 4/5, S₂ = 36 → C', () =>
+    expect(answerOf('triangles-336')).toBe('C'));
+  it('337 — |AD| = |BD| = |DC| ⇒ m(A) = 90, |AC| = 16, |AM| = 8, |ME| = 2, |DM|² = 16 ⇒ |AB| = 8, alan = 8·16/2 = 64 → D', () =>
+    expect(answerOf('triangles-337')).toBe('D'));
+  it('338 — |DE| = |BE| = |EC| = 5 ⇒ m(BDC) = 90, |BD| = 8, A(BDC) = 24, A(ABD) = 24·4/6 = 16, A(BDE) = 12, toplam 28 → D', () =>
+    expect(answerOf('triangles-338')).toBe('D'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
