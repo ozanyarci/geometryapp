@@ -679,6 +679,19 @@ describe('unit 2 answer key', () => {
   it('338 — |DE| = |BE| = |EC| = 5 ⇒ m(BDC) = 90, |BD| = 8, A(BDC) = 24, A(ABD) = 24·4/6 = 16, A(BDE) = 12, toplam 28 → D', () =>
     expect(answerOf('triangles-338')).toBe('D'));
 
+  it('339 — |AF| = √(100 − 36) = 8, |AD| = |DB| ⇒ h = |AF| = 8, A(BCE) = 3·8/2 = 12 → A', () =>
+    expect(answerOf('triangles-339')).toBe('A'));
+  it('340 — |BC| = √(625 − 225) = 20, |DH| = 225/25 = 9, [BH] ∥ [AD] ⇒ alan = 16·9/2 = 72 → D', () =>
+    expect(answerOf('triangles-340')).toBe('D'));
+  it('341 — A(ADC) = 8·5/2 = 20, A(ABC) = 50 − 20 = 30 = 12·|CH|/2 ⇒ |CH| = 5 → B', () =>
+    expect(answerOf('triangles-341')).toBe('B'));
+  it('342 — 2α + 2β = 180 ⇒ m(FBD) = 90, |FD| = √(36 + 64) = 10, |AF| = 5, A(FBD) = 24, alan = 24/2 = 12 → C', () =>
+    expect(answerOf('triangles-342')).toBe('C'));
+  it('343 — her açı 360/3 = 120, alan = (2·4 + 4·8 + 2·8)·sin120/2 = 56·(√3/2)/2 = 14√3 → D', () =>
+    expect(answerOf('triangles-343')).toBe('D'));
+  it('344 — m(ACD) = 30, A(ADC) = 8·8·(1/2)/2 = 16, A(ABC) = 4·16 = 64, A(DBC) = 48, alan = 48/3 = 16 → B', () =>
+    expect(answerOf('triangles-344')).toBe('B'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
