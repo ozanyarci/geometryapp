@@ -705,6 +705,19 @@ describe('unit 2 answer key', () => {
   it('350 — ortak açı θ: 10(8 + x) = 15·8 = 120 ⇒ 8 + x = 12 ⇒ x = 4 → C', () =>
     expect(answerOf('triangles-350')).toBe('C'));
 
+  it('351 — h² = m(12 − m), 196 = (4 + m)² + m(12 − m) = 16 + 20m ⇒ m = 9, h = 3√3, alan = 16·3√3/2 = 24√3 → C', () =>
+    expect(answerOf('triangles-351')).toBe('C'));
+  it('352 — |BE|/|ED| = 24/12 = 2, |AE|/|AF| = |ED|/(|BD|/2) = 2/3, A(ABF) = 24·3/2 = 36, alan = 2·36 = 72 → C', () =>
+    expect(answerOf('triangles-352')).toBe('C'));
+  it('353 — A(ABC)/A(ACD) = 1/2, A(ACD) = 45·2/3 = 30 = |AC|·10·(1/2)/2 ⇒ |AC| = 12 → C', () =>
+    expect(answerOf('triangles-353')).toBe('C'));
+  it('354 — köşeler (2·4 + 4·3 + 3·2)/36 = 26/36, orta 10/36, oran 10/26 = 5/13 → C', () =>
+    expect(answerOf('triangles-354')).toBe('C'));
+  it('355 — α + γ = 180 − 120 = 60, m(B) = 180 − 120 = 60, alan = 8·5·(√3/2)/2 = 10√3 → B', () =>
+    expect(answerOf('triangles-355')).toBe('B'));
+  it('356 — |BE| = √(100 − 64) = 6, sin C = 6/10 = 3/5, 2R = 12/(3/5) = 20 ⇒ R = 10 → D', () =>
+    expect(answerOf('triangles-356')).toBe('D'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
