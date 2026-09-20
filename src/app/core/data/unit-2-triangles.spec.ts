@@ -692,6 +692,19 @@ describe('unit 2 answer key', () => {
   it('344 — m(ACD) = 30, A(ADC) = 8·8·(1/2)/2 = 16, A(ABC) = 4·16 = 64, A(DBC) = 48, alan = 48/3 = 16 → B', () =>
     expect(answerOf('triangles-344')).toBe('B'));
 
+  it('345 — |BC| = √(100 − 64) = 6, sin(BAC) = 6/10 = 3/5 = sin(ACD), alan = 10·8·(3/5)/2 = 24 → C', () =>
+    expect(answerOf('triangles-345')).toBe('C'));
+  it('346 — 49 = c² + 25 − 5c ⇒ c = |AB| = |DC| = 8, h = 8·(√3/2) = 4√3, alan = 8·4√3/2 = 16√3 → D', () =>
+    expect(answerOf('triangles-346')).toBe('D'));
+  it('347 — |AB| = 2·5 = 10, |AC| = 2·12 = 24, [BC] çap ⇒ m(A) = 90, alan = 10·24/2 = 120 → D', () =>
+    expect(answerOf('triangles-347')).toBe('D'));
+  it('348 — x² = |AB|² + 16, y² = |AB|² + 100, 2|AB|² + 116 = 244 ⇒ |AB| = 8, alan = 6·8/2 = 24 → C', () =>
+    expect(answerOf('triangles-348')).toBe('C'));
+  it('349 — diklik merkezi köşede ⇒ dik üçgen, hipotenüs 12, h ≤ 6, alan = 12·6/2 = 36 → C', () =>
+    expect(answerOf('triangles-349')).toBe('C'));
+  it('350 — ortak açı θ: 10(8 + x) = 15·8 = 120 ⇒ 8 + x = 12 ⇒ x = 4 → C', () =>
+    expect(answerOf('triangles-350')).toBe('C'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)

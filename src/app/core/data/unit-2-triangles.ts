@@ -30543,6 +30543,409 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+  {
+    id: 'triangles-345',
+    topic: 'Bütünler açılarla dörtgende alan',
+    figure: {
+      viewBox: '0 8 400 312',
+      caption: 'Şekil 345',
+      label:
+        'ABCD dörtgeninde A üstte solda, B altta solda, C ise B’nin sağındadır; D noktası C’nin sağında ve BC doğrusunun biraz altındadır. B köşesindeki açı diktir ve [AC] köşegeni çizilerek ABC ile ACD üçgenleri oluşmuştur.',
+      svg: `
+          <path class="ln" d="M30,30 L30,230 L180,230 L372,286 Z"/>
+          <path class="ln" d="M30,30 L180,230"/>
+
+          <path class="ln" d="M30,218 L42,218 L42,230"/>
+
+          <text class="val" x="22" y="136" text-anchor="end">8</text>
+          <text class="val" x="116" y="128">10</text>
+          <text class="val" x="276" y="278" text-anchor="middle">8</text>
+
+          <circle class="pt" cx="30" cy="30" r="3.2"/>
+          <circle class="pt" cx="30" cy="230" r="3.2"/>
+          <circle class="pt" cx="180" cy="230" r="3.2"/>
+          <circle class="pt" cx="372" cy="286" r="3.2"/>
+
+          <text x="30" y="21" text-anchor="middle">A</text>
+          <text x="22" y="248" text-anchor="end">B</text>
+          <text x="180" y="250" text-anchor="middle">C</text>
+          <text x="380" y="292">D</text>
+        `,
+    },
+    given: [
+      'ABCD bir dörtgendir',
+      '[AB] ⊥ [BC]',
+      '|AB| = |CD| = 8 cm',
+      '|AC| = 10 cm',
+      'm(BAC) + m(ACD) = 180°',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki dörtgende verilenlere göre, A(ACD) kaç cm²’dir?',
+    choices: [
+      { key: 'A', text: '18' },
+      { key: 'B', text: '20' },
+      { key: 'C', text: '24' },
+      { key: 'D', text: '28' },
+      { key: 'E', text: '32' },
+    ],
+    answer: 'C',
+    hint: 'Bütünler iki açının sinüsleri eşittir; önce ABC dik üçgeninde sin(BAC) değerini bul.',
+    solution: [
+      {
+        title: '|BC| uzunluğunu bul',
+        detail:
+          'ABC üçgeni B’de dik olduğundan |BC|² = |AC|² − |AB|² = 10² − 8² = 100 − 64 = 36 ⇒ |BC| = 6 cm’dir.',
+      },
+      {
+        title: 'BAC açısının sinüsü',
+        detail:
+          'Dik üçgende bir dar açının sinüsü, karşı dik kenarın hipotenüse oranıdır: sin(BAC) = |BC| / |AC| = 6 / 10 = 3/5’tir.',
+      },
+      {
+        title: 'Bütünler açıların sinüsleri eşittir',
+        detail:
+          'm(BAC) + m(ACD) = 180° verildiğinden m(ACD) = 180° − m(BAC)’dir. sin(180° − x) = sin x olduğundan sin(ACD) = sin(BAC) = 3/5 bulunur.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'ACD üçgeninde C köşesini çevreleyen kenarlar [CA] ve [CD] olduğundan A(ACD) = |CA| · |CD| · sin(ACD) / 2 = 10 · 8 · (3/5) / 2 = 48 / 2 = 24 cm² bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'triangles-346',
+    topic: 'Kosinüs teoremiyle bulunan kenar ve alan paylaşımı',
+    figure: {
+      viewBox: '0 8 400 232',
+      caption: 'Şekil 346',
+      label:
+        'ABC üçgeninde B, D ve C noktaları soldan sağa aynı doğru üzerindedir; D noktası [BC] üzerindedir ve A köşesi ile birleştirilmiştir. B köşesindeki açı 60 derecedir. [AB] ile [DC] birer çentikle eşit işaretlenmiştir.',
+      svg: `
+          <path class="ln" d="M134,30 L30,210.1 L368,210.1 Z"/>
+          <path class="ln" d="M134,30 L160,210.1"/>
+
+          <path class="arc" d="M64,210.1 A34,34 0 0 0 47,180.7"/>
+
+          <path class="tick" d="M76.8,117.1 L87.2,123.1"/>
+          <path class="tick" d="M264,204.1 L264,216.1"/>
+
+          <text class="val" x="72" y="196">60°</text>
+          <text class="val" x="154" y="122">7</text>
+          <text class="val" x="95" y="228" text-anchor="middle">5</text>
+
+          <circle class="pt" cx="134" cy="30" r="3.2"/>
+          <circle class="pt" cx="30" cy="210.1" r="3.2"/>
+          <circle class="pt" cx="160" cy="210.1" r="3.2"/>
+          <circle class="pt" cx="368" cy="210.1" r="3.2"/>
+
+          <text x="134" y="21" text-anchor="middle">A</text>
+          <text x="24" y="228" text-anchor="end">B</text>
+          <text x="164" y="228">D</text>
+          <text x="376" y="228">C</text>
+        `,
+    },
+    given: [
+      'D noktası [BC] üzerindedir',
+      '|AB| = |DC|',
+      '|AD| = 7 cm',
+      '|BD| = 5 cm',
+      'm(ABC) = 60°',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(ADC) kaç cm²’dir?',
+    choices: [
+      { key: 'A', text: '10√3' },
+      { key: 'B', text: '12√3' },
+      { key: 'C', text: '14√3' },
+      { key: 'D', text: '16√3' },
+      { key: 'E', text: '20√3' },
+    ],
+    answer: 'D',
+    hint: 'ABD üçgeninde iki kenar ile aradaki açı biliniyor; kosinüs teoremini |AB| bilinmeyeniyle kur.',
+    solution: [
+      {
+        title: 'ABD üçgeninde kosinüs teoremi',
+        detail:
+          '|AB| = c diyelim. ABD üçgeninde |AD|² = c² + |BD|² − 2 · c · |BD| · cos60° yazılır. cos60° = 1/2 olduğundan 7² = c² + 5² − 2 · c · 5 · (1/2), yani 49 = c² + 25 − 5c olur.',
+      },
+      {
+        title: 'Denklemi çöz',
+        detail:
+          'c² − 5c − 24 = 0 ⇒ (c − 8)(c + 3) = 0’dır. Uzunluk pozitif olduğundan c = |AB| = 8 cm bulunur. |AB| = |DC| verildiğinden |DC| = 8 cm’dir.',
+      },
+      {
+        title: 'A’dan [BC] ye inen yüksekliği bul',
+        detail:
+          'A’dan BC doğrusuna inen yükseklik h ise, B köşesindeki dik üçgende h = |AB| · sin60° = 8 · (√3/2) = 4√3 cm’dir. Bu yükseklik hem ABD hem ADC üçgeni için ortaktır.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'ADC üçgeninin tabanı [DC] ve yüksekliği h olduğundan A(ADC) = |DC| · h / 2 = 8 · 4√3 / 2 = 16√3 cm² bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'triangles-347',
+    topic: 'Çevrel çember merkezi kenar üzerindeyse dik üçgen',
+    figure: {
+      viewBox: '0 6 400 176',
+      caption: 'Şekil 347',
+      label:
+        'ABC üçgeninde K noktası [BC] üzerindedir. K’dan [AB] ye inilen dikmenin ayağı E, [AC] ye inilen dikmenin ayağı D’dir; her iki dikme de dik açı kutusuyla işaretlenmiştir.',
+      svg: `
+          <path class="ln" d="M80,30 L30,150 L368,150 Z"/>
+          <path class="ln" d="M199,150 L55,90"/>
+          <path class="ln" d="M199,150 L224,90"/>
+
+          <path class="ln" d="M51.2,99.2 L60.4,103.1 L64.2,93.8"/>
+          <path class="ln" d="M214.8,86.2 L211,95.4 L220.2,99.2"/>
+
+          <text class="val" x="60" y="58" text-anchor="end">5</text>
+          <text class="val" x="150" y="50" text-anchor="middle">12</text>
+
+          <circle class="pt" cx="80" cy="30" r="3.2"/>
+          <circle class="pt" cx="30" cy="150" r="3.2"/>
+          <circle class="pt" cx="368" cy="150" r="3.2"/>
+          <circle class="pt" cx="199" cy="150" r="3.2"/>
+          <circle class="pt" cx="55" cy="90" r="3.2"/>
+          <circle class="pt" cx="224" cy="90" r="3.2"/>
+
+          <text x="80" y="21" text-anchor="middle">A</text>
+          <text x="22" y="168" text-anchor="end">B</text>
+          <text x="376" y="168">C</text>
+          <text x="199" y="168" text-anchor="middle">K</text>
+          <text x="47" y="86" text-anchor="end">E</text>
+          <text x="232" y="86">D</text>
+        `,
+    },
+    given: [
+      'K noktası ABC üçgeninin çevrel çemberinin merkezidir',
+      'K noktası [BC] üzerindedir',
+      '[KE] ⊥ [AB] ve [KD] ⊥ [AC]',
+      '|AE| = 5 cm',
+      '|AD| = 12 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki şekilde verilenlere göre, A(ABC) kaç cm²’dir?',
+    choices: [
+      { key: 'A', text: '60' },
+      { key: 'B', text: '96' },
+      { key: 'C', text: '108' },
+      { key: 'D', text: '120' },
+      { key: 'E', text: '130' },
+    ],
+    answer: 'D',
+    hint: 'Merkezden bir kirişe inilen dikme o kirişi ortalar; ayrıca merkez [BC] üzerinde olduğuna göre [BC] nedir?',
+    solution: [
+      {
+        title: 'Dikmeler kirişleri ortalar',
+        detail:
+          '[AB] ve [AC] çevrel çemberin birer kirişidir. Merkezden bir kirişe indirilen dikme kirişi ortaladığından E noktası [AB] nin, D noktası [AC] nin orta noktasıdır.',
+      },
+      {
+        title: 'Kenar uzunluklarını bul',
+        detail: '|AB| = 2 · |AE| = 2 · 5 = 10 cm ve |AC| = 2 · |AD| = 2 · 12 = 24 cm’dir.',
+      },
+      {
+        title: 'A köşesinin dik olduğunu göster',
+        detail:
+          'Çevrel çemberin merkezi K, [BC] üzerinde olduğundan [BC] çemberin çapıdır. Çapı gören çevre açı 90° olduğundan m(BAC) = 90°’dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'ABC üçgeni A’da dik olduğundan dik kenarları [AB] ile [AC] dir: A(ABC) = |AB| · |AC| / 2 = 10 · 24 / 2 = 120 cm² bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'triangles-348',
+    topic: 'Dik üçgende Pisagor bağıntılarıyla alan',
+    figure: {
+      viewBox: '0 8 400 324',
+      caption: 'Şekil 348',
+      label:
+        'ABC üçgeni B köşesinde diktir. B, D ve C noktaları soldan sağa aynı doğru üzerindedir ve D noktası [BC] üzerindedir. A köşesi hem D hem C ile birleştirilmiştir; [AD] uzunluğu x, [AC] uzunluğu y ile gösterilmiştir.',
+      svg: `
+          <path class="ln" d="M30,30 L30,302 L370,302 Z"/>
+          <path class="ln" d="M30,30 L166,302"/>
+
+          <path class="ln" d="M30,290 L42,290 L42,302"/>
+
+          <text class="val" x="90" y="176" text-anchor="end">x</text>
+          <text class="val" x="215" y="152">y</text>
+          <text class="val" x="98" y="320" text-anchor="middle">4</text>
+          <text class="val" x="268" y="320" text-anchor="middle">6</text>
+
+          <circle class="pt" cx="30" cy="30" r="3.2"/>
+          <circle class="pt" cx="30" cy="302" r="3.2"/>
+          <circle class="pt" cx="166" cy="302" r="3.2"/>
+          <circle class="pt" cx="370" cy="302" r="3.2"/>
+
+          <text x="30" y="21" text-anchor="middle">A</text>
+          <text x="22" y="320" text-anchor="end">B</text>
+          <text x="166" y="320" text-anchor="middle">D</text>
+          <text x="378" y="320">C</text>
+        `,
+    },
+    given: [
+      'ABC bir dik üçgendir',
+      'D noktası [BC] üzerindedir',
+      '|BD| = 4 cm',
+      '|DC| = 6 cm',
+      '|AD| = x, |AC| = y ve x² + y² = 244',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, ADC üçgeninin alanı kaç cm²’dir?',
+    choices: [
+      { key: 'A', text: '12' },
+      { key: 'B', text: '18' },
+      { key: 'C', text: '24' },
+      { key: 'D', text: '27' },
+      { key: 'E', text: '30' },
+    ],
+    answer: 'C',
+    hint: 'Hem ABD hem ABC üçgeni B’de diktir; x² ile y² yi ortak |AB| cinsinden yaz.',
+    solution: [
+      {
+        title: 'x² yi |AB| cinsinden yaz',
+        detail: 'ABD üçgeni B’de diktir: x² = |AD|² = |AB|² + |BD|² = |AB|² + 4² = |AB|² + 16’dır.',
+      },
+      {
+        title: 'y² yi |AB| cinsinden yaz',
+        detail:
+          '|BC| = |BD| + |DC| = 4 + 6 = 10 cm’dir. ABC üçgeni B’de diktir: y² = |AC|² = |AB|² + |BC|² = |AB|² + 10² = |AB|² + 100’dür.',
+      },
+      {
+        title: '|AB| uzunluğunu bul',
+        detail:
+          'x² + y² = 244 verildiğinden (|AB|² + 16) + (|AB|² + 100) = 244 ⇒ 2 · |AB|² + 116 = 244 ⇒ 2 · |AB|² = 128 ⇒ |AB|² = 64 ⇒ |AB| = 8 cm bulunur.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'ADC üçgeninin tabanı [DC], bu tabana ait yüksekliği ise [AB] dir; çünkü [AB] ⊥ [BC] dir. A(ADC) = |DC| · |AB| / 2 = 6 · 8 / 2 = 24 cm² bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'triangles-349',
+    topic: 'Diklik merkezi köşede olan üçgende maksimum alan',
+    stem: [
+      'Bir ABC üçgeninde yüksekliklerin kesim noktası üçgenin bir köşesidir. En uzun kenarı 12 cm olmak şartıyla bu ABC üçgeninin alanı en büyük değerini alıyor.',
+    ],
+    ask: 'Buna göre, ABC üçgeninin alanının maksimum değeri kaç cm²’dir?',
+    choices: [
+      { key: 'A', text: '24' },
+      { key: 'B', text: '30' },
+      { key: 'C', text: '36' },
+      { key: 'D', text: '45' },
+      { key: 'E', text: '48' },
+    ],
+    answer: 'C',
+    hint: 'Yüksekliklerin bir köşede kesişmesi ne demektir? O köşedeki açıyı düşün; ardından hipotenüsü sabit tutup dik kenarları değiştir.',
+    solution: [
+      {
+        title: 'Üçgenin dik üçgen olduğunu göster',
+        detail:
+          'Dik üçgende dik kenarların her biri diğerine ait yüksekliktir, bu iki yükseklik de dik köşede kesişir. Dolayısıyla yüksekliklerin kesim noktası bir köşe ise üçgen o köşede diktir. Dik açının A köşesinde olduğunu kabul edelim.',
+      },
+      {
+        title: 'En uzun kenar hipotenüstür',
+        detail:
+          'Bir üçgende en büyük açının karşısındaki kenar en uzundur. Dik üçgende en büyük açı 90° olduğundan en uzun kenar hipotenüstür: |BC| = 12 cm’dir.',
+      },
+      {
+        title: 'Alanı hipotenüs ve yükseklikle yaz',
+        detail:
+          'A köşesinden [BC] ye inilen yükseklik h ise A(ABC) = |BC| · h / 2 = 12h / 2 = 6h’dir. Alanın en büyük olması için h en büyük olmalıdır.',
+      },
+      {
+        title: 'h en fazla kaç olabilir',
+        detail:
+          'm(BAC) = 90° olduğundan A noktası, çapı [BC] olan çember üzerindedir. Bu çemberin yarıçapı 12 / 2 = 6 cm’dir, dolayısıyla A’nın [BC] ye uzaklığı en fazla yarıçap kadar, yani h ≤ 6 cm’dir. Eşitlik A çapın orta dikmesi üzerindeyken, yani ikizkenar dik üçgende sağlanır.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Maksimum alan 6h = 6 · 6 = 36 cm²’dir.',
+      },
+    ],
+  },
+  {
+    id: 'triangles-350',
+    topic: 'Ortak açılı üçgenlerin alanlarının eşitliği',
+    figure: {
+      viewBox: '0 8 400 362',
+      caption: 'Şekil 350',
+      label:
+        'D, A ve B noktaları yukarıdan aşağıya aynı doğru üzerindedir; B, F ve C noktaları soldan sağa aynı doğru üzerindedir. [AC] ile [DF] doğru parçaları E noktasında kesişmektedir.',
+      svg: `
+          <path class="ln" d="M181,30 L68,340 L332,340 Z"/>
+          <path class="ln" d="M143.3,133.3 L332,340"/>
+          <path class="ln" d="M181,30 L244,340"/>
+
+          <text class="val" x="154" y="82" text-anchor="end">5</text>
+          <text class="val" x="97" y="238" text-anchor="end">10</text>
+          <text class="val" x="156" y="360" text-anchor="middle">8</text>
+          <text class="val" x="292" y="360" text-anchor="middle">x</text>
+
+          <circle class="pt" cx="181" cy="30" r="3.2"/>
+          <circle class="pt" cx="143.3" cy="133.3" r="3.2"/>
+          <circle class="pt" cx="68" cy="340" r="3.2"/>
+          <circle class="pt" cx="244" cy="340" r="3.2"/>
+          <circle class="pt" cx="332" cy="340" r="3.2"/>
+          <circle class="pt" cx="218.8" cy="216" r="3.2"/>
+
+          <text x="181" y="21" text-anchor="middle">D</text>
+          <text x="135" y="130" text-anchor="end">A</text>
+          <text x="60" y="360" text-anchor="end">B</text>
+          <text x="244" y="360" text-anchor="middle">F</text>
+          <text x="340" y="360">C</text>
+          <text x="228" y="212">E</text>
+        `,
+    },
+    given: [
+      'A noktası [DB], F noktası [BC] üzerindedir',
+      'A(ABC) = A(DBF)',
+      '|AD| = 5 cm',
+      '|AB| = 10 cm',
+      '|BF| = 8 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |FC| = x kaç cm’dir?',
+    choices: [
+      { key: 'A', text: '2' },
+      { key: 'B', text: '3' },
+      { key: 'C', text: '4' },
+      { key: 'D', text: '5' },
+      { key: 'E', text: '6' },
+    ],
+    answer: 'C',
+    hint: 'ABC ve DBF üçgenlerinin B köşesindeki açısı ortaktır; alanı iki kenar ve aradaki açıyla yaz.',
+    solution: [
+      {
+        title: 'Ortak açıyı belirle',
+        detail:
+          'A noktası [DB], F noktası [BC] üzerinde olduğundan ABC üçgeninin B’deki açısı ile DBF üçgeninin B’deki açısı aynı açıdır. Bu ortak açının ölçüsüne θ diyelim.',
+      },
+      {
+        title: 'Kenarları yaz',
+        detail: '|BD| = |AD| + |AB| = 5 + 10 = 15 cm ve |BC| = |BF| + |FC| = 8 + x cm’dir.',
+      },
+      {
+        title: 'İki alanı da ortak açıyla ifade et',
+        detail:
+          'A(ABC) = |BA| · |BC| · sinθ / 2 = 10 · (8 + x) · sinθ / 2 ve A(DBF) = |BD| · |BF| · sinθ / 2 = 15 · 8 · sinθ / 2’dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'Alanlar eşit olduğundan sinθ / 2 çarpanı sadeleşir: 10 · (8 + x) = 15 · 8 = 120 ⇒ 8 + x = 12 ⇒ x = 4 cm bulunur.',
+      },
+    ],
+  },
 ];
 
 /** Looks questions up by id so the modules below read as a running order. */
@@ -31423,6 +31826,21 @@ export const UNIT_2_TRIANGLES: Unit = {
         'triangles-342',
         'triangles-343',
         'triangles-344',
+      ),
+    },
+    {
+      id: 'triangles-m58',
+      order: 58,
+      title: 'Üçgende alanlar — Test 13',
+      summary:
+        'Bütünler açıların eşit sinüsleri, kosinüs teoremiyle bulunan kenar üzerinden alan paylaşımı, çevrel çember merkezi kenar üzerindeki dik üçgen, iki Pisagor bağıntısının toplanması, diklik merkezi köşede olan üçgende maksimum alan ve ortak açılı iki üçgenin alan eşitliği.',
+      questions: pick(
+        'triangles-345',
+        'triangles-346',
+        'triangles-347',
+        'triangles-348',
+        'triangles-349',
+        'triangles-350',
       ),
     },
   ],
