@@ -34438,7 +34438,6 @@ const QUESTIONS: Question[] = [
           <text class="val" x="134" y="320" text-anchor="middle">x</text>
           <text class="val" x="299" y="320" text-anchor="middle">12</text>
           <text class="val" x="245" y="255.5">9</text>
-          <text class="val" x="313" y="244.5" text-anchor="middle">15</text>
           <text x="35" y="318" text-anchor="middle">D</text>
           <text x="225" y="318" text-anchor="end">B</text>
           <text x="373" y="318">C</text>
@@ -34514,7 +34513,6 @@ const QUESTIONS: Question[] = [
           <circle class="pt" cx="92" cy="320" r="3.2"/>
           <circle class="pt" cx="308" cy="320" r="3.2"/>
           <circle class="pt" cx="294.5" cy="212.8" r="3.2"/>
-          <text class="val" x="171.1" y="186.1" text-anchor="end">12</text>
           <text class="val" x="200" y="340" text-anchor="middle">8</text>
           <text class="val" x="300.2" y="132.5" text-anchor="middle">6</text>
           <text class="val" x="314.5" y="272.4" text-anchor="middle">4</text>
