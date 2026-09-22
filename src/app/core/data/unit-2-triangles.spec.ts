@@ -807,6 +807,19 @@ describe('unit 2 answer key', () => {
   it('398 — 6/3 = |AB|/4 ⇒ |AB| = 8, |BF|² = 8·4 − 6·3 = 14, x = √14 → C', () =>
     expect(answerOf('triangles-398')).toBe('C'));
 
+  it('399 — |BM| = 12, |IM| = √(160 − 144) = 4, (h − 4)/4 = |AB|/12 ve |AB|² = h² + 144 ⇒ h = 9, |AB| = 15, Ç = 54 → C', () =>
+    expect(answerOf('triangles-399')).toBe('C'));
+  it('400 — |AC| = 25, r = (15 + 20 − 25)/2 = 5, |AP| = 10, |AI| = √(100 + 25) = 5√5 → C', () =>
+    expect(answerOf('triangles-400')).toBe('C'));
+  it('401 — |BD| = 10, |BH| = |BA| = 8, |DH| = |DA| = 6, |HC| = 15, x = √(64 + 225) = 17 → C', () =>
+    expect(answerOf('triangles-401')).toBe('C'));
+  it('402 — m(B) = 60, m(ABE) = 30, m(AEB) = 75 ⇒ |BE| = |AB| = 10, x = 10·sin30/sin45 = 5√2 → B', () =>
+    expect(answerOf('triangles-402')).toBe('B'));
+  it('403 — |EH| = |ED| = 12, |HC| = √(169 − 144) = 5, |HF| = 16, x = √(144 + 256) = 20 → C', () =>
+    expect(answerOf('triangles-403')).toBe('C'));
+  it('404 — A(EDC)/A(BEC) = b/(a + c) = 5/8, |AB|/|AD| = (a + c)/b = 8/5 → A', () =>
+    expect(answerOf('triangles-404')).toBe('A'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
