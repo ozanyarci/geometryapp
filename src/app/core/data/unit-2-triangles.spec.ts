@@ -744,6 +744,19 @@ describe('unit 2 answer key', () => {
   it('368 — |AD| = √(81 + 144) = 15, A(ADC) = 10·9/2 = 45, |AE|/|EC| = 15/10 ⇒ A(DEC) = 45·2/5 = 18 → B', () =>
     expect(answerOf('triangles-368')).toBe('B'));
 
+  it('369 — |BN|/|NC| = |AB|/|AC| = sin60/sin45 = √3/√2 = √6/2 → B', () =>
+    expect(answerOf('triangles-369')).toBe('B'));
+  it('370 — |DE| = 9, 9(a − c)/2 = 54 ⇒ a − c = 12; 12(a + c) = (9 + x)² ve a + c = 12(x + 9)/(x − 9) ⇒ x² = 225, x = 15 → D', () =>
+    expect(answerOf('triangles-370')).toBe('D'));
+  it('371 — |AC| = 10, |CE| = |CB| = 8 ⇒ |AE| = 6 ve [AE] ⊥ [CE], |ED| = 3, |AD| = √(36 + 9) = 3√5 → A', () =>
+    expect(answerOf('triangles-371')).toBe('A'));
+  it('372 — |EC| = 6·5/3 = 10, |BC| = 16; |DB|/(|DB| + 16) = 3/5 ⇒ |DB| = 24, |DC| = 40 → C', () =>
+    expect(answerOf('triangles-372')).toBe('C'));
+  it('373 — |AD|/|DC| = 24/12 = 2 = |AB|/|BC|, |AB|·|BC| = 2·36 = 72 ⇒ 2|BC|² = 72, |BC| = 6 → E', () =>
+    expect(answerOf('triangles-373')).toBe('E'));
+  it('374 — (6 − 4) + (|AC| − |AB|) = 5 ⇒ |AC| − |AB| = 3, |AC| = 3|AB|/2 ⇒ |AB| = 6, |AC| = 9, Ç = 6 + 9 + 10 = 25 → C', () =>
+    expect(answerOf('triangles-374')).toBe('C'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
