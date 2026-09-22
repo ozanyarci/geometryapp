@@ -820,6 +820,19 @@ describe('unit 2 answer key', () => {
   it('404 — A(EDC)/A(BEC) = b/(a + c) = 5/8, |AB|/|AD| = (a + c)/b = 8/5 → A', () =>
     expect(answerOf('triangles-404')).toBe('A'));
 
+  it('405 — |DC| = 60, |AB|/|AC| = 45/60 = 3/4, 25k² = 225 ⇒ |AB| = 9, |AC| = 12, A(ABC) = 54, A(ABD) = 3·54 = 162 → C', () =>
+    expect(answerOf('triangles-405')).toBe('C'));
+  it('406 — |AE|² = |AB|·|AD| = 16·20 = 320, x = √(320 − 256) = 8 → B', () =>
+    expect(answerOf('triangles-406')).toBe('B'));
+  it('407 — |AD|² = 2·6 = 12, |AD| = 2√3, 6k = 2k + 8 ⇒ k = 2, x = 2·2√3 = 4√3 → D', () =>
+    expect(answerOf('triangles-407')).toBe('D'));
+  it('408 — Menelaus: (|BA|/|AD|)·1·(3/4) = 1 ⇒ |AB| = 12, |AC| = 9, |AF|² = 108 − 12 = 96, |AF| = 4√6 → C', () =>
+    expect(answerOf('triangles-408')).toBe('C'));
+  it('409 — A(ABD)/A(EDC) = |AB|/|EC| = 4/3 ⇒ x = 12·3/4 = 9 → D', () =>
+    expect(answerOf('triangles-409')).toBe('D'));
+  it('410 — |BD| = 4, |DC| = 6, |AD|² = 96 − 24 = 72 ⇒ |AD| = 6√2, |AI|/|ID| = 8/4 = 2, x = (2/3)·6√2 = 4√2 → B', () =>
+    expect(answerOf('triangles-410')).toBe('B'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
