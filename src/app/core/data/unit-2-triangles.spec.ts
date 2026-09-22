@@ -833,6 +833,19 @@ describe('unit 2 answer key', () => {
   it('410 — |BD| = 4, |DC| = 6, |AD|² = 96 − 24 = 72 ⇒ |AD| = 6√2, |AI|/|ID| = 8/4 = 2, x = (2/3)·6√2 = 4√2 → B', () =>
     expect(answerOf('triangles-410')).toBe('B'));
 
+  it('411 — h = √(100 − 36) = 8, A = 48, u = 16, r = 48/16 = 3, A(ABD) = 12·3/2 = 18 → D', () =>
+    expect(answerOf('triangles-411')).toBe('D'));
+  it('412 — |AB|/|AC| = 5/3, 3(|DC| + 8) = 5|DC| ⇒ |DC| = 12, S₁/S₂ = 5/12 → B', () =>
+    expect(answerOf('triangles-412')).toBe('B'));
+  it('413 — [BE] ⊥ [AC] ⇒ |BC| = |AB| = 12, C deki dış açı 2α ⇒ [CD dış açıortay, 6/18 = x/12, x = 4 → B', () =>
+    expect(answerOf('triangles-413')).toBe('B'));
+  it('414 — |BD| = 8·9/20 = 18/5, |AK|/|KD| = |BA|/|BD| = 9/(18/5) = 5/2 → E', () =>
+    expect(answerOf('triangles-414')).toBe('E'));
+  it('415 — |AC| = 15 = |AD|, |AD|/|BC| = 5/4, E nin [BC] ye uzaklığı 9·4/9 = 4, A(BEC) = 12·4/2 = 24 → A', () =>
+    expect(answerOf('triangles-415')).toBe('A'));
+  it('416 — |AH| = |AB| = 8, |OC| = |CA| = 10, |CH| = √(100 − 64) = 6, |OB| = 16, 64 + 40 = 104 → D', () =>
+    expect(answerOf('triangles-416')).toBe('D'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
