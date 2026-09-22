@@ -32878,6 +32878,597 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+  {
+    id: 'triangles-375',
+    topic: 'Dik üçgende iç teğet çemberin yarıçapı',
+    figure: {
+      viewBox: '0 170 400 160',
+      caption: 'Şekil 375',
+      label:
+        'A köşesindeki açısı dik olan ABC üçgeninde iç açıortayların kesim noktası O, O’dan [BC] kenarına inen dikmenin ayağı E ile gösterilmiştir; |OE| = r dir.',
+      svg: `
+          <path class="ln" d="M271.8,187.1 L60,300 L332,300 Z"/>
+          <path class="ln" d="M60,300 L252,252"/>
+          <path class="ln" d="M332,300 L252,252"/>
+          <path class="ln" d="M252,252 L252,300"/>
+          <path class="ln" d="M259.4,193.7 L266,206.1 L278.4,199.5"/>
+          <path class="ln" d="M252,288 L264,288 L264,300"/>
+
+          <path class="arc" d="M104,300 A44,44 0 0 0 102.7,289.3"/>
+          <line class="tick" x1="97.7" y1="295.4" x2="109.6" y2="293.9"/>
+          <path class="arc" d="M102.7,289.3 A44,44 0 0 0 98.8,279.3"/>
+          <line class="tick" x1="95.5" y1="286.4" x2="106.7" y2="282"/>
+
+          <path class="arc" d="M288,300 A44,44 0 0 1 294.3,277.3"/>
+          <line class="tick" x1="295.4" y1="289.8" x2="283.8" y2="286.6"/>
+          <path class="arc" d="M294.3,277.3 A44,44 0 0 1 311.3,261.2"/>
+          <line class="tick" x1="305.8" y1="272.5" x2="297.5" y2="263.8"/>
+
+          <circle class="pt" cx="271.8" cy="187.1" r="3.2"/>
+          <circle class="pt" cx="60" cy="300" r="3.2"/>
+          <circle class="pt" cx="332" cy="300" r="3.2"/>
+          <circle class="pt" cx="252" cy="252" r="3.2"/>
+          <circle class="pt" cx="252" cy="300" r="3.2"/>
+
+          <text class="val" x="262" y="279">r</text>
+
+          <text x="271.8" y="178" text-anchor="middle">A</text>
+          <text x="52" y="318" text-anchor="end">B</text>
+          <text x="342" y="318">C</text>
+          <text x="243" y="246" text-anchor="end">O</text>
+          <text x="252" y="318" text-anchor="middle">E</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 170 400 160',
+      caption: 'Şekil 375 — iç teğet çember çizilmiş hâli',
+      label:
+        'Aynı üçgende merkezi O, yarıçapı r olan iç teğet çember çizilmiş; çemberin [AB] kenarına değdiği nokta F, [AC] kenarına değdiği nokta G ile gösterilmiştir. AFOG bir karedir.',
+      svg: `
+          <path class="ln" d="M271.8,187.1 L60,300 L332,300 Z"/>
+          <path class="ln" d="M252,252 L252,300"/>
+          <path class="ln" d="M259.4,193.7 L266,206.1 L278.4,199.5"/>
+          <path class="ln" d="M252,288 L264,288 L264,300"/>
+
+          <circle class="aux" cx="252" cy="252" r="48" fill="none"/>
+          <path class="aux" d="M252,252 L229.5,209.6"/>
+          <path class="aux" d="M252,252 L294.4,229.4"/>
+          <path class="aux" d="M229.5,209.6 L271.8,187.1 L294.4,229.4"/>
+
+          <circle class="pt" cx="271.8" cy="187.1" r="3.2"/>
+          <circle class="pt" cx="60" cy="300" r="3.2"/>
+          <circle class="pt" cx="332" cy="300" r="3.2"/>
+          <circle class="pt" cx="252" cy="252" r="3.2"/>
+          <circle class="pt" cx="252" cy="300" r="3.2"/>
+          <circle class="pt" cx="229.5" cy="209.6" r="3.2"/>
+          <circle class="pt" cx="294.4" cy="229.4" r="3.2"/>
+
+          <text class="val" x="262" y="279">r</text>
+          <text class="val" x="238" y="225" text-anchor="end">r</text>
+          <text class="val" x="290" y="205">r</text>
+          <text class="val" x="150" y="243" text-anchor="end">y</text>
+          <text class="val" x="156" y="292" text-anchor="middle">y</text>
+          <text class="val" x="320" y="270">z</text>
+          <text class="val" x="292" y="292" text-anchor="middle">z</text>
+
+          <text x="271.8" y="178" text-anchor="middle">A</text>
+          <text x="52" y="318" text-anchor="end">B</text>
+          <text x="342" y="318">C</text>
+          <text x="243" y="246" text-anchor="end">O</text>
+          <text x="252" y="318" text-anchor="middle">E</text>
+          <text x="221" y="205" text-anchor="end">F</text>
+          <text x="302" y="227">G</text>
+        `,
+    },
+    given: [
+      'ABC bir dik üçgen',
+      'm(BAC) = 90°',
+      'O, iç açıortayların kesim noktası',
+      'E ∈ [BC]',
+      '[OE] ⊥ [BC]',
+      '|OE| = r = 3 cm',
+      'Çevre(ABC) = 40 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |BC| kaç cm’dir?',
+    choices: [
+      { key: 'A', text: '15' },
+      { key: 'B', text: '16' },
+      { key: 'C', text: '17' },
+      { key: 'D', text: '18' },
+      { key: 'E', text: '20' },
+    ],
+    answer: 'C',
+    hint: 'Bir dış noktadan çembere çizilen iki teğet parçası eşittir; çevreyi bu eşit parçalar cinsinden yaz.',
+    solution: [
+      {
+        title: 'O’nun iç teğet çemberin merkezi olduğunu gör',
+        detail:
+          'O, iç açıortayların kesim noktası olduğundan üç kenara da eşit uzaklıktadır. Bu ortak uzaklık iç teğet çemberin yarıçapı r = 3 cm dir; çember [AB], [AC] ve [BC] kenarlarına sırasıyla F, G ve E noktalarında teğettir.',
+      },
+      {
+        title: 'Dik köşede kareyi kur',
+        detail:
+          '[OF] ⊥ [AB], [OG] ⊥ [AC] ve m(BAC) = 90° olduğundan AFOG dörtgeninin dört açısı da diktir ve |OF| = |OG| = r dir. Yani AFOG bir karedir ve |AF| = |AG| = r = 3 cm olur.',
+      },
+      {
+        title: 'Teğet parçalarını eşitle',
+        detail:
+          'B noktasından çizilen teğet parçaları eşit olduğundan |BF| = |BE| = y, C noktasından çizilenler eşit olduğundan |CG| = |CE| = z dir.',
+      },
+      {
+        title: 'Çevreyi bu parçalarla yaz',
+        detail:
+          '|AB| = r + y, |AC| = r + z ve |BC| = y + z dir. Çevre(ABC) = (r + y) + (r + z) + (y + z) = 2r + 2(y + z) = 2r + 2|BC| olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '40 = 2 · 3 + 2|BC| ⇒ 2|BC| = 34 ⇒ |BC| = 17 cm bulunur. (8 - 15 - 17 üçgeni bu koşulları sağlar.)',
+      },
+    ],
+  },
+  {
+    id: 'triangles-376',
+    topic: 'Açıortay bağıntısıyla yüksekliğin ayırdığı taban',
+    figure: {
+      viewBox: '0 138 400 190',
+      caption: 'Şekil 376',
+      label:
+        'ABC üçgeninde A köşesinden [BC] kenarına inen yüksekliğin ayağı H dir; BAH açısı, HAC açısının iki katıdır. |AB| = 10 cm, |BH| = 8 cm ve |HC| = x tir.',
+      svg: `
+          <path class="ln" d="M252,156 L60,300 L324,300 Z"/>
+          <path class="ln" d="M252,156 L252,300"/>
+          <path class="ln" d="M252,286 L266,286 L266,300"/>
+
+          <path class="arc" d="M215.2,183.6 A46,46 0 0 0 252,202"/>
+          <path class="arc" d="M252,202 A46,46 0 0 0 272.6,197.1"/>
+
+          <circle class="pt" cx="252" cy="156" r="3.2"/>
+          <circle class="pt" cx="60" cy="300" r="3.2"/>
+          <circle class="pt" cx="324" cy="300" r="3.2"/>
+          <circle class="pt" cx="252" cy="300" r="3.2"/>
+
+          <text class="val" x="222" y="219" text-anchor="middle">2α</text>
+          <text class="val" x="270" y="227">α</text>
+          <text class="val" x="146" y="222" text-anchor="end">10</text>
+          <text class="val" x="156" y="293" text-anchor="middle">8</text>
+          <text class="val" x="288" y="293" text-anchor="middle">x</text>
+
+          <text x="252" y="147" text-anchor="middle">A</text>
+          <text x="52" y="318" text-anchor="end">B</text>
+          <text x="334" y="318">C</text>
+          <text x="252" y="318" text-anchor="middle">H</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 138 400 190',
+      caption: 'Şekil 376 — BAH açısının açıortayı çizilmiş hâli',
+      label:
+        'Aynı üçgende BAH açısının açıortayı çizilmiş ve [BH] kenarını kestiği nokta D ile gösterilmiştir; böylece A köşesinde birbirine eşit üç açı oluşur.',
+      svg: `
+          <path class="ln" d="M252,156 L60,300 L324,300 Z"/>
+          <path class="ln" d="M252,156 L252,300"/>
+          <path class="ln" d="M252,286 L266,286 L266,300"/>
+          <path class="aux" d="M252,156 L180,300"/>
+
+          <path class="arc" d="M215.2,183.6 A46,46 0 0 0 231.4,197.1"/>
+          <line class="tick" x1="226.4" y1="186.7" x2="218.7" y2="195.9"/>
+          <path class="arc" d="M231.4,197.1 A46,46 0 0 0 252,202"/>
+          <line class="tick" x1="242.8" y1="194.9" x2="240" y2="206.6"/>
+          <path class="arc" d="M252,202 A46,46 0 0 0 272.6,197.1"/>
+          <line class="tick" x1="261.2" y1="194.9" x2="263.9" y2="206.6"/>
+
+          <circle class="pt" cx="252" cy="156" r="3.2"/>
+          <circle class="pt" cx="60" cy="300" r="3.2"/>
+          <circle class="pt" cx="324" cy="300" r="3.2"/>
+          <circle class="pt" cx="252" cy="300" r="3.2"/>
+          <circle class="pt" cx="180" cy="300" r="3.2"/>
+
+          <text class="val" x="146" y="222" text-anchor="end">10</text>
+          <text class="val" x="120" y="293" text-anchor="middle">5</text>
+          <text class="val" x="216" y="293" text-anchor="middle">3</text>
+          <text class="val" x="262" y="240">6</text>
+          <text class="val" x="288" y="293" text-anchor="middle">x</text>
+
+          <text x="252" y="147" text-anchor="middle">A</text>
+          <text x="52" y="318" text-anchor="end">B</text>
+          <text x="334" y="318">C</text>
+          <text x="252" y="318" text-anchor="middle">H</text>
+          <text x="180" y="318" text-anchor="middle">D</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      '[AH] ⊥ [BC]',
+      'H ∈ [BC]',
+      'm(BAH) = 2 · m(HAC)',
+      '|AB| = 10 cm',
+      '|BH| = 8 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |HC| = x kaç cm’dir?',
+    choices: [
+      { key: 'A', text: '2' },
+      { key: 'B', text: '3' },
+      { key: 'C', text: '4' },
+      { key: 'D', text: '9/2' },
+      { key: 'E', text: '5' },
+    ],
+    answer: 'B',
+    hint: 'BAH açısının açıortayını çizersen [AH] birbirine eşit iki açının arasında kalır ve açıortay bağıntısını iki kez kurabilirsin.',
+    solution: [
+      {
+        title: 'Yüksekliği bul',
+        detail:
+          'ABH dik üçgeninde |AH|² = |AB|² − |BH|² = 100 − 64 = 36 olduğundan |AH| = 6 cm dir.',
+      },
+      {
+        title: 'BAH açısının açıortayını çiz',
+        detail:
+          'm(HAC) = α dersek m(BAH) = 2α dır. BAH açısının açıortayının [BH] kenarını kestiği noktaya D dersek m(BAD) = m(DAH) = α olur; böylece A köşesinde eşit üç açı oluşur.',
+      },
+      {
+        title: 'ABH üçgeninde açıortay bağıntısı',
+        detail:
+          '[AD], ABH üçgeninin A köşesinden çizilen açıortayı olduğundan |BD| / |DH| = |AB| / |AH| = 10 / 6 = 5 / 3 tür. |BH| = 8 cm olduğundan |BD| = 5 cm ve |DH| = 3 cm bulunur.',
+      },
+      {
+        title: '|AD| uzunluğunu hesapla',
+        detail:
+          'ADH dik üçgeninde |AD|² = |AH|² + |DH|² = 36 + 9 = 45 olduğundan |AD| = 3√5 cm dir.',
+      },
+      {
+        title: 'ADC üçgeninde açıortay bağıntısı',
+        detail:
+          'm(DAH) = m(HAC) = α olduğundan [AH], ADC üçgeninin A köşesinden çizilen açıortayıdır: |DH| / |HC| = |AD| / |AC| ⇒ 3 / x = 3√5 / √(36 + x²) olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'İçler dışlar çarpımı √(36 + x²) = x√5 verir. Kareleri alınca 36 + x² = 5x² ⇒ 4x² = 36 ⇒ x² = 9 ⇒ x = 3 cm bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'triangles-377',
+    topic: 'İki iç açıortayın kurduğu kenar oranları',
+    figure: {
+      viewBox: '0 96 400 232',
+      caption: 'Şekil 377',
+      label:
+        'ABC üçgeninde A köşesinden çizilen [AE] açıortayı ile C köşesinden çizilen [CD] açıortayı K noktasında kesişir; E ∈ [BC], D ∈ [AB], |BE| = 3 cm, |EC| = 4 cm, |AC| = 8 cm ve |AD| = x tir.',
+      svg: `
+          <path class="ln" d="M133,114.1 L85,300 L309,300 Z"/>
+          <path class="ln" d="M133,114.1 L181,300"/>
+          <path class="ln" d="M309,300 L107.4,213.3"/>
+
+          <path class="arc" d="M122.5,154.8 A42,42 0 0 0 143.5,154.8"/>
+          <line class="tick" x1="133" y1="150.1" x2="133" y2="162.1"/>
+          <path class="arc" d="M143.5,154.8 A42,42 0 0 0 161.9,144.6"/>
+          <line class="tick" x1="150.4" y1="145.6" x2="156.2" y2="156.1"/>
+
+          <path class="arc" d="M280.1,269.5 A42,42 0 0 0 270.4,283.4"/>
+          <line class="tick" x1="279.5" y1="279.4" x2="269.7" y2="272.5"/>
+          <path class="arc" d="M270.4,283.4 A42,42 0 0 0 267,300"/>
+          <line class="tick" x1="273.7" y1="292.7" x2="262" y2="290.3"/>
+
+          <circle class="pt" cx="133" cy="114.1" r="3.2"/>
+          <circle class="pt" cx="85" cy="300" r="3.2"/>
+          <circle class="pt" cx="309" cy="300" r="3.2"/>
+          <circle class="pt" cx="181" cy="300" r="3.2"/>
+          <circle class="pt" cx="107.4" cy="213.3" r="3.2"/>
+          <circle class="pt" cx="165" cy="238" r="3.2"/>
+
+          <text class="val" x="133" y="318" text-anchor="middle">3</text>
+          <text class="val" x="245" y="318" text-anchor="middle">4</text>
+          <text class="val" x="233" y="196">8</text>
+          <text class="val" x="108" y="160" text-anchor="end">x</text>
+
+          <text x="133" y="105" text-anchor="middle">A</text>
+          <text x="77" y="318" text-anchor="end">B</text>
+          <text x="319" y="318">C</text>
+          <text x="181" y="318" text-anchor="middle">E</text>
+          <text x="99" y="210" text-anchor="end">D</text>
+          <text x="152" y="254" text-anchor="end">K</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      '[AE] ve [CD] açıortayları K noktasında kesişmektedir',
+      'E ∈ [BC], D ∈ [AB]',
+      '|BE| = 3 cm',
+      '|EC| = 4 cm',
+      '|AC| = 8 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |AD| = x kaç cm’dir?',
+    choices: [
+      { key: 'A', text: '3' },
+      { key: 'B', text: '16/5' },
+      { key: 'C', text: '10/3' },
+      { key: 'D', text: '24/7' },
+      { key: 'E', text: '7/2' },
+    ],
+    answer: 'B',
+    hint: 'Önce [AE] açıortayından |AB| yi bul; sonra aynı bağıntıyı [CD] açıortayı için yaz.',
+    solution: [
+      {
+        title: '[AE] açıortayından |AB| yi bul',
+        detail:
+          'A köşesinin açıortayı [BC] kenarını komşu kenarların oranında böler: |BE| / |EC| = |AB| / |AC| ⇒ 3 / 4 = |AB| / 8 ⇒ |AB| = 6 cm.',
+      },
+      {
+        title: 'Üçüncü kenarı yaz',
+        detail: '|BC| = |BE| + |EC| = 3 + 4 = 7 cm dir. Böylece üçgenin üç kenarı da bilinir.',
+      },
+      {
+        title: '[CD] açıortayı için bağıntıyı kur',
+        detail: 'C köşesinin açıortayı [AB] kenarını böler: |AD| / |DB| = |CA| / |CB| = 8 / 7 dir.',
+      },
+      {
+        title: 'Denklemi çöz',
+        detail:
+          '|AD| = x ve |DB| = |AB| − x = 6 − x olduğundan x / (6 − x) = 8 / 7 ⇒ 7x = 48 − 8x ⇒ 15x = 48 olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'x = 48 / 15 = 16 / 5 cm bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'triangles-378',
+    topic: 'Açıortay ve dikmelerin kurduğu uzunluk oranı',
+    figure: {
+      viewBox: '0 142 400 186',
+      caption: 'Şekil 378',
+      label:
+        'ABC üçgeninde B köşesinin açıortayı [AC] kenarını E noktasında keser ve E’nin ötesindeki D noktasına kadar uzatılır; A’dan [BC] ye inen dikmenin ayağı H, D’den [BC] ye inen dikmenin ayağı K dır.',
+      svg: `
+          <path class="ln" d="M178.3,160.1 L65,300 L335,300 Z"/>
+          <path class="ln" d="M65,300 L285,195.1"/>
+          <path class="ln" d="M178.3,160.1 L178.3,300"/>
+          <path class="ln" d="M285,195.1 L285,300"/>
+          <path class="ln" d="M178.3,286 L192.3,286 L192.3,300"/>
+          <path class="ln" d="M285,286 L299,286 L299,300"/>
+
+          <path class="arc" d="M109,300 A44,44 0 0 0 104.7,281.1"/>
+          <line class="tick" x1="102.1" y1="291.6" x2="113.8" y2="289"/>
+          <path class="arc" d="M104.7,281.1 A44,44 0 0 0 92.7,265.8"/>
+          <line class="tick" x1="94.8" y1="276.5" x2="104.3" y2="269"/>
+
+          <circle class="pt" cx="178.3" cy="160.1" r="3.2"/>
+          <circle class="pt" cx="65" cy="300" r="3.2"/>
+          <circle class="pt" cx="335" cy="300" r="3.2"/>
+          <circle class="pt" cx="241" cy="216.1" r="3.2"/>
+          <circle class="pt" cx="285" cy="195.1" r="3.2"/>
+          <circle class="pt" cx="178.3" cy="300" r="3.2"/>
+          <circle class="pt" cx="285" cy="300" r="3.2"/>
+
+          <text x="178.3" y="151" text-anchor="middle">A</text>
+          <text x="57" y="318" text-anchor="end">B</text>
+          <text x="345" y="318">C</text>
+          <text x="285" y="186" text-anchor="middle">D</text>
+          <text x="246" y="208" text-anchor="middle">E</text>
+          <text x="178.3" y="318" text-anchor="middle">H</text>
+          <text x="285" y="318" text-anchor="middle">K</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      '[BD, ABC açısının açıortayı',
+      'E ∈ [AC] ve E ∈ [BD]',
+      '[AH] ⊥ [BC], [DK] ⊥ [BC]',
+      '|AB| / |BC| = 2 / 3',
+      '|BE| / |ED| = 4',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |AH| / |DK| oranı kaçtır?',
+    choices: [
+      { key: 'A', text: '8/9' },
+      { key: 'B', text: '6/5' },
+      { key: 'C', text: '5/4' },
+      { key: 'D', text: '4/3' },
+      { key: 'E', text: '3/2' },
+    ],
+    answer: 'D',
+    hint: '[AH] ile [DK] paraleldir; E noktasının [BC] ye uzaklığını bir kez [AC] üzerinden, bir kez de [BD] üzerinden yaz.',
+    solution: [
+      {
+        title: 'E noktasının yerini bul',
+        detail:
+          '[BE, ABC açısının açıortayı ve E ∈ [AC] olduğundan |AE| / |EC| = |AB| / |BC| = 2 / 3 tür. Buradan |AE| / |AC| = 2 / 5 olur.',
+      },
+      {
+        title: 'E’nin [BC] ye uzaklığını [AC] üzerinden yaz',
+        detail:
+          'A’nın [BC] ye uzaklığı |AH|, C’ninki 0 dır. E, [AC] üzerinde A’dan C’ye doğru 2/5 oranında ilerlediğinden E’nin [BC] ye uzaklığı |AH| − (2/5)|AH| = (3/5)|AH| olur.',
+      },
+      {
+        title: 'Aynı uzaklığı [BD] üzerinden yaz',
+        detail:
+          '|BE| / |ED| = 4 olduğundan |BE| / |BD| = 4 / 5 tir. B’nin [BC] ye uzaklığı 0, D’ninki |DK| olduğundan E’nin [BC] ye uzaklığı (4/5)|DK| dır.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'İki ifade aynı uzaklığı verir: (3/5)|AH| = (4/5)|DK| ⇒ |AH| / |DK| = 4 / 3 bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'triangles-379',
+    topic: 'Açıortayın kurduğu benzerlik',
+    figure: {
+      viewBox: '0 123 400 205',
+      caption: 'Şekil 379',
+      label:
+        'ABC üçgeninde A köşesinden çizilen [AD] açıortayı [BC] kenarını D noktasında keser; |AD| = |DC|, |AB| = 12 cm ve |BD| = 8 cm dir.',
+      svg: `
+          <path class="ln" d="M164,141.3 L56,300 L344,300 Z"/>
+          <path class="ln" d="M164,141.3 L184,300"/>
+
+          <path class="arc" d="M138.1,179.3 A46,46 0 0 0 169.8,186.9"/>
+          <line class="tick" x1="154.6" y1="180.2" x2="151.8" y2="191.8"/>
+          <path class="arc" d="M169.8,186.9 A46,46 0 0 0 198.5,171.7"/>
+          <line class="tick" x1="182.7" y1="176.7" x2="188.3" y2="187.3"/>
+
+          <line class="tick" x1="167.1" y1="221.5" x2="180.9" y2="219.8"/>
+          <line class="tick" x1="264" y1="293" x2="264" y2="307"/>
+
+          <circle class="pt" cx="164" cy="141.3" r="3.2"/>
+          <circle class="pt" cx="56" cy="300" r="3.2"/>
+          <circle class="pt" cx="344" cy="300" r="3.2"/>
+          <circle class="pt" cx="184" cy="300" r="3.2"/>
+
+          <text class="val" x="97" y="212" text-anchor="end">12</text>
+          <text class="val" x="120" y="318" text-anchor="middle">8</text>
+          <text class="val" x="264" y="318" text-anchor="middle">x</text>
+
+          <text x="164" y="132" text-anchor="middle">A</text>
+          <text x="48" y="318" text-anchor="end">B</text>
+          <text x="354" y="318">C</text>
+          <text x="184" y="318" text-anchor="middle">D</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      '[AD] açıortay',
+      'D ∈ [BC]',
+      '|AD| = |DC| = x',
+      '|AB| = 12 cm',
+      '|BD| = 8 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |DC| = x kaç cm’dir?',
+    choices: [
+      { key: 'A', text: '8' },
+      { key: 'B', text: '9' },
+      { key: 'C', text: '10' },
+      { key: 'D', text: '21/2' },
+      { key: 'E', text: '12' },
+    ],
+    answer: 'C',
+    hint: '|AD| = |DC| eşitliği DAC ile DCA açılarını eşitler; [AD] açıortay olduğundan bu açı BAD açısına da eşittir.',
+    solution: [
+      {
+        title: 'İkizkenar üçgeni kullan',
+        detail:
+          '|AD| = |DC| olduğundan ADC üçgeni ikizkenardır ve taban açıları eşittir: m(DAC) = m(DCA) = m(ACB) dir. Bu açıya C diyelim.',
+      },
+      {
+        title: 'Açıortayla eşitliği taşı',
+        detail:
+          '[AD] açıortay olduğundan m(BAD) = m(DAC) = C dir. Yani BAD açısı, üçgenin C açısına eşittir.',
+      },
+      {
+        title: 'Benzerliği kur',
+        detail:
+          'ABD ve CBA üçgenlerinde B açısı ortaktır ve m(BAD) = m(BCA) dır. İki açısı eş olduğundan ABD ~ CBA olur.',
+      },
+      {
+        title: 'Benzerlik oranını yaz',
+        detail:
+          'Karşılıklı kenarlar |BA| / |BC| = |BD| / |BA| verir: 12 / |BC| = 8 / 12 ⇒ 8|BC| = 144 ⇒ |BC| = 18 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x = |DC| = |BC| − |BD| = 18 − 8 = 10 cm bulunur. (Kontrol: |AC| = 15 cm ve |BD| / |DC| = 8 / 10 = 12 / 15 = |AB| / |AC| dir.)',
+      },
+    ],
+  },
+  {
+    id: 'triangles-380',
+    topic: 'Paralel açıortayın ayırdığı alanların oranı',
+    figure: {
+      viewBox: '0 58 400 270',
+      caption: 'Şekil 380',
+      label:
+        'ABC üçgeninde [BA] kenarının uzantısı üzerinde D noktası alınmış; A’dan [BC] ye çizilen paralel [AE dir ve bu ışın DAC açısının açıortayıdır. [DE] ve [EC] çizilmiştir.',
+      svg: `
+          <path class="ln" d="M45,300 L320,300"/>
+          <path class="ln" d="M45,300 L213,76"/>
+          <path class="ln" d="M165,140 L365,140"/>
+          <path class="ln" d="M165,140 L285,300"/>
+          <path class="ln" d="M213,76 L365,140"/>
+          <path class="ln" d="M365,140 L285,300"/>
+
+          <path class="par" d="M96,294 L104,300 L96,306"/>
+          <path class="par" d="M236,134 L244,140 L236,146"/>
+
+          <path class="arc" d="M189,108 A40,40 0 0 1 205,140"/>
+          <line class="tick" x1="195.4" y1="124.8" x2="206.1" y2="119.4"/>
+          <path class="arc" d="M205,140 A40,40 0 0 1 189,172"/>
+          <line class="tick" x1="195.4" y1="155.2" x2="206.1" y2="160.6"/>
+
+          <circle class="pt" cx="45" cy="300" r="3.2"/>
+          <circle class="pt" cx="285" cy="300" r="3.2"/>
+          <circle class="pt" cx="165" cy="140" r="3.2"/>
+          <circle class="pt" cx="213" cy="76" r="3.2"/>
+          <circle class="pt" cx="365" cy="140" r="3.2"/>
+
+          <text class="val" x="210" y="232" text-anchor="end">10</text>
+          <text class="val" x="114" y="182" text-anchor="end">14</text>
+
+          <text x="157" y="132" text-anchor="end">A</text>
+          <text x="37" y="318" text-anchor="end">B</text>
+          <text x="285" y="318" text-anchor="middle">C</text>
+          <text x="213" y="67" text-anchor="middle">D</text>
+          <text x="375" y="136">E</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      'A ∈ [BD] (B, A, D doğrusal)',
+      '[AE // [BC',
+      '[AE, DAC açısının açıortayı',
+      '|AC| = 10 cm',
+      '|BD| = 14 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(ADE) / A(AEC) oranı kaçtır?',
+    choices: [
+      { key: 'A', text: '1/5' },
+      { key: 'B', text: '1/4' },
+      { key: 'C', text: '1/3' },
+      { key: 'D', text: '2/5' },
+      { key: 'E', text: '1/2' },
+    ],
+    answer: 'D',
+    hint: 'Paralellik, açıortayın iki eş açısını üçgenin B ve C açılarına taşır; ABC üçgeninin ikizkenar olduğunu göreceksin.',
+    solution: [
+      {
+        title: 'Açıları paralellikle taşı',
+        detail:
+          '[AE // [BC ve B, A, D doğrusal olduğundan m(DAE) = m(ABC) (yöndeş açılar). Ayrıca [AC] kesenine göre m(EAC) = m(ACB) dir (iç ters açılar).',
+      },
+      {
+        title: 'Üçgenin ikizkenar olduğunu gör',
+        detail:
+          '[AE açıortay olduğundan m(DAE) = m(EAC) dir. Buradan m(ABC) = m(ACB) çıkar, yani ABC ikizkenardır ve |AB| = |AC| = 10 cm olur.',
+      },
+      {
+        title: '|AD| yi bul',
+        detail: '|AD| = |BD| − |AB| = 14 − 10 = 4 cm dir.',
+      },
+      {
+        title: 'Ortak tabanı seç',
+        detail:
+          'ADE ve AEC üçgenlerinin ortak tabanı [AE] dir. O hâlde A(ADE) / A(AEC), D ve C noktalarının AE doğrusuna olan uzaklıklarının oranına eşittir.',
+      },
+      {
+        title: 'Uzaklıkları karşılaştır',
+        detail:
+          'A’nın [BC] ye uzaklığına h diyelim. [AE // [BC olduğundan C’nin AE doğrusuna uzaklığı da h dir. D ile B, A noktasının iki yanında aynı doğru üzerinde olduğundan D’nin AE ye uzaklığı, B’ninki (yani h) ile |AD| / |AB| = 4 / 10 oranındadır: (4/10)h.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'A(ADE) / A(AEC) = (4/10)h / h = 2 / 5 bulunur.',
+      },
+    ],
+  },
 ];
 
 /** Looks questions up by id so the modules below read as a running order. */
@@ -33833,6 +34424,21 @@ export const UNIT_2_TRIANGLES: Unit = {
         'triangles-372',
         'triangles-373',
         'triangles-374',
+      ),
+    },
+    {
+      id: 'triangles-m63',
+      order: 63,
+      title: 'Üçgende açıortay bağıntıları — Test 3',
+      summary:
+        'Dik üçgende iç teğet çemberin yarıçapıyla çevre, yüksekliğin ayırdığı tabanı iki kez açıortay bağıntısıyla bulma, iki iç açıortayın zincirlediği kenar oranları, açıortay ile iki dikmenin kurduğu uzunluk oranı, açıortayın doğurduğu benzerlik ve tabana paralel açıortayın ayırdığı alanların oranı.',
+      questions: pick(
+        'triangles-375',
+        'triangles-376',
+        'triangles-377',
+        'triangles-378',
+        'triangles-379',
+        'triangles-380',
       ),
     },
   ],
