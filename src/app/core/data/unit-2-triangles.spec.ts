@@ -1144,6 +1144,19 @@ describe('unit 2 answer key', () => {
   it('554 — ABD ∼ ACE, |AB| / 10 = (5 + 3) / 5, |AB| = 16 → E', () =>
     expect(answerOf('triangles-554')).toBe('E'));
 
+  it('555 — (|FA|/|AB|) · (9/3) · (2/4) = 1, |FA|/|AB| = 2/3, oran 2 → B', () =>
+    expect(answerOf('triangles-555')).toBe('B'));
+  it('556 — (3t − 1)/2 = t/2, t = 1/2, |DL| = |DC|/4, (1/16) · (2/3) = 1/24 → C', () =>
+    expect(answerOf('triangles-556')).toBe('C'));
+  it('557 — |AH| = 3a/2, |CD|/|CB| = a/(5a/2) = 2/5, x = 12 · 2/3 = 8 → C', () =>
+    expect(answerOf('triangles-557')).toBe('C'));
+  it('558 — |CD| = 2 · 28 / 7 = 8, 2y/(y + 8) = 6/7, y = 6, |CF| = 14 → D', () =>
+    expect(answerOf('triangles-558')).toBe('D'));
+  it('559 — |CT|/|TK| = 1/2, |AK| = |KT| = 2m, |ET| = 4m − 5m/2 = 9, m = 6, |AC| = 30 → C', () =>
+    expect(answerOf('triangles-559')).toBe('C'));
+  it('560 — |FB| = |FE| = 4, |AF|/|AB| = 4/6, |AB| = 12, 12/x = 6/8, x = 16 → D', () =>
+    expect(answerOf('triangles-560')).toBe('D'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
