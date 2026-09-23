@@ -110,6 +110,7 @@ Classes, all defined in `src/styles.scss`:
 | `.arc` | angle arcs |
 | `text.val` | angle values and unknowns (`30°`, `α`, `x`) |
 | `.par` | parallel-direction chevrons |
+| `.shade` | shaded regions an area question refers to — draw first, under the lines |
 | `.aux`, `.aux-head` | construction lines — **solution figures only** |
 
 `solutionFigure` is optional and shown only after the student answers. It repeats

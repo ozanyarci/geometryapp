@@ -170,6 +170,13 @@ button {
   stroke-linejoin: round;
 }
 
+/* Shaded regions an area question asks about; drawn under the lines. */
+.figure-svg .shade {
+  fill: var(--blueprint);
+  fill-opacity: 0.18;
+  stroke: none;
+}
+
 .figure-svg .pt {
   fill: var(--ink);
 }

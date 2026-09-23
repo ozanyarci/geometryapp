@@ -884,6 +884,19 @@ describe('unit 2 answer key', () => {
   it('434 — A(DEF) = (1/4)·(S/3) = S/12 = 3 ⇒ S = 36, A(ADFE) = 36/4 + 3 = 12 → B', () =>
     expect(answerOf('triangles-434')).toBe('B'));
 
+  it('435 — |DC| = 13, |DE|² = 169 − 25 = 144, |BD|² = 81 + 144 = 225, x = (2/3)·15 = 10 → D', () =>
+    expect(answerOf('triangles-435')).toBe('D'));
+  it('436 — |BG| = 6, 36 = 2m² ⇒ m² = 18, |BD|² = 3m² = 54, |BC| = 2·3√6 = 6√6 → E', () =>
+    expect(answerOf('triangles-436')).toBe('E'));
+  it('437 — |MC| = 8, |GM|² = 100 − 64 = 36, |BM| = 3·6 = 18, A = 16·18/2 = 144 → A', () =>
+    expect(answerOf('triangles-437')).toBe('A'));
+  it('438 — |BG| = 9, |GD| = 27, |KD| = 9, |LD| = 3, |GL| = 27 − 3 = 24 → B', () =>
+    expect(answerOf('triangles-438')).toBe('B'));
+  it('439 — A(AFG) = S, A(GDE) = 2S − 6S/4 = S/2, (3S/2)/6S = 1/4 → C', () =>
+    expect(answerOf('triangles-439')).toBe('C'));
+  it('440 — |AC|² = 4(64 + 9) = 292, |BC|² = 4(36 + 16) = 208, toplam 500 → D', () =>
+    expect(answerOf('triangles-440')).toBe('D'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
