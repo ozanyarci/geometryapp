@@ -49563,6 +49563,382 @@ Q4 DE 6.928203230275509 6.928203230275509 AE 10.0 EC 2.0
       },
     ],
   },
+  // ---------------------------------------------------------------- 579
+  {
+    id: 'triangles-579',
+    topic: 'Dörtgende açılardan en uzun kenar',
+    figure: {
+      viewBox: '0 0 400 312',
+      caption: 'Şekil 579',
+      label:
+        'ABCD dörtgeninde [BD] köşegeni çizilmiştir. m(ABD) = 70°, m(ADB) = 45°, m(DBC) = 50° ve m(BDC) = 60° dir.',
+      svg: `
+          <path class="ln" d="M159.5,30 L113.14,157.36 L216.05,280 L286.86,157.36 Z"/>
+          <path class="ln" d="M113.14,157.36 L286.86,157.36"/>
+          <path class="arc" d="M153.14,157.36 A40,40 0 0 0 126.82,119.77"/>
+          <text class="val" x="162.29" y="127.94" text-anchor="middle">70°</text>
+          <path class="arc" d="M135,183.4 A34,34 0 0 0 147.14,157.36"/>
+          <text class="val" x="162.08" y="185.18" text-anchor="middle">50°</text>
+          <path class="arc" d="M258.57,129.08 A40,40 0 0 0 246.86,157.36"/>
+          <text class="val" x="229.58" y="138.63" text-anchor="middle">45°</text>
+          <path class="arc" d="M252.86,157.36 A34,34 0 0 0 269.86,186.8"/>
+          <text class="val" x="240.09" y="189.36" text-anchor="middle">60°</text>
+          <circle class="pt" cx="159.5" cy="30" r="3.2"/>
+          <circle class="pt" cx="113.14" cy="157.36" r="3.2"/>
+          <circle class="pt" cx="216.05" cy="280" r="3.2"/>
+          <circle class="pt" cx="286.86" cy="157.36" r="3.2"/>
+          <text x="159.5" y="18" text-anchor="middle">A</text>
+          <text x="104.14" y="162.36" text-anchor="end">B</text>
+          <text x="216.05" y="302" text-anchor="middle">C</text>
+          <text x="295.86" y="162.36">D</text>
+        `,
+    },
+    given: [
+      'ABCD bir dörtgen',
+      'm(ABD) = 70°',
+      'm(ADB) = 45°',
+      'm(DBC) = 50°',
+      'm(BDC) = 60°',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, en uzun kenar aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: '[AB]' },
+      { key: 'B', text: '[BC]' },
+      { key: 'C', text: '[CD]' },
+      { key: 'D', text: '[AD]' },
+      { key: 'E', text: '[BD]' },
+    ],
+    answer: 'D',
+    hint: '[BD] köşegeni dörtgeni iki üçgene ayırır; her üçgende kenarları karşılarındaki açılara göre sırala ve [BD] üzerinden birleştir.',
+    solution: [
+      {
+        title: 'Eksik açılar',
+        detail:
+          'ABD üçgeninde m(A) = 180 − 70 − 45 = 65°, BCD üçgeninde m(C) = 180 − 50 − 60 = 70° dir.',
+      },
+      {
+        title: 'ABD üçgeni',
+        detail:
+          'Açılar 45° (D), 65° (A), 70° (B) olduğundan karşılarındaki kenarlar |AB| < |BD| < |AD| sıralanır.',
+      },
+      {
+        title: 'BCD üçgeni',
+        detail:
+          'Açılar 50° (B), 60° (D), 70° (C) olduğundan |CD| < |BC| < |BD| olur.',
+      },
+      {
+        title: 'Birleştirme',
+        detail:
+          '|CD| < |BC| < |BD| < |AD| ve |AB| < |BD| < |AD| dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'En uzun kenar [AD] dir.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 580
+  {
+    id: 'triangles-580',
+    topic: 'Açı sıralamasından kenar değerleri',
+    figure: {
+      viewBox: '0 12 400 206',
+      caption: 'Şekil 580',
+      label:
+        'ABC üçgeninde |AB| = x, |AC| = 5 cm ve |BC| = 9 cm dir.',
+      svg: `
+          <path class="ln" d="M250.37,40 L30,186.18 L370,186.18 Z"/>
+          <text class="val" x="321.02" y="109.22" text-anchor="middle">5</text>
+          <text class="val" x="200" y="207.18" text-anchor="middle">9</text>
+          <text class="val" x="132.45" y="106.42" text-anchor="middle">x</text>
+          <circle class="pt" cx="250.37" cy="40" r="3.2"/>
+          <circle class="pt" cx="30" cy="186.18" r="3.2"/>
+          <circle class="pt" cx="370" cy="186.18" r="3.2"/>
+          <text x="250.37" y="28" text-anchor="middle">A</text>
+          <text x="22" y="200.18" text-anchor="end">B</text>
+          <text x="378" y="200.18">C</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      'm(BAC) > m(ACB) > m(ABC)',
+      '|AC| = 5 cm',
+      '|BC| = 9 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |AB| = x in alabileceği tam sayı değerlerinin toplamı kaçtır?',
+    choices: [
+      { key: 'A', text: '15' },
+      { key: 'B', text: '18' },
+      { key: 'C', text: '21' },
+      { key: 'D', text: '24' },
+      { key: 'E', text: '27' },
+    ],
+    answer: 'C',
+    hint: 'Her açının karşısındaki kenarı bul; açı sıralaması kenarları da aynı sırayla dizer.',
+    solution: [
+      {
+        title: 'Karşı kenarlar',
+        detail:
+          'A nın karşısında [BC], C nin karşısında [AB], B nin karşısında [AC] vardır.',
+      },
+      {
+        title: 'Kenar sıralaması',
+        detail:
+          'm(A) > m(C) > m(B) ⇒ |BC| > |AB| > |AC|, yani 9 > x > 5.',
+      },
+      {
+        title: 'Üçgen eşitsizliği',
+        detail:
+          '9 − 5 < x < 9 + 5 ⇒ 4 < x < 14; bu koşul 5 < x < 9 aralığını daraltmaz.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x ∈ {6, 7, 8} ve 6 + 7 + 8 = 21 bulunur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 581
+  {
+    id: 'triangles-581',
+    topic: 'İç açılardan kenarları sıralama',
+    figure: {
+      viewBox: '0 12 400 222',
+      caption: 'Şekil 581',
+      label:
+        'ABC üçgeninde D ve E noktaları [BC] üzerindedir; [AD] ve [AE] çizilmiştir. |AD| = |AE|, m(BAD) = 30°, m(DAE) = 40° ve m(EAC) = 20° dir. |BC| = a, |AC| = b, |AB| = c dir.',
+      svg: `
+          <path class="ln" d="M227.78,40 L40,197.57 L360,197.57 Z"/>
+          <path class="ln" d="M227.78,40 L170.43,197.57"/>
+          <path class="ln" d="M227.78,40 L285.13,197.57"/>
+          <path class="tick" d="M193.47,116.73 L204.75,120.84"/>
+          <path class="tick" d="M250.82,120.84 L262.1,116.73"/>
+          <path class="arc" d="M192.55,69.57 A46,46 0 0 0 212.05,83.23"/>
+          <text class="val" x="191.07" y="97.43" text-anchor="middle">30°</text>
+          <path class="arc" d="M216.84,70.07 A32,32 0 0 0 238.73,70.07"/>
+          <text class="val" x="227.78" y="95" text-anchor="middle">40°</text>
+          <path class="arc" d="M243.52,83.23 A46,46 0 0 0 257.35,75.24"/>
+          <text class="val" x="259.78" y="100.43" text-anchor="middle">20°</text>
+          <text class="val" x="123.61" y="111.53" text-anchor="middle">c</text>
+          <text class="val" x="306.15" y="113.5" text-anchor="middle">b</text>
+          <circle class="pt" cx="227.78" cy="40" r="3.2"/>
+          <circle class="pt" cx="40" cy="197.57" r="3.2"/>
+          <circle class="pt" cx="360" cy="197.57" r="3.2"/>
+          <circle class="pt" cx="170.43" cy="197.57" r="3.2"/>
+          <circle class="pt" cx="285.13" cy="197.57" r="3.2"/>
+          <text x="227.78" y="28" text-anchor="middle">A</text>
+          <text x="32" y="211.57" text-anchor="end">B</text>
+          <text x="368" y="211.57">C</text>
+          <text x="170.43" y="219.57" text-anchor="middle">D</text>
+          <text x="285.13" y="219.57" text-anchor="middle">E</text>
+        `,
+    },
+    given: [
+      'D, E ∈ [BC]',
+      '|AD| = |AE|',
+      'm(BAD) = 30°',
+      'm(DAE) = 40°',
+      'm(EAC) = 20°',
+      '|BC| = a, |AC| = b, |AB| = c',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, ABC üçgeninin kenarları arasındaki sıralama aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: 'a > b > c' },
+      { key: 'B', text: 'a > c > b' },
+      { key: 'C', text: 'c > a > b' },
+      { key: 'D', text: 'b > a > c' },
+      { key: 'E', text: 'c > b > a' },
+    ],
+    answer: 'B',
+    hint: 'ADE ikizkenar üçgeninin taban açılarını bul; ADE ve AED açıları, ABD ve AEC üçgenlerinin dış açılarıdır.',
+    solution: [
+      {
+        title: 'İkizkenar üçgen',
+        detail:
+          '|AD| = |AE| ⇒ m(ADE) = m(AED) = (180 − 40) / 2 = 70° dir.',
+      },
+      {
+        title: 'Dış açılar',
+        detail:
+          'ADE açısı ABD üçgeninin dış açısıdır: m(B) = 70 − 30 = 40°. AED açısı AEC üçgeninin dış açısıdır: m(C) = 70 − 20 = 50°.',
+      },
+      {
+        title: 'A açısı',
+        detail:
+          'm(A) = 30 + 40 + 20 = 90° dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'm(A) > m(C) > m(B) olduğundan karşı kenarlar |BC| > |AB| > |AC|, yani a > c > b dir.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 582
+  {
+    id: 'triangles-582',
+    topic: 'Çeşitkenar üçgende kenar uzunluğu',
+    figure: {
+      viewBox: '0 20 400 136',
+      caption: 'Şekil 582',
+      label:
+        'ABC üçgeninde |AB| = 4 cm, |AC| = 7 cm ve |BC| = 3x − 2 dir.',
+      svg: `
+          <path class="ln" d="M143.9,50 L30,124.32 L370,124.32 Z"/>
+          <text class="val" x="79.3" y="80.43" text-anchor="middle">4</text>
+          <text class="val" x="261.32" y="78.86" text-anchor="middle">7</text>
+          <text class="val" x="200" y="145.32" text-anchor="middle">3x − 2</text>
+          <circle class="pt" cx="143.9" cy="50" r="3.2"/>
+          <circle class="pt" cx="30" cy="124.32" r="3.2"/>
+          <circle class="pt" cx="370" cy="124.32" r="3.2"/>
+          <text x="143.9" y="38" text-anchor="middle">A</text>
+          <text x="22" y="138.32" text-anchor="end">B</text>
+          <text x="378" y="138.32">C</text>
+        `,
+    },
+    given: [
+      'ABC çeşitkenar üçgen',
+      '|AB| = 4 cm',
+      '|AC| = 7 cm',
+      '|BC| = 3x − 2',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, x bir tam sayı olduğuna göre |BC| kaç cm dir?',
+    choices: [
+      { key: 'A', text: '4' },
+      { key: 'B', text: '7' },
+      { key: 'C', text: '8' },
+      { key: 'D', text: '10' },
+      { key: 'E', text: '13' },
+    ],
+    answer: 'D',
+    hint: 'Önce üçgen eşitsizliğiyle x in aralığını bul, sonra çeşitkenar koşuluyla uymayan değerleri ele.',
+    solution: [
+      {
+        title: 'Üçgen eşitsizliği',
+        detail:
+          '7 − 4 < 3x − 2 < 7 + 4 ⇒ 3 < 3x − 2 < 11 ⇒ 5 < 3x < 13.',
+      },
+      {
+        title: 'Tam sayı x',
+        detail:
+          '5/3 < x < 13/3 ⇒ x ∈ {2, 3, 4}; |BC| ∈ {4, 7, 10}.',
+      },
+      {
+        title: 'Çeşitkenar koşulu',
+        detail:
+          '|BC| = 4 olursa |BC| = |AB|, |BC| = 7 olursa |BC| = |AC| olur; ikisi de üçgeni ikizkenar yapar.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'Geriye yalnız x = 4 kalır: |BC| = 3 · 4 − 2 = 10 cm.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 583
+  {
+    id: 'triangles-583',
+    topic: 'Tam sayı kenarlı üçgende en küçük çevre',
+    figure: {
+      viewBox: '0 12 400 222',
+      caption: 'Şekil 583',
+      label: 'ABC üçgeninde |AB| = 9 cm dir.',
+      svg: `
+          <path class="ln" d="M328.14,40 L71.86,210 L311.06,210 Z"/>
+          <text class="val" x="192.26" y="118.33" text-anchor="middle">9</text>
+          <circle class="pt" cx="328.14" cy="40" r="3.2"/>
+          <circle class="pt" cx="71.86" cy="210" r="3.2"/>
+          <circle class="pt" cx="311.06" cy="210" r="3.2"/>
+          <text x="328.14" y="28" text-anchor="middle">A</text>
+          <text x="63.86" y="224" text-anchor="end">B</text>
+          <text x="319.06" y="224">C</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      'm(ACB) > m(BAC) > m(ABC)',
+      '|AB| = 9 cm',
+    ],
+    stem: [],
+    ask: 'Şekildeki ABC üçgeninin kenar uzunlukları tam sayı olduğuna göre, Çevre(ABC) nin alabileceği en küçük değer kaç cm dir?',
+    choices: [
+      { key: 'A', text: '17' },
+      { key: 'B', text: '18' },
+      { key: 'C', text: '19' },
+      { key: 'D', text: '20' },
+      { key: 'E', text: '24' },
+    ],
+    answer: 'C',
+    hint: 'Açı sıralamasını kenar sıralamasına çevir, sonra diğer iki kenarın toplamının 9 dan büyük olması gerektiğini kullan.',
+    solution: [
+      {
+        title: 'Kenar sıralaması',
+        detail:
+          'm(C) > m(A) > m(B) ⇒ |AB| > |BC| > |AC|, yani 9 > |BC| > |AC|.',
+      },
+      {
+        title: 'Üçgen eşitsizliği',
+        detail:
+          '|BC| + |AC| > |AB| = 9 olduğundan tam sayılarla |BC| + |AC| ≥ 10 dur.',
+      },
+      {
+        title: 'Örnek',
+        detail:
+          '|BC| = 6, |AC| = 4 alınırsa 9 > 6 > 4 ve 6 + 4 = 10 > 9 sağlanır.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'En küçük çevre 9 + 10 = 19 cm dir.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 584
+  {
+    id: 'triangles-584',
+    topic: 'Kenar oranlarından açıları sıralama',
+    given: ['ABC bir üçgen', '4a = 3b = 6c'],
+    stem: [
+      'ABC üçgeninde a = |BC|, b = |AC| ve c = |AB| kenar uzunlukları arasında 4a = 3b = 6c bağıntısı vardır.',
+    ],
+    ask: 'Buna göre, üçgenin açılarının sıralanışı aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: 'm(A) > m(B) > m(C)' },
+      { key: 'B', text: 'm(B) > m(A) > m(C)' },
+      { key: 'C', text: 'm(B) > m(C) > m(A)' },
+      { key: 'D', text: 'm(C) > m(A) > m(B)' },
+      { key: 'E', text: 'm(A) > m(C) > m(B)' },
+    ],
+    answer: 'B',
+    hint: 'Ortak değeri 12k al ve her kenarı k cinsinden yaz; katsayısı küçük olan kenar daha uzundur.',
+    solution: [
+      {
+        title: 'Ortak değer',
+        detail:
+          '4a = 3b = 6c = 12k denirse a = 3k, b = 4k, c = 2k olur.',
+      },
+      {
+        title: 'Üçgen var mı?',
+        detail:
+          '2k + 3k = 5k > 4k olduğundan bu kenarlarla üçgen çizilebilir.',
+      },
+      {
+        title: 'Kenar sıralaması',
+        detail:
+          '4k > 3k > 2k ⇒ b > a > c dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'Büyük kenarın karşısında büyük açı bulunur: m(B) > m(A) > m(C).',
+      },
+    ],
+  },
 ];
 
 /** Looks questions up by id so the modules below read as a running order. */
@@ -51028,6 +51404,21 @@ export const UNIT_2_TRIANGLES: Unit = {
         'triangles-576',
         'triangles-577',
         'triangles-578',
+      ),
+    },
+    {
+      id: 'triangles-m97',
+      order: 97,
+      title: 'Üçgende açı-kenar bağıntıları — Test 4',
+      summary:
+        'Köşegenle dörtgende en uzun kenar, açı sıralamasından kenar aralığı, ikizkenar iç üçgen, çeşitkenar koşulu, en küçük çevre ve kenar oranları.',
+      questions: pick(
+        'triangles-579',
+        'triangles-580',
+        'triangles-581',
+        'triangles-582',
+        'triangles-583',
+        'triangles-584',
       ),
     },
   ],

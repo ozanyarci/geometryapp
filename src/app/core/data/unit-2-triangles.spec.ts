@@ -1196,6 +1196,19 @@ describe('unit 2 answer key', () => {
   it('578 — |BF| − |BT| = (|AC| − |AE|) / 2 < 15 / 2 = 7,5, en büyük 7 → C', () =>
     expect(answerOf('triangles-578')).toBe('C'));
 
+  it('579 — ABD: |AB| < |BD| < |AD|, BCD: |CD| < |BC| < |BD|, en uzun [AD] → D', () =>
+    expect(answerOf('triangles-579')).toBe('D'));
+  it('580 — 9 > x > 5, 6 + 7 + 8 = 21 → C', () =>
+    expect(answerOf('triangles-580')).toBe('C'));
+  it('581 — taban 70°, m(B) = 40, m(C) = 50, m(A) = 90 ⇒ a > c > b → B', () =>
+    expect(answerOf('triangles-581')).toBe('B'));
+  it('582 — 3 < 3x − 2 < 11, x ∈ {2, 3, 4}, 4 ve 7 elenir, 3 · 4 − 2 = 10 → D', () =>
+    expect(answerOf('triangles-582')).toBe('D'));
+  it('583 — 9 > |BC| > |AC|, toplam ≥ 10 (6 + 4), 9 + 10 = 19 → C', () =>
+    expect(answerOf('triangles-583')).toBe('C'));
+  it('584 — a = 3k, b = 4k, c = 2k ⇒ b > a > c ⇒ m(B) > m(A) > m(C) → B', () =>
+    expect(answerOf('triangles-584')).toBe('B'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
