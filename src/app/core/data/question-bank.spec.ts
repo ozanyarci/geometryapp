@@ -2,6 +2,7 @@ import { UNITS, unitQuestions } from '../curriculum';
 import { CHOICE_KEYS, Question } from '../models';
 import { ANGLES_BANK } from './unit-1-angles';
 import { TRIANGLES_BANK } from './unit-2-triangles';
+import { POLYGONS_BANK } from './unit-3-polygons';
 
 /**
  * As the question bank grows, the most common mistake is mistyping an answer
@@ -97,6 +98,7 @@ describe('question banks', () => {
   const banks: readonly { unitId: string; questions: readonly Question[] }[] = [
     { unitId: 'angles', questions: ANGLES_BANK },
     { unitId: 'triangles', questions: TRIANGLES_BANK },
+    { unitId: 'polygons', questions: POLYGONS_BANK },
   ];
 
   for (const bank of banks) {

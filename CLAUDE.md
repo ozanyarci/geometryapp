@@ -27,6 +27,7 @@ src/app/core/models.ts              Question / Module / Unit types
 src/app/core/curriculum.ts          UNITS registry + lookup helpers
 src/app/core/data/unit-1-angles.ts  Unit 1 — Doğruda açılar
 src/app/core/data/unit-2-triangles.ts  Unit 2 — Üçgenler
+src/app/core/data/unit-3-polygons.ts   Unit 3 — Çokgenler
 src/app/core/data/unit-1-angles.spec.ts  integrity checks for ALL units
 src/app/ui/figure/figure.ts         renders a Figure's SVG
 src/styles.scss                     figure SVG classes live here
@@ -129,7 +130,7 @@ every banked question sitting in exactly one module, and figure shape (four-numb
 `Şekil N` caption). Adding a unit to `curriculum.ts` puts it under these checks
 automatically.
 
-`unit-1-angles.spec.ts` and `unit-2-triangles.spec.ts` hold one answer-key line
+`unit-1-angles.spec.ts`, `unit-2-triangles.spec.ts` and `unit-3-polygons.spec.ts` hold one answer-key line
 per question, each restating the arithmetic, plus a check that no question in the
 unit is missing its line.
 
