@@ -988,6 +988,19 @@ describe('unit 2 answer key', () => {
   it('482 — 8/12 = 12/18, DCB ∼ BDA, x = 6·3/2 = 9 → B', () =>
     expect(answerOf('triangles-482')).toBe('B'));
 
+  it('483 — ABE ∼ DCE, 6/15 = 4/x, x = 10 → D', () =>
+    expect(answerOf('triangles-483')).toBe('D'));
+  it('484 — oran 4/6, |AC| = 9, |EC| = 3, |BC| = 12, toplam 15 → E', () =>
+    expect(answerOf('triangles-484')).toBe('E'));
+  it('485 — ABE ∼ CDE, 4/x = 8/6, x = 3 → B', () =>
+    expect(answerOf('triangles-485')).toBe('B'));
+  it('486 — m(DEF) = 180 − 50 − 70 = 60 = m(B), x = 180 − 60 − 50 = 70 → D', () =>
+    expect(answerOf('triangles-486')).toBe('D'));
+  it('487 — |DB| = |DE| = 4, |AB| = 10, 6/10 = 4/x, x = 20/3 → A', () =>
+    expect(answerOf('triangles-487')).toBe('A'));
+  it('488 — AED ∼ ACB, 6/(5 + x) = 5/10, x = 7 → C', () =>
+    expect(answerOf('triangles-488')).toBe('C'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
