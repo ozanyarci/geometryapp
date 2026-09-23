@@ -51098,6 +51098,411 @@ Q4 DE 6.928203230275509 6.928203230275509 AE 10.0 EC 2.0
       },
     ],
   },
+  // ---------------------------------------------------------------- 603
+  {
+    id: 'triangles-603',
+    topic: 'Eşkenar üçgende köşeden karşı kenara uzaklık',
+    figure: {
+      viewBox: '0 -18 400 340',
+      caption: 'Şekil 603',
+      label:
+        'ABC eşkenar üçgeninin kenarı 20 cm dir; D noktası [BC] üzerindedir ve |AD| = x tir.',
+      svg: `
+          <path class="ln" d="M200,5.55 L30,300 L370,300 Z"/>
+          <path class="ln" d="M200,5.55 L268,300"/>
+          <text class="val" x="101.14" y="149.78" text-anchor="middle">20</text>
+          <text class="val" x="245.69" y="155.07" text-anchor="middle">x</text>
+          <circle class="pt" cx="200" cy="5.55" r="3.2"/>
+          <circle class="pt" cx="30" cy="300" r="3.2"/>
+          <circle class="pt" cx="370" cy="300" r="3.2"/>
+          <circle class="pt" cx="268" cy="300" r="3.2"/>
+          <text x="200" y="-6.45" text-anchor="middle">A</text>
+          <text x="22" y="318" text-anchor="end">B</text>
+          <text x="378" y="314">C</text>
+          <text x="268" y="318" text-anchor="middle">D</text>
+        `,
+    },
+    given: [
+      'ABC eşkenar üçgen',
+      '|AB| = 20 cm',
+      'D ∈ [BC], D ≠ B, D ≠ C',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |AD| = x in alabileceği tam sayı değerlerinin toplamı kaçtır?',
+    choices: [
+      { key: 'A', text: '18' },
+      { key: 'B', text: '19' },
+      { key: 'C', text: '36' },
+      { key: 'D', text: '37' },
+      { key: 'E', text: '57' },
+    ],
+    answer: 'D',
+    hint: '|AD| en kısa, D yüksekliğin ayağı olduğunda olur; D bir köşeye yaklaştıkça |AD| kenar uzunluğuna yaklaşır.',
+    solution: [
+      {
+        title: 'En küçük değer',
+        detail:
+          'D, [BC] nin orta noktası olduğunda [AD] yüksekliktir: |AD| = 20√3 / 2 = 10√3 ≈ 17,32.',
+      },
+      {
+        title: 'Üst sınır',
+        detail:
+          'D köşelerden farklı olduğundan m(ADB) veya m(ADC) açılarından biri geniş ya da diktir; bu açının karşısındaki kenar 20 olduğundan |AD| < 20 dir.',
+      },
+      {
+        title: 'Tam sayı değerleri',
+        detail:
+          '17,32 ≤ x < 20 ⇒ x ∈ {18, 19}.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '18 + 19 = 37.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 604
+  {
+    id: 'triangles-604',
+    topic: 'Ortak kenarlı iki geniş açılı üçgen',
+    figure: {
+      viewBox: '0 0 400 232',
+      caption: 'Şekil 604',
+      label:
+        'ABDC dörtgeninde [BC] köşegeni çizilmiştir; |AB| = 9 cm, |AC| = 12 cm, |BD| = 8 cm ve |DC| = 15 cm dir.',
+      svg: `
+          <path class="ln" d="M30,100 L170.33,20.98 L370,100 L124.18,207.81 Z"/>
+          <path class="ln" d="M30,100 L370,100"/>
+          <text class="val" x="93.3" y="53.29" text-anchor="middle">9</text>
+          <text class="val" x="275.32" y="52.47" text-anchor="middle">12</text>
+          <text class="val" x="66.55" y="168.12" text-anchor="middle">8</text>
+          <text class="val" x="252.71" y="171.73" text-anchor="middle">15</text>
+          <circle class="pt" cx="170.33" cy="20.98" r="3.2"/>
+          <circle class="pt" cx="30" cy="100" r="3.2"/>
+          <circle class="pt" cx="370" cy="100" r="3.2"/>
+          <circle class="pt" cx="124.18" cy="207.81" r="3.2"/>
+          <text x="170.33" y="12" text-anchor="middle">A</text>
+          <text x="22" y="104" text-anchor="end">B</text>
+          <text x="378" y="104">C</text>
+          <text x="124.18" y="226" text-anchor="middle">D</text>
+        `,
+    },
+    given: [
+      'm(BAC) > 90°',
+      'm(BDC) > 90°',
+      '|AB| = 9 cm, |AC| = 12 cm',
+      '|BD| = 8 cm, |DC| = 15 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |BC| nin kaç farklı tam sayı değeri olabilir?',
+    choices: [
+      { key: 'A', text: '6' },
+      { key: 'B', text: '5' },
+      { key: 'C', text: '4' },
+      { key: 'D', text: '3' },
+      { key: 'E', text: '2' },
+    ],
+    answer: 'D',
+    hint: 'Geniş açının karşısındaki kenarın karesi, diğer iki kenarın kareleri toplamından büyüktür; bunu iki üçgende de yaz.',
+    solution: [
+      {
+        title: 'ABC üçgeni',
+        detail:
+          'm(A) > 90° ⇒ |BC|² > 9² + 12² = 225 ⇒ |BC| > 15; üçgen eşitsizliğinden |BC| < 9 + 12 = 21.',
+      },
+      {
+        title: 'BDC üçgeni',
+        detail:
+          'm(D) > 90° ⇒ |BC|² > 8² + 15² = 289 ⇒ |BC| > 17; üçgen eşitsizliğinden |BC| < 8 + 15 = 23.',
+      },
+      {
+        title: 'Ortak aralık',
+        detail:
+          'İki koşul birlikte: 17 < |BC| < 21 ⇒ |BC| ∈ {18, 19, 20}.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '|BC| nin 3 farklı tam sayı değeri vardır.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 605
+  {
+    id: 'triangles-605',
+    topic: 'Üçgenin içindeki noktayla kenar sınırı',
+    figure: {
+      viewBox: '0 18 400 190',
+      caption: 'Şekil 605',
+      label:
+        'ABC üçgeninin iç bölgesinde bir K noktası vardır; [BK] ve [KC] çizilmiştir; |AB| = 10 cm ve |AC| = 7 cm dir.',
+      svg: `
+          <path class="ln" d="M251.3,40.62 L30,180 L370,180 Z"/>
+          <path class="ln" d="M30,180 L227.26,152.12 L370,180"/>
+          <text class="val" x="133.19" y="103.46" text-anchor="middle">10</text>
+          <text class="val" x="321.31" y="106.23" text-anchor="middle">7</text>
+          <circle class="pt" cx="251.3" cy="40.62" r="3.2"/>
+          <circle class="pt" cx="30" cy="180" r="3.2"/>
+          <circle class="pt" cx="370" cy="180" r="3.2"/>
+          <circle class="pt" cx="227.26" cy="152.12" r="3.2"/>
+          <text x="251.3" y="31" text-anchor="middle">A</text>
+          <text x="22" y="198" text-anchor="end">B</text>
+          <text x="378" y="194">C</text>
+          <text x="227.26" y="142" text-anchor="middle">K</text>
+        `,
+    },
+    given: [
+      'K, ABC üçgeninin iç bölgesinde bir nokta',
+      '|AB| = 10 cm',
+      '|AC| = 7 cm',
+    ],
+    stem: [],
+    ask: '|BK| + |KC| toplamının en büyük tam sayı değerine göre, |BC| nin en büyük tam sayı değeri kaçtır?',
+    choices: [
+      { key: 'A', text: '17' },
+      { key: 'B', text: '16' },
+      { key: 'C', text: '15' },
+      { key: 'D', text: '14' },
+      { key: 'E', text: '13' },
+    ],
+    answer: 'C',
+    hint: 'Üçgenin içindeki bir K noktası için |BK| + |KC|, |BA| + |AC| toplamından küçüktür.',
+    solution: [
+      {
+        title: 'İç nokta eşitsizliği',
+        detail:
+          'K, üçgenin iç bölgesinde olduğundan |BK| + |KC| < |AB| + |AC| = 10 + 7 = 17.',
+      },
+      {
+        title: 'En büyük tam sayı',
+        detail:
+          '|BK| + |KC| nin en büyük tam sayı değeri 16 dır.',
+      },
+      {
+        title: 'BKC üçgeni',
+        detail:
+          'BKC üçgeninde |BC| < |BK| + |KC| = 16.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '|BC| nin en büyük tam sayı değeri 15 tir.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 606
+  {
+    id: 'triangles-606',
+    topic: 'Dörtgenin içindeki noktayla kenar toplamı',
+    figure: {
+      viewBox: '0 80 400 222',
+      caption: 'Şekil 606',
+      label:
+        'ABCD dörtgeninin içinde bir P noktası vardır; P köşelere birleştirilmiştir; |PA| = 8 cm, |PB| = 6 cm, |PC| = 5 cm ve |PD| = 4 cm dir.',
+      svg: `
+          <path class="ln" d="M77.43,272.85 L298.3,238.83 L276.6,105.72 L148.58,108.72 Z"/>
+          <path class="ln" d="M77.43,272.85 L276.6,105.72"/>
+          <path class="ln" d="M298.3,238.83 L148.58,108.72"/>
+          <text class="val" x="131" y="217.23" text-anchor="middle">8</text>
+          <text class="val" x="242.27" y="219.24" text-anchor="middle">6</text>
+          <text class="val" x="246.01" y="152.05" text-anchor="middle">5</text>
+          <text class="val" x="183.48" y="136.65" text-anchor="middle">4</text>
+          <circle class="pt" cx="77.43" cy="272.85" r="3.2"/>
+          <circle class="pt" cx="298.3" cy="238.83" r="3.2"/>
+          <circle class="pt" cx="276.6" cy="105.72" r="3.2"/>
+          <circle class="pt" cx="148.58" cy="108.72" r="3.2"/>
+          <circle class="pt" cx="200" cy="170" r="3.2"/>
+          <text x="69.43" y="290.85" text-anchor="end">A</text>
+          <text x="306.3" y="252.83">B</text>
+          <text x="284.6" y="102">C</text>
+          <text x="140.58" y="104" text-anchor="end">D</text>
+          <text x="200" y="192" text-anchor="middle">P</text>
+        `,
+    },
+    given: [
+      'P, ABCD dörtgeninin içinde herhangi bir nokta',
+      '|PA| = 8 cm',
+      '|PB| = 6 cm',
+      '|PC| = 5 cm',
+      '|PD| = 4 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |AD| + |BC| toplamının en büyük tam sayı değeri kaçtır?',
+    choices: [
+      { key: 'A', text: '20' },
+      { key: 'B', text: '21' },
+      { key: 'C', text: '22' },
+      { key: 'D', text: '23' },
+      { key: 'E', text: '24' },
+    ],
+    answer: 'C',
+    hint: '[AD] ve [BC] kenarlarını P ile birer üçgenin kenarı olarak düşün.',
+    solution: [
+      {
+        title: 'APD üçgeni',
+        detail:
+          '|AD| < |PA| + |PD| = 8 + 4 = 12.',
+      },
+      {
+        title: 'BPC üçgeni',
+        detail:
+          '|BC| < |PB| + |PC| = 6 + 5 = 11.',
+      },
+      {
+        title: 'Toplam',
+        detail:
+          '|AD| + |BC| < 12 + 11 = 23.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '|AD| + |BC| toplamının en büyük tam sayı değeri 22 dir.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 607
+  {
+    id: 'triangles-607',
+    topic: 'İç açıortayların kesişimiyle kenar aralığı',
+    figure: {
+      viewBox: '0 12 400 306',
+      caption: 'Şekil 607',
+      label:
+        'ABC üçgeninde [AD], BAC açısının; [BD], ABC açısının açıortayıdır; |AD| = 7 cm, |BD| = 9 cm ve |AB| = x tir.',
+      svg: `
+          <path class="ln" d="M240.97,40 L30,295.18 L370,295.18 Z"/>
+          <path class="ln" d="M240.97,40 L222.57,204.52 L30,295.18"/>
+          <path class="arc" d="M224.4,60.04 A26,26 0 0 0 238.08,65.84"/>
+          <path class="arc" d="M237.64,69.81 A30,30 0 0 0 254.51,66.77"/>
+          <path class="arc" d="M51.66,268.97 A34,34 0 0 1 60.76,280.7"/>
+          <path class="arc" d="M66.19,278.14 A40,40 0 0 1 70,295.18"/>
+          <text class="val" x="219.84" y="125.93" text-anchor="middle">7</text>
+          <text class="val" x="131.4" y="265.71" text-anchor="middle">9</text>
+          <text class="val" x="124.7" y="163.67" text-anchor="middle">x</text>
+          <circle class="pt" cx="240.97" cy="40" r="3.2"/>
+          <circle class="pt" cx="30" cy="295.18" r="3.2"/>
+          <circle class="pt" cx="370" cy="295.18" r="3.2"/>
+          <circle class="pt" cx="222.57" cy="204.52" r="3.2"/>
+          <text x="240.97" y="28" text-anchor="middle">A</text>
+          <text x="22" y="313.18" text-anchor="end">B</text>
+          <text x="378" y="309.18">C</text>
+          <text x="232.57" y="216">D</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      '[AD], BAC açısının açıortayı',
+      '[BD], ABC açısının açıortayı',
+      '|AD| = 7 cm, |BD| = 9 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |AB| = x in en büyük tam sayı değeri ile en küçük tam sayı değerinin toplamı kaçtır?',
+    choices: [
+      { key: 'A', text: '25' },
+      { key: 'B', text: '26' },
+      { key: 'C', text: '27' },
+      { key: 'D', text: '28' },
+      { key: 'E', text: '29' },
+    ],
+    answer: 'C',
+    hint: 'İki iç açıortayın kesiştiği noktada oluşan ADB açısı 90° + m(C) / 2 dir; bu açı dar olabilir mi?',
+    solution: [
+      {
+        title: 'ADB açısı',
+        detail:
+          'D iç teğet çemberin merkezidir: m(ADB) = 180° − (m(A) + m(B)) / 2 = 90° + m(C) / 2 > 90°.',
+      },
+      {
+        title: 'Geniş açı koşulu',
+        detail:
+          'ADB üçgeninde geniş açının karşısındaki kenar: x² > 7² + 9² = 130 ⇒ x > 11,4.',
+      },
+      {
+        title: 'Üçgen eşitsizliği',
+        detail:
+          'x < 7 + 9 = 16 ⇒ x ∈ {12, 13, 14, 15}.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'En büyük ile en küçük değerin toplamı 15 + 12 = 27 dir.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 608
+  {
+    id: 'triangles-608',
+    topic: 'Dış açıortaylarla oluşan dar açı',
+    figure: {
+      viewBox: '0 12 400 186',
+      caption: 'Şekil 608',
+      label:
+        'ABC üçgeninde D noktası [AB], E noktası [BC], K noktası [AC] üzerindedir; [DK], EDA açısının; [EK], DEC açısının açıortayıdır; |DK| = 8 cm, |EK| = 5 cm ve |DE| = x tir.',
+      svg: `
+          <path class="ln" d="M201,40 L30,166.16 L370,166.16 Z"/>
+          <path class="ln" d="M135.23,88.52 L266,88.52 L240.46,166.16 Z"/>
+          <path class="arc" d="M152.93,75.46 A22,22 0 0 1 157.23,88.52"/>
+          <path class="arc" d="M161.23,88.52 A26,26 0 0 1 156.15,103.96"/>
+          <path class="arc" d="M224.37,154.29 A20,20 0 0 1 246.71,147.16"/>
+          <path class="arc" d="M247.96,143.36 A24,24 0 0 1 264.46,166.16"/>
+          <text class="val" x="200.62" y="81.52" text-anchor="middle">8</text>
+          <text class="val" x="264.63" y="136.09" text-anchor="middle">5</text>
+          <text class="val" x="194.97" y="122.68" text-anchor="middle">x</text>
+          <circle class="pt" cx="201" cy="40" r="3.2"/>
+          <circle class="pt" cx="30" cy="166.16" r="3.2"/>
+          <circle class="pt" cx="370" cy="166.16" r="3.2"/>
+          <circle class="pt" cx="135.23" cy="88.52" r="3.2"/>
+          <circle class="pt" cx="240.46" cy="166.16" r="3.2"/>
+          <circle class="pt" cx="266" cy="88.52" r="3.2"/>
+          <text x="201" y="28" text-anchor="middle">A</text>
+          <text x="22" y="184.16" text-anchor="end">B</text>
+          <text x="378" y="180.16">C</text>
+          <text x="127.23" y="84" text-anchor="end">D</text>
+          <text x="240.46" y="188.16" text-anchor="middle">E</text>
+          <text x="274" y="84">K</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      '[DK], EDA açısının açıortayı',
+      '[EK], DEC açısının açıortayı',
+      '|DK| = 8 cm',
+      '|EK| = 5 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |DE| = x in alabileceği en büyük tam sayı değeri kaçtır?',
+    choices: [
+      { key: 'A', text: '12' },
+      { key: 'B', text: '11' },
+      { key: 'C', text: '10' },
+      { key: 'D', text: '9' },
+      { key: 'E', text: '8' },
+    ],
+    answer: 'D',
+    hint: 'EDA ve DEC açıları, DBE üçgeninin D ve E deki dış açılarıdır; K bu üçgenin dış teğet çemberinin merkezidir.',
+    solution: [
+      {
+        title: 'K noktası',
+        detail:
+          'EDA ve DEC, DBE üçgeninin dış açılarıdır; dış açıortayların kesişimi K olduğundan m(DKE) = 90° − m(B) / 2.',
+      },
+      {
+        title: 'Dar açı',
+        detail:
+          'm(B) > 0° olduğundan m(DKE) < 90° dir.',
+      },
+      {
+        title: 'Kenar koşulu',
+        detail:
+          'DKE üçgeninde dar açının karşısındaki kenar: x² < 8² + 5² = 89 ⇒ x < 9,43.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x in alabileceği en büyük tam sayı değeri 9 dur.',
+      },
+    ],
+  },
 ];
 
 /** Looks questions up by id so the modules below read as a running order. */
@@ -52623,6 +53028,21 @@ export const UNIT_2_TRIANGLES: Unit = {
         'triangles-600',
         'triangles-601',
         'triangles-602',
+      ),
+    },
+    {
+      id: 'triangles-m101',
+      order: 101,
+      title: 'Üçgende açı-kenar bağıntıları — Test 8',
+      summary:
+        'Eşkenar üçgende köşe uzaklığı, ortak kenarlı geniş açılı üçgenler, iç nokta eşitsizliği, dörtgende iç nokta, iç açıortaylar ve dış açıortaylarla kenar sınırı.',
+      questions: pick(
+        'triangles-603',
+        'triangles-604',
+        'triangles-605',
+        'triangles-606',
+        'triangles-607',
+        'triangles-608',
       ),
     },
   ],
