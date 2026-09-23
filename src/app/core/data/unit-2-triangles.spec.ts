@@ -1079,6 +1079,19 @@ describe('unit 2 answer key', () => {
   it('524 — A(EBC) = 16 · A(EKL), A(ABE) = 2 · A(EBC) = 32 · A(EKL) → C', () =>
     expect(answerOf('triangles-524')).toBe('C'));
 
+  it('525 — [DE] // [AB], |CD|/|CB| = 4/10, A(ABD)/A(ABC) = 3/5 → C', () =>
+    expect(answerOf('triangles-525')).toBe('C'));
+  it('526 — |DC| = 10, 6/9 = 10/|BC|, |BC| = 15, x = 15 − 8 = 7 → B', () =>
+    expect(answerOf('triangles-526')).toBe('B'));
+  it('527 — |KF| = 6/2 = 3, |BD| = 3 · 3 = 9 → D', () =>
+    expect(answerOf('triangles-527')).toBe('D'));
+  it('528 — S/2 − S/6 − S/8 = 5S/24 = 10, S = 48 → C', () =>
+    expect(answerOf('triangles-528')).toBe('C'));
+  it('529 — |CA| = 16/2 = 8, |AD| = 2 · 3 = 6, |DC| = 2 → B', () =>
+    expect(answerOf('triangles-529')).toBe('B'));
+  it('530 — |AB| = |EC| = 10, |AB|/|DC| = 4/6, |DC| = 15, x = 5 → D', () =>
+    expect(answerOf('triangles-530')).toBe('D'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
