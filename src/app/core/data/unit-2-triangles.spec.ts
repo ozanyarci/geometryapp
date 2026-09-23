@@ -910,6 +910,19 @@ describe('unit 2 answer key', () => {
   it('446 — |AG| = 10, |BG| = 8, A(ABG) = 40, A(ABC) = 3·40 = 120 → C', () =>
     expect(answerOf('triangles-446')).toBe('C'));
 
+  it('447 — h = 3·2 = 6, |BC| = 7 + 11 = 18, A = 18·6/2 = 54 → C', () =>
+    expect(answerOf('triangles-447')).toBe('C'));
+  it('448 — |CD| = |CA| = 6, |BC| = 12, m(C) = 60°, |CE| = 4√3, |CK| = 3√3, x = √3 → B', () =>
+    expect(answerOf('triangles-448')).toBe('B'));
+  it('449 — |GD| = 5, |AD| = 15, |BD|² = 169 − 25 = 144, |BC| = 24, A = 24·15/2 = 180 → C', () =>
+    expect(answerOf('triangles-449')).toBe('C'));
+  it('450 — |FG| = |BE|/6, A(BDE) = S/4, S/24 = 3 ⇒ S = 72 → D', () =>
+    expect(answerOf('triangles-450')).toBe('D'));
+  it('451 — |CD| = 21, |BE| = 12, (5/4)x² = 441 + 144 = 585, x² = 468, x = 6√13 → C', () =>
+    expect(answerOf('triangles-451')).toBe('C'));
+  it('452 — 49 − x² = 81 − (x + 4)² ⇒ 8x = 16, x = 2 → C', () =>
+    expect(answerOf('triangles-452')).toBe('C'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
