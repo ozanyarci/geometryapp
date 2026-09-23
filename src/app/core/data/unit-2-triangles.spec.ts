@@ -1261,6 +1261,19 @@ describe('unit 2 answer key', () => {
   it('608 — m(DKE) = 90 − B/2 < 90 ⇒ x² < 89, en büyük 9 → D', () =>
     expect(answerOf('triangles-608')).toBe('D'));
 
+  it('609 — |AC| = 12, 6 < |BE| ≤ 6√2 ≈ 8,49, 7 + 8 = 15 → D', () =>
+    expect(answerOf('triangles-609')).toBe('D'));
+  it('610 — 6 < |AC| < 14, 4 < |BD| < 12, 7 + 13 + 5 + 11 = 36 → D', () =>
+    expect(answerOf('triangles-610')).toBe('D'));
+  it('611 — K.A.K. üçgen belirtir; 120° de hₐ ≤ √3, hₐ ≤ b → B', () =>
+    expect(answerOf('triangles-611')).toBe('B'));
+  it('612 — 10 < x < 10√2 ≈ 14,14, 11 + 12 + 13 + 14 = 50 → C', () =>
+    expect(answerOf('triangles-612')).toBe('C'));
+  it('613 — 13 − 9 < 2x < 13 + 9 ⇒ 2 < x < 11, 3..10 = 8 → C', () =>
+    expect(answerOf('triangles-613')).toBe('C'));
+  it('614 — |AD| > |DC| ⇒ |AB| > |BC| ⇒ m(C) > m(A) → E', () =>
+    expect(answerOf('triangles-614')).toBe('E'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
