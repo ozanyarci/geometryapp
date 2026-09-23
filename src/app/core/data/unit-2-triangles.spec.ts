@@ -1235,6 +1235,19 @@ describe('unit 2 answer key', () => {
   it('596 — 2 < k < 14, 7k + 14 ≤ 63 ⇒ k ≤ 7, 6 < 3k ≤ 21 → B', () =>
     expect(answerOf('triangles-596')).toBe('B'));
 
+  it('597 — |AB| > |AC| ⇒ m(ADC) < 90, 3x − 12 < 90 ⇒ x < 34, en büyük 33 → C', () =>
+    expect(answerOf('triangles-597')).toBe('C'));
+  it('598 — |BC|² < 64 + 225 = 289 ⇒ 7 < |BC| < 17, 8..16 = 9 → C', () =>
+    expect(answerOf('triangles-598')).toBe('C'));
+  it('599 — h = 12·16/20 = 9,6 ≤ |AD| < 16, 10..15 = 6 → C', () =>
+    expect(answerOf('triangles-599')).toBe('C'));
+  it('600 — |DE| = 4, m(BED) < 90 ⇒ x² > 49 − 16 = 33, 3 < x < 11, 6..10 = 5 → C', () =>
+    expect(answerOf('triangles-600')).toBe('C'));
+  it('601 — m(B) < 60 ⇒ (c − 15)(c + 7) > 0, 15 < c < 21, 18 → D', () =>
+    expect(answerOf('triangles-601')).toBe('D'));
+  it('602 — a > c ⇒ Vₐ < V_c, Vₐ > V_c yanlış → D', () =>
+    expect(answerOf('triangles-602')).toBe('D'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)

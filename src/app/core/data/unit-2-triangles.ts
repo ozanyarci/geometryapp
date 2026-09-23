@@ -50724,6 +50724,380 @@ Q4 DE 6.928203230275509 6.928203230275509 AE 10.0 EC 2.0
       },
     ],
   },
+  // ---------------------------------------------------------------- 597
+  {
+    id: 'triangles-597',
+    topic: 'Kenarortayda açı ve kenar karşılaştırması',
+    figure: {
+      viewBox: '0 12 400 268',
+      caption: 'Şekil 597',
+      label:
+        'ABC üçgeninde D noktası [BC] nin orta noktasıdır; |BD| = |DC| ve m(ADC) = 3x − 12 derecedir.',
+      svg: `
+          <path class="ln" d="M268,40 L30,244 L370,244 Z"/>
+          <path class="ln" d="M268,40 L200,244"/>
+          <path class="tick" d="M115,238 L115,250"/>
+          <path class="tick" d="M285,238 L285,250"/>
+          <path class="arc" d="M230,244 A30,30 0 0 0 209.49,215.54"/>
+          <text class="val" x="252" y="212" text-anchor="middle">3x − 12</text>
+          <circle class="pt" cx="268" cy="40" r="3.2"/>
+          <circle class="pt" cx="30" cy="244" r="3.2"/>
+          <circle class="pt" cx="370" cy="244" r="3.2"/>
+          <circle class="pt" cx="200" cy="244" r="3.2"/>
+          <text x="268" y="28" text-anchor="middle">A</text>
+          <text x="22" y="262" text-anchor="end">B</text>
+          <text x="378" y="258">C</text>
+          <text x="200" y="266" text-anchor="middle">D</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      '|BD| = |DC|',
+      'm(ADC) = 3x − 12',
+      'x ∈ Z⁺',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki üçgende |AB| > |AC| olduğuna göre, x in alabileceği en büyük tam sayı değeri kaçtır?',
+    choices: [
+      { key: 'A', text: '29' },
+      { key: 'B', text: '31' },
+      { key: 'C', text: '33' },
+      { key: 'D', text: '34' },
+      { key: 'E', text: '35' },
+    ],
+    answer: 'C',
+    hint: 'ABD ve ADC üçgenlerinde |AD| ortak, |BD| = |DC| dir; karşısındaki kenarı büyük olan açı daha büyüktür.',
+    solution: [
+      {
+        title: 'Açıları karşılaştır',
+        detail:
+          'ABD ve ADC üçgenlerinde |BD| = |DC| ve |AD| ortaktır; |AB| > |AC| olduğundan m(ADB) > m(ADC) olur.',
+      },
+      {
+        title: 'Dar açı',
+        detail:
+          'm(ADB) + m(ADC) = 180° olduğundan m(ADC) < 90° dir.',
+      },
+      {
+        title: 'Eşitsizlik',
+        detail:
+          '3x − 12 < 90 ⇒ 3x < 102 ⇒ x < 34.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x in en büyük tam sayı değeri 33 tür.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 598
+  {
+    id: 'triangles-598',
+    topic: 'Dar açının karşısındaki kenar aralığı',
+    figure: {
+      viewBox: '0 12 400 272',
+      caption: 'Şekil 598',
+      label:
+        'ABC üçgeninde |AB| = 8 cm ve |AC| = 15 cm dir; A açısı dar açıdır.',
+      svg: `
+          <path class="ln" d="M38.05,40 L30,249.08 L370,249.08 Z"/>
+          <text class="val" x="20" y="149" text-anchor="middle">8</text>
+          <text class="val" x="212" y="139" text-anchor="middle">15</text>
+          <circle class="pt" cx="38.05" cy="40" r="3.2"/>
+          <circle class="pt" cx="30" cy="249.08" r="3.2"/>
+          <circle class="pt" cx="370" cy="249.08" r="3.2"/>
+          <text x="38.05" y="28" text-anchor="middle">A</text>
+          <text x="22" y="267.08" text-anchor="end">B</text>
+          <text x="378" y="263.08">C</text>
+        `,
+    },
+    given: [
+      'm(BAC) < 90°',
+      '|AB| = 8 cm',
+      '|AC| = 15 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |BC| kaç farklı tam sayı değeri alır?',
+    choices: [
+      { key: 'A', text: '7' },
+      { key: 'B', text: '8' },
+      { key: 'C', text: '9' },
+      { key: 'D', text: '10' },
+      { key: 'E', text: '11' },
+    ],
+    answer: 'C',
+    hint: 'A açısı 90° olsaydı |BC| ne olurdu? Dar açının karşısındaki kenar bu değerden kısadır.',
+    solution: [
+      {
+        title: 'Dik açı sınırı',
+        detail:
+          'm(BAC) = 90° olsaydı |BC|² = 8² + 15² = 289 ⇒ |BC| = 17 olurdu.',
+      },
+      {
+        title: 'Dar açı',
+        detail:
+          'm(BAC) < 90° ⇒ |BC|² < 289 ⇒ |BC| < 17.',
+      },
+      {
+        title: 'Üçgen eşitsizliği',
+        detail:
+          '15 − 8 < |BC| ⇒ |BC| > 7.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '7 < |BC| < 17 ⇒ |BC| ∈ {8, 9, …, 16}; 9 farklı tam sayı değeri vardır.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 599
+  {
+    id: 'triangles-599',
+    topic: 'Dik üçgende köşeden hipotenüse uzaklık',
+    figure: {
+      viewBox: '0 12 400 228',
+      caption: 'Şekil 599',
+      label:
+        'A köşesi dik olan BAC üçgeninde |AB| = 12 cm ve |AC| = 16 cm dir; D noktası [BC] üzerindedir ve [AD] çizilmiştir.',
+      svg: `
+          <path class="ln" d="M152.4,40 L30,203.2 L370,203.2 Z"/>
+          <path class="ln" d="M152.4,40 L242.5,203.2"/>
+          <path class="ln" d="M145.8,48.8 L154.6,55.4 L161.2,46.6"/>
+          <text class="val" x="81.6" y="119.4" text-anchor="middle">12</text>
+          <text class="val" x="268.4" y="117" text-anchor="middle">16</text>
+          <circle class="pt" cx="152.4" cy="40" r="3.2"/>
+          <circle class="pt" cx="30" cy="203.2" r="3.2"/>
+          <circle class="pt" cx="370" cy="203.2" r="3.2"/>
+          <circle class="pt" cx="242.5" cy="203.2" r="3.2"/>
+          <text x="152.4" y="28" text-anchor="middle">A</text>
+          <text x="22" y="221.2" text-anchor="end">B</text>
+          <text x="378" y="217.2">C</text>
+          <text x="242.5" y="225.2" text-anchor="middle">D</text>
+        `,
+    },
+    given: [
+      'm(BAC) = 90°',
+      '|AB| = 12 cm',
+      '|AC| = 16 cm',
+    ],
+    stem: [],
+    ask: 'D, [BC] üzerinde B ve C den farklı herhangi bir nokta olduğuna göre, |AD| nin alabileceği kaç farklı tam sayı değeri vardır?',
+    choices: [
+      { key: 'A', text: '4' },
+      { key: 'B', text: '5' },
+      { key: 'C', text: '6' },
+      { key: 'D', text: '7' },
+      { key: 'E', text: '8' },
+    ],
+    answer: 'C',
+    hint: '|AD| en kısa, D yüksekliğin ayağı olduğunda olur; en uzun hâline ise D bir köşeye yaklaşırken ulaşır.',
+    solution: [
+      {
+        title: 'Hipotenüs',
+        detail:
+          '|BC|² = 12² + 16² = 400 ⇒ |BC| = 20.',
+      },
+      {
+        title: 'En küçük değer',
+        detail:
+          '|AD|, hipotenüse ait yükseklik olduğunda en küçüktür: 12 · 16 / 20 = 9,6.',
+      },
+      {
+        title: 'Üst sınır',
+        detail:
+          'D, C ye yaklaştıkça |AD| büyür ama D ≠ C olduğundan |AD| < |AC| = 16 dır.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '9,6 ≤ |AD| < 16 ⇒ |AD| ∈ {10, 11, 12, 13, 14, 15}; 6 farklı tam sayı değeri vardır.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 600
+  {
+    id: 'triangles-600',
+    topic: 'Orta tabanla geniş açı koşulu',
+    figure: {
+      viewBox: '0 12 400 190',
+      caption: 'Şekil 600',
+      label:
+        'ABC üçgeninde D noktası [AC] nin, E noktası [BC] nin orta noktasıdır; [BD] ve [DE] çizilmiştir; |AB| = 8 cm, |BD| = 7 cm ve |EC| = x tir.',
+      svg: `
+          <path class="ln" d="M30,40 L96.29,159.73 L370,159.73 Z"/>
+          <path class="ln" d="M96.29,159.73 L200,99.86 L233.14,159.73"/>
+          <text class="val" x="52.65" y="110.68" text-anchor="middle">8</text>
+          <text class="val" x="142.15" y="124.4" text-anchor="middle">7</text>
+          <text class="val" x="301.57" y="176.73" text-anchor="middle">x</text>
+          <circle class="pt" cx="30" cy="40" r="3.2"/>
+          <circle class="pt" cx="96.29" cy="159.73" r="3.2"/>
+          <circle class="pt" cx="370" cy="159.73" r="3.2"/>
+          <circle class="pt" cx="200" cy="99.86" r="3.2"/>
+          <circle class="pt" cx="233.14" cy="159.73" r="3.2"/>
+          <text x="30" y="28" text-anchor="middle">A</text>
+          <text x="88.29" y="177.73" text-anchor="end">B</text>
+          <text x="378" y="173.73">C</text>
+          <text x="208" y="94.86">D</text>
+          <text x="233.14" y="181.73" text-anchor="middle">E</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      'D ve E orta noktalar',
+      '|AB| = 8 cm',
+      '|BD| = 7 cm',
+      'm(ABC) > 90°',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |EC| = x in alabileceği tam sayı değerleri kaç tanedir?',
+    choices: [
+      { key: 'A', text: '3' },
+      { key: 'B', text: '4' },
+      { key: 'C', text: '5' },
+      { key: 'D', text: '6' },
+      { key: 'E', text: '7' },
+    ],
+    answer: 'C',
+    hint: '[DE] orta taban olduğundan [AB] ye paraleldir ve yarısı kadardır; BDE üçgenine odaklan.',
+    solution: [
+      {
+        title: 'Orta taban',
+        detail:
+          '[DE] ∥ [AB] ve |DE| = 8 / 2 = 4; E orta nokta olduğundan |BE| = |EC| = x.',
+      },
+      {
+        title: 'E deki açı',
+        detail:
+          'Paralellikten m(DEC) = m(ABC) > 90° ⇒ m(BED) = 180° − m(DEC) < 90°.',
+      },
+      {
+        title: 'Dar açı koşulu',
+        detail:
+          'BDE üçgeninde m(BED) dar olduğundan 7² < x² + 4² ⇒ x² > 33 ⇒ x ≥ 6 (tam sayı için).',
+      },
+      {
+        title: 'Üçgen eşitsizliği',
+        detail:
+          'BDE üçgeninde 7 − 4 < x < 7 + 4 ⇒ 3 < x < 11.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x ∈ {6, 7, 8, 9, 10}; 5 tam sayı değeri vardır.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 601
+  {
+    id: 'triangles-601',
+    topic: '60° den küçük açıyla kenar sınırı',
+    figure: {
+      viewBox: '0 12 400 350',
+      caption: 'Şekil 601',
+      label:
+        'ABC üçgeninde |AC| = 13 cm ve |BC| = 8 cm dir; B açısı işaretlenmiştir.',
+      svg: `
+          <path class="ln" d="M370,40 L30,330.38 L228.72,330.38 Z"/>
+          <path class="arc" d="M66,330.38 A36,36 0 0 0 57.37,307"/>
+          <text class="val" x="320" y="197" text-anchor="middle">13</text>
+          <text class="val" x="129.36" y="349.38" text-anchor="middle">8</text>
+          <circle class="pt" cx="370" cy="40" r="3.2"/>
+          <circle class="pt" cx="30" cy="330.38" r="3.2"/>
+          <circle class="pt" cx="228.72" cy="330.38" r="3.2"/>
+          <text x="370" y="28" text-anchor="middle">A</text>
+          <text x="22" y="348.38" text-anchor="end">B</text>
+          <text x="236.72" y="348.38">C</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      '|AC| = 13 cm',
+      '|BC| = 8 cm',
+      'm(B) < 60°',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |AB| aşağıdakilerden hangisi olabilir?',
+    choices: [
+      { key: 'A', text: '12' },
+      { key: 'B', text: '14' },
+      { key: 'C', text: '15' },
+      { key: 'D', text: '18' },
+      { key: 'E', text: '22' },
+    ],
+    answer: 'D',
+    hint: 'Önce m(B) = 60° olsaydı |AB| nin ne olacağını kosinüs teoremiyle bul.',
+    solution: [
+      {
+        title: '60° sınırı',
+        detail:
+          'm(B) = 60° olsaydı 13² = |AB|² + 8² − 2 · |AB| · 8 · ½ ⇒ |AB|² − 8|AB| − 105 = 0 ⇒ |AB| = 15.',
+      },
+      {
+        title: 'Açı küçülürse',
+        detail:
+          'm(B) < 60° ⇒ cos B > ½ ⇒ 169 < |AB|² + 64 − 8|AB| ⇒ (|AB| − 15)(|AB| + 7) > 0 ⇒ |AB| > 15.',
+      },
+      {
+        title: 'Üçgen eşitsizliği',
+        detail:
+          '|AB| < 13 + 8 = 21.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '15 < |AB| < 21 olduğundan seçeneklerden yalnızca 18 olabilir.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 602
+  {
+    id: 'triangles-602',
+    topic: 'Açı sıralamasından kenar, yükseklik ve kenarortay sıralaması',
+    given: [
+      'ABC çeşitkenar bir üçgen',
+      'm(A) > m(B) > m(C)',
+    ],
+    stem: [
+      'ABC üçgeninin kenar uzunlukları a, b, c; bu kenarlara ait yükseklikler hₐ, h_b, h_c ve kenarortaylar Vₐ, V_b, V_c dir.',
+    ],
+    ask: 'Buna göre, aşağıdakilerden hangisi yanlıştır?',
+    choices: [
+      { key: 'A', text: 'a > b > c' },
+      { key: 'B', text: 'hₐ < h_b < h_c' },
+      { key: 'C', text: 'b − c < a < b + c' },
+      { key: 'D', text: 'Vₐ > V_c' },
+      { key: 'E', text: 'h_b < V_b' },
+    ],
+    answer: 'D',
+    hint: 'Büyük açının karşısında büyük kenar vardır; kenar büyüdükçe o kenara ait yükseklik ve kenarortay nasıl değişir?',
+    solution: [
+      {
+        title: 'Kenarlar',
+        detail:
+          'm(A) > m(B) > m(C) ⇒ a > b > c; A doğrudur.',
+      },
+      {
+        title: 'Yükseklikler',
+        detail:
+          'a · hₐ = b · h_b = c · h_c = 2 · Alan olduğundan kenar büyüdükçe yükseklik küçülür: hₐ < h_b < h_c; B doğrudur.',
+      },
+      {
+        title: 'Üçgen eşitsizliği ve yükseklik',
+        detail:
+          'Her üçgende b − c < a < b + c dir; çeşitkenar üçgende yükseklik kenarortaydan kısadır, h_b < V_b; C ve E doğrudur.',
+      },
+      {
+        title: 'Kenarortaylar',
+        detail:
+          '4Vₐ² = 2b² + 2c² − a² olduğundan büyük kenara ait kenarortay küçüktür: a > c ⇒ Vₐ < V_c.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'Yanlış olan ifade Vₐ > V_c dir.',
+      },
+    ],
+  },
 ];
 
 /** Looks questions up by id so the modules below read as a running order. */
@@ -52234,6 +52608,21 @@ export const UNIT_2_TRIANGLES: Unit = {
         'triangles-594',
         'triangles-595',
         'triangles-596',
+      ),
+    },
+    {
+      id: 'triangles-m100',
+      order: 100,
+      title: 'Üçgende açı-kenar bağıntıları — Test 7',
+      summary:
+        'Kenarortayda açı karşılaştırması, dar açının karşısındaki kenar, hipotenüse uzaklık, orta tabanla geniş açı, 60° sınırı ve yükseklik-kenarortay sıralaması.',
+      questions: pick(
+        'triangles-597',
+        'triangles-598',
+        'triangles-599',
+        'triangles-600',
+        'triangles-601',
+        'triangles-602',
       ),
     },
   ],
