@@ -858,6 +858,18 @@ describe('unit 2 answer key', () => {
     expect(answerOf('triangles-421')).toBe('D'));
   it('422 — |BC| = 15, |AH| = 9·12/15 = 36/5, x = (1/3)·36/5 = 12/5 → B', () =>
     expect(answerOf('triangles-422')).toBe('B'));
+  it('423 — |BE|² + |CF|² = (5/4)(b² + c²) = 32 + 68 = 100, b² + c² = 80, |BC| = 4√5 → B', () =>
+    expect(answerOf('triangles-423')).toBe('B'));
+  it('424 — 4m² + n² = 16, m² + 4n² = 9 ⇒ m² + n² = 5, |AB|² = 4·5 = 20, |AB| = 2√5 → B', () =>
+    expect(answerOf('triangles-424')).toBe('B'));
+  it('425 — |AD| = 6, |AG| = 4, 16 = 2m·m ⇒ m² = 8, |AB|² = 2m·3m = 48, |AB| = 4√3 → B', () =>
+    expect(answerOf('triangles-425')).toBe('B'));
+  it('426 — |AB|² − |AC|² = 2·|BC|·x, 121 − 49 = 24x, x = 3 → D', () =>
+    expect(answerOf('triangles-426')).toBe('D'));
+  it('427 — |CE| = |BD| = 9, |GD| = 3, |GC| = 6, |DC|² = 9 + 36 = 45, |AC| = 2·3√5 = 6√5 → C', () =>
+    expect(answerOf('triangles-427')).toBe('C'));
+  it('428 — |AK| = |AM|/2, |AG| = 2|AM|/3, |KG| = |AM|/6, oran = (1/6)/(2/3) = 1/4 → B', () =>
+    expect(answerOf('triangles-428')).toBe('B'));
 
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
