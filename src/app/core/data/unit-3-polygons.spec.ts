@@ -48,6 +48,17 @@ describe('unit 3 answer key', () => {
     expect(answerOf('polygons-17')).toBe('D'));
   it('18 — 32 + 32√2 − 4·4√2 = 32 + 16√2 → B', () =>
     expect(answerOf('polygons-18')).toBe('B'));
+
+  it('19 — m(AOC) = 2·72 = 144, α = (180 − 144)/2 = 18 → B', () =>
+    expect(answerOf('polygons-19')).toBe('B'));
+  it('20 — a√3 = 6√3, a = 6, 6·6 = 36 → A', () => expect(answerOf('polygons-20')).toBe('A'));
+  it('21 — 5d = 180, d = 36, n = 10, 10·7/2 = 35 → C', () =>
+    expect(answerOf('polygons-21')).toBe('C'));
+  it('22 — A + B = 2·(180 − 100) = 160, 720 − 160 = 560 → D', () =>
+    expect(answerOf('polygons-22')).toBe('D'));
+  it('23 — m(CDA) = 40, m(FBC) = 60, α = 360 − 60 − 140 − 40 = 120 → E', () =>
+    expect(answerOf('polygons-23')).toBe('E'));
+  it('24 — n = 360/24 = 15, 13·180 = 2340 → C', () => expect(answerOf('polygons-24')).toBe('C'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
