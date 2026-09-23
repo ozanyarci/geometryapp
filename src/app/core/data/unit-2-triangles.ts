@@ -45772,6 +45772,599 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+  {
+    id: 'triangles-531',
+    topic: 'Kenarortay ile kesen doğru',
+    figure: {
+      viewBox: '0 -4 400 312',
+      caption: 'Şekil 531',
+      label:
+        'ABC üçgeninde D, [BC] nin orta noktasıdır. F, [AD] üzerinde; E, [AB] üzerindedir ve C, F, E doğrusaldır. 2|AF| = |FD| ve |AB| = 20 cm dir.',
+      svg: `
+          <path class="ln" d="M180,34 L40,274 L360,274 Z"/>
+          <path class="ln" d="M180,34 L200,274"/>
+          <path class="ln" d="M360,274 L152,82"/>
+          <path class="tick" d="M117.5,268 L117.5,280"/>
+          <path class="tick" d="M122.5,268 L122.5,280"/>
+          <path class="tick" d="M277.5,268 L277.5,280"/>
+          <path class="tick" d="M282.5,268 L282.5,280"/>
+
+          <circle class="pt" cx="180" cy="34" r="3.2"/>
+          <circle class="pt" cx="40" cy="274" r="3.2"/>
+          <circle class="pt" cx="360" cy="274" r="3.2"/>
+          <circle class="pt" cx="200" cy="274" r="3.2"/>
+          <circle class="pt" cx="152" cy="82" r="3.2"/>
+          <circle class="pt" cx="186.67" cy="114" r="3.2"/>
+
+          <text class="val" x="85.63" y="175.44" text-anchor="end">x</text>
+          <text x="180.64" y="22.02" text-anchor="middle">A</text>
+          <text x="28.73" y="289.08" text-anchor="end">B</text>
+          <text x="372.39" y="286.93">C</text>
+          <text x="203.64" y="295.41" text-anchor="middle">D</text>
+          <text x="138.59" y="82.12" text-anchor="end">E</text>
+          <text x="196.96" y="111.28">F</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 -4 400 312',
+      caption: 'Şekil 531 — D den [CE] ye paralel',
+      label:
+        'Aynı şekle D den [CE] ye paralel [DK] kesikli çizgiyle eklenmiştir; K, [AB] üzerindedir.',
+      svg: `
+          <path class="ln" d="M180,34 L40,274 L360,274 Z"/>
+          <path class="ln" d="M180,34 L200,274"/>
+          <path class="ln" d="M360,274 L152,82"/>
+          <path class="tick" d="M117.5,268 L117.5,280"/>
+          <path class="tick" d="M122.5,268 L122.5,280"/>
+          <path class="tick" d="M277.5,268 L277.5,280"/>
+          <path class="tick" d="M282.5,268 L282.5,280"/>
+          <path class="aux" d="M200,274 L96,178"/>
+
+          <circle class="pt" cx="180" cy="34" r="3.2"/>
+          <circle class="pt" cx="40" cy="274" r="3.2"/>
+          <circle class="pt" cx="360" cy="274" r="3.2"/>
+          <circle class="pt" cx="200" cy="274" r="3.2"/>
+          <circle class="pt" cx="152" cy="82" r="3.2"/>
+          <circle class="pt" cx="186.67" cy="114" r="3.2"/>
+          <circle class="pt" cx="96" cy="178" r="3.2"/>
+
+          <text class="val" x="85.63" y="175.44" text-anchor="end">x</text>
+          <text x="180.64" y="22.02" text-anchor="middle">A</text>
+          <text x="28.73" y="289.08" text-anchor="end">B</text>
+          <text x="372.39" y="286.93">C</text>
+          <text x="203.64" y="295.41" text-anchor="middle">D</text>
+          <text x="138.59" y="82.12" text-anchor="end">E</text>
+          <text x="196.96" y="111.28">F</text>
+          <text x="109.93" y="184.69">K</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      'A, F, D ve C, F, E doğrusal',
+      '2|AF| = |FD|',
+      '|BD| = |DC|',
+      '|AB| = 20 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |BE| = x kaç cm dir?',
+    choices: [
+      { key: 'A', text: '12' },
+      { key: 'B', text: '14' },
+      { key: 'C', text: '15' },
+      { key: 'D', text: '16' },
+      { key: 'E', text: '18' },
+    ],
+    answer: 'D',
+    hint: 'D den [CE] ye bir paralel çiz ve iki ayrı üçgende oran aktar.',
+    solution: [
+      {
+        title: 'Yardımcı paralel',
+        detail:
+          'D den [CE] ye paralel çizelim; [AB] yi K noktasında kessin.',
+      },
+      {
+        title: 'BCE üçgeni',
+        detail:
+          'D, [BC] nin orta noktası ve [DK] // [CE] ⇒ K, [BE] nin orta noktasıdır: |EK| = |KB|.',
+      },
+      {
+        title: 'ADK üçgeni',
+        detail:
+          '[FE] // [DK] ⇒ |AE| / |EK| = |AF| / |FD| = 1/2 dir.',
+      },
+      {
+        title: 'Uzunluklar',
+        detail:
+          '|AE| = a ise |EK| = |KB| = 2a ve |AB| = 5a = 20 ⇒ a = 4 cm dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x = |BE| = 4a = 16 cm bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'triangles-532',
+    topic: 'Dik üçgende hipotenüsün orta noktası',
+    figure: {
+      viewBox: '0 -4 400 332',
+      caption: 'Şekil 532',
+      label:
+        'ABC dik üçgeninde [AB] ⊥ [BC] dir. D, [AB] üzerinde; E, [AC] üzerindedir ve |AE| = |EC| dir. |AD| = 16 cm, |DE| = 10 cm ve |DB| = 4 cm dir.',
+      svg: `
+          <path class="ln" d="M96,34 L96,294 L304,294 Z"/>
+          <path class="ln" d="M96,242 L200,164"/>
+          <path class="tick" d="M151.12,93.3 L141.75,100.8"/>
+          <path class="tick" d="M154.25,97.2 L144.88,104.7"/>
+          <path class="tick" d="M255.12,223.3 L245.75,230.8"/>
+          <path class="tick" d="M258.25,227.2 L248.88,234.7"/>
+          <path class="ln" d="M96,284 L106,284 L106,294"/>
+
+          <circle class="pt" cx="96" cy="34" r="3.2"/>
+          <circle class="pt" cx="96" cy="294" r="3.2"/>
+          <circle class="pt" cx="304" cy="294" r="3.2"/>
+          <circle class="pt" cx="96" cy="242" r="3.2"/>
+          <circle class="pt" cx="200" cy="164" r="3.2"/>
+
+          <text class="val" x="84" y="143" text-anchor="end">16</text>
+          <text class="val" x="84" y="273" text-anchor="end">4</text>
+          <text class="val" x="200" y="314" text-anchor="middle">x</text>
+          <text class="val" x="140.8" y="196" text-anchor="end">10</text>
+          <text x="91.78" y="22.79" text-anchor="middle">A</text>
+          <text x="89.3" y="313.92" text-anchor="end">B</text>
+          <text x="315.95" y="307.86">C</text>
+          <text x="82" y="247" text-anchor="end">D</text>
+          <text x="213" y="162.69">E</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 -4 400 332',
+      caption: 'Şekil 532 — E den [AB] ye dikme',
+      label:
+        'Aynı şekle E den [AB] ye inen [EH] dikmesi kesikli çizgiyle eklenmiştir; H, [AB] üzerindedir.',
+      svg: `
+          <path class="ln" d="M96,34 L96,294 L304,294 Z"/>
+          <path class="ln" d="M96,242 L200,164"/>
+          <path class="tick" d="M151.12,93.3 L141.75,100.8"/>
+          <path class="tick" d="M154.25,97.2 L144.88,104.7"/>
+          <path class="tick" d="M255.12,223.3 L245.75,230.8"/>
+          <path class="tick" d="M258.25,227.2 L248.88,234.7"/>
+          <path class="ln" d="M96,284 L106,284 L106,294"/>
+          <path class="aux" d="M200,164 L96,164"/>
+
+          <circle class="pt" cx="96" cy="34" r="3.2"/>
+          <circle class="pt" cx="96" cy="294" r="3.2"/>
+          <circle class="pt" cx="304" cy="294" r="3.2"/>
+          <circle class="pt" cx="96" cy="242" r="3.2"/>
+          <circle class="pt" cx="200" cy="164" r="3.2"/>
+          <circle class="pt" cx="96" cy="164" r="3.2"/>
+
+          <text class="val" x="84" y="143" text-anchor="end">16</text>
+          <text class="val" x="84" y="273" text-anchor="end">4</text>
+          <text class="val" x="200" y="314" text-anchor="middle">x</text>
+          <text class="val" x="140.8" y="196" text-anchor="end">10</text>
+          <text x="91.78" y="22.79" text-anchor="middle">A</text>
+          <text x="89.3" y="313.92" text-anchor="end">B</text>
+          <text x="315.95" y="307.86">C</text>
+          <text x="82" y="247" text-anchor="end">D</text>
+          <text x="213" y="162.69">E</text>
+          <text x="105.9" y="181.02">H</text>
+        `,
+    },
+    given: [
+      'ABC bir dik üçgen',
+      '[AB] ⊥ [BC]',
+      '|AE| = |EC|',
+      '|AD| = 16 cm',
+      '|DE| = 10 cm',
+      '|DB| = 4 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |BC| = x kaç cm dir?',
+    choices: [
+      { key: 'A', text: '10' },
+      { key: 'B', text: '12' },
+      { key: 'C', text: '14' },
+      { key: 'D', text: '15' },
+      { key: 'E', text: '16' },
+    ],
+    answer: 'E',
+    hint: 'E den [AB] ye bir dikme indir; bu dikme [BC] ye paraleldir.',
+    solution: [
+      {
+        title: 'Yardımcı dikme',
+        detail:
+          'E den [AB] ye [EH] dikmesini indirelim. [EH] // [BC] dir.',
+      },
+      {
+        title: 'Orta taban',
+        detail:
+          'E, [AC] nin orta noktası ⇒ H, [AB] nin orta noktası ve |EH| = x/2 dir.',
+      },
+      {
+        title: 'Uzunluklar',
+        detail:
+          '|AB| = 16 + 4 = 20 ⇒ |AH| = 10 cm, |DH| = 16 − 10 = 6 cm dir.',
+      },
+      {
+        title: 'Pisagor',
+        detail:
+          'EHD dik üçgeninde |EH|² = 10² − 6² = 64 ⇒ |EH| = 8 cm dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x = 2 · 8 = 16 cm bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'triangles-533',
+    topic: 'Açı eşliğiyle benzerlik ve alan',
+    figure: {
+      viewBox: '0 -4 400 288',
+      caption: 'Şekil 533',
+      label:
+        'ABC dik üçgeninde [AB] ⊥ [BC] dir. D, [AC] nin orta noktasıdır; E üçgenin içindedir ve [AE] ⊥ [ED] dir. m(EAD) = m(BCD), |BC| = 8 cm ve |ED| = 3 cm dir. AED üçgeninin dışında kalan bölge taralıdır.',
+      svg: `
+          <path class="shade" d="M56,34 L56,250 L344,250 L200,142 L96.32,172.24 Z"/>
+          <path class="ln" d="M56,34 L56,250 L344,250 Z"/>
+          <path class="ln" d="M56,34 L96.32,172.24 L200,142"/>
+          <path class="tick" d="M129.6,81.7 L122.4,91.3"/>
+          <path class="tick" d="M133.6,84.7 L126.4,94.3"/>
+          <path class="tick" d="M273.6,189.7 L266.4,199.3"/>
+          <path class="tick" d="M277.6,192.7 L270.4,202.3"/>
+          <path class="ln" d="M56,240 L66,240 L66,250"/>
+          <path class="ln" d="M93.8,163.6 L102.44,161.08 L104.96,169.72"/>
+          <path class="arc" d="M64.4,62.8 A30,30 0 0,0 80,52"/>
+          <path class="arc" d="M310,250 A34,34 0 0,1 316.8,229.6"/>
+
+          <circle class="pt" cx="56" cy="34" r="3.2"/>
+          <circle class="pt" cx="56" cy="250" r="3.2"/>
+          <circle class="pt" cx="344" cy="250" r="3.2"/>
+          <circle class="pt" cx="200" cy="142" r="3.2"/>
+          <circle class="pt" cx="96.32" cy="172.24" r="3.2"/>
+
+          <text class="val" x="200" y="270" text-anchor="middle">8</text>
+          <text class="val" x="149.28" y="168.84" text-anchor="middle">3</text>
+          <text x="48" y="25.05" text-anchor="end">A</text>
+          <text x="45.34" y="266.01" text-anchor="end">B</text>
+          <text x="356.93" y="261.52">C</text>
+          <text x="207.2" y="132.42">D</text>
+          <text x="89.12" y="191.82" text-anchor="end">E</text>
+        `,
+    },
+    given: [
+      'ABC dik üçgen',
+      '[AE] ⊥ [ED]',
+      '|AD| = |DC|',
+      '|BC| = 8 cm',
+      '|ED| = 3 cm',
+      'm(EAD) = m(BCD)',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, taralı alan kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '15' },
+      { key: 'B', text: '18' },
+      { key: 'C', text: '20' },
+      { key: 'D', text: '21' },
+      { key: 'E', text: '24' },
+    ],
+    answer: 'B',
+    hint: 'AED ve CBA dik üçgenlerinin açılarını karşılaştır.',
+    solution: [
+      {
+        title: 'Benzerlik',
+        detail:
+          'm(AED) = m(CBA) = 90° ve m(EAD) = m(BCA) ⇒ AED ∼ CBA dır.',
+      },
+      {
+        title: 'Oran',
+        detail:
+          '|AD| = |AC| / 2 ⇒ benzerlik oranı |AD| / |CA| = 1/2 dir.',
+      },
+      {
+        title: 'Karşılık kenarlar',
+        detail:
+          '|ED| = |BA| / 2 ⇒ |AB| = 6 cm; |AE| = |CB| / 2 = 4 cm dir.',
+      },
+      {
+        title: 'Alanlar',
+        detail:
+          'Alan(ABC) = 8 · 6 / 2 = 24 cm², Alan(AED) = 4 · 3 / 2 = 6 cm² dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'Taralı alan = 24 − 6 = 18 cm² bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'triangles-534',
+    topic: 'Kenarortayın orta noktası',
+    figure: {
+      viewBox: '0 -4 400 303',
+      caption: 'Şekil 534',
+      label:
+        'ABC üçgeninde D, [BC] nin orta noktası; F, [AD] nin orta noktasıdır. [BF] nin uzantısı [AC] yi E noktasında keser. |BF| = 18 cm dir.',
+      svg: `
+          <path class="ln" d="M150.5,34 L51.5,265 L348.5,265 Z"/>
+          <path class="ln" d="M150.5,34 L200,265"/>
+          <path class="ln" d="M51.5,265 L216.5,111"/>
+          <path class="tick" d="M168.74,90.49 L157.01,93.01"/>
+          <path class="tick" d="M193.49,205.99 L181.76,208.51"/>
+          <path class="tick" d="M123.25,259 L123.25,271"/>
+          <path class="tick" d="M128.25,259 L128.25,271"/>
+          <path class="tick" d="M271.75,259 L271.75,271"/>
+          <path class="tick" d="M276.75,259 L276.75,271"/>
+
+          <circle class="pt" cx="150.5" cy="34" r="3.2"/>
+          <circle class="pt" cx="51.5" cy="265" r="3.2"/>
+          <circle class="pt" cx="348.5" cy="265" r="3.2"/>
+          <circle class="pt" cx="200" cy="265" r="3.2"/>
+          <circle class="pt" cx="216.5" cy="111" r="3.2"/>
+          <circle class="pt" cx="175.25" cy="149.5" r="3.2"/>
+
+          <text class="val" x="105.19" y="201.28" text-anchor="end">18</text>
+          <text class="val" x="204.06" y="146.22">x</text>
+          <text x="145.79" y="22.99" text-anchor="middle">A</text>
+          <text x="39.19" y="278.11" text-anchor="end">B</text>
+          <text x="360.67" y="278.41">C</text>
+          <text x="199.4" y="286.98" text-anchor="middle">D</text>
+          <text x="219" y="99.27" text-anchor="middle">E</text>
+          <text x="162.73" y="146.9" text-anchor="end">F</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 -4 400 303',
+      caption: 'Şekil 534 — D den [BE] ye paralel',
+      label:
+        'Aynı şekle D den [BE] ye paralel [DK] kesikli çizgiyle eklenmiştir; K, [AC] üzerindedir.',
+      svg: `
+          <path class="ln" d="M150.5,34 L51.5,265 L348.5,265 Z"/>
+          <path class="ln" d="M150.5,34 L200,265"/>
+          <path class="ln" d="M51.5,265 L216.5,111"/>
+          <path class="tick" d="M168.74,90.49 L157.01,93.01"/>
+          <path class="tick" d="M193.49,205.99 L181.76,208.51"/>
+          <path class="tick" d="M123.25,259 L123.25,271"/>
+          <path class="tick" d="M128.25,259 L128.25,271"/>
+          <path class="tick" d="M271.75,259 L271.75,271"/>
+          <path class="tick" d="M276.75,259 L276.75,271"/>
+          <path class="aux" d="M200,265 L282.5,188"/>
+
+          <circle class="pt" cx="150.5" cy="34" r="3.2"/>
+          <circle class="pt" cx="51.5" cy="265" r="3.2"/>
+          <circle class="pt" cx="348.5" cy="265" r="3.2"/>
+          <circle class="pt" cx="200" cy="265" r="3.2"/>
+          <circle class="pt" cx="216.5" cy="111" r="3.2"/>
+          <circle class="pt" cx="175.25" cy="149.5" r="3.2"/>
+          <circle class="pt" cx="282.5" cy="188" r="3.2"/>
+
+          <text class="val" x="105.19" y="201.28" text-anchor="end">18</text>
+          <text class="val" x="204.06" y="146.22">x</text>
+          <text x="145.79" y="22.99" text-anchor="middle">A</text>
+          <text x="39.19" y="278.11" text-anchor="end">B</text>
+          <text x="360.67" y="278.41">C</text>
+          <text x="199.4" y="286.98" text-anchor="middle">D</text>
+          <text x="219" y="99.27" text-anchor="middle">E</text>
+          <text x="162.73" y="146.9" text-anchor="end">F</text>
+          <text x="295.5" y="186.69">K</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      '|AF| = |FD|',
+      '|BD| = |DC|',
+      '|BF| = 18 cm',
+      '|FE| = x',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |FE| = x kaç cm dir?',
+    choices: [
+      { key: 'A', text: '4' },
+      { key: 'B', text: '5' },
+      { key: 'C', text: '6' },
+      { key: 'D', text: '8' },
+      { key: 'E', text: '9' },
+    ],
+    answer: 'C',
+    hint: 'D den [BE] ye bir paralel çiz; iki kez orta taban kuralını kullan.',
+    solution: [
+      {
+        title: 'Yardımcı paralel',
+        detail:
+          'D den [BE] ye paralel çizelim; [AC] yi K noktasında kessin.',
+      },
+      {
+        title: 'CBE üçgeni',
+        detail:
+          'D, [BC] nin orta noktası ⇒ |DK| = |BE| / 2 dir.',
+      },
+      {
+        title: 'ADK üçgeni',
+        detail:
+          'F, [AD] nin orta noktası ve [FE] // [DK] ⇒ |FE| = |DK| / 2 = |BE| / 4 tür.',
+      },
+      {
+        title: 'Oran',
+        detail:
+          '|FE| = x ise |BE| = 4x ve |BF| = 3x dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '3x = 18 ⇒ x = 6 cm bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'triangles-535',
+    topic: 'İkizkenar dik üçgen ile benzerlik',
+    figure: {
+      viewBox: '0 -4 400 136',
+      caption: 'Şekil 535',
+      label:
+        'ABC üçgeninde D ve E, [BC] üzerindedir. [DA] ⊥ [AE] ve |AD| = |AE| dir. m(ABC) = m(EAC), |BD| = 6 cm ve |EC| = 3 cm dir.',
+      svg: `
+          <path class="ln" d="M230,36 L50,96 L350,96 Z"/>
+          <path class="ln" d="M170,96 L230,36 L290,96"/>
+          <path class="tick" d="M204.24,70.24 L195.76,61.76"/>
+          <path class="tick" d="M264.24,61.76 L255.76,70.24"/>
+          <path class="ln" d="M223.64,42.36 L230,48.73 L236.36,42.36"/>
+          <path class="arc" d="M90,96 A40,40 0 0,0 87.95,83.35"/>
+          <path class="arc" d="M251.21,57.21 A30,30 0 0,0 256.83,49.42"/>
+
+          <circle class="pt" cx="230" cy="36" r="3.2"/>
+          <circle class="pt" cx="50" cy="96" r="3.2"/>
+          <circle class="pt" cx="350" cy="96" r="3.2"/>
+          <circle class="pt" cx="170" cy="96" r="3.2"/>
+          <circle class="pt" cx="290" cy="96" r="3.2"/>
+
+          <text class="val" x="110" y="116" text-anchor="middle">6</text>
+          <text class="val" x="320" y="116" text-anchor="middle">3</text>
+          <text class="val" x="295.37" y="57.58">x</text>
+          <text x="230" y="24" text-anchor="middle">A</text>
+          <text x="50" y="118" text-anchor="middle">B</text>
+          <text x="350" y="118" text-anchor="middle">C</text>
+          <text x="170" y="118" text-anchor="middle">D</text>
+          <text x="290" y="118" text-anchor="middle">E</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      '[DA] ⊥ [AE]',
+      '|AD| = |AE|',
+      'm(ABC) = m(EAC)',
+      '|BD| = 6 cm',
+      '|EC| = 3 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |AC| = x kaç cm dir?',
+    choices: [
+      { key: 'A', text: '2√6' },
+      { key: 'B', text: '3√3' },
+      { key: 'C', text: '2√10' },
+      { key: 'D', text: '3√5' },
+      { key: 'E', text: '5√2' },
+    ],
+    answer: 'D',
+    hint: 'ADE ikizkenar dik üçgeninin açılarından yola çıkıp ABD ile EAC üçgenlerini karşılaştır.',
+    solution: [
+      {
+        title: 'Açılar',
+        detail:
+          'ADE ikizkenar dik üçgen ⇒ m(ADB) = m(AEC) = 135° dir. m(ABC) = m(EAC) = β ise m(BAD) = m(ACB) = 45° − β olur.',
+      },
+      {
+        title: 'Benzerlik',
+        detail:
+          'BDA ∼ AEC ⇒ |BD| / |AE| = |DA| / |EC| ⇒ |AD| · |AE| = 6 · 3 = 18 dir.',
+      },
+      {
+        title: 'Uzunluklar',
+        detail:
+          '|AD| = |AE| = 3√2 ⇒ |DE| = 3√2 · √2 = 6 cm ve |BC| = 6 + 6 + 3 = 15 cm dir.',
+      },
+      {
+        title: 'İkinci benzerlik',
+        detail:
+          'C açısı ortak ve m(CAE) = m(CBA) ⇒ CAE ∼ CBA ⇒ |AC|² = |CE| · |CB| = 3 · 15 = 45 tir.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x = √45 = 3√5 cm bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'triangles-536',
+    topic: 'Ağırlık merkezi ve dikme',
+    figure: {
+      viewBox: '0 -4 400 312',
+      caption: 'Şekil 536',
+      label:
+        'ABC dik üçgeninde [AB] ⊥ [BC] dir. G, ABC üçgeninin ağırlık merkezidir. E, [BC] üzerinde; D, [AC] üzerindedir ve [ED] ⊥ [AC] dir. F, [AB] üzerindedir ve [GF] ⊥ [AB] dir. |AD| = 12 cm, |DC| = 3 cm ve |EC| = 5 cm dir.',
+      svg: `
+          <path class="ln" d="M110,34 L110,274 L290,274 Z"/>
+          <path class="ln" d="M190,274 L254,226"/>
+          <path class="ln" d="M110,194 L170,194"/>
+          <path class="ln" d="M110,264 L120,264 L120,274"/>
+          <path class="ln" d="M110,185 L119,185 L119,194"/>
+          <path class="ln" d="M248.6,218.8 L241.4,224.2 L246.8,231.4"/>
+
+          <circle class="pt" cx="110" cy="34" r="3.2"/>
+          <circle class="pt" cx="110" cy="274" r="3.2"/>
+          <circle class="pt" cx="290" cy="274" r="3.2"/>
+          <circle class="pt" cx="254" cy="226" r="3.2"/>
+          <circle class="pt" cx="190" cy="274" r="3.2"/>
+          <circle class="pt" cx="170" cy="194" r="3.2"/>
+          <circle class="pt" cx="110" cy="194" r="3.2"/>
+
+          <text class="val" x="191.6" y="126">12</text>
+          <text class="val" x="281.6" y="246">3</text>
+          <text class="val" x="240" y="294" text-anchor="middle">5</text>
+          <text class="val" x="98" y="239" text-anchor="end">x</text>
+          <text x="105.07" y="23.09" text-anchor="end">A</text>
+          <text x="99.93" y="290.81" text-anchor="end">B</text>
+          <text x="302.2" y="287.34">C</text>
+          <text x="265.2" y="220.8">D</text>
+          <text x="190" y="296" text-anchor="middle">E</text>
+          <text x="96" y="199" text-anchor="end">F</text>
+          <text x="172.35" y="184.29" text-anchor="middle">G</text>
+        `,
+    },
+    given: [
+      'G, ABC üçgeninin ağırlık merkezi',
+      '[AB] ⊥ [BC]',
+      '[ED] ⊥ [AC]',
+      '[GF] ⊥ [AB]',
+      '|AD| = 12 cm',
+      '|DC| = 3 cm',
+      '|EC| = 5 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |FB| = x kaç cm dir?',
+    choices: [
+      { key: 'A', text: '4' },
+      { key: 'B', text: '9/2' },
+      { key: 'C', text: '5' },
+      { key: 'D', text: '6' },
+      { key: 'E', text: '8' },
+    ],
+    answer: 'A',
+    hint: 'C açısı ortak olan iki dik üçgenden |BC| yi bul.',
+    solution: [
+      {
+        title: 'Benzerlik',
+        detail:
+          'C açısı ortak ve m(CDE) = m(CBA) = 90° ⇒ CDE ∼ CBA dır.',
+      },
+      {
+        title: 'Oran',
+        detail:
+          '|CD| / |CB| = |CE| / |CA| ⇒ 3 / |CB| = 5 / 15 ⇒ |CB| = 9 cm dir.',
+      },
+      {
+        title: 'Pisagor',
+        detail:
+          '|AB|² = 15² − 9² = 144 ⇒ |AB| = 12 cm dir.',
+      },
+      {
+        title: 'Ağırlık merkezi',
+        detail:
+          '[GF] // [BC] olduğundan |FB|, G nin [BC] ye uzaklığıdır; bu da A nın [BC] ye uzaklığının 1/3 üdür.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x = 12 / 3 = 4 cm bulunur.',
+      },
+    ],
+  },
 ];
 
 /** Looks questions up by id so the modules below read as a running order. */
@@ -47117,6 +47710,21 @@ export const UNIT_2_TRIANGLES: Unit = {
         'triangles-528',
         'triangles-529',
         'triangles-530',
+      ),
+    },
+    {
+      id: 'triangles-m89',
+      order: 89,
+      title: 'Üçgende benzerlik — Test 12',
+      summary:
+        'Kenarortay ile kesen doğru, hipotenüsün orta noktası, açı eşliğiyle alan, kenarortayın orta noktası, ikizkenar dik üçgen ile benzerlik ve ağırlık merkezi.',
+      questions: pick(
+        'triangles-531',
+        'triangles-532',
+        'triangles-533',
+        'triangles-534',
+        'triangles-535',
+        'triangles-536',
       ),
     },
   ],
