@@ -48783,6 +48783,361 @@ Q4 DE 6.928203230275509 6.928203230275509 AE 10.0 EC 2.0
       },
     ],
   },
+  // ---------------------------------------------------------------- 567
+  {
+    id: 'triangles-567',
+    topic: 'Verilen elemanlarla üçgen belirleme',
+    given: [
+      'I. a = 9 cm, b = 4 cm, c = 5 cm',
+      'II. b = 7 cm, c = 4 cm, hₐ = 5 cm',
+      'III. a = 8 cm, b = 6 cm, m(C) = 50°',
+      'IV. a = b = c = 6 cm, m(A) = 60°',
+      'V. a = 7 cm, b = 8 cm, c = 9 cm',
+    ],
+    stem: ['Yukarıda bazı elemanları verilen gruplar listelenmiştir.'],
+    ask: 'Buna göre, hangilerinde verilen elemanlar bir üçgen belirtmez?',
+    choices: [
+      { key: 'A', text: 'I ve III' },
+      { key: 'B', text: 'II ve IV' },
+      { key: 'C', text: 'I ve II' },
+      { key: 'D', text: 'I, II ve IV' },
+      { key: 'E', text: 'I, II ve V' },
+    ],
+    answer: 'C',
+    hint: 'Her grupta üçgen eşitsizliğini ve bir yüksekliğin, köşeden çıkan kenarlardan uzun olamayacağını denetle.',
+    solution: [
+      {
+        title: 'I. grup',
+        detail:
+          '4 + 5 = 9 olduğundan b + c > a sağlanmaz; üç nokta doğrusaldır, üçgen oluşmaz.',
+      },
+      {
+        title: 'II. grup',
+        detail:
+          'hₐ, A dan BC ye dikmedir ve [AB] den uzun olamaz: hₐ ≤ c = 4 olmalı. hₐ = 5 olduğundan üçgen yoktur.',
+      },
+      {
+        title: 'III. ve IV. grup',
+        detail:
+          'III te iki kenar ve aralarındaki açı (K.A.K.) verilmiştir, üçgen tek türlüdür. IV te kenarlar eşkenar üçgen verir ve m(A) = 60° bununla çelişmez.',
+      },
+      {
+        title: 'V. grup',
+        detail:
+          '9 − 8 < 7 < 9 + 8 olduğundan 7, 8, 9 kenarlı üçgen vardır.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'Üçgen belirtmeyen gruplar I ve II dir.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 568
+  {
+    id: 'triangles-568',
+    topic: 'Açı sınırından kenar aralığı',
+    figure: {
+      viewBox: '0 102 400 208',
+      caption: 'Şekil 568',
+      label:
+        'ABC üçgeninde |AC| = 5 cm, |BC| = 8 cm ve |AB| = x tir; C köşesindeki açı 60° den küçüktür.',
+      svg: `
+          <path class="ln" d="M231.44,126.79 L40,280 L360,280 Z"/>
+          <text class="val" x="122.47" y="203.87" text-anchor="middle">x</text>
+          <text class="val" x="309.13" y="204.38" text-anchor="middle">5</text>
+          <text class="val" x="200" y="300" text-anchor="middle">8</text>
+          <circle class="pt" cx="231.44" cy="126.79" r="3.2"/>
+          <circle class="pt" cx="40" cy="280" r="3.2"/>
+          <circle class="pt" cx="360" cy="280" r="3.2"/>
+          <text x="231.44" y="114.79" text-anchor="middle">A</text>
+          <text x="32" y="294" text-anchor="end">B</text>
+          <text x="368" y="294">C</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      '|AC| = 5 cm',
+      '|BC| = 8 cm',
+      'm(ACB) < 60°',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |AB| = x in alabileceği tam sayı değerlerinin toplamı kaçtır?',
+    choices: [
+      { key: 'A', text: '9' },
+      { key: 'B', text: '15' },
+      { key: 'C', text: '18' },
+      { key: 'D', text: '21' },
+      { key: 'E', text: '22' },
+    ],
+    answer: 'B',
+    hint: 'C açısı tam 60° olsaydı üçgen kaç kenarlı olurdu? Açı küçüldükçe karşısındaki kenar kısalır.',
+    solution: [
+      {
+        title: '60° sınırı',
+        detail:
+          'm(C) = 60° olsaydı kosinüs teoremiyle x² = 5² + 8² − 2 · 5 · 8 · ½ = 25 + 64 − 40 = 49, yani x = 7 olurdu.',
+      },
+      {
+        title: 'Açı–kenar bağıntısı',
+        detail:
+          'm(C) < 60° olduğundan C nin karşısındaki kenar da kısalır: x < 7.',
+      },
+      {
+        title: 'Üçgen eşitsizliği',
+        detail:
+          'x > 8 − 5 = 3 olmalıdır; birlikte 3 < x < 7.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x ∈ {4, 5, 6} ⇒ 4 + 5 + 6 = 15 bulunur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 569
+  {
+    id: 'triangles-569',
+    topic: 'Dik üçgen içinde kırık yolun sınırları',
+    figure: {
+      viewBox: '0 102 400 208',
+      caption: 'Şekil 569',
+      label:
+        'A köşesi dik olan BAC üçgeninde |AB| = 9 cm ve |AC| = 12 cm dir; D noktası [AB], E noktası [AC] üzerindedir ve BCED dışbükey bir dörtgendir.',
+      svg: `
+          <path class="ln" d="M155.2,126.4 L40,280 L360,280 Z"/>
+          <path class="ln" d="M40,280 L111.42,184.77 L247.36,195.52 L360,280"/>
+          <path class="ln" d="M147.4,136.8 L157.8,144.6 L165.6,134.2"/>
+          <text class="val" x="63.4" y="230.5" text-anchor="middle">9</text>
+          <text class="val" x="307" y="236" text-anchor="middle">12</text>
+          <circle class="pt" cx="155.2" cy="126.4" r="3.2"/>
+          <circle class="pt" cx="40" cy="280" r="3.2"/>
+          <circle class="pt" cx="360" cy="280" r="3.2"/>
+          <circle class="pt" cx="111.42" cy="184.77" r="3.2"/>
+          <circle class="pt" cx="247.36" cy="195.52" r="3.2"/>
+          <text x="155.2" y="114.4" text-anchor="middle">A</text>
+          <text x="32" y="294" text-anchor="end">B</text>
+          <text x="368" y="294">C</text>
+          <text x="101.42" y="180.77" text-anchor="end">D</text>
+          <text x="257.36" y="191.52">E</text>
+        `,
+    },
+    given: [
+      'BAC bir dik üçgen',
+      'm(BAC) = 90°',
+      'BCED dışbükey dörtgen',
+      '|AB| = 9 cm',
+      '|AC| = 12 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |BD| + |DE| + |EC| toplamının alabileceği tam sayı değerleri kaç tanedir?',
+    choices: [
+      { key: 'A', text: '2' },
+      { key: 'B', text: '3' },
+      { key: 'C', text: '4' },
+      { key: 'D', text: '5' },
+      { key: 'E', text: '6' },
+    ],
+    answer: 'D',
+    hint: 'B den C ye giden kırık yolu, doğrudan [BC] ile ve dışarıdan B–A–C yoluyla karşılaştır.',
+    solution: [
+      {
+        title: 'Hipotenüs',
+        detail:
+          '|BC|² = 9² + 12² = 81 + 144 = 225 ⇒ |BC| = 15.',
+      },
+      {
+        title: 'Alt sınır',
+        detail:
+          'B–D–E–C kırık yolu, B ile C arasındaki en kısa yol olan [BC] den uzundur: toplam > 15.',
+      },
+      {
+        title: 'Üst sınır',
+        detail:
+          'Dışbükey BCED dörtgeni ABC üçgeninin içindedir; içteki yol dıştaki B–A–C yolundan kısadır: toplam < 9 + 12 = 21.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '15 < toplam < 21 ⇒ {16, 17, 18, 19, 20}; 5 tam sayı değeri vardır.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 570
+  {
+    id: 'triangles-570',
+    topic: 'Açı sıralamasından yükseklik aralığı',
+    given: [
+      'm(B) > m(C) > m(A)',
+      'hₐ = 14 cm',
+      'h_b = 8 cm',
+      'h_c = x + 3',
+    ],
+    stem: ['Bir ABC üçgeninde aşağıdakiler veriliyor.'],
+    ask: 'Buna göre, x in alabileceği tam sayı değerlerinin toplamı kaçtır?',
+    choices: [
+      { key: 'A', text: '40' },
+      { key: 'B', text: '45' },
+      { key: 'C', text: '50' },
+      { key: 'D', text: '55' },
+      { key: 'E', text: '60' },
+    ],
+    answer: 'A',
+    hint: 'Büyük açının karşısında büyük kenar vardır; alan sabit olduğundan uzun kenara ait yükseklik kısadır.',
+    solution: [
+      {
+        title: 'Kenar sıralaması',
+        detail:
+          'm(B) > m(C) > m(A) ⇒ b > c > a.',
+      },
+      {
+        title: 'Yükseklik sıralaması',
+        detail:
+          'a · hₐ = b · h_b = c · h_c = 2 · Alan olduğundan kenar büyüdükçe yükseklik küçülür: h_b < h_c < hₐ.',
+      },
+      {
+        title: 'Eşitsizlik',
+        detail:
+          '8 < x + 3 < 14 ⇒ 5 < x < 11.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x ∈ {6, 7, 8, 9, 10} ⇒ 6 + 7 + 8 + 9 + 10 = 40 bulunur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 571
+  {
+    id: 'triangles-571',
+    topic: 'İç teğet çember merkezinde açı ile kenar aralığı',
+    figure: {
+      viewBox: '0 48 400 272',
+      caption: 'Şekil 571',
+      label:
+        'ABC üçgeninde O noktası iç teğet çemberin merkezidir; |BO| = 5 cm, |CO| = 7 cm ve |BC| = x tir.',
+      svg: `
+          <path class="ln" d="M142.23,71.6 L40,290 L360,290 Z"/>
+          <path class="ln" d="M40,290 L166.36,209.63 L360,290"/>
+          <text class="val" x="94.44" y="236.32" text-anchor="middle">5</text>
+          <text class="val" x="268.94" y="238.41" text-anchor="middle">7</text>
+          <text class="val" x="200" y="310" text-anchor="middle">x</text>
+          <circle class="pt" cx="142.23" cy="71.6" r="3.2"/>
+          <circle class="pt" cx="40" cy="290" r="3.2"/>
+          <circle class="pt" cx="360" cy="290" r="3.2"/>
+          <circle class="pt" cx="166.36" cy="209.63" r="3.2"/>
+          <text x="142.23" y="59.6" text-anchor="middle">A</text>
+          <text x="32" y="304" text-anchor="end">B</text>
+          <text x="368" y="304">C</text>
+          <text x="166.36" y="199.63" text-anchor="middle">O</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      'O; iç teğet çemberin merkezi',
+      '|BO| = 5 cm',
+      '|CO| = 7 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |BC| = x in alabileceği tam sayı değerlerinin toplamı kaçtır?',
+    choices: [
+      { key: 'A', text: '18' },
+      { key: 'B', text: '21' },
+      { key: 'C', text: '24' },
+      { key: 'D', text: '27' },
+      { key: 'E', text: '30' },
+    ],
+    answer: 'E',
+    hint: 'İç teğet çemberin merkezi açıortayların kesim noktasıdır; m(BOC) yu A açısı cinsinden yaz.',
+    solution: [
+      {
+        title: 'BOC açısı',
+        detail:
+          '[BO] ve [CO] açıortay olduğundan m(BOC) = 90° + m(A)/2 dir; 0° < m(A) < 180° ⇒ 90° < m(BOC) < 180°.',
+      },
+      {
+        title: 'Geniş açı sınırı',
+        detail:
+          'm(BOC) > 90° ⇒ x² > 5² + 7² = 74 ⇒ x > √74 ≈ 8,6.',
+      },
+      {
+        title: 'Üçgen eşitsizliği',
+        detail:
+          'BOC üçgeninde x < 5 + 7 = 12.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x ∈ {9, 10, 11} ⇒ 9 + 10 + 11 = 30 bulunur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 572
+  {
+    id: 'triangles-572',
+    topic: 'Dik üçgende yüksekliğin en büyük değeri',
+    figure: {
+      viewBox: '0 142 400 168',
+      caption: 'Şekil 572',
+      label:
+        'A köşesi dik olan BAC üçgeninde |AB| = 12 cm ve |AC| = 5 cm dir; D noktası [AB] üzerindedir ve [DC] çizilmiştir.',
+      svg: `
+          <path class="ln" d="M312.66,166.39 L40,280 L360,280 Z"/>
+          <path class="ln" d="M189.96,217.51 L360,280"/>
+          <path class="ln" d="M301.59,171.01 L306.2,182.08 L317.28,177.47"/>
+          <text class="val" x="116.4" y="239" text-anchor="middle">12</text>
+          <text class="val" x="350.08" y="225.56" text-anchor="middle">5</text>
+          <circle class="pt" cx="312.66" cy="166.39" r="3.2"/>
+          <circle class="pt" cx="40" cy="280" r="3.2"/>
+          <circle class="pt" cx="360" cy="280" r="3.2"/>
+          <circle class="pt" cx="189.96" cy="217.51" r="3.2"/>
+          <text x="312.66" y="154.39" text-anchor="middle">A</text>
+          <text x="32" y="294" text-anchor="end">B</text>
+          <text x="368" y="294">C</text>
+          <text x="180" y="209" text-anchor="end">D</text>
+        `,
+    },
+    given: [
+      'BAC bir dik üçgen',
+      'm(BAC) = 90°',
+      '|AB| = 12 cm',
+      '|AC| = 5 cm',
+      'D ∈ [AB]',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, BCD üçgeninin BC tabanına ait yüksekliğinin en büyük tam sayı değeri kaç cm olabilir?',
+    choices: [
+      { key: 'A', text: '7' },
+      { key: 'B', text: '6' },
+      { key: 'C', text: '5' },
+      { key: 'D', text: '4' },
+      { key: 'E', text: '3' },
+    ],
+    answer: 'D',
+    hint: 'D, B den A ya doğru ilerledikçe BC ye uzaklığı artar; en uzak nokta A olurdu.',
+    solution: [
+      {
+        title: 'Hipotenüs',
+        detail:
+          '|BC|² = 12² + 5² = 169 ⇒ |BC| = 13.',
+      },
+      {
+        title: 'A nın BC ye uzaklığı',
+        detail:
+          'Alanı iki yoldan yazalım: 12 · 5 = 13 · h ⇒ h = 60/13 ≈ 4,6.',
+      },
+      {
+        title: 'D nin uzaklığı',
+        detail:
+          'D, [AB] üzerinde A dan farklı bir nokta olduğundan BC ye uzaklığı 0 ile 60/13 arasındadır.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'Yükseklik < 60/13 ≈ 4,6 olduğundan en büyük tam sayı değeri 4 tür.',
+      },
+    ],
+  },
 ];
 
 /** Looks questions up by id so the modules below read as a running order. */
@@ -50218,6 +50573,21 @@ export const UNIT_2_TRIANGLES: Unit = {
         'triangles-564',
         'triangles-565',
         'triangles-566',
+      ),
+    },
+    {
+      id: 'triangles-m95',
+      order: 95,
+      title: 'Üçgende açı-kenar bağıntıları — Test 2',
+      summary:
+        'Üçgen belirleme koşulları, 60° lik açı sınırı, dik üçgende kırık yol, yükseklik sıralaması, iç teğet çember merkezi ve en büyük yükseklik.',
+      questions: pick(
+        'triangles-567',
+        'triangles-568',
+        'triangles-569',
+        'triangles-570',
+        'triangles-571',
+        'triangles-572',
       ),
     },
   ],
