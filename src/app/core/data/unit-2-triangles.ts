@@ -42581,6 +42581,465 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+  {
+    id: 'triangles-489',
+    topic: 'K.A.K. benzerliği',
+    figure: {
+      viewBox: '0 -4 400 302',
+      caption: 'Şekil 489',
+      label:
+        'A köşesinden çıkan [AB], [AC] ve [AE] doğru parçaları çizilmiştir; [AC] ile [BE], D noktasında kesişir. BAC açısı CAE açısına eştir. |AB| = 14 cm, |AD| = 7 cm, |DC| = 9 cm, |AE| = 8 cm, |DE| = 6 cm ve |BC| = x tir.',
+      svg: `
+          <path class="ln" d="M172.36,30 L96.63,255.46 L299.97,270 Z"/>
+          <path class="ln" d="M172.36,30 L303.37,66.17"/>
+          <path class="ln" d="M96.63,255.46 L303.37,66.17"/>
+
+          <path class="arc" d="M165.36,50.85 A22,22 0 0,0 182.69,49.42"/>
+          <path class="arc" d="M185.51,54.72 A28,28 0 0,0 199.35,37.45"/>
+
+          <circle class="pt" cx="172.36" cy="30" r="3.2"/>
+          <circle class="pt" cx="96.63" cy="255.46" r="3.2"/>
+          <circle class="pt" cx="299.97" cy="270" r="3.2"/>
+          <circle class="pt" cx="228.19" cy="135" r="3.2"/>
+          <circle class="pt" cx="303.37" cy="66.17" r="3.2"/>
+
+          <text class="val" x="122.17" y="143.59" text-anchor="middle">14</text>
+          <text class="val" x="190.56" y="92.66" text-anchor="middle">7</text>
+          <text class="val" x="254.37" y="212.66" text-anchor="middle">9</text>
+          <text class="val" x="234.41" y="65.61" text-anchor="middle">8</text>
+          <text class="val" x="258.35" y="97.47" text-anchor="middle">6</text>
+          <text class="val" x="199.23" y="254.76" text-anchor="middle">x</text>
+
+          <text x="172.36" y="20" text-anchor="middle">A</text>
+          <text x="84.63" y="267.46" text-anchor="end">B</text>
+          <text x="309.97" y="284">C</text>
+          <text x="214.19" y="137" text-anchor="end">D</text>
+          <text x="315.37" y="72.17">E</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      'm(BAC) = m(CAE)',
+      '|AB| = 14 cm',
+      '|AD| = 7 cm',
+      '|DC| = 9 cm',
+      '|AE| = 8 cm',
+      '|DE| = 6 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |BC| = x kaç cm dir?',
+    choices: [
+      { key: 'A', text: '10' },
+      { key: 'B', text: '12' },
+      { key: 'C', text: '14' },
+      { key: 'D', text: '15' },
+      { key: 'E', text: '16' },
+    ],
+    answer: 'B',
+    hint: 'ABC ve ADE üçgenlerinde A daki açılar eş; bu açıları kuran kenarların oranlarını karşılaştır.',
+    solution: [
+      {
+        title: 'Uzunluklar',
+        detail:
+          '|AC| = |AD| + |DC| = 7 + 9 = 16 cm dir.',
+      },
+      {
+        title: 'Kenar oranları',
+        detail:
+          '|AB| / |AD| = 14 / 7 = 2 ve |AC| / |AE| = 16 / 8 = 2 dir.',
+      },
+      {
+        title: 'Benzerlik',
+        detail:
+          'm(BAC) = m(DAE) ve bu açıyı kuran kenarlar orantılı olduğundan ABC ∼ ADE (K.A.K.) dir; B ↔ D, C ↔ E eşlenir.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '|BC| / |DE| = 2 ⇒ x = 2 · 6 = 12 cm bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'triangles-490',
+    topic: 'Dik üçgende dikme ile benzerlik',
+    figure: {
+      viewBox: '0 -4 400 212',
+      caption: 'Şekil 490',
+      label:
+        'BAC dik üçgeninde A açısı diktir. H, [BC] üzerinde; E, [AB] üzerindedir ve [EH] ⊥ [BC] dir. |BH| = 8 cm, |HC| = 7 cm, |AC| = 9 cm ve |AE| = x tir.',
+      svg: `
+          <path class="ln" d="M242,30 L50,174 L350,174 Z"/>
+          <path class="ln" d="M210,54 L210,174"/>
+
+          <path class="ln" d="M234.8,35.4 L240.2,42.6 L247.4,37.2"/>
+          <path class="ln" d="M210,165 L219,165 L219,174"/>
+
+          <circle class="pt" cx="242" cy="30" r="3.2"/>
+          <circle class="pt" cx="50" cy="174" r="3.2"/>
+          <circle class="pt" cx="350" cy="174" r="3.2"/>
+          <circle class="pt" cx="210" cy="174" r="3.2"/>
+          <circle class="pt" cx="210" cy="54" r="3.2"/>
+
+          <text class="val" x="130" y="163" text-anchor="middle">8</text>
+          <text class="val" x="280" y="163" text-anchor="middle">7</text>
+          <text class="val" x="306.4" y="99.2" text-anchor="middle">9</text>
+          <text class="val" x="233.8" y="57.4" text-anchor="middle">x</text>
+
+          <text x="242" y="20" text-anchor="middle">A</text>
+          <text x="40" y="186" text-anchor="end">B</text>
+          <text x="360" y="186">C</text>
+          <text x="210" y="194" text-anchor="middle">H</text>
+          <text x="198" y="50" text-anchor="end">E</text>
+        `,
+    },
+    given: [
+      'BAC bir dik üçgen',
+      '[EH] ⊥ [BC]',
+      '|BH| = 8 cm',
+      '|HC| = 7 cm',
+      '|AC| = 9 cm',
+      '|AE| = x',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |AE| = x kaç cm dir?',
+    choices: [
+      { key: 'A', text: '1' },
+      { key: 'B', text: '3/2' },
+      { key: 'C', text: '2' },
+      { key: 'D', text: '5/2' },
+      { key: 'E', text: '3' },
+    ],
+    answer: 'C',
+    hint: 'Önce Pisagor ile |AB| yi bul; sonra B açısı ortak olan iki dik üçgeni karşılaştır.',
+    solution: [
+      {
+        title: '|BC| ve |AB|',
+        detail:
+          '|BC| = 8 + 7 = 15 cm; |AB|² = 15² − 9² = 144 ⇒ |AB| = 12 cm dir.',
+      },
+      {
+        title: 'Benzerlik',
+        detail:
+          'B açısı ortak, m(BHE) = m(BAC) = 90° olduğundan BHE ∼ BAC dir; H ↔ A, E ↔ C eşlenir.',
+      },
+      {
+        title: 'Oran',
+        detail:
+          '|BE| / |BC| = |BH| / |BA| ⇒ |BE| / 15 = 8 / 12 ⇒ |BE| = 10 cm dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x = |AB| − |BE| = 12 − 10 = 2 cm bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'triangles-491',
+    topic: 'Paralel doğrular ve orantı',
+    figure: {
+      viewBox: '0 20 400 270',
+      caption: 'Şekil 491',
+      label:
+        'Birbirine paralel üç doğru, iki doğru tarafından kesilmiştir. Soldaki doğru bunları A, B, C noktalarında; sağdaki D, E, F noktalarında keser. |EF| = x tir.',
+      svg: `
+          <path class="ln" d="M80,67.5 L320,67.5"/>
+          <path class="ln" d="M80,142.5 L320,142.5"/>
+          <path class="ln" d="M80,242.5 L320,242.5"/>
+          <path class="ln" d="M142.5,30 L112.5,280"/>
+          <path class="ln" d="M217.5,30 L297.5,280"/>
+
+          <path class="par" d="M300.2,72.5 L306.2,67.5 L300.2,62.5"/>
+          <path class="par" d="M300.2,147.5 L306.2,142.5 L300.2,137.5"/>
+          <path class="par" d="M300.2,247.5 L306.2,242.5 L300.2,237.5"/>
+
+          <circle class="pt" cx="138" cy="67.5" r="3.2"/>
+          <circle class="pt" cx="129" cy="142.5" r="3.2"/>
+          <circle class="pt" cx="117" cy="242.5" r="3.2"/>
+          <circle class="pt" cx="229.5" cy="67.5" r="3.2"/>
+          <circle class="pt" cx="253.5" cy="142.5" r="3.2"/>
+          <circle class="pt" cx="285.5" cy="242.5" r="3.2"/>
+
+          <text class="val" x="280.93" y="193.84" text-anchor="middle">x</text>
+
+          <text x="130" y="59.5" text-anchor="end">A</text>
+          <text x="121" y="134.5" text-anchor="end">B</text>
+          <text x="109" y="234.5" text-anchor="end">C</text>
+          <text x="237.5" y="59.5">D</text>
+          <text x="261.5" y="134.5">E</text>
+          <text x="293.5" y="234.5">F</text>
+        `,
+    },
+    given: [
+      '[AD] // [BE] // [CF]',
+      '4|AB| = 3|BC|',
+      '|DF| = 28 cm',
+      '|EF| = x',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |EF| = x kaç cm dir?',
+    choices: [
+      { key: 'A', text: '8' },
+      { key: 'B', text: '10' },
+      { key: 'C', text: '12' },
+      { key: 'D', text: '14' },
+      { key: 'E', text: '16' },
+    ],
+    answer: 'E',
+    hint: 'Paralel doğrular, iki kesen üzerinde aynı oranda parçalar ayırır.',
+    solution: [
+      {
+        title: 'Oran',
+        detail:
+          '4|AB| = 3|BC| ⇒ |AB| / |BC| = 3 / 4 tür.',
+      },
+      {
+        title: 'Thales',
+        detail:
+          'Paralel doğrular kesenleri orantılı böler: |DE| / |EF| = |AB| / |BC| = 3 / 4 tür.',
+      },
+      {
+        title: 'Parçalar',
+        detail:
+          '|DE| = 3k, |EF| = 4k ⇒ |DF| = 7k = 28 ⇒ k = 4 tür.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x = 4k = 16 cm bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'triangles-492',
+    topic: 'Dik üçgende paralel kesit',
+    figure: {
+      viewBox: '0 -4 400 300',
+      caption: 'Şekil 492',
+      label:
+        'ABC dik üçgeninde B açısı diktir. D, [AB] üzerinde; E, [AC] üzerindedir ve [ED] ⊥ [AB] dir. |BC| = 10 cm, |DE| = 4 cm ve |BD| = x tir; |AB| = 12 cm dir.',
+      svg: `
+          <path class="ln" d="M100,30 L100,270 L300,270 Z"/>
+          <path class="ln" d="M100,126 L180,126"/>
+
+          <path class="ln" d="M100,261 L109,261 L109,270"/>
+          <path class="ln" d="M100,135 L109,135 L109,126"/>
+
+          <circle class="pt" cx="100" cy="30" r="3.2"/>
+          <circle class="pt" cx="100" cy="270" r="3.2"/>
+          <circle class="pt" cx="300" cy="270" r="3.2"/>
+          <circle class="pt" cx="100" cy="126" r="3.2"/>
+          <circle class="pt" cx="180" cy="126" r="3.2"/>
+
+          <text class="val" x="140" y="141" text-anchor="middle">4</text>
+          <text class="val" x="200" y="259" text-anchor="middle">10</text>
+          <text class="val" x="112" y="203" text-anchor="middle">x</text>
+
+          <text x="100" y="20" text-anchor="middle">A</text>
+          <text x="90" y="282" text-anchor="end">B</text>
+          <text x="310" y="282">C</text>
+          <text x="88" y="131" text-anchor="end">D</text>
+          <text x="190" y="124">E</text>
+        `,
+    },
+    given: [
+      'ABC dik üçgen',
+      'm(ABC) = 90°',
+      '[ED] ⊥ [AB]',
+      '|BC| = 10 cm',
+      '|AB| = 12 cm',
+      '|DE| = 4 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |BD| = x kaç cm dir?',
+    choices: [
+      { key: 'A', text: '36/5' },
+      { key: 'B', text: '38/5' },
+      { key: 'C', text: '8' },
+      { key: 'D', text: '42/5' },
+      { key: 'E', text: '9' },
+    ],
+    answer: 'A',
+    hint: '[ED] ve [CB] ikisi de [AB] ye dik olduğundan birbirine paraleldir.',
+    solution: [
+      {
+        title: 'Paralellik',
+        detail:
+          '[ED] ⊥ [AB] ve [CB] ⊥ [AB] olduğundan [ED] // [CB] dir.',
+      },
+      {
+        title: 'Benzerlik',
+        detail:
+          'ADE ∼ ABC ⇒ |AD| / |AB| = |DE| / |BC| olur.',
+      },
+      {
+        title: '|AD|',
+        detail:
+          '|AD| / 12 = 4 / 10 ⇒ |AD| = 24/5 cm dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x = 12 − 24/5 = 36/5 cm bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'triangles-493',
+    topic: 'Ters açılı benzerlik',
+    figure: {
+      viewBox: '0 -4 400 280',
+      caption: 'Şekil 493',
+      label:
+        'ABC üçgeninde D, [AB] üzerinde; E, [AC] üzerindedir. BAC açısı 65 derece, ABC açısı 70 derece, AED açısı 70 derecedir. |AD| = 8 cm ve |BC| = 2|DE| dir.',
+      svg: `
+          <path class="ln" d="M130.05,30 L50,249.95 L350,249.95 Z"/>
+          <path class="ln" d="M76.86,176.15 L212.81,112.75"/>
+
+          <path class="arc" d="M122.53,50.67 A22,22 0 0,0 145.61,45.56"/>
+          <path class="arc" d="M74,249.95 A24,24 0 0,0 58.21,227.39"/>
+          <path class="arc" d="M200.08,100.03 A18,18 0 0,0 196.49,120.36"/>
+
+          <circle class="pt" cx="130.05" cy="30" r="3.2"/>
+          <circle class="pt" cx="50" cy="249.95" r="3.2"/>
+          <circle class="pt" cx="350" cy="249.95" r="3.2"/>
+          <circle class="pt" cx="76.86" cy="176.15" r="3.2"/>
+          <circle class="pt" cx="212.81" cy="112.75" r="3.2"/>
+
+          <text class="val" x="138.28" y="72.1" text-anchor="middle">65°</text>
+          <text class="val" x="84.4" y="230.86" text-anchor="middle">70°</text>
+          <text class="val" x="179.32" y="111.85" text-anchor="middle">70°</text>
+          <text class="val" x="92.18" y="103.97" text-anchor="middle">8</text>
+
+          <text x="130.05" y="20" text-anchor="middle">A</text>
+          <text x="40" y="261.95" text-anchor="end">B</text>
+          <text x="360" y="261.95">C</text>
+          <text x="64.86" y="180.15" text-anchor="end">D</text>
+          <text x="224.81" y="114.75">E</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      '|BC| = 2|DE|',
+      '|AD| = 8 cm',
+      'm(BAC) = 65°',
+      'm(ABC) = 70°',
+      'm(AED) = 70°',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |AC| kaç cm dir?',
+    choices: [
+      { key: 'A', text: '12' },
+      { key: 'B', text: '14' },
+      { key: 'C', text: '15' },
+      { key: 'D', text: '16' },
+      { key: 'E', text: '18' },
+    ],
+    answer: 'D',
+    hint: 'AED üçgeninde 70° lik açının hangi köşede olduğuna bakarak köşeleri doğru eşle.',
+    solution: [
+      {
+        title: 'Benzerlik',
+        detail:
+          'A açısı ortak ve m(AED) = m(ABC) = 70° olduğundan AED ∼ ABC (A.A.) dir; E ↔ B, D ↔ C eşlenir.',
+      },
+      {
+        title: 'Benzerlik oranı',
+        detail:
+          '|DE| / |CB| = 1/2 dir.',
+      },
+      {
+        title: 'Eşlenen kenarlar',
+        detail:
+          'D ↔ C olduğundan |AD| / |AC| = 1/2 olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '8 / |AC| = 1/2 ⇒ |AC| = 16 cm bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'triangles-494',
+    topic: 'Ters açılı dik üçgenlerde benzerlik',
+    figure: {
+      viewBox: '0 -4 400 310',
+      caption: 'Şekil 494',
+      label:
+        'A, C, E noktaları doğrusal; B, C, D noktaları doğrusaldır. BAE açısı ve BDE açısı diktir. |AC| = |CE|, |BC| = 8 cm ve |CD| = 2 cm dir.',
+      svg: `
+          <path class="ln" d="M84.53,280 L84.53,80 L315.47,80"/>
+          <path class="ln" d="M84.53,280 L228.87,30 L315.47,80"/>
+
+          <path class="ln" d="M84.53,89 L93.53,89 L93.53,80"/>
+          <path class="ln" d="M224.37,37.79 L232.16,42.29 L236.66,34.5"/>
+          <line class="tick" x1="142.26" y1="86" x2="142.26" y2="74"/>
+          <line class="tick" x1="257.74" y1="86" x2="257.74" y2="74"/>
+
+          <circle class="pt" cx="84.53" cy="80" r="3.2"/>
+          <circle class="pt" cx="84.53" cy="280" r="3.2"/>
+          <circle class="pt" cx="200" cy="80" r="3.2"/>
+          <circle class="pt" cx="228.87" cy="30" r="3.2"/>
+          <circle class="pt" cx="315.47" cy="80" r="3.2"/>
+
+          <text class="val" x="131.01" y="178.5" text-anchor="middle">8</text>
+          <text class="val" x="223.96" y="65.5" text-anchor="middle">2</text>
+
+          <text x="74.53" y="74" text-anchor="end">A</text>
+          <text x="74.53" y="292" text-anchor="end">B</text>
+          <text x="196" y="68" text-anchor="end">C</text>
+          <text x="228.87" y="20" text-anchor="middle">D</text>
+          <text x="325.47" y="94">E</text>
+        `,
+    },
+    given: [
+      '[BA] ⊥ [AE]',
+      '[DE] ⊥ [BD]',
+      '|AC| = |CE|',
+      '|BC| = 8 cm',
+      '|CD| = 2 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |AB| + |DE| toplamı kaç cm dir?',
+    choices: [
+      { key: 'A', text: '4√3' },
+      { key: 'B', text: '5√3' },
+      { key: 'C', text: '6√3' },
+      { key: 'D', text: '7√3' },
+      { key: 'E', text: '8√3' },
+    ],
+    answer: 'C',
+    hint: 'C deki ters açılar eş; BAC ve EDC dik üçgenlerini karşılaştır.',
+    solution: [
+      {
+        title: 'Benzerlik',
+        detail:
+          'm(BAC) = m(EDC) = 90° ve C deki ters açılar eş olduğundan BAC ∼ EDC dir; A ↔ D, B ↔ E eşlenir.',
+      },
+      {
+        title: '|AC|',
+        detail:
+          '|AC| = |CE| = a olsun. |AC| / |DC| = |BC| / |EC| ⇒ a / 2 = 8 / a ⇒ a² = 16 ⇒ a = 4 cm.',
+      },
+      {
+        title: '|AB|',
+        detail:
+          '|AB|² = 8² − 4² = 48 ⇒ |AB| = 4√3 cm.',
+      },
+      {
+        title: '|DE|',
+        detail:
+          '|DE|² = 4² − 2² = 12 ⇒ |DE| = 2√3 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '|AB| + |DE| = 4√3 + 2√3 = 6√3 cm bulunur.',
+      },
+    ],
+  },
 ];
 
 /** Looks questions up by id so the modules below read as a running order. */
@@ -43821,6 +44280,21 @@ export const UNIT_2_TRIANGLES: Unit = {
         'triangles-486',
         'triangles-487',
         'triangles-488',
+      ),
+    },
+    {
+      id: 'triangles-m82',
+      order: 82,
+      title: 'Üçgende benzerlik — Test 5',
+      summary:
+        'K.A.K. benzerliği, dik üçgende dikme ve paralel kesit, üç paralel doğruda orantı, ters açılı benzerlik ve ters açılı dik üçgenler.',
+      questions: pick(
+        'triangles-489',
+        'triangles-490',
+        'triangles-491',
+        'triangles-492',
+        'triangles-493',
+        'triangles-494',
       ),
     },
   ],
