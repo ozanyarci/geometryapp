@@ -923,6 +923,19 @@ describe('unit 2 answer key', () => {
   it('452 — 49 − x² = 81 − (x + 4)² ⇒ 8x = 16, x = 2 → C', () =>
     expect(answerOf('triangles-452')).toBe('C'));
 
+  it('453 — |CE| = 12, |BD| = 3x, 144 + 9x² = (5/4)·180 = 225, x = 3 → C', () =>
+    expect(answerOf('triangles-453')).toBe('C'));
+  it('454 — |BD| = 16, |BN| = 16·5/8 = 10, |BG| = 32/3, |NG| = 2/3 → C', () =>
+    expect(answerOf('triangles-454')).toBe('C'));
+  it('455 — h(B) = 3·3 = 9, A(ABC) = 10·9/2 = 45, A(GBC) = 45/3 = 15 → C', () =>
+    expect(answerOf('triangles-455')).toBe('C'));
+  it('456 — AGCD paralelkenar, |AG| = 5, kenarortay 15/2, |BC| = 15 → C', () =>
+    expect(answerOf('triangles-456')).toBe('C'));
+  it('457 — altı eş parça 60/6 = 10, A(DBPG) = 2·10 = 20 → D', () =>
+    expect(answerOf('triangles-457')).toBe('D'));
+  it('458 — 49 + 81 = 2|AD|² + 2·16, |AD|² = 49, |AD| = 7 → D', () =>
+    expect(answerOf('triangles-458')).toBe('D'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
