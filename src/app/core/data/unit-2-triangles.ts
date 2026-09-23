@@ -49138,6 +49138,431 @@ Q4 DE 6.928203230275509 6.928203230275509 AE 10.0 EC 2.0
       },
     ],
   },
+  // ---------------------------------------------------------------- 573
+  {
+    id: 'triangles-573',
+    topic: 'Kenar orta dikmesi ve üçgen eşitsizliği',
+    figure: {
+      viewBox: '0 4 400 244',
+      caption: 'Şekil 573',
+      label:
+        'ABC üçgeninde D noktası [AB] üzerinde, H noktası [BC] nin orta noktasıdır ve [DH] ⊥ [BC] dir; |AD| = 4 cm, |BD| = 10 cm dir.',
+      svg: `
+          <path class="ln" d="M246.28,30 L84.3,223.04 L315.7,223.04 Z"/>
+          <path class="ln" d="M200,85.16 L200,223.04"/>
+          <path class="ln" d="M200,213.04 L210,213.04 L210,223.04"/>
+          <path class="tick" d="M142.15,229.04 L142.15,217.04"/>
+          <path class="tick" d="M257.85,229.04 L257.85,217.04"/>
+          <text class="val" x="212.42" y="53.58" text-anchor="middle">4</text>
+          <text class="val" x="131.42" y="150.1" text-anchor="middle">10</text>
+          <circle class="pt" cx="246.28" cy="30" r="3.2"/>
+          <circle class="pt" cx="84.3" cy="223.04" r="3.2"/>
+          <circle class="pt" cx="315.7" cy="223.04" r="3.2"/>
+          <circle class="pt" cx="200" cy="85.16" r="3.2"/>
+          <circle class="pt" cx="200" cy="223.04" r="3.2"/>
+          <text x="246.28" y="18" text-anchor="middle">A</text>
+          <text x="76.3" y="237.04" text-anchor="end">B</text>
+          <text x="323.7" y="237.04">C</text>
+          <text x="191" y="85.16" text-anchor="end">D</text>
+          <text x="200" y="243.04" text-anchor="middle">H</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      '[DH] ⊥ [BC]',
+      '|BH| = |HC|',
+      '|AD| = 4 cm',
+      '|BD| = 10 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |AC| nin alabileceği kaç farklı tam sayı değeri vardır?',
+    choices: [
+      { key: 'A', text: '4' },
+      { key: 'B', text: '5' },
+      { key: 'C', text: '6' },
+      { key: 'D', text: '7' },
+      { key: 'E', text: '8' },
+    ],
+    answer: 'D',
+    hint: 'D noktası [BC] nin orta dikmesi üzerindedir; D yi C ye birleştir.',
+    solution: [
+      {
+        title: 'Orta dikme',
+        detail:
+          '[DH], [BC] ye diktir ve [BC] yi ortalar; bu yüzden D, [BC] nin orta dikmesi üzerindedir ve |DC| = |DB| = 10 cm olur.',
+      },
+      {
+        title: 'ADC üçgeni',
+        detail:
+          'A, D, B doğrusal olduğundan ADC bir üçgendir; kenarları |AD| = 4, |DC| = 10 ve |AC| dir.',
+      },
+      {
+        title: 'Üçgen eşitsizliği',
+        detail:
+          '10 − 4 < |AC| < 10 + 4, yani 6 < |AC| < 14.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '|AC| ∈ {7, 8, 9, 10, 11, 12, 13} olup 7 farklı tam sayı değeri vardır.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 574
+  {
+    id: 'triangles-574',
+    topic: 'Ağırlık merkezi, yükseklik ve açı-kenar bağıntısı',
+    figure: {
+      viewBox: '0 4 400 266',
+      caption: 'Şekil 574',
+      label:
+        'ABC üçgeninde G ağırlık merkezidir, H noktası [BC] üzerindedir ve [GH] ⊥ [BC] dir; |GH| = 4 cm, |BC| = 10 cm dir.',
+      svg: `
+          <path class="ln" d="M155,30 L110,246 L290,246 Z"/>
+          <path class="ln" d="M185,174 L185,246"/>
+          <path class="ln" d="M185,236 L195,236 L195,246"/>
+          <text class="val" x="195" y="215" text-anchor="middle">4</text>
+          <circle class="pt" cx="155" cy="30" r="3.2"/>
+          <circle class="pt" cx="110" cy="246" r="3.2"/>
+          <circle class="pt" cx="290" cy="246" r="3.2"/>
+          <circle class="pt" cx="185" cy="174" r="3.2"/>
+          <circle class="pt" cx="185" cy="246" r="3.2"/>
+          <text x="155" y="18" text-anchor="middle">A</text>
+          <text x="102" y="260" text-anchor="end">B</text>
+          <text x="298" y="260">C</text>
+          <text x="177" y="170" text-anchor="end">G</text>
+          <text x="185" y="266" text-anchor="middle">H</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      'G, ağırlık merkezi',
+      '[GH] ⊥ [BC]',
+      '|GH| = 4 cm',
+      '|BC| = 10 cm',
+      'm(B) > m(C)',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |AC| nin en küçük tam sayı değeri kaç cm olabilir?',
+    choices: [
+      { key: 'A', text: '13' },
+      { key: 'B', text: '14' },
+      { key: 'C', text: '15' },
+      { key: 'D', text: '16' },
+      { key: 'E', text: '17' },
+    ],
+    answer: 'B',
+    hint: 'G nin [BC] ye uzaklığı, A nın [BC] ye uzaklığının üçte biridir.',
+    solution: [
+      {
+        title: 'A nın yüksekliği',
+        detail:
+          'G, kenarortayları 2 : 1 oranında böler; bu yüzden A nın [BC] ye uzaklığı 3 · |GH| = 12 cm dir. A dan inen dikmenin ayağı K olsun.',
+      },
+      {
+        title: 'Açı-kenar bağıntısı',
+        detail:
+          'm(B) > m(C) ise |AC| > |AB| dir. |AC|² = 12² + |KC|² ve |AB|² = 12² + |KB|² olduğundan |KC| > |KB| olur.',
+      },
+      {
+        title: 'K nin konumu',
+        detail:
+          '|KB| + |KC| ≥ |BC| = 10 ve |KC| > |KB| olduğundan |KC| > 5 tir.',
+      },
+      {
+        title: 'Alt sınır',
+        detail:
+          '|AC|² > 12² + 5² = 169, yani |AC| > 13.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '|AC| nin en küçük tam sayı değeri 14 cm dir.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 575
+  {
+    id: 'triangles-575',
+    topic: 'Yükseklik, açıortay ve kenarortay sıralaması',
+    figure: {
+      viewBox: '0 4 400 150',
+      caption: 'Şekil 575',
+      label:
+        'ABC üçgeninde H ve D noktaları [BC] üzerindedir; [AH] ⊥ [BC], [AD] açıortaydır, |AH| = 5 cm ve |AD| = x tir.',
+      svg: `
+          <path class="ln" d="M128.99,30 L31.01,130 L368.99,130 Z"/>
+          <path class="ln" d="M128.99,30 L128.99,130"/>
+          <path class="ln" d="M128.99,30 L149.3,130"/>
+          <path class="ln" d="M128.99,120 L118.99,120 L118.99,130"/>
+          <text class="val" x="118.99" y="85" text-anchor="middle">5</text>
+          <text class="val" x="149.93" y="82.81" text-anchor="middle">x</text>
+          <circle class="pt" cx="128.99" cy="30" r="3.2"/>
+          <circle class="pt" cx="31.01" cy="130" r="3.2"/>
+          <circle class="pt" cx="368.99" cy="130" r="3.2"/>
+          <circle class="pt" cx="128.99" cy="130" r="3.2"/>
+          <circle class="pt" cx="149.3" cy="130" r="3.2"/>
+          <text x="128.99" y="18" text-anchor="middle">A</text>
+          <text x="23.01" y="144" text-anchor="end">B</text>
+          <text x="376.99" y="144">C</text>
+          <text x="124.99" y="150" text-anchor="middle">H</text>
+          <text x="155.3" y="150" text-anchor="middle">D</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      '[AH] ⊥ [BC]',
+      '[AD] açıortay',
+      '|AH| = 5 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki şekilde |AB| + |AC| = 20 cm olduğuna göre, |AD| = x in alabileceği tam sayı değerleri kaç tanedir?',
+    choices: [
+      { key: 'A', text: '2' },
+      { key: 'B', text: '3' },
+      { key: 'C', text: '4' },
+      { key: 'D', text: '5' },
+      { key: 'E', text: '6' },
+    ],
+    answer: 'C',
+    hint: 'Aynı köşeden çizilen yükseklik, açıortay ve kenarortay uzunluklarını sırala.',
+    solution: [
+      {
+        title: 'Alt sınır',
+        detail:
+          'Dik kenar en kısadır: |AD| > |AH| = 5 (H ile D farklı noktalardır).',
+      },
+      {
+        title: 'Açıortay ile kenarortay',
+        detail:
+          'Açıortay, yükseklik ile kenarortay arasında kalır; bu yüzden |AD| ≤ Vₐ dır.',
+      },
+      {
+        title: 'Kenarortayın üst sınırı',
+        detail:
+          'Kenarortay, köşedeki iki kenarın ortalamasından kısadır: Vₐ < (|AB| + |AC|) / 2 = 20 / 2 = 10.',
+      },
+      {
+        title: 'Aralık',
+        detail:
+          '5 < x < 10.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x ∈ {6, 7, 8, 9} olup 4 tam sayı değeri vardır.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 576
+  {
+    id: 'triangles-576',
+    topic: 'Geniş açılı üçgende kenarortay',
+    figure: {
+      viewBox: '0 4 400 163',
+      caption: 'Şekil 576',
+      label:
+        'ABC üçgeninde D noktası [BC] nin orta noktasıdır; [AD] kenarortaydır, |AB| = 10 cm, |AC| = 14 cm ve |AD| = x tir.',
+      svg: `
+          <path class="ln" d="M158.77,30 L31.76,142.99 L368.24,142.99 Z"/>
+          <path class="ln" d="M158.77,30 L200,142.99"/>
+          <path class="tick" d="M115.88,148.99 L115.88,136.99"/>
+          <path class="tick" d="M284.12,148.99 L284.12,136.99"/>
+          <text class="val" x="85.96" y="81.04" text-anchor="middle">10</text>
+          <text class="val" x="270.15" y="79.17" text-anchor="middle">14</text>
+          <text class="val" x="188.78" y="88.07" text-anchor="middle">x</text>
+          <circle class="pt" cx="158.77" cy="30" r="3.2"/>
+          <circle class="pt" cx="31.76" cy="142.99" r="3.2"/>
+          <circle class="pt" cx="368.24" cy="142.99" r="3.2"/>
+          <circle class="pt" cx="200" cy="142.99" r="3.2"/>
+          <text x="158.77" y="18" text-anchor="middle">A</text>
+          <text x="23.76" y="156.99" text-anchor="end">B</text>
+          <text x="376.24" y="156.99">C</text>
+          <text x="200" y="164.99" text-anchor="middle">D</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      '[AD] kenarortay',
+      '|AB| = 10 cm',
+      '|AC| = 14 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki şekilde m(BAC) > 90° olduğuna göre, |AD| = x in en büyük tam sayı değeri kaç cm dir?',
+    choices: [
+      { key: 'A', text: '5' },
+      { key: 'B', text: '6' },
+      { key: 'C', text: '7' },
+      { key: 'D', text: '8' },
+      { key: 'E', text: '9' },
+    ],
+    answer: 'D',
+    hint: 'Kenarortay teoremini yaz ve A açısı genişken |BC|² nin hangi sayıdan büyük olduğunu kullan.',
+    solution: [
+      {
+        title: 'Kenarortay teoremi',
+        detail:
+          '|AB|² + |AC|² = 2x² + |BC|² / 2, yani 100 + 196 = 2x² + |BC|² / 2.',
+      },
+      {
+        title: 'Geniş açı',
+        detail:
+          'm(A) > 90° olduğundan |BC|² > |AB|² + |AC|² = 296.',
+      },
+      {
+        title: 'Eşitsizlik',
+        detail:
+          '2x² = 296 − |BC|² / 2 < 296 − 148 = 148, yani x² < 74.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x < √74 ≈ 8,6 olduğundan x in en büyük tam sayı değeri 8 cm dir.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 577
+  {
+    id: 'triangles-577',
+    topic: 'Paralel kenarlı yamukta geniş açı ve köşegen',
+    figure: {
+      viewBox: '0 4 400 154',
+      caption: 'Şekil 577',
+      label:
+        'AB ve CD paralel doğru parçalarıdır; |AB| = 4 cm, |BC| = 5 cm, |CD| = 8 cm dir, B köşesindeki ABC açısı geniştir ve A ile D birleştirilmiştir.',
+      svg: `
+          <path class="ln" d="M26,30 L122,30 L182,133.92 L374,133.92"/>
+          <path class="ln" d="M26,30 L374,133.92"/>
+          <path class="arc" d="M106,30 A16,16 0 0 0 130,43.86"/>
+          <text class="val" x="74" y="23" text-anchor="middle">4</text>
+          <text class="val" x="139.88" y="93.96" text-anchor="middle">5</text>
+          <text class="val" x="278" y="152.92" text-anchor="middle">8</text>
+          <circle class="pt" cx="26" cy="30" r="3.2"/>
+          <circle class="pt" cx="122" cy="30" r="3.2"/>
+          <circle class="pt" cx="182" cy="133.92" r="3.2"/>
+          <circle class="pt" cx="374" cy="133.92" r="3.2"/>
+          <text x="18" y="24" text-anchor="end">A</text>
+          <text x="122" y="18" text-anchor="middle">B</text>
+          <text x="174" y="149.92" text-anchor="end">C</text>
+          <text x="382" y="149.92">D</text>
+        `,
+    },
+    given: [
+      '[AB] // [CD]',
+      '|AB| = 4 cm',
+      '|BC| = 5 cm',
+      '|CD| = 8 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki şekilde m(ABC) > 90° olduğuna göre, |AD| nin en küçük tam sayı değeri kaç cm olabilir?',
+    choices: [
+      { key: 'A', text: '13' },
+      { key: 'B', text: '14' },
+      { key: 'C', text: '15' },
+      { key: 'D', text: '16' },
+      { key: 'E', text: '17' },
+    ],
+    answer: 'B',
+    hint: '[DC] yi C nin ötesine uzat ve ABCK paralelkenarını oluşturacak K noktasını al.',
+    solution: [
+      {
+        title: 'Paralelkenar',
+        detail:
+          '[DC] nin C yönündeki uzantısında |CK| = |AB| = 4 cm olacak biçimde K alınırsa ABCK paralelkenar olur: |AK| = |BC| = 5 cm ve m(AKC) = m(ABC).',
+      },
+      {
+        title: 'AKD üçgeni',
+        detail:
+          '|KD| = |KC| + |CD| = 4 + 8 = 12 cm ve m(AKD) = m(ABC) > 90° dir.',
+      },
+      {
+        title: 'Geniş açı',
+        detail:
+          'Geniş açının karşısındaki kenar için |AD|² > |AK|² + |KD|² = 25 + 144 = 169, yani |AD| > 13.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '|AD| nin en küçük tam sayı değeri 14 cm dir.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 578
+  {
+    id: 'triangles-578',
+    topic: 'Dik üçgende hipotenüse ait kenarortay',
+    figure: {
+      viewBox: '0 4 400 190',
+      caption: 'Şekil 578',
+      label:
+        'B köşesi dik olan ABC üçgeninde E noktası [BC] üzerinde, F noktası [AC] üzerindedir; T noktası [AE] üzerindedir, |AT| = |TB|, |AF| = |FB| ve |EC| = 15 cm dir.',
+      svg: `
+          <path class="ln" d="M25.59,169.53 L95.35,30 L374.41,169.53 Z"/>
+          <path class="ln" d="M25.59,169.53 L200,82.32"/>
+          <path class="ln" d="M95.35,30 L112.79,125.93"/>
+          <path class="ln" d="M95.35,30 L200,169.53"/>
+          <path class="ln" d="M91.33,38.05 L99.38,42.07 L103.4,34.02"/>
+          <text class="val" x="281.39" y="142.55" text-anchor="middle">15</text>
+          <circle class="pt" cx="25.59" cy="169.53" r="3.2"/>
+          <circle class="pt" cx="95.35" cy="30" r="3.2"/>
+          <circle class="pt" cx="374.41" cy="169.53" r="3.2"/>
+          <circle class="pt" cx="200" cy="82.32" r="3.2"/>
+          <circle class="pt" cx="200" cy="169.53" r="3.2"/>
+          <circle class="pt" cx="112.79" cy="125.93" r="3.2"/>
+          <text x="17.59" y="183.53" text-anchor="end">A</text>
+          <text x="95.35" y="18" text-anchor="middle">B</text>
+          <text x="382.41" y="183.53">C</text>
+          <text x="208" y="76.32">E</text>
+          <text x="200" y="191.53" text-anchor="middle">F</text>
+          <text x="108.79" y="116.93" text-anchor="end">T</text>
+        `,
+    },
+    given: [
+      'ABC bir dik üçgen',
+      'm(ABC) = 90°',
+      '|AT| = |TB|',
+      '|AF| = |FB|',
+      '|EC| = 15 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki şekilde A, T ve E doğrusal olduğuna göre, |BF| − |BT| farkının en büyük tam sayı değeri kaç cm olur?',
+    choices: [
+      { key: 'A', text: '5' },
+      { key: 'B', text: '6' },
+      { key: 'C', text: '7' },
+      { key: 'D', text: '8' },
+      { key: 'E', text: '9' },
+    ],
+    answer: 'C',
+    hint: 'Bir dik üçgende hipotenüsün orta noktası üç köşeye eşit uzaklıktadır.',
+    solution: [
+      {
+        title: 'F noktası',
+        detail:
+          '|AF| = |FB| ve F, [AC] üzerinde olduğundan F hipotenüsün orta noktasıdır: |BF| = |AC| / 2.',
+      },
+      {
+        title: 'T noktası',
+        detail:
+          'ABE üçgeni B de diktir. |TA| = |TB| ve T, [AE] üzerinde olduğundan T, [AE] nin orta noktasıdır: |BT| = |AE| / 2.',
+      },
+      {
+        title: 'Fark',
+        detail:
+          '|BF| − |BT| = (|AC| − |AE|) / 2.',
+      },
+      {
+        title: 'Üçgen eşitsizliği',
+        detail:
+          'AEC üçgeninde |AC| − |AE| < |EC| = 15, yani |BF| − |BT| < 7,5.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '|BF| − |BT| farkının en büyük tam sayı değeri 7 cm dir.',
+      },
+    ],
+  },
 ];
 
 /** Looks questions up by id so the modules below read as a running order. */
@@ -50588,6 +51013,21 @@ export const UNIT_2_TRIANGLES: Unit = {
         'triangles-570',
         'triangles-571',
         'triangles-572',
+      ),
+    },
+    {
+      id: 'triangles-m96',
+      order: 96,
+      title: 'Üçgende açı-kenar bağıntıları — Test 3',
+      summary:
+        'Orta dikme ile üçgen eşitsizliği, ağırlık merkezi ve yükseklik, açıortay sınırları, geniş açıda kenarortay, paralel kenarlar ve dik üçgende kenarortay.',
+      questions: pick(
+        'triangles-573',
+        'triangles-574',
+        'triangles-575',
+        'triangles-576',
+        'triangles-577',
+        'triangles-578',
       ),
     },
   ],
