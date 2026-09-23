@@ -936,6 +936,19 @@ describe('unit 2 answer key', () => {
   it('458 — 49 + 81 = 2|AD|² + 2·16, |AD|² = 49, |AD| = 7 → D', () =>
     expect(answerOf('triangles-458')).toBe('D'));
 
+  it('459 — |AE| = 8/3, |EM| = 5/3, |AL|/|AD| = 8/13, |AK| = 48/13, x = 6 − 48/13 = 30/13 → B', () =>
+    expect(answerOf('triangles-459')).toBe('B'));
+  it('460 — A(DHC) = ah/18 = 3 ⇒ ah = 54, A(BHDG) = 7ah/18 = 21 → E', () =>
+    expect(answerOf('triangles-460')).toBe('E'));
+  it('461 — |AG| = 4, |BG|² = 4·2 = 8, |AB|² = 24, |BE|² = 12, A = 2√6·4√3/2 = 12√2 → D', () =>
+    expect(answerOf('triangles-461')).toBe('D'));
+  it('462 — |GB| = 10, |GC| = 6, |BD|/|DC| = 10/6 = 5/3 → E', () =>
+    expect(answerOf('triangles-462')).toBe('E'));
+  it('463 — |GL| = 6, m(BGL) = 60°, 12√3 = (3√3/2)·|BG| ⇒ |BG| = 8, |GK| = 4 → C', () =>
+    expect(answerOf('triangles-463')).toBe('C'));
+  it('464 — kenarortaylar 9 ve 12, (5/4)x² = 81 + 144 = 225, x² = 180, x = 6√5 → A', () =>
+    expect(answerOf('triangles-464')).toBe('A'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
