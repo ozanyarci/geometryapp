@@ -1385,6 +1385,299 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+  // ---------------------------------------------------------------- 25
+  {
+    id: 'polygons-25',
+    topic: 'Düzgün altıgende köşegen oranı',
+    figure: {
+      viewBox: '0 -6 400 258',
+      caption: 'Şekil 18',
+      label:
+        'Düzgün ABCDEF altıgeninde [AD] ve [BF] köşegenleri K noktasında kesişiyor.',
+      svg: `
+          <path class="ln" d="M140,228.9 L260,228.9 L320,125 L260,21.1 L140,21.1 L80,125 Z"/>
+          <path class="ln" d="M140,228.9 L260,21.1"/>
+          <path class="ln" d="M260,228.9 L80,125"/>
+          <circle class="pt" cx="140" cy="228.9" r="3.2"/>
+          <circle class="pt" cx="260" cy="228.9" r="3.2"/>
+          <circle class="pt" cx="320" cy="125" r="3.2"/>
+          <circle class="pt" cx="260" cy="21.1" r="3.2"/>
+          <circle class="pt" cx="140" cy="21.1" r="3.2"/>
+          <circle class="pt" cx="80" cy="125" r="3.2"/>
+          <circle class="pt" cx="170" cy="176.9" r="3.2"/>
+          <text x="130" y="245" text-anchor="end">A</text>
+          <text x="270" y="245">B</text>
+          <text x="334" y="130">C</text>
+          <text x="260" y="10" text-anchor="middle">D</text>
+          <text x="140" y="10" text-anchor="middle">E</text>
+          <text x="66" y="130" text-anchor="end">F</text>
+          <text x="154" y="189" text-anchor="end">K</text>
+        `,
+    },
+    given: ['ABCDEF düzgün altıgen', '[AD] ve [BF] köşegen', '[AD] ∩ [BF] = {K}'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |KD| / |AK| oranı kaçtır?',
+    choices: [
+      { key: 'A', text: '2' },
+      { key: 'B', text: '5/2' },
+      { key: 'C', text: '3' },
+      { key: 'D', text: '7/2' },
+      { key: 'E', text: '4' },
+    ],
+    answer: 'C',
+    hint: 'ABF üçgeni ikizkenardır ve [AD], A köşesindeki açının açıortayıdır.',
+    solution: [
+      {
+        title: 'Uzun köşegen',
+        detail:
+          'Altıgenin kenarı a olsun. [AD] altıgenin merkezinden geçen uzun köşegendir, bu yüzden |AD| = 2a olur.',
+      },
+      {
+        title: 'ABF üçgeni',
+        detail:
+          '|AB| = |AF| = a ve m(FAB) = 120°’dir. [AD] simetri ekseni olduğundan m(FAB) açısını ikiye böler: m(KAB) = 60°.',
+      },
+      {
+        title: '[AK] yüksekliktir',
+        detail:
+          'İkizkenar üçgende tepe açısının açıortayı aynı zamanda yüksekliktir; AKB dik üçgeninde |AK| = a·cos 60° = a/2 olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: '|KD| = 2a − a/2 = 3a/2 olduğundan |KD| / |AK| = (3a/2) : (a/2) = 3 bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 26
+  {
+    id: 'polygons-26',
+    topic: 'İç ve dış açı oranından köşegen',
+    stem: [],
+    ask: 'Bir düzgün çokgenin bir iç açısının ölçüsünün bir dış açısının ölçüsüne oranı 7/2 ise, bu çokgenin kaç köşegeni vardır?',
+    choices: [
+      { key: 'A', text: '20' },
+      { key: 'B', text: '27' },
+      { key: 'C', text: '35' },
+      { key: 'D', text: '44' },
+      { key: 'E', text: '54' },
+    ],
+    answer: 'B',
+    hint: 'İç açıya 7k, dış açıya 2k de; ikisinin toplamı 180°’dir.',
+    solution: [
+      {
+        title: 'Açıları bul',
+        detail: 'İç açı 7k, dış açı 2k olsun. 7k + 2k = 180 → k = 20, dış açı 2·20 = 40° olur.',
+      },
+      {
+        title: 'Kenar sayısı',
+        detail: 'Düzgün çokgende dış açılar toplamı 360° olduğundan n = 360 : 40 = 9 bulunur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Köşegen sayısı n(n − 3) : 2 = 9·6 : 2 = 27 bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 27
+  {
+    id: 'polygons-27',
+    topic: 'Düzgün sekizgen ve kare',
+    figure: {
+      viewBox: '0 6 400 350',
+      caption: 'Şekil 19',
+      label:
+        'Düzgün ABCDEFGH sekizgeninin [EF] kenarı üzerine dışarıya doğru çizilmiş EFKL karesi; D ile L birleştirilmiş, m(EDL) = α.',
+      svg: `
+          <path class="ln" d="M155,248.6 L245,248.6 L308.6,185 L308.6,95 L245,31.4 L155,31.4 L91.4,95 L91.4,185 Z"/>
+          <path class="ln" d="M245,248.6 L245,338.6 L155,338.6 L155,248.6"/>
+          <path class="ln" d="M91.4,185 L155,338.6"/>
+          <path class="arc" d="M116.8,210.5 A36,36 0 0 1 105.1,218.3"/>
+          <text class="val" x="124" y="244" text-anchor="middle">α</text>
+          <circle class="pt" cx="155" cy="248.6" r="3.2"/>
+          <circle class="pt" cx="245" cy="248.6" r="3.2"/>
+          <circle class="pt" cx="308.6" cy="185" r="3.2"/>
+          <circle class="pt" cx="308.6" cy="95" r="3.2"/>
+          <circle class="pt" cx="245" cy="31.4" r="3.2"/>
+          <circle class="pt" cx="155" cy="31.4" r="3.2"/>
+          <circle class="pt" cx="91.4" cy="95" r="3.2"/>
+          <circle class="pt" cx="91.4" cy="185" r="3.2"/>
+          <circle class="pt" cx="245" cy="338.6" r="3.2"/>
+          <circle class="pt" cx="155" cy="338.6" r="3.2"/>
+          <text x="250" y="21" text-anchor="middle">A</text>
+          <text x="150" y="21" text-anchor="middle">B</text>
+          <text x="77" y="100" text-anchor="end">C</text>
+          <text x="77" y="190" text-anchor="end">D</text>
+          <text x="163" y="242">E</text>
+          <text x="259" y="253">F</text>
+          <text x="322" y="190">G</text>
+          <text x="322" y="100">H</text>
+          <text x="259" y="352">K</text>
+          <text x="141" y="352" text-anchor="end">L</text>
+        `,
+    },
+    given: ['ABCDEFGH düzgün sekizgen', 'EFKL kare'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, m(EDL) = α kaç derecedir?',
+    choices: [
+      { key: 'A', text: '15' },
+      { key: 'B', text: '18' },
+      { key: 'C', text: '20' },
+      { key: 'D', text: '22,5' },
+      { key: 'E', text: '25' },
+    ],
+    answer: 'D',
+    hint: 'E köşesinin etrafındaki açıları topla; |ED| ile |EL| arasındaki ilişkiye bak.',
+    solution: [
+      {
+        title: 'Sekizgenin iç açısı',
+        detail: 'İç açılar toplamı (8 − 2)·180 = 1080° olduğundan her iç açı 1080 : 8 = 135°’dir.',
+      },
+      {
+        title: 'E etrafındaki açılar',
+        detail:
+          'm(DEF) = 135° ve m(FEL) = 90° olduğundan m(DEL) = 360 − 135 − 90 = 135° olur.',
+      },
+      {
+        title: 'İkizkenar üçgen',
+        detail:
+          'Sekizgen ile kare [EF] kenarını paylaştığından |ED| = |EF| = |EL|; DEL üçgeni ikizkenardır.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Taban açıları eşit olduğundan α = (180 − 135) : 2 = 22,5° bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 28
+  {
+    id: 'polygons-28',
+    topic: 'Dış açıdan köşegen sayısı',
+    stem: [],
+    ask: 'Düzgün bir çokgenin bir dış açısı 24° ise bu çokgenin köşegen sayısı kaçtır?',
+    choices: [
+      { key: 'A', text: '54' },
+      { key: 'B', text: '65' },
+      { key: 'C', text: '77' },
+      { key: 'D', text: '90' },
+      { key: 'E', text: '104' },
+    ],
+    answer: 'D',
+    hint: 'Dış açılar toplamı 360° olduğundan önce kenar sayısını bul.',
+    solution: [
+      {
+        title: 'Kenar sayısı',
+        detail: 'n = 360 : 24 = 15 bulunur.',
+      },
+      {
+        title: 'Köşegen formülü',
+        detail: 'n kenarlı bir çokgenin köşegen sayısı n(n − 3) : 2’dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: '15·12 : 2 = 90 köşegen vardır.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 29
+  {
+    id: 'polygons-29',
+    topic: 'Köşegen sayısından iç açı',
+    stem: [],
+    ask: 'Köşegen sayısı kenar sayısının 3 katı olan düzgün konveks bir çokgenin iç açılarından birinin ölçüsü kaç derecedir?',
+    choices: [
+      { key: 'A', text: '120' },
+      { key: 'B', text: '135' },
+      { key: 'C', text: '140' },
+      { key: 'D', text: '144' },
+      { key: 'E', text: '150' },
+    ],
+    answer: 'C',
+    hint: 'n(n − 3) : 2 = 3n denklemini kur.',
+    solution: [
+      {
+        title: 'Denklemi kur',
+        detail: 'n(n − 3) : 2 = 3n olduğundan her iki tarafı n’ye bölersek (n − 3) : 2 = 3 olur.',
+      },
+      {
+        title: 'Kenar sayısı',
+        detail: 'n − 3 = 6 → n = 9 bulunur.',
+      },
+      {
+        title: 'Bir dış açı',
+        detail: 'Bir dış açı 360 : 9 = 40° olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Bir iç açı 180 − 40 = 140° bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 30
+  {
+    id: 'polygons-30',
+    topic: 'İç ve dış açı farkı',
+    stem: [],
+    ask: 'Bir düzgün çokgenin bir iç açısının ölçüsü, bir dış açısının ölçüsünden 108° fazladır. Buna göre, bu çokgen kaç kenarlıdır?',
+    choices: [
+      { key: 'A', text: '5' },
+      { key: 'B', text: '6' },
+      { key: 'C', text: '8' },
+      { key: 'D', text: '10' },
+      { key: 'E', text: '12' },
+    ],
+    answer: 'D',
+    hint: 'İç açı ile dış açının toplamı 180°, farkı 108°’dir.',
+    solution: [
+      {
+        title: 'İki denklem',
+        detail: 'İç açı i, dış açı d olsun: i + d = 180 ve i − d = 108.',
+      },
+      {
+        title: 'Dış açıyı bul',
+        detail: 'Taraf tarafa çıkarırsak 2d = 72 → d = 36° olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'n = 360 : 36 = 10 kenarlıdır.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 31
+  {
+    id: 'polygons-31',
+    topic: 'Bir köşeden üçgenlere ayırma',
+    stem: [],
+    ask: 'Bir konveks çokgenin bir köşesinden çizilen tüm köşegenler, çokgeni 10 üçgene ayırmaktadır. Buna göre, bu çokgenin köşegen sayısı kaçtır?',
+    choices: [
+      { key: 'A', text: '44' },
+      { key: 'B', text: '48' },
+      { key: 'C', text: '54' },
+      { key: 'D', text: '60' },
+      { key: 'E', text: '65' },
+    ],
+    answer: 'C',
+    hint: 'n kenarlı bir çokgen bir köşesinden çizilen köşegenlerle n − 2 üçgene ayrılır.',
+    solution: [
+      {
+        title: 'Kenar sayısı',
+        detail: 'n − 2 = 10 olduğundan n = 12 bulunur.',
+      },
+      {
+        title: 'Köşegen formülü',
+        detail: 'Köşegen sayısı n(n − 3) : 2’dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: '12·9 : 2 = 54 köşegen vardır.',
+      },
+    ],
+  },
 ];
 
 /** Resolves question ids to their bank entries, failing loudly on a typo. */
@@ -1468,6 +1761,22 @@ export const UNIT_3_POLYGONS: Unit = {
         'polygons-22',
         'polygons-23',
         'polygons-24',
+      ),
+    },
+    {
+      id: 'polygons-m5',
+      order: 5,
+      title: 'Açılardan köşegen sayısına',
+      summary:
+        'Düzgün altıgende köşegen oranı, sekizgene kurulan kare, iç ve dış açı ilişkilerinden kenar ve köşegen sayısı.',
+      questions: pick(
+        'polygons-25',
+        'polygons-26',
+        'polygons-27',
+        'polygons-28',
+        'polygons-29',
+        'polygons-30',
+        'polygons-31',
       ),
     },
   ],

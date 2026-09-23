@@ -59,6 +59,19 @@ describe('unit 3 answer key', () => {
   it('23 — m(CDA) = 40, m(FBC) = 60, α = 360 − 60 − 140 − 40 = 120 → E', () =>
     expect(answerOf('polygons-23')).toBe('E'));
   it('24 — n = 360/24 = 15, 13·180 = 2340 → C', () => expect(answerOf('polygons-24')).toBe('C'));
+
+  it('25 — |AD| = 2a, |AK| = a·cos 60 = a/2, |KD| = 3a/2, oran 3 → C', () =>
+    expect(answerOf('polygons-25')).toBe('C'));
+  it('26 — 9k = 180, dış 40, n = 9, 9·6/2 = 27 → B', () =>
+    expect(answerOf('polygons-26')).toBe('B'));
+  it('27 — m(DEL) = 360 − 135 − 90 = 135, α = 45/2 = 22,5 → D', () =>
+    expect(answerOf('polygons-27')).toBe('D'));
+  it('28 — n = 360/24 = 15, 15·12/2 = 90 → D', () => expect(answerOf('polygons-28')).toBe('D'));
+  it('29 — (n − 3)/2 = 3, n = 9, 180 − 40 = 140 → C', () =>
+    expect(answerOf('polygons-29')).toBe('C'));
+  it('30 — 2d = 180 − 108 = 72, d = 36, n = 10 → D', () =>
+    expect(answerOf('polygons-30')).toBe('D'));
+  it('31 — n − 2 = 10, n = 12, 12·9/2 = 54 → C', () => expect(answerOf('polygons-31')).toBe('C'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
