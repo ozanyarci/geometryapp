@@ -1678,6 +1678,306 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+
+  // ---------------------------------------------------------------- 32
+  {
+    id: 'polygons-32',
+    topic: 'Düzgün altıgende alan oranı',
+    figure: {
+      viewBox: '0 6 400 262',
+      caption: 'Şekil 20',
+      label:
+        'Düzgün ABCDEF altıgeninde K noktası [BC] kenarının orta noktası; A, K ve E birleştirilerek taranmış AKE üçgeni oluşturulmuş, |BK| = |KC|.',
+      svg: `
+          <path class="shade" d="M140,240 L290,188.1 L140,32.2 Z"/>
+          <path class="ln" d="M140,240 L260,240 L320,136.1 L260,32.2 L140,32.2 L80,136.1 Z"/>
+          <path class="ln" d="M140,240 L290,188.1 L140,32.2 Z"/>
+          <line class="tick" x1="268.9" y1="210.5" x2="281.1" y2="217.5"/>
+          <line class="tick" x1="298.9" y1="158.6" x2="311.1" y2="165.6"/>
+          <circle class="pt" cx="140" cy="240" r="3.2"/>
+          <circle class="pt" cx="260" cy="240" r="3.2"/>
+          <circle class="pt" cx="320" cy="136.1" r="3.2"/>
+          <circle class="pt" cx="260" cy="32.2" r="3.2"/>
+          <circle class="pt" cx="140" cy="32.2" r="3.2"/>
+          <circle class="pt" cx="80" cy="136.1" r="3.2"/>
+          <circle class="pt" cx="290" cy="188.1" r="3.2"/>
+          <text x="130" y="257" text-anchor="end">A</text>
+          <text x="270" y="257">B</text>
+          <text x="334" y="141">C</text>
+          <text x="260" y="22" text-anchor="middle">D</text>
+          <text x="140" y="22" text-anchor="middle">E</text>
+          <text x="66" y="141" text-anchor="end">F</text>
+          <text x="302" y="197">K</text>
+        `,
+    },
+    given: ['ABCDEF düzgün altıgen', '|BK| = |KC|'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(AKE) / A(ABCDEF) oranı kaçtır?',
+    choices: [
+      { key: 'A', text: '1/3' },
+      { key: 'B', text: '3/8' },
+      { key: 'C', text: '5/12' },
+      { key: 'D', text: '7/16' },
+      { key: 'E', text: '1/2' },
+    ],
+    answer: 'C',
+    hint: 'Altıgenin alanını 6S al ve taranmamış üç parçanın alanını S cinsinden yaz.',
+    solution: [
+      {
+        title: 'Altıgenin alanı',
+        detail:
+          'Kenar a olsun. Kenarı a olan eşkenar üçgenin alanına S dersek altıgen 6 eşkenar üçgenden oluştuğu için A(ABCDEF) = 6S olur.',
+      },
+      {
+        title: 'AEF ve ABK üçgenleri',
+        detail:
+          'A(AEF) = ½·a·a·sin 120° = S. |BK| = a/2 olduğundan A(ABK) = ½·a·(a/2)·sin 120° = S/2.',
+      },
+      {
+        title: 'KCDE dörtgeni',
+        detail:
+          'A(CDE) = S. m(BCE) = 120° − 30° = 90° ve |CE| = a√3 olduğundan A(KCE) = ½·(a/2)·a√3 = S. Böylece A(KCDE) = 2S.',
+      },
+      {
+        title: 'AKE üçgeni',
+        detail: 'A(AKE) = 6S − S − S/2 − 2S = 5S/2 olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'A(AKE) / A(ABCDEF) = (5S/2) : 6S = 5/12 bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 33
+  {
+    id: 'polygons-33',
+    topic: 'Farklı iç açılardan kenar sayısı',
+    stem: [],
+    ask: 'İki iç açısının ölçüsü 110° ve 140° olan bir konveks çokgenin diğer iç açılarının her birinin ölçüsü 155°’dir. Buna göre, bu konveks çokgen kaç kenarlıdır?',
+    choices: [
+      { key: 'A', text: '11' },
+      { key: 'B', text: '12' },
+      { key: 'C', text: '13' },
+      { key: 'D', text: '14' },
+      { key: 'E', text: '15' },
+    ],
+    answer: 'B',
+    hint: 'İç açılar yerine dış açılarla çalış; dış açıların toplamı her zaman 360°’dir.',
+    solution: [
+      {
+        title: 'Verilen açıların dış açıları',
+        detail: '110° ve 140°’lik iç açıların dış açıları 70° ve 40°’dir; toplamları 110° eder.',
+      },
+      {
+        title: 'Kalan dış açılar',
+        detail:
+          'Geriye 360 − 110 = 250° kalır. 155°’lik her iç açının dış açısı 180 − 155 = 25°’dir.',
+      },
+      {
+        title: 'Diğer köşe sayısı',
+        detail: '250 : 25 = 10 köşe daha vardır.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Çokgen 2 + 10 = 12 kenarlıdır.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 34
+  {
+    id: 'polygons-34',
+    topic: 'Düzgün altıgen ve kare',
+    figure: {
+      viewBox: '0 6 400 262',
+      caption: 'Şekil 21',
+      label:
+        'Düzgün ABCDEF altıgeninin [AB] kenarı üzerine içeriye doğru çizilmiş ABKL karesi; K ile C birleştirilmiş, m(KCD) = α.',
+      svg: `
+          <path class="ln" d="M140,240 L260,240 L320,136.1 L260,32.2 L140,32.2 L80,136.1 Z"/>
+          <path class="ln" d="M260,240 L260,120 L140,120 L140,240"/>
+          <path class="ln" d="M260,120 L320,136.1"/>
+          <path class="arc" d="M291,128.3 A30,30 0 0 1 305,110.1"/>
+          <text class="val" x="286" y="112" text-anchor="middle">α</text>
+          <circle class="pt" cx="140" cy="240" r="3.2"/>
+          <circle class="pt" cx="260" cy="240" r="3.2"/>
+          <circle class="pt" cx="320" cy="136.1" r="3.2"/>
+          <circle class="pt" cx="260" cy="32.2" r="3.2"/>
+          <circle class="pt" cx="140" cy="32.2" r="3.2"/>
+          <circle class="pt" cx="80" cy="136.1" r="3.2"/>
+          <circle class="pt" cx="260" cy="120" r="3.2"/>
+          <circle class="pt" cx="140" cy="120" r="3.2"/>
+          <text x="130" y="257" text-anchor="end">A</text>
+          <text x="270" y="257">B</text>
+          <text x="334" y="141">C</text>
+          <text x="260" y="22" text-anchor="middle">D</text>
+          <text x="140" y="22" text-anchor="middle">E</text>
+          <text x="66" y="141" text-anchor="end">F</text>
+          <text x="254" y="112" text-anchor="end">K</text>
+          <text x="134" y="112" text-anchor="end">L</text>
+        `,
+    },
+    given: ['ABCDEF düzgün altıgen', 'ABKL kare'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, m(KCD) = α kaç derecedir?',
+    choices: [
+      { key: 'A', text: '35' },
+      { key: 'B', text: '40' },
+      { key: 'C', text: '45' },
+      { key: 'D', text: '50' },
+      { key: 'E', text: '55' },
+    ],
+    answer: 'C',
+    hint: 'Altıgen ile kare [AB] kenarını paylaşır; |BK| ile |BC| arasındaki ilişkiye bak.',
+    solution: [
+      {
+        title: 'Altıgenin iç açısı',
+        detail: 'İç açılar toplamı (6 − 2)·180 = 720° olduğundan her iç açı 720 : 6 = 120°’dir.',
+      },
+      {
+        title: 'B köşesindeki açı',
+        detail: 'm(ABK) = 90° olduğundan m(KBC) = 120 − 90 = 30° olur.',
+      },
+      {
+        title: 'İkizkenar üçgen',
+        detail:
+          '|BK| = |AB| = |BC| olduğundan KBC üçgeni ikizkenardır: m(BCK) = (180 − 30) : 2 = 75°.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'α = m(BCD) − m(BCK) = 120 − 75 = 45° bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 35
+  {
+    id: 'polygons-35',
+    topic: 'Köşegen sayısından iç açılar toplamı',
+    stem: [],
+    ask: 'Köşegen sayısı 20 olan bir konveks çokgenin iç açılarının ölçüleri toplamı kaç derecedir?',
+    choices: [
+      { key: 'A', text: '720' },
+      { key: 'B', text: '900' },
+      { key: 'C', text: '1080' },
+      { key: 'D', text: '1260' },
+      { key: 'E', text: '1440' },
+    ],
+    answer: 'C',
+    hint: 'n(n − 3) : 2 = 20 denklemini sağlayan n’yi bul.',
+    solution: [
+      {
+        title: 'Denklemi kur',
+        detail: 'n(n − 3) : 2 = 20 olduğundan n(n − 3) = 40 olur.',
+      },
+      {
+        title: 'Kenar sayısı',
+        detail: '8·5 = 40 olduğundan n = 8 bulunur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'İç açılar toplamı (8 − 2)·180 = 1080° bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 36
+  {
+    id: 'polygons-36',
+    topic: 'Düzgün altıgende alandan çevre',
+    stem: [],
+    ask: 'Alanı 96√3 cm² olan bir düzgün altıgenin çevresi kaç cm’dir?',
+    choices: [
+      { key: 'A', text: '24' },
+      { key: 'B', text: '36' },
+      { key: 'C', text: '42' },
+      { key: 'D', text: '48' },
+      { key: 'E', text: '60' },
+    ],
+    answer: 'D',
+    hint: 'Düzgün altıgen, kenarı altıgenin kenarına eşit 6 eşkenar üçgenden oluşur.',
+    solution: [
+      {
+        title: 'Alan formülü',
+        detail: 'Kenarı a olan düzgün altıgenin alanı 6·(a²√3 : 4)’tür.',
+      },
+      {
+        title: 'Denklemi kur',
+        detail: '6·a²√3 : 4 = 96√3 → a² = 96·4 : 6 = 64 olur.',
+      },
+      {
+        title: 'Kenar',
+        detail: 'a = 8 cm bulunur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Çevre 6·8 = 48 cm’dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 37
+  {
+    id: 'polygons-37',
+    topic: 'İç açılar toplamından köşegen sayısı',
+    stem: [],
+    ask: 'Bir dışbükey çokgenin iç açılarının ölçüleri toplamı 1980° ise, bu çokgenin köşegen sayısı kaçtır?',
+    choices: [
+      { key: 'A', text: '54' },
+      { key: 'B', text: '65' },
+      { key: 'C', text: '77' },
+      { key: 'D', text: '90' },
+      { key: 'E', text: '104' },
+    ],
+    answer: 'B',
+    hint: 'Önce (n − 2)·180 = 1980 denkleminden kenar sayısını bul.',
+    solution: [
+      {
+        title: 'Kenar sayısı',
+        detail: '(n − 2)·180 = 1980 → n − 2 = 11 → n = 13 bulunur.',
+      },
+      {
+        title: 'Köşegen formülü',
+        detail: 'Köşegen sayısı n(n − 3) : 2’dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: '13·10 : 2 = 65 köşegen vardır.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 38
+  {
+    id: 'polygons-38',
+    topic: 'Üçgenlere ayırmadan iç açı',
+    stem: [],
+    ask: 'Bir düzgün çokgende aynı köşeden diğer köşelere çizilen köşegenlerle bu çokgen 16 üçgene ayrıldığına göre, bu çokgenin bir iç açısının ölçüsü kaç derecedir?',
+    choices: [
+      { key: 'A', text: '144' },
+      { key: 'B', text: '150' },
+      { key: 'C', text: '156' },
+      { key: 'D', text: '160' },
+      { key: 'E', text: '162' },
+    ],
+    answer: 'D',
+    hint: 'n kenarlı çokgen bir köşesinden çizilen köşegenlerle n − 2 üçgene ayrılır.',
+    solution: [
+      {
+        title: 'Kenar sayısı',
+        detail: 'n − 2 = 16 olduğundan n = 18 bulunur.',
+      },
+      {
+        title: 'Bir dış açı',
+        detail: 'Bir dış açı 360 : 18 = 20° olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Bir iç açı 180 − 20 = 160° bulunur.',
+      },
+    ],
+  },
 ];
 
 /** Resolves question ids to their bank entries, failing loudly on a typo. */
@@ -1777,6 +2077,22 @@ export const UNIT_3_POLYGONS: Unit = {
         'polygons-29',
         'polygons-30',
         'polygons-31',
+      ),
+    },
+    {
+      id: 'polygons-m6',
+      order: 6,
+      title: 'Alan oranı ve kenar sayısı',
+      summary:
+        'Düzgün altıgende alan oranı ve içine kurulan kare, farklı iç açılardan kenar sayısı, köşegen ve açı toplamı ilişkileri.',
+      questions: pick(
+        'polygons-32',
+        'polygons-33',
+        'polygons-34',
+        'polygons-35',
+        'polygons-36',
+        'polygons-37',
+        'polygons-38',
       ),
     },
   ],
