@@ -51909,7 +51909,7 @@ export const UNIT_2_TRIANGLES: Unit = {
   title: 'Üçgenler',
   subtitle: 'Ünite 2',
   description:
-    'Üçgende iç ve dış açılar, ikizkenar üçgenin taban açıları, paralel doğrularla birlikte kurulan açı bağıntıları ve dik üçgende Pisagor bağıntısı.',
+    'Üçgenin açılarından benzerliğe kadar tüm konu: iç ve dış açılar, açıortayların ve yüksekliklerin kesişimi; dik üçgende Pisagor, Öklid bağıntıları ve özel açılı üçgenler; ikizkenar ve eşkenar üçgende uzunluklar; taban–yükseklik ve oranlarla alan; iç ve dış açıortay bağıntıları; kenarortay ve ağırlık merkezi; benzerlik, paralel kesitler ve alan oranları; büyük açı karşısında büyük kenar ve üçgen eşitsizliği.',
   modules: [
     {
       id: 'triangles-m1',
