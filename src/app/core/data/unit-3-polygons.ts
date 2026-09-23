@@ -2325,6 +2325,344 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+  // ---------------------------------------------------------------- 46
+  {
+    id: 'polygons-46',
+    topic: 'Düzgün altıgende köşegenlerle alan oranı',
+    figure: {
+      viewBox: '0 6 400 262',
+      caption: 'Şekil 26',
+      label:
+        'Düzgün ABCDEF altıgeninde [AC] ve [BD] köşegenleri K noktasında kesişiyor; [FD] köşegeni de çizilmiş ve AKDF dörtgeni taranmış.',
+      svg: `
+          <path class="shade" d="M140,240 L260,170.7 L260,32.2 L80,136.1 Z"/>
+          <path class="ln" d="M140,240 L260,240 L320,136.1 L260,32.2 L140,32.2 L80,136.1 Z"/>
+          <path class="ln" d="M140,240 L320,136.1"/>
+          <path class="ln" d="M260,240 L260,32.2"/>
+          <path class="ln" d="M80,136.1 L260,32.2"/>
+          <circle class="pt" cx="140" cy="240" r="3.2"/>
+          <circle class="pt" cx="260" cy="240" r="3.2"/>
+          <circle class="pt" cx="320" cy="136.1" r="3.2"/>
+          <circle class="pt" cx="260" cy="32.2" r="3.2"/>
+          <circle class="pt" cx="140" cy="32.2" r="3.2"/>
+          <circle class="pt" cx="80" cy="136.1" r="3.2"/>
+          <circle class="pt" cx="260" cy="170.7" r="3.2"/>
+          <text x="130" y="257" text-anchor="end">A</text>
+          <text x="270" y="257">B</text>
+          <text x="334" y="141">C</text>
+          <text x="260" y="22" text-anchor="middle">D</text>
+          <text x="140" y="22" text-anchor="middle">E</text>
+          <text x="66" y="141" text-anchor="end">F</text>
+          <text x="267" y="192">K</text>
+        `,
+    },
+    given: ['ABCDEF düzgün altıgen', '[AC] ∩ [BD] = {K}', '[FD] köşegen'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(AKDF) / A(ABCDEF) oranı kaçtır?',
+    choices: [
+      { key: 'A', text: '1/2' },
+      { key: 'B', text: '5/9' },
+      { key: 'C', text: '7/12' },
+      { key: 'D', text: '2/3' },
+      { key: 'E', text: '13/18' },
+    ],
+    answer: 'B',
+    hint: 'ACDF dörtgeninin dikdörtgen olduğunu gör ve ondan KCD üçgenini çıkar.',
+    solution: [
+      {
+        title: 'Altıgenin alanı',
+        detail:
+          'Kenar a olsun. Kenarı a olan eşkenar üçgenin alanına S dersek A(ABCDEF) = 6S olur; ABC ve DEF üçgenlerinin her biri S’dir.',
+      },
+      {
+        title: 'ACDF dikdörtgeni',
+        detail: 'ACDF bir dikdörtgendir ve A(ACDF) = 6S − 2S = 4S olur.',
+      },
+      {
+        title: 'KCD üçgeni',
+        detail:
+          'm(ACD) = 90° ve m(BDC) = 30° olduğundan KCD dik üçgeninde |KC| = a/√3 olur. A(KCD) = ½·a·a/√3 = a²/(2√3) = 2S/3 bulunur.',
+      },
+      {
+        title: 'Taralı bölge',
+        detail: 'A(AKDF) = 4S − 2S/3 = 10S/3 olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'A(AKDF) / A(ABCDEF) = (10S/3) : 6S = 5/9 bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 47
+  {
+    id: 'polygons-47',
+    topic: 'İç ve dış açı ilişkisinden köşegen',
+    stem: [],
+    ask: 'Bir iç açısının ölçüsü, bir dış açısının ölçüsünün 3 katından 20° fazla olan düzgün çokgenin köşegen sayısı kaçtır?',
+    choices: [
+      { key: 'A', text: '20' },
+      { key: 'B', text: '27' },
+      { key: 'C', text: '35' },
+      { key: 'D', text: '44' },
+      { key: 'E', text: '54' },
+    ],
+    answer: 'B',
+    hint: 'Bir iç açı ile bir dış açının toplamının 180° olduğunu kullan.',
+    solution: [
+      {
+        title: 'Denklemi kur',
+        detail: 'Dış açı d olsun. İç açı 3d + 20 olur ve (3d + 20) + d = 180 yazılır.',
+      },
+      {
+        title: 'Dış açı',
+        detail: '4d = 160 → d = 40° bulunur.',
+      },
+      {
+        title: 'Kenar sayısı',
+        detail: 'n = 360 : 40 = 9 olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Köşegen sayısı 9·(9 − 3) : 2 = 27 bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 48
+  {
+    id: 'polygons-48',
+    topic: 'Köşegen açısından kenar sayısı',
+    figure: {
+      viewBox: '0 4 400 170',
+      caption: 'Şekil 27',
+      label:
+        'Düzgün bir çokgenin ardışık A, B, C, D, E köşeleri; [BD] köşegeni çizilmiş ve m(ABD) = 135°.',
+      svg: `
+          <path class="ln" d="M50.7,20 L61.4,60" stroke-dasharray="2 5"/>
+          <path class="ln" d="M349.3,20 L338.6,60" stroke-dasharray="2 5"/>
+          <path class="ln" d="M61.4,60 L120,118.6 L200,140 L280,118.6 L338.6,60"/>
+          <path class="ln" d="M120,118.6 L280,118.6"/>
+          <path class="arc" d="M105.9,104.4 A20,20 0 0 1 140,118.6"/>
+          <text class="val" x="135.3" y="86.6" text-anchor="middle">135°</text>
+          <circle class="pt" cx="61.4" cy="60" r="3.2"/>
+          <circle class="pt" cx="120" cy="118.6" r="3.2"/>
+          <circle class="pt" cx="200" cy="140" r="3.2"/>
+          <circle class="pt" cx="280" cy="118.6" r="3.2"/>
+          <circle class="pt" cx="338.6" cy="60" r="3.2"/>
+          <text x="50" y="74" text-anchor="end">A</text>
+          <text x="110" y="138" text-anchor="end">B</text>
+          <text x="200" y="161" text-anchor="middle">C</text>
+          <text x="290" y="138">D</text>
+          <text x="350" y="74">E</text>
+        `,
+    },
+    given: ['…ABCDE… düzgün çokgen', 'm(ABD) = 135°'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, bu düzgün çokgen kaç kenarlıdır?',
+    choices: [
+      { key: 'A', text: '8' },
+      { key: 'B', text: '10' },
+      { key: 'C', text: '12' },
+      { key: 'D', text: '15' },
+      { key: 'E', text: '16' },
+    ],
+    answer: 'C',
+    hint: 'BCD ikizkenar üçgenindeki taban açısını bir dış açı cinsinden yaz.',
+    solution: [
+      {
+        title: 'Dış açıya d de',
+        detail: 'Bir dış açı d ise bir iç açı m(ABC) = m(BCD) = 180 − d olur.',
+      },
+      {
+        title: 'BCD ikizkenar üçgeni',
+        detail:
+          '|BC| = |CD| olduğundan taban açıları eşittir: m(CBD) = (180 − (180 − d)) : 2 = d/2.',
+      },
+      {
+        title: 'Denklemi kur',
+        detail: 'm(ABD) = (180 − d) − d/2 = 135 → 3d/2 = 45 → d = 30° bulunur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Kenar sayısı 360 : 30 = 12 bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 49
+  {
+    id: 'polygons-49',
+    topic: 'Düzgün ongende uzantıların açısı',
+    figure: {
+      viewBox: '0 -2 400 290',
+      caption: 'Şekil 28',
+      label:
+        'Düzgün ABCDEFGHKL ongeninde [AB kenarının uzantısı ile [FD köşegeninin uzantısı M noktasında kesişiyor; F ile A arasında M’de oluşan açı α.',
+      svg: `
+          <path class="ln" d="M122.9,254.1 L197.1,254.1 L257.1,210.5 L280,140 L257.1,69.5 L197.1,25.9 L122.9,25.9 L62.9,69.5 L40,140 L62.9,210.5 Z"/>
+          <path class="ln" d="M197.1,254.1 L362.9,254.1"/>
+          <path class="ln" d="M197.1,25.9 L362.9,254.1"/>
+          <path class="arc" d="M336.9,254.1 A26,26 0 0 1 347.6,233.1"/>
+          <text class="val" x="322" y="240" text-anchor="middle">α</text>
+          <circle class="pt" cx="122.9" cy="254.1" r="3.2"/>
+          <circle class="pt" cx="197.1" cy="254.1" r="3.2"/>
+          <circle class="pt" cx="257.1" cy="210.5" r="3.2"/>
+          <circle class="pt" cx="280" cy="140" r="3.2"/>
+          <circle class="pt" cx="257.1" cy="69.5" r="3.2"/>
+          <circle class="pt" cx="197.1" cy="25.9" r="3.2"/>
+          <circle class="pt" cx="122.9" cy="25.9" r="3.2"/>
+          <circle class="pt" cx="62.9" cy="69.5" r="3.2"/>
+          <circle class="pt" cx="40" cy="140" r="3.2"/>
+          <circle class="pt" cx="62.9" cy="210.5" r="3.2"/>
+          <circle class="pt" cx="362.9" cy="254.1" r="3.2"/>
+          <text x="118" y="274" text-anchor="middle">A</text>
+          <text x="202" y="274" text-anchor="middle">B</text>
+          <text x="270" y="225">C</text>
+          <text x="296" y="145">D</text>
+          <text x="270" y="65">E</text>
+          <text x="202" y="16" text-anchor="middle">F</text>
+          <text x="118" y="16" text-anchor="middle">G</text>
+          <text x="50" y="65" text-anchor="end">H</text>
+          <text x="24" y="145" text-anchor="end">K</text>
+          <text x="50" y="225" text-anchor="end">L</text>
+          <text x="372" y="274">M</text>
+        `,
+    },
+    given: ['ABCDEFGHKL düzgün ongen', '[AB ∩ [FD = {M}'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, m(FMA) = α kaç derecedir?',
+    choices: [
+      { key: 'A', text: '36' },
+      { key: 'B', text: '45' },
+      { key: 'C', text: '54' },
+      { key: 'D', text: '60' },
+      { key: 'E', text: '72' },
+    ],
+    answer: 'C',
+    hint: '[BD] köşegenini çiz ve MBD üçgeninin B ve D’deki açılarını bul.',
+    solution: [
+      {
+        title: 'İç açı',
+        detail:
+          'Düzgün ongenin bir iç açısı 144°’dir. BCD ve DEF ikizkenar üçgenlerinin taban açıları (180 − 144) : 2 = 18° olur.',
+      },
+      {
+        title: 'B’deki açı',
+        detail: 'm(ABD) = 144 − 18 = 126° olduğundan m(MBD) = 180 − 126 = 54° olur.',
+      },
+      {
+        title: 'D’deki açı',
+        detail:
+          'm(BDF) = 144 − 18 − 18 = 108° olduğundan F, D, M doğrusal olmak üzere m(BDM) = 180 − 108 = 72° olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'MBD üçgeninde α = 180 − 54 − 72 = 54° bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 50
+  {
+    id: 'polygons-50',
+    topic: 'Farklı iç açılardan düzgün çokgen',
+    stem: [
+      'Bir konveks çokgenin iç açılarından ikisinin ölçüsü 120° ve 150°, diğerlerinin her birinin ölçüsü 153°’dir.',
+    ],
+    ask: 'Bu çokgenin kenar sayısına eşit sayıda kenarı olan düzgün çokgenin bir iç açısının ölçüsü kaç derecedir?',
+    choices: [
+      { key: 'A', text: '120' },
+      { key: 'B', text: '135' },
+      { key: 'C', text: '144' },
+      { key: 'D', text: '150' },
+      { key: 'E', text: '156' },
+    ],
+    answer: 'D',
+    hint: 'İç açılar yerine dış açılarla çalış: dış açıların toplamı her zaman 360°’dir.',
+    solution: [
+      {
+        title: 'Dış açılar',
+        detail:
+          '120° ve 150° iç açılarına 60° ve 30°, 153° iç açılarının her birine 27° dış açı karşılık gelir.',
+      },
+      {
+        title: 'Denklemi kur',
+        detail: 'Diğer köşelerin sayısı k olsun: 60 + 30 + 27k = 360 → 27k = 270 → k = 10.',
+      },
+      {
+        title: 'Kenar sayısı',
+        detail: 'n = 2 + 10 = 12 bulunur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Düzgün onikigenin bir iç açısı 180 − 360 : 12 = 180 − 30 = 150° bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 51
+  {
+    id: 'polygons-51',
+    topic: 'Düzgün altıgende iç içe üçgenler',
+    figure: {
+      viewBox: '0 6 400 262',
+      caption: 'Şekil 29',
+      label:
+        'Düzgün ABCDEF altıgeninde ACE ve BDF üçgenleri çizilmiş; iki üçgenin ortak bölgesi taranmış.',
+      svg: `
+          <path class="shade" d="M140,101.5 L200,66.8 L260,101.5 L260,170.7 L200,205.4 L140,170.7 Z"/>
+          <path class="ln" d="M140,240 L260,240 L320,136.1 L260,32.2 L140,32.2 L80,136.1 Z"/>
+          <path class="ln" d="M140,240 L320,136.1 L140,32.2 Z"/>
+          <path class="ln" d="M260,240 L260,32.2 L80,136.1 Z"/>
+          <circle class="pt" cx="140" cy="240" r="3.2"/>
+          <circle class="pt" cx="260" cy="240" r="3.2"/>
+          <circle class="pt" cx="320" cy="136.1" r="3.2"/>
+          <circle class="pt" cx="260" cy="32.2" r="3.2"/>
+          <circle class="pt" cx="140" cy="32.2" r="3.2"/>
+          <circle class="pt" cx="80" cy="136.1" r="3.2"/>
+          <text x="130" y="257" text-anchor="end">A</text>
+          <text x="270" y="257">B</text>
+          <text x="334" y="141">C</text>
+          <text x="260" y="22" text-anchor="middle">D</text>
+          <text x="140" y="22" text-anchor="middle">E</text>
+          <text x="66" y="141" text-anchor="end">F</text>
+        `,
+    },
+    given: ['ABCDEF düzgün altıgen', 'A(ABC) = 6 cm²'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, ACE ve BDF üçgenlerinin ortak bölgesinin (taralı) alanı kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '9' },
+      { key: 'B', text: '10' },
+      { key: 'C', text: '12' },
+      { key: 'D', text: '15' },
+      { key: 'E', text: '18' },
+    ],
+    answer: 'C',
+    hint: 'Önce A(ACE)’yi bul; sonra BDF üçgeninin kenarlarının [AC]’yi kaç eş parçaya böldüğüne bak.',
+    solution: [
+      {
+        title: 'ACE üçgeni',
+        detail:
+          'Altıgen 6 eş eşkenar üçgenden oluşur ve ABC, CDE, EFA üçgenlerinin her biri bunlardan birine eşittir. ACE ise 3 tanesine eşittir: A(ACE) = 3·6 = 18 cm².',
+      },
+      {
+        title: '[AC] üç eş parçaya bölünür',
+        detail:
+          '[BF] ve [BD], [AC]’yi P ve Q’da kessin. ABP üçgeninde iki açı 30° olduğundan |AP| = |PB|; BPQ eşkenar olduğundan |PQ| = |PB|. Benzer şekilde |QC| = |PQ|, yani |AP| = |PQ| = |QC|.',
+      },
+      {
+        title: 'Köşelerdeki küçük üçgenler',
+        detail:
+          'BDF, ACE’nin her köşesinden kenarı |AC|/3 olan bir eşkenar üçgen keser. Her birinin alanı 18 : 9 = 2 cm² olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Taralı alan = 18 − 3·2 = 12 cm² bulunur.',
+      },
+    ],
+  },
 ];
 
 /** Resolves question ids to their bank entries, failing loudly on a typo. */
@@ -2456,6 +2794,21 @@ export const UNIT_3_POLYGONS: Unit = {
         'polygons-43',
         'polygons-44',
         'polygons-45',
+      ),
+    },
+    {
+      id: 'polygons-m8',
+      order: 8,
+      title: 'Köşegenlerle alan ve açı',
+      summary:
+        'Düzgün altıgende köşegenlerle ayrılan alanlar, köşegen ve uzantılarının açılarından kenar sayısı, farklı iç açılardan düzgün çokgen.',
+      questions: pick(
+        'polygons-46',
+        'polygons-47',
+        'polygons-48',
+        'polygons-49',
+        'polygons-50',
+        'polygons-51',
       ),
     },
   ],

@@ -93,6 +93,17 @@ describe('unit 3 answer key', () => {
   it('44 — 60 + 3d + 180 = 360, d = 40, n = 9 → C', () =>
     expect(answerOf('polygons-44')).toBe('C'));
   it('45 — ½·10·S = 240, S = 48 → E', () => expect(answerOf('polygons-45')).toBe('E'));
+  it('46 — A(ACDF) = 4S, A(KCD) = 2S/3, (10S/3)/6S = 5/9 → B', () =>
+    expect(answerOf('polygons-46')).toBe('B'));
+  it('47 — 4d + 20 = 180, d = 40, n = 9, 9·6/2 = 27 → B', () =>
+    expect(answerOf('polygons-47')).toBe('B'));
+  it('48 — (180 − d) − d/2 = 135, d = 30, n = 12 → C', () =>
+    expect(answerOf('polygons-48')).toBe('C'));
+  it('49 — m(MBD) = 180 − 126 = 54, m(BDM) = 180 − 108 = 72, α = 54 → C', () =>
+    expect(answerOf('polygons-49')).toBe('C'));
+  it('50 — 60 + 30 + 27k = 360, k = 10, n = 12, 180 − 30 = 150 → D', () =>
+    expect(answerOf('polygons-50')).toBe('D'));
+  it('51 — A(ACE) = 18, 18 − 3·18/9 = 12 → C', () => expect(answerOf('polygons-51')).toBe('C'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
