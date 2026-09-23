@@ -962,6 +962,19 @@ describe('unit 2 answer key', () => {
   it('470 — |AD|/|AB| = 3/5, Alan oranı (3/5)² = 9/25 → D', () =>
     expect(answerOf('triangles-470')).toBe('D'));
 
+  it('471 — |AC|/|CB| = 6/8, |EH| = 4, |FH| = 4·3/4 = 3, x = 8 − 3 = 5 → C', () =>
+    expect(answerOf('triangles-471')).toBe('C'));
+  it('472 — |CL|/|CD| = 3/9, |DL|/|DC| = 2/3, |BC| = 12·3/2 = 18 → D', () =>
+    expect(answerOf('triangles-472')).toBe('D'));
+  it('473 — ABD ∼ ACB, 8² = 4·|AC|, |AC| = 16, x = 16 − 4 = 12 → D', () =>
+    expect(answerOf('triangles-473')).toBe('D'));
+  it('474 — |AM| = 12, |ME| = 6, m(DME) = 60, DME eşkenar, x = 2·6 = 12 → E', () =>
+    expect(answerOf('triangles-474')).toBe('E'));
+  it('475 — |DH| = 2, |BH| = 2√3, |AB| = 6√3, |BC| = 3, |AC|² = 108 + 9 = 117 → C', () =>
+    expect(answerOf('triangles-475')).toBe('C'));
+  it('476 — |FE|/|BC| = 3/8, |ED|/|BC| = 1/4, oran = 3/2 → B', () =>
+    expect(answerOf('triangles-476')).toBe('B'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
