@@ -6815,7 +6815,7 @@ export const UNIT_1_ANGLES: Unit = {
   title: 'Açılar',
   subtitle: 'Ünite 1',
   description:
-    'Açı birimleri, tümler ve bütünler açılar, açıortay ve paralel iki doğrunun bir kesenle yaptığı açılar.',
+    'Açının tanımından zikzaklara kadar tüm konu: derece–dakika–saniye, grad ve radyan birimleri; tümler, bütünler ve doğrusal açılar; açıortay ve saatte akrep ile yelkovan arasındaki açı; dik açı, dik üçgenin dar açıları ve kenarları karşılıklı dik ya da paralel açılar; paralel iki doğrunun bir kesenle yaptığı yöndeş, iç ters ve yan iç açılar; kırılma noktasından paralel çizerek çözülen tek ve çok kırılmalı zikzaklar; paralel doğrular arasında açıortay ve dikmeyle kurulan üçgen ve çokgenler.',
   modules: [
     {
       id: 'angles-m1',
@@ -6862,7 +6862,7 @@ export const UNIT_1_ANGLES: Unit = {
       order: 6,
       title: 'Karma tekrar',
       summary:
-        'Üniteyi kapatan yedi soruluk karma set: tam açı, tümler-bütünler denklemleri, yan iç açılar, kenarları paralel açılar ve açının küme olarak kesişimi.',
+        'İlk beş modülü tekrar eden yedi soruluk karma set: tam açı, tümler-bütünler denklemleri, yan iç açılar, kenarları paralel açılar ve açının küme olarak kesişimi.',
       questions: pick(
         'angles-26',
         'angles-27',
