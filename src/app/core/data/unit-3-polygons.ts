@@ -2663,6 +2663,386 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+
+  // ---------------------------------------------------------------- 52
+  {
+    id: 'polygons-52',
+    topic: 'Düzgün altıgende iki kenar arasındaki uzaklık',
+    figure: {
+      viewBox: '0 6 400 262',
+      caption: 'Şekil 30',
+      label:
+        'Düzgün ABCDEF altıgeninde K noktası [AB] üzerinde, L noktası [ED] üzerinde; |AK| = 3, |KB| = 5, |EL| = 5, |LD| = 3 ve [KL] çizilmiş.',
+      svg: `
+          <path class="ln" d="M140,240 L260,240 L320,136.1 L260,32.2 L140,32.2 L80,136.1 Z"/>
+          <path class="ln" d="M185,240 L215,32.2"/>
+          <circle class="pt" cx="140" cy="240" r="3.2"/>
+          <circle class="pt" cx="260" cy="240" r="3.2"/>
+          <circle class="pt" cx="320" cy="136.1" r="3.2"/>
+          <circle class="pt" cx="260" cy="32.2" r="3.2"/>
+          <circle class="pt" cx="140" cy="32.2" r="3.2"/>
+          <circle class="pt" cx="80" cy="136.1" r="3.2"/>
+          <circle class="pt" cx="185" cy="240" r="3.2"/>
+          <circle class="pt" cx="215" cy="32.2" r="3.2"/>
+          <text x="130" y="257" text-anchor="end">A</text>
+          <text x="270" y="257">B</text>
+          <text x="334" y="141.1">C</text>
+          <text x="260" y="22.2" text-anchor="middle">D</text>
+          <text x="140" y="22.2" text-anchor="middle">E</text>
+          <text x="66" y="141.1" text-anchor="end">F</text>
+          <text x="185" y="257" text-anchor="middle">K</text>
+          <text x="215" y="22.2" text-anchor="middle">L</text>
+          <text class="val" x="162.5" y="232" text-anchor="middle">3</text>
+          <text class="val" x="222.5" y="232" text-anchor="middle">5</text>
+          <text class="val" x="177.5" y="52.2" text-anchor="middle">5</text>
+          <text class="val" x="237.5" y="52.2" text-anchor="middle">3</text>
+        `,
+    },
+    given: ['ABCDEF düzgün altıgen', '|AK| = |LD| = 3 cm', '|KB| = |EL| = 5 cm'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |KL| kaç cm’dir?',
+    choices: [
+      { key: 'A', text: '12' },
+      { key: 'B', text: '4√11' },
+      { key: 'C', text: '14' },
+      { key: 'D', text: '8√3' },
+      { key: 'E', text: '15' },
+    ],
+    answer: 'C',
+    hint: 'L’den [AB]’ye bir dikme indir; [AE]’nin [AB]’ye dik olduğunu kullan.',
+    solution: [
+      {
+        title: 'Kenar uzunluğu',
+        detail: 'Altıgenin kenarı |AB| = 3 + 5 = 8 cm’dir.',
+      },
+      {
+        title: '[AE] köşegeni',
+        detail:
+          'AFE ikizkenar üçgeninde m(FAE) = 30° olduğundan m(EAB) = 120° − 30° = 90° olur. |AE| = 8√3 cm’dir ve [ED] ∥ [AB]’dir.',
+      },
+      {
+        title: 'Dikmeyi indir',
+        detail:
+          'L’den [AB]’ye inen dikmenin ayağı M olsun. AMLE dikdörtgen olduğundan |AM| = |EL| = 5 ve |LM| = |AE| = 8√3 olur.',
+      },
+      {
+        title: 'KML dik üçgeni',
+        detail: '|KM| = |AM| − |AK| = 5 − 3 = 2 cm bulunur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: '|KL|² = 2² + (8√3)² = 4 + 192 = 196, yani |KL| = 14 cm bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 53
+  {
+    id: 'polygons-53',
+    topic: 'Düzgün beşgende paralel köşegen ve alan',
+    figure: {
+      viewBox: '0 -4 400 290',
+      caption: 'Şekil 31',
+      label:
+        'Düzgün ABCDE beşgeninde [BD] ve [CE] köşegenleri çizilmiş; P noktası [AE] üzerinde, K noktası [BD] üzerinde ve [EK], [BD]’ye dik; PBD üçgeni taranmış.',
+      svg: `
+          <path class="shade" d="M102.3,191.8 L276.4,257.2 L200,22 Z"/>
+          <path class="ln" d="M123.6,257.2 L276.4,257.2 L323.6,111.8 L200,22 L76.4,111.8 Z"/>
+          <path class="ln" d="M276.4,257.2 L200,22"/>
+          <path class="ln" d="M323.6,111.8 L76.4,111.8"/>
+          <path class="ln" d="M76.4,111.8 L214.6,66.9"/>
+          <path class="ln" d="M102.3,191.8 L276.4,257.2"/>
+          <path class="ln" d="M102.3,191.8 L200,22"/>
+          <path class="arc" d="M204.1,70.3 L200.7,59.9 L211.2,56.5"/>
+          <circle class="pt" cx="123.6" cy="257.2" r="3.2"/>
+          <circle class="pt" cx="276.4" cy="257.2" r="3.2"/>
+          <circle class="pt" cx="323.6" cy="111.8" r="3.2"/>
+          <circle class="pt" cx="200" cy="22" r="3.2"/>
+          <circle class="pt" cx="76.4" cy="111.8" r="3.2"/>
+          <circle class="pt" cx="102.3" cy="191.8" r="3.2"/>
+          <circle class="pt" cx="214.6" cy="66.9" r="3.2"/>
+          <text x="117.6" y="274.2" text-anchor="end">A</text>
+          <text x="282.4" y="274.2">B</text>
+          <text x="335.6" y="116.8">C</text>
+          <text x="200" y="12" text-anchor="middle">D</text>
+          <text x="64.4" y="116.8" text-anchor="end">E</text>
+          <text x="90.3" y="196.8" text-anchor="end">P</text>
+          <text x="222.6" y="58.9">K</text>
+        `,
+    },
+    given: ['ABCDE düzgün beşgen', 'P ∈ [AE]', '[EK] ⊥ [BD]', '|EK| = a cm', '|CE| = b cm'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(PBD) kaç cm²’dir?',
+    choices: [
+      { key: 'A', text: 'a·b/3' },
+      { key: 'B', text: 'a·b/2' },
+      { key: 'C', text: 'a·b' },
+      { key: 'D', text: '2·a·b/3' },
+      { key: 'E', text: '2·a·b' },
+    ],
+    answer: 'B',
+    hint: '[AE] ile [BD] arasındaki ilişkiye bak: P, [AE] üzerinde nereye konursa konsun PBD’nin yüksekliği değişir mi?',
+    solution: [
+      {
+        title: 'Köşegenler eşit',
+        detail: 'Düzgün beşgenin bütün köşegenleri eşittir, yani |BD| = |CE| = b cm.',
+      },
+      {
+        title: '[BD] ∥ [AE]',
+        detail:
+          'BCD ikizkenar üçgeninde m(CBD) = 36° olduğundan m(ABD) = 108° − 36° = 72° olur. m(EAB) + m(ABD) = 108° + 72° = 180° olduğundan [AE] ∥ [BD]’dir.',
+      },
+      {
+        title: 'Yükseklik',
+        detail:
+          '[AE] üzerindeki her noktanın [BD]’ye uzaklığı aynıdır; P’nin [BD]’ye uzaklığı |EK| = a cm olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'A(PBD) = ½·|BD|·a = a·b/2 cm² bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 54
+  {
+    id: 'polygons-54',
+    topic: 'Düzgün altıgende merkezin kenara uzaklığı',
+    figure: {
+      viewBox: '0 6 400 262',
+      caption: 'Şekil 32',
+      label:
+        'Düzgün ABCDEF altıgeninin ağırlık merkezi O; G noktası [AF] üzerinde ve m(OGA) = 105°; H noktası [AB] üzerinde ve [OH], [AB]’ye dik; |OG| = 2√6.',
+      svg: `
+          <path class="ln" d="M140,240 L260,240 L320,136.1 L260,32.2 L140,32.2 L80,136.1 Z"/>
+          <path class="ln" d="M123.9,212.2 L200,136.1 L200,240"/>
+          <path class="arc" d="M200,229 L211,229 L211,240"/>
+          <path class="arc" d="M139.5,196.6 A22,22 0 0 1 134.9,231.2"/>
+          <circle class="pt" cx="140" cy="240" r="3.2"/>
+          <circle class="pt" cx="260" cy="240" r="3.2"/>
+          <circle class="pt" cx="320" cy="136.1" r="3.2"/>
+          <circle class="pt" cx="260" cy="32.2" r="3.2"/>
+          <circle class="pt" cx="140" cy="32.2" r="3.2"/>
+          <circle class="pt" cx="80" cy="136.1" r="3.2"/>
+          <circle class="pt" cx="200" cy="136.1" r="3.2"/>
+          <circle class="pt" cx="123.9" cy="212.2" r="3.2"/>
+          <circle class="pt" cx="200" cy="240" r="3.2"/>
+          <text x="130" y="257" text-anchor="end">A</text>
+          <text x="270" y="257">B</text>
+          <text x="334" y="141.1">C</text>
+          <text x="260" y="22.2" text-anchor="middle">D</text>
+          <text x="140" y="22.2" text-anchor="middle">E</text>
+          <text x="66" y="141.1" text-anchor="end">F</text>
+          <text x="113.9" y="217.2" text-anchor="end">G</text>
+          <text x="200" y="126.1" text-anchor="middle">O</text>
+          <text x="200" y="257" text-anchor="middle">H</text>
+          <text class="val" x="156" y="166" text-anchor="end">2√6</text>
+          <text class="val" x="162" y="221">105°</text>
+        `,
+    },
+    given: [
+      'ABCDEF düzgün altıgen',
+      'O, ağırlık merkezi',
+      'm(OGA) = 105°',
+      '[OH] ⊥ [AB]',
+      '|OG| = 2√6 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |OH| kaç cm’dir?',
+    choices: [
+      { key: 'A', text: '2√3' },
+      { key: 'B', text: '3 + √2' },
+      { key: 'C', text: '3 + √3' },
+      { key: 'D', text: '2 + 2√3' },
+      { key: 'E', text: '4 + √3' },
+    ],
+    answer: 'C',
+    hint: 'O’nun altıgenin bütün kenarlarına uzaklığı eşittir; O’dan [AF]’ye de bir dikme indir.',
+    solution: [
+      {
+        title: 'Eşit uzaklıklar',
+        detail:
+          'Düzgün altıgenin merkezi bütün kenarlara eşit uzaklıktadır. O’dan [AF]’ye inen dikmenin ayağı T olsun: |OT| = |OH|.',
+      },
+      {
+        title: 'OGT dik üçgeni',
+        detail:
+          'T, [AF]’nin orta noktasıdır ve G, A ile T arasındadır. m(OGT) = 180° − 105° = 75° olur.',
+      },
+      {
+        title: 'sin 75°',
+        detail: 'sin 75° = sin(45° + 30°) = (√6 + √2)/4 olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: '|OH| = |OT| = |OG|·sin 75° = 2√6·(√6 + √2)/4 = (12 + 4√3)/4 = 3 + √3 cm bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 55
+  {
+    id: 'polygons-55',
+    topic: 'Düzgün altıgende iç noktayla alan toplamı',
+    figure: {
+      viewBox: '0 6 400 262',
+      caption: 'Şekil 33',
+      label:
+        'Düzgün ABCDEF altıgeninin içinde bir K noktası köşelere birleştirilmiş; KAB, KCD ve KEF üçgenleri taranmış.',
+      svg: `
+          <path class="shade" d="M222,150 L140,240 L260,240 Z"/>
+          <path class="shade" d="M222,150 L320,136.1 L260,32.2 Z"/>
+          <path class="shade" d="M222,150 L140,32.2 L80,136.1 Z"/>
+          <path class="ln" d="M140,240 L260,240 L320,136.1 L260,32.2 L140,32.2 L80,136.1 Z"/>
+          <path class="ln" d="M222,150 L140,240"/>
+          <path class="ln" d="M222,150 L260,240"/>
+          <path class="ln" d="M222,150 L320,136.1"/>
+          <path class="ln" d="M222,150 L260,32.2"/>
+          <path class="ln" d="M222,150 L140,32.2"/>
+          <path class="ln" d="M222,150 L80,136.1"/>
+          <circle class="pt" cx="140" cy="240" r="3.2"/>
+          <circle class="pt" cx="260" cy="240" r="3.2"/>
+          <circle class="pt" cx="320" cy="136.1" r="3.2"/>
+          <circle class="pt" cx="260" cy="32.2" r="3.2"/>
+          <circle class="pt" cx="140" cy="32.2" r="3.2"/>
+          <circle class="pt" cx="80" cy="136.1" r="3.2"/>
+          <circle class="pt" cx="222" cy="150" r="3.2"/>
+          <text x="130" y="257" text-anchor="end">A</text>
+          <text x="270" y="257">B</text>
+          <text x="334" y="141.1">C</text>
+          <text x="260" y="22.2" text-anchor="middle">D</text>
+          <text x="140" y="22.2" text-anchor="middle">E</text>
+          <text x="66" y="141.1" text-anchor="end">F</text>
+          <text x="208" y="146" text-anchor="end">K</text>
+        `,
+    },
+    given: ['ABCDEF düzgün altıgen', 'K, altıgenin iç bölgesinde bir nokta', '|AB| = 8 cm'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(KAB) + A(KCD) + A(KEF) toplamı kaç cm²’dir?',
+    choices: [
+      { key: 'A', text: '32√3' },
+      { key: 'B', text: '40√3' },
+      { key: 'C', text: '48√3' },
+      { key: 'D', text: '56√3' },
+      { key: 'E', text: '64√3' },
+    ],
+    answer: 'C',
+    hint: '[AB], [CD] ve [EF] kenarlarını uzatınca oluşan büyük üçgene bak.',
+    solution: [
+      {
+        title: 'Büyük eşkenar üçgen',
+        detail:
+          '[AB], [CD] ve [EF] uzatılırsa köşelerde kenarı 8 olan üç eşkenar üçgen eklenir ve kenarı 3·8 = 24 cm olan bir eşkenar üçgen oluşur.',
+      },
+      {
+        title: 'Yüksekliği',
+        detail: 'Bu üçgenin yüksekliği 24·√3/2 = 12√3 cm’dir.',
+      },
+      {
+        title: 'Uzaklıkların toplamı',
+        detail:
+          'Eşkenar üçgenin içindeki bir noktanın üç kenara uzaklıkları toplamı yüksekliğe eşittir: K’nin AB, CD ve EF doğrularına uzaklıkları toplamı 12√3 cm olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Üç üçgenin tabanı da 8 cm olduğundan toplam alan ½·8·12√3 = 48√3 cm² bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 56
+  {
+    id: 'polygons-56',
+    topic: 'İç açı aralığından kenar sayısı',
+    stem: ['Bir düzgün çokgenin bir iç açısının ölçüsü β’dır.'],
+    ask: 'β için 140° < β < 160° bağıntısı olduğuna göre, bu düzgün çokgen en az kaç kenarlıdır?',
+    choices: [
+      { key: 'A', text: '8' },
+      { key: 'B', text: '9' },
+      { key: 'C', text: '10' },
+      { key: 'D', text: '11' },
+      { key: 'E', text: '12' },
+    ],
+    answer: 'C',
+    hint: 'İç açı aralığını dış açı aralığına çevir; dış açı 360°/n’dir.',
+    solution: [
+      {
+        title: 'Dış açı aralığı',
+        detail: 'Dış açı 180° − β olduğundan 20° < 180° − β < 40° olur.',
+      },
+      {
+        title: 'Kenar sayısına geç',
+        detail: '20° < 360°/n < 40° eşitsizliğinden 9 < n < 18 bulunur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'n bir tam sayı olduğundan en küçük değeri 10’dur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 57
+  {
+    id: 'polygons-57',
+    topic: 'Düzgün sekizgende köşegenden alan',
+    figure: {
+      viewBox: '0 -6 400 310',
+      caption: 'Şekil 34',
+      label: 'Düzgün ABCDEFGH sekizgeninde [AC] köşegeni çizilmiş ve |AC| = 8.',
+      svg: `
+          <path class="ln" d="M148.3,274.7 L251.7,274.7 L324.7,201.7 L324.7,98.3 L251.7,25.3 L148.3,25.3 L75.3,98.3 L75.3,201.7 Z"/>
+          <path class="ln" d="M148.3,274.7 L324.7,201.7"/>
+          <circle class="pt" cx="148.3" cy="274.7" r="3.2"/>
+          <circle class="pt" cx="251.7" cy="274.7" r="3.2"/>
+          <circle class="pt" cx="324.7" cy="201.7" r="3.2"/>
+          <circle class="pt" cx="324.7" cy="98.3" r="3.2"/>
+          <circle class="pt" cx="251.7" cy="25.3" r="3.2"/>
+          <circle class="pt" cx="148.3" cy="25.3" r="3.2"/>
+          <circle class="pt" cx="75.3" cy="98.3" r="3.2"/>
+          <circle class="pt" cx="75.3" cy="201.7" r="3.2"/>
+          <text x="142.2" y="294.5" text-anchor="end">A</text>
+          <text x="257.8" y="294.5">B</text>
+          <text x="339.5" y="212.8">C</text>
+          <text x="339.5" y="97.2">D</text>
+          <text x="257.8" y="15.5">E</text>
+          <text x="142.2" y="15.5" text-anchor="end">F</text>
+          <text x="60.5" y="97.2" text-anchor="end">G</text>
+          <text x="60.5" y="212.8" text-anchor="end">H</text>
+          <text class="val" x="228.5" y="232.2" text-anchor="middle">8</text>
+        `,
+    },
+    given: ['ABCDEFGH düzgün sekizgen', '|AC| = 8 cm'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, düzgün sekizgenin alanı kaç cm²’dir?',
+    choices: [
+      { key: 'A', text: '32√2' },
+      { key: 'B', text: '48√2' },
+      { key: 'C', text: '56√2' },
+      { key: 'D', text: '64√2' },
+      { key: 'E', text: '128√2' },
+    ],
+    answer: 'D',
+    hint: 'Sekizgenin merkezi O olsun; m(AOC) kaç derecedir?',
+    solution: [
+      {
+        title: 'Merkez açı',
+        detail:
+          'Merkez O ve |OA| = R olsun. Her merkez açı 360° : 8 = 45° olduğundan m(AOC) = 90° olur.',
+      },
+      {
+        title: 'Yarıçap',
+        detail: 'AOC ikizkenar dik üçgeninde R√2 = 8, yani R = 4√2 ve R² = 32 olur.',
+      },
+      {
+        title: 'Bir dilimin alanı',
+        detail: 'A(AOB) = ½·R²·sin 45° = ½·32·(√2/2) = 8√2 cm² bulunur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Sekizgenin alanı 8·8√2 = 64√2 cm² bulunur.',
+      },
+    ],
+  },
 ];
 
 /** Resolves question ids to their bank entries, failing loudly on a typo. */
@@ -2809,6 +3189,21 @@ export const UNIT_3_POLYGONS: Unit = {
         'polygons-49',
         'polygons-50',
         'polygons-51',
+      ),
+    },
+    {
+      id: 'polygons-m9',
+      order: 9,
+      title: 'Düzgün çokgende uzaklık ve alan',
+      summary:
+        'Altıgende paralel kenarlar arası uzaklık ve merkezden kenara dikme, beşgende paralel köşegen, iç noktayla alan toplamı, sekizgende köşegenden alan.',
+      questions: pick(
+        'polygons-52',
+        'polygons-53',
+        'polygons-54',
+        'polygons-55',
+        'polygons-56',
+        'polygons-57',
       ),
     },
   ],

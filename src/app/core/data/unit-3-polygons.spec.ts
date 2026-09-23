@@ -104,6 +104,18 @@ describe('unit 3 answer key', () => {
   it('50 — 60 + 30 + 27k = 360, k = 10, n = 12, 180 − 30 = 150 → D', () =>
     expect(answerOf('polygons-50')).toBe('D'));
   it('51 — A(ACE) = 18, 18 − 3·18/9 = 12 → C', () => expect(answerOf('polygons-51')).toBe('C'));
+  it('52 — |AE| = 8√3, |KM| = 5 − 3 = 2, √(4 + 192) = 14 → C', () =>
+    expect(answerOf('polygons-52')).toBe('C'));
+  it('53 — |BD| = |CE| = b, [AE] ∥ [BD], ½·b·a → B', () =>
+    expect(answerOf('polygons-53')).toBe('B'));
+  it('54 — m(OGT) = 75, 2√6·(√6 + √2)/4 = 3 + √3 → C', () =>
+    expect(answerOf('polygons-54')).toBe('C'));
+  it('55 — triangle side 24, height 12√3, ½·8·12√3 = 48√3 → C', () =>
+    expect(answerOf('polygons-55')).toBe('C'));
+  it('56 — 20 < 360/n < 40, 9 < n < 18, min 10 → C', () =>
+    expect(answerOf('polygons-56')).toBe('C'));
+  it('57 — R√2 = 8, R² = 32, 8·½·32·√2/2 = 64√2 → D', () =>
+    expect(answerOf('polygons-57')).toBe('D'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
