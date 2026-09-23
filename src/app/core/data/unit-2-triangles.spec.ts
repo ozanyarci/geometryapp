@@ -1105,6 +1105,19 @@ describe('unit 2 answer key', () => {
   it('536 — |CB| = 3 · 15/5 = 9, |AB| = √(225 − 81) = 12, x = 12/3 = 4 → A', () =>
     expect(answerOf('triangles-536')).toBe('A'));
 
+  it('537 — ADE ∼ BCA, 6/8 = x/12, x = 9 → C', () =>
+    expect(answerOf('triangles-537')).toBe('C'));
+  it('538 — |AE|/|AF| = |AF|/|AB|, |AB| = 144/9 = 16, x = 4 → D', () =>
+    expect(answerOf('triangles-538')).toBe('D'));
+  it('539 — |BC| = 3 · 5 = 15, |AC| = √(225 − 81) = 12, x = 12/4 = 3 → E', () =>
+    expect(answerOf('triangles-539')).toBe('E'));
+  it('540 — 4 · (|BD|/|DC|) · 1/2 = 1, |DB| = |BC|, (6/x) · 2/3 = 1, x = 4 → B', () =>
+    expect(answerOf('triangles-540')).toBe('B'));
+  it('541 — oranlar 1 : 2 : 5, (25 − 4)/1 = 21 → D', () =>
+    expect(answerOf('triangles-541')).toBe('D'));
+  it('542 — |BK| = |AB|, |AE| = |AK|/2, |DF| = 3|AK|/4, oran 2/3 → C', () =>
+    expect(answerOf('triangles-542')).toBe('C'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
