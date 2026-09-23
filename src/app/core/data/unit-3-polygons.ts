@@ -626,8 +626,7 @@ const QUESTIONS: Question[] = [
     figure: {
       viewBox: '0 0 400 332',
       caption: 'Şekil 8',
-      label:
-        'Düzgün ABCDEFGH sekizgeni; [AC] köşegeni çizilmiş, |AC| = 10 cm.',
+      label: 'Düzgün ABCDEFGH sekizgeni; [AC] köşegeni çizilmiş, |AC| = 10 cm.',
       svg: `
           <path class="ln" d="M142,306 L258,306 L340,224 L340,108 L258,26 L142,26 L60,108 L60,224 Z"/>
           <path class="ln" d="M142,306 L340,224"/>
@@ -679,8 +678,7 @@ const QUESTIONS: Question[] = [
       },
       {
         title: 'Sonuç',
-        detail:
-          'A = 8·(√2/4)·R² = 2√2·50 = 100√2 cm² bulunur.',
+        detail: 'A = 8·(√2/4)·R² = 2√2·50 = 100√2 cm² bulunur.',
       },
     ],
   },
@@ -742,8 +740,7 @@ const QUESTIONS: Question[] = [
       },
       {
         title: 'Kenarı bul',
-        detail:
-          'Orta taban (a + 2a) : 2 = 3a/2 = 12 olduğundan a = 8 cm olur.',
+        detail: 'Orta taban (a + 2a) : 2 = 3a/2 = 12 olduğundan a = 8 cm olur.',
       },
       {
         title: 'EAB açısı',
@@ -752,13 +749,11 @@ const QUESTIONS: Question[] = [
       },
       {
         title: 'Dik kenarlar',
-        detail:
-          '|AE| = a√3 = 8√3 cm ve |AK| = 8 : 2 = 4 cm’dir.',
+        detail: '|AE| = a√3 = 8√3 cm ve |AK| = 8 : 2 = 4 cm’dir.',
       },
       {
         title: 'Sonuç',
-        detail:
-          'EAK dik üçgeninde |EK|² = 192 + 16 = 208 olduğundan |EK| = 4√13 cm bulunur.',
+        detail: 'EAK dik üçgeninde |EK|² = 192 + 16 = 208 olduğundan |EK| = 4√13 cm bulunur.',
       },
     ],
   },
@@ -794,7 +789,11 @@ const QUESTIONS: Question[] = [
           <text x="235" y="255.3" text-anchor="middle">L</text>
         `,
     },
-    given: ['A, B, C bir düzgün çokgenin ardışık köşeleri', '[BK] ⊥ [AB], [BL] ⊥ [BC]', 'm(KBL) = 30°'],
+    given: [
+      'A, B, C bir düzgün çokgenin ardışık köşeleri',
+      '[BK] ⊥ [AB], [BL] ⊥ [BC]',
+      'm(KBL) = 30°',
+    ],
     stem: [],
     ask: 'Yukarıdaki verilere göre, çokgenin iç açılarının ölçüleri toplamı kaç derecedir?',
     choices: [
@@ -819,13 +818,11 @@ const QUESTIONS: Question[] = [
       },
       {
         title: 'Kenar sayısı',
-        detail:
-          'n = 360 : 30 = 12 olur.',
+        detail: 'n = 360 : 30 = 12 olur.',
       },
       {
         title: 'Sonuç',
-        detail:
-          'İç açılar toplamı (12 − 2)·180 = 1800° bulunur.',
+        detail: 'İç açılar toplamı (12 − 2)·180 = 1800° bulunur.',
       },
     ],
   },
@@ -888,13 +885,11 @@ const QUESTIONS: Question[] = [
       },
       {
         title: 'Sekizgenin iç açısı',
-        detail:
-          'Bir iç açı (8 − 2)·180 : 8 = 135° olduğundan m(ABC) = m(BCD) = 135° olur.',
+        detail: 'Bir iç açı (8 − 2)·180 : 8 = 135° olduğundan m(ABC) = m(BCD) = 135° olur.',
       },
       {
         title: 'Sonuç',
-        detail:
-          'ABCP dörtgeninde 30 + 135 + 135 + α = 360 olduğundan α = 60° bulunur.',
+        detail: 'ABCP dörtgeninde 30 + 135 + 135 + α = 360 olduğundan α = 60° bulunur.',
       },
     ],
   },
@@ -940,7 +935,13 @@ const QUESTIONS: Question[] = [
           <text x="192" y="147.5" text-anchor="end">O</text>
         `,
     },
-    given: ['ABCDEF düzgün altıgen', 'O, çevrel çemberin merkezi', 'K ∈ [DC], |DK| = 2|KC|', '[OH] ⊥ [AB]', 'A(HBCKO) = 44 cm²'],
+    given: [
+      'ABCDEF düzgün altıgen',
+      'O, çevrel çemberin merkezi',
+      'K ∈ [DC], |DK| = 2|KC|',
+      '[OH] ⊥ [AB]',
+      'A(HBCKO) = 44 cm²',
+    ],
     stem: [],
     ask: 'Yukarıdaki verilere göre, düzgün altıgenin alanı kaç cm² dir?',
     choices: [
@@ -970,13 +971,11 @@ const QUESTIONS: Question[] = [
       },
       {
         title: 'Taralı alan',
-        detail:
-          'A(HBCKO) = S/2 + S + S/3 = 11S/6 = 44 olduğundan S = 24 cm² bulunur.',
+        detail: 'A(HBCKO) = S/2 + S + S/3 = 11S/6 = 44 olduğundan S = 24 cm² bulunur.',
       },
       {
         title: 'Sonuç',
-        detail:
-          'A(ABCDEF) = 6·24 = 144 cm² bulunur.',
+        detail: 'A(ABCDEF) = 6·24 = 144 cm² bulunur.',
       },
     ],
   },
@@ -1033,8 +1032,7 @@ const QUESTIONS: Question[] = [
       },
       {
         title: 'Sekizgenin alanı',
-        detail:
-          'A = (4 + 4√2)² − 4·½·(2√2)² = 48 + 32√2 − 16 = 32 + 32√2 cm² olur.',
+        detail: 'A = (4 + 4√2)² − 4·½·(2√2)² = 48 + 32√2 − 16 = 32 + 32√2 cm² olur.',
       },
       {
         title: 'Kesilen üçgenler',
@@ -1043,8 +1041,7 @@ const QUESTIONS: Question[] = [
       },
       {
         title: 'Sonuç',
-        detail:
-          'A(ACEG) = 32 + 32√2 − 4·4√2 = 32 + 16√2 cm² bulunur.',
+        detail: 'A(ACEG) = 32 + 32√2 − 4·4√2 = 32 + 16√2 cm² bulunur.',
       },
     ],
   },
@@ -1104,8 +1101,7 @@ const QUESTIONS: Question[] = [
       },
       {
         title: 'Sonuç',
-        detail:
-          'AOC ikizkenar üçgeninde α = (180 − 144) : 2 = 18° bulunur.',
+        detail: 'AOC ikizkenar üçgeninde α = (180 − 144) : 2 = 18° bulunur.',
       },
     ],
   },
@@ -1117,8 +1113,7 @@ const QUESTIONS: Question[] = [
     figure: {
       viewBox: '0 0 400 312',
       caption: 'Şekil 15',
-      label:
-        'Düzgün ABCDEF altıgeni ve [AC] köşegeni; |AC| = 6√3 cm.',
+      label: 'Düzgün ABCDEF altıgeni ve [AC] köşegeni; |AC| = 6√3 cm.',
       svg: `
           <path class="ln" d="M124.9,286 L275.1,286 L350.1,156 L275.1,26 L124.9,26 L49.9,156 Z"/>
           <path class="ln" d="M124.9,286 L350.1,156"/>
@@ -1162,13 +1157,11 @@ const QUESTIONS: Question[] = [
       },
       {
         title: 'Kenarı bul',
-        detail:
-          'a√3 = 6√3 olduğundan a = 6 cm bulunur.',
+        detail: 'a√3 = 6√3 olduğundan a = 6 cm bulunur.',
       },
       {
         title: 'Sonuç',
-        detail:
-          'Çevre 6·6 = 36 cm bulunur.',
+        detail: 'Çevre 6·6 = 36 cm bulunur.',
       },
     ],
   },
@@ -1191,18 +1184,15 @@ const QUESTIONS: Question[] = [
     solution: [
       {
         title: 'Dış açıyı bul',
-        detail:
-          'İç açı 4d, dış açı d ise 4d + d = 180 olduğundan d = 36° olur.',
+        detail: 'İç açı 4d, dış açı d ise 4d + d = 180 olduğundan d = 36° olur.',
       },
       {
         title: 'Kenar sayısı',
-        detail:
-          'n = 360 : 36 = 10 bulunur.',
+        detail: 'n = 360 : 36 = 10 bulunur.',
       },
       {
         title: 'Sonuç',
-        detail:
-          'Köşegen sayısı n(n − 3) : 2 = 10·7 : 2 = 35 bulunur.',
+        detail: 'Köşegen sayısı n(n − 3) : 2 = 10·7 : 2 = 35 bulunur.',
       },
     ],
   },
@@ -1258,23 +1248,19 @@ const QUESTIONS: Question[] = [
     solution: [
       {
         title: 'APB üçgeni',
-        detail:
-          'm(PAB) + m(PBA) = 180 − 100 = 80° olur.',
+        detail: 'm(PAB) + m(PBA) = 180 − 100 = 80° olur.',
       },
       {
         title: 'A ve B açıları',
-        detail:
-          'Açıortaylar açıları ikiye böldüğünden m(A) + m(B) = 2·80 = 160° olur.',
+        detail: 'Açıortaylar açıları ikiye böldüğünden m(A) + m(B) = 2·80 = 160° olur.',
       },
       {
         title: 'İç açılar toplamı',
-        detail:
-          'Altıgenin iç açıları toplamı (6 − 2)·180 = 720°’dir.',
+        detail: 'Altıgenin iç açıları toplamı (6 − 2)·180 = 720°’dir.',
       },
       {
         title: 'Sonuç',
-        detail:
-          'm(C) + m(D) + m(E) + m(F) = 720 − 160 = 560° bulunur.',
+        detail: 'm(C) + m(D) + m(E) + m(F) = 720 − 160 = 560° bulunur.',
       },
     ],
   },
@@ -1331,8 +1317,7 @@ const QUESTIONS: Question[] = [
     solution: [
       {
         title: 'İç açı',
-        detail:
-          'Düzgün dokuzgenin bir iç açısı (9 − 2)·180 : 9 = 140°’dir.',
+        detail: 'Düzgün dokuzgenin bir iç açısı (9 − 2)·180 : 9 = 140°’dir.',
       },
       {
         title: 'ABCD dörtgeni',
@@ -1346,8 +1331,7 @@ const QUESTIONS: Question[] = [
       },
       {
         title: 'Sonuç',
-        detail:
-          'PBCD dörtgeninde α = 360 − 60 − 140 − 40 = 120° bulunur.',
+        detail: 'PBCD dörtgeninde α = 360 − 60 − 140 − 40 = 120° bulunur.',
       },
     ],
   },
@@ -1370,18 +1354,15 @@ const QUESTIONS: Question[] = [
     solution: [
       {
         title: 'Kenar sayısı',
-        detail:
-          'n = 360 : 24 = 15 bulunur.',
+        detail: 'n = 360 : 24 = 15 bulunur.',
       },
       {
         title: 'Formül',
-        detail:
-          'İç açılar toplamı (n − 2)·180 ile bulunur.',
+        detail: 'İç açılar toplamı (n − 2)·180 ile bulunur.',
       },
       {
         title: 'Sonuç',
-        detail:
-          '(15 − 2)·180 = 13·180 = 2340° bulunur.',
+        detail: '(15 − 2)·180 = 13·180 = 2340° bulunur.',
       },
     ],
   },
@@ -1392,8 +1373,7 @@ const QUESTIONS: Question[] = [
     figure: {
       viewBox: '0 -6 400 258',
       caption: 'Şekil 18',
-      label:
-        'Düzgün ABCDEF altıgeninde [AD] ve [BF] köşegenleri K noktasında kesişiyor.',
+      label: 'Düzgün ABCDEF altıgeninde [AD] ve [BF] köşegenleri K noktasında kesişiyor.',
       svg: `
           <path class="ln" d="M140,228.9 L260,228.9 L320,125 L260,21.1 L140,21.1 L80,125 Z"/>
           <path class="ln" d="M140,228.9 L260,21.1"/>
@@ -1536,8 +1516,7 @@ const QUESTIONS: Question[] = [
       },
       {
         title: 'E etrafındaki açılar',
-        detail:
-          'm(DEF) = 135° ve m(FEL) = 90° olduğundan m(DEL) = 360 − 135 − 90 = 135° olur.',
+        detail: 'm(DEF) = 135° ve m(FEL) = 90° olduğundan m(DEL) = 360 − 135 − 90 = 135° olur.',
       },
       {
         title: 'İkizkenar üçgen',
@@ -1978,6 +1957,374 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+  // ---------------------------------------------------------------- 39
+  {
+    id: 'polygons-39',
+    topic: 'Düzgün beşgen ve kare',
+    figure: {
+      viewBox: '0 108 400 256',
+      caption: 'Şekil 22',
+      label:
+        'Düzgün ABCDE beşgeninin [BC] kenarı üzerine dışa doğru çizilmiş BKLC karesi; L noktası B ve D ile birleştirilmiş, m(BLD) = x.',
+      svg: `
+          <path class="ln" d="M95,300 L205,300 L239,195.4 L150,130.7 L61,195.4 Z"/>
+          <path class="ln" d="M205,300 L309.6,334 L343.6,229.4 L239,195.4"/>
+          <path class="ln" d="M343.6,229.4 L205,300"/>
+          <path class="ln" d="M343.6,229.4 L150,130.7"/>
+          <path class="arc" d="M313.3,244.8 A34,34 0 0 1 313.3,214"/>
+          <text class="val" x="291.6" y="234.4" text-anchor="middle">x</text>
+          <circle class="pt" cx="95" cy="300" r="3.2"/>
+          <circle class="pt" cx="205" cy="300" r="3.2"/>
+          <circle class="pt" cx="239" cy="195.4" r="3.2"/>
+          <circle class="pt" cx="150" cy="130.7" r="3.2"/>
+          <circle class="pt" cx="61" cy="195.4" r="3.2"/>
+          <circle class="pt" cx="309.6" cy="334" r="3.2"/>
+          <circle class="pt" cx="343.6" cy="229.4" r="3.2"/>
+          <text x="85" y="318" text-anchor="end">A</text>
+          <text x="199" y="319" text-anchor="end">B</text>
+          <text x="226" y="201" text-anchor="end">C</text>
+          <text x="150" y="120" text-anchor="middle">D</text>
+          <text x="47" y="200" text-anchor="end">E</text>
+          <text x="316" y="352">K</text>
+          <text x="353" y="234">L</text>
+        `,
+    },
+    given: ['ABCDE düzgün beşgen', 'BKLC kare'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, m(BLD) = x kaç derecedir?',
+    choices: [
+      { key: 'A', text: '36' },
+      { key: 'B', text: '45' },
+      { key: 'C', text: '48' },
+      { key: 'D', text: '54' },
+      { key: 'E', text: '63' },
+    ],
+    answer: 'D',
+    hint: 'Beşgen ile kare [BC] kenarını paylaşır; |CD| ile |CL| arasındaki ilişkiye bak.',
+    solution: [
+      {
+        title: 'Beşgenin iç açısı',
+        detail: 'İç açılar toplamı (5 − 2)·180 = 540° olduğundan her iç açı 540 : 5 = 108°’dir.',
+      },
+      {
+        title: 'C köşesindeki açı',
+        detail: 'C etrafındaki açılar 360° eder: m(DCL) = 360 − 108 − 90 = 162°.',
+      },
+      {
+        title: 'İkizkenar üçgen',
+        detail:
+          '|CD| = |BC| = |CL| olduğundan DCL üçgeni ikizkenardır: m(CLD) = (180 − 162) : 2 = 9°.',
+      },
+      {
+        title: 'Karenin köşegeni',
+        detail: '[LB] karenin köşegeni olduğundan m(BLC) = 45°’dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'x = m(BLC) + m(CLD) = 45 + 9 = 54° bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 40
+  {
+    id: 'polygons-40',
+    topic: 'Eşkenar çokgende dik uzaklıklar ve alan',
+    stem: [],
+    ask: 'Kenar uzunlukları 12 cm olan dışbükey bir altıgenin içinde alınan bir noktanın kenarlara olan dik uzaklıkları toplamı 30 cm ise, altıgenin alanı kaç cm²’dir?',
+    choices: [
+      { key: 'A', text: '150' },
+      { key: 'B', text: '160' },
+      { key: 'C', text: '180' },
+      { key: 'D', text: '200' },
+      { key: 'E', text: '240' },
+    ],
+    answer: 'C',
+    hint: 'Noktayı altıgenin köşelerine birleştir; altıgen, tabanları 12 cm olan altı üçgene ayrılır.',
+    solution: [
+      {
+        title: 'Altıgeni parçala',
+        detail:
+          'Nokta köşelere birleştirilince altı üçgen oluşur. Her birinin tabanı 12 cm, yüksekliği noktanın o kenara uzaklığıdır.',
+      },
+      {
+        title: 'Alanları topla',
+        detail: 'Alan = ½·12·h₁ + ½·12·h₂ + … + ½·12·h₆ = 6·(h₁ + h₂ + … + h₆) olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Uzaklıklar toplamı 30 cm olduğundan alan 6·30 = 180 cm² bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 41
+  {
+    id: 'polygons-41',
+    topic: 'Düzgün beşgende köşegen ve ikizkenar üçgen',
+    figure: {
+      viewBox: '0 38 400 290',
+      caption: 'Şekil 23',
+      label:
+        'Düzgün ABCDE beşgeninde [EC] köşegeni üzerinde bir K noktası, |AK| = |AE|; B noktası K ve D ile birleştirilmiş, m(KBD) = α.',
+      svg: `
+          <path class="ln" d="M125,300 L275,300 L321.4,157.3 L200,69.2 L78.6,157.3 Z"/>
+          <path class="ln" d="M78.6,157.3 L321.4,157.3"/>
+          <path class="ln" d="M125,300 L171.4,157.3 L275,300"/>
+          <path class="ln" d="M275,300 L200,69.2"/>
+          <line class="tick" x1="95.1" y1="230.8" x2="108.5" y2="226.5"/>
+          <line class="tick" x1="141.5" y1="226.5" x2="154.9" y2="230.8"/>
+          <path class="arc" d="M245.6,259.5 A50,50 0 0 1 259.5,252.4"/>
+          <text class="val" x="241.4" y="239.1" text-anchor="middle">α</text>
+          <circle class="pt" cx="125" cy="300" r="3.2"/>
+          <circle class="pt" cx="275" cy="300" r="3.2"/>
+          <circle class="pt" cx="321.4" cy="157.3" r="3.2"/>
+          <circle class="pt" cx="200" cy="69.2" r="3.2"/>
+          <circle class="pt" cx="78.6" cy="157.3" r="3.2"/>
+          <circle class="pt" cx="171.4" cy="157.3" r="3.2"/>
+          <text x="115" y="318" text-anchor="end">A</text>
+          <text x="285" y="318">B</text>
+          <text x="336" y="162">C</text>
+          <text x="200" y="58" text-anchor="middle">D</text>
+          <text x="64" y="162" text-anchor="end">E</text>
+          <text x="171.4" y="148" text-anchor="middle">K</text>
+        `,
+    },
+    given: ['ABCDE düzgün beşgen', '[EC] köşegen', '|AK| = |AE|'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, m(KBD) = α kaç derecedir?',
+    choices: [
+      { key: 'A', text: '12' },
+      { key: 'B', text: '18' },
+      { key: 'C', text: '24' },
+      { key: 'D', text: '27' },
+      { key: 'E', text: '36' },
+    ],
+    answer: 'B',
+    hint: 'Önce DEC ikizkenar üçgeninden m(AEC)’yi bul; sonra AEK ve ABK üçgenlerinin ikizkenar olduğunu kullan.',
+    solution: [
+      {
+        title: 'Köşegenin yaptığı açı',
+        detail:
+          'İç açılar 108°’dir. |ED| = |DC| olduğundan m(DEC) = (180 − 108) : 2 = 36°, dolayısıyla m(AEK) = 108 − 36 = 72° olur.',
+      },
+      {
+        title: 'AEK üçgeni',
+        detail:
+          '|AK| = |AE| olduğundan m(AKE) = 72° ve m(EAK) = 180 − 72 − 72 = 36° olur. Böylece m(KAB) = 108 − 36 = 72°.',
+      },
+      {
+        title: 'ABK üçgeni',
+        detail:
+          '|AK| = |AE| = |AB| olduğundan ABK ikizkenardır: m(ABK) = (180 − 72) : 2 = 54°, yani m(KBC) = 108 − 54 = 54°.',
+      },
+      {
+        title: 'BD köşegeni',
+        detail: 'BCD üçgeninde |BC| = |CD| olduğundan m(CBD) = (180 − 108) : 2 = 36° olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'α = m(KBC) − m(DBC) = 54 − 36 = 18° bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 42
+  {
+    id: 'polygons-42',
+    topic: 'Düzgün altıgende kenar uzantıları ve alan',
+    figure: {
+      viewBox: '0 -6 400 336',
+      caption: 'Şekil 24',
+      label:
+        'Düzgün ABCDEF altıgeni; F ve B’den geçen doğru ile D ve C’den geçen doğru K noktasında kesişiyor, BCK üçgeni taranmış, |AB| = 6 cm.',
+      svg: `
+          <path class="shade" d="M198,210 L252,116.5 L360,303.5 Z"/>
+          <path class="ln" d="M90,210 L198,210 L252,116.5 L198,22.9 L90,22.9 L36,116.5 Z"/>
+          <path class="ln" d="M36,116.5 L360,303.5"/>
+          <path class="ln" d="M198,22.9 L360,303.5"/>
+          <text class="val" x="144" y="228" text-anchor="middle">6</text>
+          <circle class="pt" cx="90" cy="210" r="3.2"/>
+          <circle class="pt" cx="198" cy="210" r="3.2"/>
+          <circle class="pt" cx="252" cy="116.5" r="3.2"/>
+          <circle class="pt" cx="198" cy="22.9" r="3.2"/>
+          <circle class="pt" cx="90" cy="22.9" r="3.2"/>
+          <circle class="pt" cx="36" cy="116.5" r="3.2"/>
+          <circle class="pt" cx="360" cy="303.5" r="3.2"/>
+          <text x="82" y="229" text-anchor="end">A</text>
+          <text x="196" y="230" text-anchor="end">B</text>
+          <text x="262" y="121">C</text>
+          <text x="198" y="13" text-anchor="middle">D</text>
+          <text x="90" y="13" text-anchor="middle">E</text>
+          <text x="22" y="121" text-anchor="end">F</text>
+          <text x="360" y="324" text-anchor="middle">K</text>
+        `,
+    },
+    given: ['ABCDEF düzgün altıgen', 'F, B, K doğrusal', 'D, C, K doğrusal', '|AB| = 6 cm'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, taralı A(BCK) kaç cm²’dir?',
+    choices: [
+      { key: 'A', text: '9√3' },
+      { key: 'B', text: '12√3' },
+      { key: 'C', text: '15√3' },
+      { key: 'D', text: '18√3' },
+      { key: 'E', text: '24√3' },
+    ],
+    answer: 'D',
+    hint: 'BCK üçgeninin B ve C köşelerindeki açıları altıgenin iç açılarından bul.',
+    solution: [
+      {
+        title: 'B köşesindeki açı',
+        detail:
+          'ABF üçgeninde |AB| = |AF| ve m(FAB) = 120° olduğundan m(ABF) = 30°. m(FBC) = 120 − 30 = 90°, F, B, K doğrusal olduğundan m(CBK) = 180 − 90 = 90° olur.',
+      },
+      {
+        title: 'C köşesindeki açı',
+        detail: 'D, C, K doğrusal olduğundan m(BCK) = 180 − 120 = 60° olur.',
+      },
+      {
+        title: '30°–60°–90° üçgeni',
+        detail: 'BCK dik üçgeninde |BC| = 6 cm, 60°’nin karşısındaki dik kenar |BK| = 6√3 cm olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'A(BCK) = ½·6·6√3 = 18√3 cm² bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 43
+  {
+    id: 'polygons-43',
+    topic: 'Çembere çizilen düzgün sekizgenin alanı',
+    stem: [],
+    ask: 'Çapı 6 cm olan bir çemberin içine çizilebilen en büyük düzgün sekizgenin alanı kaç cm²’dir?',
+    choices: [
+      { key: 'A', text: '12√2' },
+      { key: 'B', text: '16√2' },
+      { key: 'C', text: '18√2' },
+      { key: 'D', text: '24√2' },
+      { key: 'E', text: '36√2' },
+    ],
+    answer: 'C',
+    hint: 'En büyük düzgün sekizgenin köşeleri çemberin üzerindedir; merkezi köşelere birleştir.',
+    solution: [
+      {
+        title: 'Yarıçap',
+        detail: 'En büyük sekizgenin köşeleri çemberin üzerindedir: R = 6 : 2 = 3 cm.',
+      },
+      {
+        title: 'Merkez açı',
+        detail: 'Merkez köşelere birleştirilince tepe açısı 360 : 8 = 45° olan 8 eş üçgen oluşur.',
+      },
+      {
+        title: 'Bir üçgenin alanı',
+        detail: '½·3·3·sin 45° = ½·9·(√2 : 2) = 9√2 : 4 cm² olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Alan 8·9√2 : 4 = 18√2 cm² bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 44
+  {
+    id: 'polygons-44',
+    topic: 'Kenar uzantılarının açısından kenar sayısı',
+    figure: {
+      viewBox: '0 -6 400 300',
+      caption: 'Şekil 25',
+      label:
+        'Düzgün bir çokgenin ardışık D, C, B, A, K köşeleri; [DC] ve [KA] kenarlarının uzantıları P noktasında kesişiyor, R noktası KA doğrusunun P’den sonraki kısmında ve m(DPR) = 120°.',
+      svg: `
+          <path class="ln" d="M46.7,30.1 L82.5,23.8" stroke-dasharray="2 5"/>
+          <path class="ln" d="M46.7,249.9 L82.5,256.2" stroke-dasharray="2 5"/>
+          <path class="ln" d="M82.5,23.8 L152.4,64.2 L180,140 L152.4,215.8 L82.5,256.2"/>
+          <path class="ln" d="M152.4,64.2 L283.8,140 L335.7,110"/>
+          <path class="ln" d="M152.4,215.8 L283.8,140"/>
+          <path class="arc" d="M266.5,130 A20,20 0 0 1 301.1,130"/>
+          <text class="val" x="283.8" y="109" text-anchor="middle">120°</text>
+          <circle class="pt" cx="82.5" cy="23.8" r="3.2"/>
+          <circle class="pt" cx="152.4" cy="64.2" r="3.2"/>
+          <circle class="pt" cx="180" cy="140" r="3.2"/>
+          <circle class="pt" cx="152.4" cy="215.8" r="3.2"/>
+          <circle class="pt" cx="82.5" cy="256.2" r="3.2"/>
+          <circle class="pt" cx="283.8" cy="140" r="3.2"/>
+          <circle class="pt" cx="335.7" cy="110" r="3.2"/>
+          <text x="85.3" y="13" text-anchor="middle">D</text>
+          <text x="164.6" y="58.9">C</text>
+          <text x="194" y="145">B</text>
+          <text x="164.6" y="235">A</text>
+          <text x="85.3" y="279" text-anchor="middle">K</text>
+          <text x="283.8" y="161" text-anchor="middle">P</text>
+          <text x="345" y="110">R</text>
+        `,
+    },
+    given: ['DCBAK… düzgün çokgen', 'D, C, P doğrusal', 'K, A, P, R doğrusal', 'm(DPR) = 120°'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, bu düzgün çokgen kaç kenarlıdır?',
+    choices: [
+      { key: 'A', text: '6' },
+      { key: 'B', text: '8' },
+      { key: 'C', text: '9' },
+      { key: 'D', text: '10' },
+      { key: 'E', text: '12' },
+    ],
+    answer: 'C',
+    hint: 'PCBA dörtgeninin açılarını çokgenin bir dış açısı cinsinden yaz.',
+    solution: [
+      {
+        title: 'P’deki iç açı',
+        detail: 'K, A, P, R doğrusal olduğundan m(CPA) = 180 − 120 = 60° olur.',
+      },
+      {
+        title: 'Dörtgenin açıları',
+        detail:
+          'Bir dış açıya d dersek PCBA dörtgeninde C ve A’daki açılar d, B’deki açı 360 − (180 − d) = 180 + d olur.',
+      },
+      {
+        title: 'Denklemi kur',
+        detail: '60 + d + d + 180 + d = 360 → 3d = 120 → d = 40° bulunur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Kenar sayısı 360 : 40 = 9 bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 45
+  {
+    id: 'polygons-45',
+    topic: 'Alandan dik uzaklıklar toplamı',
+    stem: [],
+    ask: 'Kenar uzunlukları 10 cm olan dışbükey bir sekizgenin alanı 240 cm²’dir. Sekizgenin içinde alınan herhangi bir noktanın kenarlara olan dik uzaklıkları toplamı kaç cm’dir?',
+    choices: [
+      { key: 'A', text: '30' },
+      { key: 'B', text: '36' },
+      { key: 'C', text: '40' },
+      { key: 'D', text: '45' },
+      { key: 'E', text: '48' },
+    ],
+    answer: 'E',
+    hint: 'Noktayı köşelere birleştirince oluşan sekiz üçgenin alanları toplamı sekizgenin alanına eşittir.',
+    solution: [
+      {
+        title: 'Sekizgeni parçala',
+        detail:
+          'Nokta köşelere birleştirilince tabanları 10 cm olan 8 üçgen oluşur; yükseklikleri noktanın kenarlara uzaklıklarıdır.',
+      },
+      {
+        title: 'Alanı yaz',
+        detail: 'Alan = ½·10·(h₁ + h₂ + … + h₈) = 5·(h₁ + … + h₈) olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: '5·(h₁ + … + h₈) = 240 olduğundan uzaklıklar toplamı 240 : 5 = 48 cm bulunur.',
+      },
+    ],
+  },
 ];
 
 /** Resolves question ids to their bank entries, failing loudly on a typo. */
@@ -2093,6 +2440,22 @@ export const UNIT_3_POLYGONS: Unit = {
         'polygons-36',
         'polygons-37',
         'polygons-38',
+      ),
+    },
+    {
+      id: 'polygons-m7',
+      order: 7,
+      title: 'Kenar uzantıları ve dik uzaklıklar',
+      summary:
+        'Düzgün çokgene kurulan kare, köşegen ve kenar uzantılarıyla açı ve alan, çembere çizilen sekizgen, iç noktanın kenarlara uzaklıkları.',
+      questions: pick(
+        'polygons-39',
+        'polygons-40',
+        'polygons-41',
+        'polygons-42',
+        'polygons-43',
+        'polygons-44',
+        'polygons-45',
       ),
     },
   ],

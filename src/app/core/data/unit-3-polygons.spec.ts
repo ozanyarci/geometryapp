@@ -42,12 +42,10 @@ describe('unit 3 answer key', () => {
     expect(answerOf('polygons-14')).toBe('B'));
   it('15 — iç = 360 − 180 − 30 = 150, n = 12, 10·180 = 1800 → C', () =>
     expect(answerOf('polygons-15')).toBe('C'));
-  it('16 — 30 + 135 + 135 + α = 360, α = 60 → E', () =>
-    expect(answerOf('polygons-16')).toBe('E'));
+  it('16 — 30 + 135 + 135 + α = 360, α = 60 → E', () => expect(answerOf('polygons-16')).toBe('E'));
   it('17 — S/2 + S + S/3 = 11S/6 = 44, S = 24, 6S = 144 → D', () =>
     expect(answerOf('polygons-17')).toBe('D'));
-  it('18 — 32 + 32√2 − 4·4√2 = 32 + 16√2 → B', () =>
-    expect(answerOf('polygons-18')).toBe('B'));
+  it('18 — 32 + 32√2 − 4·4√2 = 32 + 16√2 → B', () => expect(answerOf('polygons-18')).toBe('B'));
 
   it('19 — m(AOC) = 2·72 = 144, α = (180 − 144)/2 = 18 → B', () =>
     expect(answerOf('polygons-19')).toBe('B'));
@@ -84,6 +82,17 @@ describe('unit 3 answer key', () => {
   it('37 — n − 2 = 11, n = 13, 13·10/2 = 65 → B', () => expect(answerOf('polygons-37')).toBe('B'));
   it('38 — n − 2 = 16, n = 18, 180 − 20 = 160 → D', () =>
     expect(answerOf('polygons-38')).toBe('D'));
+  it('39 — m(DCL) = 162, m(CLD) = 9, x = 45 + 9 = 54 → D', () =>
+    expect(answerOf('polygons-39')).toBe('D'));
+  it('40 — ½·12·30 = 180 → C', () => expect(answerOf('polygons-40')).toBe('C'));
+  it('41 — m(KAB) = 72, m(KBC) = 54, α = 54 − 36 = 18 → B', () =>
+    expect(answerOf('polygons-41')).toBe('B'));
+  it('42 — m(CBK) = 90, m(BCK) = 60, ½·6·6√3 = 18√3 → D', () =>
+    expect(answerOf('polygons-42')).toBe('D'));
+  it('43 — R = 3, 2√2·9 = 18√2 → C', () => expect(answerOf('polygons-43')).toBe('C'));
+  it('44 — 60 + 3d + 180 = 360, d = 40, n = 9 → C', () =>
+    expect(answerOf('polygons-44')).toBe('C'));
+  it('45 — ½·10·S = 240, S = 48 → E', () => expect(answerOf('polygons-45')).toBe('E'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
