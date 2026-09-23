@@ -44869,6 +44869,450 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+  {
+    id: 'triangles-519',
+    topic: 'Ağırlık merkezi ve paralel kesit',
+    figure: {
+      viewBox: '0 -4 400 294',
+      caption: 'Şekil 519',
+      label:
+        'ABC üçgeninde G ağırlık merkezidir; [AF] ve [CD] kenarortaylardır. E, [BC] üzerindedir ve [DE] // [AF] dir. |GF| = 4 cm ve |DE| = x tir.',
+      svg: `
+          <path class="ln" d="M240,30 L50,260 L350,260 Z"/>
+          <path class="ln" d="M240,30 L200,260"/>
+          <path class="ln" d="M350,260 L145,145"/>
+          <path class="ln" d="M145,145 L125,260"/>
+
+          <circle class="pt" cx="240" cy="30" r="3.2"/>
+          <circle class="pt" cx="50" cy="260" r="3.2"/>
+          <circle class="pt" cx="350" cy="260" r="3.2"/>
+          <circle class="pt" cx="145" cy="145" r="3.2"/>
+          <circle class="pt" cx="125" cy="260" r="3.2"/>
+          <circle class="pt" cx="200" cy="260" r="3.2"/>
+          <circle class="pt" cx="213.33" cy="183.33" r="3.2"/>
+
+          <text class="val" x="145" y="206.5">x</text>
+          <text class="val" x="198.67" y="225.67" text-anchor="end">4</text>
+          <text x="240" y="20" text-anchor="middle">A</text>
+          <text x="40" y="276" text-anchor="end">B</text>
+          <text x="360" y="276">C</text>
+          <text x="137" y="139" text-anchor="end">D</text>
+          <text x="125" y="282" text-anchor="middle">E</text>
+          <text x="200" y="282" text-anchor="middle">F</text>
+          <text x="221.33" y="177.33">G</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      'G ağırlık merkezi',
+      'D, G, C doğrusal',
+      '[DE] // [AF]',
+      '|GF| = 4 cm',
+      '|DE| = x',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |DE| = x kaç cm dir?',
+    choices: [
+      { key: 'A', text: '4' },
+      { key: 'B', text: '5' },
+      { key: 'C', text: '6' },
+      { key: 'D', text: '8' },
+      { key: 'E', text: '9' },
+    ],
+    answer: 'C',
+    hint: 'G ağırlık merkezi olduğundan D, [AB] nin orta noktasıdır; önce |AF| yi bul.',
+    solution: [
+      {
+        title: 'Kenarortay uzunluğu',
+        detail:
+          'G ağırlık merkezi ⇒ |AG| = 2|GF| = 8 cm ⇒ |AF| = 8 + 4 = 12 cm dir.',
+      },
+      {
+        title: 'Orta nokta',
+        detail:
+          '[CD] de G den geçtiği için kenarortaydır ⇒ D, [AB] nin orta noktasıdır.',
+      },
+      {
+        title: 'Benzerlik',
+        detail:
+          '[DE] // [AF] ⇒ BDE ∼ BAF ve |BD| / |BA| = 1/2 dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x = |AF| / 2 = 12 / 2 = 6 cm bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'triangles-520',
+    topic: 'Dik üçgende açı eşliğiyle benzerlik',
+    figure: {
+      viewBox: '0 -4 400 224',
+      caption: 'Şekil 520',
+      label:
+        'ACB dik üçgeninde C açısı dik açıdır. D, [BC] üzerindedir ve m(ABC) = m(DAC) dir. |BD| = 15 cm, |AC| = 10 cm ve |DC| = x tir.',
+      svg: `
+          <path class="ln" d="M360,30 L40,190 L360,190 Z"/>
+          <path class="ln" d="M360,30 L280,190"/>
+          <path class="ln" d="M360,180 L350,180 L350,190"/>
+          <path class="arc" d="M84,190 A44,44 0 0,0 79.35,170.32"/>
+          <path class="arc" d="M344.79,60.41 A34,34 0 0,0 360,64"/>
+
+          <circle class="pt" cx="360" cy="30" r="3.2"/>
+          <circle class="pt" cx="40" cy="190" r="3.2"/>
+          <circle class="pt" cx="360" cy="190" r="3.2"/>
+          <circle class="pt" cx="280" cy="190" r="3.2"/>
+
+          <text class="val" x="160" y="210" text-anchor="middle">15</text>
+          <text class="val" x="320" y="210" text-anchor="middle">x</text>
+          <text class="val" x="370" y="115">10</text>
+          <text x="360" y="20" text-anchor="middle">A</text>
+          <text x="30" y="206" text-anchor="end">B</text>
+          <text x="370" y="206">C</text>
+          <text x="280" y="212" text-anchor="middle">D</text>
+        `,
+    },
+    given: [
+      'ACB bir dik üçgen',
+      '[AC] ⊥ [BC]',
+      'm(ABC) = m(DAC)',
+      '|BD| = 15 cm',
+      '|AC| = 10 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |DC| kaç cm dir?',
+    choices: [
+      { key: 'A', text: '3' },
+      { key: 'B', text: '4' },
+      { key: 'C', text: '9/2' },
+      { key: 'D', text: '5' },
+      { key: 'E', text: '6' },
+    ],
+    answer: 'D',
+    hint: 'C açısı ortak dik açı olduğundan DAC ve ABC üçgenleri benzerdir.',
+    solution: [
+      {
+        title: 'Benzerlik',
+        detail:
+          'm(DCA) = m(ACB) = 90° ve m(DAC) = m(ABC) ⇒ DCA ∼ ACB (D ↔ A, A ↔ B) dir.',
+      },
+      {
+        title: 'Oran',
+        detail:
+          '|DC| / |AC| = |AC| / |BC| ⇒ |AC|² = |DC| · |BC| olur.',
+      },
+      {
+        title: 'Denklem',
+        detail:
+          '|DC| = x ise 10² = x · (x + 15) ⇒ x² + 15x − 100 = 0 dır.',
+      },
+      {
+        title: 'Çarpanlara ayırma',
+        detail:
+          '(x + 20)(x − 5) = 0 ve x > 0 dır.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '|DC| = 5 cm bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'triangles-521',
+    topic: 'Ağırlık merkezi ile alan oranı',
+    figure: {
+      viewBox: '0 -4 400 304',
+      caption: 'Şekil 521',
+      label:
+        'ABC üçgeninde G ağırlık merkezidir. D ve E, [BC] üzerindedir; [GD] // [AB] ve [GE] // [AC] dir. DEG üçgeni taralıdır ve alanı 5 cm² dir.',
+      svg: `
+          <path class="shade" d="M150,270 L250,270 L186.67,190 Z"/>
+          <path class="ln" d="M160,30 L50,270 L350,270 Z"/>
+          <path class="ln" d="M150,270 L186.67,190 L250,270"/>
+
+          <circle class="pt" cx="160" cy="30" r="3.2"/>
+          <circle class="pt" cx="50" cy="270" r="3.2"/>
+          <circle class="pt" cx="350" cy="270" r="3.2"/>
+          <circle class="pt" cx="186.67" cy="190" r="3.2"/>
+          <circle class="pt" cx="150" cy="270" r="3.2"/>
+          <circle class="pt" cx="250" cy="270" r="3.2"/>
+
+          <text x="160" y="20" text-anchor="middle">A</text>
+          <text x="40" y="286" text-anchor="end">B</text>
+          <text x="360" y="286">C</text>
+          <text x="186.67" y="180" text-anchor="middle">G</text>
+          <text x="150" y="292" text-anchor="middle">D</text>
+          <text x="250" y="292" text-anchor="middle">E</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      'G, ABC üçgeninin ağırlık merkezi',
+      '[AB] // [GD]',
+      '[AC] // [GE]',
+      'Alan(DEG) = 5 cm²',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, Alan(ABC) kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '30' },
+      { key: 'B', text: '45' },
+      { key: 'C', text: '50' },
+      { key: 'D', text: '60' },
+      { key: 'E', text: '75' },
+    ],
+    answer: 'B',
+    hint: 'DEG ve BCA üçgenlerinin benzerlik oranını ağırlık merkezinin yüksekliğinden bul.',
+    solution: [
+      {
+        title: 'Benzerlik',
+        detail:
+          '[GD] // [AB] ve [GE] // [AC] ⇒ DEG ∼ BCA dır.',
+      },
+      {
+        title: 'Benzerlik oranı',
+        detail:
+          'G nin [BC] ye uzaklığı, A nın [BC] ye uzaklığının 1/3 ü olduğundan oran 1/3 tür.',
+      },
+      {
+        title: 'Alan oranı',
+        detail:
+          'Alan(DEG) / Alan(ABC) = (1/3)² = 1/9 dur.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'Alan(ABC) = 9 · 5 = 45 cm² bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'triangles-522',
+    topic: 'Açıortay ile paralel kesit',
+    figure: {
+      viewBox: '0 -4 400 172.93',
+      caption: 'Şekil 522',
+      label:
+        'ABC üçgeninde [BD], B açısının açıortayıdır. E, [AC] üzerindedir ve [DE] // [BC] dir. |AB| = 9 cm, |BC| = 12 cm, |AE| = 4 cm ve |EC| = 2 cm dir.',
+      svg: `
+          <path class="ln" d="M246.88,30 L50,138.93 L350,138.93 Z"/>
+          <path class="ln" d="M50,138.93 L190.63,102.62 L315.62,102.62"/>
+          <path class="arc" d="M90,138.93 A40,40 0 0,0 88.73,128.93"/>
+          <path class="arc" d="M96.48,126.93 A48,48 0 0,0 92,115.69"/>
+
+          <circle class="pt" cx="246.88" cy="30" r="3.2"/>
+          <circle class="pt" cx="50" cy="138.93" r="3.2"/>
+          <circle class="pt" cx="350" cy="138.93" r="3.2"/>
+          <circle class="pt" cx="190.63" cy="102.62" r="3.2"/>
+          <circle class="pt" cx="315.62" cy="102.62" r="3.2"/>
+
+          <text class="val" x="140.44" y="80.46" text-anchor="end">9</text>
+          <text class="val" x="200" y="158.93" text-anchor="middle">12</text>
+          <text class="val" x="289.25" y="64.31">4</text>
+          <text class="val" x="340.81" y="118.77">2</text>
+          <text x="246.88" y="20" text-anchor="middle">A</text>
+          <text x="40" y="154.93" text-anchor="end">B</text>
+          <text x="360" y="154.93">C</text>
+          <text x="190.63" y="92.62" text-anchor="middle">D</text>
+          <text x="323.62" y="96.62">E</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      '[BD] açıortay',
+      '[DE] // [BC]',
+      '|AB| = 9 cm',
+      '|BC| = 12 cm',
+      '|AE| = 4 cm',
+      '|EC| = 2 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |DE| kaç cm dir?',
+    choices: [
+      { key: 'A', text: '4' },
+      { key: 'B', text: '5' },
+      { key: 'C', text: '6' },
+      { key: 'D', text: '7' },
+      { key: 'E', text: '8' },
+    ],
+    answer: 'B',
+    hint: '[ED] yi uzatıp [AB] yi kestiği noktada oluşan ikizkenar üçgene bak.',
+    solution: [
+      {
+        title: 'Uzatma',
+        detail:
+          '[ED] yi uzatalım; [AB] yi F noktasında kessin. [FE] // [BC] olur.',
+      },
+      {
+        title: 'Paralel kesit',
+        detail:
+          'AFE ∼ ABC ve |AE| / |AC| = 4/6 = 2/3 ⇒ |FE| = 12 · 2/3 = 8 cm, |AF| = 9 · 2/3 = 6 cm dir.',
+      },
+      {
+        title: 'İkizkenar üçgen',
+        detail:
+          'm(FDB) = m(DBC) = m(FBD) ⇒ |FD| = |FB| = 9 − 6 = 3 cm dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '|DE| = |FE| − |FD| = 8 − 3 = 5 cm bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'triangles-523',
+    topic: 'Dikmelerle benzerlik',
+    figure: {
+      viewBox: '0 -4 400 214',
+      caption: 'Şekil 523',
+      label:
+        'ABC üçgeninde D, [AB] üzerinde; F, [AC] üzerindedir. E ve G, [BC] üzerindedir; [DE] ⊥ [BC] ve [FG] ⊥ [BC] dir. |BD| = 2|AD|, |AF| / |FC| = 1/3 ve |DE| = 4 cm dir.',
+      svg: `
+          <path class="ln" d="M150,30 L50,180 L350,180 Z"/>
+          <path class="ln" d="M116.67,80 L116.67,180"/>
+          <path class="ln" d="M200,67.5 L200,180"/>
+          <path class="ln" d="M116.67,170 L126.67,170 L126.67,180"/>
+          <path class="ln" d="M200,170 L210,170 L210,180"/>
+
+          <circle class="pt" cx="150" cy="30" r="3.2"/>
+          <circle class="pt" cx="50" cy="180" r="3.2"/>
+          <circle class="pt" cx="350" cy="180" r="3.2"/>
+          <circle class="pt" cx="116.67" cy="80" r="3.2"/>
+          <circle class="pt" cx="116.67" cy="180" r="3.2"/>
+          <circle class="pt" cx="200" cy="67.5" r="3.2"/>
+          <circle class="pt" cx="200" cy="180" r="3.2"/>
+
+          <text class="val" x="108.67" y="135" text-anchor="end">4</text>
+          <text x="150" y="20" text-anchor="middle">A</text>
+          <text x="40" y="196" text-anchor="end">B</text>
+          <text x="360" y="196">C</text>
+          <text x="108.67" y="74" text-anchor="end">D</text>
+          <text x="116.67" y="202" text-anchor="middle">E</text>
+          <text x="208" y="61.5">F</text>
+          <text x="200" y="202" text-anchor="middle">G</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      '[DE] ⊥ [BC]',
+      '[FG] ⊥ [BC]',
+      '|BD| = 2|AD|',
+      '|AF| / |FC| = 1/3',
+      '|DE| = 4 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |FG| kaç cm dir?',
+    choices: [
+      { key: 'A', text: '5/2' },
+      { key: 'B', text: '3' },
+      { key: 'C', text: '7/2' },
+      { key: 'D', text: '4' },
+      { key: 'E', text: '9/2' },
+    ],
+    answer: 'E',
+    hint: 'A dan [BC] ye inen yüksekliği önce BDE üçgeni yardımıyla bul.',
+    solution: [
+      {
+        title: 'Yükseklik',
+        detail:
+          'A dan [BC] ye dikme [AH] olsun. [DE] // [AH] ⇒ BDE ∼ BAH dir.',
+      },
+      {
+        title: 'Yükseklik uzunluğu',
+        detail:
+          '|BD| / |BA| = 2/3 ⇒ |DE| / |AH| = 2/3 ⇒ |AH| = 4 · 3/2 = 6 cm dir.',
+      },
+      {
+        title: 'İkinci benzerlik',
+        detail:
+          '[FG] // [AH] ⇒ CFG ∼ CAH ve |CF| / |CA| = 3/4 tür.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '|FG| = 6 · 3/4 = 9/2 cm bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'triangles-524',
+    topic: 'Kelebek benzerliği ile alan oranı',
+    figure: {
+      viewBox: '0 -4 400 328',
+      caption: 'Şekil 524',
+      label:
+        'ABCD dörtgeninde [AB] // [CD] dir; [AC] ile [BD], E noktasında kesişir. K, [BE] üzerinde; L, [EC] üzerindedir ve [KL] // [BC] dir. |BK| = 3|KE| ve |ED| = 2|KE| dir.',
+      svg: `
+          <path class="ln" d="M117.5,30 L51.5,294 L315.5,294 L348.5,162"/>
+          <path class="ln" d="M117.5,30 L315.5,294"/>
+          <path class="ln" d="M51.5,294 L348.5,162"/>
+          <path class="ln" d="M200,228 L266,228"/>
+
+          <circle class="pt" cx="117.5" cy="30" r="3.2"/>
+          <circle class="pt" cx="51.5" cy="294" r="3.2"/>
+          <circle class="pt" cx="315.5" cy="294" r="3.2"/>
+          <circle class="pt" cx="348.5" cy="162" r="3.2"/>
+          <circle class="pt" cx="249.5" cy="206" r="3.2"/>
+          <circle class="pt" cx="200" cy="228" r="3.2"/>
+          <circle class="pt" cx="266" cy="228" r="3.2"/>
+
+          <text x="117.5" y="20" text-anchor="middle">A</text>
+          <text x="41.5" y="310" text-anchor="end">B</text>
+          <text x="325.5" y="310">C</text>
+          <text x="358.5" y="167">D</text>
+          <text x="249.5" y="196" text-anchor="middle">E</text>
+          <text x="192" y="222" text-anchor="end">K</text>
+          <text x="276" y="233">L</text>
+        `,
+    },
+    given: [
+      '[AB] // [CD]',
+      '[KL] // [BC]',
+      '|BK| = 3|KE|',
+      '|ED| = 2|KE|',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(ABE) / A(EKL) oranı kaçtır?',
+    choices: [
+      { key: 'A', text: '16' },
+      { key: 'B', text: '24' },
+      { key: 'C', text: '32' },
+      { key: 'D', text: '48' },
+      { key: 'E', text: '64' },
+    ],
+    answer: 'C',
+    hint: 'Önce EKL ile EBC, sonra ABE ile EBC üçgenlerinin alanlarını karşılaştır.',
+    solution: [
+      {
+        title: 'Uzunluklar',
+        detail:
+          '|KE| = k ise |BK| = 3k, |BE| = 4k ve |ED| = 2k dır.',
+      },
+      {
+        title: 'Paralel kesit',
+        detail:
+          '[KL] // [BC] ⇒ EKL ∼ EBC, oran k / 4k = 1/4 ⇒ A(EBC) = 16 · A(EKL) dir.',
+      },
+      {
+        title: 'Kelebek benzerliği',
+        detail:
+          '[AB] // [CD] ⇒ ABE ∼ CDE ⇒ |AE| / |EC| = |BE| / |ED| = 4k / 2k = 2 dir.',
+      },
+      {
+        title: 'Ortak yükseklik',
+        detail:
+          'ABE ve EBC üçgenlerinin B den yükseklikleri ortak ⇒ A(ABE) = 2 · A(EBC) = 32 · A(EKL) dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'A(ABE) / A(EKL) = 32 bulunur.',
+      },
+    ],
+  },
 ];
 
 /** Looks questions up by id so the modules below read as a running order. */
@@ -46184,6 +46628,21 @@ export const UNIT_2_TRIANGLES: Unit = {
         'triangles-516',
         'triangles-517',
         'triangles-518',
+      ),
+    },
+    {
+      id: 'triangles-m87',
+      order: 87,
+      title: 'Üçgende benzerlik — Test 10',
+      summary:
+        'Ağırlık merkezi ile paralel kesit, dik üçgende açı eşliği, ağırlık merkezi ile alan oranı, açıortay ile paralel, dikmelerle benzerlik ve kelebek benzerliğiyle alan oranı.',
+      questions: pick(
+        'triangles-519',
+        'triangles-520',
+        'triangles-521',
+        'triangles-522',
+        'triangles-523',
+        'triangles-524',
       ),
     },
   ],

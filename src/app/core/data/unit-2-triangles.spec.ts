@@ -1066,6 +1066,19 @@ describe('unit 2 answer key', () => {
   it('518 — |AC|² = 4 · 9 = 36, |AC| = 6, |CD| = 12 · 6/9 = 8 → D', () =>
     expect(answerOf('triangles-518')).toBe('D'));
 
+  it('519 — |AG| = 2 · 4 = 8, |AF| = 12, D orta nokta, x = 12/2 = 6 → C', () =>
+    expect(answerOf('triangles-519')).toBe('C'));
+  it('520 — DCA ∼ ACB, 10² = x(x + 15), x = 5 → D', () =>
+    expect(answerOf('triangles-520')).toBe('D'));
+  it('521 — DEG ∼ BCA, oran 1/3, Alan(ABC) = 9 · 5 = 45 → B', () =>
+    expect(answerOf('triangles-521')).toBe('B'));
+  it('522 — |FE| = 12 · 2/3 = 8, |FD| = |FB| = 9 − 6 = 3, |DE| = 8 − 3 = 5 → B', () =>
+    expect(answerOf('triangles-522')).toBe('B'));
+  it('523 — |AH| = 4 · 3/2 = 6, |FG| = 6 · 3/4 = 9/2 → E', () =>
+    expect(answerOf('triangles-523')).toBe('E'));
+  it('524 — A(EBC) = 16 · A(EKL), A(ABE) = 2 · A(EBC) = 32 · A(EKL) → C', () =>
+    expect(answerOf('triangles-524')).toBe('C'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
