@@ -1131,6 +1131,19 @@ describe('unit 2 answer key', () => {
   it('548 — h = 6, 2x/12 = (6 − x)/6, x = 3 → E', () =>
     expect(answerOf('triangles-548')).toBe('E'));
 
+  it('549 — |AC| = 6, |DH| = 4, |HC| = 3, |HE| = 1, x² = 16 + 1 = 17 → C', () =>
+    expect(answerOf('triangles-549')).toBe('C'));
+  it('550 — ABE ≅ BCD, |BA| = 4k, |BF| = 12k/5 = 12, k = 5, x = 25 − 12 = 13 → D', () =>
+    expect(answerOf('triangles-550')).toBe('D'));
+  it('551 — |EF|/|AB| = 6/18, |DF|/|AB| = 2/3, x = 12 · 2/5 = 4,8 → C', () =>
+    expect(answerOf('triangles-551')).toBe('C'));
+  it('552 — 8/6 = 16/12 = 4/3, DCE ∼ ABC, |DE| = 9 · 4/3 = 12 → B', () =>
+    expect(answerOf('triangles-552')).toBe('B'));
+  it('553 — |EB| = a/6, |DB| = 2c/3, taralı = ac/18 + 5ac/18 = ac/3 = 20, A = 60/2 = 30 → D', () =>
+    expect(answerOf('triangles-553')).toBe('D'));
+  it('554 — ABD ∼ ACE, |AB| / 10 = (5 + 3) / 5, |AB| = 16 → E', () =>
+    expect(answerOf('triangles-554')).toBe('E'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
