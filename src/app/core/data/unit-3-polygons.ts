@@ -618,6 +618,436 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+
+  // ---------------------------------------------------------------- 13
+  {
+    id: 'polygons-13',
+    topic: 'Düzgün sekizgende alan',
+    figure: {
+      viewBox: '0 0 400 332',
+      caption: 'Şekil 8',
+      label:
+        'Düzgün ABCDEFGH sekizgeni; [AC] köşegeni çizilmiş, |AC| = 10 cm.',
+      svg: `
+          <path class="ln" d="M142,306 L258,306 L340,224 L340,108 L258,26 L142,26 L60,108 L60,224 Z"/>
+          <path class="ln" d="M142,306 L340,224"/>
+          <circle class="pt" cx="142" cy="306" r="3.2"/>
+          <circle class="pt" cx="258" cy="306" r="3.2"/>
+          <circle class="pt" cx="340" cy="224" r="3.2"/>
+          <circle class="pt" cx="340" cy="108" r="3.2"/>
+          <circle class="pt" cx="258" cy="26" r="3.2"/>
+          <circle class="pt" cx="142" cy="26" r="3.2"/>
+          <circle class="pt" cx="60" cy="108" r="3.2"/>
+          <circle class="pt" cx="60" cy="224" r="3.2"/>
+          <text x="135.5" y="327.2" text-anchor="end">A</text>
+          <text x="264.5" y="327.2">B</text>
+          <text x="355.7" y="236">C</text>
+          <text x="355.7" y="107">D</text>
+          <text x="264.5" y="15.8">E</text>
+          <text x="135.5" y="15.8" text-anchor="end">F</text>
+          <text x="44.3" y="107" text-anchor="end">G</text>
+          <text x="44.3" y="236" text-anchor="end">H</text>
+        `,
+    },
+    given: ['ABCDEFGH düzgün sekizgen', '|AC| = 10 cm'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, düzgün sekizgenin alanı kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '64√2' },
+      { key: 'B', text: '80√2' },
+      { key: 'C', text: '90√2' },
+      { key: 'D', text: '100√2' },
+      { key: 'E', text: '120√2' },
+    ],
+    answer: 'D',
+    hint: 'Sekizgenin O merkezini A ve C köşelerine birleştir; m(AOC) açısının kaç derece olduğuna bak.',
+    solution: [
+      {
+        title: 'Merkez açısı',
+        detail:
+          'Merkezi O olan düzgün sekizgende bir merkez açısı 360 : 8 = 45°’dir; bu yüzden m(AOC) = 2·45 = 90° olur.',
+      },
+      {
+        title: 'Yarıçapı bul',
+        detail:
+          '|OA| = |OC| = R ve AOC ikizkenar dik üçgen olduğundan |AC| = R√2 = 10 olur; buradan R = 5√2 cm ve R² = 50 bulunur.',
+      },
+      {
+        title: 'Bir üçgenin alanı',
+        detail:
+          'Merkezden köşelere çizilen yarıçaplar sekizgeni 8 eş üçgene ayırır; birinin alanı ½·R·R·sin45° = (√2/4)·R² olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'A = 8·(√2/4)·R² = 2√2·50 = 100√2 cm² bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 14
+  {
+    id: 'polygons-14',
+    topic: 'Düzgün altıgende orta noktalar',
+    figure: {
+      viewBox: '0 0 400 312',
+      caption: 'Şekil 9',
+      label:
+        'Düzgün ABCDEF altıgeni; K, [AB] kenarının, L de [CD] kenarının orta noktası; [EK] ve [KL] çizilmiş.',
+      svg: `
+          <path class="ln" d="M125,285.8 L275,285.8 L350,155.9 L275,26 L125,26 L50,155.9 Z"/>
+          <path class="ln" d="M125,26 L200,285.8"/>
+          <path class="ln" d="M200,285.8 L312.5,91"/>
+          <line class="tick" x1="162.5" y1="278.8" x2="162.5" y2="292.8"/>
+          <line class="tick" x1="237.5" y1="278.8" x2="237.5" y2="292.8"/>
+          <line class="tick" x1="326.4" y1="129.1" x2="338.6" y2="122.1"/>
+          <line class="tick" x1="323.9" y1="124.8" x2="336.1" y2="117.8"/>
+          <line class="tick" x1="288.9" y1="64.1" x2="301.1" y2="57.1"/>
+          <line class="tick" x1="286.4" y1="59.8" x2="298.6" y2="52.8"/>
+          <circle class="pt" cx="125" cy="285.8" r="3.2"/>
+          <circle class="pt" cx="275" cy="285.8" r="3.2"/>
+          <circle class="pt" cx="350" cy="155.9" r="3.2"/>
+          <circle class="pt" cx="275" cy="26" r="3.2"/>
+          <circle class="pt" cx="125" cy="26" r="3.2"/>
+          <circle class="pt" cx="50" cy="155.9" r="3.2"/>
+          <circle class="pt" cx="200" cy="285.8" r="3.2"/>
+          <circle class="pt" cx="312.5" cy="91" r="3.2"/>
+          <text x="116.5" y="306" text-anchor="end">A</text>
+          <text x="283.5" y="306">B</text>
+          <text x="367" y="161.4">C</text>
+          <text x="283.5" y="16.8">D</text>
+          <text x="116.5" y="16.8" text-anchor="end">E</text>
+          <text x="33" y="161.4" text-anchor="end">F</text>
+          <text x="200" y="308.3" text-anchor="middle">K</text>
+          <text x="327.2" y="88">L</text>
+        `,
+    },
+    given: ['ABCDEF düzgün altıgen', 'K ve L orta noktalar', '|KL| = 12 cm'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |EK| kaç cm dir?',
+    choices: [
+      { key: 'A', text: '4√10' },
+      { key: 'B', text: '4√13' },
+      { key: 'C', text: '6√7' },
+      { key: 'D', text: '8√3' },
+      { key: 'E', text: '12√2' },
+    ],
+    answer: 'B',
+    hint: '[AD] köşegenini çiz: ABCD bir yamuktur ve [KL] onun orta tabanıdır.',
+    solution: [
+      {
+        title: 'Yamuğu gör',
+        detail:
+          'Altıgenin kenarına a diyelim. [AD] köşegeni [BC] kenarına paraleldir ve |AD| = 2a’dır; ABCD yamuğunda [KL] yan kenarların orta noktalarını birleştirir.',
+      },
+      {
+        title: 'Kenarı bul',
+        detail:
+          'Orta taban (a + 2a) : 2 = 3a/2 = 12 olduğundan a = 8 cm olur.',
+      },
+      {
+        title: 'EAB açısı',
+        detail:
+          'FAE ikizkenar üçgeninde m(AFE) = 120° olduğundan m(FAE) = 30° olur; m(FAB) = 120° olduğundan m(EAB) = 120 − 30 = 90° bulunur.',
+      },
+      {
+        title: 'Dik kenarlar',
+        detail:
+          '|AE| = a√3 = 8√3 cm ve |AK| = 8 : 2 = 4 cm’dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'EAK dik üçgeninde |EK|² = 192 + 16 = 208 olduğundan |EK| = 4√13 cm bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 15
+  {
+    id: 'polygons-15',
+    topic: 'Düzgün çokgende dış açı',
+    figure: {
+      viewBox: '0 0 400 257',
+      caption: 'Şekil 10',
+      label:
+        'Bir düzgün çokgenin ardışık A, B, C köşeleri; B noktasından [AB] kenarına dik [BK] ve [BC] kenarına dik [BL] çizilmiş, m(KBL) = 30°.',
+      svg: `
+          <path class="ln" d="M35,24 L104.7,93.7 L200,119.3 L295.3,93.7 L365,24"/>
+          <path class="ln" d="M200,119.3 L169.4,233.4"/>
+          <path class="ln" d="M200,119.3 L230.6,233.4"/>
+          <path class="arc" d="M189.4,116.4 L186.5,127 L197.2,129.9"/>
+          <path class="arc" d="M210.6,116.4 L213.5,127 L202.8,129.9"/>
+          <path class="arc" d="M188.1,163.7 A46,46 0 0 0 211.9,163.7"/>
+          <text class="val" x="200" y="188.8" text-anchor="middle">30°</text>
+          <circle class="pt" cx="35" cy="24" r="3.2"/>
+          <circle class="pt" cx="104.7" cy="93.7" r="3.2"/>
+          <circle class="pt" cx="200" cy="119.3" r="3.2"/>
+          <circle class="pt" cx="295.3" cy="93.7" r="3.2"/>
+          <circle class="pt" cx="365" cy="24" r="3.2"/>
+          <circle class="pt" cx="169.4" cy="233.4" r="3.2"/>
+          <circle class="pt" cx="230.6" cy="233.4" r="3.2"/>
+          <text x="96.2" y="114" text-anchor="end">A</text>
+          <text x="303.8" y="114">C</text>
+          <text x="200" y="106.8" text-anchor="middle">B</text>
+          <text x="165" y="255.3" text-anchor="middle">K</text>
+          <text x="235" y="255.3" text-anchor="middle">L</text>
+        `,
+    },
+    given: ['A, B, C bir düzgün çokgenin ardışık köşeleri', '[BK] ⊥ [AB], [BL] ⊥ [BC]', 'm(KBL) = 30°'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, çokgenin iç açılarının ölçüleri toplamı kaç derecedir?',
+    choices: [
+      { key: 'A', text: '1440' },
+      { key: 'B', text: '1620' },
+      { key: 'C', text: '1800' },
+      { key: 'D', text: '1980' },
+      { key: 'E', text: '2160' },
+    ],
+    answer: 'C',
+    hint: 'B köşesinin etrafındaki açıları topla: iki dik açı, 30° ve çokgenin bir iç açısı.',
+    solution: [
+      {
+        title: 'İç açıyı bul',
+        detail:
+          'B etrafındaki açıların toplamı 360° olduğundan m(ABC) = 360 − 90 − 90 − 30 = 150° olur.',
+      },
+      {
+        title: 'Dış açı',
+        detail:
+          'Bir dış açı 180 − 150 = 30°’dir; iki dikme arasındaki açı her zaman dış açıya eşittir.',
+      },
+      {
+        title: 'Kenar sayısı',
+        detail:
+          'n = 360 : 30 = 12 olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'İç açılar toplamı (12 − 2)·180 = 1800° bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 16
+  {
+    id: 'polygons-16',
+    topic: 'Düzgün sekizgen ve eşkenar üçgen',
+    figure: {
+      viewBox: '0 0 400 332',
+      caption: 'Şekil 11',
+      label:
+        'Düzgün ABCDEFGH sekizgeninin içinde [AB] kenarı üzerine kurulmuş ABK eşkenar üçgeni; A noktasından [BK] kenarına dik çizilen doğru [CD] kenarını P noktasında kesiyor.',
+      svg: `
+          <path class="ln" d="M142,306 L258,306 L340,224 L340,108 L258,26 L142,26 L60,108 L60,224 Z"/>
+          <path class="ln" d="M142,306 L200,205.6 L258,306"/>
+          <path class="ln" d="M142,306 L340,191.7"/>
+          <path class="arc" d="M234,264.4 L225.3,269.4 L220.3,260.8"/>
+          <path class="arc" d="M319.2,203.7 A24,24 0 0 0 340,215.7"/>
+          <text class="val" x="320" y="231.8" text-anchor="middle">α</text>
+          <circle class="pt" cx="142" cy="306" r="3.2"/>
+          <circle class="pt" cx="258" cy="306" r="3.2"/>
+          <circle class="pt" cx="340" cy="224" r="3.2"/>
+          <circle class="pt" cx="340" cy="108" r="3.2"/>
+          <circle class="pt" cx="258" cy="26" r="3.2"/>
+          <circle class="pt" cx="142" cy="26" r="3.2"/>
+          <circle class="pt" cx="60" cy="108" r="3.2"/>
+          <circle class="pt" cx="60" cy="224" r="3.2"/>
+          <circle class="pt" cx="200" cy="205.6" r="3.2"/>
+          <circle class="pt" cx="340" cy="191.7" r="3.2"/>
+          <text x="135.5" y="327.2" text-anchor="end">A</text>
+          <text x="264.5" y="327.2">B</text>
+          <text x="355.7" y="236">C</text>
+          <text x="355.7" y="107">D</text>
+          <text x="264.5" y="15.8">E</text>
+          <text x="135.5" y="15.8" text-anchor="end">F</text>
+          <text x="44.3" y="107" text-anchor="end">G</text>
+          <text x="44.3" y="236" text-anchor="end">H</text>
+          <text x="356.7" y="200.3">P</text>
+          <text x="192" y="197.2" text-anchor="end">K</text>
+        `,
+    },
+    given: ['ABCDEFGH düzgün sekizgen', 'ABK eşkenar üçgen', '[AP] ⊥ [BK]', 'P ∈ [CD]'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, m(APC) = α kaç derecedir?',
+    choices: [
+      { key: 'A', text: '40' },
+      { key: 'B', text: '45' },
+      { key: 'C', text: '50' },
+      { key: 'D', text: '55' },
+      { key: 'E', text: '60' },
+    ],
+    answer: 'E',
+    hint: 'Eşkenar üçgende bir köşeden karşı kenara inen dikme, o köşedeki açıyı ikiye böler.',
+    solution: [
+      {
+        title: 'A köşesindeki açı',
+        detail:
+          'ABK eşkenar üçgen olduğundan A noktasından [BK] kenarına inen dikme 60°’lik açıyı ikiye böler: m(PAB) = 30° olur.',
+      },
+      {
+        title: 'Sekizgenin iç açısı',
+        detail:
+          'Bir iç açı (8 − 2)·180 : 8 = 135° olduğundan m(ABC) = m(BCD) = 135° olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'ABCP dörtgeninde 30 + 135 + 135 + α = 360 olduğundan α = 60° bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 17
+  {
+    id: 'polygons-17',
+    topic: 'Düzgün altıgende alan parçaları',
+    figure: {
+      viewBox: '0 0 400 312',
+      caption: 'Şekil 12',
+      label:
+        'Düzgün ABCDEF altıgeni ve çevrel çemberinin merkezi O; O köşelere birleştirilmiş, [OH] ⊥ [AB], K ∈ [DC] ve |DK| = 2|KC|, HBCKO bölgesi taralı.',
+      svg: `
+          <path class="shade" d="M200,285.8 L275,285.8 L350,155.9 L325,112.6 L200,155.9 Z"/>
+          <path class="ln" d="M125,285.8 L275,285.8 L350,155.9 L275,26 L125,26 L50,155.9 Z"/>
+          <path class="ln" d="M200,155.9 L125,285.8"/>
+          <path class="ln" d="M200,155.9 L275,285.8"/>
+          <path class="ln" d="M200,155.9 L350,155.9"/>
+          <path class="ln" d="M200,155.9 L275,26"/>
+          <path class="ln" d="M200,155.9 L125,26"/>
+          <path class="ln" d="M200,155.9 L50,155.9"/>
+          <path class="ln" d="M200,155.9 L200,285.8"/>
+          <path class="ln" d="M200,155.9 L325,112.6"/>
+          <path class="arc" d="M210,285.8 L210,275.8 L200,275.8"/>
+          <circle class="pt" cx="125" cy="285.8" r="3.2"/>
+          <circle class="pt" cx="275" cy="285.8" r="3.2"/>
+          <circle class="pt" cx="350" cy="155.9" r="3.2"/>
+          <circle class="pt" cx="275" cy="26" r="3.2"/>
+          <circle class="pt" cx="125" cy="26" r="3.2"/>
+          <circle class="pt" cx="50" cy="155.9" r="3.2"/>
+          <circle class="pt" cx="200" cy="155.9" r="3.2"/>
+          <circle class="pt" cx="200" cy="285.8" r="3.2"/>
+          <circle class="pt" cx="325" cy="112.6" r="3.2"/>
+          <text x="116.5" y="306" text-anchor="end">A</text>
+          <text x="283.5" y="306">B</text>
+          <text x="367" y="161.4">C</text>
+          <text x="283.5" y="16.8">D</text>
+          <text x="116.5" y="16.8" text-anchor="end">E</text>
+          <text x="33" y="161.4" text-anchor="end">F</text>
+          <text x="200" y="308.3" text-anchor="middle">H</text>
+          <text x="341.1" y="112.5">K</text>
+          <text x="192" y="147.5" text-anchor="end">O</text>
+        `,
+    },
+    given: ['ABCDEF düzgün altıgen', 'O, çevrel çemberin merkezi', 'K ∈ [DC], |DK| = 2|KC|', '[OH] ⊥ [AB]', 'A(HBCKO) = 44 cm²'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, düzgün altıgenin alanı kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '108' },
+      { key: 'B', text: '120' },
+      { key: 'C', text: '132' },
+      { key: 'D', text: '144' },
+      { key: 'E', text: '156' },
+    ],
+    answer: 'D',
+    hint: 'Altıgeni merkezden altı eş eşkenar üçgene ayır ve birinin alanına S de.',
+    solution: [
+      {
+        title: 'Eşkenar üçgenler',
+        detail:
+          'O merkezli düzgün altıgen, alanı S olan altı eş eşkenar üçgenden oluşur: A(ABCDEF) = 6S.',
+      },
+      {
+        title: 'HBO üçgeni',
+        detail:
+          'OAB eşkenar üçgeninde [OH] ⊥ [AB] olduğundan H, [AB] kenarının orta noktasıdır; A(HBO) = S/2 olur.',
+      },
+      {
+        title: 'OCK üçgeni',
+        detail:
+          'OCD üçgeninde |KC| = |DC|/3 ve O’dan inen yükseklik ortak olduğundan A(OCK) = S/3 olur.',
+      },
+      {
+        title: 'Taralı alan',
+        detail:
+          'A(HBCKO) = S/2 + S + S/3 = 11S/6 = 44 olduğundan S = 24 cm² bulunur.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'A(ABCDEF) = 6·24 = 144 cm² bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 18
+  {
+    id: 'polygons-18',
+    topic: 'Düzgün sekizgende köşegen ve alan',
+    figure: {
+      viewBox: '0 0 400 332',
+      caption: 'Şekil 13',
+      label:
+        'Kenarı 4 cm olan düzgün ABCDEFGH sekizgeni; A, C, E, G köşeleri birleştirilmiş ve ACEG dörtgeni taralı.',
+      svg: `
+          <path class="shade" d="M142,306 L340,224 L258,26 L60,108 Z"/>
+          <path class="ln" d="M142,306 L258,306 L340,224 L340,108 L258,26 L142,26 L60,108 L60,224 Z"/>
+          <path class="ln" d="M142,306 L340,224 L258,26 L60,108 Z"/>
+          <circle class="pt" cx="142" cy="306" r="3.2"/>
+          <circle class="pt" cx="258" cy="306" r="3.2"/>
+          <circle class="pt" cx="340" cy="224" r="3.2"/>
+          <circle class="pt" cx="340" cy="108" r="3.2"/>
+          <circle class="pt" cx="258" cy="26" r="3.2"/>
+          <circle class="pt" cx="142" cy="26" r="3.2"/>
+          <circle class="pt" cx="60" cy="108" r="3.2"/>
+          <circle class="pt" cx="60" cy="224" r="3.2"/>
+          <text x="135.5" y="327.2" text-anchor="end">A</text>
+          <text x="264.5" y="327.2">B</text>
+          <text x="355.7" y="236">C</text>
+          <text x="355.7" y="107">D</text>
+          <text x="264.5" y="15.8">E</text>
+          <text x="135.5" y="15.8" text-anchor="end">F</text>
+          <text x="44.3" y="107" text-anchor="end">G</text>
+          <text x="44.3" y="236" text-anchor="end">H</text>
+          <text class="val" x="200" y="326" text-anchor="middle">4</text>
+        `,
+    },
+    given: ['ABCDEFGH düzgün sekizgen', '|AB| = 4 cm'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(ACEG) kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '32 + 8√2' },
+      { key: 'B', text: '32 + 16√2' },
+      { key: 'C', text: '48' },
+      { key: 'D', text: '16 + 16√2' },
+      { key: 'E', text: '64' },
+    ],
+    answer: 'B',
+    hint: 'Taralı bölgenin alanını, sekizgenin alanından köşelerde kalan dört eş üçgeni çıkararak bul.',
+    solution: [
+      {
+        title: 'Sekizgeni kareye tamamla',
+        detail:
+          'Eğik kenarların uzantıları sekizgeni bir kareye tamamlar; köşelerde dik kenarları 4 : √2 = 2√2 cm olan dört ikizkenar dik üçgen kalır ve karenin kenarı 4 + 4√2 cm olur.',
+      },
+      {
+        title: 'Sekizgenin alanı',
+        detail:
+          'A = (4 + 4√2)² − 4·½·(2√2)² = 48 + 32√2 − 16 = 32 + 32√2 cm² olur.',
+      },
+      {
+        title: 'Kesilen üçgenler',
+        detail:
+          'Sekizgenin iç açısı 135° olduğundan A(ABC) = ½·4·4·sin135° = 4√2 cm²’dir; CDE, EFG ve GHA üçgenleri de bu alandadır.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'A(ACEG) = 32 + 32√2 − 4·4√2 = 32 + 16√2 cm² bulunur.',
+      },
+    ],
+  },
 ];
 
 /** Resolves question ids to their bank entries, failing loudly on a typo. */
@@ -671,6 +1101,21 @@ export const UNIT_3_POLYGONS: Unit = {
         'polygons-10',
         'polygons-11',
         'polygons-12',
+      ),
+    },
+    {
+      id: 'polygons-m3',
+      order: 3,
+      title: 'Düzgün çokgende uzunluk ve alan',
+      summary:
+        'Düzgün sekizgen ve altıgende köşegen, orta taban ve alan; kenarlara çizilen dikmeler ve çokgenin içine kurulan eşkenar üçgen.',
+      questions: pick(
+        'polygons-13',
+        'polygons-14',
+        'polygons-15',
+        'polygons-16',
+        'polygons-17',
+        'polygons-18',
       ),
     },
   ],
