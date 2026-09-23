@@ -846,6 +846,19 @@ describe('unit 2 answer key', () => {
   it('416 — |AH| = |AB| = 8, |OC| = |CA| = 10, |CH| = √(100 − 64) = 6, |OB| = 16, 64 + 40 = 104 → D', () =>
     expect(answerOf('triangles-416')).toBe('D'));
 
+  it('417 — |AG| = 2·4 = 8, |GE| = 10/2 = 5, y − x = 3 → C', () =>
+    expect(answerOf('triangles-417')).toBe('C'));
+  it('418 — |BE| = √(144 + 81) = 15, x = (2/3)·15 = 10 → C', () =>
+    expect(answerOf('triangles-418')).toBe('C'));
+  it('419 — F ağırlık merkezi, |FE| = 27/3 = 9, K AFC nin ağırlık merkezi, |FK| = (2/3)·9 = 6 → D', () =>
+    expect(answerOf('triangles-419')).toBe('D'));
+  it('420 — A(GDCE) = 2S = 20 ⇒ S = 10, A(ABC) = 6S = 60 → D', () =>
+    expect(answerOf('triangles-420')).toBe('D'));
+  it('421 — 36 + y² = 2x² + 18 ve x² + 81 = 2y² + 18, topla: x² + y² = 18 + 63 = 81 → D', () =>
+    expect(answerOf('triangles-421')).toBe('D'));
+  it('422 — |BC| = 15, |AH| = 9·12/15 = 36/5, x = (1/3)·36/5 = 12/5 → B', () =>
+    expect(answerOf('triangles-422')).toBe('B'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)

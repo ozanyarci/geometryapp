@@ -36605,6 +36605,568 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+  {
+    id: 'triangles-417',
+    topic: 'Ağırlık merkezinin kenarortayı bölme oranı',
+    figure: {
+      viewBox: '0 -6 400 274',
+      caption: 'Şekil 417',
+      label:
+        'ABC üçgeninde [AD] ve [BE] kenarortayları G noktasında kesişmektedir. |BG| = 10 cm, |GD| = 4 cm, |AG| = y ve |GE| = x tir.',
+      svg: `
+          <path class="ln" d="M209,20.19 L38,236 L362,236 Z"/>
+          <path class="ln" d="M209,20.19 L200,236"/>
+          <path class="ln" d="M38,236 L285.5,128.09"/>
+
+          <line class="tick" x1="119" y1="230" x2="119" y2="242"/>
+          <line class="tick" x1="281" y1="230" x2="281" y2="242"/>
+          <line class="tick" x1="250.7" y1="68.63" x2="240.91" y2="75.57"/>
+          <line class="tick" x1="253.59" y1="72.71" x2="243.8" y2="79.65"/>
+          <line class="tick" x1="327.2" y1="176.54" x2="317.41" y2="183.48"/>
+          <line class="tick" x1="330.09" y1="180.62" x2="320.3" y2="187.56"/>
+
+          <circle class="pt" cx="209" cy="20.19" r="3.2"/>
+          <circle class="pt" cx="38" cy="236" r="3.2"/>
+          <circle class="pt" cx="362" cy="236" r="3.2"/>
+          <circle class="pt" cx="200" cy="236" r="3.2"/>
+          <circle class="pt" cx="285.5" cy="128.09" r="3.2"/>
+          <circle class="pt" cx="203" cy="164.06" r="3.2"/>
+
+          <text class="val" x="124.9" y="215.11" text-anchor="middle">10</text>
+          <text class="val" x="211.49" y="205.45" text-anchor="middle">4</text>
+          <text class="val" x="215.99" y="97.54" text-anchor="middle">y</text>
+          <text class="val" x="240.25" y="141.91" text-anchor="middle">x</text>
+
+          <text x="209" y="10.19" text-anchor="middle">A</text>
+          <text x="30" y="242" text-anchor="end">B</text>
+          <text x="370" y="242">C</text>
+          <text x="200" y="258" text-anchor="middle">D</text>
+          <text x="294.5" y="126.09">E</text>
+          <text x="195" y="158.06" text-anchor="end">G</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      '[AD] ve [BE] kenarortaylar',
+      '|BG| = 10 cm',
+      '|GD| = 4 cm',
+      '|AG| = y',
+      '|GE| = x',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, y − x farkı kaç cm dir?',
+    choices: [
+      { key: 'A', text: '1' },
+      { key: 'B', text: '2' },
+      { key: 'C', text: '3' },
+      { key: 'D', text: '4' },
+      { key: 'E', text: '5' },
+    ],
+    answer: 'C',
+    hint: 'İki kenarortayın kesim noktası ağırlık merkezidir ve her kenarortayı köşeden itibaren 2 : 1 oranında böler.',
+    solution: [
+      {
+        title: 'G ağırlık merkezidir',
+        detail:
+          '[AD] ve [BE] kenarortayları G noktasında kesiştiğinden G, ABC üçgeninin ağırlık merkezidir. Ağırlık merkezi her kenarortayı köşe tarafı 2 birim, kenar tarafı 1 birim olacak şekilde böler.',
+      },
+      {
+        title: 'y yi bul',
+        detail:
+          '[AD] kenarortayında |AG| = 2 · |GD| olduğundan y = 2 · 4 = 8 cm dir.',
+      },
+      {
+        title: 'x i bul',
+        detail:
+          '[BE] kenarortayında |BG| = 2 · |GE| olduğundan 10 = 2x, yani x = 5 cm dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'y − x = 8 − 5 = 3 cm bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'triangles-418',
+    topic: 'Dik üçgende ağırlık merkezi ve Pisagor',
+    figure: {
+      viewBox: '0 6 400 224',
+      caption: 'Şekil 418',
+      label:
+        'A açısı dik olan ABC üçgeninde D, [BC] nin; E, [AC] nin orta noktasıdır. [AD] ile [BE] K noktasında kesişmektedir. |AB| = 12 cm, |AE| = |EC| = 9 cm ve |BK| = x tir.',
+      svg: `
+          <path class="ln" d="M133.5,36.25 L27,196 L373.13,196 Z"/>
+          <path class="ln" d="M133.5,36.25 L200.07,196"/>
+          <path class="ln" d="M27,196 L253.32,116.12"/>
+          <path class="ln" d="M127.4,45.4 L136.55,51.5 L142.65,42.35"/>
+
+          <line class="tick" x1="113.53" y1="190" x2="113.53" y2="202"/>
+          <line class="tick" x1="286.6" y1="190" x2="286.6" y2="202"/>
+          <line class="tick" x1="194.66" y1="69.81" x2="188" y2="79.79"/>
+          <line class="tick" x1="198.82" y1="72.58" x2="192.16" y2="82.56"/>
+          <line class="tick" x1="314.47" y1="149.68" x2="307.82" y2="159.67"/>
+          <line class="tick" x1="318.63" y1="152.46" x2="311.98" y2="162.44"/>
+
+          <circle class="pt" cx="133.5" cy="36.25" r="3.2"/>
+          <circle class="pt" cx="27" cy="196" r="3.2"/>
+          <circle class="pt" cx="373.13" cy="196" r="3.2"/>
+          <circle class="pt" cx="200.07" cy="196" r="3.2"/>
+          <circle class="pt" cx="253.32" cy="116.12" r="3.2"/>
+          <circle class="pt" cx="177.88" cy="142.75" r="3.2"/>
+
+          <text class="val" x="70.27" y="114.47" text-anchor="middle">12</text>
+          <text class="val" x="202.84" y="67.04" text-anchor="middle">9</text>
+          <text class="val" x="322.66" y="146.92" text-anchor="middle">9</text>
+          <text class="val" x="98.78" y="164" text-anchor="middle">x</text>
+
+          <text x="133.5" y="26.25" text-anchor="middle">A</text>
+          <text x="19" y="202" text-anchor="end">B</text>
+          <text x="381.13" y="202">C</text>
+          <text x="200.07" y="218" text-anchor="middle">D</text>
+          <text x="262.32" y="112.12">E</text>
+          <text x="171.88" y="133.75" text-anchor="end">K</text>
+        `,
+    },
+    given: [
+      'ABC bir dik üçgen',
+      '[BA] ⊥ [AC]',
+      '|BD| = |DC|',
+      '|AE| = |EC| = 9 cm',
+      '|AB| = 12 cm',
+      '[AD] ∩ [BE] = {K}',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |BK| = x kaç cm dir?',
+    choices: [
+      { key: 'A', text: '8' },
+      { key: 'B', text: '9' },
+      { key: 'C', text: '10' },
+      { key: 'D', text: '12' },
+      { key: 'E', text: '15' },
+    ],
+    answer: 'C',
+    hint: '[AD] ve [BE] ikisi de kenarortay; K nin [BE] yi hangi oranda böldüğünü düşün.',
+    solution: [
+      {
+        title: 'K ağırlık merkezidir',
+        detail:
+          '|BD| = |DC| ve |AE| = |EC| olduğundan [AD] ve [BE] kenarortaydır; kesim noktaları K, ABC üçgeninin ağırlık merkezidir.',
+      },
+      {
+        title: '[BE] yi bul',
+        detail:
+          'ABE üçgeni A da diktir: |BE|² = |AB|² + |AE|² = 12² + 9² = 144 + 81 = 225, yani |BE| = 15 cm dir.',
+      },
+      {
+        title: 'Kenarortayı 2 : 1 böl',
+        detail:
+          'Ağırlık merkezi [BE] kenarortayını |BK| : |KE| = 2 : 1 oranında böler: |BK| = (2/3) · 15 = 10 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x = 10 cm bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'triangles-419',
+    topic: 'Kenarortay üzerinde ağırlık merkezi ve iç içe üçgen',
+    figure: {
+      viewBox: '0 -6 400 334',
+      caption: 'Şekil 419',
+      label:
+        'ABC üçgeninde [CD] kenarortayı F ve L noktalarıyla üç eş parçaya bölünmüştür: |DF| = |FL| = |LC|. B den F üzerinden geçen doğru [AC] yi E de keser; [AL] ile [BE] K noktasında kesişir. |BE| = 27 cm dir.',
+      svg: `
+          <path class="ln" d="M134,26 L35,312 L365,312 Z"/>
+          <path class="ln" d="M365,312 L84.5,169"/>
+          <path class="ln" d="M35,312 L249.5,169"/>
+          <path class="ln" d="M134,26 L271.5,264.33"/>
+
+          <line class="tick" x1="133.98" y1="187.49" x2="128.52" y2="198.18"/>
+          <line class="tick" x1="227.48" y1="235.15" x2="222.02" y2="245.85"/>
+          <line class="tick" x1="320.98" y1="282.82" x2="315.52" y2="293.51"/>
+          <line class="tick" x1="115.74" y1="97.1" x2="104.4" y2="93.17"/>
+          <line class="tick" x1="114.1" y1="101.83" x2="102.76" y2="97.9"/>
+          <line class="tick" x1="66.24" y1="240.1" x2="54.9" y2="236.17"/>
+          <line class="tick" x1="64.6" y1="244.83" x2="53.26" y2="240.9"/>
+
+          <circle class="pt" cx="134" cy="26" r="3.2"/>
+          <circle class="pt" cx="35" cy="312" r="3.2"/>
+          <circle class="pt" cx="365" cy="312" r="3.2"/>
+          <circle class="pt" cx="84.5" cy="169" r="3.2"/>
+          <circle class="pt" cx="249.5" cy="169" r="3.2"/>
+          <circle class="pt" cx="178" cy="216.67" r="3.2"/>
+          <circle class="pt" cx="271.5" cy="264.33" r="3.2"/>
+          <circle class="pt" cx="225.67" cy="184.89" r="3.2"/>
+
+
+          <text x="134" y="16" text-anchor="middle">A</text>
+          <text x="27" y="318" text-anchor="end">B</text>
+          <text x="373" y="318">C</text>
+          <text x="75.5" y="173" text-anchor="end">D</text>
+          <text x="258.5" y="167">E</text>
+          <text x="176" y="236.67" text-anchor="middle">F</text>
+          <text x="273.5" y="284.33" text-anchor="middle">L</text>
+          <text x="229.67" y="175.89">K</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      '[CD] kenarortay',
+      '|DF| = |FL| = |LC|',
+      'E ∈ [AC] ve F ∈ [BE]',
+      '[AL] ∩ [BE] = {K}',
+      '|BE| = 27 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |FK| kaç cm dir?',
+    choices: [
+      { key: 'A', text: '3' },
+      { key: 'B', text: '4' },
+      { key: 'C', text: '5' },
+      { key: 'D', text: '6' },
+      { key: 'E', text: '8' },
+    ],
+    answer: 'D',
+    hint: '|DF| = |CD| / 3 olduğuna göre F noktası ABC üçgeninin hangi özel noktasıdır?',
+    solution: [
+      {
+        title: 'F ağırlık merkezidir',
+        detail:
+          'F, [CD] kenarortayı üzerinde ve |CF| : |FD| = 2 : 1 dir. Bu oran ağırlık merkezinin oranıdır; F, ABC üçgeninin ağırlık merkezidir.',
+      },
+      {
+        title: '[BE] de kenarortaydır',
+        detail:
+          'Ağırlık merkezinden geçen [BE] doğru parçası da kenarortaydır; E, [AC] nin orta noktasıdır. Ayrıca |BF| = (2/3) · 27 = 18 cm, |FE| = 9 cm dir.',
+      },
+      {
+        title: 'AFC üçgenine bak',
+        detail:
+          'AFC üçgeninde E, [AC] nin; L de |FL| = |LC| olduğundan [FC] nin orta noktasıdır. Yani [FE] ve [AL], AFC üçgeninin iki kenarortayıdır ve K bu üçgenin ağırlık merkezidir.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'K, [FE] kenarortayını F den itibaren 2 : 1 böler: |FK| = (2/3) · 9 = 6 cm bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'triangles-420',
+    topic: 'Kenarortayların ayırdığı alanlar',
+    figure: {
+      viewBox: '0 -6 400 302',
+      caption: 'Şekil 420',
+      label:
+        'ABC üçgeninde D, [BC] nin; E, [AC] nin orta noktasıdır. [AD] ve [BE] kenarortayları G noktasında kesişmektedir. GDCE dörtgeninin alanı 20 cm² dir.',
+      svg: `
+          <path class="ln" d="M137,20 L32,272 L368,272 Z"/>
+          <path class="ln" d="M137,20 L200,272"/>
+          <path class="ln" d="M32,272 L252.5,146"/>
+
+          <line class="tick" x1="116" y1="266" x2="116" y2="278"/>
+          <line class="tick" x1="284" y1="266" x2="284" y2="278"/>
+          <line class="tick" x1="197.48" y1="77.1" x2="188.64" y2="85.21"/>
+          <line class="tick" x1="200.86" y1="80.79" x2="192.02" y2="88.9"/>
+          <line class="tick" x1="312.98" y1="203.1" x2="304.14" y2="211.21"/>
+          <line class="tick" x1="316.36" y1="206.79" x2="307.52" y2="214.9"/>
+
+          <circle class="pt" cx="137" cy="20" r="3.2"/>
+          <circle class="pt" cx="32" cy="272" r="3.2"/>
+          <circle class="pt" cx="368" cy="272" r="3.2"/>
+          <circle class="pt" cx="200" cy="272" r="3.2"/>
+          <circle class="pt" cx="252.5" cy="146" r="3.2"/>
+          <circle class="pt" cx="179" cy="188" r="3.2"/>
+
+          <text class="val" x="249.88" y="224.5" text-anchor="middle">20</text>
+
+          <text x="137" y="10" text-anchor="middle">A</text>
+          <text x="24" y="278" text-anchor="end">B</text>
+          <text x="376" y="278">C</text>
+          <text x="200" y="294" text-anchor="middle">D</text>
+          <text x="261.5" y="144">E</text>
+          <text x="172" y="207" text-anchor="end">G</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 -6 400 302',
+      caption: 'Şekil 420 — üçüncü kenarortay çizildi',
+      label:
+        'Aynı şekle üçüncü kenarortay [CF] kesikli çizgiyle eklenmiştir; üç kenarortay üçgeni S alanlı altı eş alanlı üçgene ayırır.',
+      svg: `
+          <path class="ln" d="M137,20 L32,272 L368,272 Z"/>
+          <path class="ln" d="M137,20 L200,272"/>
+          <path class="ln" d="M32,272 L252.5,146"/>
+          <path class="aux" d="M368,272 L84.5,146"/>
+
+          <line class="tick" x1="116" y1="266" x2="116" y2="278"/>
+          <line class="tick" x1="284" y1="266" x2="284" y2="278"/>
+          <line class="tick" x1="197.48" y1="77.1" x2="188.64" y2="85.21"/>
+          <line class="tick" x1="200.86" y1="80.79" x2="192.02" y2="88.9"/>
+          <line class="tick" x1="312.98" y1="203.1" x2="304.14" y2="211.21"/>
+          <line class="tick" x1="316.36" y1="206.79" x2="307.52" y2="214.9"/>
+
+          <circle class="pt" cx="137" cy="20" r="3.2"/>
+          <circle class="pt" cx="32" cy="272" r="3.2"/>
+          <circle class="pt" cx="368" cy="272" r="3.2"/>
+          <circle class="pt" cx="200" cy="272" r="3.2"/>
+          <circle class="pt" cx="252.5" cy="146" r="3.2"/>
+          <circle class="pt" cx="179" cy="188" r="3.2"/>
+          <circle class="pt" cx="84.5" cy="146" r="3.2"/>
+
+          <text class="val" x="133.5" y="123" text-anchor="middle">S</text>
+          <text class="val" x="98.5" y="207" text-anchor="middle">S</text>
+          <text class="val" x="137" y="249" text-anchor="middle">S</text>
+          <text class="val" x="249" y="249" text-anchor="middle">S</text>
+          <text class="val" x="266.5" y="207" text-anchor="middle">S</text>
+          <text class="val" x="189.5" y="123" text-anchor="middle">S</text>
+
+          <text x="137" y="10" text-anchor="middle">A</text>
+          <text x="24" y="278" text-anchor="end">B</text>
+          <text x="376" y="278">C</text>
+          <text x="200" y="294" text-anchor="middle">D</text>
+          <text x="261.5" y="144">E</text>
+          <text x="172" y="207" text-anchor="end">G</text>
+          <text x="75.5" y="146" text-anchor="end">F</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      '|BD| = |DC|',
+      '|AE| = |EC|',
+      '[AD] ∩ [BE] = {G}',
+      'A(GDCE) = 20 cm²',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(ABC) kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '40' },
+      { key: 'B', text: '48' },
+      { key: 'C', text: '54' },
+      { key: 'D', text: '60' },
+      { key: 'E', text: '72' },
+    ],
+    answer: 'D',
+    hint: 'C köşesinden de kenarortayı çiz; üç kenarortay üçgeni eş alanlı parçalara böler.',
+    solution: [
+      {
+        title: 'Üçüncü kenarortayı çiz',
+        detail:
+          'G ağırlık merkezi olduğundan C den [AB] nin orta noktası F ye çizilen kenarortay da G den geçer.',
+      },
+      {
+        title: 'Altı eş alan',
+        detail:
+          'Üç kenarortay ABC üçgenini alanları eşit altı küçük üçgene ayırır. Her birinin alanına S dersek A(ABC) = 6S olur.',
+      },
+      {
+        title: 'Dörtgeni S cinsinden yaz',
+        detail:
+          'GDCE dörtgeni GDC ve GCE üçgenlerinden oluşur: A(GDCE) = 2S = 20, yani S = 10 cm² dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'A(ABC) = 6S = 6 · 10 = 60 cm² bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'triangles-421',
+    topic: 'Kenarortay uzunluğu bağıntısı',
+    figure: {
+      viewBox: '0 0 400 262',
+      caption: 'Şekil 421',
+      label:
+        'ABC üçgeninde [BC] kenarı D ve E noktalarıyla üç eş parçaya bölünmüştür: |BD| = |DE| = |EC| = 3 cm. |AB| = 6 cm, |AC| = 9 cm, |AD| = x ve |AE| = y dir.',
+      svg: `
+          <path class="ln" d="M110,28.35 L38,232 L362,232 Z"/>
+          <path class="ln" d="M110,28.35 L146,232"/>
+          <path class="ln" d="M110,28.35 L254,232"/>
+
+
+          <circle class="pt" cx="110" cy="28.35" r="3.2"/>
+          <circle class="pt" cx="38" cy="232" r="3.2"/>
+          <circle class="pt" cx="362" cy="232" r="3.2"/>
+          <circle class="pt" cx="146" cy="232" r="3.2"/>
+          <circle class="pt" cx="254" cy="232" r="3.2"/>
+
+          <text class="val" x="62.69" y="131.18" text-anchor="middle">6</text>
+          <text class="val" x="243.54" y="125.84" text-anchor="middle">9</text>
+          <text class="val" x="92" y="251" text-anchor="middle">3</text>
+          <text class="val" x="200" y="251" text-anchor="middle">3</text>
+          <text class="val" x="308" y="251" text-anchor="middle">3</text>
+          <text class="val" x="137.85" y="133.44" text-anchor="middle">x</text>
+          <text class="val" x="173.84" y="140.95" text-anchor="middle">y</text>
+
+          <text x="110" y="18.35" text-anchor="middle">A</text>
+          <text x="30" y="238" text-anchor="end">B</text>
+          <text x="370" y="238">C</text>
+          <text x="139" y="226" text-anchor="end">D</text>
+          <text x="261" y="226">E</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      '|BD| = |DE| = |EC| = 3 cm',
+      '|AB| = 6 cm',
+      '|AC| = 9 cm',
+      '|AD| = x',
+      '|AE| = y',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, x² + y² toplamı kaçtır?',
+    choices: [
+      { key: 'A', text: '64' },
+      { key: 'B', text: '72' },
+      { key: 'C', text: '78' },
+      { key: 'D', text: '81' },
+      { key: 'E', text: '90' },
+    ],
+    answer: 'D',
+    hint: 'ABE üçgeninde [AD], ADC üçgeninde [AE] kenarortaydır; iki kenarortay bağıntısını yaz.',
+    solution: [
+      {
+        title: 'ABE üçgeninde kenarortay',
+        detail:
+          'D, [BE] nin orta noktası olduğundan [AD], ABE üçgeninde kenarortaydır: |AB|² + |AE|² = 2|AD|² + |BE|²/2, yani 36 + y² = 2x² + 18.',
+      },
+      {
+        title: 'ADC üçgeninde kenarortay',
+        detail:
+          'E, [DC] nin orta noktası olduğundan [AE], ADC üçgeninde kenarortaydır: |AD|² + |AC|² = 2|AE|² + |DC|²/2, yani x² + 81 = 2y² + 18.',
+      },
+      {
+        title: 'Denklemleri düzenle',
+        detail:
+          'Birinci eşitlikten 2x² − y² = 18, ikinciden 2y² − x² = 63 elde edilir.',
+      },
+      {
+        title: 'Taraf tarafa topla',
+        detail:
+          '(2x² − y²) + (2y² − x²) = 18 + 63, yani x² + y² = 81.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x² + y² = 81 bulunur. (Ayrı ayrı x² = 33, y² = 48 dir.)',
+      },
+    ],
+  },
+  {
+    id: 'triangles-422',
+    topic: 'Dik üçgende ağırlık merkezinin kenara uzaklığı',
+    figure: {
+      viewBox: '0 12 400 212',
+      caption: 'Şekil 422',
+      label:
+        'A açısı dik olan ABC üçgeninde G ağırlık merkezidir; G, B ve C ile birleştirilmiş, G den [BC] ye [GD] dikmesi inilmiştir. |AB| = 9 cm, |AC| = 12 cm ve |GD| = x tir.',
+      svg: `
+          <path class="ln" d="M153.8,31.6 L35,190 L365,190 Z"/>
+          <path class="ln" d="M35,190 L184.6,137.2 L365,190"/>
+          <path class="ln" d="M184.6,137.2 L184.6,190"/>
+          <path class="ln" d="M147.2,40.4 L156,47 L162.6,38.2"/>
+          <path class="ln" d="M195.6,190 L195.6,179 L184.6,179"/>
+
+
+          <circle class="pt" cx="153.8" cy="31.6" r="3.2"/>
+          <circle class="pt" cx="35" cy="190" r="3.2"/>
+          <circle class="pt" cx="365" cy="190" r="3.2"/>
+          <circle class="pt" cx="184.6" cy="190" r="3.2"/>
+          <circle class="pt" cx="184.6" cy="137.2" r="3.2"/>
+
+          <text class="val" x="84.8" y="108.6" text-anchor="middle">9</text>
+          <text class="val" x="266.6" y="106.2" text-anchor="middle">12</text>
+          <text class="val" x="175.6" y="168.6" text-anchor="middle">x</text>
+
+          <text x="153.8" y="21.6" text-anchor="middle">A</text>
+          <text x="27" y="196" text-anchor="end">B</text>
+          <text x="373" y="196">C</text>
+          <text x="184.6" y="212" text-anchor="middle">D</text>
+          <text x="190.6" y="129.2">G</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 12 400 212',
+      caption: 'Şekil 422 — yükseklik ve kenarortay çizildi',
+      label:
+        'Aynı şekle A dan [BC] ye inen [AH] yüksekliği ile [BC] nin orta noktası M ye giden [AM] kenarortayı kesikli çizgiyle eklenmiştir; G, [AM] üzerindedir.',
+      svg: `
+          <path class="ln" d="M153.8,31.6 L35,190 L365,190 Z"/>
+          <path class="ln" d="M35,190 L184.6,137.2 L365,190"/>
+          <path class="ln" d="M184.6,137.2 L184.6,190"/>
+          <path class="ln" d="M147.2,40.4 L156,47 L162.6,38.2"/>
+          <path class="ln" d="M195.6,190 L195.6,179 L184.6,179"/>
+          <path class="aux" d="M153.8,31.6 L200,190"/>
+          <path class="aux" d="M153.8,31.6 L153.8,190"/>
+          <path class="aux" d="M142.8,190 L142.8,179 L153.8,179"/>
+
+
+          <circle class="pt" cx="153.8" cy="31.6" r="3.2"/>
+          <circle class="pt" cx="35" cy="190" r="3.2"/>
+          <circle class="pt" cx="365" cy="190" r="3.2"/>
+          <circle class="pt" cx="184.6" cy="190" r="3.2"/>
+          <circle class="pt" cx="184.6" cy="137.2" r="3.2"/>
+          <circle class="pt" cx="200" cy="190" r="3.2"/>
+          <circle class="pt" cx="153.8" cy="190" r="3.2"/>
+
+          <text class="val" x="84.8" y="108.6" text-anchor="middle">9</text>
+          <text class="val" x="266.6" y="106.2" text-anchor="middle">12</text>
+          <text class="val" x="175.6" y="168.6" text-anchor="middle">x</text>
+
+          <text x="153.8" y="21.6" text-anchor="middle">A</text>
+          <text x="27" y="196" text-anchor="end">B</text>
+          <text x="373" y="196">C</text>
+          <text x="184.6" y="212" text-anchor="middle">D</text>
+          <text x="190.6" y="129.2">G</text>
+          <text x="211" y="212" text-anchor="middle">M</text>
+          <text x="153.8" y="212" text-anchor="middle">H</text>
+        `,
+    },
+    given: [
+      'G, ABC üçgeninin ağırlık merkezi',
+      '[AB] ⊥ [AC]',
+      '[GD] ⊥ [BC]',
+      '|AB| = 9 cm',
+      '|AC| = 12 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |GD| = x kaç cm dir?',
+    choices: [
+      { key: 'A', text: '2' },
+      { key: 'B', text: '12/5' },
+      { key: 'C', text: '5/2' },
+      { key: 'D', text: '3' },
+      { key: 'E', text: '18/5' },
+    ],
+    answer: 'B',
+    hint: 'A dan [BC] ye yüksekliği çiz; ağırlık merkezinin [BC] ye uzaklığı bu yüksekliğin kaçta kaçıdır?',
+    solution: [
+      {
+        title: 'Hipotenüsü bul',
+        detail:
+          'ABC dik üçgeninde |BC|² = 9² + 12² = 225, yani |BC| = 15 cm dir.',
+      },
+      {
+        title: 'Yüksekliği bul',
+        detail:
+          'A dan [BC] ye inen yükseklik [AH] olsun: |AH| = |AB| · |AC| / |BC| = 9 · 12 / 15 = 36/5 cm.',
+      },
+      {
+        title: 'Benzerlik kur',
+        detail:
+          '[BC] nin orta noktası M olsun; G, [AM] kenarortayı üzerindedir ve |GM| = |AM| / 3 tür. [GD] // [AH] olduğundan MGD ile MAH üçgenleri benzerdir: |GD| / |AH| = |GM| / |AM| = 1/3.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x = (1/3) · 36/5 = 12/5 cm bulunur.',
+      },
+    ],
+  },
 ];
 
 /** Looks questions up by id so the modules below read as a running order. */
@@ -37665,6 +38227,21 @@ export const UNIT_2_TRIANGLES: Unit = {
         'triangles-414',
         'triangles-415',
         'triangles-416',
+      ),
+    },
+    {
+      id: 'triangles-m70',
+      order: 70,
+      title: 'Üçgende kenarortay bağıntıları — Test 1',
+      summary:
+        'Ağırlık merkezinin kenarortayı 2 : 1 bölmesi, dik üçgende ağırlık merkezi ile Pisagor, kenarortay üzerinde iç içe ağırlık merkezi, kenarortayların ayırdığı eş alanlar, kenarortay uzunluğu bağıntısı ve ağırlık merkezinin kenara uzaklığı.',
+      questions: pick(
+        'triangles-417',
+        'triangles-418',
+        'triangles-419',
+        'triangles-420',
+        'triangles-421',
+        'triangles-422',
       ),
     },
   ],
