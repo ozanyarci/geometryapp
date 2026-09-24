@@ -48,6 +48,16 @@ describe('unit 4 answer key', () => {
     expect(answerOf('quadrilaterals-17')).toBe('B'));
   it('18 — hexagon = ¾·ABCD = 45, ABCD = 60 → C', () =>
     expect(answerOf('quadrilaterals-18')).toBe('C'));
+  it('19 — ½·9·4·sin 120° = 9√3 → D', () => expect(answerOf('quadrilaterals-19')).toBe('D'));
+  it('20 — AEB = 60, A + B = 240, C + D = 120, α = 120 − 70 = 50 → C', () =>
+    expect(answerOf('quadrilaterals-20')).toBe('C'));
+  it('21 — KL = 7, KN = 4, KLMN = 7·4 = 28 = ½·(½·14·8) → B', () =>
+    expect(answerOf('quadrilaterals-21')).toBe('B'));
+  it('22 — C = 90, BD² = 16 + 25 = 41, x² = 41 − 5 = 36, x = 6 → C', () =>
+    expect(answerOf('quadrilaterals-22')).toBe('C'));
+  it('23 — A + B = 2·65 = 130, C + D = 230, α = 180 − 115 = 65 → C', () =>
+    expect(answerOf('quadrilaterals-23')).toBe('C'));
+  it('24 — all sides 3 from K, ½·3·30 = 45 → C', () => expect(answerOf('quadrilaterals-24')).toBe('C'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
