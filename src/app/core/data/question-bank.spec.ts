@@ -3,6 +3,7 @@ import { CHOICE_KEYS, Question } from '../models';
 import { ANGLES_BANK } from './unit-1-angles';
 import { TRIANGLES_BANK } from './unit-2-triangles';
 import { POLYGONS_BANK } from './unit-3-polygons';
+import { QUADRILATERALS_BANK } from './unit-4-quadrilaterals';
 
 /**
  * As the question bank grows, the most common mistake is mistyping an answer
@@ -99,6 +100,7 @@ describe('question banks', () => {
     { unitId: 'angles', questions: ANGLES_BANK },
     { unitId: 'triangles', questions: TRIANGLES_BANK },
     { unitId: 'polygons', questions: POLYGONS_BANK },
+    { unitId: 'quadrilaterals', questions: QUADRILATERALS_BANK },
   ];
 
   for (const bank of banks) {

@@ -2,12 +2,18 @@ import { Module, Question, Unit } from './models';
 import { UNIT_1_ANGLES } from './data/unit-1-angles';
 import { UNIT_2_TRIANGLES } from './data/unit-2-triangles';
 import { UNIT_3_POLYGONS } from './data/unit-3-polygons';
+import { UNIT_4_QUADRILATERALS } from './data/unit-4-quadrilaterals';
 
 /**
  * Every unit in the app. To add one, create its data file and append it here
  * in curriculum order.
  */
-export const UNITS: readonly Unit[] = [UNIT_1_ANGLES, UNIT_2_TRIANGLES, UNIT_3_POLYGONS];
+export const UNITS: readonly Unit[] = [
+  UNIT_1_ANGLES,
+  UNIT_2_TRIANGLES,
+  UNIT_3_POLYGONS,
+  UNIT_4_QUADRILATERALS,
+];
 
 export function findUnit(id: string): Unit | undefined {
   return UNITS.find((unit) => unit.id === id);
