@@ -70,6 +70,18 @@ describe('unit 4 answer key', () => {
     expect(answerOf('quadrilaterals-29')).toBe('C'));
   it('30 — GH = 9, HE = 6, FG = 7, EF = 25 − 22 = 3 → D', () =>
     expect(answerOf('quadrilaterals-30')).toBe('D'));
+  it('31 — B = 180 − 65 = 115, BEK = 180 − 115 − 20 = 45, α = 45 → C', () =>
+    expect(answerOf('quadrilaterals-31')).toBe('C'));
+  it('32 — AO = 10, EO = 8, OB² = 100 − 64 = 36, BD = 12, 20·12/2 = 120 → D', () =>
+    expect(answerOf('quadrilaterals-32')).toBe('D'));
+  it('33 — AH = BG = 4, HF = AH = 4, x = 11 − 4 = 7 → C', () =>
+    expect(answerOf('quadrilaterals-33')).toBe('C'));
+  it('34 — AT = 5, TB = 5, DC = 10, DTC = 90, TC² = 100 − 64 = 36 → B', () =>
+    expect(answerOf('quadrilaterals-34')).toBe('B'));
+  it('35 — AD = 8, 8/2x = x/5, x² = 20, DF = 2x = 4√5 → D', () =>
+    expect(answerOf('quadrilaterals-35')).toBe('D'));
+  it('36 — A(BAK) = A(BCK) = 27, 9·KF/2 = 27, KF = 6 → C', () =>
+    expect(answerOf('quadrilaterals-36')).toBe('C'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
