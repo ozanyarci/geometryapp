@@ -58,6 +58,18 @@ describe('unit 4 answer key', () => {
   it('23 — A + B = 2·65 = 130, C + D = 230, α = 180 − 115 = 65 → C', () =>
     expect(answerOf('quadrilaterals-23')).toBe('C'));
   it('24 — all sides 3 from K, ½·3·30 = 45 → C', () => expect(answerOf('quadrilaterals-24')).toBe('C'));
+  it('25 — BCD = A + b + d, b + d = 110, α = 2·110 − 145 = 75 → E', () =>
+    expect(answerOf('quadrilaterals-25')).toBe('E'));
+  it('26 — Çevre(KLMN) = AC + BD, 24 = 10 + BD, BD = 14 → B', () =>
+    expect(answerOf('quadrilaterals-26')).toBe('B'));
+  it('27 — 49 − 81 = 16 − x², x² = 48, x = 4√3 → C', () =>
+    expect(answerOf('quadrilaterals-27')).toBe('C'));
+  it('28 — 70 + 180 − 2b + 130 + 2a = 360, b − a = 10, x = 70 − 10 = 60 → D', () =>
+    expect(answerOf('quadrilaterals-28')).toBe('D'));
+  it('29 — ABE = 1, AED = 4, CBE = 3, CED = 12, total 20 → C', () =>
+    expect(answerOf('quadrilaterals-29')).toBe('C'));
+  it('30 — GH = 9, HE = 6, FG = 7, EF = 25 − 22 = 3 → D', () =>
+    expect(answerOf('quadrilaterals-30')).toBe('D'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
