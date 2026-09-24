@@ -404,6 +404,437 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+  // ---------------------------------------------------------------- 7
+  {
+    id: 'quadrilaterals-7',
+    topic: 'Dik üçgende öklit bağıntıları',
+    figure: {
+      viewBox: '0 0 400 259',
+      caption: 'Şekil 7',
+      label:
+        'ABCD dörtgeninde [BD] köşegeni çizilmiş; E noktası [BC] üzerinde, [DE] ⊥ [BC] ve [AE] ⊥ [BD]; |AB| = 7, |DC| = 6 ve |AD| = x olarak işaretlenmiş.',
+      svg: `
+          <path class="ln" d="M114.6,34.0 L50.0,225.5 L350.0,225.5 L250.0,84.0 Z"/>
+          <path class="ln" d="M50.0,225.5 L250.0,84.0"/>
+          <path class="ln" d="M114.6,34.0 L250.0,225.5"/>
+          <path class="ln" d="M250.0,84.0 L250.0,225.5"/>
+          <path class="ln" d="M250.0,215.5 L260.0,215.5 L260.0,225.5"/>
+          <path class="ln" d="M191.5,125.4 L197.3,133.6 L189.1,139.3"/>
+          <circle class="pt" cx="114.6" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="50.0" cy="225.5" r="3.2"/>
+          <circle class="pt" cx="350.0" cy="225.5" r="3.2"/>
+          <circle class="pt" cx="250.0" cy="84.0" r="3.2"/>
+          <circle class="pt" cx="250.0" cy="225.5" r="3.2"/>
+          <text x="104.8" y="25.6" text-anchor="end">A</text>
+          <text x="34.6" y="238.3" text-anchor="end">B</text>
+          <text x="365.4" y="238.2">C</text>
+          <text x="263.9" y="79.7">D</text>
+          <text x="259.8" y="244.8">E</text>
+          <text class="val" x="70.0" y="131.1" text-anchor="middle">7</text>
+          <text class="val" x="310.6" y="152.7" text-anchor="middle">6</text>
+          <text class="val" x="186.8" y="52.3" text-anchor="middle">x</text>
+Q8 A 76.0 B 60.00000000000001 C 93.99999999999999 D 130.0 AFC 54.99999999999998 BCF 43.00000000000001 FCE 43.0
+        `,
+    },
+    given: [
+      'ABCD bir dörtgen',
+      '[AE] ⊥ [BD]',
+      '[DE] ⊥ [BC]',
+      '[AE] // [DC]',
+      '|DC| = 6 cm',
+      '|AB| = 7 cm',
+      '|BE| = 2·|EC|',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |AD| = x kaç cm’dir?',
+    choices: [
+      { key: 'A', text: '2√5' },
+      { key: 'B', text: '5' },
+      { key: 'C', text: '3√3' },
+      { key: 'D', text: '4√2' },
+      { key: 'E', text: '6' },
+    ],
+    answer: 'B',
+    hint: '[AE] hem [BD]’ye dik hem [DC]’ye paralel; bu, BDC üçgeninde D açısı hakkında ne söyler?',
+    solution: [
+      {
+        title: 'D açısı dik',
+        detail:
+          '[AE] // [DC] ve [AE] ⊥ [BD] olduğundan [DC] ⊥ [BD], yani m(BDC) = 90° olur. [DE] bu dik üçgenin hipotenüse ait yüksekliğidir.',
+      },
+      {
+        title: 'Öklit bağıntısı',
+        detail:
+          '|EC| = a, |BE| = 2a olsun. |DC|² = |EC|·|BC| ⇒ 36 = a·3a ⇒ a² = 12 olur. Buradan |BD|² = |BE|·|BC| = 2a·3a = 72, |BD| = 6√2 cm bulunur.',
+      },
+      {
+        title: 'Köşegeni böl',
+        detail:
+          '[AE] ile [BD]’nin kesim noktası H olsun. BDC üçgeninde [EH] // [CD] olduğundan |BH| / |BD| = |BE| / |BC| = 2/3; |BH| = 4√2, |HD| = 2√2 cm olur.',
+      },
+      {
+        title: 'ABH ve ADH dik üçgenleri',
+        detail: '|AH|² = |AB|² − |BH|² = 49 − 32 = 17 olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'x² = |AH|² + |HD|² = 17 + 8 = 25 ⇒ x = 5 cm bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 8
+  {
+    id: 'quadrilaterals-8',
+    topic: 'İç ve dış açıortay arasındaki açı',
+    figure: {
+      viewBox: '0 0 400 358',
+      caption: 'Şekil 8',
+      label:
+        'ABCD dörtgeninde [DC] kenarı C’den E noktasına uzatılmış; A köşesinin açıortayı [BC] kenarını K noktasında keserek F noktasına ulaşıyor, [CF] ise BCE açısının açıortayı; m(ADC) = 130°, m(AFC) = 55° ve B köşesindeki açı α ile gösterilmiş.',
+      svg: `
+          <path class="ln" d="M51.0,324.0 L349.0,324.0 L205.7,75.8 L100.0,127.4 Z"/>
+          <path class="ln" d="M205.7,75.8 L291.4,34.0"/>
+          <path class="ln" d="M51.0,324.0 L322.8,111.6"/>
+          <path class="ln" d="M205.7,75.8 L322.8,111.6"/>
+          <path class="arc" d="M94.7,148.7 A22,22 0 0 0 119.8,117.7"/>
+          <text class="val" x="131.1" y="158.0" text-anchor="middle">130°</text>
+          <path class="arc" d="M305.5,125.2 A22,22 0 0 1 301.8,105.2"/>
+          <text class="val" x="279.6" y="125.1" text-anchor="middle">55°</text>
+          <path class="arc" d="M336.0,301.5 A26,26 0 0 0 323.0,324.0"/>
+          <text class="val" x="314.4" y="309.5" text-anchor="middle">α</text>
+          <circle class="pt" cx="51.0" cy="324.0" r="3.2"/>
+          <circle class="pt" cx="349.0" cy="324.0" r="3.2"/>
+          <circle class="pt" cx="205.7" cy="75.8" r="3.2"/>
+          <circle class="pt" cx="100.0" cy="127.4" r="3.2"/>
+          <circle class="pt" cx="291.4" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="322.8" cy="111.6" r="3.2"/>
+          <circle class="pt" cx="256.4" cy="163.5" r="3.2"/>
+          <text x="38.4" y="340.9" text-anchor="end">A</text>
+          <text x="359.5" y="342.9">B</text>
+          <text x="202.1" y="64.7" text-anchor="middle">C</text>
+          <text x="83.8" y="127.9" text-anchor="end">D</text>
+          <text x="306.7" y="32.0">E</text>
+          <text x="336.2" y="106.6">F</text>
+          <text x="244.3" y="181.1">K</text>
+Q9 scaled AED 30.000000000000004 BEC 14.999999999999996 ABE/CED 5.000000000000001 CED 9.486832980505136 3√10 9.486832980505138
+        `,
+    },
+    given: [
+      'ABCD bir dörtgen',
+      '[AF] ∩ [BC] = {K}',
+      '[AF] ve [CF] açıortay',
+      'm(ADC) = 130°',
+      'm(AFC) = 55°',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, m(ABC) = α kaç derecedir?',
+    choices: [
+      { key: 'A', text: '45' },
+      { key: 'B', text: '50' },
+      { key: 'C', text: '55' },
+      { key: 'D', text: '60' },
+      { key: 'E', text: '65' },
+    ],
+    answer: 'D',
+    hint: 'A’daki açının yarısına a, C’deki iç açıya c de; ADCF dörtgeninin açılarını a ve c ile yaz.',
+    solution: [
+      {
+        title: 'Açılara ad ver',
+        detail:
+          'm(DAB) = 2a ve m(BCD) = c olsun. Dış açı m(BCE) = 180 − c olduğundan açıortay m(BCF) = 90 − c/2 olur.',
+      },
+      {
+        title: 'ADCF dörtgeni',
+        detail:
+          'Açıları m(FAD) = a, m(ADC) = 130°, m(DCF) = c + 90 − c/2 = 90 + c/2 ve m(CFA) = 55° olur.',
+      },
+      {
+        title: 'Denklemi kur',
+        detail: 'a + 130 + 90 + c/2 + 55 = 360 ⇒ a + c/2 = 85 ⇒ 2a + c = 170 bulunur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'ABCD dörtgeninde 2a + α + c + 130 = 360 ⇒ 170 + α + 130 = 360 ⇒ α = 60° bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 9
+  {
+    id: 'quadrilaterals-9',
+    topic: 'Köşegenlerin ayırdığı üçgenlerin alanları',
+    figure: {
+      viewBox: '0 0 400 358',
+      caption: 'Şekil 9',
+      label:
+        'ABCD dörtgeninin [AC] ve [BD] köşegenleri E noktasında kesişiyor; AED üçgeninin içine 30, BEC üçgeninin içine 15 yazılmış.',
+      svg: `
+          <path class="ln" d="M225.2,34.0 L88.0,278.5 L225.2,324.0 L312.0,239.0 Z"/>
+          <path class="ln" d="M225.2,34.0 L225.2,324.0"/>
+          <path class="ln" d="M88.0,278.5 L312.0,239.0"/>
+          <circle class="pt" cx="225.2" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="88.0" cy="278.5" r="3.2"/>
+          <circle class="pt" cx="225.2" cy="324.0" r="3.2"/>
+          <circle class="pt" cx="312.0" cy="239.0" r="3.2"/>
+          <circle class="pt" cx="225.2" cy="254.3" r="3.2"/>
+          <text x="226.1" y="22.5" text-anchor="middle">A</text>
+          <text x="72.3" y="290.5" text-anchor="end">B</text>
+          <text x="227.0" y="346.4" text-anchor="middle">C</text>
+          <text x="328.9" y="246.8">D</text>
+          <text x="233.8" y="272.1">E</text>
+          <text class="val" x="254.1" y="181.3" text-anchor="middle">30</text>
+          <text class="val" x="179.5" y="291.1" text-anchor="middle">15</text>
+Q10 B 90.00000000000001 D 90.00000000000001 A+C 180.0 ratio 0.8333333333333334
+        `,
+    },
+    given: ['ABCD bir dörtgen', 'A(AED) = 30 cm²', 'A(BEC) = 15 cm²', 'A(ABE) = 5·A(CED)'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(ECD) kaç cm²’dir?',
+    choices: [
+      { key: 'A', text: '3√5' },
+      { key: 'B', text: '6√2' },
+      { key: 'C', text: '3√10' },
+      { key: 'D', text: '4√6' },
+      { key: 'E', text: '6√3' },
+    ],
+    answer: 'C',
+    hint: 'Köşegenlerle oluşan dört üçgende karşılıklı iki üçgenin alanları çarpımı, diğer ikisinin alanları çarpımına eşittir.',
+    solution: [
+      {
+        title: 'Karşılıklı üçgenler kuralı',
+        detail:
+          'Dört üçgenin alanları ½·|EA|·|EB|·sin θ biçimindedir; bu yüzden A(ABE)·A(CED) = A(AED)·A(BEC) olur.',
+      },
+      {
+        title: 'Bilinmeyene ad ver',
+        detail: 'A(CED) = S olsun; o hâlde A(ABE) = 5S olur.',
+      },
+      {
+        title: 'Denklemi kur',
+        detail: '5S · S = 30 · 15 ⇒ 5S² = 450 ⇒ S² = 90 olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'S = √90 = 3√10 cm² bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 10
+  {
+    id: 'quadrilaterals-10',
+    topic: 'Karşılıklı açıları bütünler dörtgende alan oranı',
+    figure: {
+      viewBox: '0 0 400 357',
+      caption: 'Şekil 10',
+      label:
+        'ABCD dörtgeninde B ve D köşelerindeki açılar dik; E noktası [AB], F noktası [AD], K noktası [BC], L noktası [DC] üzerinde; AEF ve CKL üçgenleri taralı, |AE| = 5, |AF| = 6, |CK| = 4 ve |CL| = 9 olarak işaretlenmiş.',
+      svg: `
+          <path class="shade" d="M50.0,181.7 L137.8,243.2 L132.6,83.2 Z"/>
+          <path class="shade" d="M350.0,181.7 L300.8,251.9 L202.3,57.8 Z"/>
+          <path class="ln" d="M50.0,181.7 L251.3,322.7 L350.0,181.7 L174.0,34.0 Z"/>
+          <path class="ln" d="M137.8,243.2 L132.6,83.2"/>
+          <path class="ln" d="M300.8,251.9 L202.3,57.8"/>
+          <path class="ln" d="M243.1,316.9 L248.8,308.7 L257.0,314.5"/>
+          <path class="ln" d="M167.5,41.7 L175.2,48.1 L181.6,40.4"/>
+          <circle class="pt" cx="50.0" cy="181.7" r="3.2"/>
+          <circle class="pt" cx="251.3" cy="322.7" r="3.2"/>
+          <circle class="pt" cx="350.0" cy="181.7" r="3.2"/>
+          <circle class="pt" cx="174.0" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="137.8" cy="243.2" r="3.2"/>
+          <circle class="pt" cx="132.6" cy="83.2" r="3.2"/>
+          <circle class="pt" cx="300.8" cy="251.9" r="3.2"/>
+          <circle class="pt" cx="202.3" cy="57.8" r="3.2"/>
+          <text x="33.1" y="188.6" text-anchor="end">A</text>
+          <text x="256.7" y="344.3" text-anchor="middle">B</text>
+          <text x="366.9" y="188.6">C</text>
+          <text x="170.8" y="22.8" text-anchor="middle">D</text>
+          <text x="126.8" y="261.7" text-anchor="end">E</text>
+          <text x="122.2" y="75.3" text-anchor="end">F</text>
+          <text x="314.0" y="268.2">K</text>
+          <text x="202.6" y="46.3" text-anchor="middle">L</text>
+          <text class="val" x="86.4" y="228.6" text-anchor="middle">5</text>
+          <text class="val" x="81.4" y="129.6" text-anchor="middle">6</text>
+          <text class="val" x="336.1" y="229.8" text-anchor="middle">4</text>
+          <text class="val" x="284.5" y="115.3" text-anchor="middle">9</text>
+Q11 EF 5.0 FK 7.000000000000001 EFK 119.99999999999999 area 60.62177826491071 35√3 60.6217782649107
+        `,
+    },
+    given: [
+      'ABCD bir dörtgen',
+      '[AB] ⊥ [BC]',
+      '[AD] ⊥ [DC]',
+      '|AE| = 5 cm',
+      '|AF| = 6 cm',
+      '|CK| = 4 cm',
+      '|CL| = 9 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(AEF) / A(CKL) oranı kaçtır?',
+    choices: [
+      { key: 'A', text: '2/3' },
+      { key: 'B', text: '3/4' },
+      { key: 'C', text: '4/5' },
+      { key: 'D', text: '5/6' },
+      { key: 'E', text: '6/5' },
+    ],
+    answer: 'D',
+    hint: 'B ve D açıları dik olduğundan m(Â) + m(Ĉ) kaçtır? Bütünler açıların sinüsleri eşittir.',
+    solution: [
+      {
+        title: 'A ve C açıları bütünler',
+        detail: 'Dörtgende m(Â) + m(Ĉ) = 360 − (90 + 90) = 180° olur; bu yüzden sin Â = sin Ĉ.',
+      },
+      {
+        title: 'İki alanı yaz',
+        detail: 'A(AEF) = ½·5·6·sin Â = 15·sin Â ve A(CKL) = ½·4·9·sin Ĉ = 18·sin Ĉ olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'A(AEF) / A(CKL) = 15 / 18 = 5/6 bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 11
+  {
+    id: 'quadrilaterals-11',
+    topic: 'Kenar orta noktaları ve köşegenler',
+    figure: {
+      viewBox: '0 0 400 254',
+      caption: 'Şekil 11',
+      label:
+        'ABCD dörtgeninde E, F ve K sırasıyla [AB], [AD] ve [DC] kenarlarının orta noktaları; [EF] ve [FK] çizilmiş, |EF| = 5, |FK| = 7 ve m(EFK) = 120° olarak işaretlenmiş.',
+      svg: `
+          <path class="ln" d="M50.0,108.2 L135.7,34.0 L350.0,108.2 L242.9,219.6 Z"/>
+          <path class="ln" d="M92.9,71.1 L146.4,163.9 L296.4,163.9"/>
+          <path class="arc" d="M137.4,148.3 A18,18 0 0 1 164.4,163.9"/>
+          <text class="val" x="164.4" y="138.2" text-anchor="middle">120°</text>
+          <circle class="pt" cx="50.0" cy="108.2" r="3.2"/>
+          <circle class="pt" cx="135.7" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="350.0" cy="108.2" r="3.2"/>
+          <circle class="pt" cx="242.9" cy="219.6" r="3.2"/>
+          <circle class="pt" cx="92.9" cy="71.1" r="3.2"/>
+          <circle class="pt" cx="146.4" cy="163.9" r="3.2"/>
+          <circle class="pt" cx="296.4" cy="163.9" r="3.2"/>
+          <text x="33.1" y="111.8" text-anchor="end">A</text>
+          <text x="127.2" y="24.8" text-anchor="end">B</text>
+          <text x="366.9" y="112.1">C</text>
+          <text x="251.4" y="239.8">D</text>
+          <text x="78.0" y="68.3" text-anchor="end">E</text>
+          <text x="134.2" y="181.2" text-anchor="end">F</text>
+          <text x="312.4" y="175.2">K</text>
+          <text class="val" x="108.4" y="129.5" text-anchor="middle">5</text>
+          <text class="val" x="221.4" y="182.4" text-anchor="middle">7</text>
+Q12 AKL/CMN 0.7142857142857143 KLMN/ABCD 0.5 KLMN if AKL=5 24.0
+        `,
+    },
+    given: [
+      'ABCD bir dörtgen',
+      'E, F ve K kenarların orta noktaları',
+      '|EF| = 5 cm',
+      '|FK| = 7 cm',
+      'm(EFK) = 120°',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(ABCD) kaç cm²’dir?',
+    choices: [
+      { key: 'A', text: '35√2' },
+      { key: 'B', text: '35√3' },
+      { key: 'C', text: '70' },
+      { key: 'D', text: '70√2' },
+      { key: 'E', text: '70√3' },
+    ],
+    answer: 'B',
+    hint: 'ABD üçgeninde [EF] orta tabandır; ACD üçgeninde [FK] için de aynısı geçerlidir.',
+    solution: [
+      {
+        title: 'Orta tabanlar',
+        detail:
+          'ABD üçgeninde [EF] orta taban olduğundan [EF] // [BD] ve |BD| = 2·5 = 10 cm olur. ACD üçgeninde [FK] orta taban olduğundan [FK] // [AC] ve |AC| = 2·7 = 14 cm olur.',
+      },
+      {
+        title: 'Köşegenler arasındaki açı',
+        detail:
+          '[FE] // [BD] ve [FK] // [AC] olduğundan köşegenler arasındaki açı m(EFK) = 120° (ya da bütünleri 60°) olur; sin 120° = √3/2.',
+      },
+      {
+        title: 'Alan formülü',
+        detail: 'A(ABCD) = ½·|AC|·|BD|·sin 120° = ½ · 14 · 10 · √3/2 olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'A(ABCD) = 35√3 cm² bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 12
+  {
+    id: 'quadrilaterals-12',
+    topic: 'Orta noktalar dörtgeninin alanı',
+    figure: {
+      viewBox: '0 0 400 295',
+      caption: 'Şekil 12',
+      label:
+        'ABCD dörtgeninde K, L, M ve N sırasıyla [AD], [AB], [BC] ve [CD] kenarlarının orta noktaları; KLMN dörtgeni çizilmiş, AKL ve CMN üçgenleri taralı.',
+      svg: `
+          <path class="shade" d="M50.0,261.3 L68.0,177.3 L170.0,261.3 Z"/>
+          <path class="shade" d="M350.0,34.0 L320.0,147.6 L218.0,63.6 Z"/>
+          <path class="ln" d="M50.0,261.3 L290.0,261.3 L350.0,34.0 L86.0,93.3 Z"/>
+          <path class="ln" d="M68.0,177.3 L170.0,261.3 L320.0,147.6 L218.0,63.6 Z"/>
+          <circle class="pt" cx="50.0" cy="261.3" r="3.2"/>
+          <circle class="pt" cx="290.0" cy="261.3" r="3.2"/>
+          <circle class="pt" cx="350.0" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="86.0" cy="93.3" r="3.2"/>
+          <circle class="pt" cx="68.0" cy="177.3" r="3.2"/>
+          <circle class="pt" cx="170.0" cy="261.3" r="3.2"/>
+          <circle class="pt" cx="320.0" cy="147.6" r="3.2"/>
+          <circle class="pt" cx="218.0" cy="63.6" r="3.2"/>
+          <text x="36.0" y="276.4" text-anchor="end">A</text>
+          <text x="301.8" y="279.0">B</text>
+          <text x="363.1" y="28.7">C</text>
+          <text x="71.7" y="89.6" text-anchor="end">D</text>
+          <text x="51.1" y="184.8" text-anchor="end">K</text>
+          <text x="166.0" y="283.3" text-anchor="middle">L</text>
+          <text x="336.9" y="151.2">M</text>
+          <text x="222.0" y="52.6" text-anchor="middle">N</text>
+        `,
+    },
+    given: ['ABCD bir dörtgen', 'K, L, M ve N orta noktalar', 'A(AKL) = 5 cm²', 'A(CMN) = 7 cm²'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(KLMN) kaç cm²’dir?',
+    choices: [
+      { key: 'A', text: '16' },
+      { key: 'B', text: '20' },
+      { key: 'C', text: '24' },
+      { key: 'D', text: '28' },
+      { key: 'E', text: '32' },
+    ],
+    answer: 'C',
+    hint: 'AKL üçgeni ABD üçgeninin, CMN üçgeni de CBD üçgeninin küçültülmüş hâlidir; benzerlik oranı 1/2.',
+    solution: [
+      {
+        title: 'AKL ve ABD üçgenleri',
+        detail:
+          '[KL] orta taban olduğundan AKL ile ADB üçgenleri 1/2 oranında benzerdir; A(ABD) = 4·5 = 20 cm² olur.',
+      },
+      {
+        title: 'CMN ve CBD üçgenleri',
+        detail: 'Aynı şekilde A(CBD) = 4·7 = 28 cm² olur.',
+      },
+      {
+        title: 'Dörtgenin alanı',
+        detail: 'A(ABCD) = 20 + 28 = 48 cm² olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'Kenar orta noktalarının oluşturduğu dörtgenin alanı ana dörtgenin alanının yarısıdır: A(KLMN) = 48 / 2 = 24 cm² bulunur.',
+      },
+    ],
+  },
 ];
 
 /** Resolves question ids to their bank entries, failing loudly on a typo. */
@@ -442,6 +873,21 @@ export const UNIT_4_QUADRILATERALS: Unit = {
         'quadrilaterals-4',
         'quadrilaterals-5',
         'quadrilaterals-6',
+      ),
+    },
+    {
+      id: 'quadrilaterals-m2',
+      order: 2,
+      title: 'Dörtgende uzunluk, açı ve alan bağıntıları',
+      summary:
+        'Öklit bağıntısı, iç ve dış açıortaylar, köşegenlerin ayırdığı alanlar, bütünler açılar ve kenar orta noktalarıyla alan.',
+      questions: pick(
+        'quadrilaterals-7',
+        'quadrilaterals-8',
+        'quadrilaterals-9',
+        'quadrilaterals-10',
+        'quadrilaterals-11',
+        'quadrilaterals-12',
       ),
     },
   ],
