@@ -14956,6 +14956,586 @@ Q11 EF 5.0 FK 7.000000000000001 EFK 119.99999999999999 area 60.62177826491071 35
       },
     ],
   },
+  {
+    id: 'quadrilaterals-188',
+    topic: 'Yamukta kenar ortasıyla benzerlik ve alan',
+    figure: {
+      viewBox: '0 0 400 180',
+      caption: 'Şekil 188',
+      label:
+        'ABCD yamuğunda [AB] ∥ [DC]; F noktası [BC] nin orta noktası; [AF] ile [BD] E de kesişiyor; DEFC dörtgeni taralı.',
+      svg: `
+          <path class="shade" d="M76.0,42.0 L178.9,103.7 L202.0,96.0 L148.0,42.0 Z"/>
+          <path class="ln" d="M40.0,150.0 L256.0,150.0 L148.0,42.0 L76.0,42.0 Z"/>
+          <path class="ln" d="M40.0,150.0 L202.0,96.0"/>
+          <path class="ln" d="M256.0,150.0 L76.0,42.0"/>
+          <path class="tick" d="M179.2,64.8 L170.8,73.2"/>
+          <path class="tick" d="M233.2,118.8 L224.8,127.2"/>
+          <circle class="pt" cx="40.0" cy="150.0" r="3.2"/>
+          <circle class="pt" cx="256.0" cy="150.0" r="3.2"/>
+          <circle class="pt" cx="148.0" cy="42.0" r="3.2"/>
+          <circle class="pt" cx="76.0" cy="42.0" r="3.2"/>
+          <circle class="pt" cx="178.9" cy="103.7" r="3.2"/>
+          <circle class="pt" cx="202.0" cy="96.0" r="3.2"/>
+          <text x="32.0" y="166.0" text-anchor="end">A</text>
+          <text x="264.0" y="166.0">B</text>
+          <text x="148.0" y="34.0" text-anchor="middle">C</text>
+          <text x="76.0" y="34.0" text-anchor="middle">D</text>
+          <text x="178.9" y="123.7" text-anchor="middle">E</text>
+          <text x="212.0" y="100.0">F</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 0 400 180',
+      caption: 'Şekil 188',
+      label:
+        'ABCD yamuğunda [AF] uzatılıp [DC] nin uzantısını G de kesiyor.',
+      svg: `
+          <path class="shade" d="M76.0,42.0 L178.9,103.7 L202.0,96.0 L148.0,42.0 Z"/>
+          <path class="ln" d="M40.0,150.0 L256.0,150.0 L148.0,42.0 L76.0,42.0 Z"/>
+          <path class="ln" d="M40.0,150.0 L202.0,96.0"/>
+          <path class="ln" d="M256.0,150.0 L76.0,42.0"/>
+          <path class="tick" d="M179.2,64.8 L170.8,73.2"/>
+          <path class="tick" d="M233.2,118.8 L224.8,127.2"/>
+          <path class="aux" d="M148.0,42.0 L364.0,42.0"/>
+          <path class="aux" d="M202.0,96.0 L364.0,42.0"/>
+          <circle class="pt" cx="364.0" cy="42.0" r="3.2"/>
+          <text x="364.0" y="34.0" text-anchor="middle">G</text>
+          <circle class="pt" cx="40.0" cy="150.0" r="3.2"/>
+          <circle class="pt" cx="256.0" cy="150.0" r="3.2"/>
+          <circle class="pt" cx="148.0" cy="42.0" r="3.2"/>
+          <circle class="pt" cx="76.0" cy="42.0" r="3.2"/>
+          <circle class="pt" cx="178.9" cy="103.7" r="3.2"/>
+          <circle class="pt" cx="202.0" cy="96.0" r="3.2"/>
+          <text x="32.0" y="166.0" text-anchor="end">A</text>
+          <text x="264.0" y="166.0">B</text>
+          <text x="148.0" y="34.0" text-anchor="middle">C</text>
+          <text x="76.0" y="34.0" text-anchor="middle">D</text>
+          <text x="178.9" y="123.7" text-anchor="middle">E</text>
+          <text x="212.0" y="100.0">F</text>
+        `,
+    },
+    given: [
+      'ABCD bir yamuk',
+      '[AB] ∥ [DC]',
+      '|AB| = 3|DC|',
+      '|CF| = |FB|',
+      'Alan(ABCD) = 56 cm²',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki şekilde [AF] ∩ [BD] = {E} olduğuna göre, Alan(DEFC) kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '9' },
+      { key: 'B', text: '10' },
+      { key: 'C', text: '11' },
+      { key: 'D', text: '12' },
+      { key: 'E', text: '14' },
+    ],
+    answer: 'C',
+    hint: '[AF] yi, [DC] nin uzantısını kesene kadar uzatın ve F nin orta nokta olmasını kullanın.',
+    solution: [
+      {
+        title: 'Alanı paylaştırma',
+        detail:
+          '|DC| = a, |AB| = 3a olsun. BCD ve ABD üçgenlerinin yükseklikleri eşit olduğundan A(BCD) = 56 · a/(a + 3a) = 14 cm².',
+      },
+      {
+        title: 'Uzatma',
+        detail:
+          '[AF], [DC] nin uzantısını G de kessin. |CF| = |FB| ve [CG] ∥ [AB] olduğundan FCG ≅ FBA, yani |CG| = |AB| = 3a ve |DG| = 4a.',
+      },
+      {
+        title: 'Benzerlik',
+        detail:
+          'ABE ∼ GDE ⇒ |BE| / |ED| = |AB| / |DG| = 3/4, yani |BE| = (3/7)|BD|.',
+      },
+      {
+        title: 'Küçük üçgen',
+        detail:
+          'A(BEF) = (3/7) · (1/2) · A(BDC) = (3/14) · 14 = 3 cm².',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'Alan(DEFC) = A(BCD) − A(BEF) = 14 − 3 = 11 cm² bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'quadrilaterals-189',
+    topic: 'Yamukta kenar ortası ve paralelle uzunluk',
+    figure: {
+      viewBox: '0 0 400 210',
+      caption: 'Şekil 189',
+      label:
+        'ABCD yamuğunda [AB] ∥ [DC]; E noktası [BC] nin orta noktası; [ED] ⊥ [DA]; F noktası [AB] üzerinde ve [EF] ∥ [DA]; |AD| = 6 cm, |ED| = 4 cm.',
+      svg: `
+          <path class="ln" d="M50.0,180.0 L290.0,180.0 L218.0,36.0 L158.0,36.0 Z"/>
+          <path class="ln" d="M158.0,36.0 L254.0,108.0"/>
+          <path class="ln" d="M254.0,108.0 L200.0,180.0"/>
+          <path class="arc" d="M152.0,44.0 L160.0,50.0 L166.0,42.0"/>
+          <path class="tick" d="M266.6,146.7 L277.4,141.3"/>
+          <path class="tick" d="M230.6,74.7 L241.4,69.3"/>
+          <text class="val" x="92.0" y="108.0" text-anchor="end">6</text>
+          <text class="val" x="202.0" y="90.0" text-anchor="end">4</text>
+          <circle class="pt" cx="50.0" cy="180.0" r="3.2"/>
+          <circle class="pt" cx="290.0" cy="180.0" r="3.2"/>
+          <circle class="pt" cx="218.0" cy="36.0" r="3.2"/>
+          <circle class="pt" cx="158.0" cy="36.0" r="3.2"/>
+          <circle class="pt" cx="254.0" cy="108.0" r="3.2"/>
+          <circle class="pt" cx="200.0" cy="180.0" r="3.2"/>
+          <text x="42.0" y="196.0" text-anchor="end">A</text>
+          <text x="290.0" y="200.0" text-anchor="middle">B</text>
+          <text x="226.0" y="30.0">C</text>
+          <text x="150.0" y="30.0" text-anchor="end">D</text>
+          <text x="264.0" y="112.0">E</text>
+          <text x="200.0" y="200.0" text-anchor="middle">F</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 0 400 210',
+      caption: 'Şekil 189',
+      label:
+        'ABCD yamuğunda [DE] uzatılıp [AB] nin uzantısını G de kesiyor.',
+      svg: `
+          <path class="ln" d="M50.0,180.0 L290.0,180.0 L218.0,36.0 L158.0,36.0 Z"/>
+          <path class="ln" d="M158.0,36.0 L254.0,108.0"/>
+          <path class="ln" d="M254.0,108.0 L200.0,180.0"/>
+          <path class="arc" d="M152.0,44.0 L160.0,50.0 L166.0,42.0"/>
+          <path class="tick" d="M266.6,146.7 L277.4,141.3"/>
+          <path class="tick" d="M230.6,74.7 L241.4,69.3"/>
+          <path class="aux" d="M290.0,180.0 L350.0,180.0"/>
+          <path class="aux" d="M254.0,108.0 L350.0,180.0"/>
+          <circle class="pt" cx="350.0" cy="180.0" r="3.2"/>
+          <text x="358.0" y="196.0">G</text>
+          <text class="val" x="92.0" y="108.0" text-anchor="end">6</text>
+          <text class="val" x="202.0" y="90.0" text-anchor="end">4</text>
+          <circle class="pt" cx="50.0" cy="180.0" r="3.2"/>
+          <circle class="pt" cx="290.0" cy="180.0" r="3.2"/>
+          <circle class="pt" cx="218.0" cy="36.0" r="3.2"/>
+          <circle class="pt" cx="158.0" cy="36.0" r="3.2"/>
+          <circle class="pt" cx="254.0" cy="108.0" r="3.2"/>
+          <circle class="pt" cx="200.0" cy="180.0" r="3.2"/>
+          <text x="42.0" y="196.0" text-anchor="end">A</text>
+          <text x="290.0" y="200.0" text-anchor="middle">B</text>
+          <text x="226.0" y="30.0">C</text>
+          <text x="150.0" y="30.0" text-anchor="end">D</text>
+          <text x="264.0" y="112.0">E</text>
+          <text x="200.0" y="200.0" text-anchor="middle">F</text>
+        `,
+    },
+    given: [
+      'ABCD bir yamuk',
+      '[EF] ∥ [DA]',
+      '[ED] ⊥ [DA]',
+      '|BE| = |EC|',
+      '|AD| = 6 cm',
+      '|ED| = 4 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |DC| + |FB| toplamı kaç cm dir?',
+    choices: [
+      { key: 'A', text: '3' },
+      { key: 'B', text: '2√3' },
+      { key: 'C', text: '4' },
+      { key: 'D', text: '5' },
+      { key: 'E', text: '2√7' },
+    ],
+    answer: 'D',
+    hint: '[DE] yi, [AB] nin uzantısını kesene kadar uzatın.',
+    solution: [
+      {
+        title: 'Uzatma',
+        detail:
+          '[DE], [AB] nin uzantısını G de kessin. |BE| = |EC| ve [DC] ∥ [BG] olduğundan DEC ≅ GEB; buradan |EG| = |ED| = 4 cm ve |BG| = |DC|.',
+      },
+      {
+        title: 'Dik üçgen',
+        detail:
+          'ADG üçgeninde D açısı dik, |AD| = 6 cm, |DG| = 8 cm ⇒ |AG|² = 36 + 64 = 100, |AG| = 10 cm.',
+      },
+      {
+        title: 'Orta taban',
+        detail:
+          'E, [DG] nin orta noktası ve [EF] ∥ [DA] olduğundan F, [AG] nin orta noktasıdır: |FG| = 5 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '|FG| = |FB| + |BG| = |FB| + |DC| ⇒ |DC| + |FB| = 5 cm bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'quadrilaterals-190',
+    topic: 'Dik yamukta açıortaylarla alan',
+    figure: {
+      viewBox: '0 0 400 250',
+      caption: 'Şekil 190',
+      label:
+        'ABCD dik yamuğunda B ve C açıları dik; [AE] ve [DE] açıortay; [EF] ⊥ [BC]; |AB| = 15 cm, |DC| = 6 cm, |EF| = 3 cm.',
+      svg: `
+          <path class="ln" d="M80.0,220.0 L320.0,220.0 L320.0,28.0 L224.0,28.0 Z"/>
+          <path class="ln" d="M80.0,220.0 L272.0,124.0"/>
+          <path class="ln" d="M224.0,28.0 L272.0,124.0"/>
+          <path class="ln" d="M272.0,124.0 L320.0,124.0"/>
+          <path class="arc" d="M310.0,220.0 L310.0,210.0 L320.0,210.0"/>
+          <path class="arc" d="M320.0,38.0 L310.0,38.0 L310.0,28.0"/>
+          <path class="arc" d="M312.0,124.0 L312.0,116.0 L320.0,116.0"/>
+          <path class="arc" d="M106.0,220.0 A26,26 0 0,0 103.3,208.4"/>
+          <path class="arc" d="M103.3,208.4 A26,26 0 0,0 95.6,199.2"/>
+          <path class="arc" d="M213.2,42.4 A18,18 0 0,0 232.0,44.1"/>
+          <path class="arc" d="M232.0,44.1 A18,18 0 0,0 242.0,28.0"/>
+          <path class="arc" d="M210.8,45.6 A22,22 0 0,0 233.8,47.7"/>
+          <path class="arc" d="M233.8,47.7 A22,22 0 0,0 246.0,28.0"/>
+          <text class="val" x="200.0" y="240.0" text-anchor="middle">15</text>
+          <text class="val" x="297.6" y="20.0" text-anchor="middle">6</text>
+          <text class="val" x="296.0" y="118.0" text-anchor="middle">3</text>
+          <circle class="pt" cx="80.0" cy="220.0" r="3.2"/>
+          <circle class="pt" cx="320.0" cy="220.0" r="3.2"/>
+          <circle class="pt" cx="320.0" cy="28.0" r="3.2"/>
+          <circle class="pt" cx="224.0" cy="28.0" r="3.2"/>
+          <circle class="pt" cx="272.0" cy="124.0" r="3.2"/>
+          <circle class="pt" cx="320.0" cy="124.0" r="3.2"/>
+          <text x="72.0" y="236.0" text-anchor="end">A</text>
+          <text x="328.0" y="236.0">B</text>
+          <text x="328.0" y="22.0">C</text>
+          <text x="216.0" y="22.0" text-anchor="end">D</text>
+          <text x="264.0" y="142.0" text-anchor="end">E</text>
+          <text x="330.0" y="129.0">F</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 0 400 250',
+      caption: 'Şekil 190',
+      label:
+        'E noktasından [AD], [AB] ve [DC] ye inilen dikmeler K, M ve N noktalarında.',
+      svg: `
+          <path class="ln" d="M80.0,220.0 L320.0,220.0 L320.0,28.0 L224.0,28.0 Z"/>
+          <path class="ln" d="M80.0,220.0 L272.0,124.0"/>
+          <path class="ln" d="M224.0,28.0 L272.0,124.0"/>
+          <path class="ln" d="M272.0,124.0 L320.0,124.0"/>
+          <path class="arc" d="M310.0,220.0 L310.0,210.0 L320.0,210.0"/>
+          <path class="arc" d="M320.0,38.0 L310.0,38.0 L310.0,28.0"/>
+          <path class="arc" d="M312.0,124.0 L312.0,116.0 L320.0,116.0"/>
+          <path class="arc" d="M106.0,220.0 A26,26 0 0,0 103.3,208.4"/>
+          <path class="arc" d="M103.3,208.4 A26,26 0 0,0 95.6,199.2"/>
+          <path class="arc" d="M213.2,42.4 A18,18 0 0,0 232.0,44.1"/>
+          <path class="arc" d="M232.0,44.1 A18,18 0 0,0 242.0,28.0"/>
+          <path class="arc" d="M210.8,45.6 A22,22 0 0,0 233.8,47.7"/>
+          <path class="arc" d="M233.8,47.7 A22,22 0 0,0 246.0,28.0"/>
+          <path class="aux" d="M272.0,124.0 L195.2,66.4"/>
+          <path class="aux" d="M272.0,124.0 L272.0,220.0"/>
+          <path class="aux" d="M272.0,124.0 L272.0,28.0"/>
+          <circle class="pt" cx="195.2" cy="66.4" r="3.2"/>
+          <circle class="pt" cx="272.0" cy="220.0" r="3.2"/>
+          <circle class="pt" cx="272.0" cy="28.0" r="3.2"/>
+          <text x="185.2" y="64.4" text-anchor="end">K</text>
+          <text x="272.0" y="240.0" text-anchor="middle">M</text>
+          <text x="268.0" y="20.0" text-anchor="end">N</text>
+          <text class="val" x="200.0" y="240.0" text-anchor="middle">15</text>
+          <text class="val" x="297.6" y="20.0" text-anchor="middle">6</text>
+          <text class="val" x="296.0" y="118.0" text-anchor="middle">3</text>
+          <circle class="pt" cx="80.0" cy="220.0" r="3.2"/>
+          <circle class="pt" cx="320.0" cy="220.0" r="3.2"/>
+          <circle class="pt" cx="320.0" cy="28.0" r="3.2"/>
+          <circle class="pt" cx="224.0" cy="28.0" r="3.2"/>
+          <circle class="pt" cx="272.0" cy="124.0" r="3.2"/>
+          <circle class="pt" cx="320.0" cy="124.0" r="3.2"/>
+          <text x="72.0" y="236.0" text-anchor="end">A</text>
+          <text x="328.0" y="236.0">B</text>
+          <text x="328.0" y="22.0">C</text>
+          <text x="216.0" y="22.0" text-anchor="end">D</text>
+          <text x="264.0" y="142.0" text-anchor="end">E</text>
+          <text x="330.0" y="129.0">F</text>
+        `,
+    },
+    given: [
+      'ABCD dik yamuk',
+      '[AE] ve [DE] açıortay',
+      '[EF] ⊥ [BC]',
+      '|AB| = 15 cm',
+      '|EF| = 3 cm',
+      '|DC| = 6 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(ABCD) kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '99' },
+      { key: 'B', text: '108' },
+      { key: 'C', text: '117' },
+      { key: 'D', text: '126' },
+      { key: 'E', text: '135' },
+    ],
+    answer: 'D',
+    hint: 'Açıortay üzerindeki bir nokta, açının kollarına eşit uzaklıktadır.',
+    solution: [
+      {
+        title: 'Dikmeler',
+        detail:
+          'E den [AD], [AB] ve [DC] ye dikmeler [EK], [EM] ve [EN] olsun. E iki açıortayın üzerinde olduğundan |EK| = |EM| = |EN|.',
+      },
+      {
+        title: 'Eş parçalar',
+        detail:
+          '|MB| = |NC| = |EF| = 3 cm ⇒ |AM| = 15 − 3 = 12 cm, |DN| = 6 − 3 = 3 cm. Eş dik üçgenlerden |AK| = |AM| = 12 cm, |DK| = |DN| = 3 cm; yani |AD| = 15 cm.',
+      },
+      {
+        title: 'Yükseklik',
+        detail:
+          'D den [AB] ye inilen dikmenin ayağı ile A arasındaki uzaklık 15 − 6 = 9 cm ⇒ h² = 15² − 9² = 144, h = 12 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'A(ABCD) = (15 + 6) · 12 / 2 = 126 cm² bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'quadrilaterals-191',
+    topic: 'Yamukta paralelkenar ve üçgen alanı',
+    figure: {
+      viewBox: '0 20 400 180',
+      caption: 'Şekil 191',
+      label:
+        'ABCD yamuğunda E noktası [AB] üzerinde; AECD paralelkenar; paralelkenarın alanı S₁, ECB üçgeninin alanı S₂.',
+      svg: `
+          <path class="ln" d="M40.0,170.0 L360.0,170.0 L290.0,50.0 L90.0,50.0 Z"/>
+          <path class="ln" d="M290.0,50.0 L240.0,170.0"/>
+          <text x="170.0" y="116.0" text-anchor="middle">S₁</text>
+          <text x="292.0" y="136.0" text-anchor="middle">S₂</text>
+          <circle class="pt" cx="40.0" cy="170.0" r="3.2"/>
+          <circle class="pt" cx="360.0" cy="170.0" r="3.2"/>
+          <circle class="pt" cx="290.0" cy="50.0" r="3.2"/>
+          <circle class="pt" cx="90.0" cy="50.0" r="3.2"/>
+          <circle class="pt" cx="240.0" cy="170.0" r="3.2"/>
+          <text x="32.0" y="186.0" text-anchor="end">A</text>
+          <text x="368.0" y="186.0">B</text>
+          <text x="298.0" y="44.0">C</text>
+          <text x="82.0" y="44.0" text-anchor="end">D</text>
+          <text x="240.0" y="190.0" text-anchor="middle">E</text>
+        `,
+    },
+    given: [
+      'ABCD bir yamuk ve AECD paralelkenar',
+      '|DC| = 10 cm, |AB| = 16 cm',
+      'A(AECD) = S₁, A(ECB) = S₂',
+      'S₁ − S₂ = 28 cm²',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, ABCD yamuğunun alanı kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '36' },
+      { key: 'B', text: '40' },
+      { key: 'C', text: '44' },
+      { key: 'D', text: '48' },
+      { key: 'E', text: '52' },
+    ],
+    answer: 'E',
+    hint: 'Paralelkenar ile üçgenin yükseklikleri aynıdır; ikisini de h cinsinden yazın.',
+    solution: [
+      {
+        title: 'Tabanlar',
+        detail:
+          'AECD paralelkenar olduğundan |AE| = |DC| = 10 cm, dolayısıyla |EB| = 16 − 10 = 6 cm.',
+      },
+      {
+        title: 'Alanlar',
+        detail:
+          'Yükseklik h olsun: S₁ = 10h, S₂ = 6h/2 = 3h.',
+      },
+      {
+        title: 'Denklem',
+        detail:
+          'S₁ − S₂ = 7h = 28 ⇒ h = 4 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'A(ABCD) = (10 + 16) · 4 / 2 = 52 cm² bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'quadrilaterals-192',
+    topic: 'Dik yamukta dik köşegenlerle alan',
+    figure: {
+      viewBox: '0 0 400 225',
+      caption: 'Şekil 192',
+      label:
+        'ABCD dik yamuğunda B ve C açıları dik; [AC] ile [BD] E de dik kesişiyor; |DC| = 10 cm, |BC| = 20 cm; ADE üçgeni taralı.',
+      svg: `
+          <path class="shade" d="M40.0,195.0 L280.0,35.0 L296.0,67.0 Z"/>
+          <path class="ln" d="M40.0,195.0 L360.0,195.0 L360.0,35.0 L280.0,35.0 Z"/>
+          <path class="ln" d="M40.0,195.0 L360.0,35.0"/>
+          <path class="ln" d="M360.0,195.0 L280.0,35.0"/>
+          <path class="arc" d="M350.0,195.0 L350.0,185.0 L360.0,185.0"/>
+          <path class="arc" d="M360.0,45.0 L350.0,45.0 L350.0,35.0"/>
+          <path class="arc" d="M303.2,63.4 L299.6,56.3 L292.4,59.8"/>
+          <text class="val" x="320.0" y="27.0" text-anchor="middle">10</text>
+          <text class="val" x="370.0" y="120.0">20</text>
+          <circle class="pt" cx="40.0" cy="195.0" r="3.2"/>
+          <circle class="pt" cx="360.0" cy="195.0" r="3.2"/>
+          <circle class="pt" cx="360.0" cy="35.0" r="3.2"/>
+          <circle class="pt" cx="280.0" cy="35.0" r="3.2"/>
+          <circle class="pt" cx="296.0" cy="67.0" r="3.2"/>
+          <text x="32.0" y="211.0" text-anchor="end">A</text>
+          <text x="368.0" y="211.0">B</text>
+          <text x="368.0" y="29.0">C</text>
+          <text x="272.0" y="29.0" text-anchor="end">D</text>
+          <text x="296.0" y="89.0" text-anchor="middle">E</text>
+        `,
+    },
+    given: [
+      'ABCD dik yamuk',
+      '[BD] ⊥ [AC]',
+      '|DC| = 10 cm',
+      '|BC| = 20 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, ADE üçgeninin alanı kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '72' },
+      { key: 'B', text: '80' },
+      { key: 'C', text: '90' },
+      { key: 'D', text: '96' },
+      { key: 'E', text: '108' },
+    ],
+    answer: 'B',
+    hint: 'DCB ve CBA dik üçgenlerindeki açıları karşılaştırın.',
+    solution: [
+      {
+        title: 'Benzerlik',
+        detail:
+          '[BD] ⊥ [AC] olduğundan m(CBD) = m(BAC); DCB ∼ CBA ⇒ |DC| / |BC| = |BC| / |AB| ⇒ |AB| = 400/10 = 40 cm.',
+      },
+      {
+        title: 'Eş alanlar',
+        detail:
+          'ABD ve ABC üçgenlerinin tabanı ve yüksekliği ortaktır; ikisinden A(ABE) çıkarılırsa A(ADE) = A(BCE).',
+      },
+      {
+        title: 'Oran',
+        detail:
+          'DEC ∼ BEA ⇒ |CE| / |EA| = 10/40 = 1/4, yani |CE| = |CA|/5.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'A(ABC) = 40 · 20 / 2 = 400 cm² ⇒ A(BCE) = 400/5 = 80 cm², A(ADE) = 80 cm² bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'quadrilaterals-193',
+    topic: 'Yamukta dikmeyle Öklit bağıntısı',
+    figure: {
+      viewBox: '0 0 400 215',
+      caption: 'Şekil 193',
+      label:
+        'ABCD yamuğunda [DC] ∥ [AB]; E noktası [BC] üzerinde; [AD] ⊥ [DE]; [DH] ⊥ [AB]; |AD| = 15 cm, |DE| = 5 cm.',
+      svg: `
+          <path class="ln" d="M30.0,185.0 L246.0,185.0 L192.0,23.0 L151.5,23.0 Z"/>
+          <path class="ln" d="M151.5,23.0 L205.5,63.5"/>
+          <path class="ln" d="M151.5,23.0 L151.5,185.0"/>
+          <path class="arc" d="M146.1,30.2 L153.3,35.6 L158.7,28.4"/>
+          <path class="arc" d="M143.5,185.0 L143.5,177.0 L151.5,177.0"/>
+          <text class="val" x="78.8" y="104.0" text-anchor="end">15</text>
+          <text class="val" x="181.2" y="64.1" text-anchor="middle">5</text>
+          <circle class="pt" cx="30.0" cy="185.0" r="3.2"/>
+          <circle class="pt" cx="246.0" cy="185.0" r="3.2"/>
+          <circle class="pt" cx="192.0" cy="23.0" r="3.2"/>
+          <circle class="pt" cx="151.5" cy="23.0" r="3.2"/>
+          <circle class="pt" cx="205.5" cy="63.5" r="3.2"/>
+          <circle class="pt" cx="151.5" cy="185.0" r="3.2"/>
+          <text x="22.0" y="201.0" text-anchor="end">A</text>
+          <text x="250.0" y="205.0">B</text>
+          <text x="200.0" y="17.0">C</text>
+          <text x="143.5" y="17.0" text-anchor="end">D</text>
+          <text x="215.5" y="67.5">E</text>
+          <text x="151.5" y="205.0" text-anchor="middle">H</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 0 400 215',
+      caption: 'Şekil 193',
+      label:
+        'ABCD yamuğunda [DE] uzatılıp [AB] nin uzantısını G de kesiyor.',
+      svg: `
+          <path class="ln" d="M30.0,185.0 L246.0,185.0 L192.0,23.0 L151.5,23.0 Z"/>
+          <path class="ln" d="M151.5,23.0 L205.5,63.5"/>
+          <path class="ln" d="M151.5,23.0 L151.5,185.0"/>
+          <path class="arc" d="M146.1,30.2 L153.3,35.6 L158.7,28.4"/>
+          <path class="arc" d="M143.5,185.0 L143.5,177.0 L151.5,177.0"/>
+          <path class="aux" d="M246.0,185.0 L367.5,185.0"/>
+          <path class="aux" d="M205.5,63.5 L367.5,185.0"/>
+          <circle class="pt" cx="367.5" cy="185.0" r="3.2"/>
+          <text x="375.5" y="201.0">G</text>
+          <text class="val" x="78.8" y="104.0" text-anchor="end">15</text>
+          <text class="val" x="181.2" y="64.1" text-anchor="middle">5</text>
+          <circle class="pt" cx="30.0" cy="185.0" r="3.2"/>
+          <circle class="pt" cx="246.0" cy="185.0" r="3.2"/>
+          <circle class="pt" cx="192.0" cy="23.0" r="3.2"/>
+          <circle class="pt" cx="151.5" cy="23.0" r="3.2"/>
+          <circle class="pt" cx="205.5" cy="63.5" r="3.2"/>
+          <circle class="pt" cx="151.5" cy="185.0" r="3.2"/>
+          <text x="22.0" y="201.0" text-anchor="end">A</text>
+          <text x="250.0" y="205.0">B</text>
+          <text x="200.0" y="17.0">C</text>
+          <text x="143.5" y="17.0" text-anchor="end">D</text>
+          <text x="215.5" y="67.5">E</text>
+          <text x="151.5" y="205.0" text-anchor="middle">H</text>
+        `,
+    },
+    given: [
+      'ABCD bir yamuk',
+      '[DC] ∥ [AB]',
+      '[AD] ⊥ [DE]',
+      '[DH] ⊥ [AB]',
+      '|BE| = 3|EC|',
+      '|AD| = 15 cm',
+      '|DE| = 5 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |AH| kaç cm dir?',
+    choices: [
+      { key: 'A', text: '9' },
+      { key: 'B', text: '10' },
+      { key: 'C', text: '12' },
+      { key: 'D', text: '15' },
+      { key: 'E', text: '16' },
+    ],
+    answer: 'A',
+    hint: '[DE] yi uzatıp [AB] nin uzantısıyla kesiştirin; [DC] ∥ [BG] benzerlik verir.',
+    solution: [
+      {
+        title: 'Uzatma',
+        detail:
+          '[DE], [AB] nin uzantısını G de kessin. [DC] ∥ [BG] olduğundan DEC ∼ GEB ⇒ |EG| / |ED| = |EB| / |EC| = 3.',
+      },
+      {
+        title: 'Uzunluk',
+        detail:
+          '|EG| = 3 · 5 = 15 cm ⇒ |DG| = 5 + 15 = 20 cm.',
+      },
+      {
+        title: 'Dik üçgen',
+        detail:
+          'ADG üçgeninde D açısı dik: |AG|² = 15² + 20² = 625, |AG| = 25 cm.',
+      },
+      {
+        title: 'Öklit',
+        detail:
+          '[DH] hipotenüse ait yükseklik olduğundan |AD|² = |AH| · |AG| ⇒ 225 = |AH| · 25.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '|AH| = 9 cm bulunur.',
+      },
+    ],
+  },
 ];
 
 /** Resolves question ids to their bank entries, failing loudly on a typo. */
@@ -15445,6 +16025,21 @@ export const UNIT_4_QUADRILATERALS: Unit = {
         'quadrilaterals-185',
         'quadrilaterals-186',
         'quadrilaterals-187',
+      ),
+    },
+    {
+      id: 'quadrilaterals-m32',
+      order: 32,
+      title: 'Yamukta uzatma, açıortay ve alan',
+      summary:
+        'Kenar ortasından uzatmayla alan, dikme ve paralelle uzunluk, açıortaylarla dik yamuk, paralelkenar ile üçgen, dik köşegenler ve Öklit.',
+      questions: pick(
+        'quadrilaterals-188',
+        'quadrilaterals-189',
+        'quadrilaterals-190',
+        'quadrilaterals-191',
+        'quadrilaterals-192',
+        'quadrilaterals-193',
       ),
     },
   ],
