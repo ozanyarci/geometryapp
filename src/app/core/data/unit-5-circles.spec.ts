@@ -77,6 +77,15 @@ describe('unit 5 answer key', () => {
     expect(answerOf('circles-35')).toBe('D'));
   it('36 — AD − BC = 48, AD + BC = 120, BC 36, α = 18 → C', () =>
     expect(answerOf('circles-36')).toBe('C'));
+  it('37 — m(DOT) = 180 − 124 = 56, α = 90 − 56 = 34 → D', () =>
+    expect(answerOf('circles-37')).toBe('D'));
+  it('38 — BF 130, FD 110, α = 240/2 = 120 → D', () => expect(answerOf('circles-38')).toBe('D'));
+  it('39 — CE 110, (110 − BF)/2 = 25, BF = 60 → D', () => expect(answerOf('circles-39')).toBe('D'));
+  it('40 — AB + BC = 88, BC 36, AB 52, x = 26 → C', () => expect(answerOf('circles-40')).toBe('C'));
+  it('41 — m(DAB) = 64, DB 128, AD = 180 − 128 = 52 → B', () =>
+    expect(answerOf('circles-41')).toBe('B'));
+  it('42 — α + 2(45 + α) = 180, 3α = 90, α = 30 → C', () =>
+    expect(answerOf('circles-42')).toBe('C'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
