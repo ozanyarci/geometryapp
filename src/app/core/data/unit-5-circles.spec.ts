@@ -304,6 +304,18 @@ describe('unit 5 answer key', () => {
     expect(answerOf('circles-155')).toBe('C'));
   it('156 — PT² = 4 · 9 = 36, PT = 6, x / 12 = 6 / 9, x = 8 → D', () =>
     expect(answerOf('circles-156')).toBe('D'));
+  it('157 — DB = CD = 12, AB² = 100 + 576 = 676, r = 13, OD = 10/2 = 5, DE = 8 → C', () =>
+    expect(answerOf('circles-157')).toBe('C'));
+  it('158 — 8/a = 12/(a + 5), a = 10, AC = 15, DC² = 225 − 144 = 81, DC = 9 → C', () =>
+    expect(answerOf('circles-158')).toBe('C'));
+  it('159 — O₁H² = 25 − 16 = 9, O₁O₂ = 6, 16 × 10, çevre = 52 → C', () =>
+    expect(answerOf('circles-159')).toBe('C'));
+  it('160 — CB = 10, CD = 64/10, DB = 3,6, AD = 4,8, EB = 3,6 · 6/10,8 = 2 → B', () =>
+    expect(answerOf('circles-160')).toBe('B'));
+  it('161 — AE = 10, 3/AC = 4/10, AC = 7,5, BC = 4,5 = 9/2 → B', () =>
+    expect(answerOf('circles-161')).toBe('B'));
+  it('162 — DA = 16/2 = 8, AE = 6, EF = 4 · 6/8 = 3, x = 6 → C', () =>
+    expect(answerOf('circles-162')).toBe('C'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
