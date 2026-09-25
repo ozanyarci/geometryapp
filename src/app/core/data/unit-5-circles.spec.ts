@@ -42,6 +42,18 @@ describe('unit 5 answer key', () => {
     expect(answerOf('circles-16')).toBe('D'));
   it('17 — TB 70, CT 70, AC 40, x = 20 → B', () => expect(answerOf('circles-17')).toBe('B'));
   it('18 — C = 48, m(ECD) = 24, ED yayı 48 → A', () => expect(answerOf('circles-18')).toBe('A'));
+  it('19 — AD yayı 140, m(TAD) = 70, m(PAB) = 110, α = 180 − 40 − 110 = 30 → B', () =>
+    expect(answerOf('circles-19')).toBe('B'));
+  it('20 — m(AKL) = 108, m(LKD) = 72, α = 180 − 72 = 108 → C', () =>
+    expect(answerOf('circles-20')).toBe('C'));
+  it('21 — PA = PB = PC, m(BPC) = 40, m(APB) = 70, x = 35 → D', () =>
+    expect(answerOf('circles-21')).toBe('D'));
+  it('22 — TB yayı 200, (200 − TA)/2 = 40, TA 120, x = 60 → E', () =>
+    expect(answerOf('circles-22')).toBe('E'));
+  it('23 — m(AOC) = x, m(ABC) = x/2, 3x/2 = 72, x = 48 → A', () =>
+    expect(answerOf('circles-23')).toBe('A'));
+  it('24 — BC yayı 112, m(BDC) = 68, 2α = 68, α = 34 → C', () =>
+    expect(answerOf('circles-24')).toBe('C'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
