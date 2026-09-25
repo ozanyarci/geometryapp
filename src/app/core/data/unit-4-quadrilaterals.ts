@@ -16610,6 +16610,471 @@ Q11 EF 5.0 FK 7.000000000000001 EFK 119.99999999999999 area 60.62177826491071 35
       },
     ],
   },
+  {
+    id: 'quadrilaterals-206',
+    topic: 'İkizkenar yamukta dikme ve taban oranı',
+    figure: {
+      viewBox: '0 0 400 240',
+      caption: 'Şekil 206',
+      label:
+        'ABCD ikizkenar yamuğunda [AB] ∥ [DC]; [DH] ⊥ [AB]; |AD| = |BC|, |AB| = 5|DC|.',
+      svg: `
+          <path class="ln" d="M50.0,210.0 L350.0,210.0 L230.0,50.0 L170.0,50.0 Z"/>
+          <path class="ln" d="M170.0,50.0 L170.0,210.0"/>
+          <path class="arc" d="M170.0,200.0 L180.0,200.0 L180.0,210.0"/>
+          <path class="tick" d="M114.0,133.0 L106.0,127.0"/>
+          <path class="tick" d="M294.0,127.0 L286.0,133.0"/>
+          <circle class="pt" cx="50.0" cy="210.0" r="3.2"/>
+          <circle class="pt" cx="350.0" cy="210.0" r="3.2"/>
+          <circle class="pt" cx="230.0" cy="50.0" r="3.2"/>
+          <circle class="pt" cx="170.0" cy="50.0" r="3.2"/>
+          <circle class="pt" cx="170.0" cy="210.0" r="3.2"/>
+          <text x="42.0" y="226.0" text-anchor="end">A</text>
+          <text x="358.0" y="226.0">B</text>
+          <text x="238.0" y="44.0">C</text>
+          <text x="162.0" y="44.0" text-anchor="end">D</text>
+          <text x="170.0" y="230.0" text-anchor="middle">H</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 0 400 240',
+      caption: 'Şekil 206',
+      label:
+        'ABCD ikizkenar yamuğunda C den [AB] ye [CK] dikmesi çizilmiş.',
+      svg: `
+          <path class="ln" d="M50.0,210.0 L350.0,210.0 L230.0,50.0 L170.0,50.0 Z"/>
+          <path class="ln" d="M170.0,50.0 L170.0,210.0"/>
+          <path class="arc" d="M170.0,200.0 L180.0,200.0 L180.0,210.0"/>
+          <path class="tick" d="M114.0,133.0 L106.0,127.0"/>
+          <path class="tick" d="M294.0,127.0 L286.0,133.0"/>
+          <path class="aux" d="M230.0,50.0 L230.0,210.0"/>
+          <path class="arc" d="M230.0,200.0 L240.0,200.0 L240.0,210.0"/>
+          <circle class="pt" cx="230.0" cy="210.0" r="3.2"/>
+          <text x="230.0" y="230.0" text-anchor="middle">K</text>
+          <circle class="pt" cx="50.0" cy="210.0" r="3.2"/>
+          <circle class="pt" cx="350.0" cy="210.0" r="3.2"/>
+          <circle class="pt" cx="230.0" cy="50.0" r="3.2"/>
+          <circle class="pt" cx="170.0" cy="50.0" r="3.2"/>
+          <circle class="pt" cx="170.0" cy="210.0" r="3.2"/>
+          <text x="42.0" y="226.0" text-anchor="end">A</text>
+          <text x="358.0" y="226.0">B</text>
+          <text x="238.0" y="44.0">C</text>
+          <text x="162.0" y="44.0" text-anchor="end">D</text>
+          <text x="170.0" y="230.0" text-anchor="middle">H</text>
+        `,
+    },
+    given: [
+      'ABCD bir ikizkenar yamuk',
+      '[DH] ⊥ [AB]',
+      '|AD| = |BC|',
+      '|AB| = 5|DC|',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |HB| / |DC| oranı kaçtır?',
+    choices: [
+      { key: 'A', text: '3/2' },
+      { key: 'B', text: '2' },
+      { key: 'C', text: '5/2' },
+      { key: 'D', text: '3' },
+      { key: 'E', text: '4' },
+    ],
+    answer: 'D',
+    hint: 'C den de [AB] ye bir dikme indirin; ikizkenar yamukta iki yandaki parçalar eşittir.',
+    solution: [
+      {
+        title: 'Dikme',
+        detail:
+          'C den [AB] ye [CK] dikmesini indirelim; DHKC bir dikdörtgen olur ve |HK| = |DC| dir.',
+      },
+      {
+        title: 'Eş parçalar',
+        detail:
+          '|DC| = a dersek |AB| = 5a olur. İkizkenar yamukta |AH| = |KB| = (5a − a) / 2 = 2a dır.',
+      },
+      {
+        title: 'Parça',
+        detail:
+          '|HB| = |HK| + |KB| = a + 2a = 3a bulunur.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '|HB| / |DC| = 3a / a = 3 tür.',
+      },
+    ],
+  },
+  {
+    id: 'quadrilaterals-207',
+    topic: 'Köşegenleri dik ikizkenar yamukta alan',
+    figure: {
+      viewBox: '0 0 400 250',
+      caption: 'Şekil 207',
+      label:
+        'ABCD ikizkenar yamuğunda [AB] ∥ [DC]; |AD| = |BC|; [AC] ve [BD] köşegenleri E de dik kesişiyor; |AB| = x.',
+      svg: `
+          <path class="ln" d="M50.0,220.0 L350.0,220.0 L250.0,20.0 L150.0,20.0 Z"/>
+          <path class="ln" d="M50.0,220.0 L250.0,20.0"/>
+          <path class="ln" d="M350.0,220.0 L150.0,20.0"/>
+          <path class="arc" d="M192.9,77.1 L200.0,84.1 L207.1,77.1"/>
+          <path class="tick" d="M104.5,122.2 L95.5,117.8"/>
+          <path class="tick" d="M304.5,117.8 L295.5,122.2"/>
+          <text class="val" x="200.0" y="242.0" text-anchor="middle">x</text>
+          <circle class="pt" cx="50.0" cy="220.0" r="3.2"/>
+          <circle class="pt" cx="350.0" cy="220.0" r="3.2"/>
+          <circle class="pt" cx="250.0" cy="20.0" r="3.2"/>
+          <circle class="pt" cx="150.0" cy="20.0" r="3.2"/>
+          <circle class="pt" cx="200.0" cy="70.0" r="3.2"/>
+          <text x="42.0" y="236.0" text-anchor="end">A</text>
+          <text x="358.0" y="236.0">B</text>
+          <text x="258.0" y="14.0">C</text>
+          <text x="142.0" y="14.0" text-anchor="end">D</text>
+          <text x="200.0" y="52.0" text-anchor="middle">E</text>
+        `,
+    },
+    given: [
+      '|AD| = |BC|',
+      '[AC] ⊥ [DB]',
+      '|DC| / |AB| = 1/3',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki şekilde ABCD yamuğunun alanı 64 cm² olduğuna göre, |AB| = x kaç cm dir?',
+    choices: [
+      { key: 'A', text: '8' },
+      { key: 'B', text: '10' },
+      { key: 'C', text: '12' },
+      { key: 'D', text: '14' },
+      { key: 'E', text: '16' },
+    ],
+    answer: 'C',
+    hint: 'Köşegenleri dik ikizkenar yamukta yükseklik, tabanların toplamının yarısına eşittir.',
+    solution: [
+      {
+        title: 'Yükseklik',
+        detail:
+          'EAB ve ECD ikizkenar dik üçgenlerdir; E den geçen dikmenin parçaları |AB| / 2 ve |DC| / 2 olur, yani h = (|AB| + |DC|) / 2.',
+      },
+      {
+        title: 'Alan',
+        detail:
+          'Alan = (|AB| + |DC|) / 2 · h = ((|AB| + |DC|) / 2)² = 64, buradan |AB| + |DC| = 16.',
+      },
+      {
+        title: 'Oran',
+        detail:
+          '|DC| = k, |AB| = 3k alırsak k + 3k = 16, k = 4.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x = |AB| = 3 · 4 = 12 cm bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'quadrilaterals-208',
+    topic: 'Paralelkenar ve yamukta benzer üçgenlerle alan',
+    figure: {
+      viewBox: '0 0 400 180',
+      caption: 'Şekil 208',
+      label:
+        'A, B, C doğrusal; BCDE paralelkenar, ACDE yamuk; [AD] ile [EB] F de kesişiyor; |ED| = 4 cm, |AB| = 8 cm; EFD üçgeni taralı.',
+      svg: `
+          <path class="shade" d="M175.0,37.5 L275.0,37.5 L200.0,75.0 Z"/>
+          <path class="ln" d="M50.0,150.0 L350.0,150.0 L275.0,37.5 L175.0,37.5 Z"/>
+          <path class="ln" d="M175.0,37.5 L250.0,150.0"/>
+          <path class="ln" d="M50.0,150.0 L275.0,37.5"/>
+          <text class="val" x="225.0" y="29.5" text-anchor="middle">4</text>
+          <text class="val" x="150.0" y="172.0" text-anchor="middle">8</text>
+          <circle class="pt" cx="50.0" cy="150.0" r="3.2"/>
+          <circle class="pt" cx="250.0" cy="150.0" r="3.2"/>
+          <circle class="pt" cx="350.0" cy="150.0" r="3.2"/>
+          <circle class="pt" cx="275.0" cy="37.5" r="3.2"/>
+          <circle class="pt" cx="175.0" cy="37.5" r="3.2"/>
+          <circle class="pt" cx="200.0" cy="75.0" r="3.2"/>
+          <text x="42.0" y="166.0" text-anchor="end">A</text>
+          <text x="250.0" y="170.0" text-anchor="middle">B</text>
+          <text x="358.0" y="166.0">C</text>
+          <text x="283.0" y="31.5">D</text>
+          <text x="167.0" y="31.5" text-anchor="end">E</text>
+          <text x="195.0" y="99.0" text-anchor="middle">F</text>
+        `,
+    },
+    given: [
+      'BCDE paralelkenar',
+      'ACDE yamuk',
+      '|ED| = 4 cm',
+      '|AB| = 8 cm',
+      'A(EFD) = 3 cm²',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(EBCD) kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '15' },
+      { key: 'B', text: '18' },
+      { key: 'C', text: '20' },
+      { key: 'D', text: '24' },
+      { key: 'E', text: '27' },
+    ],
+    answer: 'B',
+    hint: '[ED] ∥ [AB] olduğundan EFD ve BFA üçgenleri benzerdir; benzerlik oranını bulun.',
+    solution: [
+      {
+        title: 'Benzerlik',
+        detail:
+          '[ED] ∥ [AB] olduğundan EFD ∼ BFA ve oran |ED| / |AB| = 4 / 8 = 1/2; yani |DF| / |FA| = 1/2.',
+      },
+      {
+        title: 'Ortak yükseklik',
+        detail:
+          'AFE ve EFD üçgenleri E den aynı yüksekliği paylaşır: A(AFE) = 2 · 3 = 6 cm².',
+      },
+      {
+        title: 'Üçgen AED',
+        detail:
+          'A(AED) = 3 + 6 = 9 cm² ve A(AED) = |ED| · h / 2 = 4h / 2, buradan h = 9/2 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'A(EBCD) = |BC| · h = 4 · 9/2 = 18 cm² bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'quadrilaterals-209',
+    topic: 'Yamukta köşegenlerin ayırdığı üçgenlerin alanı',
+    figure: {
+      viewBox: '0 0 400 240',
+      caption: 'Şekil 209',
+      label:
+        'ABCD yamuğunda [AD] ∥ [BC]; [AC] ve [BD] köşegenleri K de kesişiyor; AKD üçgeninin alanı 4, BKC üçgeninin alanı 16.',
+      svg: `
+          <path class="ln" d="M110.0,30.0 L260.0,30.0 L350.0,210.0 L50.0,210.0 Z"/>
+          <path class="ln" d="M110.0,30.0 L350.0,210.0"/>
+          <path class="ln" d="M50.0,210.0 L260.0,30.0"/>
+          <text class="val" x="190.0" y="54.0" text-anchor="middle">4</text>
+          <text class="val" x="190.0" y="172.0" text-anchor="middle">16</text>
+          <circle class="pt" cx="110.0" cy="30.0" r="3.2"/>
+          <circle class="pt" cx="50.0" cy="210.0" r="3.2"/>
+          <circle class="pt" cx="350.0" cy="210.0" r="3.2"/>
+          <circle class="pt" cx="260.0" cy="30.0" r="3.2"/>
+          <circle class="pt" cx="190.0" cy="90.0" r="3.2"/>
+          <text x="102.0" y="24.0" text-anchor="end">A</text>
+          <text x="268.0" y="24.0">D</text>
+          <text x="42.0" y="226.0" text-anchor="end">B</text>
+          <text x="358.0" y="226.0">C</text>
+          <text x="202.0" y="96.0">K</text>
+        `,
+    },
+    given: [
+      'ABCD yamuğunda [AD] ∥ [BC]',
+      'Alan(AKD) = 4 cm²',
+      'Alan(BKC) = 16 cm²',
+      '[AC] ∩ [BD] = {K}',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, Alan(ABCD) kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '36' },
+      { key: 'B', text: '40' },
+      { key: 'C', text: '45' },
+      { key: 'D', text: '48' },
+      { key: 'E', text: '50' },
+    ],
+    answer: 'A',
+    hint: 'Yamukta yan kenarlara komşu iki üçgenin alanları eşittir ve her biri, taban üçgenlerinin alanlarının çarpımının kareköküdür.',
+    solution: [
+      {
+        title: 'Benzerlik',
+        detail:
+          'AKD ∼ CKB ve alan oranı 4 / 16 = 1/4 olduğundan benzerlik oranı |AK| / |KC| = 1/2.',
+      },
+      {
+        title: 'Yan üçgen',
+        detail:
+          'AKB ve CKB üçgenleri B den ortak yükseklikli: A(AKB) = 16 / 2 = 8 cm².',
+      },
+      {
+        title: 'Diğer yan',
+        detail:
+          'Aynı şekilde A(DKC) = A(AKB) = 8 cm² (ya da √(4 · 16) = 8).',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'Alan(ABCD) = 4 + 16 + 8 + 8 = 36 cm² bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'quadrilaterals-210',
+    topic: 'Orta tabanın ayırdığı yamukların alan oranı',
+    figure: {
+      viewBox: '0 0 400 240',
+      caption: 'Şekil 210',
+      label:
+        'ABCD yamuğunda [AB] ∥ [DC]; [EF] orta taban; E, [AD] nin, F, [BC] nin orta noktası; |EF| = 5 cm.',
+      svg: `
+          <path class="ln" d="M60.0,210.0 L340.0,210.0 L220.0,30.0 L100.0,30.0 Z"/>
+          <path class="ln" d="M80.0,120.0 L280.0,120.0"/>
+          <path class="tick" d="M74.9,166.1 L65.1,163.9"/>
+          <path class="tick" d="M94.9,76.1 L85.1,73.9"/>
+          <path class="tick" d="M315.5,164.3 L307.2,169.9"/>
+          <path class="tick" d="M312.8,160.1 L304.5,165.7"/>
+          <path class="tick" d="M255.5,74.3 L247.2,79.9"/>
+          <path class="tick" d="M252.8,70.1 L244.5,75.7"/>
+          <text class="val" x="180.0" y="112.0" text-anchor="middle">5</text>
+          <circle class="pt" cx="60.0" cy="210.0" r="3.2"/>
+          <circle class="pt" cx="340.0" cy="210.0" r="3.2"/>
+          <circle class="pt" cx="220.0" cy="30.0" r="3.2"/>
+          <circle class="pt" cx="100.0" cy="30.0" r="3.2"/>
+          <circle class="pt" cx="80.0" cy="120.0" r="3.2"/>
+          <circle class="pt" cx="280.0" cy="120.0" r="3.2"/>
+          <text x="52.0" y="226.0" text-anchor="end">A</text>
+          <text x="348.0" y="226.0">B</text>
+          <text x="228.0" y="24.0">C</text>
+          <text x="92.0" y="24.0" text-anchor="end">D</text>
+          <text x="70.0" y="125.0" text-anchor="end">E</text>
+          <text x="290.0" y="125.0">F</text>
+        `,
+    },
+    given: [
+      'ABCD yamuk',
+      '[EF] orta taban',
+      '|EF| = 5 cm',
+      '|AB| − |DC| = 4 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(DCFE) / A(ABFE) oranı kaçtır?',
+    choices: [
+      { key: 'A', text: '1/3' },
+      { key: 'B', text: '1/2' },
+      { key: 'C', text: '3/5' },
+      { key: 'D', text: '2/3' },
+      { key: 'E', text: '3/4' },
+    ],
+    answer: 'D',
+    hint: 'Orta taban, tabanların toplamının yarısıdır; önce |AB| ve |DC| yi bulun.',
+    solution: [
+      {
+        title: 'Tabanlar',
+        detail:
+          '|AB| + |DC| = 2 · 5 = 10 ve |AB| − |DC| = 4, buradan |AB| = 7, |DC| = 3 cm.',
+      },
+      {
+        title: 'Yükseklik',
+        detail:
+          'Orta taban yüksekliği ikiye böler; iki yamuğun yüksekliği de h / 2 dir.',
+      },
+      {
+        title: 'Alanlar',
+        detail:
+          'A(DCFE) = (3 + 5) / 2 · h / 2, A(ABFE) = (5 + 7) / 2 · h / 2.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'Oran = (3 + 5) / (5 + 7) = 8 / 12 = 2/3 tür.',
+      },
+    ],
+  },
+  {
+    id: 'quadrilaterals-211',
+    topic: 'Yamukta paralel çizerek benzerlik',
+    figure: {
+      viewBox: '0 0 400 200',
+      caption: 'Şekil 211',
+      label:
+        'ABCD yamuğunda [AB] ∥ [DC]; F, [AB] üzerinde, E, [BC] üzerinde; [AD] ∥ [FE]; |DC| = |FB|; |BE| = 3|EC|; |AF| = 8 cm.',
+      svg: `
+          <path class="ln" d="M60.0,170.0 L340.0,170.0 L240.0,30.0 L120.0,30.0 Z"/>
+          <path class="ln" d="M220.0,170.0 L265.0,65.0"/>
+          <path class="tick" d="M180.0,35.0 L180.0,25.0"/>
+          <path class="tick" d="M280.0,175.0 L280.0,165.0"/>
+          <text class="val" x="140.0" y="192.0" text-anchor="middle">8</text>
+          <circle class="pt" cx="60.0" cy="170.0" r="3.2"/>
+          <circle class="pt" cx="340.0" cy="170.0" r="3.2"/>
+          <circle class="pt" cx="240.0" cy="30.0" r="3.2"/>
+          <circle class="pt" cx="120.0" cy="30.0" r="3.2"/>
+          <circle class="pt" cx="265.0" cy="65.0" r="3.2"/>
+          <circle class="pt" cx="220.0" cy="170.0" r="3.2"/>
+          <text x="52.0" y="186.0" text-anchor="end">A</text>
+          <text x="348.0" y="186.0">B</text>
+          <text x="248.0" y="24.0">C</text>
+          <text x="112.0" y="24.0" text-anchor="end">D</text>
+          <text x="275.0" y="65.0">E</text>
+          <text x="220.0" y="190.0" text-anchor="middle">F</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 0 400 200',
+      caption: 'Şekil 211',
+      label:
+        'ABCD yamuğunda C den [AD] ye paralel [CG] çizilmiş; G, [AB] üzerinde ve AGCD bir paralelkenar.',
+      svg: `
+          <path class="ln" d="M60.0,170.0 L340.0,170.0 L240.0,30.0 L120.0,30.0 Z"/>
+          <path class="ln" d="M220.0,170.0 L265.0,65.0"/>
+          <path class="tick" d="M180.0,35.0 L180.0,25.0"/>
+          <path class="tick" d="M280.0,175.0 L280.0,165.0"/>
+          <text class="val" x="140.0" y="192.0" text-anchor="middle">8</text>
+          <path class="aux" d="M240.0,30.0 L180.0,170.0"/>
+          <circle class="pt" cx="180.0" cy="170.0" r="3.2"/>
+          <text x="180.0" y="190.0" text-anchor="middle">G</text>
+          <circle class="pt" cx="60.0" cy="170.0" r="3.2"/>
+          <circle class="pt" cx="340.0" cy="170.0" r="3.2"/>
+          <circle class="pt" cx="240.0" cy="30.0" r="3.2"/>
+          <circle class="pt" cx="120.0" cy="30.0" r="3.2"/>
+          <circle class="pt" cx="265.0" cy="65.0" r="3.2"/>
+          <circle class="pt" cx="220.0" cy="170.0" r="3.2"/>
+          <text x="52.0" y="186.0" text-anchor="end">A</text>
+          <text x="348.0" y="186.0">B</text>
+          <text x="248.0" y="24.0">C</text>
+          <text x="112.0" y="24.0" text-anchor="end">D</text>
+          <text x="275.0" y="65.0">E</text>
+          <text x="220.0" y="190.0" text-anchor="middle">F</text>
+        `,
+    },
+    given: [
+      'ABCD yamuk',
+      '[AD] ∥ [FE]',
+      '|DC| = |FB|',
+      '|BE| = 3|EC|',
+      '|AF| = 8 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |DC| kaç cm dir?',
+    choices: [
+      { key: 'A', text: '2' },
+      { key: 'B', text: '3' },
+      { key: 'C', text: '4' },
+      { key: 'D', text: '5' },
+      { key: 'E', text: '6' },
+    ],
+    answer: 'E',
+    hint: 'C den [AD] ye paralel çizerek bir paralelkenar ve [FE] ile benzer bir üçgen oluşturun.',
+    solution: [
+      {
+        title: 'Paralel',
+        detail:
+          'C den [AD] ye paralel [CG] çizelim; AGCD paralelkenar olur ve |AG| = |DC| = x.',
+      },
+      {
+        title: 'Parça',
+        detail:
+          '|AB| = 8 + x olduğundan |GB| = 8 + x − x = 8 cm.',
+      },
+      {
+        title: 'Benzerlik',
+        detail:
+          '[FE] ∥ [GC] olduğundan BFE ∼ BGC: |BF| / |BG| = |BE| / |BC| = 3/4.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x / 8 = 3/4, buradan |DC| = x = 6 cm bulunur.',
+      },
+    ],
+  },
 ];
 
 /** Resolves question ids to their bank entries, failing loudly on a typo. */
@@ -17144,6 +17609,21 @@ export const UNIT_4_QUADRILATERALS: Unit = {
         'quadrilaterals-203',
         'quadrilaterals-204',
         'quadrilaterals-205',
+      ),
+    },
+    {
+      id: 'quadrilaterals-m35',
+      order: 35,
+      title: 'Yamukta dikme, köşegen ve benzerlik',
+      summary:
+        'İkizkenar yamukta dikme, dik köşegenlerle alan, paralelkenarda benzer üçgenler, köşegen üçgenleri, orta tabanla alan oranı ve paralel çizme.',
+      questions: pick(
+        'quadrilaterals-206',
+        'quadrilaterals-207',
+        'quadrilaterals-208',
+        'quadrilaterals-209',
+        'quadrilaterals-210',
+        'quadrilaterals-211',
       ),
     },
   ],
