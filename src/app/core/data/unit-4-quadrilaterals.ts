@@ -10056,6 +10056,455 @@ Q12 AKL/CMN 0.7142857142857143 KLMN/ABCD 0.5 KLMN if AKL=5 24.0
       },
     ],
   },
+  // ---------------------------------------------------------------- 128
+  {
+    id: 'quadrilaterals-128',
+    topic: 'Dik üçgende Öklit bağıntısı ve kare',
+    figure:{
+      viewBox: '0 0 400 216',
+      caption: 'Şekil 128',
+      label:
+        'B, D, E, C noktaları doğrusal; FDEA karesinin A köşesi B ve C ye birleştirilmiş; BAC açısı dik; |EC| = x.',
+      svg: `
+          <path class="ln" d="M109.0,30.0 L109.0,186.0 L265.0,186.0 L265.0,30.0 Z"/>
+          <path class="ln" d="M31.0,186.0 L369.0,186.0"/>
+          <path class="ln" d="M31.0,186.0 L265.0,30.0 L369.0,186.0"/>
+          <path class="arc" d="M256.7,35.5 L262.2,43.9 L270.5,38.3"/>
+          <path class="arc" d="M256.0,186.0 L256.0,177.0 L265.0,177.0"/>
+          <text class="val" x="317.0" y="208.0" text-anchor="middle">x</text>
+          <circle class="pt" cx="31.0" cy="186.0" r="3.2"/>
+          <circle class="pt" cx="109.0" cy="186.0" r="3.2"/>
+          <circle class="pt" cx="265.0" cy="186.0" r="3.2"/>
+          <circle class="pt" cx="369.0" cy="186.0" r="3.2"/>
+          <circle class="pt" cx="109.0" cy="30.0" r="3.2"/>
+          <circle class="pt" cx="265.0" cy="30.0" r="3.2"/>
+          <text x="21.0" y="201.0" text-anchor="end">B</text>
+          <text x="109.0" y="205.0" text-anchor="middle">D</text>
+          <text x="265.0" y="205.0" text-anchor="middle">E</text>
+          <text x="379.0" y="201.0">C</text>
+          <text x="99.0" y="25.0" text-anchor="end">F</text>
+          <text x="265.0" y="21.0" text-anchor="middle">A</text>
+        `,
+    },
+    given: [
+      'FDEA bir kare',
+      'BAC bir dik üçgen',
+      '[BA] ⊥ [AC]',
+      '|BD| = 3 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki şekilde FDEA karesinin alanı 36 cm² olduğuna göre, |EC| = x kaç cm dir?',
+    choices: [
+      { key: 'A', text: '2' },
+      { key: 'B', text: '3' },
+      { key: 'C', text: '4' },
+      { key: 'D', text: '4,5' },
+      { key: 'E', text: '5' },
+    ],
+    answer: 'C',
+    hint: 'Karenin [AE] kenarı, BAC dik üçgeninde hipotenüse ait yüksekliktir.',
+    solution: [
+      {
+        title: 'Karenin kenarı',
+        detail:
+          'Karenin alanı 36 cm² olduğundan |AE| = |DE| = 6 cm.',
+      },
+      {
+        title: 'BE',
+        detail:
+          '|BE| = |BD| + |DE| = 3 + 6 = 9 cm.',
+      },
+      {
+        title: 'Öklit bağıntısı',
+        detail:
+          '[AE] ⊥ [BC] olduğundan BAC dik üçgeninde |AE|² = |BE| · |EC| olur: 36 = 9 · x.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x = 36 / 9 = 4 cm bulunur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 129
+  {
+    id: 'quadrilaterals-129',
+    topic: 'Karede düzgün sekizgen ve açı',
+    figure:{
+      viewBox: '0 0 400 300',
+      caption: 'Şekil 129',
+      label:
+        'ABCD karesinin kenarları üzerinde köşeleri bulunan KLMNOPEF düzgün sekizgeni; E ile K birleştirilmiş; BKE açısı x.',
+      svg: `
+          <path class="ln" d="M80.0,270.0 L320.0,270.0 L320.0,30.0 L80.0,30.0 Z"/>
+          <path class="ln" d="M150.3,270.0 L249.7,270.0 L320.0,199.7 L320.0,100.3 L249.7,30.0 L150.3,30.0 L80.0,100.3 L80.0,199.7 Z"/>
+          <path class="ln" d="M80.0,100.3 L150.3,270.0"/>
+          <path class="arc" d="M174.3,270.0 A24,24 0 0 0 141.1,247.8"/>
+          <text class="val" x="172.5" y="241.7" text-anchor="middle">x</text>
+          <circle class="pt" cx="80.0" cy="270.0" r="3.2"/>
+          <circle class="pt" cx="320.0" cy="270.0" r="3.2"/>
+          <circle class="pt" cx="320.0" cy="30.0" r="3.2"/>
+          <circle class="pt" cx="80.0" cy="30.0" r="3.2"/>
+          <circle class="pt" cx="150.3" cy="270.0" r="3.2"/>
+          <circle class="pt" cx="249.7" cy="270.0" r="3.2"/>
+          <circle class="pt" cx="320.0" cy="199.7" r="3.2"/>
+          <circle class="pt" cx="320.0" cy="100.3" r="3.2"/>
+          <circle class="pt" cx="249.7" cy="30.0" r="3.2"/>
+          <circle class="pt" cx="150.3" cy="30.0" r="3.2"/>
+          <circle class="pt" cx="80.0" cy="100.3" r="3.2"/>
+          <circle class="pt" cx="80.0" cy="199.7" r="3.2"/>
+          <text x="70.0" y="285.0" text-anchor="end">A</text>
+          <text x="330.0" y="285.0">B</text>
+          <text x="330.0" y="25.0">C</text>
+          <text x="70.0" y="25.0" text-anchor="end">D</text>
+          <text x="150.3" y="289.0" text-anchor="middle">K</text>
+          <text x="249.7" y="289.0" text-anchor="middle">L</text>
+          <text x="330.0" y="204.7">M</text>
+          <text x="330.0" y="105.3">N</text>
+          <text x="249.7" y="21.0" text-anchor="middle">O</text>
+          <text x="150.3" y="21.0" text-anchor="middle">P</text>
+          <text x="70.0" y="105.3" text-anchor="end">E</text>
+          <text x="70.0" y="204.7" text-anchor="end">F</text>
+        `,
+    },
+    given: [
+      'ABCD kare',
+      'KLMNOPEF düzgün sekizgen',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, m(BKE) = x kaç derecedir?',
+    choices: [
+      { key: 'A', text: '157,5' },
+      { key: 'B', text: '135' },
+      { key: 'C', text: '120' },
+      { key: 'D', text: '112,5' },
+      { key: 'E', text: '105' },
+    ],
+    answer: 'D',
+    hint: 'Düzgün sekizgenin bir iç açısını bul; köşedeki üçgenlerin ikizkenar dik üçgen olduğunu fark et.',
+    solution: [
+      {
+        title: 'İç açı',
+        detail:
+          'Düzgün sekizgenin bir dış açısı 360° / 8 = 45°, bir iç açısı 180° − 45° = 135° dir.',
+      },
+      {
+        title: 'AKF',
+        detail:
+          'A, K, L doğrusal ve m(FKL) = 135° olduğundan m(AKF) = 180° − 135° = 45° dir.',
+      },
+      {
+        title: 'FKE',
+        detail:
+          'EFK üçgeninde |FE| = |FK| ve m(EFK) = 135° olduğundan m(FKE) = (180° − 135°) / 2 = 22,5°.',
+      },
+      {
+        title: 'AKE',
+        detail:
+          'm(AKE) = m(AKF) + m(FKE) = 45° + 22,5° = 67,5°.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x = m(BKE) = 180° − 67,5° = 112,5° bulunur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 130
+  {
+    id: 'quadrilaterals-130',
+    topic: 'Deltoidde köşegenler ve alan',
+    figure:{
+      viewBox: '0 0 400 308',
+      caption: 'Şekil 130',
+      label:
+        'ABDC deltoidi; |AB| = |AC|, |BD| = |DC|; köşegenler [AD] ve [BC], E noktasında kesişiyor.',
+      svg: `
+          <path class="ln" d="M200.0,28.0 L74.0,196.0 L200.0,280.0 L326.0,196.0 Z"/>
+          <path class="ln" d="M200.0,28.0 L200.0,280.0"/>
+          <path class="ln" d="M74.0,196.0 L326.0,196.0"/>
+          <path class="tick" d="M133.0,109.0 L141.0,115.0"/>
+          <path class="tick" d="M259.0,115.0 L267.0,109.0"/>
+          <path class="tick" d="M132.1,240.8 L137.7,232.5"/>
+          <path class="tick" d="M136.3,243.5 L141.9,235.2"/>
+          <path class="tick" d="M263.7,243.5 L258.1,235.2"/>
+          <path class="tick" d="M267.9,240.8 L262.3,232.5"/>
+          <path class="arc" d="M209.0,196.0 L209.0,187.0 L200.0,187.0"/>
+          <circle class="pt" cx="200.0" cy="28.0" r="3.2"/>
+          <circle class="pt" cx="74.0" cy="196.0" r="3.2"/>
+          <circle class="pt" cx="326.0" cy="196.0" r="3.2"/>
+          <circle class="pt" cx="200.0" cy="280.0" r="3.2"/>
+          <circle class="pt" cx="200.0" cy="196.0" r="3.2"/>
+          <text x="200.0" y="19.0" text-anchor="middle">A</text>
+          <text x="64.0" y="201.0" text-anchor="end">B</text>
+          <text x="336.0" y="201.0">C</text>
+          <text x="200.0" y="299.0" text-anchor="middle">D</text>
+          <text x="190.0" y="191.0" text-anchor="end">E</text>
+        `,
+    },
+    given: [
+      'ABDC deltoid',
+      '|AB| = |AC| = 10 cm',
+      '|BD| = |DC| = 2√13 cm',
+      '|BC| = 12 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(ABDC) kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '60' },
+      { key: 'B', text: '64' },
+      { key: 'C', text: '72' },
+      { key: 'D', text: '80' },
+      { key: 'E', text: '96' },
+    ],
+    answer: 'C',
+    hint: 'Deltoidin köşegenleri diktir ve [AD], [BC] yi ortalar; önce |AE| ile |ED| yi bul.',
+    solution: [
+      {
+        title: 'E noktası',
+        detail:
+          'Deltoidde [AD] ⊥ [BC] ve |BE| = |EC| = 12 / 2 = 6 cm.',
+      },
+      {
+        title: 'AE',
+        detail:
+          'ABE dik üçgeninde |AE|² = 10² − 6² = 64, |AE| = 8 cm.',
+      },
+      {
+        title: 'ED',
+        detail:
+          'BED dik üçgeninde |ED|² = (2√13)² − 6² = 52 − 36 = 16, |ED| = 4 cm.',
+      },
+      {
+        title: 'AD',
+        detail:
+          '|AD| = 8 + 4 = 12 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'A(ABDC) = |AD| · |BC| / 2 = 12 · 12 / 2 = 72 cm² bulunur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 131
+  {
+    id: 'quadrilaterals-131',
+    topic: 'Karede dik açı ve Öklit bağıntısı',
+    figure:{
+      viewBox: '0 0 400 286',
+      caption: 'Şekil 131',
+      label:
+        'ABCD karesinin içinde E noktası; [DE] ile [EC] dik; H noktası [AB] üzerinde ve [EH] ile [AB] dik; |HE| = x.',
+      svg: `
+          <path class="ln" d="M83.0,26.0 L83.0,260.0 L317.0,260.0 L317.0,26.0 Z"/>
+          <path class="ln" d="M83.0,188.0 L209.0,188.0"/>
+          <path class="ln" d="M317.0,26.0 L209.0,188.0 L317.0,260.0"/>
+          <path class="arc" d="M83.0,197.0 L92.0,197.0 L92.0,188.0"/>
+          <path class="arc" d="M214.0,180.5 L221.5,185.5 L216.5,193.0"/>
+          <text class="val" x="146.0" y="180.0" text-anchor="middle">x</text>
+          <circle class="pt" cx="83.0" cy="26.0" r="3.2"/>
+          <circle class="pt" cx="83.0" cy="260.0" r="3.2"/>
+          <circle class="pt" cx="317.0" cy="260.0" r="3.2"/>
+          <circle class="pt" cx="317.0" cy="26.0" r="3.2"/>
+          <circle class="pt" cx="83.0" cy="188.0" r="3.2"/>
+          <circle class="pt" cx="209.0" cy="188.0" r="3.2"/>
+          <text x="73.0" y="21.0" text-anchor="end">A</text>
+          <text x="73.0" y="275.0" text-anchor="end">B</text>
+          <text x="327.0" y="275.0">C</text>
+          <text x="327.0" y="21.0">D</text>
+          <text x="73.0" y="193.0" text-anchor="end">H</text>
+          <text x="209.0" y="207.0" text-anchor="middle">E</text>
+        `,
+    },
+    given: [
+      'ABCD kare',
+      '[DE] ⊥ [EC]',
+      '[EH] ⊥ [AB]',
+      '|AH| = 9 cm',
+      '|HB| = 4 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |HE| = x kaç cm dir?',
+    choices: [
+      { key: 'A', text: '5' },
+      { key: 'B', text: '6' },
+      { key: 'C', text: '7' },
+      { key: 'D', text: '8' },
+      { key: 'E', text: '9' },
+    ],
+    answer: 'C',
+    hint: 'E den [DC] ye bir dikme in; DEC dik üçgeninde Öklit bağıntısını kullan.',
+    solution: [
+      {
+        title: 'Karenin kenarı',
+        detail:
+          '|AB| = 9 + 4 = 13 cm, dolayısıyla |DC| = 13 cm.',
+      },
+      {
+        title: 'Dikme',
+        detail:
+          'E den [DC] ye inen dikmenin ayağı K olsun. [EH] ⊥ [AB] olduğundan H, E, K doğrusaldır; |DK| = |AH| = 9 cm, |KC| = |HB| = 4 cm.',
+      },
+      {
+        title: 'Öklit bağıntısı',
+        detail:
+          'DEC dik üçgeninde |EK|² = |DK| · |KC| = 9 · 4 = 36, |EK| = 6 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x = |HK| − |EK| = 13 − 6 = 7 cm bulunur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 132
+  {
+    id: 'quadrilaterals-132',
+    topic: 'Karede benzer üçgenler',
+    figure:{
+      viewBox: '0 0 400 236',
+      caption: 'Şekil 132',
+      label:
+        'ABCD karesinin [CD] kenarının uzantısında E noktası; B ile E birleştirilmiş ve [AD] yi F noktasında kesiyor; |ED| = x.',
+      svg: `
+          <path class="ln" d="M155.0,28.0 L335.0,28.0 L335.0,208.0 L155.0,208.0 Z"/>
+          <path class="ln" d="M65.0,208.0 L155.0,208.0"/>
+          <path class="ln" d="M65.0,208.0 L335.0,28.0"/>
+          <text class="val" x="110.0" y="228.0" text-anchor="middle">x</text>
+          <circle class="pt" cx="155.0" cy="28.0" r="3.2"/>
+          <circle class="pt" cx="335.0" cy="28.0" r="3.2"/>
+          <circle class="pt" cx="335.0" cy="208.0" r="3.2"/>
+          <circle class="pt" cx="155.0" cy="208.0" r="3.2"/>
+          <circle class="pt" cx="65.0" cy="208.0" r="3.2"/>
+          <circle class="pt" cx="155.0" cy="148.0" r="3.2"/>
+          <text x="145.0" y="23.0" text-anchor="end">A</text>
+          <text x="345.0" y="23.0">B</text>
+          <text x="345.0" y="223.0">C</text>
+          <text x="155.0" y="227.0" text-anchor="middle">D</text>
+          <text x="65.0" y="227.0" text-anchor="middle">E</text>
+          <text x="145.0" y="153.0" text-anchor="end">F</text>
+        `,
+    },
+    given: [
+      'ABCD kare',
+      'E, D, C doğrusal',
+      'B, F, E doğrusal',
+      '|AF| = 6 cm',
+      '|FD| = 3 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |ED| = x kaç cm dir?',
+    choices: [
+      { key: 'A', text: '3' },
+      { key: 'B', text: '4' },
+      { key: 'C', text: '4,5' },
+      { key: 'D', text: '5' },
+      { key: 'E', text: '6' },
+    ],
+    answer: 'C',
+    hint: '[AB] ∥ [ED] olduğundan FAB ve FDE üçgenleri benzerdir.',
+    solution: [
+      {
+        title: 'Karenin kenarı',
+        detail:
+          '|AD| = 6 + 3 = 9 cm olduğundan |AB| = 9 cm.',
+      },
+      {
+        title: 'Benzerlik',
+        detail:
+          '[AB] ∥ [DE] olduğundan FAB ∼ FDE: |ED| / |AB| = |FD| / |AF|.',
+      },
+      {
+        title: 'Denklem',
+        detail:
+          'x / 9 = 3 / 6 ise x = 9 / 2.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x = 4,5 cm bulunur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 133
+  {
+    id: 'quadrilaterals-133',
+    topic: 'Dikdörtgende 30° açıyla uzunluk',
+    figure:{
+      viewBox: '0 0 400 222',
+      caption: 'Şekil 133',
+      label:
+        'ABCD dikdörtgeninde E noktası [AB] üzerinde, F noktası [BC] üzerinde; D köşesindeki EDA, EDF ve FDC açıları eşit; |BF| = x.',
+      svg: `
+          <path class="ln" d="M80.0,28.0 L80.0,194.3 L320.0,194.3 L320.0,28.0 Z"/>
+          <path class="ln" d="M80.0,166.6 L320.0,28.0 L224.0,194.3"/>
+          <path class="arc" d="M276.0,28.0 A44,44 0 0 0 281.9,50.0"/>
+          <path class="arc" d="M282.3,38.1 L272.7,40.7"/>
+          <path class="arc" d="M281.9,50.0 A44,44 0 0 0 298.0,66.1"/>
+          <path class="arc" d="M292.4,55.6 L285.4,62.6"/>
+          <path class="arc" d="M298.0,66.1 A44,44 0 0 0 320.0,72.0"/>
+          <path class="arc" d="M309.9,65.7 L307.3,75.3"/>
+          <text class="val" x="152.0" y="214.3" text-anchor="middle">x</text>
+          <circle class="pt" cx="80.0" cy="28.0" r="3.2"/>
+          <circle class="pt" cx="320.0" cy="28.0" r="3.2"/>
+          <circle class="pt" cx="80.0" cy="194.3" r="3.2"/>
+          <circle class="pt" cx="320.0" cy="194.3" r="3.2"/>
+          <circle class="pt" cx="80.0" cy="166.6" r="3.2"/>
+          <circle class="pt" cx="224.0" cy="194.3" r="3.2"/>
+          <text x="70.0" y="23.0" text-anchor="end">A</text>
+          <text x="330.0" y="23.0">D</text>
+          <text x="70.0" y="209.3" text-anchor="end">B</text>
+          <text x="330.0" y="209.3">C</text>
+          <text x="70.0" y="171.6" text-anchor="end">E</text>
+          <text x="224.0" y="213.3" text-anchor="middle">F</text>
+        `,
+    },
+    given: [
+      'ABCD dikdörtgen',
+      'm(EDA) = m(EDF) = m(FDC)',
+      '|ED| = 10√3 cm',
+      '|DF| = 12 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |BF| = x kaç cm dir?',
+    choices: [
+      { key: 'A', text: '6' },
+      { key: 'B', text: '7' },
+      { key: 'C', text: '8' },
+      { key: 'D', text: '9' },
+      { key: 'E', text: '10' },
+    ],
+    answer: 'D',
+    hint: 'D köşesindeki 90° lik açı üç eş parçaya bölünmüştür; her birinin ölçüsünü bul.',
+    solution: [
+      {
+        title: 'Açılar',
+        detail:
+          'm(ADC) = 90° üç eş parçaya bölündüğünden her biri 30° dir.',
+      },
+      {
+        title: 'AD',
+        detail:
+          'EAD dik üçgeninde m(EDA) = 30° olduğundan |AD| = |ED| · √3 / 2 = 10√3 · √3 / 2 = 15 cm.',
+      },
+      {
+        title: 'FC',
+        detail:
+          'FCD dik üçgeninde m(FDC) = 30° olduğundan |FC| = |DF| / 2 = 6 cm.',
+      },
+      {
+        title: 'BC',
+        detail:
+          'Dikdörtgende |BC| = |AD| = 15 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x = |BC| − |FC| = 15 − 6 = 9 cm bulunur.',
+      },
+    ],
+  },
 ];
 
 /** Resolves question ids to their bank entries, failing loudly on a typo. */
@@ -10395,6 +10844,21 @@ export const UNIT_4_QUADRILATERALS: Unit = {
         'quadrilaterals-125',
         'quadrilaterals-126',
         'quadrilaterals-127',
+      ),
+    },
+    {
+      id: 'quadrilaterals-m22',
+      order: 22,
+      title: 'Dikdörtgen, kare ve deltoidde benzerlik ve özel açılar',
+      summary:
+        'Karede Öklit bağıntısı, kare içinde düzgün sekizgen, deltoidde köşegenlerle alan, karede dik açı, benzer üçgenler ve dikdörtgende 30° açılar.',
+      questions: pick(
+        'quadrilaterals-128',
+        'quadrilaterals-129',
+        'quadrilaterals-130',
+        'quadrilaterals-131',
+        'quadrilaterals-132',
+        'quadrilaterals-133',
       ),
     },
   ],
