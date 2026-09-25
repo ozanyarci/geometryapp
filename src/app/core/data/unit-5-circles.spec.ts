@@ -418,6 +418,18 @@ describe('unit 5 answer key', () => {
     expect(answerOf('circles-215')).toBe('B'));
   it('216 — AC = 15, r = 6, 54 − 3 · 36/4 = 27 → D', () =>
     expect(answerOf('circles-216')).toBe('D'));
+  it('217 — 36 + 36 = 72 = |AB|², m(AOB) = 90, 27π + ½ · 6 · 6 = 27π + 18 → D', () =>
+    expect(answerOf('circles-217')).toBe('D'));
+  it('218 — AO = 8, 32π − 2 · π/2 + 18π = 49π → B', () =>
+    expect(answerOf('circles-218')).toBe('B'));
+  it('219 — OE = 2r, OC = r = 4, OB = 12, 144π · 30/360 = 12π → D', () =>
+    expect(answerOf('circles-219')).toBe('D'));
+  it('220 — (6 + 36π) − 6 = 36π, 36π / 6π = 6 → C', () =>
+    expect(answerOf('circles-220')).toBe('C'));
+  it('221 — OC = r, OA = r√3, r²√3/2 = 8√3, r² = 16, 16π · 3/4 = 12π → C', () =>
+    expect(answerOf('circles-221')).toBe('C'));
+  it('222 — AB = 6√3, 6 · 6√3 − (81π/6 + 9π/3) = 36√3 − 33π/2 → E', () =>
+    expect(answerOf('circles-222')).toBe('E'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
