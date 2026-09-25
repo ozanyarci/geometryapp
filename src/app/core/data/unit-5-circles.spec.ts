@@ -97,6 +97,17 @@ describe('unit 5 answer key', () => {
   it('47 — m(D) = 24, m(KOD) = 66, m(KOC) = 114, (180 − 114)/2 = 33 → D', () =>
     expect(answerOf('circles-47')).toBe('D'));
   it('48 — m(AOB) = 124, AC yayı 62, x = 31 → E', () => expect(answerOf('circles-48')).toBe('E'));
+  it('49 — BE yayı 140, BC 80, α = 180 − 80 = 100 → D', () =>
+    expect(answerOf('circles-49')).toBe('D'));
+  it('50 — m(DAC) = 34, m(BAD) = 82, m(BCD) = 180 − 82 = 98 → B', () =>
+    expect(answerOf('circles-50')).toBe('B'));
+  it('51 — m(DAC) = 36, 3α + 36 = 180, α = 48 → C', () => expect(answerOf('circles-51')).toBe('C'));
+  it('52 — BF − ED = 56, BE − DF = 72, 360 − 2·EF = 128, EF 116, α = 58 → E', () =>
+    expect(answerOf('circles-52')).toBe('E'));
+  it('53 — m(MAD) = 35, m(AMD) = 110, m(DMB) = 70, α = 180 − 70 = 110 → A', () =>
+    expect(answerOf('circles-53')).toBe('A'));
+  it('54 — CE (A yanı) 250, CE 110, AC 70, α = (360 − 70)/2 = 145 → D', () =>
+    expect(answerOf('circles-54')).toBe('D'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
