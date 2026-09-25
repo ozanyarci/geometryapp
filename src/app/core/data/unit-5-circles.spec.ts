@@ -153,6 +153,18 @@ describe('unit 5 answer key', () => {
     expect(answerOf('circles-77')).toBe('D'));
   it('78 — m(BKC) = m(DKO) = 67,5, α = 180 − 135 = 45 → A', () =>
     expect(answerOf('circles-78')).toBe('A'));
+  it('79 — OE = 5, OB = 13, EB = √(169 − 25) = 12, AB = 24 → D', () =>
+    expect(answerOf('circles-79')).toBe('D'));
+  it('80 — BD² = DC·DA = 6·8 = 48, BD = 4√3, r = 2√3 → B', () =>
+    expect(answerOf('circles-80')).toBe('B'));
+  it('81 — OA = 60/12 = 5, r = 13, AE = 8, BE² = 64 + 144 = 208, BE = 4√13 → E', () =>
+    expect(answerOf('circles-81')).toBe('E'));
+  it('82 — (r + 2)² = r² + 64, r = 15, AC = √(225 + 400) = 25, FC = 10 → B', () =>
+    expect(answerOf('circles-82')).toBe('B'));
+  it('83 — BN = 8, NC = 10, AN² = 180 − 80 = 100, AE = 180/10 = 18 → A', () =>
+    expect(answerOf('circles-83')).toBe('A'));
+  it('84 — AT = 8√3/2 = 4√3, DE = 4√3·√2 = 4√6 → C', () =>
+    expect(answerOf('circles-84')).toBe('C'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
