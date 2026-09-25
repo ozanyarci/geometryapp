@@ -14775,6 +14775,305 @@ const QUESTIONS: Question[] = [
       { title: 'Sonuç', detail: 'Taralı alan 24π cm² bulunur.' },
     ],
   },
+  // ---------------------------------------------------------------- 193
+  {
+    id: 'circles-193',
+    topic: 'Yarım dairede kare ve alan',
+    figure: {
+      viewBox: '0 60 400 224',
+      caption: 'Şekil 193',
+      label:
+        'O merkezli, [AB] çaplı yarım çemberde ODCE karesi; E ve O noktaları [AB] üzerinde, D noktası [OF] üzerinde, C noktası yay üzerinde. AEC ve CDF bölgeleri taralı.',
+      svg: `
+          <path class="shade" d="M89.7,139.7 A156,156 0 0 1 200.0,94.0 L200.0,139.7 Z"/>
+          <path class="shade" d="M44.0,250.0 A156,156 0 0 1 89.7,139.7 L89.7,250.0 Z"/>
+          <path class="ln" d="M44.0,250.0 A156,156 0 0 1 356.0,250.0 Z"/>
+          <path class="ln" d="M89.7,250.0 L89.7,139.7 L200.0,139.7"/>
+          <path class="ln" d="M200.0,250.0 L200.0,94.0"/>
+          <path class="arc" d="M188.0,250.0 L188.0,238.0 L200.0,238.0"/>
+          <circle class="pt" cx="44.0" cy="250.0" r="3.2"/>
+          <circle class="pt" cx="89.7" cy="250.0" r="3.2"/>
+          <circle class="pt" cx="200.0" cy="250.0" r="3.2"/>
+          <circle class="pt" cx="356.0" cy="250.0" r="3.2"/>
+          <circle class="pt" cx="89.7" cy="139.7" r="3.2"/>
+          <circle class="pt" cx="200.0" cy="139.7" r="3.2"/>
+          <circle class="pt" cx="200.0" cy="94.0" r="3.2"/>
+          <text x="44.0" y="272.0" text-anchor="middle">A</text>
+          <text x="89.7" y="272.0" text-anchor="middle">E</text>
+          <text x="200.0" y="272.0" text-anchor="middle">O</text>
+          <text x="356.0" y="272.0" text-anchor="middle">B</text>
+          <text x="81.7" y="133.7" text-anchor="end">C</text>
+          <text x="208.0" y="145.7">D</text>
+          <text x="200.0" y="84.0" text-anchor="middle">F</text>
+        `,
+    },
+    given: ['[AB] yarım çemberin çapı', '[OF] ⊥ [AB]', 'ODCE kare', 'A(ODCE) = 18 cm²'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, taralı alanlar toplamı kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '9(π − 1)' },
+      { key: 'B', text: '6(π − 2)' },
+      { key: 'C', text: '9(π − 2)' },
+      { key: 'D', text: '18(π − 1)' },
+      { key: 'E', text: '9π − 12' },
+    ],
+    answer: 'C',
+    hint: 'Karenin köşegeni [OC], yarım çemberin yarıçapıdır.',
+    solution: [
+      { title: 'Karenin kenarı', detail: 'a² = 18 ⇒ a = 3√2.' },
+      { title: 'Yarıçap', detail: 'r = |OC| = a√2 = 3√2 · √2 = 6.' },
+      {
+        title: 'Çeyrek daire',
+        detail: 'Taralı bölgeler ile kare birlikte AOF çeyrek dairesini oluşturur: π · 36/4 = 9π.',
+      },
+      { title: 'Sonuç', detail: 'Taralı alan = 9π − 18 = 9(π − 2) cm² bulunur.' },
+    ],
+  },
+  // ---------------------------------------------------------------- 194
+  {
+    id: 'circles-194',
+    topic: 'Çemberde paralelkenar ve çevre',
+    figure: {
+      viewBox: '0 24 400 264',
+      caption: 'Şekil 194',
+      label:
+        '[AB] çaplı çemberde ABCD paralelkenarı; D ve E noktaları çember üzerinde, E noktası [DC] üzerinde; [AE] çizilmiş.',
+      svg: `
+          <circle class="ln" cx="170.0" cy="165.0" r="112.5"/>
+          <path class="ln" d="M57.5,165.0 L282.5,165.0 L363.5,57.0 L138.5,57.0 Z"/>
+          <path class="ln" d="M57.5,165.0 L201.5,57.0"/>
+          <circle class="pt" cx="57.5" cy="165.0" r="3.2"/>
+          <circle class="pt" cx="282.5" cy="165.0" r="3.2"/>
+          <circle class="pt" cx="363.5" cy="57.0" r="3.2"/>
+          <circle class="pt" cx="138.5" cy="57.0" r="3.2"/>
+          <circle class="pt" cx="201.5" cy="57.0" r="3.2"/>
+          <text x="49.5" y="171.0" text-anchor="end">A</text>
+          <text x="290.5" y="181.0">B</text>
+          <text x="371.5" y="57.0">C</text>
+          <text x="132.5" y="47.0" text-anchor="end">D</text>
+          <text x="201.5" y="47.0" text-anchor="middle">E</text>
+        `,
+    },
+    given: ['[AB] çemberin çapı', 'ABCD paralelkenar', '|AD| = 9 cm', '|AE| = 12 cm'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, çemberin çevresi kaç cm dir?',
+    choices: [
+      { key: 'A', text: '12π' },
+      { key: 'B', text: '13π' },
+      { key: 'C', text: '14π' },
+      { key: 'D', text: '15π' },
+      { key: 'E', text: '18π' },
+    ],
+    answer: 'D',
+    hint: '[DE] ∥ [AB] olduğundan ABED ikizkenar yamuktur; |BE| = |AD| olur.',
+    solution: [
+      {
+        title: 'İkizkenar yamuk',
+        detail: '[DC] ∥ [AB] ve A, B, E, D çember üzerinde: ABED ikizkenar yamuk, |BE| = |AD| = 9.',
+      },
+      { title: 'Çapı gören açı', detail: '[AB] çap olduğundan m(AEB) = 90°.' },
+      { title: 'Pisagor', detail: '|AB|² = 12² + 9² = 225 ⇒ |AB| = 15.' },
+      { title: 'Sonuç', detail: 'Çevre = π · 15 = 15π cm bulunur.' },
+    ],
+  },
+  // ---------------------------------------------------------------- 195
+  {
+    id: 'circles-195',
+    topic: 'Çeyrek dairede daire kesmesi',
+    figure: {
+      viewBox: '0 10 400 316',
+      caption: 'Şekil 195',
+      label:
+        'O merkezli çeyrek dairede [OA] ⊥ [OB], |OA| = 6; E noktası AB yayı üzerinde, m(OBE) = 60°. [BE] kirişi ile BE yayı arasındaki daire kesmesi taralı.',
+      svg: `
+          <path class="shade" d="M380.0,300.0 A270,270 0 0 0 245.0,66.2 Z"/>
+          <path class="ln" d="M110.0,30.0 A270,270 0 0 1 380.0,300.0 L110.0,300.0 Z"/>
+          <path class="ln" d="M110.0,300.0 L245.0,66.2 L380.0,300.0"/>
+          <path class="arc" d="M110.0,288.0 L122.0,288.0 L122.0,300.0"/>
+          <path class="arc" d="M356.0,300.0 A24,24 0 0 1 368.0,279.2"/>
+          <text class="val" x="339.4" y="285.0" text-anchor="middle">60°</text>
+          <text class="val" x="100.0" y="170.0" text-anchor="end">6</text>
+          <circle class="pt" cx="110.0" cy="300.0" r="3.2"/>
+          <circle class="pt" cx="110.0" cy="30.0" r="3.2"/>
+          <circle class="pt" cx="380.0" cy="300.0" r="3.2"/>
+          <circle class="pt" cx="245.0" cy="66.2" r="3.2"/>
+          <text x="100.0" y="316.0" text-anchor="end">O</text>
+          <text x="100.0" y="35.0" text-anchor="end">A</text>
+          <text x="388.0" y="316.0">B</text>
+          <text x="253.0" y="60.2">E</text>
+        `,
+    },
+    given: ['O, çeyrek dairenin merkezi', '|OA| = 6 cm', 'm(OBE) = 60°'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, taralı daire kesmesinin alanı kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '3π − 9' },
+      { key: 'B', text: '6π − 9√3' },
+      { key: 'C', text: '6π − 9' },
+      { key: 'D', text: '12π − 9√3' },
+      { key: 'E', text: '6π − 18' },
+    ],
+    answer: 'B',
+    hint: '|OB| = |OE| olduğundan OBE üçgeni ikizkenardır.',
+    solution: [
+      {
+        title: 'İkizkenar üçgen',
+        detail: '|OB| = |OE| = 6 ⇒ m(OEB) = m(OBE) = 60°, m(BOE) = 60°: OBE eşkenar.',
+      },
+      { title: 'Dilim', detail: 'π · 36 · 60/360 = 6π.' },
+      { title: 'Üçgen', detail: 'A(OBE) = (√3/4) · 36 = 9√3.' },
+      { title: 'Sonuç', detail: 'Taralı alan = 6π − 9√3 cm² bulunur.' },
+    ],
+  },
+  // ---------------------------------------------------------------- 196
+  {
+    id: 'circles-196',
+    topic: 'Yarım çemberde çevre açı ve daire kesmesi',
+    figure: {
+      viewBox: '0 90 400 200',
+      caption: 'Şekil 196',
+      label:
+        'O merkezli, [AB] çaplı yarım çemberde D ve C noktaları yay üzerinde; m(DAB) = 70°, m(ABC) = 80°. [DC] kirişi ile DC yayı arasındaki bölge taralı.',
+      svg: `
+          <path class="shade" d="M85.1,158.6 A150,150 0 0 1 341.0,203.7 Z"/>
+          <path class="ln" d="M50.0,255.0 A150,150 0 0 1 350.0,255.0 Z"/>
+          <path class="ln" d="M50.0,255.0 L85.1,158.6 L341.0,203.7 L350.0,255.0"/>
+          <path class="arc" d="M76.0,255.0 A26,26 0 0 0 58.9,230.6"/>
+          <path class="arc" d="M324.0,255.0 A26,26 0 0 1 345.5,229.4"/>
+          <text class="val" x="89.3" y="232.5" text-anchor="middle">70°</text>
+          <text class="val" x="311.7" y="227.9" text-anchor="middle">80°</text>
+          <circle class="pt" cx="50.0" cy="255.0" r="3.2"/>
+          <circle class="pt" cx="350.0" cy="255.0" r="3.2"/>
+          <circle class="pt" cx="200.0" cy="255.0" r="3.2"/>
+          <circle class="pt" cx="85.1" cy="158.6" r="3.2"/>
+          <circle class="pt" cx="341.0" cy="203.7" r="3.2"/>
+          <text x="42.0" y="271.0" text-anchor="end">A</text>
+          <text x="358.0" y="271.0">B</text>
+          <text x="200.0" y="277.0" text-anchor="middle">O</text>
+          <text x="77.1" y="150.6" text-anchor="end">D</text>
+          <text x="349.0" y="197.7">C</text>
+        `,
+    },
+    given: [
+      'O merkezli yarım çemberin çapı [AB]',
+      'D, C çember üzerinde',
+      'm(DAB) = 70°',
+      'm(ABC) = 80°',
+      '|DC| = 6√3 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, taralı alan kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '12π − 18√3' },
+      { key: 'B', text: '6π − 9√3' },
+      { key: 'C', text: '9π − 9√3' },
+      { key: 'D', text: '12π − 9' },
+      { key: 'E', text: '12π − 9√3' },
+    ],
+    answer: 'E',
+    hint: 'Çevre açılardan DB ve AC yaylarını, oradan DC yayını bul.',
+    solution: [
+      {
+        title: 'Yaylar',
+        detail: 'm(DB) = 2 · 70° = 140° ⇒ m(AD) = 40°; m(AC) = 2 · 80° = 160° ⇒ m(CB) = 20°.',
+      },
+      { title: 'Merkez açı', detail: 'm(DC) = 180° − 40° − 20° = 120° ⇒ m(DOC) = 120°.' },
+      { title: 'Yarıçap', detail: '120° lik merkez açının kirişi r√3: r√3 = 6√3 ⇒ r = 6.' },
+      { title: 'Kesme', detail: 'π · 36 · 120/360 − ½ · 6 · 6 · sin 120° = 12π − 9√3.' },
+      { title: 'Sonuç', detail: 'Taralı alan 12π − 9√3 cm² bulunur.' },
+    ],
+  },
+  // ---------------------------------------------------------------- 197
+  {
+    id: 'circles-197',
+    topic: 'Daire halkası ve çevreler',
+    figure: {
+      viewBox: '0 14 400 292',
+      caption: 'Şekil 197',
+      label:
+        'O merkezli iç içe iki çember; A noktası küçük, B noktası büyük çember üzerinde; |OA| = r₁, |OB| = r₂. İki daire arasında kalan halka taralı.',
+      svg: `
+          <path class="shade" fill-rule="evenodd" d="M64.0,160.0 A136,136 0 1 0 336.0,160.0 A136,136 0 1 0 64.0,160.0 Z M132.0,160.0 A68,68 0 1 0 268.0,160.0 A68,68 0 1 0 132.0,160.0 Z"/>
+          <circle class="ln" cx="200.0" cy="160.0" r="136"/>
+          <circle class="ln" cx="200.0" cy="160.0" r="68"/>
+          <path class="ln" d="M200.0,160.0 L252.1,116.3"/>
+          <path class="ln" d="M200.0,160.0 L200.0,296.0"/>
+          <text class="val" x="236.0" y="148.0">r₁</text>
+          <text class="val" x="188.0" y="236.0" text-anchor="end">r₂</text>
+          <circle class="pt" cx="200.0" cy="160.0" r="3.2"/>
+          <circle class="pt" cx="252.1" cy="116.3" r="3.2"/>
+          <circle class="pt" cx="200.0" cy="296.0" r="3.2"/>
+          <text x="190.0" y="165.0" text-anchor="end">O</text>
+          <text x="258.1" y="110.3">A</text>
+          <text x="210.0" y="290.0">B</text>
+        `,
+    },
+    given: ['|OA| = r₁', '|OB| = r₂', 'r₂ − r₁ = 4 cm'],
+    stem: [],
+    ask: 'O merkezli iç içe iki dairenin arasında kalan alan 48π cm² olduğuna göre, çemberlerin çevreleri toplamı kaç cm dir?',
+    choices: [
+      { key: 'A', text: '24π' },
+      { key: 'B', text: '16π' },
+      { key: 'C', text: '20π' },
+      { key: 'D', text: '12π' },
+      { key: 'E', text: '32π' },
+    ],
+    answer: 'A',
+    hint: 'Halkanın alanı π(r₂² − r₁²) dir; iki kare farkını çarpanlarına ayır.',
+    solution: [
+      { title: 'Halka', detail: 'π(r₂² − r₁²) = 48π ⇒ r₂² − r₁² = 48.' },
+      { title: 'Kare farkı', detail: '(r₂ − r₁)(r₂ + r₁) = 48 ⇒ 4(r₂ + r₁) = 48 ⇒ r₂ + r₁ = 12.' },
+      { title: 'Çevreler', detail: '2πr₁ + 2πr₂ = 2π(r₁ + r₂) = 2π · 12.' },
+      { title: 'Sonuç', detail: 'Çevreler toplamı 24π cm bulunur.' },
+    ],
+  },
+  // ---------------------------------------------------------------- 198
+  {
+    id: 'circles-198',
+    topic: 'Karede çeyrek çember ve alan',
+    figure: {
+      viewBox: '0 0 400 324',
+      caption: 'Şekil 198',
+      label:
+        'ABCD karesinde D merkezli çeyrek çember E noktasında [DA] yı, F noktasında [DC] yi kesiyor; [FB] çizilmiş. E, F yayı, [FB], [BA] ve [AE] ile sınırlı bölge taralı.',
+      svg: `
+          <path class="shade" d="M68.0,206.0 A176,176 0 0 0 244.0,30.0 L332.0,294.0 L68.0,294.0 Z"/>
+          <path class="ln" d="M68.0,294.0 L332.0,294.0 L332.0,30.0 L68.0,30.0 Z"/>
+          <path class="ln" d="M68.0,206.0 A176,176 0 0 0 244.0,30.0 L332.0,294.0"/>
+          <circle class="pt" cx="68.0" cy="294.0" r="3.2"/>
+          <circle class="pt" cx="332.0" cy="294.0" r="3.2"/>
+          <circle class="pt" cx="332.0" cy="30.0" r="3.2"/>
+          <circle class="pt" cx="68.0" cy="30.0" r="3.2"/>
+          <circle class="pt" cx="68.0" cy="206.0" r="3.2"/>
+          <circle class="pt" cx="244.0" cy="30.0" r="3.2"/>
+          <text x="60.0" y="310.0" text-anchor="end">A</text>
+          <text x="340.0" y="310.0">B</text>
+          <text x="340.0" y="26.0">C</text>
+          <text x="60.0" y="26.0" text-anchor="end">D</text>
+          <text x="60.0" y="211.0" text-anchor="end">E</text>
+          <text x="244.0" y="20.0" text-anchor="middle">F</text>
+          <text class="val" x="200.0" y="314.0" text-anchor="middle">12</text>
+        `,
+    },
+    given: ['ABCD kare', 'D, çeyrek çemberin merkezi', '|DE| = 2 · |EA|', '|AB| = 12 cm'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, taralı alan kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '128 − 16π' },
+      { key: 'B', text: '120 − 16π' },
+      { key: 'C', text: '120 − 8π' },
+      { key: 'D', text: '144 − 16π' },
+      { key: 'E', text: '112 − 16π' },
+    ],
+    answer: 'B',
+    hint: 'Kareden çeyrek daireyi ve FCB üçgenini çıkar.',
+    solution: [
+      { title: 'Yarıçap', detail: '|DE| + |EA| = 12 ve |DE| = 2|EA| ⇒ |EA| = 4, |DE| = |DF| = 8.' },
+      { title: 'Çeyrek daire', detail: 'π · 64/4 = 16π.' },
+      { title: 'FCB üçgeni', detail: '|FC| = 12 − 8 = 4: ½ · 4 · 12 = 24.' },
+      { title: 'Sonuç', detail: 'Taralı alan = 144 − 16π − 24 = 120 − 16π cm² bulunur.' },
+    ],
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -15270,6 +15569,21 @@ export const UNIT_5_CIRCLES: Unit = {
         'circles-190',
         'circles-191',
         'circles-192',
+      ),
+    },
+    {
+      id: 'circles-m33',
+      order: 33,
+      title: 'Dairede uzunluk ve alanlar III',
+      summary:
+        'Yarım dairede kare, çemberde paralelkenar, çeyrek dairede kesme, çevre açılarla daire kesmesi, daire halkası ve karede çeyrek çember.',
+      questions: pick(
+        'circles-193',
+        'circles-194',
+        'circles-195',
+        'circles-196',
+        'circles-197',
+        'circles-198',
       ),
     },
   ],
