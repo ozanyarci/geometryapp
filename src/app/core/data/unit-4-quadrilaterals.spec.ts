@@ -393,6 +393,18 @@ describe('unit 4 answer key', () => {
     expect(answerOf('quadrilaterals-192')).toBe('B'));
   it('193 — EG = 3·5 = 15, DG = 20, AG = 25, AH = 225/25 = 9 → A', () =>
     expect(answerOf('quadrilaterals-193')).toBe('A'));
+  it('194 — AH = DC = 5, HB = 6√2/√2 = 6, x = 5 + 6 = 11 → B', () =>
+    expect(answerOf('quadrilaterals-194')).toBe('B'));
+  it('195 — DC = 2·3 = 6, EL = 3 + 5 = 8, AB = 2·8 = 16 → D', () =>
+    expect(answerOf('quadrilaterals-195')).toBe('D'));
+  it('196 — h = 6√2/√2 = 6, x·√3/2 = 6, x = 12/√3 = 4√3 → C', () =>
+    expect(answerOf('quadrilaterals-196')).toBe('C'));
+  it('197 — AH = (20 − 8)/2 = 6, h² = 100 − 36 = 64, h = 8, (8 + 20)·8/2 = 112 → E', () =>
+    expect(answerOf('quadrilaterals-197')).toBe('E'));
+  it('198 — ADC ∼ BAD, x² = 4·9 = 36, x = 6 → D', () =>
+    expect(answerOf('quadrilaterals-198')).toBe('D'));
+  it('199 — A/2 + D/2 = 90, AED = 90, AD² = 64 + 36 = 100, AD = 10 → A', () =>
+    expect(answerOf('quadrilaterals-199')).toBe('A'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
