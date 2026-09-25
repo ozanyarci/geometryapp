@@ -11951,14 +11951,16 @@ Q12 AKL/CMN 0.7142857142857143 KLMN/ABCD 0.5 KLMN if AKL=5 24.0
       viewBox: '0 0 400 296',
       caption: 'Şekil 152',
       label:
-        'ABCD karesinin içinde |DE| = |BE| olacak biçimde bir E noktası var; |AB| = 7 cm, |AE| = 3√2 cm.',
+        'ABCD karesinin içinde |DE| = |BE| olacak biçimde bir E noktası var ve [AE] çizilmiş; |AB| = 7 cm, |AE| = 3√2 cm.',
       svg: `
           <path class="ln" d="M80.0,268.0 L320.0,268.0 L320.0,28.0 L80.0,28.0 Z"/>
+          <path class="ln" d="M80.0,268.0 L182.9,165.1"/>
           <path class="ln" d="M80.0,28.0 L182.9,165.1"/>
           <path class="ln" d="M182.9,165.1 L320.0,268.0"/>
           <path class="tick" d="M136.2,93.0 L126.6,100.2"/>
           <path class="tick" d="M255.0,211.8 L247.8,221.4"/>
           <text class="val" x="200.0" y="288.0" text-anchor="middle">7</text>
+          <text class="val" x="141.4" y="232.6" text-anchor="start">3√2</text>
           <circle class="pt" cx="80.0" cy="268.0" r="3.2"/>
           <circle class="pt" cx="320.0" cy="268.0" r="3.2"/>
           <circle class="pt" cx="320.0" cy="28.0" r="3.2"/>
@@ -11979,11 +11981,13 @@ Q12 AKL/CMN 0.7142857142857143 KLMN/ABCD 0.5 KLMN if AKL=5 24.0
       svg: `
           <path class="ln" d="M80.0,268.0 L320.0,268.0 L320.0,28.0 L80.0,28.0 Z"/>
           <path class="aux" d="M80.0,268.0 L320.0,28.0"/>
+          <path class="ln" d="M80.0,268.0 L182.9,165.1"/>
           <path class="ln" d="M80.0,28.0 L182.9,165.1"/>
           <path class="ln" d="M182.9,165.1 L320.0,268.0"/>
           <path class="tick" d="M136.2,93.0 L126.6,100.2"/>
           <path class="tick" d="M255.0,211.8 L247.8,221.4"/>
           <text class="val" x="200.0" y="288.0" text-anchor="middle">7</text>
+          <text class="val" x="141.4" y="232.6" text-anchor="start">3√2</text>
           <circle class="pt" cx="80.0" cy="268.0" r="3.2"/>
           <circle class="pt" cx="320.0" cy="268.0" r="3.2"/>
           <circle class="pt" cx="320.0" cy="28.0" r="3.2"/>
