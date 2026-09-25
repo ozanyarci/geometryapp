@@ -54,6 +54,18 @@ describe('unit 5 answer key', () => {
     expect(answerOf('circles-23')).toBe('A'));
   it('24 — BC yayı 112, m(BDC) = 68, 2α = 68, α = 34 → C', () =>
     expect(answerOf('circles-24')).toBe('C'));
+  it('25 — BC yayı 88, BT = TC = 136, α = (136 + 88)/2 = 112 → D', () =>
+    expect(answerOf('circles-25')).toBe('D'));
+  it('26 — AB yayı 100, m(AFB) = 70, DE = 40, α = 20 → B', () =>
+    expect(answerOf('circles-26')).toBe('B'));
+  it('27 — (180 − 3t)/2 = 180 − 4t, t = 36, m(EOC) = 108, α = 36 → D', () =>
+    expect(answerOf('circles-27')).toBe('D'));
+  it('28 — DC = ED = 20 + 2α, BE = 140 − 4α, α = 3α − 60, α = 30 → A', () =>
+    expect(answerOf('circles-28')).toBe('A'));
+  it('29 — 40 + 40 + 2x + 6x = 360, x = 35, DC yayı 70 → E', () =>
+    expect(answerOf('circles-29')).toBe('E'));
+  it('30 — küçük AC yayı 136, AD yayı 68, α = 34 → C', () =>
+    expect(answerOf('circles-30')).toBe('C'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
