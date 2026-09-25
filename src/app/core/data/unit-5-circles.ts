@@ -11486,6 +11486,426 @@ const QUESTIONS: Question[] = [
       { title: 'Sonuç', detail: '|BA| = 8 + 4 = 12 cm bulunur.' },
     ],
   },
+  // ---------------------------------------------------------------- 151
+  {
+    id: 'circles-151',
+    topic: 'Paralel kirişler ve yay uzunluğu',
+    figure: {
+      viewBox: '0 22 400 276',
+      caption: 'Şekil 151',
+      label:
+        'A, B, C ve D çember üzerinde; [BA] ile [CD] paralel, [BD] ve [AC] kirişleri E’de kesişiyor. m(AED) = 80°.',
+      svg: `
+          <circle class="ln" cx="200.0" cy="160.0" r="120.0"/>
+          <path class="ln" d="M96.1,100.0 L303.9,100.0"/>
+          <path class="ln" d="M122.9,251.9 L277.1,251.9"/>
+          <path class="ln" d="M96.1,100.0 L277.1,251.9"/>
+          <path class="ln" d="M303.9,100.0 L122.9,251.9"/>
+          <path class="par" d="M196.0,106.0 L204.0,100.0 L196.0,94.0"/>
+          <path class="par" d="M196.0,257.9 L204.0,251.9 L196.0,245.9"/>
+          <path class="arc" d="M215.3,174.3 A20.0,20.0 0 0 1 215.3,200.1"/>
+          <text class="val" x="226.0" y="192.2">80°</text>
+          <circle class="pt" cx="303.9" cy="100.0" r="3.2"/>
+          <circle class="pt" cx="96.1" cy="100.0" r="3.2"/>
+          <circle class="pt" cx="122.9" cy="251.9" r="3.2"/>
+          <circle class="pt" cx="277.1" cy="251.9" r="3.2"/>
+          <circle class="pt" cx="200.0" cy="187.2" r="3.2"/>
+          <text x="311.9" y="94.0">A</text>
+          <text x="88.1" y="94.0" text-anchor="end">B</text>
+          <text x="114.9" y="265.9" text-anchor="end">C</text>
+          <text x="285.1" y="265.9">D</text>
+          <text x="190.0" y="192.2" text-anchor="end">E</text>
+        `,
+    },
+    given: [
+      'A, B, C ve D çemberin üzerinde',
+      '[BA] // [CD]',
+      'm(AED) = 80°',
+      'AB ve CD yaylarının uzunlukları toplamı 40 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, BC yayının uzunluğu kaç cm dir?',
+    choices: [
+      { key: 'A', text: '10' },
+      { key: 'B', text: '12' },
+      { key: 'C', text: '14' },
+      { key: 'D', text: '16' },
+      { key: 'E', text: '18' },
+    ],
+    answer: 'D',
+    hint: 'Paralel iki kiriş arasında kalan yaylar eşittir; m(AED)’yi bu yaylarla yaz.',
+    solution: [
+      {
+        title: 'Paralel kirişler',
+        detail: '[BA] // [CD] olduğundan aralarında kalan yaylar eşittir: m(BC) = m(AD) = a.',
+      },
+      { title: 'İç açı', detail: 'm(AED) = (m(AD) + m(BC)) / 2 = a ⇒ a = 80°.' },
+      {
+        title: 'Kalan yaylar',
+        detail: 'm(AB) + m(CD) = 360° − 2 · 80° = 200°; bu yaylar 40 cm uzunluğundadır.',
+      },
+      { title: 'Sonuç', detail: '200° ↔ 40 cm ⇒ 1° ↔ 0,2 cm; BC yayı = 80 · 0,2 = 16 cm bulunur.' },
+    ],
+  },
+  // ---------------------------------------------------------------- 152
+  {
+    id: 'circles-152',
+    topic: 'Kesişen kirişlerde kuvvet',
+    figure: {
+      viewBox: '0 -4 400 314',
+      caption: 'Şekil 152',
+      label:
+        '[DC] çaplı çemberde [AB] kirişi çapı K’de kesiyor, |AK| = |KB|. [DF] kirişi [AB]’yi E’de kesiyor.',
+      svg: `
+          <circle class="ln" cx="200.0" cy="150.0" r="135.0"/>
+          <path class="ln" d="M200.0,15.0 L200.0,285.0"/>
+          <path class="ln" d="M92.0,231.0 L308.0,231.0"/>
+          <path class="ln" d="M70.4,187.8 L200.0,285.0"/>
+          <path class="tick" d="M146.0,225.0 L146.0,237.0"/>
+          <path class="tick" d="M254.0,225.0 L254.0,237.0"/>
+          <circle class="pt" cx="200.0" cy="15.0" r="3.2"/>
+          <circle class="pt" cx="200.0" cy="285.0" r="3.2"/>
+          <circle class="pt" cx="200.0" cy="231.0" r="3.2"/>
+          <circle class="pt" cx="92.0" cy="231.0" r="3.2"/>
+          <circle class="pt" cx="308.0" cy="231.0" r="3.2"/>
+          <circle class="pt" cx="128.0" cy="231.0" r="3.2"/>
+          <circle class="pt" cx="70.4" cy="187.8" r="3.2"/>
+          <text x="200.0" y="6.0" text-anchor="middle">C</text>
+          <text x="200.0" y="305.0" text-anchor="middle">D</text>
+          <text x="207.0" y="249.0">K</text>
+          <text x="84.0" y="236.0" text-anchor="end">A</text>
+          <text x="316.0" y="236.0">B</text>
+          <text x="132.0" y="222.0" text-anchor="middle">E</text>
+          <text x="62.4" y="187.8" text-anchor="end">F</text>
+        `,
+    },
+    given: [
+      'A, B, C, D ve F noktaları [DC] çaplı çember üzerindedir',
+      '|AK| = |KB|',
+      '|EK| = 8 cm',
+      '|ED| = 10 cm',
+      '|CK| = 24 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki şekilde; [DF] ∩ [AB] = {E} olduğuna göre, |FD| kaç cm dir?',
+    choices: [
+      { key: 'A', text: '14' },
+      { key: 'B', text: '16' },
+      { key: 'C', text: '18' },
+      { key: 'D', text: '20' },
+      { key: 'E', text: '22' },
+    ],
+    answer: 'C',
+    hint: 'Kirişi ortalayan çap kirişe diktir; önce EKD dik üçgeninden |KD|’yi bul.',
+    solution: [
+      { title: 'Diklik', detail: '[DC] çapı [AB] kirişini K’de ortaladığından [DC] ⊥ [AB] olur.' },
+      { title: 'Pisagor', detail: 'EKD dik üçgeninde |KD|² = 10² − 8² = 36 ⇒ |KD| = 6 cm.' },
+      {
+        title: 'K’de kuvvet',
+        detail: '|AK| · |KB| = |CK| · |KD| ⇒ |AK|² = 24 · 6 = 144 ⇒ |AK| = |KB| = 12 cm.',
+      },
+      { title: 'Parçalar', detail: '|AE| = 12 − 8 = 4 cm ve |EB| = 12 + 8 = 20 cm.' },
+      {
+        title: 'Sonuç',
+        detail:
+          '|FE| · |ED| = |AE| · |EB| ⇒ |FE| · 10 = 80 ⇒ |FE| = 8; |FD| = 8 + 10 = 18 cm bulunur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 153
+  {
+    id: 'circles-153',
+    topic: 'Çapı gören açı ve kuvvet',
+    figure: {
+      viewBox: '0 30 400 324',
+      caption: 'Şekil 153',
+      label:
+        'ABC üçgeninde [BC] çaplı, O merkezli çember [AB]’yi E’de, [AC]’yi D’de kesiyor. |AD| = |DC|, |AE| = x.',
+      svg: `
+          <circle class="ln" cx="200.0" cy="250.0" r="99.0"/>
+          <path class="ln" d="M123.0,53.2 L101.0,250.0 L299.0,250.0 L123.0,53.2"/>
+          <path class="tick" d="M171.5,98.4 L162.5,106.4"/>
+          <path class="tick" d="M259.5,196.8 L250.5,204.8"/>
+          <circle class="pt" cx="123.0" cy="53.2" r="3.2"/>
+          <circle class="pt" cx="101.0" cy="250.0" r="3.2"/>
+          <circle class="pt" cx="299.0" cy="250.0" r="3.2"/>
+          <circle class="pt" cx="200.0" cy="250.0" r="3.2"/>
+          <circle class="pt" cx="103.4" cy="228.1" r="3.2"/>
+          <circle class="pt" cx="211.0" cy="151.6" r="3.2"/>
+          <text x="123.0" y="44.2" text-anchor="middle">A</text>
+          <text x="93.0" y="255.0" text-anchor="end">B</text>
+          <text x="307.0" y="255.0">C</text>
+          <text x="200.0" y="270.0" text-anchor="middle">O</text>
+          <text x="94.4" y="226.1" text-anchor="end">E</text>
+          <text x="220.0" y="147.6">D</text>
+          <text class="val" x="103.2" y="140.7" text-anchor="end">x</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 30 400 324',
+      caption: 'Şekil 153',
+      label: 'Aynı şekilde [BD] kesikli çizilmiş; D’deki açı diktir.',
+      svg: `
+          <path class="aux" d="M101.0,250.0 L211.0,151.6"/>
+          <path class="arc" d="M217.0,158.3 L210.3,164.3 L204.3,157.6"/>
+          <circle class="ln" cx="200.0" cy="250.0" r="99.0"/>
+          <path class="ln" d="M123.0,53.2 L101.0,250.0 L299.0,250.0 L123.0,53.2"/>
+          <path class="tick" d="M171.5,98.4 L162.5,106.4"/>
+          <path class="tick" d="M259.5,196.8 L250.5,204.8"/>
+          <circle class="pt" cx="123.0" cy="53.2" r="3.2"/>
+          <circle class="pt" cx="101.0" cy="250.0" r="3.2"/>
+          <circle class="pt" cx="299.0" cy="250.0" r="3.2"/>
+          <circle class="pt" cx="200.0" cy="250.0" r="3.2"/>
+          <circle class="pt" cx="103.4" cy="228.1" r="3.2"/>
+          <circle class="pt" cx="211.0" cy="151.6" r="3.2"/>
+          <text x="123.0" y="44.2" text-anchor="middle">A</text>
+          <text x="93.0" y="255.0" text-anchor="end">B</text>
+          <text x="307.0" y="255.0">C</text>
+          <text x="200.0" y="270.0" text-anchor="middle">O</text>
+          <text x="94.4" y="226.1" text-anchor="end">E</text>
+          <text x="220.0" y="147.6">D</text>
+          <text class="val" x="103.2" y="140.7" text-anchor="end">x</text>
+        `,
+    },
+    given: ['E ve D noktaları O merkezli ve [BC] çaplı çember üzerindedir', '|BC| = 9 cm'],
+    stem: [],
+    ask: 'Yukarıdaki şekilde; |AD| = |DC| = 6 cm olduğuna göre, |AE| = x kaç cm dir?',
+    choices: [
+      { key: 'A', text: '6' },
+      { key: 'B', text: '7' },
+      { key: 'C', text: '15/2' },
+      { key: 'D', text: '8' },
+      { key: 'E', text: '17/2' },
+    ],
+    answer: 'D',
+    hint: 'Çapı gören çevre açı diktir; [BD]’yi çizip ABC üçgenine bak.',
+    solution: [
+      { title: 'Çapı gören açı', detail: '[BC] çap olduğundan m(BDC) = 90°, yani [BD] ⊥ [AC].' },
+      {
+        title: 'İkizkenar üçgen',
+        detail: '[BD] hem yükseklik hem kenarortay olduğundan |AB| = |BC| = 9 cm.',
+      },
+      { title: 'A’da kuvvet', detail: '|AE| · |AB| = |AD| · |AC| ⇒ x · 9 = 6 · 12 = 72.' },
+      { title: 'Sonuç', detail: 'x = 72 / 9 = 8 cm bulunur.' },
+    ],
+  },
+  // ---------------------------------------------------------------- 154
+  {
+    id: 'circles-154',
+    topic: 'İkizkenar yamukta içteğet çember',
+    figure: {
+      viewBox: '0 70 400 150',
+      caption: 'Şekil 154',
+      label: 'ABCD ikizkenar yamuğunun dört kenarına teğet bir çember; m(DAB) = 30°.',
+      svg: `
+          <circle class="ln" cx="200.0" cy="145.0" r="45.0"/>
+          <path class="ln" d="M32.1,190.0 L367.9,190.0 L212.1,100.0 L187.9,100.0 L32.1,190.0"/>
+          <path class="arc" d="M62.1,190.0 A30.0,30.0 0 0 0 58.0,175.0"/>
+          <text class="val" x="66.1" y="184.0">30°</text>
+          <circle class="pt" cx="32.1" cy="190.0" r="3.2"/>
+          <circle class="pt" cx="367.9" cy="190.0" r="3.2"/>
+          <circle class="pt" cx="212.1" cy="100.0" r="3.2"/>
+          <circle class="pt" cx="187.9" cy="100.0" r="3.2"/>
+          <text x="24.1" y="195.0" text-anchor="end">A</text>
+          <text x="375.9" y="195.0">B</text>
+          <text x="181.9" y="92.0" text-anchor="end">D</text>
+          <text x="218.1" y="92.0">C</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 70 400 150',
+      caption: 'Şekil 154',
+      label: 'Aynı şekilde D’den [AB]’ye dikme [DH] kesikli çizilmiş; O çemberin merkezidir.',
+      svg: `
+          <path class="aux" d="M187.9,100.0 L187.9,190.0"/>
+          <path class="arc" d="M178.9,190.0 L178.9,181.0 L187.9,181.0"/>
+          <circle class="pt" cx="187.9" cy="190.0" r="3.2"/>
+          <text x="187.9" y="208.0" text-anchor="middle">H</text>
+          <circle class="pt" cx="200.0" cy="145.0" r="3.2"/>
+          <text x="208.0" y="141.0">O</text>
+          <circle class="ln" cx="200.0" cy="145.0" r="45.0"/>
+          <path class="ln" d="M32.1,190.0 L367.9,190.0 L212.1,100.0 L187.9,100.0 L32.1,190.0"/>
+          <path class="arc" d="M62.1,190.0 A30.0,30.0 0 0 0 58.0,175.0"/>
+          <text class="val" x="66.1" y="184.0">30°</text>
+          <circle class="pt" cx="32.1" cy="190.0" r="3.2"/>
+          <circle class="pt" cx="367.9" cy="190.0" r="3.2"/>
+          <circle class="pt" cx="212.1" cy="100.0" r="3.2"/>
+          <circle class="pt" cx="187.9" cy="100.0" r="3.2"/>
+          <text x="24.1" y="195.0" text-anchor="end">A</text>
+          <text x="375.9" y="195.0">B</text>
+          <text x="181.9" y="92.0" text-anchor="end">D</text>
+          <text x="218.1" y="92.0">C</text>
+        `,
+    },
+    given: ['ABCD ikizkenar yamuk ve teğetler dörtgeni', 'A(ABCD) = 72 cm²', 'm(DAB) = 30°'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, çemberin yarıçapı kaç cm dir?',
+    choices: [
+      { key: 'A', text: '2' },
+      { key: 'B', text: '5/2' },
+      { key: 'C', text: '3' },
+      { key: 'D', text: '4' },
+      { key: 'E', text: '6' },
+    ],
+    answer: 'C',
+    hint: 'Teğetler dörtgeninde karşılıklı kenarların toplamları eşittir.',
+    solution: [
+      {
+        title: 'Kenar toplamı',
+        detail: '|AD| = |BC| = a olsun. Teğetler dörtgeninde |AB| + |DC| = |AD| + |BC| = 2a.',
+      },
+      {
+        title: 'Yükseklik',
+        detail: 'D’den [AB]’ye dikme [DH] çizilirse 30° karşısındaki kenar |DH| = a / 2 olur.',
+      },
+      {
+        title: 'Alan',
+        detail: 'A(ABCD) = (|AB| + |DC|) / 2 · |DH| = a · a / 2 = 72 ⇒ a² = 144 ⇒ a = 12 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'Çember iki tabana da teğet olduğundan çapı yüksekliğe eşittir: 2r = 6 ⇒ r = 3 cm bulunur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 155
+  {
+    id: 'circles-155',
+    topic: 'Ortak iç teğet',
+    figure: {
+      viewBox: '0 20 400 236',
+      caption: 'Şekil 155',
+      label:
+        'M ve N merkezli, yarıçapları R ve r olan iki çember; [KL] ortak iç teğet, K büyük çemberde, L küçük çemberde.',
+      svg: `
+          <circle class="ln" cx="101.0" cy="150.0" r="81.0"/>
+          <circle class="ln" cx="326.0" cy="150.0" r="54.0"/>
+          <path class="ln" d="M117.6,61.2 L325.6,217.2"/>
+          <path class="ln" d="M101.0,150.0 L326.0,150.0"/>
+          <circle class="pt" cx="101.0" cy="150.0" r="3.2"/>
+          <circle class="pt" cx="326.0" cy="150.0" r="3.2"/>
+          <circle class="pt" cx="149.6" cy="85.2" r="3.2"/>
+          <circle class="pt" cx="293.6" cy="193.2" r="3.2"/>
+          <text x="93.0" y="155.0" text-anchor="end">M</text>
+          <text x="334.0" y="155.0">N</text>
+          <text x="155.6" y="77.2">K</text>
+          <text x="287.6" y="209.2" text-anchor="end">L</text>
+          <text class="val" x="141.0" y="142.0" text-anchor="middle">R</text>
+          <text class="val" x="299.0" y="142.0" text-anchor="middle">r</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 20 400 236',
+      caption: 'Şekil 155',
+      label:
+        'Aynı şekilde [MK] yarıçapı H’ye uzatılmış, [NL] yarıçapı ve [KL]’ye paralel [NH] kesikli çizilmiş; H’deki açı diktir.',
+      svg: `
+          <path class="aux" d="M149.6,85.2 L182.0,42.0"/>
+          <path class="aux" d="M182.0,42.0 L326.0,150.0"/>
+          <path class="aux" d="M326.0,150.0 L293.6,193.2"/>
+          <path class="aux" d="M101.0,150.0 L149.6,85.2"/>
+          <path class="arc" d="M176.6,49.2 L183.8,54.6 L189.2,47.4"/>
+          <path class="arc" d="M154.4,78.8 L160.8,83.6 L156.0,90.0"/>
+          <circle class="pt" cx="182.0" cy="42.0" r="3.2"/>
+          <text x="176.0" y="36.0" text-anchor="end">H</text>
+          <circle class="ln" cx="101.0" cy="150.0" r="81.0"/>
+          <circle class="ln" cx="326.0" cy="150.0" r="54.0"/>
+          <path class="ln" d="M117.6,61.2 L325.6,217.2"/>
+          <path class="ln" d="M101.0,150.0 L326.0,150.0"/>
+          <circle class="pt" cx="101.0" cy="150.0" r="3.2"/>
+          <circle class="pt" cx="326.0" cy="150.0" r="3.2"/>
+          <circle class="pt" cx="149.6" cy="85.2" r="3.2"/>
+          <circle class="pt" cx="293.6" cy="193.2" r="3.2"/>
+          <text x="93.0" y="155.0" text-anchor="end">M</text>
+          <text x="334.0" y="155.0">N</text>
+          <text x="155.6" y="77.2">K</text>
+          <text x="287.6" y="209.2" text-anchor="end">L</text>
+          <text class="val" x="141.0" y="142.0" text-anchor="middle">R</text>
+          <text class="val" x="299.0" y="142.0" text-anchor="middle">r</text>
+        `,
+    },
+    given: ['|MN| = 25 cm', '|KL| = 20 cm'],
+    stem: ['KL, M ve N merkezli çemberlerin ortak teğetidir.'],
+    ask: 'Çemberlerin yarıçapları farkı R − r = 3 cm olduğuna göre, r kaç cm dir?',
+    choices: [
+      { key: 'A', text: '4' },
+      { key: 'B', text: '5' },
+      { key: 'C', text: '6' },
+      { key: 'D', text: '7' },
+      { key: 'E', text: '8' },
+    ],
+    answer: 'C',
+    hint: 'N’den [KL]’ye paralel çizip [MK]’nin uzantısını kestiği noktada dik üçgen kur.',
+    solution: [
+      {
+        title: 'Paralel kaydırma',
+        detail:
+          'N’den [KL]’ye çizilen paralel, [MK]’nin uzantısını H’de keser; KHNL dikdörtgendir.',
+      },
+      { title: 'Kenarlar', detail: '|NH| = |KL| = 20 cm ve |MH| = R + r.' },
+      { title: 'Pisagor', detail: 'MHN dik üçgeninde (R + r)² = 25² − 20² = 225 ⇒ R + r = 15 cm.' },
+      { title: 'Sonuç', detail: 'R + r = 15 ve R − r = 3 ⇒ R = 9, r = 6 cm bulunur.' },
+    ],
+  },
+  // ---------------------------------------------------------------- 156
+  {
+    id: 'circles-156',
+    topic: 'Teğet-kesen ve benzer üçgenler',
+    figure: {
+      viewBox: '0 -2 400 350',
+      caption: 'Şekil 156',
+      label:
+        'APT üçgeninde A, B ve T çember üzerinde; B, [AP] üzerinde. [PE, çembere T’de teğet. |AT| = 12, |AB| = 5, |BP| = 4, |BT| = x.',
+      svg: `
+          <circle class="ln" cx="198.2" cy="160.2" r="148.7"/>
+          <path class="ln" d="M334.9,101.8 L249.1,300.0 L350.5,263.1 L334.9,101.8"/>
+          <path class="ln" d="M249.1,300.0 L164.5,330.8"/>
+          <path class="ln" d="M249.1,300.0 L343.6,191.4"/>
+          <circle class="pt" cx="334.9" cy="101.8" r="3.2"/>
+          <circle class="pt" cx="249.1" cy="300.0" r="3.2"/>
+          <circle class="pt" cx="350.5" cy="263.1" r="3.2"/>
+          <circle class="pt" cx="343.6" cy="191.4" r="3.2"/>
+          <text x="342.9" y="95.8">A</text>
+          <text x="249.1" y="320.0" text-anchor="middle">T</text>
+          <text x="358.5" y="268.1">P</text>
+          <text x="351.6" y="195.4">B</text>
+          <text x="164.5" y="318.8" text-anchor="middle">E</text>
+          <text class="val" x="281.0" y="201.1" text-anchor="end">12</text>
+          <text class="val" x="349.2" y="150.6">5</text>
+          <text class="val" x="357.0" y="231.3">4</text>
+          <text class="val" x="306.3" y="253.7">x</text>
+        `,
+    },
+    given: [
+      'APT bir üçgen',
+      'A, B ve T çember üzerinde',
+      '[PE, T noktasında teğet',
+      '|AT| = 12 cm',
+      '|AB| = 5 cm',
+      '|BP| = 4 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |BT| = x kaç cm dir?',
+    choices: [
+      { key: 'A', text: '6' },
+      { key: 'B', text: '13/2' },
+      { key: 'C', text: '7' },
+      { key: 'D', text: '8' },
+      { key: 'E', text: '9' },
+    ],
+    answer: 'D',
+    hint: 'Önce teğet-kesen bağıntısıyla |PT|’yi bul, sonra PBT ve PTA üçgenlerini karşılaştır.',
+    solution: [
+      { title: 'Teğet-kesen', detail: '|PT|² = |PB| · |PA| = 4 · 9 = 36 ⇒ |PT| = 6 cm.' },
+      {
+        title: 'Benzerlik',
+        detail: 'm(PTB) = m(TAB) (teğet-kiriş açısı) ve P açısı ortak olduğundan PBT ∼ PTA.',
+      },
+      { title: 'Oran', detail: '|BT| / |TA| = |PT| / |PA| ⇒ x / 12 = 6 / 9.' },
+      { title: 'Sonuç', detail: 'x = 12 · 6 / 9 = 8 cm bulunur.' },
+    ],
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -11876,6 +12296,21 @@ export const UNIT_5_CIRCLES: Unit = {
         'circles-148',
         'circles-149',
         'circles-150',
+      ),
+    },
+    {
+      id: 'circles-m26',
+      order: 26,
+      title: 'Çemberde uzunluklar XIII',
+      summary:
+        'Paralel kirişlerde yay uzunluğu, kesişen kirişlerde kuvvet, çapı gören açıyla kuvvet, ikizkenar yamukta içteğet çember, ortak iç teğet ve teğet-kesenle benzerlik.',
+      questions: pick(
+        'circles-151',
+        'circles-152',
+        'circles-153',
+        'circles-154',
+        'circles-155',
+        'circles-156',
       ),
     },
   ],
