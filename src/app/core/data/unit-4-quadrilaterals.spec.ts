@@ -189,6 +189,17 @@ describe('unit 4 answer key', () => {
     expect(answerOf('quadrilaterals-89')).toBe('B'));
   it('90 — AED = 90, AD = 20, EG = 12·16/20 = 48/5, x = 96/5 − 48/5 = 48/5 → A', () =>
     expect(answerOf('quadrilaterals-90')).toBe('A'));
+  it('91 — a/6 and a/8 similarity ratios, S1/S2 = 64/36 = 16/9 → D', () =>
+    expect(answerOf('quadrilaterals-91')).toBe('D'));
+  it('92 — HM = 6, EM = 10, EN = 16/2 = 8, AD = 18, 2·(16 + 18) = 68 → B', () =>
+    expect(answerOf('quadrilaterals-92')).toBe('B'));
+  it('93 — BD² = 98 + 50 − 36 = 112, AC² = 272 − 112 = 160, AC = 4√10 → A', () =>
+    expect(answerOf('quadrilaterals-93')).toBe('A'));
+  it('94 — FB = FE = 5, BC = 10, EC = 8, 16·12/2 = 96 → B', () =>
+    expect(answerOf('quadrilaterals-94')).toBe('B'));
+  it('95 — x/6 = 8/10, x = 4,8 → D', () => expect(answerOf('quadrilaterals-95')).toBe('D'));
+  it('96 — OL = 14/2 = 7, DE = 14 − 5 = 9, KE = 9 − 6 = 3 → C', () =>
+    expect(answerOf('quadrilaterals-96')).toBe('C'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
