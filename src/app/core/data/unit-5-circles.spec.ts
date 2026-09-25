@@ -244,6 +244,18 @@ describe('unit 5 answer key', () => {
     expect(answerOf('circles-125')).toBe('B'));
   it('126 — r = 6, HC = 6, OH² = 100 − 36 = 64, AB = 8 + 6 = 14 → C', () =>
     expect(answerOf('circles-126')).toBe('C'));
+  it('127 — AB² = 10² − 6² = 64, AB = 8, CK = AB/2 = 4 → C', () =>
+    expect(answerOf('circles-127')).toBe('C'));
+  it('128 — (r₂ − 2)² = 289 − 225 = 64, r₂ = 10, CD = 17 − 2 − 10 = 5 → B', () =>
+    expect(answerOf('circles-128')).toBe('B'));
+  it('129 — AD = √(20 − 16) = 2, 4·DC′ = 2·2, DC′ = 1, x = 4 − 1 = 3 → E', () =>
+    expect(answerOf('circles-129')).toBe('E'));
+  it('130 — r² = (r − 1)² + (r − 8)², r² − 18r + 65 = 0, r = 13 → B', () =>
+    expect(answerOf('circles-130')).toBe('B'));
+  it('131 — AT² = 1·9 = 9, AT = 3, BN = AT = 3, BD = 6 → D', () =>
+    expect(answerOf('circles-131')).toBe('D'));
+  it('132 — AB + 4 = 10 + 10, AB = 16, çevre = 2(16 + 10) = 52 → C', () =>
+    expect(answerOf('circles-132')).toBe('C'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
