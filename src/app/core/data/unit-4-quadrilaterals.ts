@@ -9660,6 +9660,402 @@ Q12 AKL/CMN 0.7142857142857143 KLMN/ABCD 0.5 KLMN if AKL=5 24.0
       },
     ],
   },
+  // ---------------------------------------------------------------- 122
+  {
+    id: 'quadrilaterals-122',
+    topic: 'Dikdörtgende orta nokta ve eş üçgenler',
+    figure:{
+      viewBox: '0 4 400 300',
+      caption: 'Şekil 122',
+      label:
+        'ABCD dikdörtgeninde E noktası [DC] nin orta noktası; [AE] doğrusu [BC] nin C tarafındaki uzantısını F noktasında kesiyor; |DE| = |EC|.',
+      svg: `
+          <path class="ln" d="M104.0,280.0 L296.0,280.0 L296.0,152.0 L104.0,152.0 Z"/>
+          <path class="ln" d="M104.0,280.0 L296.0,24.0"/>
+          <path class="ln" d="M296.0,152.0 L296.0,24.0"/>
+          <path class="tick" d="M152.0,157.0 L152.0,147.0"/>
+          <path class="tick" d="M248.0,157.0 L248.0,147.0"/>
+          <circle class="pt" cx="104.0" cy="280.0" r="3.2"/>
+          <circle class="pt" cx="296.0" cy="280.0" r="3.2"/>
+          <circle class="pt" cx="296.0" cy="152.0" r="3.2"/>
+          <circle class="pt" cx="104.0" cy="152.0" r="3.2"/>
+          <circle class="pt" cx="200.0" cy="152.0" r="3.2"/>
+          <circle class="pt" cx="296.0" cy="24.0" r="3.2"/>
+          <text x="94.0" y="295.0" text-anchor="end">A</text>
+          <text x="306.0" y="295.0">B</text>
+          <text x="306.0" y="167.0">C</text>
+          <text x="94.0" y="147.0" text-anchor="end">D</text>
+          <text x="194.0" y="144.0" text-anchor="end">E</text>
+          <text x="306.0" y="29.0">F</text>
+        `,
+    },
+    given: [
+      'ABCD dikdörtgen',
+      '|DE| = |EC| = 6 cm',
+      '|AF| = 20 cm',
+      '[AE ∩ [BC = {F}',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, Alan(ABCD) kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '64' },
+      { key: 'B', text: '72' },
+      { key: 'C', text: '80' },
+      { key: 'D', text: '88' },
+      { key: 'E', text: '96' },
+    ],
+    answer: 'E',
+    hint: 'ADE ve FCE üçgenlerini karşılaştır; E noktası [AF] yi nasıl böler?',
+    solution: [
+      {
+        title: 'Eş üçgenler',
+        detail:
+          '|DE| = |EC|, m(ADE) = m(FCE) = 90° ve ters açılar eşit olduğundan ADE ≅ FCE olur.',
+      },
+      {
+        title: 'AE',
+        detail:
+          'Buradan |AE| = |EF| = 20 / 2 = 10 cm.',
+      },
+      {
+        title: 'AD',
+        detail:
+          'ADE dik üçgeninde |AD|² = 10² − 6² = 64, |AD| = 8 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '|AB| = 6 + 6 = 12 cm olduğundan Alan(ABCD) = 12 · 8 = 96 cm² bulunur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 123
+  {
+    id: 'quadrilaterals-123',
+    topic: 'Dikdörtgende ikizkenar üçgen ve alan',
+    figure:{
+      viewBox: '0 14 400 216',
+      caption: 'Şekil 123',
+      label:
+        'ABCD dikdörtgeninde E noktası [DC] üzerinde, F noktası [AB] üzerinde; E, F ve B ye birleştirilmiş; |FE| = |EB|; |AF| = x.',
+      svg: `
+          <path class="ln" d="M50.0,200.0 L350.0,200.0 L350.0,40.0 L50.0,40.0 Z"/>
+          <path class="ln" d="M110.0,200.0 L230.0,40.0 L350.0,200.0"/>
+          <path class="tick" d="M174.0,123.0 L166.0,117.0"/>
+          <path class="tick" d="M286.0,123.0 L294.0,117.0"/>
+          <text class="val" x="80.0" y="220.0" text-anchor="middle">x</text>
+          <circle class="pt" cx="50.0" cy="200.0" r="3.2"/>
+          <circle class="pt" cx="350.0" cy="200.0" r="3.2"/>
+          <circle class="pt" cx="350.0" cy="40.0" r="3.2"/>
+          <circle class="pt" cx="50.0" cy="40.0" r="3.2"/>
+          <circle class="pt" cx="230.0" cy="40.0" r="3.2"/>
+          <circle class="pt" cx="110.0" cy="200.0" r="3.2"/>
+          <text x="40.0" y="215.0" text-anchor="end">A</text>
+          <text x="360.0" y="215.0">B</text>
+          <text x="360.0" y="35.0">C</text>
+          <text x="40.0" y="35.0" text-anchor="end">D</text>
+          <text x="230.0" y="31.0" text-anchor="middle">E</text>
+          <text x="110.0" y="221.0" text-anchor="middle">F</text>
+        `,
+    },
+    given: [
+      'ABCD dikdörtgen',
+      '|AD| = 8 cm',
+      '|FE| = |EB| = 10 cm',
+    ],
+    stem: [],
+    ask: 'ABCD dikdörtgeninin alanı 120 cm² olduğuna göre, |AF| = x kaç cm dir?',
+    choices: [
+      { key: 'A', text: '2' },
+      { key: 'B', text: '3' },
+      { key: 'C', text: '4' },
+      { key: 'D', text: '5' },
+      { key: 'E', text: '6' },
+    ],
+    answer: 'B',
+    hint: 'E den [AB] ye bir dikme indir; ikizkenar üçgende bu dikme tabanı ikiye böler.',
+    solution: [
+      {
+        title: 'Dikme',
+        detail:
+          'E den [AB] ye inen dikmenin ayağı H olsun; |EH| = |AD| = 8 cm.',
+      },
+      {
+        title: 'FH ve HB',
+        detail:
+          'EFH dik üçgeninde |FH|² = 10² − 8² = 36, |FH| = 6 cm. FEB ikizkenar olduğundan |HB| = |FH| = 6 cm.',
+      },
+      {
+        title: 'AB',
+        detail:
+          'Alan 120 cm² ve |AD| = 8 cm olduğundan |AB| = 120 / 8 = 15 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x + 6 + 6 = 15 ise x = 3 cm bulunur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 124
+  {
+    id: 'quadrilaterals-124',
+    topic: 'Karede kenar oranı ve alan',
+    figure:{
+      viewBox: '0 36 400 270',
+      caption: 'Şekil 124',
+      label:
+        'ABCD karesinde E noktası [DC] üzerinde; A, E ye birleştirilmiş; ADE üçgeni taralı.',
+      svg: `
+          <path class="shade" d="M90.0,280.0 L90.0,60.0 L236.7,60.0 Z"/>
+          <path class="ln" d="M90.0,280.0 L310.0,280.0 L310.0,60.0 L90.0,60.0 Z"/>
+          <path class="ln" d="M90.0,280.0 L236.7,60.0"/>
+          <circle class="pt" cx="90.0" cy="280.0" r="3.2"/>
+          <circle class="pt" cx="310.0" cy="280.0" r="3.2"/>
+          <circle class="pt" cx="310.0" cy="60.0" r="3.2"/>
+          <circle class="pt" cx="90.0" cy="60.0" r="3.2"/>
+          <circle class="pt" cx="236.7" cy="60.0" r="3.2"/>
+          <text x="80.0" y="295.0" text-anchor="end">A</text>
+          <text x="320.0" y="295.0">B</text>
+          <text x="320.0" y="55.0">C</text>
+          <text x="80.0" y="55.0" text-anchor="end">D</text>
+          <text x="236.7" y="51.0" text-anchor="middle">E</text>
+        `,
+    },
+    given: [
+      'ABCD kare',
+      '|EC| / |AB| = 1/3',
+      'A(ADE) = 24 cm²',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(ABCD) kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '54' },
+      { key: 'B', text: '64' },
+      { key: 'C', text: '72' },
+      { key: 'D', text: '81' },
+      { key: 'E', text: '96' },
+    ],
+    answer: 'C',
+    hint: '|EC| = a dersen karenin kenarı 3a, |DE| kaç a olur?',
+    solution: [
+      {
+        title: 'Kenarlar',
+        detail:
+          '|EC| = a olsun; |AB| = |DC| = |AD| = 3a ve |DE| = 3a − a = 2a.',
+      },
+      {
+        title: 'ADE alanı',
+        detail:
+          'A(ADE) = 3a · 2a / 2 = 3a² = 24 ise a² = 8.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'A(ABCD) = (3a)² = 9a² = 9 · 8 = 72 cm² bulunur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 125
+  {
+    id: 'quadrilaterals-125',
+    topic: 'Dikdörtgende Pisagor ve alan',
+    figure:{
+      viewBox: '0 -2 400 266',
+      caption: 'Şekil 125',
+      label:
+        'ABCD dikdörtgeninde E noktası [DC] üzerinde; A, E ye birleştirilmiş; |AE| = |AB|.',
+      svg: `
+          <path class="ln" d="M83.0,240.0 L317.0,240.0 L317.0,24.0 L83.0,24.0 Z"/>
+          <path class="ln" d="M83.0,240.0 L173.0,24.0"/>
+          <path class="tick" d="M131.7,136.2 L122.4,132.4"/>
+          <path class="tick" d="M133.6,131.6 L124.3,127.8"/>
+          <path class="tick" d="M197.5,245.0 L197.5,235.0"/>
+          <path class="tick" d="M202.5,245.0 L202.5,235.0"/>
+          <circle class="pt" cx="83.0" cy="240.0" r="3.2"/>
+          <circle class="pt" cx="317.0" cy="240.0" r="3.2"/>
+          <circle class="pt" cx="317.0" cy="24.0" r="3.2"/>
+          <circle class="pt" cx="83.0" cy="24.0" r="3.2"/>
+          <circle class="pt" cx="173.0" cy="24.0" r="3.2"/>
+          <text x="73.0" y="255.0" text-anchor="end">A</text>
+          <text x="327.0" y="255.0">B</text>
+          <text x="327.0" y="19.0">C</text>
+          <text x="73.0" y="19.0" text-anchor="end">D</text>
+          <text x="173.0" y="15.0" text-anchor="middle">E</text>
+        `,
+    },
+    given: [
+      'ABCD dikdörtgen',
+      '|AB| = |AE| = 13 cm',
+      '|EC| = 8 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(ABCD) kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '120' },
+      { key: 'B', text: '132' },
+      { key: 'C', text: '144' },
+      { key: 'D', text: '156' },
+      { key: 'E', text: '168' },
+    ],
+    answer: 'D',
+    hint: '|DC| = |AB| olduğunu kullanarak önce |DE| yi bul.',
+    solution: [
+      {
+        title: 'DE',
+        detail:
+          '|DC| = |AB| = 13 cm olduğundan |DE| = 13 − 8 = 5 cm.',
+      },
+      {
+        title: 'AD',
+        detail:
+          'ADE dik üçgeninde |AD|² = 13² − 5² = 144, |AD| = 12 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'A(ABCD) = 13 · 12 = 156 cm² bulunur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 126
+  {
+    id: 'quadrilaterals-126',
+    topic: 'Dikdörtgende iç noktadan köşelere uzaklık',
+    figure:{
+      viewBox: '0 8 400 272',
+      caption: 'Şekil 126',
+      label:
+        'ABCD dikdörtgeninin içinde K noktası; K, dört köşeye birleştirilmiş; [BK] ile [KC] dik; KBC açısı 60°; |AK| = x.',
+      svg: `
+          <path class="ln" d="M56.0,260.0 L344.0,260.0 L344.0,30.7 L56.0,30.7 Z"/>
+          <path class="ln" d="M56.0,260.0 L128.0,135.3 L344.0,260.0"/>
+          <path class="ln" d="M56.0,30.7 L128.0,135.3 L344.0,30.7"/>
+          <path class="arc" d="M123.0,144.0 L131.7,149.0 L136.7,140.3"/>
+          <path class="arc" d="M86.0,260.0 A30,30 0 0 0 71.0,234.0"/>
+          <text class="val" x="97.7" y="245.6">60°</text>
+          <text class="val" x="98.0" y="85.0">x</text>
+          <circle class="pt" cx="56.0" cy="30.7" r="3.2"/>
+          <circle class="pt" cx="56.0" cy="260.0" r="3.2"/>
+          <circle class="pt" cx="344.0" cy="260.0" r="3.2"/>
+          <circle class="pt" cx="344.0" cy="30.7" r="3.2"/>
+          <circle class="pt" cx="128.0" cy="135.3" r="3.2"/>
+          <text x="46.0" y="25.7" text-anchor="end">A</text>
+          <text x="46.0" y="275.0" text-anchor="end">B</text>
+          <text x="354.0" y="275.0">C</text>
+          <text x="354.0" y="25.7">D</text>
+          <text x="120.0" y="143.3" text-anchor="end">K</text>
+        `,
+    },
+    given: [
+      'ABCD dikdörtgen',
+      '[BK] ⊥ [KC]',
+      'm(KBC) = 60°',
+      '|KB| = 6 cm',
+      '|KD| = 10 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |AK| = x kaç cm dir?',
+    choices: [
+      { key: 'A', text: '√21' },
+      { key: 'B', text: '2√6' },
+      { key: 'C', text: '3√3' },
+      { key: 'D', text: '2√7' },
+      { key: 'E', text: '4√2' },
+    ],
+    answer: 'D',
+    hint: 'Dikdörtgenin içindeki bir nokta için |KA|² + |KC|² = |KB|² + |KD|² bağıntısını hatırla.',
+    solution: [
+      {
+        title: 'KC',
+        detail:
+          'BKC dik üçgeninde m(KBC) = 60° olduğundan |KC| = |KB| · √3 = 6√3 cm.',
+      },
+      {
+        title: 'Bağıntı',
+        detail:
+          'Dikdörtgenin içindeki K noktası için karşı köşelere uzaklıkların kareleri toplamı eşittir: x² + |KC|² = |KB|² + |KD|².',
+      },
+      {
+        title: 'Denklem',
+        detail:
+          'x² + 108 = 36 + 100 ise x² = 28.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x = √28 = 2√7 cm bulunur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 127
+  {
+    id: 'quadrilaterals-127',
+    topic: 'Karede eşkenar üçgen ve açı',
+    figure:{
+      viewBox: '0 42 400 262',
+      caption: 'Şekil 127',
+      label:
+        'ABCD karesinin içinde DEC eşkenar üçgeni; A, E ve F doğrusal, F noktası [BC] üzerinde; EFC açısı α.',
+      svg: `
+          <path class="ln" d="M90.0,280.0 L310.0,280.0 L310.0,60.0 L90.0,60.0 Z"/>
+          <path class="ln" d="M90.0,60.0 L200.0,250.5 L310.0,60.0"/>
+          <path class="ln" d="M90.0,280.0 L310.0,221.1"/>
+          <path class="arc" d="M284.9,227.8 A26,26 0 0 1 310.0,195.1"/>
+          <text class="val" x="275.1" y="199.3" text-anchor="middle">α</text>
+          <circle class="pt" cx="90.0" cy="280.0" r="3.2"/>
+          <circle class="pt" cx="310.0" cy="280.0" r="3.2"/>
+          <circle class="pt" cx="310.0" cy="60.0" r="3.2"/>
+          <circle class="pt" cx="90.0" cy="60.0" r="3.2"/>
+          <circle class="pt" cx="200.0" cy="250.5" r="3.2"/>
+          <circle class="pt" cx="310.0" cy="221.1" r="3.2"/>
+          <text x="80.0" y="295.0" text-anchor="end">A</text>
+          <text x="320.0" y="295.0">B</text>
+          <text x="320.0" y="55.0">C</text>
+          <text x="80.0" y="55.0" text-anchor="end">D</text>
+          <text x="200.0" y="270.0" text-anchor="middle">E</text>
+          <text x="320.0" y="226.1">F</text>
+        `,
+    },
+    given: [
+      'ABCD bir kare',
+      'DEC eşkenar üçgen',
+      'A, E, F doğrusal',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, m(EFC) = α kaç derecedir?',
+    choices: [
+      { key: 'A', text: '95' },
+      { key: 'B', text: '100' },
+      { key: 'C', text: '105' },
+      { key: 'D', text: '110' },
+      { key: 'E', text: '120' },
+    ],
+    answer: 'C',
+    hint: '|AD| = |DE| olduğunu fark et; ADE ikizkenar üçgeninin açılarını bul.',
+    solution: [
+      {
+        title: 'ADE açıları',
+        detail:
+          '|DE| = |DC| = |AD| ve m(ADE) = 90° − 60° = 30° olduğundan ADE ikizkenardır: m(DAE) = (180° − 30°) / 2 = 75°.',
+      },
+      {
+        title: 'EAB',
+        detail:
+          'm(EAB) = m(FAB) = 90° − 75° = 15°.',
+      },
+      {
+        title: 'ABF',
+        detail:
+          'ABF dik üçgeninde m(AFB) = 90° − 15° = 75°.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'α = m(EFC) = 180° − 75° = 105° bulunur.',
+      },
+    ],
+  },
 ];
 
 /** Resolves question ids to their bank entries, failing loudly on a typo. */
@@ -9984,6 +10380,21 @@ export const UNIT_4_QUADRILATERALS: Unit = {
         'quadrilaterals-119',
         'quadrilaterals-120',
         'quadrilaterals-121',
+      ),
+    },
+    {
+      id: 'quadrilaterals-m21',
+      order: 21,
+      title: 'Dikdörtgen ve karede uzunluk, alan ve açı',
+      summary:
+        'Orta noktayla eş üçgenler, ikizkenar üçgenle kenar, kenar oranıyla alan, Pisagor ile alan, iç noktadan köşelere uzaklık ve karede eşkenar üçgen.',
+      questions: pick(
+        'quadrilaterals-122',
+        'quadrilaterals-123',
+        'quadrilaterals-124',
+        'quadrilaterals-125',
+        'quadrilaterals-126',
+        'quadrilaterals-127',
       ),
     },
   ],
