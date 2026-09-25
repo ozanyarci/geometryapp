@@ -225,6 +225,18 @@ describe('unit 4 answer key', () => {
     expect(answerOf('quadrilaterals-108')).toBe('D'));
   it('109 — AO = 6, OC = 15, 21·16/2 = 168 → C', () =>
     expect(answerOf('quadrilaterals-109')).toBe('C'));
+  it('110 — AH = 2, HB = 8, EH² = 16, EF = 6, FC = 8, x² = 100, x = 10 → E', () =>
+    expect(answerOf('quadrilaterals-110')).toBe('E'));
+  it('111 — AC = 2·90/12 = 15, AO² = 45 − 36 = 9, OC = 12, DC² = 36 + 144 = 180, 6√5 → B', () =>
+    expect(answerOf('quadrilaterals-111')).toBe('B'));
+  it('112 — AEK = S − S/3 − S/12 − S/4 = S/3, AEF = S/9 = 12, S = 108 → D', () =>
+    expect(answerOf('quadrilaterals-112')).toBe('D'));
+  it('113 — ACF = 60, x = AC·√3/2, AC = 2x/√3, BC = AC/√2 = x√6/3 → A', () =>
+    expect(answerOf('quadrilaterals-113')).toBe('A'));
+  it('114 — AD = 18, AD′ = 6, 8/BD′ = 6/18, BD′ = 24, AB = 30 → B', () =>
+    expect(answerOf('quadrilaterals-114')).toBe('B'));
+  it('115 — FH = 17/√2, AH² = 169 − 289/2 = 49/2, BF = √2·7/√2 = 7 → C', () =>
+    expect(answerOf('quadrilaterals-115')).toBe('C'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
