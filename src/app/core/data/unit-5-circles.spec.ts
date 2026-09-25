@@ -361,6 +361,17 @@ describe('unit 5 answer key', () => {
     expect(answerOf('circles-185')).toBe('C'));
   it('186 — m(B) = 90, AC = 10, BC = 6, 2 · ½ · 8 · 6 = 48 → C', () =>
     expect(answerOf('circles-186')).toBe('C'));
+  it('187 — 120/x = 5/2, 5x = 240, x = 48 → C', () => expect(answerOf('circles-187')).toBe('C'));
+  it('188 — r² = a²/4 + a², a² = 4r²/5, (4/5)/(π/2) = 8/(5π) → B', () =>
+    expect(answerOf('circles-188')).toBe('B'));
+  it('189 — 16 = 2·MH, MH = 8, r = MK = 10, 25π − 10·4 = 25π − 40 → D', () =>
+    expect(answerOf('circles-189')).toBe('D'));
+  it('190 — m(COB) = m(AOD) = 130, 36π · 260/360 = 26π → D', () =>
+    expect(answerOf('circles-190')).toBe('D'));
+  it('191 — R = 4, r = 3, 2 · (8π − 9π/2) = 7π → A', () =>
+    expect(answerOf('circles-191')).toBe('A'));
+  it('192 — 2πr/3 = 4π, r = 6, 36π · 240/360 = 24π → E', () =>
+    expect(answerOf('circles-192')).toBe('E'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
