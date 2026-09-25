@@ -6686,6 +6686,478 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+
+  // ---------------------------------------------------------------- 91
+  {
+    id: 'circles-91',
+    topic: 'Eş merkezli yaylarda yol',
+    figure: {
+      viewBox: '0 0 400 328',
+      caption: 'Şekil 91',
+      label:
+        'O merkezli iki çeyrek çember; iç yay C’den D’ye, dış yay A’dan B’ye uzanıyor. C ve A, [OA] üzerinde; K, AB yayı üzerinde. |OC| = 3, |CA| = 6.',
+      svg: `
+          <path class="ln" d="M70.0,30.0 L70.0,300.0 L340.0,300.0"/>
+          <path class="ln" d="M70.0,30.0 A270.0,270.0 0 0 1 340.0,300.0"/>
+          <path class="ln" d="M70.0,210.0 A90.0,90.0 0 0 1 160.0,300.0"/>
+          <path class="ln" d="M79.0,300.0 L79.0,291.0 L70.0,291.0"/>
+          <circle class="pt" cx="70.0" cy="300.0" r="3.2"/>
+          <circle class="pt" cx="70.0" cy="30.0" r="3.2"/>
+          <circle class="pt" cx="340.0" cy="300.0" r="3.2"/>
+          <circle class="pt" cx="70.0" cy="210.0" r="3.2"/>
+          <circle class="pt" cx="160.0" cy="300.0" r="3.2"/>
+          <circle class="pt" cx="205.0" cy="66.2" r="3.2"/>
+          <text x="62.0" y="318.0" text-anchor="end">O</text>
+          <text x="70.0" y="20.0" text-anchor="middle">A</text>
+          <text x="340.0" y="320.0" text-anchor="middle">B</text>
+          <text x="62.0" y="215.0" text-anchor="end">C</text>
+          <text x="160.0" y="320.0" text-anchor="middle">D</text>
+          <text x="211.0" y="58.2">K</text>
+          <text class="val" x="62.0" y="260.0" text-anchor="end">3</text>
+          <text class="val" x="62.0" y="170.0" text-anchor="end">6</text>
+        `,
+    },
+    given: ['|OC| = 3 birim', '|CA| = 6 birim'],
+    stem: [
+      'C ve A noktalarındaki iki karınca, O merkezli CD ve AB çeyrek yayları üzerinde aynı hızla hareket etmektedir.',
+      'C noktasından yola çıkan karınca D noktasına geldiğinde, A noktasından yola çıkan karınca K noktasına gelmektedir.',
+    ],
+    ask: 'Buna göre, |KB| yayının uzunluğu kaç π birimdir?',
+    choices: [
+      { key: 'A', text: '2' },
+      { key: 'B', text: '5/2' },
+      { key: 'C', text: '3' },
+      { key: 'D', text: '7/2' },
+      { key: 'E', text: '4' },
+    ],
+    answer: 'C',
+    hint: 'İki karınca aynı sürede eşit yol alır; önce küçük çeyrek yayın uzunluğunu bul.',
+    solution: [
+      { title: 'Küçük yay', detail: 'Yarıçap 3 olduğundan CD yayı = 2π · 3 / 4 = 3π/2 birim.' },
+      {
+        title: 'Büyük yay',
+        detail: 'Yarıçap 3 + 6 = 9 olduğundan AB yayı = 2π · 9 / 4 = 9π/2 birim.',
+      },
+      { title: 'Eşit yol', detail: 'A’dan çıkan karınca da 3π/2 birim yol alır: AK yayı = 3π/2.' },
+      { title: 'Sonuç', detail: '|KB| = 9π/2 − 3π/2 = 3π birim bulunur.' },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 92
+  {
+    id: 'circles-92',
+    topic: 'Yay uzunluğu ve dik üçgende kenarortay',
+    figure: {
+      viewBox: '-4 36 400 254',
+      caption: 'Şekil 92',
+      label:
+        'O merkezli, [OA] ve [OD] yarıçaplı çeyrek çember; C, OD doğrusu üzerinde D’nin ötesinde; [AC] yayı B noktasında kesiyor. |AB| = |BC|.',
+      svg: `
+          <path class="ln" d="M20.0,64.0 L20.0,262.0 L362.9,262.0"/>
+          <path class="ln" d="M20.0,64.0 A198.0,198.0 0 0 1 218.0,262.0"/>
+          <path class="ln" d="M20.0,64.0 L362.9,262.0"/>
+          <path class="ln" d="M29.0,262.0 L29.0,253.0 L20.0,253.0"/>
+          <path class="tick" d="M104.8,106.1 L102.3,118.4"/>
+          <path class="tick" d="M109.2,108.6 L106.6,120.9"/>
+          <path class="tick" d="M276.3,205.1 L273.8,217.4"/>
+          <path class="tick" d="M280.6,207.6 L278.1,219.9"/>
+          <circle class="pt" cx="20.0" cy="262.0" r="3.2"/>
+          <circle class="pt" cx="20.0" cy="64.0" r="3.2"/>
+          <circle class="pt" cx="191.5" cy="163.0" r="3.2"/>
+          <circle class="pt" cx="218.0" cy="262.0" r="3.2"/>
+          <circle class="pt" cx="362.9" cy="262.0" r="3.2"/>
+          <text x="16.0" y="282.0" text-anchor="middle">O</text>
+          <text x="12.0" y="68.0" text-anchor="end">A</text>
+          <text x="193.5" y="149.0">B</text>
+          <text x="218.0" y="282.0" text-anchor="middle">D</text>
+          <text x="362.9" y="282.0" text-anchor="middle">C</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '-4 36 400 254',
+      caption: 'Şekil 92',
+      label: 'Aynı şekilde [OB] yarıçapı kesikli çizilmiş.',
+      svg: `
+          <path class="ln" d="M20.0,64.0 L20.0,262.0 L362.9,262.0"/>
+          <path class="ln" d="M20.0,64.0 A198.0,198.0 0 0 1 218.0,262.0"/>
+          <path class="ln" d="M20.0,64.0 L362.9,262.0"/>
+          <path class="ln" d="M29.0,262.0 L29.0,253.0 L20.0,253.0"/>
+          <path class="tick" d="M104.8,106.1 L102.3,118.4"/>
+          <path class="tick" d="M109.2,108.6 L106.6,120.9"/>
+          <path class="tick" d="M276.3,205.1 L273.8,217.4"/>
+          <path class="tick" d="M280.6,207.6 L278.1,219.9"/>
+          <path class="aux" d="M20.0,262.0 L191.5,163.0"/>
+          <circle class="pt" cx="20.0" cy="262.0" r="3.2"/>
+          <circle class="pt" cx="20.0" cy="64.0" r="3.2"/>
+          <circle class="pt" cx="191.5" cy="163.0" r="3.2"/>
+          <circle class="pt" cx="218.0" cy="262.0" r="3.2"/>
+          <circle class="pt" cx="362.9" cy="262.0" r="3.2"/>
+          <text x="16.0" y="282.0" text-anchor="middle">O</text>
+          <text x="12.0" y="68.0" text-anchor="end">A</text>
+          <text x="193.5" y="149.0">B</text>
+          <text x="218.0" y="282.0" text-anchor="middle">D</text>
+          <text x="362.9" y="282.0" text-anchor="middle">C</text>
+        `,
+    },
+    given: ['AOC bir dik üçgen', '|AB| = |BC|'],
+    stem: ['Yukarıdaki şekilde, O merkezli çeyrek çemberin yarıçapı 9 cm dir.'],
+    ask: 'Buna göre, BD yayının uzunluğu kaç cm dir?',
+    choices: [
+      { key: 'A', text: 'π' },
+      { key: 'B', text: '3π/2' },
+      { key: 'C', text: '2π' },
+      { key: 'D', text: '3π' },
+      { key: 'E', text: '9π/2' },
+    ],
+    answer: 'B',
+    hint: 'Dik üçgende hipotenüse ait kenarortay hipotenüsün yarısıdır; [OB]’yi çiz.',
+    solution: [
+      { title: 'Kenarortay', detail: 'B, [AC]’nin orta noktası olduğundan |OB| = |AC| / 2.' },
+      { title: 'Hipotenüs', detail: '|OB| = 9 yarıçap olduğundan |AC| = 18 = 2 · |OA|.' },
+      {
+        title: 'Açılar',
+        detail:
+          'Karşısındaki kenar hipotenüsün yarısı olduğundan m(OCA) = 30°; |OB| = |BC| ile m(BOC) = 30°.',
+      },
+      { title: 'Sonuç', detail: 'BD yayı = 2π · 9 · 30 / 360 = 3π/2 cm bulunur.' },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 93
+  {
+    id: 'circles-93',
+    topic: 'Teğet, kesen ve yarım çemberde kare',
+    figure: {
+      viewBox: '8 80 400 224',
+      caption: 'Şekil 93',
+      label:
+        'O merkezli, [AB] çaplı yarım çember; [BC] B noktasında teğet; [AC] yarım çemberi D noktasında kesiyor ve E üzerinde; EOFG karesinin O ve F köşeleri [AB] üzerinde.',
+      svg: `
+          <path class="ln" d="M32.1,280.0 A155.9,155.9 0 0 1 343.9,280.0"/>
+          <path class="ln" d="M32.1,280.0 L343.9,280.0 L343.9,100.0"/>
+          <path class="ln" d="M32.1,280.0 L343.9,100.0"/>
+          <path class="ln" d="M188.0,280.0 L188.0,190.0 L278.0,190.0 L278.0,280.0"/>
+          <path class="ln" d="M197.0,280.0 L197.0,271.0 L188.0,271.0"/>
+          <path class="ln" d="M334.9,280.0 L334.9,271.0 L343.9,271.0"/>
+          <circle class="pt" cx="32.1" cy="280.0" r="3.2"/>
+          <circle class="pt" cx="343.9" cy="280.0" r="3.2"/>
+          <circle class="pt" cx="343.9" cy="100.0" r="3.2"/>
+          <circle class="pt" cx="265.9" cy="145.0" r="3.2"/>
+          <circle class="pt" cx="188.0" cy="190.0" r="3.2"/>
+          <circle class="pt" cx="188.0" cy="280.0" r="3.2"/>
+          <circle class="pt" cx="278.0" cy="280.0" r="3.2"/>
+          <circle class="pt" cx="278.0" cy="190.0" r="3.2"/>
+          <text x="26.1" y="298.0" text-anchor="end">A</text>
+          <text x="349.9" y="298.0">B</text>
+          <text x="351.9" y="100.0">C</text>
+          <text x="263.9" y="133.0" text-anchor="middle">D</text>
+          <text x="180.0" y="184.0" text-anchor="end">E</text>
+          <text x="188.0" y="300.0" text-anchor="middle">O</text>
+          <text x="278.0" y="300.0" text-anchor="middle">F</text>
+          <text x="282.0" y="182.0">G</text>
+          <text class="val" x="329.9" y="130.0" text-anchor="end">3</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '8 80 400 224',
+      caption: 'Şekil 93',
+      label: 'Aynı şekilde [BD] kesikli çizilmiş; çapı gören çevre açı dik.',
+      svg: `
+          <path class="ln" d="M32.1,280.0 A155.9,155.9 0 0 1 343.9,280.0"/>
+          <path class="ln" d="M32.1,280.0 L343.9,280.0 L343.9,100.0"/>
+          <path class="ln" d="M32.1,280.0 L343.9,100.0"/>
+          <path class="ln" d="M188.0,280.0 L188.0,190.0 L278.0,190.0 L278.0,280.0"/>
+          <path class="ln" d="M197.0,280.0 L197.0,271.0 L188.0,271.0"/>
+          <path class="ln" d="M334.9,280.0 L334.9,271.0 L343.9,271.0"/>
+          <path class="aux" d="M265.9,145.0 L343.9,280.0"/>
+          <path class="ln" d="M258.1,149.5 L262.6,157.3 L270.4,152.8"/>
+          <circle class="pt" cx="32.1" cy="280.0" r="3.2"/>
+          <circle class="pt" cx="343.9" cy="280.0" r="3.2"/>
+          <circle class="pt" cx="343.9" cy="100.0" r="3.2"/>
+          <circle class="pt" cx="265.9" cy="145.0" r="3.2"/>
+          <circle class="pt" cx="188.0" cy="190.0" r="3.2"/>
+          <circle class="pt" cx="188.0" cy="280.0" r="3.2"/>
+          <circle class="pt" cx="278.0" cy="280.0" r="3.2"/>
+          <circle class="pt" cx="278.0" cy="190.0" r="3.2"/>
+          <text x="26.1" y="298.0" text-anchor="end">A</text>
+          <text x="349.9" y="298.0">B</text>
+          <text x="351.9" y="100.0">C</text>
+          <text x="263.9" y="133.0" text-anchor="middle">D</text>
+          <text x="180.0" y="184.0" text-anchor="end">E</text>
+          <text x="188.0" y="300.0" text-anchor="middle">O</text>
+          <text x="278.0" y="300.0" text-anchor="middle">F</text>
+          <text x="282.0" y="182.0">G</text>
+          <text class="val" x="329.9" y="130.0" text-anchor="end">3</text>
+        `,
+    },
+    given: ['[BC], B noktasında yarım çembere teğet', 'EOFG kare', '|AD| = 9 cm', '|DC| = 3 cm'],
+    stem: ['Yukarıdaki şekilde A, E, D ve C noktaları doğrusaldır.'],
+    ask: 'Buna göre, EOFG karesinin çevresi kaç cm dir?',
+    choices: [
+      { key: 'A', text: '4√3' },
+      { key: 'B', text: '8' },
+      { key: 'C', text: '9' },
+      { key: 'D', text: '10' },
+      { key: 'E', text: '12' },
+    ],
+    answer: 'E',
+    hint: 'Dış noktadan çizilen teğetin karesi, kesenin dış ve tüm parçalarının çarpımına eşittir.',
+    solution: [
+      { title: 'Teğet-kesen', detail: '|BC|² = |CD| · |CA| = 3 · 12 = 36, |BC| = 6 cm.' },
+      {
+        title: 'Çap',
+        detail: 'ABC dik üçgeninde |AB|² = 12² − 6² = 108, |AB| = 6√3 cm; yarıçap 3√3 cm.',
+      },
+      { title: 'Açı', detail: '|BC| = |AC| / 2 olduğundan m(BAC) = 30°.' },
+      { title: 'Karenin kenarı', detail: 'AOE dik üçgeninde |OE| = |AO| / √3 = 3√3 / √3 = 3 cm.' },
+      { title: 'Sonuç', detail: 'Çevre(EOFG) = 4 · 3 = 12 cm bulunur.' },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 94
+  {
+    id: 'circles-94',
+    topic: 'İç içe çeyrek çemberlerde yay',
+    figure: {
+      viewBox: '-30 18 400 310',
+      caption: 'Şekil 94',
+      label:
+        'O₁ merkezli, [O₁D] ve [O₁B] yarıçaplı çeyrek çember; O₂, [O₁B] üzerinde; O₂ merkezli çeyrek çemberin yayı A’dan C’ye uzanıyor, A büyük yay üzerinde ve [AO₂] ⊥ [O₁B]. m(AB) = 30°, |O₁D| = 20.',
+      svg: `
+          <path class="ln" d="M40.0,30.0 L40.0,300.0 L310.0,300.0"/>
+          <path class="ln" d="M40.0,30.0 A270.0,270.0 0 0 1 310.0,300.0"/>
+          <path class="ln" d="M138.8,300.0 A135.0,135.0 0 0 1 273.8,165.0"/>
+          <path class="ln" d="M273.8,165.0 L273.8,300.0"/>
+          <path class="ln" d="M49.0,300.0 L49.0,291.0 L40.0,291.0"/>
+          <path class="ln" d="M264.8,300.0 L264.8,291.0 L273.8,291.0"/>
+          <circle class="pt" cx="40.0" cy="300.0" r="3.2"/>
+          <circle class="pt" cx="40.0" cy="30.0" r="3.2"/>
+          <circle class="pt" cx="310.0" cy="300.0" r="3.2"/>
+          <circle class="pt" cx="273.8" cy="165.0" r="3.2"/>
+          <circle class="pt" cx="273.8" cy="300.0" r="3.2"/>
+          <circle class="pt" cx="138.8" cy="300.0" r="3.2"/>
+          <text x="40.0" y="320.0" text-anchor="middle">O₁</text>
+          <text x="32.0" y="36.0" text-anchor="end">D</text>
+          <text x="310.0" y="320.0" text-anchor="middle">B</text>
+          <text x="279.8" y="157.0">A</text>
+          <text x="273.8" y="320.0" text-anchor="middle">O₂</text>
+          <text x="138.8" y="320.0" text-anchor="middle">C</text>
+          <text class="val" x="32.0" y="170.0" text-anchor="end">20</text>
+          <text class="val" x="303.8" y="213.0">30°</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '-30 18 400 310',
+      caption: 'Şekil 94',
+      label: 'Aynı şekilde [O₁A] yarıçapı kesikli çizilmiş.',
+      svg: `
+          <path class="ln" d="M40.0,30.0 L40.0,300.0 L310.0,300.0"/>
+          <path class="ln" d="M40.0,30.0 A270.0,270.0 0 0 1 310.0,300.0"/>
+          <path class="ln" d="M138.8,300.0 A135.0,135.0 0 0 1 273.8,165.0"/>
+          <path class="ln" d="M273.8,165.0 L273.8,300.0"/>
+          <path class="ln" d="M49.0,300.0 L49.0,291.0 L40.0,291.0"/>
+          <path class="ln" d="M264.8,300.0 L264.8,291.0 L273.8,291.0"/>
+          <path class="aux" d="M40.0,300.0 L273.8,165.0"/>
+          <circle class="pt" cx="40.0" cy="300.0" r="3.2"/>
+          <circle class="pt" cx="40.0" cy="30.0" r="3.2"/>
+          <circle class="pt" cx="310.0" cy="300.0" r="3.2"/>
+          <circle class="pt" cx="273.8" cy="165.0" r="3.2"/>
+          <circle class="pt" cx="273.8" cy="300.0" r="3.2"/>
+          <circle class="pt" cx="138.8" cy="300.0" r="3.2"/>
+          <text x="40.0" y="320.0" text-anchor="middle">O₁</text>
+          <text x="32.0" y="36.0" text-anchor="end">D</text>
+          <text x="310.0" y="320.0" text-anchor="middle">B</text>
+          <text x="279.8" y="157.0">A</text>
+          <text x="273.8" y="320.0" text-anchor="middle">O₂</text>
+          <text x="138.8" y="320.0" text-anchor="middle">C</text>
+          <text class="val" x="32.0" y="170.0" text-anchor="end">20</text>
+          <text class="val" x="303.8" y="213.0">30°</text>
+        `,
+    },
+    given: ['m(AB) = 30°', '|O₁D| = 20 cm', '[AO₂] ⊥ [O₁B]'],
+    stem: [
+      'O₁ merkezli çeyrek çemberin içine şekildeki gibi O₂ merkezli çeyrek çember yerleştirilmiştir.',
+    ],
+    ask: 'Buna göre, O₂ merkezli çeyrek çemberin AC yayının uzunluğu kaç cm dir?',
+    choices: [
+      { key: 'A', text: '2π' },
+      { key: 'B', text: '3π' },
+      { key: 'C', text: '4π' },
+      { key: 'D', text: '5π' },
+      { key: 'E', text: '10π' },
+    ],
+    answer: 'D',
+    hint: '[O₁A]’yı çiz: m(AO₁B) = 30° olan bir dik üçgen elde edersin.',
+    solution: [
+      { title: 'Merkez açı', detail: 'm(AB) = 30° olduğundan m(AO₁O₂) = 30° ve |O₁A| = 20 cm.' },
+      {
+        title: '30-60-90 üçgeni',
+        detail: 'AO₁O₂ dik üçgeninde 30° karşısındaki kenar |AO₂| = 20 / 2 = 10 cm.',
+      },
+      { title: 'Küçük yarıçap', detail: 'O₂ merkezli çemberin yarıçapı |O₂A| = 10 cm.' },
+      { title: 'Sonuç', detail: 'AC yayı = 2π · 10 / 4 = 5π cm bulunur.' },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 95
+  {
+    id: 'circles-95',
+    topic: 'Çeyrek çemberde eşit yaylar ve dikmeler',
+    figure: {
+      viewBox: '-5 18 400 310',
+      caption: 'Şekil 95',
+      label:
+        'O merkezli çeyrek çemberin AB yayı D ve C noktalarıyla üç eşit parçaya ayrılmış; [DH] ⊥ [OB], [CK] ⊥ [OB].',
+      svg: `
+          <path class="ln" d="M60.0,30.0 L60.0,300.0 L330.0,300.0"/>
+          <path class="ln" d="M60.0,30.0 A270.0,270.0 0 0 1 330.0,300.0"/>
+          <path class="ln" d="M195.0,66.2 L195.0,300.0"/>
+          <path class="ln" d="M293.8,165.0 L293.8,300.0"/>
+          <path class="ln" d="M69.0,300.0 L69.0,291.0 L60.0,291.0"/>
+          <path class="ln" d="M204.0,300.0 L204.0,291.0 L195.0,291.0"/>
+          <path class="ln" d="M302.8,300.0 L302.8,291.0 L293.8,291.0"/>
+          <circle class="pt" cx="60.0" cy="300.0" r="3.2"/>
+          <circle class="pt" cx="60.0" cy="30.0" r="3.2"/>
+          <circle class="pt" cx="330.0" cy="300.0" r="3.2"/>
+          <circle class="pt" cx="195.0" cy="66.2" r="3.2"/>
+          <circle class="pt" cx="293.8" cy="165.0" r="3.2"/>
+          <circle class="pt" cx="195.0" cy="300.0" r="3.2"/>
+          <circle class="pt" cx="293.8" cy="300.0" r="3.2"/>
+          <text x="54.0" y="320.0" text-anchor="middle">O</text>
+          <text x="52.0" y="36.0" text-anchor="end">A</text>
+          <text x="330.0" y="320.0" text-anchor="middle">B</text>
+          <text x="201.0" y="58.2">D</text>
+          <text x="301.8" y="159.0">C</text>
+          <text x="195.0" y="320.0" text-anchor="middle">H</text>
+          <text x="293.8" y="320.0" text-anchor="middle">K</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '-5 18 400 310',
+      caption: 'Şekil 95',
+      label: 'Aynı şekilde [OD] ve [OC] yarıçapları kesikli çizilmiş.',
+      svg: `
+          <path class="ln" d="M60.0,30.0 L60.0,300.0 L330.0,300.0"/>
+          <path class="ln" d="M60.0,30.0 A270.0,270.0 0 0 1 330.0,300.0"/>
+          <path class="ln" d="M195.0,66.2 L195.0,300.0"/>
+          <path class="ln" d="M293.8,165.0 L293.8,300.0"/>
+          <path class="ln" d="M69.0,300.0 L69.0,291.0 L60.0,291.0"/>
+          <path class="ln" d="M204.0,300.0 L204.0,291.0 L195.0,291.0"/>
+          <path class="ln" d="M302.8,300.0 L302.8,291.0 L293.8,291.0"/>
+          <path class="aux" d="M60.0,300.0 L195.0,66.2"/>
+          <path class="aux" d="M60.0,300.0 L293.8,165.0"/>
+          <circle class="pt" cx="60.0" cy="300.0" r="3.2"/>
+          <circle class="pt" cx="60.0" cy="30.0" r="3.2"/>
+          <circle class="pt" cx="330.0" cy="300.0" r="3.2"/>
+          <circle class="pt" cx="195.0" cy="66.2" r="3.2"/>
+          <circle class="pt" cx="293.8" cy="165.0" r="3.2"/>
+          <circle class="pt" cx="195.0" cy="300.0" r="3.2"/>
+          <circle class="pt" cx="293.8" cy="300.0" r="3.2"/>
+          <text x="54.0" y="320.0" text-anchor="middle">O</text>
+          <text x="52.0" y="36.0" text-anchor="end">A</text>
+          <text x="330.0" y="320.0" text-anchor="middle">B</text>
+          <text x="201.0" y="58.2">D</text>
+          <text x="301.8" y="159.0">C</text>
+          <text x="195.0" y="320.0" text-anchor="middle">H</text>
+          <text x="293.8" y="320.0" text-anchor="middle">K</text>
+        `,
+    },
+    given: ['AB yayı D ve C ile üç eşit parçaya ayrılmış', '[DH] ⊥ [OB]', '[CK] ⊥ [OB]'],
+    stem: [],
+    ask: 'Buna göre, |HK| / |KB| oranı kaçtır?',
+    choices: [
+      { key: 'A', text: '√3 − 1' },
+      { key: 'B', text: '√3' },
+      { key: 'C', text: '(√3 + 1) / 2' },
+      { key: 'D', text: '√3 + 1' },
+      { key: 'E', text: '2 + √3' },
+    ],
+    answer: 'D',
+    hint: 'Her yay 30° dir; [OD] ve [OC] yarıçaplarını çizip H ve K’nin O’ya uzaklığını yarıçap cinsinden yaz.',
+    solution: [
+      {
+        title: 'Açılar',
+        detail: 'Her yay 90° / 3 = 30° olduğundan m(DOB) = 60°, m(COB) = 30°. Yarıçap r olsun.',
+      },
+      { title: 'H ve K', detail: '|OH| = r · cos 60° = r/2, |OK| = r · cos 30° = r√3/2.' },
+      { title: 'Parçalar', detail: '|HK| = r(√3 − 1)/2 ve |KB| = r − r√3/2 = r(2 − √3)/2.' },
+      {
+        title: 'Oran',
+        detail: '|HK| / |KB| = (√3 − 1) / (2 − √3) = (√3 − 1)(2 + √3) = √3 + 1 bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 96
+  {
+    id: 'circles-96',
+    topic: 'Dik kesişen çemberler',
+    figure: {
+      viewBox: '-40 26 400 278',
+      caption: 'Şekil 96',
+      label: 'O₁ ve O₂ merkezli iki çember A ve B noktalarında dik kesişiyor; [AB] ortak kiriş.',
+      svg: `
+          <circle class="ln" cx="95.0" cy="165.0" r="124.0"/>
+          <circle class="ln" cx="250.0" cy="165.0" r="93.0"/>
+          <path class="ln" d="M194.2,90.6 L194.2,239.4"/>
+          <circle class="pt" cx="95.0" cy="165.0" r="3.2"/>
+          <circle class="pt" cx="250.0" cy="165.0" r="3.2"/>
+          <circle class="pt" cx="194.2" cy="90.6" r="3.2"/>
+          <circle class="pt" cx="194.2" cy="239.4" r="3.2"/>
+          <text x="95.0" y="185.0" text-anchor="middle">O₁</text>
+          <text x="250.0" y="185.0" text-anchor="middle">O₂</text>
+          <text x="196.2" y="80.6" text-anchor="middle">A</text>
+          <text x="196.2" y="261.4" text-anchor="middle">B</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '-40 26 400 278',
+      caption: 'Şekil 96',
+      label: 'Aynı şekilde [O₁A], [O₂A] yarıçapları ve [O₁O₂] kesikli çizilmiş; A’daki açı dik.',
+      svg: `
+          <circle class="ln" cx="95.0" cy="165.0" r="124.0"/>
+          <circle class="ln" cx="250.0" cy="165.0" r="93.0"/>
+          <path class="ln" d="M194.2,90.6 L194.2,239.4"/>
+          <path class="aux" d="M95.0,165.0 L194.2,90.6"/>
+          <path class="aux" d="M250.0,165.0 L194.2,90.6"/>
+          <path class="aux" d="M95.0,165.0 L250.0,165.0"/>
+          <path class="ln" d="M186.2,96.6 L192.2,104.6 L200.2,98.6"/>
+          <circle class="pt" cx="95.0" cy="165.0" r="3.2"/>
+          <circle class="pt" cx="250.0" cy="165.0" r="3.2"/>
+          <circle class="pt" cx="194.2" cy="90.6" r="3.2"/>
+          <circle class="pt" cx="194.2" cy="239.4" r="3.2"/>
+          <text x="95.0" y="185.0" text-anchor="middle">O₁</text>
+          <text x="250.0" y="185.0" text-anchor="middle">O₂</text>
+          <text x="196.2" y="80.6" text-anchor="middle">A</text>
+          <text x="196.2" y="261.4" text-anchor="middle">B</text>
+        `,
+    },
+    given: ['Çemberler dik kesişiyor', 'O₁ merkezli çemberin yarıçapı 20 cm', '|AB| = 24 cm'],
+    stem: ['Düzlemde O₁ ve O₂ merkezli iki çember A ve B noktalarında dik kesişmektedir.'],
+    ask: 'Buna göre, O₂ merkezli çemberin yarıçapı kaç cm dir?',
+    choices: [
+      { key: 'A', text: '15' },
+      { key: 'B', text: '16' },
+      { key: 'C', text: '18' },
+      { key: 'D', text: '20' },
+      { key: 'E', text: '25' },
+    ],
+    answer: 'A',
+    hint: 'Dik kesişmede kesişim noktasındaki yarıçaplar birbirine diktir; O₁AO₂ bir dik üçgendir.',
+    solution: [
+      {
+        title: 'Dik üçgen',
+        detail:
+          'Dik kesişmede [O₁A] ⊥ [O₂A] olduğundan O₁AO₂ dik üçgen; [AB], [O₁O₂]’ye diktir ve H’de ikiye bölünür.',
+      },
+      {
+        title: 'Yükseklik',
+        detail: '|AH| = 24 / 2 = 12 cm; O₁AH dik üçgeninde |O₁H| = √(400 − 144) = 16 cm.',
+      },
+      { title: 'Öklid', detail: '|AH|² = |O₁H| · |HO₂| ⇒ 144 = 16 · |HO₂|, |HO₂| = 9 cm.' },
+      { title: 'Sonuç', detail: '|O₂A| = √(144 + 81) = 15 cm bulunur.' },
+    ],
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -6926,6 +7398,21 @@ export const UNIT_5_CIRCLES: Unit = {
         'circles-88',
         'circles-89',
         'circles-90',
+      ),
+    },
+    {
+      id: 'circles-m16',
+      order: 16,
+      title: 'Çemberde uzunluklar III',
+      summary:
+        'Eş merkezli yaylarda yol, dik üçgende kenarortay ve yay, teğet-kesenle yarım çemberde kare, iç içe çeyrek çemberler, eşit yaylarda dikmeler ve dik kesişen çemberler.',
+      questions: pick(
+        'circles-91',
+        'circles-92',
+        'circles-93',
+        'circles-94',
+        'circles-95',
+        'circles-96',
       ),
     },
   ],
