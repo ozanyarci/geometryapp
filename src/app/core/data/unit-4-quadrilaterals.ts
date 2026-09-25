@@ -13403,6 +13403,514 @@ Q11 EF 5.0 FK 7.000000000000001 EFK 119.99999999999999 area 60.62177826491071 35
       },
     ],
   },
+  {
+    id: 'quadrilaterals-170',
+    topic: 'Benzer dikdörtgenlerle alan',
+    figure: {
+      viewBox: '0 0 400 230',
+      caption: 'Şekil 170',
+      label:
+        'ABCD dikdörtgeninde E, [AB] üzerinde; F, [DC] üzerinde; AEFD bir dikdörtgen; |AD| = 6 cm, |DF| = 4 cm.',
+      svg: `
+          <path class="ln" d="M74.0,196.0 L326.0,196.0 L326.0,28.0 L74.0,28.0 Z"/>
+          <path class="ln" d="M186.0,196.0 L186.0,28.0"/>
+          <circle class="pt" cx="74.0" cy="196.0" r="3.2"/>
+          <circle class="pt" cx="326.0" cy="196.0" r="3.2"/>
+          <circle class="pt" cx="326.0" cy="28.0" r="3.2"/>
+          <circle class="pt" cx="74.0" cy="28.0" r="3.2"/>
+          <circle class="pt" cx="186.0" cy="196.0" r="3.2"/>
+          <circle class="pt" cx="186.0" cy="28.0" r="3.2"/>
+          <text x="64.0" y="214.0" text-anchor="end">A</text>
+          <text x="336.0" y="214.0">B</text>
+          <text x="336.0" y="22.0">C</text>
+          <text x="64.0" y="22.0" text-anchor="end">D</text>
+          <text x="186.0" y="216.0" text-anchor="middle">E</text>
+          <text x="186.0" y="18.0" text-anchor="middle">F</text>
+          <text class="val" x="130.0" y="17.6" text-anchor="middle">4</text>
+          <text class="val" x="60.0" y="117.0" text-anchor="middle">6</text>
+        `,
+    },
+    given: [
+      'ABCD ve AEFD birer dikdörtgen',
+      '|AD| = 6 cm',
+      '|DF| = 4 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki şekilde; ABCD ve FEAD benzer dikdörtgenler olduğuna göre, A(ABCD) kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '45' },
+      { key: 'B', text: '48' },
+      { key: 'C', text: '54' },
+      { key: 'D', text: '60' },
+      { key: 'E', text: '72' },
+    ],
+    answer: 'C',
+    hint: 'Benzerlikte köşeleri sırasıyla eşleyin: F ↔ A, E ↔ B, A ↔ C, D ↔ D.',
+    solution: [
+      {
+        title: 'Eşleme',
+        detail:
+          'FEAD ~ ABCD olduğundan |FE| / |AB| = |EA| / |BC|.',
+      },
+      {
+        title: 'Kenarlar',
+        detail:
+          '|FE| = |AD| = 6 cm, |EA| = |DF| = 4 cm ve |BC| = |AD| = 6 cm.',
+      },
+      {
+        title: 'Oran',
+        detail:
+          '6 / |AB| = 4 / 6 ⇒ |AB| = 36 / 4 = 9 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'A(ABCD) = 9 · 6 = 54 cm² bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'quadrilaterals-171',
+    topic: 'Karede köşegenler ve dik açıyla alan',
+    figure: {
+      viewBox: '0 0 400 290',
+      caption: 'Şekil 171',
+      label:
+        'ABCD karesinin [AC] ve [BD] köşegenleri E noktasında kesişiyor; K, [AD] üzerinde; L, [AB] üzerinde; [EK] ile [EL] dik; ALEK dörtgeni taralı.',
+      svg: `
+          <path class="shade" d="M80.0,260.0 L160.0,260.0 L200.0,140.0 L80.0,100.0 Z"/>
+          <path class="ln" d="M80.0,260.0 L320.0,260.0 L320.0,20.0 L80.0,20.0 Z"/>
+          <path class="ln" d="M80.0,260.0 L320.0,20.0"/>
+          <path class="ln" d="M320.0,260.0 L80.0,20.0"/>
+          <path class="ln" d="M80.0,100.0 L200.0,140.0 L160.0,260.0"/>
+          <path class="arc" d="M190.5,136.8 L187.4,146.3 L196.8,149.5"/>
+          <circle class="pt" cx="80.0" cy="260.0" r="3.2"/>
+          <circle class="pt" cx="320.0" cy="260.0" r="3.2"/>
+          <circle class="pt" cx="320.0" cy="20.0" r="3.2"/>
+          <circle class="pt" cx="80.0" cy="20.0" r="3.2"/>
+          <circle class="pt" cx="200.0" cy="140.0" r="3.2"/>
+          <circle class="pt" cx="80.0" cy="100.0" r="3.2"/>
+          <circle class="pt" cx="160.0" cy="260.0" r="3.2"/>
+          <text x="70.0" y="278.0" text-anchor="end">A</text>
+          <text x="330.0" y="278.0">B</text>
+          <text x="330.0" y="14.0">C</text>
+          <text x="70.0" y="14.0" text-anchor="end">D</text>
+          <text x="70.0" y="105.0" text-anchor="end">K</text>
+          <text x="160.0" y="280.0" text-anchor="middle">L</text>
+          <text x="200.0" y="128.0" text-anchor="middle">E</text>
+        `,
+    },
+    given: [
+      'ABCD bir kare',
+      'm(KEL) = 90°',
+      '[AC] ve [BD] köşegenleri E noktasında kesişiyorlar',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki şekilde; Alan (ALEK) = 9 cm² olduğuna göre, karenin bir kenarının uzunluğu kaç cm dir?',
+    choices: [
+      { key: 'A', text: '3' },
+      { key: 'B', text: '6' },
+      { key: 'C', text: '8' },
+      { key: 'D', text: '9' },
+      { key: 'E', text: '12' },
+    ],
+    answer: 'B',
+    hint: 'AEK ve BEL üçgenlerini karşılaştırın; E, köşegenlerin orta noktasıdır.',
+    solution: [
+      {
+        title: 'Açılar',
+        detail:
+          'm(AEB) = 90° ve m(KEL) = 90° olduğundan m(AEK) = 90° − m(AEL) = m(BEL).',
+      },
+      {
+        title: 'Eşlik',
+        detail:
+          '|EA| = |EB| ve m(EAK) = m(EBL) = 45° olduğundan AEK ve BEL üçgenleri eştir (A.K.A.).',
+      },
+      {
+        title: 'Alan',
+        detail:
+          'A(ALEK) = A(AEL) + A(AEK) = A(AEL) + A(BEL) = A(AEB); bu da karenin alanının dörtte biridir.',
+      },
+      {
+        title: 'Kenar',
+        detail:
+          'a² / 4 = 9 ⇒ a² = 36 ⇒ a = 6 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'Karenin bir kenarı 6 cm bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'quadrilaterals-172',
+    topic: 'Paralelkenar içinde dikdörtgenle alan',
+    figure: {
+      viewBox: '0 0 400 200',
+      caption: 'Şekil 172',
+      label:
+        'ABCD paralelkenarında K, [DC] üzerinde; F, [BC] nin orta noktası; E paralelkenarın içinde; DEFK bir dikdörtgen; |BF| = |FC| eşit işaretli.',
+      svg: `
+          <path class="ln" d="M48.0,180.0 L276.0,180.0 L352.0,28.0 L124.0,28.0 Z"/>
+          <path class="ln" d="M124.0,28.0 L124.0,104.0 L314.0,104.0 L314.0,28.0"/>
+          <path class="arc" d="M304.0,28.0 L304.0,38.0 L314.0,38.0"/>
+          <path class="arc" d="M124.0,94.0 L134.0,94.0 L134.0,104.0"/>
+          <path class="tick" d="M289.6,139.3 L300.4,144.7"/>
+          <path class="tick" d="M327.6,63.3 L338.4,68.7"/>
+          <circle class="pt" cx="48.0" cy="180.0" r="3.2"/>
+          <circle class="pt" cx="276.0" cy="180.0" r="3.2"/>
+          <circle class="pt" cx="352.0" cy="28.0" r="3.2"/>
+          <circle class="pt" cx="124.0" cy="28.0" r="3.2"/>
+          <circle class="pt" cx="124.0" cy="104.0" r="3.2"/>
+          <circle class="pt" cx="314.0" cy="104.0" r="3.2"/>
+          <circle class="pt" cx="314.0" cy="28.0" r="3.2"/>
+          <text x="38.0" y="198.0" text-anchor="end">A</text>
+          <text x="276.0" y="200.0" text-anchor="middle">B</text>
+          <text x="362.0" y="22.0">C</text>
+          <text x="116.0" y="20.0" text-anchor="end">D</text>
+          <text x="314.0" y="18.0" text-anchor="middle">K</text>
+          <text x="324.0" y="112.0">F</text>
+          <text x="116.0" y="122.0" text-anchor="end">E</text>
+        `,
+    },
+    given: [
+      'ABCD paralelkenar',
+      'DEFK dikdörtgen',
+      '|BF| = |FC|',
+      'A(ABFED) = 52 cm²',
+      'A(KFC) = 4 cm²',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, DEFK dikdörtgeninin alanı kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '30' },
+      { key: 'B', text: '36' },
+      { key: 'C', text: '40' },
+      { key: 'D', text: '45' },
+      { key: 'E', text: '48' },
+    ],
+    answer: 'C',
+    hint: 'F, [BC] nin orta noktası olduğundan A(DFC), paralelkenarın alanının dörtte biridir.',
+    solution: [
+      {
+        title: 'Adlar',
+        detail:
+          'Paralelkenarın alanı S, dikdörtgenin alanı R olsun.',
+      },
+      {
+        title: 'DFC',
+        detail:
+          'A(DBC) = S / 2 ve F, [BC] nin orta noktası olduğundan A(DFC) = S / 4.',
+      },
+      {
+        title: 'Parçalar',
+        detail:
+          'A(DFC) = A(DKF) + A(KFC) = R / 2 + 4 ⇒ S = 2R + 16.',
+      },
+      {
+        title: 'Beşgen',
+        detail:
+          'A(ABFED) = S − R − 4 = 52 ⇒ 2R + 16 − R − 4 = 52.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'R = 40; DEFK dikdörtgeninin alanı 40 cm² bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'quadrilaterals-173',
+    topic: 'İki karede eş dik üçgenlerle açı',
+    figure: {
+      viewBox: '0 0 400 298',
+      caption: 'Şekil 173',
+      label:
+        'ABCD karesinde E, [BC] üzerinde; AEFT bir kare; F noktası ABCD karesinin dışında; m(BAE) = 28°, m(EFC) = x.',
+      svg: `
+          <path class="ln" d="M80.5,114.9 L80.5,270.9 L236.5,270.9 L236.5,114.9 Z"/>
+          <path class="ln" d="M80.5,114.9 L163.5,270.9 L319.5,188.0 L236.5,32.0 Z"/>
+          <path class="ln" d="M236.5,270.9 L319.5,188.0"/>
+          <path class="arc" d="M80.5,144.9 A30,30 0 0 0 94.6,141.4"/>
+          <text class="val" x="95.5" y="180.1" text-anchor="middle">28°</text>
+          <path class="arc" d="M284.2,206.8 A40,40 0 0 0 291.2,216.3"/>
+          <text class="val" x="272.1" y="227.1" text-anchor="middle">x</text>
+          <circle class="pt" cx="80.5" cy="114.9" r="3.2"/>
+          <circle class="pt" cx="80.5" cy="270.9" r="3.2"/>
+          <circle class="pt" cx="236.5" cy="270.9" r="3.2"/>
+          <circle class="pt" cx="236.5" cy="114.9" r="3.2"/>
+          <circle class="pt" cx="163.5" cy="270.9" r="3.2"/>
+          <circle class="pt" cx="319.5" cy="188.0" r="3.2"/>
+          <circle class="pt" cx="236.5" cy="32.0" r="3.2"/>
+          <text x="70.5" y="110.9" text-anchor="end">A</text>
+          <text x="70.5" y="288.9" text-anchor="end">B</text>
+          <text x="236.5" y="290.9" text-anchor="middle">C</text>
+          <text x="228.5" y="130.9" text-anchor="end">D</text>
+          <text x="163.5" y="290.9" text-anchor="middle">E</text>
+          <text x="329.5" y="193.0">F</text>
+          <text x="236.5" y="22.0" text-anchor="middle">T</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 0 400 298',
+      caption: 'Şekil 173',
+      label:
+        'ABCD karesinde E, [BC] üzerinde; AEFT bir kare; F noktası ABCD karesinin dışında; m(BAE) = 28°, m(EFC) = x; f den [BC] nin uzantısına inen dikmenin ayağı H; ABE ve EHF üçgenleri eş.',
+      svg: `
+          <path class="ln" d="M80.5,114.9 L80.5,270.9 L236.5,270.9 L236.5,114.9 Z"/>
+          <path class="ln" d="M80.5,114.9 L163.5,270.9 L319.5,188.0 L236.5,32.0 Z"/>
+          <path class="ln" d="M236.5,270.9 L319.5,188.0"/>
+          <path class="aux" d="M236.5,270.9 L319.5,270.9"/>
+          <path class="aux" d="M319.5,188.0 L319.5,270.9"/>
+          <path class="arc" d="M319.5,261.9 L310.5,261.9 L310.5,270.9"/>
+          <path class="arc" d="M80.5,144.9 A30,30 0 0 0 94.6,141.4"/>
+          <text class="val" x="95.5" y="180.1" text-anchor="middle">28°</text>
+          <path class="arc" d="M284.2,206.8 A40,40 0 0 0 291.2,216.3"/>
+          <text class="val" x="272.1" y="227.1" text-anchor="middle">x</text>
+          <circle class="pt" cx="80.5" cy="114.9" r="3.2"/>
+          <circle class="pt" cx="80.5" cy="270.9" r="3.2"/>
+          <circle class="pt" cx="236.5" cy="270.9" r="3.2"/>
+          <circle class="pt" cx="236.5" cy="114.9" r="3.2"/>
+          <circle class="pt" cx="163.5" cy="270.9" r="3.2"/>
+          <circle class="pt" cx="319.5" cy="188.0" r="3.2"/>
+          <circle class="pt" cx="236.5" cy="32.0" r="3.2"/>
+          <circle class="pt" cx="319.5" cy="270.9" r="3.2"/>
+          <text x="70.5" y="110.9" text-anchor="end">A</text>
+          <text x="70.5" y="288.9" text-anchor="end">B</text>
+          <text x="236.5" y="290.9" text-anchor="middle">C</text>
+          <text x="228.5" y="130.9" text-anchor="end">D</text>
+          <text x="163.5" y="290.9" text-anchor="middle">E</text>
+          <text x="329.5" y="193.0">F</text>
+          <text x="236.5" y="22.0" text-anchor="middle">T</text>
+          <text x="329.5" y="288.9">H</text>
+        `,
+    },
+    given: [
+      'ABCD ve AEFT birer kare',
+      'm(BAE) = 28°',
+      'm(EFC) = x',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, x kaç derecedir?',
+    choices: [
+      { key: 'A', text: '12' },
+      { key: 'B', text: '14' },
+      { key: 'C', text: '15' },
+      { key: 'D', text: '17' },
+      { key: 'E', text: '20' },
+    ],
+    answer: 'D',
+    hint: 'F den BC doğrusuna bir dikme indirin ve oluşan üçgeni ABE üçgeniyle karşılaştırın.',
+    solution: [
+      {
+        title: 'Dikme',
+        detail:
+          'F den BC doğrusuna inen dikmenin ayağı H olsun.',
+      },
+      {
+        title: 'Eşlik',
+        detail:
+          '|AE| = |EF|, m(AEF) = 90° olduğundan ABE ve EHF dik üçgenleri eştir: |EH| = |AB| = |BC|, |HF| = |BE|.',
+      },
+      {
+        title: 'CHF',
+        detail:
+          '|CH| = |EH| − |EC| = |BC| − |EC| = |BE| = |HF|; CHF ikizkenar dik üçgen, m(FCH) = 45°, m(ECF) = 135°.',
+      },
+      {
+        title: 'FEC',
+        detail:
+          'm(AEB) = 90° − 28° = 62° ve m(AEF) = 90° olduğundan m(FEC) = 180° − 62° − 90° = 28°.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'EFC üçgeninde x = 180° − 135° − 28° = 17° bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'quadrilaterals-174',
+    topic: 'Üçgen içinde dikdörtgen ve benzerlik',
+    figure: {
+      viewBox: '0 0 400 270',
+      caption: 'Şekil 174',
+      label:
+        'ABC üçgeninde DEFK dikdörtgeni; D, [AB] üzerinde; K, [AC] üzerinde; E ve F, [BC] üzerinde; |BE| = x.',
+      svg: `
+          <path class="ln" d="M200.0,30.0 L47.0,234.0 L353.0,234.0 Z"/>
+          <path class="ln" d="M98.0,234.0 L98.0,166.0 L302.0,166.0 L302.0,234.0"/>
+          <path class="arc" d="M98.0,224.0 L108.0,224.0 L108.0,234.0"/>
+          <path class="arc" d="M302.0,224.0 L292.0,224.0 L292.0,234.0"/>
+          <circle class="pt" cx="200.0" cy="30.0" r="3.2"/>
+          <circle class="pt" cx="47.0" cy="234.0" r="3.2"/>
+          <circle class="pt" cx="353.0" cy="234.0" r="3.2"/>
+          <circle class="pt" cx="98.0" cy="166.0" r="3.2"/>
+          <circle class="pt" cx="302.0" cy="166.0" r="3.2"/>
+          <circle class="pt" cx="98.0" cy="234.0" r="3.2"/>
+          <circle class="pt" cx="302.0" cy="234.0" r="3.2"/>
+          <text x="200.0" y="20.0" text-anchor="middle">A</text>
+          <text x="37.0" y="252.0" text-anchor="end">B</text>
+          <text x="363.0" y="252.0">C</text>
+          <text x="88.0" y="166.0" text-anchor="end">D</text>
+          <text x="312.0" y="166.0">K</text>
+          <text x="98.0" y="254.0" text-anchor="middle">E</text>
+          <text x="302.0" y="254.0" text-anchor="middle">F</text>
+          <text class="val" x="72.5" y="254.3" text-anchor="middle">x</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      'DEFK bir dikdörtgen',
+      '|DE| = 4 cm',
+      '|BC| = 18 cm',
+      '|AD| = 10 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki şekilde; A(DEFK) = 48 cm² olduğuna göre, |BE| = x kaç cm dir?',
+    choices: [
+      { key: 'A', text: '2' },
+      { key: 'B', text: '3' },
+      { key: 'C', text: '4' },
+      { key: 'D', text: '9/2' },
+      { key: 'E', text: '5' },
+    ],
+    answer: 'B',
+    hint: '[DK] ∥ [BC] olduğundan ADK ve ABC üçgenleri benzerdir.',
+    solution: [
+      {
+        title: 'DK',
+        detail:
+          'A(DEFK) = |DK| · |DE| ⇒ 48 = |DK| · 4 ⇒ |DK| = 12 cm.',
+      },
+      {
+        title: 'Benzerlik',
+        detail:
+          'ADK ~ ABC ⇒ |AD| / |AB| = |DK| / |BC| = 12 / 18 = 2 / 3.',
+      },
+      {
+        title: 'AB',
+        detail:
+          '10 / |AB| = 2 / 3 ⇒ |AB| = 15 cm, |DB| = 15 − 10 = 5 cm.',
+      },
+      {
+        title: 'Pisagor',
+        detail:
+          'DEB dik üçgeninde x² + 4² = 5² ⇒ x² = 9.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x = 3 cm bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'quadrilaterals-175',
+    topic: 'Karede döndürme ile uzunluk',
+    figure: {
+      viewBox: '0 0 400 347',
+      caption: 'Şekil 175',
+      label:
+        'ABCD karesinin içinde F noktası; [FA], [FB] ve [FC] çizilmiş; m(CFB) = 135°, |FC| = 2 cm, |FB| = 4 cm.',
+      svg: `
+          <path class="ln" d="M71.3,277.4 L328.7,277.4 L328.7,20.0 L71.3,20.0 Z"/>
+          <path class="ln" d="M71.3,277.4 L282.2,99.4"/>
+          <path class="ln" d="M328.7,20.0 L282.2,99.4 L328.7,277.4"/>
+          <path class="arc" d="M289.3,87.3 A14,14 0 0 1 285.7,112.9"/>
+          <text class="val" x="292.2" y="135.4">135°</text>
+          <text class="val" x="293.5" y="55.7" text-anchor="end">2</text>
+          <text class="val" x="293.5" y="196.4" text-anchor="end">4</text>
+          <circle class="pt" cx="71.3" cy="277.4" r="3.2"/>
+          <circle class="pt" cx="328.7" cy="277.4" r="3.2"/>
+          <circle class="pt" cx="328.7" cy="20.0" r="3.2"/>
+          <circle class="pt" cx="71.3" cy="20.0" r="3.2"/>
+          <circle class="pt" cx="282.2" cy="99.4" r="3.2"/>
+          <text x="61.3" y="295.4" text-anchor="end">A</text>
+          <text x="338.7" y="295.4">B</text>
+          <text x="338.7" y="14.0">C</text>
+          <text x="61.3" y="14.0" text-anchor="end">D</text>
+          <text x="272.2" y="93.4" text-anchor="end">F</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 0 400 347',
+      caption: 'Şekil 175',
+      label:
+        'ABCD karesinin içinde F noktası; [FA], [FB] ve [FC] çizilmiş; m(CFB) = 135°, |FC| = 2 cm, |FB| = 4 cm; bFC üçgeni B etrafında 90° döndürülerek BGA üçgeni elde edilmiş; [FG] çizilmiş.',
+      svg: `
+          <path class="ln" d="M71.3,277.4 L328.7,277.4 L328.7,20.0 L71.3,20.0 Z"/>
+          <path class="ln" d="M71.3,277.4 L282.2,99.4"/>
+          <path class="ln" d="M328.7,20.0 L282.2,99.4 L328.7,277.4"/>
+          <path class="aux" d="M328.7,277.4 L150.7,323.9 L71.3,277.4"/>
+          <path class="aux" d="M282.2,99.4 L150.7,323.9"/>
+          <path class="arc" d="M326.4,268.7 L317.7,271.0 L320.0,279.7"/>
+          <path class="arc" d="M155.2,316.1 L147.5,311.6 L142.9,319.4"/>
+          <path class="arc" d="M289.3,87.3 A14,14 0 0 1 285.7,112.9"/>
+          <text class="val" x="292.2" y="135.4">135°</text>
+          <text class="val" x="293.5" y="55.7" text-anchor="end">2</text>
+          <text class="val" x="293.5" y="196.4" text-anchor="end">4</text>
+          <circle class="pt" cx="71.3" cy="277.4" r="3.2"/>
+          <circle class="pt" cx="328.7" cy="277.4" r="3.2"/>
+          <circle class="pt" cx="328.7" cy="20.0" r="3.2"/>
+          <circle class="pt" cx="71.3" cy="20.0" r="3.2"/>
+          <circle class="pt" cx="282.2" cy="99.4" r="3.2"/>
+          <circle class="pt" cx="150.7" cy="323.9" r="3.2"/>
+          <text x="61.3" y="295.4" text-anchor="end">A</text>
+          <text x="338.7" y="295.4">B</text>
+          <text x="338.7" y="14.0">C</text>
+          <text x="61.3" y="14.0" text-anchor="end">D</text>
+          <text x="272.2" y="93.4" text-anchor="end">F</text>
+          <text x="150.7" y="343.9" text-anchor="middle">G</text>
+        `,
+    },
+    given: [
+      'ABCD kare',
+      'm(CFB) = 135°',
+      '|FC| = 2 cm',
+      '|FB| = 4 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |AF| kaç cm dir?',
+    choices: [
+      { key: 'A', text: '2√6' },
+      { key: 'B', text: '2√7' },
+      { key: 'C', text: '4√2' },
+      { key: 'D', text: '6' },
+      { key: 'E', text: '2√10' },
+    ],
+    answer: 'D',
+    hint: 'BFC üçgenini B etrafında 90° döndürerek C yi A nın üzerine getirin.',
+    solution: [
+      {
+        title: 'Döndürme',
+        detail:
+          'BFC üçgeni B etrafında 90° döndürülsün; C, A ya ve F, G ye gitsin: |BG| = 4 cm, |GA| = 2 cm, m(BGA) = 135°.',
+      },
+      {
+        title: 'FBG',
+        detail:
+          'm(FBG) = 90° ve |BF| = |BG| = 4 cm olduğundan |FG| = 4√2 cm ve m(BGF) = 45°.',
+      },
+      {
+        title: 'Dik açı',
+        detail:
+          'm(FGA) = 135° − 45° = 90°.',
+      },
+      {
+        title: 'Pisagor',
+        detail:
+          '|AF|² = |FG|² + |GA|² = 32 + 4 = 36.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '|AF| = 6 cm bulunur.',
+      },
+    ],
+  },
 ];
 
 /** Resolves question ids to their bank entries, failing loudly on a typo. */
@@ -13847,6 +14355,21 @@ export const UNIT_4_QUADRILATERALS: Unit = {
         'quadrilaterals-167',
         'quadrilaterals-168',
         'quadrilaterals-169',
+      ),
+    },
+    {
+      id: 'quadrilaterals-m29',
+      order: 29,
+      title: 'Dikdörtgen, kare ve paralelkenarda benzerlik, eşlik ve alan',
+      summary:
+        'Benzer dikdörtgenler, karede köşegenlerle dik açı, paralelkenar içinde dikdörtgen, iki karede açı, üçgen içinde dikdörtgen ve karede döndürme.',
+      questions: pick(
+        'quadrilaterals-170',
+        'quadrilaterals-171',
+        'quadrilaterals-172',
+        'quadrilaterals-173',
+        'quadrilaterals-174',
+        'quadrilaterals-175',
       ),
     },
   ],
