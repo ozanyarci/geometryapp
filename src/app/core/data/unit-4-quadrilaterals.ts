@@ -9160,6 +9160,506 @@ Q12 AKL/CMN 0.7142857142857143 KLMN/ABCD 0.5 KLMN if AKL=5 24.0
       },
     ],
   },
+  // ---------------------------------------------------------------- 116
+  {
+    id: 'quadrilaterals-116',
+    topic: 'Karede dik açı ve benzerlik',
+    figure:{
+      viewBox: '0 -6 400 316',
+      caption: 'Şekil 116',
+      label:
+        'ABCD karesinde E noktası [AB] üzerinde, F noktası [BC] üzerinde; [DE] ile [EF] dik.',
+      svg: `
+          <path class="ln" d="M90.0,280.0 L310.0,280.0 L310.0,60.0 L90.0,60.0 Z"/>
+          <path class="ln" d="M90.0,60.0 L236.7,280.0 L310.0,231.1"/>
+          <path class="arc" d="M230.6,270.8 L239.7,264.7 L245.8,273.9"/>
+          <circle class="pt" cx="90.0" cy="280.0" r="3.2"/>
+          <circle class="pt" cx="310.0" cy="280.0" r="3.2"/>
+          <circle class="pt" cx="310.0" cy="60.0" r="3.2"/>
+          <circle class="pt" cx="90.0" cy="60.0" r="3.2"/>
+          <circle class="pt" cx="236.7" cy="280.0" r="3.2"/>
+          <circle class="pt" cx="310.0" cy="231.1" r="3.2"/>
+          <text x="80.0" y="295.0" text-anchor="end">A</text>
+          <text x="320.0" y="295.0">B</text>
+          <text x="320.0" y="55.0">C</text>
+          <text x="80.0" y="55.0" text-anchor="end">D</text>
+          <text x="236.7" y="301.0" text-anchor="middle">E</text>
+          <text x="320.0" y="236.1">F</text>
+        `,
+    },
+    given: [
+      'ABCD kare',
+      '[DE] ⊥ [EF]',
+      '|BF| = 2 cm',
+      '|EB| = 3 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, ABCD karesinin alanı kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '64' },
+      { key: 'B', text: '72' },
+      { key: 'C', text: '81' },
+      { key: 'D', text: '90' },
+      { key: 'E', text: '100' },
+    ],
+    answer: 'C',
+    hint: 'DAE ve EBF üçgenlerinin açılarını karşılaştır; kenarı a diyerek benzerlik oranı kur.',
+    solution: [
+      {
+        title: 'Benzerlik',
+        detail:
+          'm(DEA) + m(FEB) = 90° olduğundan m(ADE) = m(FEB) olur; DAE ve EBF dik üçgenleri benzerdir.',
+      },
+      {
+        title: 'Oran',
+        detail:
+          'Karenin kenarı a olsun: |AE| = a − 3. Benzerlikten |AE| / |BF| = |AD| / |EB|, yani (a − 3) / 2 = a / 3.',
+      },
+      {
+        title: 'Denklem',
+        detail:
+          '3a − 9 = 2a ise a = 9 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'ABCD karesinin alanı 9² = 81 cm² bulunur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 117
+  {
+    id: 'quadrilaterals-117',
+    topic: 'Dikdörtgende dikme ve benzerlik',
+    figure:{
+      viewBox: '0 0 400 236',
+      caption: 'Şekil 117',
+      label:
+        'ABCD dikdörtgeninde E noktası [DC] üzerinde; B den [AE] ye inen dikmenin ayağı F; |FB| = x.',
+      svg: `
+          <path class="ln" d="M50.0,210.0 L350.0,210.0 L350.0,30.0 L50.0,30.0 Z"/>
+          <path class="ln" d="M50.0,210.0 L185.0,30.0"/>
+          <path class="ln" d="M350.0,210.0 L158.0,66.0"/>
+          <path class="arc" d="M151.4,74.8 L160.2,81.4 L166.8,72.6"/>
+          <text class="val" x="262.0" y="132.0">x</text>
+          <circle class="pt" cx="50.0" cy="210.0" r="3.2"/>
+          <circle class="pt" cx="350.0" cy="210.0" r="3.2"/>
+          <circle class="pt" cx="350.0" cy="30.0" r="3.2"/>
+          <circle class="pt" cx="50.0" cy="30.0" r="3.2"/>
+          <circle class="pt" cx="185.0" cy="30.0" r="3.2"/>
+          <circle class="pt" cx="158.0" cy="66.0" r="3.2"/>
+          <text x="40.0" y="225.0" text-anchor="end">A</text>
+          <text x="360.0" y="225.0">B</text>
+          <text x="360.0" y="25.0">C</text>
+          <text x="40.0" y="25.0" text-anchor="end">D</text>
+          <text x="185.0" y="21.0" text-anchor="middle">E</text>
+          <text x="148.0" y="62.0" text-anchor="end">F</text>
+        `,
+    },
+    given: [
+      'ABCD dikdörtgen',
+      '[AE] ⊥ [BF]',
+      '|DE| = 9 cm',
+      '|EC| = 11 cm',
+      '|BC| = 12 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |FB| = x kaç cm dir?',
+    choices: [
+      { key: 'A', text: '12' },
+      { key: 'B', text: '14' },
+      { key: 'C', text: '15' },
+      { key: 'D', text: '16' },
+      { key: 'E', text: '18' },
+    ],
+    answer: 'D',
+    hint: 'ADE ve BFA dik üçgenlerinde [DC] ∥ [AB] olduğundan eş açılar ara.',
+    solution: [
+      {
+        title: 'AE',
+        detail:
+          'ADE dik üçgeninde |AE|² = 12² + 9² = 225, |AE| = 15 cm.',
+      },
+      {
+        title: 'AB',
+        detail:
+          '|AB| = |DC| = 9 + 11 = 20 cm.',
+      },
+      {
+        title: 'Benzerlik',
+        detail:
+          '[DC] ∥ [AB] olduğundan m(DEA) = m(EAB); ADE ve BFA dik üçgenleri benzerdir: |BF| / |AD| = |AB| / |AE|.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x / 12 = 20 / 15 ise x = 16 cm bulunur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 118
+  {
+    id: 'quadrilaterals-118',
+    topic: 'Karede eş üçgenler ve taralı alan',
+    figure:{
+      viewBox: '0 40 400 256',
+      caption: 'Şekil 118',
+      label:
+        'ABCD karesinde E noktası [AD] üzerinde; [EC] ile [CF] dik; F noktası [AB] nin B tarafındaki uzantısında; [EF], [BC] yi K noktasında kesiyor; CEK üçgeni taralı.',
+      svg: `
+          <path class="shade" d="M268.0,66.0 L64.0,134.0 L268.0,236.0 Z"/>
+          <path class="ln" d="M64.0,270.0 L268.0,270.0 L268.0,66.0 L64.0,66.0 Z"/>
+          <path class="ln" d="M268.0,270.0 L336.0,270.0"/>
+          <path class="ln" d="M64.0,134.0 L268.0,66.0 L336.0,270.0"/>
+          <path class="ln" d="M64.0,134.0 L336.0,270.0"/>
+          <path class="arc" d="M257.6,69.5 L261.0,79.9 L271.5,76.4"/>
+          <circle class="pt" cx="64.0" cy="270.0" r="3.2"/>
+          <circle class="pt" cx="268.0" cy="270.0" r="3.2"/>
+          <circle class="pt" cx="268.0" cy="66.0" r="3.2"/>
+          <circle class="pt" cx="64.0" cy="66.0" r="3.2"/>
+          <circle class="pt" cx="64.0" cy="134.0" r="3.2"/>
+          <circle class="pt" cx="336.0" cy="270.0" r="3.2"/>
+          <circle class="pt" cx="268.0" cy="236.0" r="3.2"/>
+          <text x="54.0" y="285.0" text-anchor="end">A</text>
+          <text x="260.0" y="289.0" text-anchor="middle">B</text>
+          <text x="268.0" y="57.0" text-anchor="middle">C</text>
+          <text x="54.0" y="61.0" text-anchor="end">D</text>
+          <text x="54.0" y="139.0" text-anchor="end">E</text>
+          <text x="346.0" y="285.0">F</text>
+          <text x="261.0" y="258.0" text-anchor="end">K</text>
+        `,
+    },
+    given: [
+      'ABCD kare',
+      'E, K, F doğrusal',
+      '[EC] ⊥ [CF]',
+      '|DE| = 4 cm',
+      '|AE| = 8 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, taralı A(CEK) kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '40' },
+      { key: 'B', text: '45' },
+      { key: 'C', text: '48' },
+      { key: 'D', text: '54' },
+      { key: 'E', text: '60' },
+    ],
+    answer: 'E',
+    hint: 'EDC ve FBC üçgenlerinin eş olduğunu göster; böylece |BF| bulunur.',
+    solution: [
+      {
+        title: 'Kenar',
+        detail:
+          'Karenin kenarı |AD| = 4 + 8 = 12 cm.',
+      },
+      {
+        title: 'Eşlik',
+        detail:
+          'm(DCE) = m(BCF) olduğundan EDC ve FBC dik üçgenleri eştir (|DC| = |BC|): |BF| = |DE| = 4 cm.',
+      },
+      {
+        title: 'BK',
+        detail:
+          '[BK] ∥ [AE] olduğundan FBK ~ FAE: |BK| / 8 = 4 / 16, |BK| = 2 cm; buna göre |CK| = 12 − 2 = 10 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'CEK üçgeninde taban |CK| = 10, yükseklik E nin [BC] ye uzaklığı 12 cm: A(CEK) = 10 · 12 / 2 = 60 cm².',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 119
+  {
+    id: 'quadrilaterals-119',
+    topic: 'Karede dik üçgen ve dikmeler',
+    figure:{
+      viewBox: '0 -6 400 316',
+      caption: 'Şekil 119',
+      label:
+        'ABCD karesinin içinde E noktası; [AE] ile [ED] dik; |BE| = x.',
+      svg: `
+          <path class="ln" d="M90.0,280.0 L310.0,280.0 L310.0,60.0 L90.0,60.0 Z"/>
+          <path class="ln" d="M90.0,280.0 L195.6,200.8 L90.0,60.0"/>
+          <path class="ln" d="M195.6,200.8 L310.0,280.0"/>
+          <path class="arc" d="M186.8,207.4 L180.2,198.6 L189.0,192.0"/>
+          <text class="val" x="256.8" y="232.4">x</text>
+          <circle class="pt" cx="90.0" cy="280.0" r="3.2"/>
+          <circle class="pt" cx="310.0" cy="280.0" r="3.2"/>
+          <circle class="pt" cx="310.0" cy="60.0" r="3.2"/>
+          <circle class="pt" cx="90.0" cy="60.0" r="3.2"/>
+          <circle class="pt" cx="195.6" cy="200.8" r="3.2"/>
+          <text x="80.0" y="295.0" text-anchor="end">A</text>
+          <text x="320.0" y="295.0">B</text>
+          <text x="320.0" y="55.0">C</text>
+          <text x="80.0" y="55.0" text-anchor="end">D</text>
+          <text x="197.6" y="190.8" text-anchor="middle">E</text>
+        `,
+    },
+    solutionFigure:{
+      viewBox: '0 -6 400 316',
+      caption: 'Şekil 119',
+      label:
+        'E den [AD] ye [EH], [AB] ye [EK] dikmeleri çizilmiş.',
+      svg: `
+          <path class="ln" d="M90.0,280.0 L310.0,280.0 L310.0,60.0 L90.0,60.0 Z"/>
+          <path class="ln" d="M90.0,280.0 L195.6,200.8 L90.0,60.0"/>
+          <path class="ln" d="M195.6,200.8 L310.0,280.0"/>
+          <path class="arc" d="M186.8,207.4 L180.2,198.6 L189.0,192.0"/>
+          <text class="val" x="256.8" y="232.4">x</text>
+          <path class="aux" d="M195.6,200.8 L90.0,200.8"/>
+          <path class="aux" d="M195.6,200.8 L195.6,280.0"/>
+          <path class="arc" d="M90.0,211.8 L101.0,211.8 L101.0,200.8"/>
+          <path class="arc" d="M206.6,280.0 L206.6,269.0 L195.6,269.0"/>
+          <circle class="pt" cx="90.0" cy="280.0" r="3.2"/>
+          <circle class="pt" cx="310.0" cy="280.0" r="3.2"/>
+          <circle class="pt" cx="310.0" cy="60.0" r="3.2"/>
+          <circle class="pt" cx="90.0" cy="60.0" r="3.2"/>
+          <circle class="pt" cx="195.6" cy="200.8" r="3.2"/>
+          <circle class="pt" cx="90.0" cy="200.8" r="3.2"/>
+          <circle class="pt" cx="195.6" cy="280.0" r="3.2"/>
+          <text x="80.0" y="295.0" text-anchor="end">A</text>
+          <text x="320.0" y="295.0">B</text>
+          <text x="320.0" y="55.0">C</text>
+          <text x="80.0" y="55.0" text-anchor="end">D</text>
+          <text x="197.6" y="190.8" text-anchor="middle">E</text>
+          <text x="80.0" y="205.8" text-anchor="end">H</text>
+          <text x="195.6" y="301.0" text-anchor="middle">K</text>
+        `,
+    },
+    given: [
+      'ABCD kare',
+      '[AE] ⊥ [ED]',
+      '|AE| = 6 cm',
+      '|DE| = 8 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |BE| = x kaç cm dir?',
+    choices: [
+      { key: 'A', text: '6' },
+      { key: 'B', text: '2√10' },
+      { key: 'C', text: '4√3' },
+      { key: 'D', text: '7' },
+      { key: 'E', text: '5√2' },
+    ],
+    answer: 'B',
+    hint: 'E den [AD] ye dikme in; AED dik üçgeninde Öklit bağıntılarını kullan.',
+    solution: [
+      {
+        title: 'Kenar',
+        detail:
+          'AED dik üçgeninde |AD|² = 6² + 8² = 100, |AD| = 10 cm.',
+      },
+      {
+        title: 'Dikme',
+        detail:
+          'E den [AD] ye [EH] dikmesini çiz: |EH| = 6 · 8 / 10 = 4,8 cm ve |AH| = 6² / 10 = 3,6 cm.',
+      },
+      {
+        title: 'KB',
+        detail:
+          'E den [AB] ye inen dikmenin ayağı K olsun: |EK| = |AH| = 3,6 cm, |AK| = |EH| = 4,8 cm, |KB| = 10 − 4,8 = 5,2 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'EKB dik üçgeninde x² = 5,2² + 3,6² = 27,04 + 12,96 = 40, x = 2√10 cm bulunur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 120
+  {
+    id: 'quadrilaterals-120',
+    topic: 'Dikdörtgende köşegene uzaklık ve alan',
+    figure:{
+      viewBox: '0 8 400 272',
+      caption: 'Şekil 120',
+      label:
+        'ABCD dikdörtgeninin [DB] köşegeni üzerinde E ve F noktaları; A ve C bu noktalara birleştirilerek AFCE dörtgeni çizilmiş.',
+      svg: `
+          <path class="ln" d="M56.0,250.0 L344.0,250.0 L344.0,34.0 L56.0,34.0 Z"/>
+          <path class="ln" d="M56.0,34.0 L344.0,250.0"/>
+          <path class="ln" d="M56.0,250.0 L315.2,228.4 L344.0,34.0 L99.2,66.4 Z"/>
+          <circle class="pt" cx="56.0" cy="250.0" r="3.2"/>
+          <circle class="pt" cx="344.0" cy="250.0" r="3.2"/>
+          <circle class="pt" cx="344.0" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="56.0" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="99.2" cy="66.4" r="3.2"/>
+          <circle class="pt" cx="315.2" cy="228.4" r="3.2"/>
+          <text x="46.0" y="265.0" text-anchor="end">A</text>
+          <text x="354.0" y="265.0">B</text>
+          <text x="354.0" y="29.0">C</text>
+          <text x="46.0" y="29.0" text-anchor="end">D</text>
+          <text x="101.2" y="56.4" text-anchor="middle">E</text>
+          <text x="317.2" y="250.4" text-anchor="middle">F</text>
+        `,
+    },
+    solutionFigure:{
+      viewBox: '0 8 400 272',
+      caption: 'Şekil 120',
+      label:
+        'A ve C den [DB] köşegenine [AH] ve [CL] dikmeleri çizilmiş.',
+      svg: `
+          <path class="ln" d="M56.0,250.0 L344.0,250.0 L344.0,34.0 L56.0,34.0 Z"/>
+          <path class="ln" d="M56.0,34.0 L344.0,250.0"/>
+          <path class="ln" d="M56.0,250.0 L315.2,228.4 L344.0,34.0 L99.2,66.4 Z"/>
+          <path class="aux" d="M56.0,250.0 L159.7,111.8"/>
+          <path class="aux" d="M344.0,34.0 L240.3,172.2"/>
+          <path class="arc" d="M153.1,120.6 L161.9,127.2 L168.5,118.4"/>
+          <path class="arc" d="M246.9,163.4 L238.1,156.8 L231.5,165.6"/>
+          <circle class="pt" cx="56.0" cy="250.0" r="3.2"/>
+          <circle class="pt" cx="344.0" cy="250.0" r="3.2"/>
+          <circle class="pt" cx="344.0" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="56.0" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="99.2" cy="66.4" r="3.2"/>
+          <circle class="pt" cx="315.2" cy="228.4" r="3.2"/>
+          <circle class="pt" cx="159.7" cy="111.8" r="3.2"/>
+          <circle class="pt" cx="240.3" cy="172.2" r="3.2"/>
+          <text x="46.0" y="265.0" text-anchor="end">A</text>
+          <text x="354.0" y="265.0">B</text>
+          <text x="354.0" y="29.0">C</text>
+          <text x="46.0" y="29.0" text-anchor="end">D</text>
+          <text x="101.2" y="56.4" text-anchor="middle">E</text>
+          <text x="317.2" y="250.4" text-anchor="middle">F</text>
+          <text x="165.7" y="101.8">H</text>
+          <text x="232.3" y="192.2" text-anchor="end">L</text>
+        `,
+    },
+    given: [
+      'ABCD dikdörtgen',
+      '|AD| = 12 cm',
+      '|AB| = 16 cm',
+      '|EF| = 15 cm',
+      'D, E, F, B doğrusal',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, AFCE dörtgeninin alanı kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '108' },
+      { key: 'B', text: '120' },
+      { key: 'C', text: '132' },
+      { key: 'D', text: '144' },
+      { key: 'E', text: '156' },
+    ],
+    answer: 'D',
+    hint: 'AFCE dörtgenini [EF] ortak tabanlı iki üçgene ayır; yükseklikler A ve C nin köşegene uzaklığıdır.',
+    solution: [
+      {
+        title: 'Köşegen',
+        detail:
+          '|DB|² = 12² + 16² = 400, |DB| = 20 cm.',
+      },
+      {
+        title: 'Yükseklik',
+        detail:
+          'ABD dik üçgeninde A nın [DB] ye uzaklığı |AH| = 12 · 16 / 20 = 9,6 cm; simetriden C nin uzaklığı da |CL| = 9,6 cm.',
+      },
+      {
+        title: 'Parçalar',
+        detail:
+          'A(AFCE) = A(AEF) + A(CEF) = 15 · 9,6 / 2 + 15 · 9,6 / 2.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'A(AFCE) = 15 · 9,6 = 144 cm² bulunur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 121
+  {
+    id: 'quadrilaterals-121',
+    topic: 'Karenin dışında dik üçgen',
+    figure:{
+      viewBox: '0 -12 400 320',
+      caption: 'Şekil 121',
+      label:
+        'ABCD karesinin [AD] kenarının dışında E noktası; [AE] ile [ED] dik; E, C ye birleştirilmiş.',
+      svg: `
+          <path class="ln" d="M70.0,80.0 L70.0,282.4 L272.4,282.4 L272.4,80.0 Z"/>
+          <path class="ln" d="M70.0,80.0 L90.2,19.3 L272.4,80.0"/>
+          <path class="ln" d="M90.2,19.3 L272.4,282.4"/>
+          <path class="arc" d="M86.8,29.7 L97.2,33.2 L100.7,22.8"/>
+          <circle class="pt" cx="70.0" cy="80.0" r="3.2"/>
+          <circle class="pt" cx="70.0" cy="282.4" r="3.2"/>
+          <circle class="pt" cx="272.4" cy="282.4" r="3.2"/>
+          <circle class="pt" cx="272.4" cy="80.0" r="3.2"/>
+          <circle class="pt" cx="90.2" cy="19.3" r="3.2"/>
+          <text x="60.0" y="85.0" text-anchor="end">A</text>
+          <text x="60.0" y="297.4" text-anchor="end">B</text>
+          <text x="282.4" y="297.4">C</text>
+          <text x="280.4" y="98.0">D</text>
+          <text x="90.2" y="9.3" text-anchor="middle">E</text>
+        `,
+    },
+    solutionFigure:{
+      viewBox: '0 -12 400 320',
+      caption: 'Şekil 121',
+      label:
+        '[ED] doğrusu D den öteye H noktasına uzatılmış; C den bu doğruya [CH] dikmesi çizilmiş.',
+      svg: `
+          <path class="ln" d="M70.0,80.0 L70.0,282.4 L272.4,282.4 L272.4,80.0 Z"/>
+          <path class="ln" d="M70.0,80.0 L90.2,19.3 L272.4,80.0"/>
+          <path class="ln" d="M90.2,19.3 L272.4,282.4"/>
+          <path class="arc" d="M86.8,29.7 L97.2,33.2 L100.7,22.8"/>
+          <path class="aux" d="M272.4,80.0 L333.1,100.2"/>
+          <path class="aux" d="M333.1,100.2 L272.4,282.4"/>
+          <path class="arc" d="M322.7,96.8 L319.2,107.2 L329.6,110.7"/>
+          <circle class="pt" cx="70.0" cy="80.0" r="3.2"/>
+          <circle class="pt" cx="70.0" cy="282.4" r="3.2"/>
+          <circle class="pt" cx="272.4" cy="282.4" r="3.2"/>
+          <circle class="pt" cx="272.4" cy="80.0" r="3.2"/>
+          <circle class="pt" cx="90.2" cy="19.3" r="3.2"/>
+          <circle class="pt" cx="333.1" cy="100.2" r="3.2"/>
+          <text x="60.0" y="85.0" text-anchor="end">A</text>
+          <text x="60.0" y="297.4" text-anchor="end">B</text>
+          <text x="282.4" y="297.4">C</text>
+          <text x="280.4" y="98.0">D</text>
+          <text x="90.2" y="9.3" text-anchor="middle">E</text>
+          <text x="343.1" y="105.2">H</text>
+        `,
+    },
+    given: [
+      'ABCD kare',
+      '[AE] ⊥ [ED]',
+      '|AE| = 4 cm',
+      '|CE| = 20 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, karenin bir kenarı kaç cm dir?',
+    choices: [
+      { key: 'A', text: '10' },
+      { key: 'B', text: '12' },
+      { key: 'C', text: '4√10' },
+      { key: 'D', text: '6√5' },
+      { key: 'E', text: '14' },
+    ],
+    answer: 'C',
+    hint: '[ED] yi uzatıp C den dikme in; oluşan üçgen AED ile eş olur.',
+    solution: [
+      {
+        title: 'Dikme',
+        detail:
+          '[ED] yi D den öteye uzat, C den bu doğruya [CH] dikmesini çiz.',
+      },
+      {
+        title: 'Eşlik',
+        detail:
+          'm(EDA) + m(HDC) = 90° olduğundan AED ve DHC dik üçgenleri eştir (|AD| = |DC|): |DH| = |AE| = 4, |CH| = |ED|.',
+      },
+      {
+        title: 'Denklem',
+        detail:
+          '|ED| = b olsun: EHC dik üçgeninde (b + 4)² + b² = 20², b² + 4b − 192 = 0, b = 12 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '|AD|² = 4² + 12² = 160, karenin bir kenarı 4√10 cm bulunur.',
+      },
+    ],
+  },
 ];
 
 /** Resolves question ids to their bank entries, failing loudly on a typo. */
@@ -9469,6 +9969,21 @@ export const UNIT_4_QUADRILATERALS: Unit = {
         'quadrilaterals-113',
         'quadrilaterals-114',
         'quadrilaterals-115',
+      ),
+    },
+    {
+      id: 'quadrilaterals-m20',
+      order: 20,
+      title: 'Dikdörtgen, kare ve deltoidde benzerlik, eşlik ve alan',
+      summary:
+        'Karede dik açıyla benzerlik, dikdörtgende dikme, eş üçgenlerle taralı alan, karede Öklit bağıntısı, köşegene uzaklıkla alan ve karenin dışında dik üçgen.',
+      questions: pick(
+        'quadrilaterals-116',
+        'quadrilaterals-117',
+        'quadrilaterals-118',
+        'quadrilaterals-119',
+        'quadrilaterals-120',
+        'quadrilaterals-121',
       ),
     },
   ],
