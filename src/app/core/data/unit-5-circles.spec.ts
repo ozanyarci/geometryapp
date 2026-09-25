@@ -442,6 +442,18 @@ describe('unit 5 answer key', () => {
     expect(answerOf('circles-227')).toBe('C'));
   it('228 — BC = 24, AF = 16, AE = 12, FE = 20, 100π/2 − ½ · 16 · 12 = 50π − 96 → A', () =>
     expect(answerOf('circles-228')).toBe('A'));
+  it('229 — |BM| = 3, kesme 3π/2 − 9√3/4, (9√3/2 − 3π/2) + 2 · kesme = 3π/2 → B', () =>
+    expect(answerOf('circles-229')).toBe('B'));
+  it('230 — 4 − h = 4 − √(16 − h²), h = 2√2, 16π/4 − 4 · 2√2 = 4π − 8√2 → A', () =>
+    expect(answerOf('circles-230')).toBe('A'));
+  it('231 — 6 = 4p, p = 3/2, OAPB = 2 · ½ · 6 · 3/2 = 9, 9π − 9 → B', () =>
+    expect(answerOf('circles-231')).toBe('B'));
+  it('232 — |EF|² = 4 · 16, |EF| = 8, 50π / (20 · 8) = 5π/16 → A', () =>
+    expect(answerOf('circles-232')).toBe('A'));
+  it('233 — R = 6, dilim(BO₁D) = 9π/2, 18π − 9π/2 = 27π/2 → B', () =>
+    expect(answerOf('circles-233')).toBe('B'));
+  it('234 — 6 · 2πr = 2πR · 270/360, 12r = 3R/2, r/R = 1/8 → C', () =>
+    expect(answerOf('circles-234')).toBe('C'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
