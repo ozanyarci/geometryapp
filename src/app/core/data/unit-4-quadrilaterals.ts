@@ -4025,6 +4025,417 @@ Q12 AKL/CMN 0.7142857142857143 KLMN/ABCD 0.5 KLMN if AKL=5 24.0
       },
     ],
   },
+  // ---------------------------------------------------------------- 55
+  {
+    id: 'quadrilaterals-55',
+    topic: 'Paralelkenarda eşkenar üçgen ve alan oranı',
+    figure: {
+      viewBox: '0 0 400 196',
+      caption: 'Şekil 55',
+      label:
+        'ABCD paralelkenarında E noktası [AB] kenarı üzerinde; ADE eşkenar üçgen, |BC| = 6 ve |EB| = 4 olarak işaretlenmiş.',
+      svg: `
+          <path class="ln" d="M40.0,161.9 L286.2,161.9 L360.0,34.0 L113.8,34.0 Z"/>
+          <path class="ln" d="M113.8,34.0 L187.7,161.9"/>
+          <text class="val" x="335.2" y="110.0" text-anchor="middle">6</text>
+          <text class="val" x="236.9" y="180.9" text-anchor="middle">4</text>
+          <circle class="pt" cx="40.0" cy="161.9" r="3.2"/>
+          <circle class="pt" cx="286.2" cy="161.9" r="3.2"/>
+          <circle class="pt" cx="360.0" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="113.8" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="187.7" cy="161.9" r="3.2"/>
+          <text x="22.9" y="173.5" text-anchor="end">A</text>
+          <text x="301.7" y="176.9">B</text>
+          <text x="376.3" y="32.3">C</text>
+          <text x="100.6" y="27.8" text-anchor="end">D</text>
+          <text x="187.7" y="185.9" text-anchor="middle">E</text>
+        `,
+    },
+    given: [
+      'ABCD bir paralelkenar',
+      'ADE eşkenar üçgen',
+      '|BC| = 6 cm',
+      '|EB| = 4 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(ADE) / A(EBCD) oranı kaçtır?',
+    choices: [
+      { key: 'A', text: '1/3' },
+      { key: 'B', text: '3/7' },
+      { key: 'C', text: '1/2' },
+      { key: 'D', text: '3/5' },
+      { key: 'E', text: '2/3' },
+    ],
+    answer: 'B',
+    hint: 'Eşkenar üçgenin kenarı |AD| = |BC| dir; paralelkenarın A açısı da eşkenar üçgenin açısıdır.',
+    solution: [
+      {
+        title: 'Eşkenar üçgen',
+        detail:
+          '|AE| = |AD| = |BC| = 6 cm ve m(DAB) = 60° olur; A(ADE) = 6² · √3/4 = 9√3 cm² dir.',
+      },
+      {
+        title: 'Paralelkenarın alanı',
+        detail:
+          '|AB| = 6 + 4 = 10 cm olduğundan A(ABCD) = 10 · 6 · sin 60° = 30√3 cm² olur.',
+      },
+      {
+        title: 'Yamuk',
+        detail:
+          'A(EBCD) = 30√3 − 9√3 = 21√3 cm² olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'A(ADE) / A(EBCD) = 9√3 / 21√3 = 3/7 bulunur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 56
+  {
+    id: 'quadrilaterals-56',
+    topic: 'Eşkenar dörtgende köşegen uzunluğu',
+    figure: {
+      viewBox: '0 0 400 253',
+      caption: 'Şekil 56',
+      label:
+        'ABCD eşkenar dörtgeninde [AC] ve [BD] köşegenleri çizilmiş; ABC açısı 120° olarak işaretlenmiş.',
+      svg: `
+          <path class="ln" d="M40.0,34.0 L146.7,218.8 L360.0,218.8 L253.3,34.0 Z"/>
+          <path class="ln" d="M40.0,34.0 L360.0,218.8"/>
+          <path class="ln" d="M146.7,218.8 L253.3,34.0"/>
+          <path class="arc" d="M172.7,218.8 A26,26 0 0 0 133.7,196.2"/>
+          <text class="val" x="186.0" y="203.0" text-anchor="middle">120°</text>
+          <circle class="pt" cx="40.0" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="146.7" cy="218.8" r="3.2"/>
+          <circle class="pt" cx="360.0" cy="218.8" r="3.2"/>
+          <circle class="pt" cx="253.3" cy="34.0" r="3.2"/>
+          <text x="24.4" y="31.0" text-anchor="end">A</text>
+          <text x="137.7" y="240.3" text-anchor="end">B</text>
+          <text x="375.6" y="233.8">C</text>
+          <text x="262.3" y="24.4">D</text>
+        `,
+    },
+    given: [
+      'ABCD eşkenar dörtgen',
+      '|AC| = 8√3 cm',
+      'm(ABC) = 120°',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |BD| kaç cm dir?',
+    choices: [
+      { key: 'A', text: '4√3' },
+      { key: 'B', text: '6' },
+      { key: 'C', text: '8' },
+      { key: 'D', text: '8√3' },
+      { key: 'E', text: '12' },
+    ],
+    answer: 'C',
+    hint: 'Ardışık açılar bütünler olduğundan m(BAD) = 60° dir; ABD üçgeni nasıl bir üçgendir?',
+    solution: [
+      {
+        title: 'A açısı',
+        detail:
+          'Eşkenar dörtgende ardışık açılar bütünler olduğundan m(BAD) = 180° − 120° = 60° olur.',
+      },
+      {
+        title: 'Kenar uzunluğu',
+        detail:
+          'Köşegenler dik kesişir ve [BD] köşegeni B açısını 60° + 60° olarak ikiye ayırır. ABC üçgeninde |AC| = a√3 olduğundan a√3 = 8√3 ⇒ a = 8 cm olur.',
+      },
+      {
+        title: 'Eşkenar üçgen',
+        detail:
+          'ABD üçgeninde |AB| = |AD| ve m(BAD) = 60° olduğundan üçgen eşkenardır.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '|BD| = |AB| = 8 cm bulunur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 57
+  {
+    id: 'quadrilaterals-57',
+    topic: 'Paralelkenarda dik açıortaylar ve çevre',
+    figure: {
+      viewBox: '0 0 400 196',
+      caption: 'Şekil 57',
+      label:
+        'ABCD paralelkenarında E noktası [DC] kenarı üzerinde; [AE] ile [EB] dik kesişiyor, [BE] B açısını iki eş açıya ayırıyor ve |AB| = 14 olarak işaretlenmiş.',
+      svg: `
+          <path class="ln" d="M40.0,162.4 L313.3,162.4 L360.0,34.0 L86.7,34.0 Z"/>
+          <path class="ln" d="M40.0,162.4 L223.4,34.0 L313.3,162.4"/>
+          <path class="arc" d="M213.5,40.9 L220.4,50.7 L230.2,43.8"/>
+          <path class="arc" d="M283.3,162.4 A30,30 0 0 1 296.1,137.8"/>
+          <text class="val" x="274.2" y="147.1" text-anchor="middle">α</text>
+          <path class="arc" d="M296.1,137.8 A30,30 0 0 1 323.5,134.2"/>
+          <text class="val" x="307.5" y="123.8" text-anchor="middle">α</text>
+          <text class="val" x="176.6" y="181.4" text-anchor="middle">14</text>
+          <circle class="pt" cx="40.0" cy="162.4" r="3.2"/>
+          <circle class="pt" cx="313.3" cy="162.4" r="3.2"/>
+          <circle class="pt" cx="360.0" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="86.7" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="223.4" cy="34.0" r="3.2"/>
+          <text x="23.7" y="176.0" text-anchor="end">A</text>
+          <text x="327.9" y="178.8">B</text>
+          <text x="377.1" y="34.3">C</text>
+          <text x="70.2" y="32.8" text-anchor="end">D</text>
+          <text x="223.4" y="22.0" text-anchor="middle">E</text>
+        `,
+    },
+    given: [
+      'ABCD bir paralelkenar',
+      '[AE] ⊥ [EB]',
+      'm(ABE) = m(EBC)',
+      '|AB| = 14 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, Çevre(ABCD) kaç cm dir?',
+    choices: [
+      { key: 'A', text: '36' },
+      { key: 'B', text: '38' },
+      { key: 'C', text: '40' },
+      { key: 'D', text: '42' },
+      { key: 'E', text: '44' },
+    ],
+    answer: 'D',
+    hint: 'E deki dik açı, [AE] nin de A açısının açıortayı olduğunu gösterir; iki ikizkenar üçgen ara.',
+    solution: [
+      {
+        title: 'İkinci açıortay',
+        detail:
+          'm(EBA) = m(B)/2 ve m(AEB) = 90° olduğundan m(EAB) = 90° − m(B)/2 = m(A)/2 olur; yani [AE] de açıortaydır.',
+      },
+      {
+        title: 'İkizkenar üçgenler',
+        detail:
+          '[DC] // [AB] olduğundan m(DEA) = m(EAB) = m(DAE) ⇒ |DE| = |AD|; benzer şekilde |EC| = |BC| = |AD| olur.',
+      },
+      {
+        title: 'Kenar uzunluğu',
+        detail:
+          '|DC| = |DE| + |EC| = 2|AD| = 14 ⇒ |AD| = 7 cm olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'Çevre(ABCD) = 2 · (14 + 7) = 42 cm bulunur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 58
+  {
+    id: 'quadrilaterals-58',
+    topic: 'Eşkenar dörtgende köşegen ve benzerlik',
+    figure: {
+      viewBox: '0 0 400 272',
+      caption: 'Şekil 58',
+      label:
+        'ABCD eşkenar dörtgeninde F noktası [BC] kenarı üzerinde; [DF] doğru parçası [AC] köşegenini E noktasında kesiyor, |AB| = 12 ve |BF| = x olarak işaretlenmiş.',
+      svg: `
+          <path class="ln" d="M40.0,237.9 L264.9,237.9 L360.0,34.0 L135.1,34.0 Z"/>
+          <path class="ln" d="M40.0,237.9 L360.0,34.0"/>
+          <path class="ln" d="M135.1,34.0 L328.3,102.0"/>
+          <text class="val" x="152.5" y="256.9" text-anchor="middle">12</text>
+          <text class="val" x="309.3" y="180.8" text-anchor="middle">x</text>
+          <circle class="pt" cx="40.0" cy="237.9" r="3.2"/>
+          <circle class="pt" cx="264.9" cy="237.9" r="3.2"/>
+          <circle class="pt" cx="360.0" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="135.1" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="280.0" cy="85.0" r="3.2"/>
+          <circle class="pt" cx="328.3" cy="102.0" r="3.2"/>
+          <text x="24.5" y="253.1" text-anchor="end">A</text>
+          <text x="269.5" y="261.3" text-anchor="middle">B</text>
+          <text x="374.7" y="29.7">C</text>
+          <text x="121.6" y="28.1" text-anchor="end">D</text>
+          <text x="280.0" y="73.0" text-anchor="middle">E</text>
+          <text x="346.3" y="108.0">F</text>
+        `,
+    },
+    given: [
+      'ABCD eşkenar dörtgen',
+      '|AB| = 12 cm',
+      '|DE| = 3|EF|',
+      '|BF| = x',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |BF| = x kaç cm dir?',
+    choices: [
+      { key: 'A', text: '4' },
+      { key: 'B', text: '6' },
+      { key: 'C', text: '7' },
+      { key: 'D', text: '8' },
+      { key: 'E', text: '9' },
+    ],
+    answer: 'D',
+    hint: '[AD] // [FC] olduğundan AED ve CEF üçgenleri benzerdir.',
+    solution: [
+      {
+        title: 'Benzerlik',
+        detail:
+          '[AD] // [BC] olduğundan m(DAE) = m(FCE) ve m(ADE) = m(CFE); AED ve CEF üçgenleri benzerdir.',
+      },
+      {
+        title: 'Oran',
+        detail:
+          '|AD| / |FC| = |DE| / |EF| = 3 olur.',
+      },
+      {
+        title: 'FC uzunluğu',
+        detail:
+          '|AD| = |AB| = 12 cm olduğundan |FC| = 12 / 3 = 4 cm olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x = |BC| − |FC| = 12 − 4 = 8 cm bulunur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 59
+  {
+    id: 'quadrilaterals-59',
+    topic: 'Eşkenar dörtgenin köşegenleri ve alan',
+    figure: {
+      viewBox: '0 0 400 201',
+      caption: 'Şekil 59',
+      label:
+        'ABCD eşkenar dörtgeninin [AC] ve [BD] köşegenleri E noktasında kesişiyor; |AB| = 13 ve |BE| = 12 olarak işaretlenmiş.',
+      svg: `
+          <path class="ln" d="M172.2,34.0 L40.0,167.3 L227.8,167.3 L360.0,34.0 Z"/>
+          <path class="ln" d="M172.2,34.0 L227.8,167.3"/>
+          <path class="ln" d="M40.0,167.3 L360.0,34.0"/>
+          <text class="val" x="96.2" y="95.8" text-anchor="middle">13</text>
+          <text class="val" x="124.6" y="150.1" text-anchor="middle">12</text>
+          <circle class="pt" cx="172.2" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="40.0" cy="167.3" r="3.2"/>
+          <circle class="pt" cx="227.8" cy="167.3" r="3.2"/>
+          <circle class="pt" cx="360.0" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="200.0" cy="100.7" r="3.2"/>
+          <text x="165.3" y="23.4" text-anchor="end">A</text>
+          <text x="23.4" y="180.3" text-anchor="end">B</text>
+          <text x="234.7" y="189.9">C</text>
+          <text x="376.6" y="33.1">D</text>
+          <text x="190.0" y="90.0" text-anchor="end">E</text>
+        `,
+    },
+    given: [
+      'ABCD eşkenar dörtgen',
+      '|AB| = 13 cm',
+      '|BE| = 12 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(ABCD) kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '60' },
+      { key: 'B', text: '100' },
+      { key: 'C', text: '120' },
+      { key: 'D', text: '130' },
+      { key: 'E', text: '156' },
+    ],
+    answer: 'C',
+    hint: 'Eşkenar dörtgenin köşegenleri birbirini dik ortalar; AEB dik üçgenine bak.',
+    solution: [
+      {
+        title: 'Dik üçgen',
+        detail:
+          'Köşegenler dik kesiştiğinden AEB dik üçgeninde |AE|² = 13² − 12² = 25 ⇒ |AE| = 5 cm olur.',
+      },
+      {
+        title: 'Köşegenler',
+        detail:
+          'Köşegenler birbirini ortaladığından |AC| = 10 cm ve |BD| = 24 cm olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'A(ABCD) = |AC| · |BD| / 2 = 10 · 24 / 2 = 120 cm² bulunur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 60
+  {
+    id: 'quadrilaterals-60',
+    topic: 'Paralelkenarda bütünler açılarla alan oranı',
+    figure: {
+      viewBox: '0 0 400 188',
+      caption: 'Şekil 60',
+      label:
+        'ABCD paralelkenarında K noktası [AD] kenarının orta noktası, E ve F noktaları [DC], L noktası [BC] üzerinde; KDE ve FCL üçgenleri taralı, |AK| = |KD|, |DE| = 8, |FC| = 6, |CL| = 4 ve |LB| = 6 olarak işaretlenmiş.',
+      svg: `
+          <path class="shade" d="M74.8,94.2 L109.6,34.0 L220.9,34.0 Z"/>
+          <path class="shade" d="M276.5,34.0 L360.0,34.0 L332.2,82.2 Z"/>
+          <path class="ln" d="M40.0,154.5 L290.4,154.5 L360.0,34.0 L109.6,34.0 Z"/>
+          <path class="ln" d="M74.8,94.2 L220.9,34.0"/>
+          <path class="ln" d="M276.5,34.0 L332.2,82.2"/>
+          <path class="tick" d="M53.1,121.9 L61.7,126.9"/>
+          <path class="tick" d="M87.8,61.6 L96.5,66.6"/>
+          <text class="val" x="165.2" y="25.0" text-anchor="middle">8</text>
+          <text class="val" x="318.3" y="25.0" text-anchor="middle">6</text>
+          <text class="val" x="358.2" y="70.1" text-anchor="middle">4</text>
+          <text class="val" x="323.4" y="130.3" text-anchor="middle">6</text>
+          <circle class="pt" cx="40.0" cy="154.5" r="3.2"/>
+          <circle class="pt" cx="290.4" cy="154.5" r="3.2"/>
+          <circle class="pt" cx="360.0" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="109.6" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="74.8" cy="94.2" r="3.2"/>
+          <circle class="pt" cx="220.9" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="276.5" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="332.2" cy="82.2" r="3.2"/>
+          <text x="23.5" y="167.8" text-anchor="end">A</text>
+          <text x="303.2" y="173.2">B</text>
+          <text x="377.3" y="34.9">C</text>
+          <text x="93.0" y="33.0" text-anchor="end">D</text>
+          <text x="56.8" y="100.2" text-anchor="end">K</text>
+          <text x="220.9" y="22.0" text-anchor="middle">E</text>
+          <text x="276.5" y="22.0" text-anchor="middle">F</text>
+          <text x="350.2" y="88.2">L</text>
+        `,
+    },
+    given: [
+      'ABCD paralelkenar',
+      '|AK| = |KD|',
+      '|DE| = 8 cm',
+      '|FC| = 6 cm',
+      '|CL| = 4 cm',
+      '|LB| = 6 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(KDE) / A(FLC) oranı kaçtır?',
+    choices: [
+      { key: 'A', text: '4/3' },
+      { key: 'B', text: '3/2' },
+      { key: 'C', text: '5/3' },
+      { key: 'D', text: '2' },
+      { key: 'E', text: '5/2' },
+    ],
+    answer: 'C',
+    hint: 'D ve C açıları bütünler olduğundan sinüsleri eşittir; iki üçgenin alanını sinüslü formülle yaz.',
+    solution: [
+      {
+        title: 'Kenar uzunlukları',
+        detail:
+          '|AD| = |BC| = 4 + 6 = 10 cm olduğundan |KD| = 5 cm olur.',
+      },
+      {
+        title: 'Bütünler açılar',
+        detail:
+          'm(D) + m(C) = 180° olduğundan sin D = sin C olur.',
+      },
+      {
+        title: 'Alanlar',
+        detail:
+          'A(KDE) = ½ · 5 · 8 · sin D = 20 sin D ve A(FLC) = ½ · 6 · 4 · sin C = 12 sin D olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'A(KDE) / A(FLC) = 20 / 12 = 5/3 bulunur.',
+      },
+    ],
+  },
 ];
 
 /** Resolves question ids to their bank entries, failing loudly on a typo. */
@@ -4183,6 +4594,21 @@ export const UNIT_4_QUADRILATERALS: Unit = {
         'quadrilaterals-52',
         'quadrilaterals-53',
         'quadrilaterals-54',
+      ),
+    },
+    {
+      id: 'quadrilaterals-m10',
+      order: 10,
+      title: 'Paralelkenar ve eşkenar dörtgende alan oranları ve köşegenler',
+      summary:
+        'Eşkenar üçgenle alan oranı, eşkenar dörtgende köşegenler, dik açıortaylarla çevre, köşegen üzerinde benzerlik ve bütünler açılarla alan.',
+      questions: pick(
+        'quadrilaterals-55',
+        'quadrilaterals-56',
+        'quadrilaterals-57',
+        'quadrilaterals-58',
+        'quadrilaterals-59',
+        'quadrilaterals-60',
       ),
     },
   ],
