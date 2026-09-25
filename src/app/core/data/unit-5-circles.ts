@@ -766,6 +766,409 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+
+  // ---------------------------------------------------------------- 13
+  {
+    id: 'circles-13',
+    topic: 'Kiriş uzunluğu ve merkez açı',
+    figure: {
+      viewBox: '0 28 400 272',
+      caption: 'Şekil 13',
+      label:
+        'O merkezli çemberde E, D ve C noktaları çember üzerinde; [OE], [OD], [OC] yarıçapları ile [ED] ve [DC] kirişleri çizilmiş, m(EDC) = α.',
+      svg: `
+          <circle class="ln" cx="200.0" cy="165.0" r="110.0"/>
+          <path class="ln" d="M90.0,165.0 L200.0,165.0 L295.3,220.0"/>
+          <path class="ln" d="M200.0,165.0 L200.0,55.0"/>
+          <path class="ln" d="M90.0,165.0 L200.0,55.0 L295.3,220.0"/>
+          <path class="arc" d="M183.0,72.0 A24,24 0 0 0 212.0,75.8"/>
+          <text class="val" x="194.8" y="99.7" text-anchor="middle">α</text>
+          <circle class="pt" cx="200.0" cy="165.0" r="3.2"/>
+          <circle class="pt" cx="200.0" cy="55.0" r="3.2"/>
+          <circle class="pt" cx="90.0" cy="165.0" r="3.2"/>
+          <circle class="pt" cx="295.3" cy="220.0" r="3.2"/>
+          <text x="206.0" y="183.0">O</text>
+          <text x="200.0" y="44.0" text-anchor="middle">D</text>
+          <text x="74.0" y="170.0" text-anchor="end">E</text>
+          <text x="309.1" y="233.0">C</text>
+        `,
+    },
+    given: ['O, çemberin merkezi', '|ED| = r√2', '|DC| = r√3'],
+    stem: [],
+    ask: 'Yukarıdaki şekilde çemberin yarıçapı r olduğuna göre, m(EDC) = α kaç derecedir?',
+    choices: [
+      { key: 'A', text: '60' },
+      { key: 'B', text: '65' },
+      { key: 'C', text: '70' },
+      { key: 'D', text: '75' },
+      { key: 'E', text: '80' },
+    ],
+    answer: 'D',
+    hint: 'OED ve ODC üçgenlerinin kenarlarını yarıçap cinsinden yaz; hangi özel üçgenler olduklarına bak.',
+    solution: [
+      {
+        title: 'OED üçgeni',
+        detail:
+          '|OE| = |OD| = r ve |ED| = r√2 olduğundan OED ikizkenar dik üçgendir: m(EOD) = 90°, m(ODE) = 45°.',
+      },
+      {
+        title: 'ODC üçgeni',
+        detail:
+          '|OD| = |OC| = r ve |DC| = r√3 olduğundan tepe açısı m(DOC) = 120°, taban açıları (180 − 120) : 2 = 30°’dir; m(ODC) = 30°.',
+      },
+      { title: 'Sonuç', detail: 'α = m(ODE) + m(ODC) = 45 + 30 = 75° bulunur.' },
+      {
+        title: 'Kontrol',
+        detail: 'D’yi içermeyen EC yayı 360 − 90 − 120 = 150°’dir; çevre açı 150 : 2 = 75°.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 14
+  {
+    id: 'circles-14',
+    topic: 'Çevrel çemberde çevre açılar',
+    figure: {
+      viewBox: '0 22 400 262',
+      caption: 'Şekil 14',
+      label:
+        'ABC üçgeninin çevrel çemberi çizilmiş; D noktası AB yayı, E noktası AC yayı üzerinde. [DA], [DC], [EA] ve [EB] çizilmiş, m(ADC) = 64°, m(AEB) = 48°, m(BAC) = α.',
+      svg: `
+          <circle class="ln" cx="200.0" cy="165.0" r="115.0"/>
+          <path class="ln" d="M200.0,50.0 L85.6,177.0 L290.6,235.8 L200.0,50.0"/>
+          <path class="ln" d="M200.0,50.0 L105.8,99.0 L290.6,235.8"/>
+          <path class="ln" d="M200.0,50.0 L299.6,107.5 L85.6,177.0"/>
+          <path class="arc" d="M123.5,112.1 A22,22 0 0 0 125.3,88.9"/>
+          <text class="val" x="147.7" y="107.3" text-anchor="middle">64°</text>
+          <path class="arc" d="M280.5,96.5 A22,22 0 0 0 278.7,114.3"/>
+          <text class="val" x="257.8" y="108.1" text-anchor="middle">48°</text>
+          <path class="arc" d="M185.3,66.3 A22,22 0 0 0 209.6,69.8"/>
+          <text class="val" x="195.0" y="90.6" text-anchor="middle">α</text>
+          <circle class="pt" cx="200.0" cy="50.0" r="3.2"/>
+          <circle class="pt" cx="85.6" cy="177.0" r="3.2"/>
+          <circle class="pt" cx="290.6" cy="235.8" r="3.2"/>
+          <circle class="pt" cx="105.8" cy="99.0" r="3.2"/>
+          <circle class="pt" cx="299.6" cy="107.5" r="3.2"/>
+          <text x="200.0" y="39.0" text-anchor="middle">A</text>
+          <text x="69.7" y="183.7" text-anchor="end">B</text>
+          <text x="303.2" y="250.7">C</text>
+          <text x="92.7" y="94.9" text-anchor="end">D</text>
+          <text x="313.4" y="104.5">E</text>
+        `,
+    },
+    given: [
+      'Şekilde ABC üçgeninin çevrel çemberi çizilmiştir.',
+      'D ve E noktaları çember üzerinde',
+      'm(ADC) = 64°',
+      'm(AEB) = 48°',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, m(BAC) = α kaç derecedir?',
+    choices: [
+      { key: 'A', text: '64' },
+      { key: 'B', text: '68' },
+      { key: 'C', text: '72' },
+      { key: 'D', text: '76' },
+      { key: 'E', text: '80' },
+    ],
+    answer: 'B',
+    hint: 'Her çevre açı, gördüğü yayın yarısıdır; önce AC ve AB yaylarını bul.',
+    solution: [
+      {
+        title: 'AC yayı',
+        detail: 'm(ADC) = 64° çevre açısı AC yayını görür: m(AC) = 2·64 = 128°.',
+      },
+      { title: 'AB yayı', detail: 'm(AEB) = 48° çevre açısı AB yayını görür: m(AB) = 2·48 = 96°.' },
+      {
+        title: 'BC yayı',
+        detail: 'Çemberin tamamı 360° olduğundan m(BC) = 360 − 128 − 96 = 136°.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'α = m(BAC), BC yayını gören çevre açıdır: α = 136 : 2 = 68° bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 15
+  {
+    id: 'circles-15',
+    topic: 'Teğet-kiriş açı ve ikizkenar üçgen',
+    figure: {
+      viewBox: '0 96 400 272',
+      caption: 'Şekil 15',
+      label:
+        'ABC üçgeninde |AB| = |AC|; [BA ışını A, D ve C noktalarından geçen çembere A noktasında teğet. D noktası [BC] üzerinde, [AD] çizilmiş, m(ADC) = 64°, m(DAC) = α.',
+      svg: `
+          <circle class="ln" cx="253.9" cy="254.4" r="101.7"/>
+          <path class="ln" d="M45.0,265.0 L355.0,265.0"/>
+          <path class="ln" d="M45.0,265.0 L280.6,117.8"/>
+          <path class="ln" d="M200.0,168.1 L152.8,265.0"/>
+          <path class="ln" d="M200.0,168.1 L355.0,265.0"/>
+          <path class="tick" d="M117.2,212.8 L123.6,223.0"/>
+          <path class="tick" d="M121.4,210.2 L127.8,220.3"/>
+          <path class="tick" d="M278.6,210.2 L272.2,220.3"/>
+          <path class="tick" d="M282.8,212.8 L276.4,223.0"/>
+          <path class="arc" d="M172.8,265.0 A20,20 0 0 0 161.5,247.0"/>
+          <text class="val" x="185.0" y="249.9" text-anchor="middle">64°</text>
+          <path class="arc" d="M188.6,191.5 A26,26 0 0 0 222.0,181.9"/>
+          <text class="val" x="211.0" y="211.6" text-anchor="middle">α</text>
+          <circle class="pt" cx="200.0" cy="168.1" r="3.2"/>
+          <circle class="pt" cx="45.0" cy="265.0" r="3.2"/>
+          <circle class="pt" cx="355.0" cy="265.0" r="3.2"/>
+          <circle class="pt" cx="152.8" cy="265.0" r="3.2"/>
+          <text x="194.0" y="158.1" text-anchor="end">A</text>
+          <text x="37.0" y="270.0" text-anchor="end">B</text>
+          <text x="363.0" y="283.0">C</text>
+          <text x="146.8" y="285.0" text-anchor="end">D</text>
+        `,
+    },
+    given: ['[BA, çembere A noktasında teğet', '|AB| = |AC|', 'm(ADC) = 64°', 'm(DAC) = α'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, m(DAC) = α kaç derecedir?',
+    choices: [
+      { key: 'A', text: '76' },
+      { key: 'B', text: '80' },
+      { key: 'C', text: '84' },
+      { key: 'D', text: '88' },
+      { key: 'E', text: '92' },
+    ],
+    answer: 'C',
+    hint: 'Teğet-kiriş açısı m(BAD), aynı AD yayını gören çevre açı m(ACD)’ye eşittir.',
+    solution: [
+      {
+        title: 'İkizkenar üçgen',
+        detail: '|AB| = |AC| olduğundan m(ABC) = m(ACB); bu açıya y diyelim.',
+      },
+      {
+        title: 'Teğet-kiriş açısı',
+        detail: 'm(BAD) teğet-kiriş açısı ve m(ACD) çevre açısı aynı AD yayını görür: m(BAD) = y.',
+      },
+      {
+        title: 'Dış açı',
+        detail: 'ABD üçgeninde D’deki dış açı: m(ADC) = y + y = 2y = 64° → y = 32°.',
+      },
+      { title: 'Sonuç', detail: 'ADC üçgeninde α = 180 − 64 − 32 = 84° bulunur.' },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 16
+  {
+    id: 'circles-16',
+    topic: 'Dış noktadan teğetler ve yay',
+    figure: {
+      viewBox: '0 28 400 280',
+      caption: 'Şekil 16',
+      label:
+        'O merkezli çembere P noktasından çizilen [PE ışını çembere A, [PF ışını B noktasında teğet; [AB] kirişi çizilmiş, T noktası büyük yay üzerinde. m(EAB) = 3x + 20°, m(EPF) = 2x.',
+      svg: `
+          <circle class="ln" cx="165.0" cy="165.0" r="88.0"/>
+          <path class="ln" d="M158.1,52.8 L318.4,165.0 L158.1,277.2"/>
+          <path class="ln" d="M215.5,92.9 L215.5,237.1"/>
+          <path class="arc" d="M199.1,81.4 A20,20 0 0 0 215.5,112.9"/>
+          <text class="val" x="171.1" y="121.0" text-anchor="middle">3x + 20°</text>
+          <path class="arc" d="M293.8,147.8 A30,30 0 0 0 293.8,182.2"/>
+          <text class="val" x="272.4" y="170.0" text-anchor="middle">2x</text>
+          <circle class="pt" cx="165.0" cy="165.0" r="3.2"/>
+          <circle class="pt" cx="215.5" cy="92.9" r="3.2"/>
+          <circle class="pt" cx="215.5" cy="237.1" r="3.2"/>
+          <circle class="pt" cx="77.0" cy="165.0" r="3.2"/>
+          <circle class="pt" cx="318.4" cy="165.0" r="3.2"/>
+          <circle class="pt" cx="158.1" cy="52.8" r="3.2"/>
+          <circle class="pt" cx="158.1" cy="277.2" r="3.2"/>
+          <text x="171.0" y="183.0">O</text>
+          <text x="221.5" y="84.9">A</text>
+          <text x="221.5" y="257.1">B</text>
+          <text x="61.0" y="170.0" text-anchor="end">T</text>
+          <text x="328.4" y="170.0">P</text>
+          <text x="152.1" y="52.8" text-anchor="end">E</text>
+          <text x="152.1" y="289.2" text-anchor="end">F</text>
+        `,
+    },
+    given: [
+      '[PE, A noktasında; [PF, B noktasında O merkezli çembere teğet',
+      'm(EAB) = 3x + 20°',
+      'm(EPF) = 2x',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, T noktasını içeren ATB yayının ölçüsü kaç derecedir?',
+    choices: [
+      { key: 'A', text: '220' },
+      { key: 'B', text: '230' },
+      { key: 'C', text: '240' },
+      { key: 'D', text: '250' },
+      { key: 'E', text: '260' },
+    ],
+    answer: 'D',
+    hint: 'Dış noktadan çizilen teğet parçaları eşittir, yani PAB üçgeni ikizkenardır.',
+    solution: [
+      {
+        title: 'İkizkenar üçgen',
+        detail: '|PA| = |PB| olduğundan m(PAB) = m(PBA) = (180 − 2x) : 2 = 90 − x.',
+      },
+      {
+        title: 'Denklemi kur',
+        detail:
+          'E, A, P doğrusal: m(EAB) = 180 − (90 − x) = 90 + x. Buna göre 90 + x = 3x + 20 → x = 35.',
+      },
+      {
+        title: 'Küçük AB yayı',
+        detail: 'm(PAB) = 90 − 35 = 55° teğet-kiriş açısıdır; T’yi içermeyen AB yayı 2·55 = 110°.',
+      },
+      { title: 'Sonuç', detail: 'ATB yayı = 360 − 110 = 250° bulunur.' },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 17
+  {
+    id: 'circles-17',
+    topic: 'Teğete paralel kiriş',
+    figure: {
+      viewBox: '0 40 400 256',
+      caption: 'Şekil 17',
+      label:
+        'O merkezli yarım çemberde [AB] çap; KL doğrusu yarım çembere T noktasında teğet. C noktası yay üzerinde, [BC] kirişi KL’ye paralel, [TB] çizilmiş, m(BTL) = 35°, m(ABC) = x.',
+      svg: `
+          <path class="ln" d="M50.0,245.0 A150,150 0 0 1 350.0,245.0 Z"/>
+          <path class="ln" d="M143.2,64.7 L340.6,136.5"/>
+          <path class="ln" d="M85.1,148.6 L350.0,245.0"/>
+          <path class="ln" d="M251.3,104.0 L350.0,245.0"/>
+          <path class="arc" d="M266.2,125.3 A26,26 0 0 0 275.7,112.9"/>
+          <text class="val" x="286.2" y="135.8" text-anchor="middle">35°</text>
+          <path class="arc" d="M303.0,227.9 A50,50 0 0 0 300.0,245.0"/>
+          <text class="val" x="285.0" y="238.5" text-anchor="middle">x</text>
+          <circle class="pt" cx="50.0" cy="245.0" r="3.2"/>
+          <circle class="pt" cx="350.0" cy="245.0" r="3.2"/>
+          <circle class="pt" cx="85.1" cy="148.6" r="3.2"/>
+          <circle class="pt" cx="251.3" cy="104.0" r="3.2"/>
+          <circle class="pt" cx="200.0" cy="245.0" r="3.2"/>
+          <circle class="pt" cx="143.2" cy="64.7" r="3.2"/>
+          <circle class="pt" cx="340.6" cy="136.5" r="3.2"/>
+          <text x="44.0" y="263.0" text-anchor="end">A</text>
+          <text x="356.0" y="263.0">B</text>
+          <text x="200.0" y="265.0" text-anchor="middle">O</text>
+          <text x="72.8" y="143.3" text-anchor="end">C</text>
+          <text x="256.8" y="94.0" text-anchor="middle">T</text>
+          <text x="143.2" y="54.7" text-anchor="middle">K</text>
+          <text x="340.6" y="158.5" text-anchor="middle">L</text>
+        `,
+    },
+    given: [
+      'O merkezli yarım çemberde KL, T noktasında yarım çembere teğettir.',
+      '[BC] // KL',
+      'm(BTL) = 35°',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, m(ABC) = x kaç derecedir?',
+    choices: [
+      { key: 'A', text: '15' },
+      { key: 'B', text: '20' },
+      { key: 'C', text: '25' },
+      { key: 'D', text: '30' },
+      { key: 'E', text: '35' },
+    ],
+    answer: 'B',
+    hint: 'Teğete paralel olan kiriş, değme noktasında ikiye bölünen bir yay keser.',
+    solution: [
+      { title: 'Teğet-kiriş açısı', detail: 'm(BTL) = 35° olduğundan TB yayı 2·35 = 70°’dir.' },
+      {
+        title: 'Paralellik',
+        detail:
+          '[BC] // KL olduğundan m(TBC) = m(BTL) = 35° (iç ters açılar); bu çevre açı CT yayını görür: m(CT) = 70°.',
+      },
+      { title: 'AC yayı', detail: 'AB çap olduğundan m(AC) = 180 − 70 − 70 = 40°.' },
+      {
+        title: 'Sonuç',
+        detail: 'x = m(ABC), AC yayını gören çevre açıdır: x = 40 : 2 = 20° bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 18
+  {
+    id: 'circles-18',
+    topic: 'Çapı gören açı ve yay',
+    figure: {
+      viewBox: '0 32 400 272',
+      caption: 'Şekil 18',
+      label:
+        'ABC üçgeninde [BC] çaplı O merkezli yarım çember [AB] kenarını E, [AC] kenarını D noktasında kesiyor; |AE| = |EB|, m(ABC) = 66°.',
+      svg: `
+          <path class="ln" d="M60.0,272.0 A140,140 0 0 1 340.0,272.0"/>
+          <path class="ln" d="M152.6,63.9 L60.0,272.0 L340.0,272.0 L152.6,63.9"/>
+          <path class="tick" d="M135.0,118.4 L124.0,113.5"/>
+          <path class="tick" d="M88.6,222.4 L77.7,217.5"/>
+          <path class="arc" d="M86.0,272.0 A26,26 0 0 0 70.6,248.2"/>
+          <text class="val" x="96.9" y="253.0" text-anchor="middle">66°</text>
+          <circle class="pt" cx="152.6" cy="63.9" r="3.2"/>
+          <circle class="pt" cx="60.0" cy="272.0" r="3.2"/>
+          <circle class="pt" cx="340.0" cy="272.0" r="3.2"/>
+          <circle class="pt" cx="214.6" cy="132.8" r="3.2"/>
+          <circle class="pt" cx="106.3" cy="168.0" r="3.2"/>
+          <circle class="pt" cx="200.0" cy="272.0" r="3.2"/>
+          <text x="152.6" y="53.9" text-anchor="middle">A</text>
+          <text x="52.0" y="290.0" text-anchor="end">B</text>
+          <text x="348.0" y="290.0">C</text>
+          <text x="200.0" y="292.0" text-anchor="middle">O</text>
+          <text x="96.3" y="168.0" text-anchor="end">E</text>
+          <text x="224.6" y="130.8">D</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 32 400 272',
+      caption: 'Şekil 18',
+      label:
+        'Aynı şekilde [EC] kesikli çizilmiş; [BC] çap olduğundan E’deki açı dik ve m(ECD) işaretli.',
+      svg: `
+          <path class="ln" d="M60.0,272.0 A140,140 0 0 1 340.0,272.0"/>
+          <path class="ln" d="M152.6,63.9 L60.0,272.0 L340.0,272.0 L152.6,63.9"/>
+          <path class="tick" d="M135.0,118.4 L124.0,113.5"/>
+          <path class="tick" d="M88.6,222.4 L77.7,217.5"/>
+          <path class="arc" d="M86.0,272.0 A26,26 0 0 0 70.6,248.2"/>
+          <text class="val" x="96.9" y="253.0" text-anchor="middle">66°</text>
+          <path class="aux" d="M106.3,168.0 L340.0,272.0"/>
+          <path class="aux-head" d="M102.3,177.1 L111.4,181.2 L115.5,172.0"/>
+          <path class="arc" d="M306.5,234.8 A50,50 0 0 0 294.3,251.7"/>
+          <circle class="pt" cx="152.6" cy="63.9" r="3.2"/>
+          <circle class="pt" cx="60.0" cy="272.0" r="3.2"/>
+          <circle class="pt" cx="340.0" cy="272.0" r="3.2"/>
+          <circle class="pt" cx="214.6" cy="132.8" r="3.2"/>
+          <circle class="pt" cx="106.3" cy="168.0" r="3.2"/>
+          <circle class="pt" cx="200.0" cy="272.0" r="3.2"/>
+          <text x="152.6" y="53.9" text-anchor="middle">A</text>
+          <text x="52.0" y="290.0" text-anchor="end">B</text>
+          <text x="348.0" y="290.0">C</text>
+          <text x="200.0" y="292.0" text-anchor="middle">O</text>
+          <text x="96.3" y="168.0" text-anchor="end">E</text>
+          <text x="224.6" y="130.8">D</text>
+        `,
+    },
+    given: ['ABC bir üçgen', '|AE| = |EB|', 'm(ABC) = 66°'],
+    stem: [],
+    ask: 'Yukarıdaki O merkezli çemberde ED yayının ölçüsü kaç derecedir?',
+    choices: [
+      { key: 'A', text: '48' },
+      { key: 'B', text: '52' },
+      { key: 'C', text: '56' },
+      { key: 'D', text: '60' },
+      { key: 'E', text: '66' },
+    ],
+    answer: 'A',
+    hint: 'E’yi C’ye birleştir: çapı gören çevre açı 90°’dir.',
+    solution: [
+      { title: 'Çapı gören açı', detail: '[BC] çap olduğundan m(BEC) = 90°, yani [CE] ⊥ [AB].' },
+      {
+        title: 'İkizkenar üçgen',
+        detail:
+          '[CE] hem yükseklik hem kenarortay olduğundan |CA| = |CB|; m(BAC) = 66°, m(ACB) = 180 − 132 = 48°.',
+      },
+      { title: 'Açıortay', detail: '[CE] aynı zamanda açıortaydır: m(ECD) = 48 : 2 = 24°.' },
+      {
+        title: 'Sonuç',
+        detail: 'm(ECD), ED yayını gören çevre açıdır: m(ED) = 2·24 = 48° bulunur.',
+      },
+    ],
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -811,6 +1214,21 @@ export const UNIT_5_CIRCLES: Unit = {
         'circles-10',
         'circles-11',
         'circles-12',
+      ),
+    },
+    {
+      id: 'circles-m3',
+      order: 3,
+      title: 'Yay, teğet ve kiriş karışık',
+      summary:
+        'Kiriş uzunluğundan merkez açı, çevrel çemberde yaylar, teğet-kiriş açısıyla ikizkenar üçgen, dış noktadan teğetler, teğete paralel kiriş ve çapı gören açı.',
+      questions: pick(
+        'circles-13',
+        'circles-14',
+        'circles-15',
+        'circles-16',
+        'circles-17',
+        'circles-18',
       ),
     },
   ],
