@@ -3,6 +3,7 @@ import { UNIT_1_ANGLES } from './data/unit-1-angles';
 import { UNIT_2_TRIANGLES } from './data/unit-2-triangles';
 import { UNIT_3_POLYGONS } from './data/unit-3-polygons';
 import { UNIT_4_QUADRILATERALS } from './data/unit-4-quadrilaterals';
+import { UNIT_5_CIRCLES } from './data/unit-5-circles';
 
 /**
  * Every unit in the app. To add one, create its data file and append it here
@@ -13,6 +14,7 @@ export const UNITS: readonly Unit[] = [
   UNIT_2_TRIANGLES,
   UNIT_3_POLYGONS,
   UNIT_4_QUADRILATERALS,
+  UNIT_5_CIRCLES,
 ];
 
 export function findUnit(id: string): Unit | undefined {
