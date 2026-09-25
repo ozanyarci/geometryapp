@@ -327,6 +327,16 @@ describe('unit 5 answer key', () => {
     expect(answerOf('circles-167')).toBe('A'));
   it('168 — r = OA = 3√3, m(DAO) = 60, AOD eşkenar, x = 3√3 → D', () =>
     expect(answerOf('circles-168')).toBe('D'));
+  it('169 — yay AB = 2·30 = 60, dilim 300°, 36π · 300/360 = 30π → B', () =>
+    expect(answerOf('circles-169')).toBe('B'));
+  it('170 — (9π/4 − 9/2) + (9 − 9π/4) = 9/2 → C', () => expect(answerOf('circles-170')).toBe('C'));
+  it('171 — 64 = 4·PC, PC = 16, AB = 12/2 = 6, π(R² − r²) = 36π → D', () =>
+    expect(answerOf('circles-171')).toBe('D'));
+  it('172 — 12·6 − 2·36π/4 = 72 − 18π = 18(4 − π) → E', () =>
+    expect(answerOf('circles-172')).toBe('E'));
+  it('173 — 6·DC/2 = 36π/4, 3·DC = 9π, DC = 3π → D', () =>
+    expect(answerOf('circles-173')).toBe('D'));
+  it('174 — ½·12·6 − ½·4·2 = 36 − 4 = 32 → B', () => expect(answerOf('circles-174')).toBe('B'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
