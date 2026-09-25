@@ -9949,6 +9949,523 @@ const QUESTIONS: Question[] = [
       { title: 'Sonuç', detail: 'Çevre = 52 cm bulunur.' },
     ],
   },
+  // ---------------------------------------------------------------- 133
+  {
+    id: 'circles-133',
+    topic: 'Dik yamukta çapı kenar olan çember',
+    figure: {
+      viewBox: '0 0 400 324',
+      caption: 'Şekil 133',
+      label:
+        'ABCD dik yamuğunda A ve B açıları dik; [DC] çaplı O merkezli çember [AB] yüksekliğine T noktasında teğet.',
+      svg: `
+          <circle class="ln" cx="200.0" cy="163.0" r="143.0"/>
+          <path class="ln" d="M57.0,31.0 L57.0,295.0 L255.0,295.0 L145.0,31.0 Z"/>
+          <path class="ln" d="M145.0,31.0 L255.0,295.0"/>
+          <path class="arc" d="M57.0,40.0 L66.0,40.0 L66.0,31.0"/>
+          <path class="arc" d="M57.0,286.0 L66.0,286.0 L66.0,295.0"/>
+          <circle class="pt" cx="57.0" cy="31.0" r="3.2"/>
+          <circle class="pt" cx="57.0" cy="295.0" r="3.2"/>
+          <circle class="pt" cx="255.0" cy="295.0" r="3.2"/>
+          <circle class="pt" cx="145.0" cy="31.0" r="3.2"/>
+          <circle class="pt" cx="200.0" cy="163.0" r="3.2"/>
+          <circle class="pt" cx="57.0" cy="163.0" r="3.2"/>
+          <text x="49.0" y="25.0" text-anchor="end">A</text>
+          <text x="49.0" y="311.0" text-anchor="end">B</text>
+          <text x="263.0" y="311.0">C</text>
+          <text x="145.0" y="21.0" text-anchor="middle">D</text>
+          <text x="49.0" y="168.0" text-anchor="end">T</text>
+          <text x="208.0" y="157.0">O</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 0 400 324',
+      caption: 'Şekil 133',
+      label: 'Aynı şekilde [OT] yarıçapı ve D’den [BC]’ye dikme [DH] kesikli çizilmiş.',
+      svg: `
+          <circle class="ln" cx="200.0" cy="163.0" r="143.0"/>
+          <path class="ln" d="M57.0,31.0 L57.0,295.0 L255.0,295.0 L145.0,31.0 Z"/>
+          <path class="ln" d="M145.0,31.0 L255.0,295.0"/>
+          <path class="arc" d="M57.0,40.0 L66.0,40.0 L66.0,31.0"/>
+          <path class="arc" d="M57.0,286.0 L66.0,286.0 L66.0,295.0"/>
+          <path class="aux" d="M200.0,163.0 L57.0,163.0"/>
+          <path class="arc" d="M57.0,155.0 L65.0,155.0 L65.0,163.0"/>
+          <path class="aux" d="M145.0,31.0 L145.0,295.0"/>
+          <circle class="pt" cx="57.0" cy="31.0" r="3.2"/>
+          <circle class="pt" cx="57.0" cy="295.0" r="3.2"/>
+          <circle class="pt" cx="255.0" cy="295.0" r="3.2"/>
+          <circle class="pt" cx="145.0" cy="31.0" r="3.2"/>
+          <circle class="pt" cx="200.0" cy="163.0" r="3.2"/>
+          <circle class="pt" cx="57.0" cy="163.0" r="3.2"/>
+          <text x="49.0" y="25.0" text-anchor="end">A</text>
+          <text x="49.0" y="311.0" text-anchor="end">B</text>
+          <text x="263.0" y="311.0">C</text>
+          <text x="145.0" y="21.0" text-anchor="middle">D</text>
+          <text x="49.0" y="168.0" text-anchor="end">T</text>
+          <text x="208.0" y="157.0">O</text>
+          <text x="145.0" y="313.0" text-anchor="middle">H</text>
+        `,
+    },
+    given: ['|DC| = 13 cm', 'Alan(ABCD) = 78 cm²'],
+    stem: [
+      'ABCD dik yamuğunun [AB] yüksekliği, T noktasında [DC] çaplı, O merkezli çembere teğettir.',
+    ],
+    ask: 'Yukarıdaki verilere göre, |AB| kaç cm dir?',
+    choices: [
+      { key: 'A', text: '8' },
+      { key: 'B', text: '9' },
+      { key: 'C', text: '10' },
+      { key: 'D', text: '12' },
+      { key: 'E', text: '13' },
+    ],
+    answer: 'D',
+    hint: 'O, [DC]’nin orta noktasıdır; [OT] yamuğun orta tabanı gibi davranır.',
+    solution: [
+      {
+        title: 'Yarıçap',
+        detail: '[OT] ⊥ [AB] ve |OT| = |DC| / 2 = 13/2 cm.',
+      },
+      {
+        title: 'Orta taban',
+        detail:
+          'O, [DC]’nin ve T, [AB]’nin orta noktası olduğundan |OT| = (|AD| + |BC|) / 2 ⇒ |AD| + |BC| = 13 cm.',
+      },
+      {
+        title: 'Alan',
+        detail: 'Alan(ABCD) = (|AD| + |BC|) / 2 · |AB| ⇒ 78 = (13/2) · |AB|.',
+      },
+      { title: 'Sonuç', detail: '|AB| = 78 · 2 / 13 = 12 cm bulunur.' },
+    ],
+  },
+  // ---------------------------------------------------------------- 134
+  {
+    id: 'circles-134',
+    topic: 'Ortak iç teğet ve merkezler arası uzaklık',
+    figure: {
+      viewBox: '0 70 400 190',
+      caption: 'Şekil 134',
+      label:
+        'KL doğrusu O₁ ve O₂ merkezli çemberlere T ve P noktalarında teğet ve [O₁O₂]’yi kesiyor; [O₁O₂] büyük çemberi E’de, küçük çemberi F’de kesiyor.',
+      svg: `
+          <circle class="ln" cx="91.5" cy="150.0" r="72.5"/>
+          <circle class="ln" cx="338.0" cy="150.0" r="43.5"/>
+          <path class="ln" d="M91.5,150.0 L338.0,150.0"/>
+          <path class="ln" d="M87.2,234.4 L355.9,91.1"/>
+          <circle class="pt" cx="91.5" cy="150.0" r="3.2"/>
+          <circle class="pt" cx="338.0" cy="150.0" r="3.2"/>
+          <circle class="pt" cx="164.0" cy="150.0" r="3.2"/>
+          <circle class="pt" cx="294.5" cy="150.0" r="3.2"/>
+          <circle class="pt" cx="125.6" cy="214.0" r="3.2"/>
+          <circle class="pt" cx="317.5" cy="111.6" r="3.2"/>
+          <text x="83.5" y="168.0" text-anchor="end">O₁</text>
+          <text x="338.0" y="170.0" text-anchor="middle">O₂</text>
+          <text x="170.0" y="142.0">E</text>
+          <text x="288.5" y="142.0" text-anchor="end">F</text>
+          <text x="129.6" y="232.0">T</text>
+          <text x="313.5" y="101.6" text-anchor="end">P</text>
+          <text x="81.2" y="244.4" text-anchor="end">K</text>
+          <text x="361.9" y="87.1">L</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 70 400 190',
+      caption: 'Şekil 134',
+      label: 'Aynı şekilde teğete dik [O₁T] ve [O₂P] yarıçapları kesikli çizilmiş.',
+      svg: `
+          <circle class="ln" cx="91.5" cy="150.0" r="72.5"/>
+          <circle class="ln" cx="338.0" cy="150.0" r="43.5"/>
+          <path class="ln" d="M91.5,150.0 L338.0,150.0"/>
+          <path class="ln" d="M87.2,234.4 L355.9,91.1"/>
+          <path class="aux" d="M91.5,150.0 L125.6,214.0"/>
+          <path class="aux" d="M338.0,150.0 L317.5,111.6"/>
+          <path class="arc" d="M121.9,206.9 L128.9,203.1 L132.7,210.2"/>
+          <path class="arc" d="M321.3,118.7 L314.2,122.4 L310.5,115.4"/>
+          <circle class="pt" cx="91.5" cy="150.0" r="3.2"/>
+          <circle class="pt" cx="338.0" cy="150.0" r="3.2"/>
+          <circle class="pt" cx="164.0" cy="150.0" r="3.2"/>
+          <circle class="pt" cx="294.5" cy="150.0" r="3.2"/>
+          <circle class="pt" cx="125.6" cy="214.0" r="3.2"/>
+          <circle class="pt" cx="317.5" cy="111.6" r="3.2"/>
+          <text x="83.5" y="168.0" text-anchor="end">O₁</text>
+          <text x="338.0" y="170.0" text-anchor="middle">O₂</text>
+          <text x="170.0" y="142.0">E</text>
+          <text x="288.5" y="142.0" text-anchor="end">F</text>
+          <text x="129.6" y="232.0">T</text>
+          <text x="313.5" y="101.6" text-anchor="end">P</text>
+          <text x="81.2" y="244.4" text-anchor="end">K</text>
+          <text x="361.9" y="87.1">L</text>
+        `,
+    },
+    given: ['|O₁E| = 5 cm', '|O₂F| = 3 cm', '|PT| = 15 cm'],
+    stem: ['KL doğrusu, O₁ ve O₂ merkezli çemberlere T ve P noktalarında teğettir.'],
+    ask: 'Buna göre, |EF| kaç cm dir?',
+    choices: [
+      { key: 'A', text: '6' },
+      { key: 'B', text: '7' },
+      { key: 'C', text: '8' },
+      { key: 'D', text: '9' },
+      { key: 'E', text: '10' },
+    ],
+    answer: 'D',
+    hint: 'Yarıçapları teğete dik çiz; ortak iç teğette yarıçaplar toplanır.',
+    solution: [
+      {
+        title: 'Yarıçaplar',
+        detail: '[O₁T] ⊥ KL ve [O₂P] ⊥ KL; |O₁T| = 5 cm, |O₂P| = 3 cm.',
+      },
+      {
+        title: 'Dik üçgen',
+        detail:
+          '[O₂P]’yi P’nin ötesine 5 cm uzatıp O₁’e bağlayınca dik kenarları 15 ve 5 + 3 = 8 olan dik üçgen oluşur.',
+      },
+      { title: 'Pisagor', detail: '|O₁O₂|² = 15² + 8² = 225 + 64 = 289 ⇒ |O₁O₂| = 17 cm.' },
+      { title: 'Sonuç', detail: '|EF| = 17 − 5 − 3 = 9 cm bulunur.' },
+    ],
+  },
+  // ---------------------------------------------------------------- 135
+  {
+    id: 'circles-135',
+    topic: 'Yarıçapa paralel kiriş',
+    figure: {
+      viewBox: '0 10 400 310',
+      caption: 'Şekil 135',
+      label:
+        'A, B ve C noktaları O merkezli çember üzerinde; [CO] ile [AB] paralel; [OB], [AB] ve [AC] çizilmiş. |OB| = 10, |AB| = 12.',
+      svg: `
+          <circle class="ln" cx="200.0" cy="165.0" r="140.0"/>
+          <path class="ln" d="M60.0,165.0 L200.0,165.0 L284.0,277.0"/>
+          <path class="ln" d="M60.0,165.0 L116.0,277.0 L284.0,277.0"/>
+          <circle class="pt" cx="200.0" cy="165.0" r="3.2"/>
+          <circle class="pt" cx="116.0" cy="277.0" r="3.2"/>
+          <circle class="pt" cx="284.0" cy="277.0" r="3.2"/>
+          <circle class="pt" cx="60.0" cy="165.0" r="3.2"/>
+          <text x="200.0" y="155.0" text-anchor="middle">O</text>
+          <text x="110.0" y="295.0" text-anchor="end">A</text>
+          <text x="290.0" y="295.0">B</text>
+          <text x="52.0" y="170.0" text-anchor="end">C</text>
+          <text class="val" x="200.0" y="295.0" text-anchor="middle">12</text>
+          <text class="val" x="252.0" y="221.0">10</text>
+          <text class="val" x="98.0" y="221.0">x</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 10 400 310',
+      caption: 'Şekil 135',
+      label: 'Aynı şekilde O’dan [AB]’ye dikme [OH] ve C’den AB doğrusuna dikme kesikli çizilmiş.',
+      svg: `
+          <circle class="ln" cx="200.0" cy="165.0" r="140.0"/>
+          <path class="ln" d="M60.0,165.0 L200.0,165.0 L284.0,277.0"/>
+          <path class="ln" d="M60.0,165.0 L116.0,277.0 L284.0,277.0"/>
+          <path class="aux" d="M200.0,165.0 L200.0,277.0"/>
+          <path class="arc" d="M208.0,277.0 L208.0,269.0 L200.0,269.0"/>
+          <path class="aux" d="M60.0,165.0 L60.0,277.0 L116.0,277.0"/>
+          <path class="arc" d="M68.0,277.0 L68.0,269.0 L60.0,269.0"/>
+          <circle class="pt" cx="200.0" cy="165.0" r="3.2"/>
+          <circle class="pt" cx="116.0" cy="277.0" r="3.2"/>
+          <circle class="pt" cx="284.0" cy="277.0" r="3.2"/>
+          <circle class="pt" cx="60.0" cy="165.0" r="3.2"/>
+          <text x="200.0" y="155.0" text-anchor="middle">O</text>
+          <text x="110.0" y="295.0" text-anchor="end">A</text>
+          <text x="290.0" y="295.0">B</text>
+          <text x="52.0" y="170.0" text-anchor="end">C</text>
+          <text class="val" x="200.0" y="295.0" text-anchor="middle">12</text>
+          <text class="val" x="252.0" y="221.0">10</text>
+          <text class="val" x="98.0" y="221.0">x</text>
+        `,
+    },
+    given: ['[CO] // [AB]', '|OB| = 10 cm', '|AB| = 12 cm'],
+    stem: ['A, B ve C noktaları O merkezli, 10 cm yarıçaplı çember üzerindedir.'],
+    ask: 'Buna göre, |AC| = x kaç cm dir?',
+    choices: [
+      { key: 'A', text: '4√5' },
+      { key: 'B', text: '6√2' },
+      { key: 'C', text: '8' },
+      { key: 'D', text: '2√17' },
+      { key: 'E', text: '9' },
+    ],
+    answer: 'A',
+    hint: 'Merkezden kirişe indirilen dikme kirişi iki eş parçaya ayırır.',
+    solution: [
+      {
+        title: 'Merkezden dikme',
+        detail: '[OH] ⊥ [AB] ⇒ |AH| = |HB| = 6 cm, |OH|² = 10² − 6² = 64 ⇒ |OH| = 8 cm.',
+      },
+      {
+        title: 'C’den dikme',
+        detail:
+          '[CO] // [AB] olduğundan C’nin AB doğrusuna uzaklığı da 8 cm; dikmenin ayağı H’den 10 cm, A ise H’den 6 cm uzakta, yani ayak ile A arası 4 cm.',
+      },
+      { title: 'Pisagor', detail: 'x² = 4² + 8² = 16 + 64 = 80.' },
+      { title: 'Sonuç', detail: 'x = √80 = 4√5 cm bulunur.' },
+    ],
+  },
+  // ---------------------------------------------------------------- 136
+  {
+    id: 'circles-136',
+    topic: 'Çemberleri saran ip',
+    figure: {
+      viewBox: '0 10 400 300',
+      caption: 'Şekil 136',
+      label:
+        'Merkezleri O₁, O₂, O₃, O₄ olan özdeş dört çember kare biçiminde dizilmiş ve birbirine dıştan teğet; dördünü saran bir ip çizilmiş.',
+      svg: `
+          <circle class="ln" cx="132.0" cy="92.0" r="68.0"/>
+          <circle class="ln" cx="268.0" cy="92.0" r="68.0"/>
+          <circle class="ln" cx="268.0" cy="228.0" r="68.0"/>
+          <circle class="ln" cx="132.0" cy="228.0" r="68.0"/>
+          <path class="ln" d="M132.0,24.0 L268.0,24.0 A68.0,68.0 0 0 1 336.0,92.0 L336.0,228.0 A68.0,68.0 0 0 1 268.0,296.0 L132.0,296.0 A68.0,68.0 0 0 1 64.0,228.0 L64.0,92.0 A68.0,68.0 0 0 1 132.0,24.0 Z"/>
+          <circle class="pt" cx="132.0" cy="92.0" r="3.2"/>
+          <text x="125.0" y="84.0" text-anchor="end">O₁</text>
+          <circle class="pt" cx="268.0" cy="92.0" r="3.2"/>
+          <text x="275.0" y="84.0">O₂</text>
+          <circle class="pt" cx="268.0" cy="228.0" r="3.2"/>
+          <text x="275.0" y="241.0">O₃</text>
+          <circle class="pt" cx="132.0" cy="228.0" r="3.2"/>
+          <text x="125.0" y="241.0" text-anchor="end">O₄</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 10 400 300',
+      caption: 'Şekil 136',
+      label:
+        'Aynı şekilde merkezleri birleştiren kare ve ipin değme noktalarına giden yarıçaplar kesikli çizilmiş.',
+      svg: `
+          <circle class="ln" cx="132.0" cy="92.0" r="68.0"/>
+          <circle class="ln" cx="268.0" cy="92.0" r="68.0"/>
+          <circle class="ln" cx="268.0" cy="228.0" r="68.0"/>
+          <circle class="ln" cx="132.0" cy="228.0" r="68.0"/>
+          <path class="ln" d="M132.0,24.0 L268.0,24.0 A68.0,68.0 0 0 1 336.0,92.0 L336.0,228.0 A68.0,68.0 0 0 1 268.0,296.0 L132.0,296.0 A68.0,68.0 0 0 1 64.0,228.0 L64.0,92.0 A68.0,68.0 0 0 1 132.0,24.0 Z"/>
+          <path class="aux" d="M132.0,92.0 L268.0,92.0 L268.0,228.0 L132.0,228.0 Z"/>
+          <path class="aux" d="M132.0,92.0 L132.0,24.0"/>
+          <path class="aux" d="M268.0,92.0 L268.0,24.0"/>
+          <path class="aux" d="M268.0,92.0 L336.0,92.0"/>
+          <circle class="pt" cx="132.0" cy="92.0" r="3.2"/>
+          <text x="125.0" y="84.0" text-anchor="end">O₁</text>
+          <circle class="pt" cx="268.0" cy="92.0" r="3.2"/>
+          <text x="275.0" y="84.0">O₂</text>
+          <circle class="pt" cx="268.0" cy="228.0" r="3.2"/>
+          <text x="275.0" y="241.0">O₃</text>
+          <circle class="pt" cx="132.0" cy="228.0" r="3.2"/>
+          <text x="125.0" y="241.0" text-anchor="end">O₄</text>
+        `,
+    },
+    given: ['r = 2 cm'],
+    stem: ['Yarıçapları 2 cm olan özdeş dört çember, şekildeki gibi birbirine dıştan teğettir.'],
+    ask: 'Bu çemberleri saran en kısa ipin uzunluğu kaç cm dir? (π = 3 alınız.)',
+    choices: [
+      { key: 'A', text: '24' },
+      { key: 'B', text: '26' },
+      { key: 'C', text: '28' },
+      { key: 'D', text: '30' },
+      { key: 'E', text: '32' },
+    ],
+    answer: 'C',
+    hint: 'İpi düz parçalar ve çemberlere sarılan yaylar olarak ikiye ayır.',
+    solution: [
+      {
+        title: 'Düz parçalar',
+        detail:
+          'Her düz parça, merkezleri birleştiren karenin bir kenarına eşittir: 2r = 4 cm. Dört parça: 16 cm.',
+      },
+      {
+        title: 'Yaylar',
+        detail:
+          'Her köşede ip 90°’lik bir yaya sarılır; dört yay birlikte tam bir çember eder: 2πr = 2 · 3 · 2 = 12 cm.',
+      },
+      { title: 'Sonuç', detail: 'İpin uzunluğu 16 + 12 = 28 cm bulunur.' },
+    ],
+  },
+  // ---------------------------------------------------------------- 137
+  {
+    id: 'circles-137',
+    topic: 'Çeyrek çember ve içteki yarım çember',
+    figure: {
+      viewBox: '0 14 400 326',
+      caption: 'Şekil 137',
+      label:
+        'O merkezli AB çeyrek çemberi ile [OB] çaplı M merkezli yarım çember B’de teğet; O’dan çıkan ışın yarım çemberi C’de, çeyrek çemberi D’de kesiyor; [DM] çizilmiş.',
+      svg: `
+          <path class="ln" d="M60.0,30.0 A280.0,280.0 0 0 1 340.0,310.0"/>
+          <path class="ln" d="M60.0,310.0 A140.0,140.0 0 0 1 340.0,310.0"/>
+          <path class="ln" d="M60.0,30.0 L60.0,310.0 L340.0,310.0"/>
+          <path class="ln" d="M60.0,310.0 L228.0,86.0"/>
+          <path class="ln" d="M228.0,86.0 L200.0,310.0"/>
+          <path class="arc" d="M69.0,310.0 L69.0,301.0 L60.0,301.0"/>
+          <circle class="pt" cx="60.0" cy="310.0" r="3.2"/>
+          <circle class="pt" cx="60.0" cy="30.0" r="3.2"/>
+          <circle class="pt" cx="340.0" cy="310.0" r="3.2"/>
+          <circle class="pt" cx="200.0" cy="310.0" r="3.2"/>
+          <circle class="pt" cx="160.8" cy="175.6" r="3.2"/>
+          <circle class="pt" cx="228.0" cy="86.0" r="3.2"/>
+          <text x="52.0" y="326.0" text-anchor="end">O</text>
+          <text x="52.0" y="34.0" text-anchor="end">A</text>
+          <text x="340.0" y="330.0" text-anchor="middle">B</text>
+          <text x="200.0" y="330.0" text-anchor="middle">M</text>
+          <text x="152.8" y="169.6" text-anchor="end">C</text>
+          <text x="234.0" y="78.0">D</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 14 400 326',
+      caption: 'Şekil 137',
+      label: 'Aynı şekilde [CB] ve D’den [OB]’ye dikme [DH] kesikli çizilmiş.',
+      svg: `
+          <path class="ln" d="M60.0,30.0 A280.0,280.0 0 0 1 340.0,310.0"/>
+          <path class="ln" d="M60.0,310.0 A140.0,140.0 0 0 1 340.0,310.0"/>
+          <path class="ln" d="M60.0,30.0 L60.0,310.0 L340.0,310.0"/>
+          <path class="ln" d="M60.0,310.0 L228.0,86.0"/>
+          <path class="ln" d="M228.0,86.0 L200.0,310.0"/>
+          <path class="arc" d="M69.0,310.0 L69.0,301.0 L60.0,301.0"/>
+          <path class="aux" d="M160.8,175.6 L340.0,310.0"/>
+          <path class="arc" d="M156.0,182.0 L162.4,186.8 L167.2,180.4"/>
+          <path class="aux" d="M228.0,86.0 L228.0,310.0"/>
+          <path class="arc" d="M236.0,310.0 L236.0,302.0 L228.0,302.0"/>
+          <circle class="pt" cx="60.0" cy="310.0" r="3.2"/>
+          <circle class="pt" cx="60.0" cy="30.0" r="3.2"/>
+          <circle class="pt" cx="340.0" cy="310.0" r="3.2"/>
+          <circle class="pt" cx="200.0" cy="310.0" r="3.2"/>
+          <circle class="pt" cx="160.8" cy="175.6" r="3.2"/>
+          <circle class="pt" cx="228.0" cy="86.0" r="3.2"/>
+          <text x="52.0" y="326.0" text-anchor="end">O</text>
+          <text x="52.0" y="34.0" text-anchor="end">A</text>
+          <text x="340.0" y="330.0" text-anchor="middle">B</text>
+          <text x="200.0" y="330.0" text-anchor="middle">M</text>
+          <text x="152.8" y="169.6" text-anchor="end">C</text>
+          <text x="234.0" y="78.0">D</text>
+          <text x="228.0" y="330.0" text-anchor="middle">H</text>
+        `,
+    },
+    given: ['|OC| = 6 cm', '|CD| = 4 cm'],
+    stem: ['O merkezli çeyrek çember ile M merkezli yarım çember B noktasında teğettir.'],
+    ask: 'Buna göre, |DM| kaç cm dir?',
+    choices: [
+      { key: 'A', text: '7' },
+      { key: 'B', text: '8' },
+      { key: 'C', text: '√65' },
+      { key: 'D', text: '3√7' },
+      { key: 'E', text: '2√15' },
+    ],
+    answer: 'C',
+    hint: '[OB] yarım çemberin çapıdır; C’yi B’ye bağla.',
+    solution: [
+      {
+        title: 'Yarıçaplar',
+        detail: '|OD| = 6 + 4 = 10 cm = |OB|, dolayısıyla |OM| = |MB| = 5 cm.',
+      },
+      {
+        title: 'Çapı gören açı',
+        detail: 'm(OCB) = 90° ⇒ cos(BOD) = |OC| / |OB| = 6/10.',
+      },
+      {
+        title: 'D’den dikme',
+        detail:
+          '[DH] ⊥ [OB]: |OH| = 10 · 6/10 = 6 cm, |DH| = √(100 − 36) = 8 cm, |MH| = 6 − 5 = 1 cm.',
+      },
+      { title: 'Sonuç', detail: '|DM|² = 1² + 8² = 65 ⇒ |DM| = √65 cm bulunur.' },
+    ],
+  },
+  // ---------------------------------------------------------------- 138
+  {
+    id: 'circles-138',
+    topic: 'Çapı gören açı ve kesişen kirişler',
+    figure: {
+      viewBox: '0 0 400 364',
+      caption: 'Şekil 138',
+      label:
+        'O merkezli çemberde [AD] çap; B çember üzerinde, [BE] ⊥ [AD]; F, [BE] üzerinde; C çember üzerinde ve [FC] ⊥ [DC]. |AE| = 3, |EF| = 4, |FC| = 4.',
+      svg: `
+          <circle class="ln" cx="200.0" cy="185.0" r="165.0"/>
+          <path class="ln" d="M35.0,185.0 L365.0,185.0"/>
+          <path class="ln" d="M101.0,185.0 L101.0,53.0"/>
+          <path class="ln" d="M101.0,97.0 L153.8,26.6 L365.0,185.0"/>
+          <path class="arc" d="M110.0,185.0 L110.0,176.0 L101.0,176.0"/>
+          <path class="arc" d="M148.4,33.8 L155.6,39.2 L161.0,32.0"/>
+          <circle class="pt" cx="200.0" cy="185.0" r="3.2"/>
+          <circle class="pt" cx="35.0" cy="185.0" r="3.2"/>
+          <circle class="pt" cx="365.0" cy="185.0" r="3.2"/>
+          <circle class="pt" cx="101.0" cy="185.0" r="3.2"/>
+          <circle class="pt" cx="101.0" cy="97.0" r="3.2"/>
+          <circle class="pt" cx="101.0" cy="53.0" r="3.2"/>
+          <circle class="pt" cx="153.8" cy="26.6" r="3.2"/>
+          <text x="27.0" y="190.0" text-anchor="end">A</text>
+          <text x="373.0" y="190.0">D</text>
+          <text x="200.0" y="205.0" text-anchor="middle">O</text>
+          <text x="107.0" y="205.0">E</text>
+          <text x="93.0" y="102.0" text-anchor="end">F</text>
+          <text x="93.0" y="47.0" text-anchor="end">B</text>
+          <text x="157.8" y="16.6">C</text>
+          <text class="val" x="93.0" y="80.0" text-anchor="end">x</text>
+          <text class="val" x="109.0" y="146.0">4</text>
+          <text class="val" x="68.0" y="203.0" text-anchor="middle">3</text>
+          <text class="val" x="135.4" y="71.8">4</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 0 400 364',
+      caption: 'Şekil 138',
+      label: 'Aynı şekilde [AF] ve [BE]’nin uzantısı [EG] kesikli çizilmiş; G çember üzerinde.',
+      svg: `
+          <circle class="ln" cx="200.0" cy="185.0" r="165.0"/>
+          <path class="ln" d="M35.0,185.0 L365.0,185.0"/>
+          <path class="ln" d="M101.0,185.0 L101.0,53.0"/>
+          <path class="ln" d="M101.0,97.0 L153.8,26.6 L365.0,185.0"/>
+          <path class="arc" d="M110.0,185.0 L110.0,176.0 L101.0,176.0"/>
+          <path class="arc" d="M148.4,33.8 L155.6,39.2 L161.0,32.0"/>
+          <path class="aux" d="M35.0,185.0 L101.0,97.0"/>
+          <path class="aux" d="M101.0,185.0 L101.0,317.0"/>
+          <circle class="pt" cx="101.0" cy="317.0" r="3.2"/>
+          <text x="93.0" y="331.0" text-anchor="end">G</text>
+          <circle class="pt" cx="200.0" cy="185.0" r="3.2"/>
+          <circle class="pt" cx="35.0" cy="185.0" r="3.2"/>
+          <circle class="pt" cx="365.0" cy="185.0" r="3.2"/>
+          <circle class="pt" cx="101.0" cy="185.0" r="3.2"/>
+          <circle class="pt" cx="101.0" cy="97.0" r="3.2"/>
+          <circle class="pt" cx="101.0" cy="53.0" r="3.2"/>
+          <circle class="pt" cx="153.8" cy="26.6" r="3.2"/>
+          <text x="27.0" y="190.0" text-anchor="end">A</text>
+          <text x="373.0" y="190.0">D</text>
+          <text x="200.0" y="205.0" text-anchor="middle">O</text>
+          <text x="107.0" y="205.0">E</text>
+          <text x="93.0" y="102.0" text-anchor="end">F</text>
+          <text x="93.0" y="47.0" text-anchor="end">B</text>
+          <text x="157.8" y="16.6">C</text>
+          <text class="val" x="93.0" y="80.0" text-anchor="end">x</text>
+          <text class="val" x="109.0" y="146.0">4</text>
+          <text class="val" x="68.0" y="203.0" text-anchor="middle">3</text>
+          <text class="val" x="135.4" y="71.8">4</text>
+        `,
+    },
+    given: ['[FC] ⊥ [DC]', '[BE] ⊥ [AD]', '|FC| = 4 cm', '|EF| = 4 cm', '|AE| = 3 cm'],
+    stem: ['O merkezli çemberde [AD] çaptır.'],
+    ask: 'Yukarıdaki verilere göre, |BF| = x kaç cm dir?',
+    choices: [
+      { key: 'A', text: '2' },
+      { key: 'B', text: '3' },
+      { key: 'C', text: '4' },
+      { key: 'D', text: '2√3' },
+      { key: 'E', text: '√5' },
+    ],
+    answer: 'A',
+    hint: 'Çapı gören açı diktir: A, F ve C noktalarının durumuna bak.',
+    solution: [
+      {
+        title: 'Doğrusallık',
+        detail: 'm(ACD) = 90° (çapı gören açı) ve m(FCD) = 90° olduğundan A, F, C doğrusaldır.',
+      },
+      { title: 'Pisagor', detail: '|AF|² = 3² + 4² = 25 ⇒ |AF| = 5 cm.' },
+      {
+        title: 'Kirişe dik çap',
+        detail:
+          '[BE]’yi uzatınca çemberi G’de keser; çap kirişe dik olduğundan |EG| = |EB| = x + 4, |FG| = x + 8.',
+      },
+      {
+        title: 'Kesişen kirişler',
+        detail:
+          '|FA| · |FC| = |FB| · |FG| ⇒ 5 · 4 = x(x + 8) ⇒ x² + 8x − 20 = 0 ⇒ (x + 10)(x − 2) = 0.',
+      },
+      { title: 'Sonuç', detail: 'x = 2 cm bulunur.' },
+    ],
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -10294,6 +10811,21 @@ export const UNIT_5_CIRCLES: Unit = {
         'circles-130',
         'circles-131',
         'circles-132',
+      ),
+    },
+    {
+      id: 'circles-m23',
+      order: 23,
+      title: 'Çemberde uzunluklar X',
+      summary:
+        'Dik yamukta çap üzerine çember, ortak iç teğet, yarıçapa paralel kiriş, çemberleri saran ip, çeyrek çemberde yarım çember ve çapı gören açıyla kesişen kirişler.',
+      questions: pick(
+        'circles-133',
+        'circles-134',
+        'circles-135',
+        'circles-136',
+        'circles-137',
+        'circles-138',
       ),
     },
   ],

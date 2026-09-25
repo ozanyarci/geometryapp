@@ -256,6 +256,18 @@ describe('unit 5 answer key', () => {
     expect(answerOf('circles-131')).toBe('D'));
   it('132 — AB + 4 = 10 + 10, AB = 16, çevre = 2(16 + 10) = 52 → C', () =>
     expect(answerOf('circles-132')).toBe('C'));
+  it('133 — |OT| = 13/2 = (AD + BC)/2, 78 = (13/2)·AB, AB = 12 → D', () =>
+    expect(answerOf('circles-133')).toBe('D'));
+  it('134 — O₁O₂² = 15² + (5 + 3)² = 289, O₁O₂ = 17, EF = 17 − 8 = 9 → D', () =>
+    expect(answerOf('circles-134')).toBe('D'));
+  it('135 — OH² = 100 − 36 = 64, OH = 8, x² = (10 − 6)² + 8² = 80, x = 4√5 → A', () =>
+    expect(answerOf('circles-135')).toBe('A'));
+  it('136 — düz parçalar 4·(2·2) = 16, yaylar 2·3·2 = 12, ip = 28 → C', () =>
+    expect(answerOf('circles-136')).toBe('C'));
+  it('137 — R = 10, cos = 6/10, D(6, 8), M(5, 0), DM² = 1 + 64 = 65 → C', () =>
+    expect(answerOf('circles-137')).toBe('C'));
+  it('138 — AF = 5, 5·4 = x(x + 8), x² + 8x − 20 = 0, x = 2 → A', () =>
+    expect(answerOf('circles-138')).toBe('A'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
