@@ -10505,6 +10505,451 @@ Q12 AKL/CMN 0.7142857142857143 KLMN/ABCD 0.5 KLMN if AKL=5 24.0
       },
     ],
   },
+  // ---------------------------------------------------------------- 134
+  {
+    id: 'quadrilaterals-134',
+    topic: 'Dikdörtgende köşegene dikme ve Öklit bağıntısı',
+    figure: {
+      viewBox: '0 0 400 181',
+      caption: 'Şekil 134',
+      label:
+        'ABCD dikdörtgeninde [AC] köşegen; D den [AC] ye inen dikmenin ayağı H; HBC üçgeni taralı.',
+      svg: `
+          <path class="shade" d="M124.9,128.2 L325.2,153.2 L325.2,28.0 Z"/>
+          <path class="ln" d="M74.8,153.2 L325.2,153.2 L325.2,28.0 L74.8,28.0 Z"/>
+          <path class="ln" d="M74.8,153.2 L325.2,28.0"/>
+          <path class="ln" d="M74.8,28.0 L124.9,128.2 L325.2,153.2"/>
+          <path class="arc" d="M120.8,120.1 L128.9,116.1 L132.9,124.2"/>
+          <circle class="pt" cx="74.8" cy="153.2" r="3.2"/>
+          <circle class="pt" cx="325.2" cy="153.2" r="3.2"/>
+          <circle class="pt" cx="325.2" cy="28.0" r="3.2"/>
+          <circle class="pt" cx="74.8" cy="28.0" r="3.2"/>
+          <circle class="pt" cx="124.9" cy="128.2" r="3.2"/>
+          <text x="64.8" y="168.2" text-anchor="end">A</text>
+          <text x="335.2" y="168.2">B</text>
+          <text x="335.2" y="23.0">C</text>
+          <text x="64.8" y="23.0" text-anchor="end">D</text>
+          <text x="128.9" y="150.2" text-anchor="middle">H</text>
+        `,
+    },
+    given: [
+      'ABCD dikdörtgen',
+      '[AC] köşegen',
+      '[DH] ⊥ [AC]',
+      '|AH| = 4 cm',
+      '|HC| = 16 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(HBC) kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '48' },
+      { key: 'B', text: '56' },
+      { key: 'C', text: '60' },
+      { key: 'D', text: '64' },
+      { key: 'E', text: '72' },
+    ],
+    answer: 'D',
+    hint: 'ADC dik üçgeninde Öklit bağıntısıyla |DH| yi bul; B nin [AC] ye uzaklığı da |DH| ye eşittir.',
+    solution: [
+      {
+        title: 'Öklit bağıntısı',
+        detail:
+          'ADC dik üçgeninde |DH|² = |AH| · |HC| = 4 · 16 = 64, |DH| = 8 cm.',
+      },
+      {
+        title: 'B nin köşegene uzaklığı',
+        detail:
+          'ABC ve CDA üçgenleri eş olduğundan B den [AC] ye inen dikme de 8 cm dir.',
+      },
+      {
+        title: 'Alan',
+        detail:
+          'HBC üçgeninin tabanı |HC| = 16 cm, yüksekliği 8 cm: A(HBC) = 16 · 8 / 2.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'A(HBC) = 64 cm² bulunur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 135
+  {
+    id: 'quadrilaterals-135',
+    topic: 'Karede eş üçgenler ve açı',
+    figure: {
+      viewBox: '0 0 400 292',
+      caption: 'Şekil 135',
+      label:
+        'ABCD karesinde E noktası [AB] üzerinde, F noktası [BC] üzerinde; m(ADE) = m(FDC) = 20°; m(DEF) = α.',
+      svg: `
+          <path class="ln" d="M82.0,264.0 L318.0,264.0 L318.0,28.0 L82.0,28.0 Z"/>
+          <path class="ln" d="M167.9,264.0 L82.0,28.0 L318.0,113.9 L167.9,264.0"/>
+          <path class="arc" d="M82.0,68.0 A40,40 0 0 0 95.7,65.6"/>
+          <path class="arc" d="M125.2,43.7 A46,46 0 0 0 128.0,28.0"/>
+          <path class="arc" d="M186.3,245.6 A26,26 0 0 0 159.0,239.6"/>
+          <text class="val" x="98.3" y="125.6" text-anchor="middle">20°</text>
+          <text class="val" x="174.6" y="49.3" text-anchor="middle">20°</text>
+          <text class="val" x="177.0" y="228.0" text-anchor="middle">α</text>
+          <circle class="pt" cx="82.0" cy="264.0" r="3.2"/>
+          <circle class="pt" cx="318.0" cy="264.0" r="3.2"/>
+          <circle class="pt" cx="318.0" cy="28.0" r="3.2"/>
+          <circle class="pt" cx="82.0" cy="28.0" r="3.2"/>
+          <circle class="pt" cx="167.9" cy="264.0" r="3.2"/>
+          <circle class="pt" cx="318.0" cy="113.9" r="3.2"/>
+          <text x="72.0" y="279.0" text-anchor="end">A</text>
+          <text x="328.0" y="279.0">B</text>
+          <text x="328.0" y="23.0">C</text>
+          <text x="72.0" y="23.0" text-anchor="end">D</text>
+          <text x="167.9" y="283.0" text-anchor="middle">E</text>
+          <text x="328.0" y="118.9">F</text>
+        `,
+    },
+    given: [
+      'ABCD kare',
+      'm(ADE) = 20°',
+      'm(FDC) = 20°',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, m(DEF) = α kaç derecedir?',
+    choices: [
+      { key: 'A', text: '55' },
+      { key: 'B', text: '60' },
+      { key: 'C', text: '65' },
+      { key: 'D', text: '70' },
+      { key: 'E', text: '75' },
+    ],
+    answer: 'C',
+    hint: 'DAE ve DCF üçgenlerinin eş olduğunu göster; DEF üçgeni ikizkenar olur.',
+    solution: [
+      {
+        title: 'Eş üçgenler',
+        detail:
+          '|DA| = |DC|, m(A) = m(C) = 90° ve m(ADE) = m(CDF) = 20° olduğundan DAE ≅ DCF; buradan |DE| = |DF|.',
+      },
+      {
+        title: 'Tepe açısı',
+        detail:
+          'm(EDF) = 90° − 20° − 20° = 50°.',
+      },
+      {
+        title: 'İkizkenar üçgen',
+        detail:
+          'DEF üçgeninde taban açıları eşittir: α = (180° − 50°) / 2.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'α = 65° bulunur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 136
+  {
+    id: 'quadrilaterals-136',
+    topic: 'Dikdörtgende köşegene dikme ve alan',
+    figure: {
+      viewBox: '0 0 400 215',
+      caption: 'Şekil 136',
+      label:
+        'ABCD dikdörtgeninde [BD] köşegen; C den [BD] ye inen dikmenin ayağı H.',
+      svg: `
+          <path class="ln" d="M81.0,186.6 L319.0,186.6 L319.0,28.0 L81.0,28.0 Z"/>
+          <path class="ln" d="M81.0,28.0 L319.0,186.6"/>
+          <path class="ln" d="M319.0,28.0 L245.8,137.8"/>
+          <path class="arc" d="M250.8,130.3 L258.2,135.3 L253.3,142.8"/>
+          <circle class="pt" cx="81.0" cy="186.6" r="3.2"/>
+          <circle class="pt" cx="319.0" cy="186.6" r="3.2"/>
+          <circle class="pt" cx="319.0" cy="28.0" r="3.2"/>
+          <circle class="pt" cx="81.0" cy="28.0" r="3.2"/>
+          <circle class="pt" cx="245.8" cy="137.8" r="3.2"/>
+          <text x="71.0" y="201.6" text-anchor="end">A</text>
+          <text x="329.0" y="201.6">B</text>
+          <text x="329.0" y="23.0">C</text>
+          <text x="71.0" y="23.0" text-anchor="end">D</text>
+          <text x="229.8" y="149.8" text-anchor="middle">H</text>
+        `,
+    },
+    given: [
+      'ABCD dikdörtgen',
+      '[BD] köşegen',
+      '[CH] ⊥ [BD]',
+      '|DH| = 18 cm',
+      '|HB| = 8 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(ABCD) kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '240' },
+      { key: 'B', text: '276' },
+      { key: 'C', text: '288' },
+      { key: 'D', text: '312' },
+      { key: 'E', text: '338' },
+    ],
+    answer: 'D',
+    hint: 'BCD dik üçgeninde Öklit bağıntısıyla |CH| yi bul; dikdörtgenin alanı BCD üçgeninin alanının iki katıdır.',
+    solution: [
+      {
+        title: 'Öklit bağıntısı',
+        detail:
+          'BCD dik üçgeninde |CH|² = |DH| · |HB| = 18 · 8 = 144, |CH| = 12 cm.',
+      },
+      {
+        title: 'Köşegen',
+        detail:
+          '|BD| = 18 + 8 = 26 cm.',
+      },
+      {
+        title: 'BCD üçgeni',
+        detail:
+          'A(BCD) = |BD| · |CH| / 2 = 26 · 12 / 2 = 156 cm².',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'A(ABCD) = 2 · 156 = 312 cm² bulunur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 137
+  {
+    id: 'quadrilaterals-137',
+    topic: 'Dikdörtgende dik açıyla benzerlik',
+    figure: {
+      viewBox: '0 0 400 176',
+      caption: 'Şekil 137',
+      label:
+        'ABCD dikdörtgeninde E noktası [AB] üzerinde; [DE] ile [EC] dik.',
+      svg: `
+          <path class="ln" d="M70.0,148.0 L330.0,148.0 L330.0,28.0 L70.0,28.0 Z"/>
+          <path class="ln" d="M70.0,28.0 L150.0,148.0 L330.0,28.0"/>
+          <path class="arc" d="M145.0,140.5 L152.5,135.5 L157.5,143.0"/>
+          <circle class="pt" cx="70.0" cy="148.0" r="3.2"/>
+          <circle class="pt" cx="330.0" cy="148.0" r="3.2"/>
+          <circle class="pt" cx="330.0" cy="28.0" r="3.2"/>
+          <circle class="pt" cx="70.0" cy="28.0" r="3.2"/>
+          <circle class="pt" cx="150.0" cy="148.0" r="3.2"/>
+          <text x="60.0" y="163.0" text-anchor="end">A</text>
+          <text x="340.0" y="163.0">B</text>
+          <text x="340.0" y="23.0">C</text>
+          <text x="60.0" y="23.0" text-anchor="end">D</text>
+          <text x="150.0" y="167.0" text-anchor="middle">E</text>
+        `,
+    },
+    given: [
+      'ABCD dikdörtgen',
+      '[DE] ⊥ [EC]',
+      '|AE| = 4 cm',
+      '|AD| = 6 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(ABCD) kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '72' },
+      { key: 'B', text: '78' },
+      { key: 'C', text: '84' },
+      { key: 'D', text: '90' },
+      { key: 'E', text: '96' },
+    ],
+    answer: 'B',
+    hint: 'm(ADE) = m(BEC) olduğundan DAE ve EBC dik üçgenleri benzerdir.',
+    solution: [
+      {
+        title: 'Açılar',
+        detail:
+          'm(AED) + m(BEC) = 90° ve m(AED) + m(ADE) = 90° olduğundan m(ADE) = m(BEC).',
+      },
+      {
+        title: 'Benzerlik',
+        detail:
+          'DAE ∼ EBC: |AD| / |EB| = |AE| / |BC|. |BC| = |AD| = 6 cm.',
+      },
+      {
+        title: 'EB',
+        detail:
+          '6 / |EB| = 4 / 6 ise |EB| = 9 cm, |AB| = 4 + 9 = 13 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'A(ABCD) = 13 · 6 = 78 cm² bulunur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 138
+  {
+    id: 'quadrilaterals-138',
+    topic: 'Deltoidde simetri ekseni ve alan oranı',
+    figure: {
+      viewBox: '0 0 400 300',
+      caption: 'Şekil 138',
+      label:
+        'ABCD deltoidinde |AB| = |AD| ve |CB| = |CD|; köşegenler E noktasında kesişiyor; P noktası [AC] üzerinde; PBC üçgeni taralı.',
+      svg: `
+          <path class="shade" d="M220.0,154.0 L240.0,34.0 L300.0,154.0 Z"/>
+          <path class="ln" d="M100.0,154.0 L240.0,34.0 L300.0,154.0 L240.0,274.0 Z"/>
+          <path class="ln" d="M100.0,154.0 L300.0,154.0"/>
+          <path class="ln" d="M240.0,34.0 L240.0,274.0"/>
+          <path class="ln" d="M240.0,34.0 L220.0,154.0"/>
+          <path class="tick" d="M166.1,89.4 L173.9,98.6"/>
+          <path class="tick" d="M173.9,209.4 L166.1,218.6"/>
+          <path class="tick" d="M274.2,89.1 L263.5,94.4"/>
+          <path class="tick" d="M276.5,93.6 L265.8,98.9"/>
+          <path class="tick" d="M263.5,213.6 L274.2,218.9"/>
+          <path class="tick" d="M265.8,209.1 L276.5,214.4"/>
+          <circle class="pt" cx="100.0" cy="154.0" r="3.2"/>
+          <circle class="pt" cx="240.0" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="300.0" cy="154.0" r="3.2"/>
+          <circle class="pt" cx="240.0" cy="274.0" r="3.2"/>
+          <circle class="pt" cx="240.0" cy="154.0" r="3.2"/>
+          <circle class="pt" cx="220.0" cy="154.0" r="3.2"/>
+          <text x="90.0" y="159.0" text-anchor="end">A</text>
+          <text x="240.0" y="24.0" text-anchor="middle">B</text>
+          <text x="310.0" y="159.0">C</text>
+          <text x="240.0" y="293.0" text-anchor="middle">D</text>
+          <text x="250.0" y="172.0">E</text>
+          <text x="216.0" y="172.0" text-anchor="middle">P</text>
+        `,
+    },
+    given: [
+      'ABCD deltoid',
+      '|AB| = |AD|',
+      '|CB| = |CD|',
+      'P ∈ [AC]',
+      '2|AP| = 3|PC|',
+      'A(ABCD) = 60 cm²',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, taralı PBC üçgeninin alanı kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '9' },
+      { key: 'B', text: '10' },
+      { key: 'C', text: '12' },
+      { key: 'D', text: '15' },
+      { key: 'E', text: '18' },
+    ],
+    answer: 'C',
+    hint: '[AC] deltoidin simetri eksenidir; ABC üçgeni deltoidin yarısıdır.',
+    solution: [
+      {
+        title: 'Simetri',
+        detail:
+          '[AC] simetri ekseni olduğundan ABC ≅ ADC; A(ABC) = 60 / 2 = 30 cm².',
+      },
+      {
+        title: 'Oran',
+        detail:
+          '2|AP| = 3|PC| ise |AP| : |PC| = 3 : 2, yani |PC| = |AC| · 2/5.',
+      },
+      {
+        title: 'Aynı yükseklik',
+        detail:
+          'ABC ve PBC üçgenlerinin B den [AC] ye inen yüksekliği ortaktır; alanlar tabanlarla orantılıdır.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'A(PBC) = 30 · 2/5 = 12 cm² bulunur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 139
+  {
+    id: 'quadrilaterals-139',
+    topic: 'Karede köşegen üzerinde nokta ve Pisagor',
+    figure: {
+      viewBox: '0 0 400 296',
+      caption: 'Şekil 139',
+      label:
+        'ABCD karesinde [BD] köşegen; E noktası [BD] üzerinde; A ile E birleştirilmiş; |AE| = x.',
+      svg: `
+          <path class="ln" d="M80.0,28.0 L320.0,28.0 L320.0,268.0 L80.0,268.0 Z"/>
+          <path class="ln" d="M80.0,268.0 L320.0,28.0"/>
+          <path class="ln" d="M80.0,28.0 L140.0,208.0"/>
+          <text class="val" x="122.0" y="122.0">x</text>
+          <circle class="pt" cx="80.0" cy="28.0" r="3.2"/>
+          <circle class="pt" cx="80.0" cy="268.0" r="3.2"/>
+          <circle class="pt" cx="320.0" cy="268.0" r="3.2"/>
+          <circle class="pt" cx="320.0" cy="28.0" r="3.2"/>
+          <circle class="pt" cx="140.0" cy="208.0" r="3.2"/>
+          <text x="70.0" y="23.0" text-anchor="end">A</text>
+          <text x="70.0" y="283.0" text-anchor="end">B</text>
+          <text x="330.0" y="283.0">C</text>
+          <text x="330.0" y="23.0">D</text>
+          <text x="152.0" y="222.0">E</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 0 400 296',
+      caption: 'Şekil 139',
+      label:
+        'ABCD karesinde [BD] köşegen; E noktası [BD] üzerinde; A ile E birleştirilmiş; |AE| = x; E den [AB] ye inen dikmenin ayağı K.',
+      svg: `
+          <path class="ln" d="M80.0,28.0 L320.0,28.0 L320.0,268.0 L80.0,268.0 Z"/>
+          <path class="ln" d="M80.0,268.0 L320.0,28.0"/>
+          <path class="ln" d="M80.0,28.0 L140.0,208.0"/>
+          <path class="aux" d="M140.0,208.0 L80.0,208.0"/>
+          <path class="arc" d="M89.0,208.0 L89.0,217.0 L80.0,217.0"/>
+          <text class="val" x="122.0" y="122.0">x</text>
+          <circle class="pt" cx="80.0" cy="28.0" r="3.2"/>
+          <circle class="pt" cx="80.0" cy="268.0" r="3.2"/>
+          <circle class="pt" cx="320.0" cy="268.0" r="3.2"/>
+          <circle class="pt" cx="320.0" cy="28.0" r="3.2"/>
+          <circle class="pt" cx="140.0" cy="208.0" r="3.2"/>
+          <text x="70.0" y="23.0" text-anchor="end">A</text>
+          <text x="70.0" y="283.0" text-anchor="end">B</text>
+          <text x="330.0" y="283.0">C</text>
+          <text x="330.0" y="23.0">D</text>
+          <text x="152.0" y="222.0">E</text>
+          <circle class="pt" cx="80.0" cy="208.0" r="3.2"/>
+          <text x="70.0" y="213.0" text-anchor="end">K</text>
+        `,
+    },
+    given: [
+      'ABCD kare',
+      'E ∈ [BD]',
+      '|BE| = 2√2 cm',
+      '|AB| = 8 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |AE| = x kaç cm dir?',
+    choices: [
+      { key: 'A', text: '6' },
+      { key: 'B', text: '2√10' },
+      { key: 'C', text: '4√3' },
+      { key: 'D', text: '5√2' },
+      { key: 'E', text: '8' },
+    ],
+    answer: 'B',
+    hint: 'E den [AB] ye bir dikme in; köşegen kenarla 45° açı yapar.',
+    solution: [
+      {
+        title: 'Dikme',
+        detail:
+          'E den [AB] ye inen dikmenin ayağı K olsun. m(KBE) = 45° olduğundan KBE ikizkenar dik üçgendir.',
+      },
+      {
+        title: 'KBE',
+        detail:
+          '|BE| = 2√2 ise |BK| = |KE| = 2 cm.',
+      },
+      {
+        title: 'AK',
+        detail:
+          '|AK| = 8 − 2 = 6 cm.',
+      },
+      {
+        title: 'Pisagor',
+        detail:
+          'AKE dik üçgeninde x² = 6² + 2² = 40.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x = 2√10 cm bulunur.',
+      },
+    ],
+  },
 ];
 
 /** Resolves question ids to their bank entries, failing loudly on a typo. */
@@ -10859,6 +11304,21 @@ export const UNIT_4_QUADRILATERALS: Unit = {
         'quadrilaterals-131',
         'quadrilaterals-132',
         'quadrilaterals-133',
+      ),
+    },
+    {
+      id: 'quadrilaterals-m23',
+      order: 23,
+      title: 'Dikdörtgen, kare ve deltoidde dikme, benzerlik ve alan',
+      summary:
+        'Köşegene dikmeyle Öklit bağıntısı, karede eş üçgenlerle açı, dik açıyla benzerlik, deltoidde simetri ekseni ve karede köşegen üzerinde Pisagor.',
+      questions: pick(
+        'quadrilaterals-134',
+        'quadrilaterals-135',
+        'quadrilaterals-136',
+        'quadrilaterals-137',
+        'quadrilaterals-138',
+        'quadrilaterals-139',
       ),
     },
   ],
