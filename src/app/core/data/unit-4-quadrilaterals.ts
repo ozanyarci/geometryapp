@@ -3608,6 +3608,423 @@ Q12 AKL/CMN 0.7142857142857143 KLMN/ABCD 0.5 KLMN if AKL=5 24.0
       },
     ],
   },
+  // ---------------------------------------------------------------- 49
+  {
+    id: 'quadrilaterals-49',
+    topic: 'Paralelkenarda açıortaylar ve çevre',
+    figure: {
+      viewBox: '0 0 400 203',
+      caption: 'Şekil 49',
+      label:
+        'ABCD paralelkenarında A ve B açılarının açıortayları [DC] kenarı üzerindeki E noktasında dik kesişiyor; |AE| = 16 ve |BE| = 12 olarak işaretlenmiş.',
+      svg: `
+          <path class="ln" d="M40.0,168.7 L320.7,168.7 L360.0,34.0 L79.3,34.0 Z"/>
+          <path class="ln" d="M40.0,168.7 L219.6,34.0 L320.7,168.7"/>
+          <path class="ln" d="M212.4,39.4 L217.8,46.6 L225.0,41.2"/>
+          <path class="arc" d="M66.0,168.7 A26,26 0 0 0 60.8,153.1"/>
+          <path class="arc" d="M64.0,150.7 A30,30 0 0 0 48.4,139.9"/>
+          <path class="arc" d="M328.0,143.8 A26,26 0 0 0 305.1,147.9"/>
+          <path class="arc" d="M302.7,144.7 A30,30 0 0 0 290.7,168.7"/>
+          <text class="val" x="138.2" y="117.6" text-anchor="middle">16</text>
+          <text class="val" x="281.4" y="98.0" text-anchor="middle">12</text>
+          <circle class="pt" cx="40.0" cy="168.7" r="3.2"/>
+          <circle class="pt" cx="320.7" cy="168.7" r="3.2"/>
+          <circle class="pt" cx="360.0" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="79.3" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="219.6" cy="34.0" r="3.2"/>
+          <text x="28.0" y="182.7" text-anchor="end">A</text>
+          <text x="330.7" y="184.7">B</text>
+          <text x="372.0" y="34.0">C</text>
+          <text x="69.3" y="28.0" text-anchor="end">D</text>
+          <text x="219.6" y="24.0" text-anchor="middle">E</text>
+        `,
+    },
+    given: [
+      'ABCD bir paralelkenar',
+      '[AE] açıortay',
+      '[BE] açıortay',
+      '|AE| = 16 cm',
+      '|BE| = 12 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, ABCD paralelkenarının çevresi kaç cm dir?',
+    choices: [
+      { key: 'A', text: '48' },
+      { key: 'B', text: '54' },
+      { key: 'C', text: '56' },
+      { key: 'D', text: '60' },
+      { key: 'E', text: '64' },
+    ],
+    answer: 'D',
+    hint: 'Paralelkenarda ardışık iki açının açıortayları dik kesişir; önce ABE dik üçgenine bak.',
+    solution: [
+      {
+        title: 'Dik açı',
+        detail:
+          'm(A) + m(B) = 180° olduğundan yarımlarının toplamı 90° dir; buradan m(AEB) = 90° olur.',
+      },
+      {
+        title: 'AB kenarı',
+        detail:
+          'ABE dik üçgeninde |AB|² = 16² + 12² = 256 + 144 = 400 ⇒ |AB| = 20 cm olur.',
+      },
+      {
+        title: 'İkizkenar üçgenler',
+        detail:
+          '[AB] // [DC] olduğundan m(DEA) = m(EAB) = m(DAE); ADE ikizkenardır ve |AD| = |DE| olur. Aynı şekilde |BC| = |EC| olur.',
+      },
+      {
+        title: 'AD kenarı',
+        detail:
+          '|DC| = |DE| + |EC| = 2|AD| = 20 ⇒ |AD| = 10 cm olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'Çevre(ABCD) = 2 · (20 + 10) = 60 cm bulunur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 50
+  {
+    id: 'quadrilaterals-50',
+    topic: 'Paralelkenarda açıortay ve açılar',
+    figure: {
+      viewBox: '0 0 400 186',
+      caption: 'Şekil 50',
+      label:
+        'ABCD paralelkenarında A açısının açıortayı [DC] kenarını E noktasında kesiyor; F noktası [BC] kenarı üzerinde; AEF açısı 110°, BCD açısı 64° ve EFC açısı x olarak işaretlenmiş.',
+      svg: `
+          <path class="ln" d="M40.0,152.0 L302.5,152.0 L360.0,34.0 L97.5,34.0 Z"/>
+          <path class="ln" d="M40.0,152.0 L228.8,34.0 L323.8,108.2"/>
+          <path class="arc" d="M70.0,152.0 A30,30 0 0 0 65.4,136.1"/>
+          <path class="arc" d="M68.8,133.9 A34,34 0 0 0 54.9,121.4"/>
+          <path class="arc" d="M211.8,44.6 A20,20 0 0 0 244.5,46.3"/>
+          <text class="val" x="226.9" y="75.0" text-anchor="middle">110°</text>
+          <path class="arc" d="M338.0,34.0 A22,22 0 0 0 350.4,53.8"/>
+          <text class="val" x="326.1" y="60.2" text-anchor="middle">64°</text>
+          <path class="arc" d="M331.7,92.1 A18,18 0 0 0 309.6,97.2"/>
+          <text class="val" x="316.6" y="82.1" text-anchor="middle">x</text>
+          <circle class="pt" cx="40.0" cy="152.0" r="3.2"/>
+          <circle class="pt" cx="302.5" cy="152.0" r="3.2"/>
+          <circle class="pt" cx="360.0" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="97.5" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="228.8" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="323.8" cy="108.2" r="3.2"/>
+          <text x="28.0" y="166.0" text-anchor="end">A</text>
+          <text x="312.5" y="168.0">B</text>
+          <text x="372.0" y="34.0">C</text>
+          <text x="87.5" y="28.0" text-anchor="end">D</text>
+          <text x="228.8" y="24.0" text-anchor="middle">E</text>
+          <text x="335.8" y="116.2">F</text>
+        `,
+    },
+    given: [
+      'ABCD bir paralelkenar',
+      '[AE] açıortay',
+      'm(AEF) = 110°',
+      'm(BCD) = 64°',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, m(EFC) = x kaç derecedir?',
+    choices: [
+      { key: 'A', text: '72' },
+      { key: 'B', text: '74' },
+      { key: 'C', text: '78' },
+      { key: 'D', text: '82' },
+      { key: 'E', text: '86' },
+    ],
+    answer: 'C',
+    hint: 'Paralelkenarda karşılıklı açılar eşittir; önce m(DAB) ve açıortayın ayırdığı açıları bul.',
+    solution: [
+      {
+        title: 'A açısı',
+        detail:
+          'Karşılıklı açılar eşit olduğundan m(DAB) = m(BCD) = 64° ve açıortaydan m(EAB) = 32° olur.',
+      },
+      {
+        title: 'İç ters açılar',
+        detail:
+          '[DC] // [AB] olduğundan m(DEA) = m(EAB) = 32° olur.',
+      },
+      {
+        title: 'FEC açısı',
+        detail:
+          'E noktası [DC] üzerinde olduğundan m(FEC) = 180° − 32° − 110° = 38° olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'EFC üçgeninde x = 180° − 64° − 38° = 78° bulunur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 51
+  {
+    id: 'quadrilaterals-51',
+    topic: 'Paralelkenarda köşegen ve alan oranı',
+    figure: {
+      viewBox: '0 0 400 199',
+      caption: 'Şekil 51',
+      label:
+        'ABCD paralelkenarında E noktası [AC] köşegeni üzerinde; D noktası E ile birleştirilmiş ve DEC üçgeni taralı gösterilmiş.',
+      svg: `
+          <path class="shade" d="M127.3,34.0 L280.0,66.7 L360.0,34.0 Z"/>
+          <path class="ln" d="M40.0,164.9 L272.7,164.9 L360.0,34.0 L127.3,34.0 Z"/>
+          <path class="ln" d="M40.0,164.9 L360.0,34.0"/>
+          <path class="ln" d="M127.3,34.0 L280.0,66.7"/>
+          <circle class="pt" cx="40.0" cy="164.9" r="3.2"/>
+          <circle class="pt" cx="272.7" cy="164.9" r="3.2"/>
+          <circle class="pt" cx="360.0" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="127.3" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="280.0" cy="66.7" r="3.2"/>
+          <text x="28.0" y="178.9" text-anchor="end">A</text>
+          <text x="282.7" y="180.9">B</text>
+          <text x="372.0" y="34.0">C</text>
+          <text x="117.3" y="28.0" text-anchor="end">D</text>
+          <text x="284.0" y="86.7" text-anchor="middle">E</text>
+        `,
+    },
+    given: [
+      'ABCD bir paralelkenar',
+      '|AE| = 3|EC|',
+      'A(DEC) = 6 cm²',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(ABCD) kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '40' },
+      { key: 'B', text: '48' },
+      { key: 'C', text: '54' },
+      { key: 'D', text: '60' },
+      { key: 'E', text: '64' },
+    ],
+    answer: 'B',
+    hint: 'Aynı yüksekliğe sahip üçgenlerin alanları tabanlarıyla orantılıdır; ADE ve DEC üçgenlerinin tepesi ortaktır.',
+    solution: [
+      {
+        title: 'Taban oranı',
+        detail:
+          'ADE ve DEC üçgenlerinin D köşesinden [AC] ye inen yüksekliği ortaktır; |AE| = 3|EC| olduğundan A(ADE) = 3 · 6 = 18 cm² olur.',
+      },
+      {
+        title: 'ADC üçgeni',
+        detail:
+          'A(ADC) = 18 + 6 = 24 cm² olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'Köşegen paralelkenarı iki eş üçgene ayırdığından A(ABCD) = 2 · 24 = 48 cm² bulunur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 52
+  {
+    id: 'quadrilaterals-52',
+    topic: 'Paralelkenarda açıortay ve alan oranı',
+    figure: {
+      viewBox: '0 0 400 160',
+      caption: 'Şekil 52',
+      label:
+        'ABCD paralelkenarında A açısının açıortayı [DC] kenarını E noktasında kesiyor; ADE üçgeninin alanı S₁, ABCE dörtgeninin alanı S₂; |AD| = 6 ve |AB| = 15 olarak işaretlenmiş.',
+      svg: `
+          <path class="ln" d="M40.0,126.4 L306.7,126.4 L360.0,34.0 L93.3,34.0 Z"/>
+          <path class="ln" d="M40.0,126.4 L200.0,34.0"/>
+          <path class="arc" d="M70.0,126.4 A30,30 0 0 0 66.0,111.4"/>
+          <path class="arc" d="M69.4,109.4 A34,34 0 0 0 57.0,96.9"/>
+          <text class="val" x="78.8" y="92.2" text-anchor="middle">6</text>
+          <text class="val" x="173.3" y="115.4" text-anchor="middle">15</text>
+          <text class="val" x="111.1" y="69.8" text-anchor="middle">S₁</text>
+          <text class="val" x="226.7" y="85.2" text-anchor="middle">S₂</text>
+          <circle class="pt" cx="40.0" cy="126.4" r="3.2"/>
+          <circle class="pt" cx="306.7" cy="126.4" r="3.2"/>
+          <circle class="pt" cx="360.0" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="93.3" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="200.0" cy="34.0" r="3.2"/>
+          <text x="28.0" y="140.4" text-anchor="end">A</text>
+          <text x="316.7" y="142.4">B</text>
+          <text x="372.0" y="34.0">C</text>
+          <text x="83.3" y="28.0" text-anchor="end">D</text>
+          <text x="200.0" y="24.0" text-anchor="middle">E</text>
+        `,
+    },
+    given: [
+      'ABCD bir paralelkenar',
+      '[AE] açıortay',
+      '|AD| = 6 cm',
+      '|AB| = 15 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, S₁ / S₂ oranı kaçtır?',
+    choices: [
+      { key: 'A', text: '1/5' },
+      { key: 'B', text: '1/4' },
+      { key: 'C', text: '1/3' },
+      { key: 'D', text: '2/5' },
+      { key: 'E', text: '1/2' },
+    ],
+    answer: 'B',
+    hint: 'Açıortay [DC] ile ikizkenar bir üçgen oluşturur; önce |DE| ve |EC| uzunluklarını bul.',
+    solution: [
+      {
+        title: 'İkizkenar üçgen',
+        detail:
+          '[DC] // [AB] olduğundan m(DEA) = m(EAB) = m(DAE); buradan |DE| = |AD| = 6 cm ve |EC| = 15 − 6 = 9 cm olur.',
+      },
+      {
+        title: 'Yükseklik',
+        detail:
+          'Paralelkenarın [AB] ye ait yüksekliğine h dersek S₁ = 6 · h / 2 = 3h olur.',
+      },
+      {
+        title: 'Yamuk',
+        detail:
+          'ABCE yamuğunda S₂ = (15 + 9) · h / 2 = 12h olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'S₁ / S₂ = 3h / 12h = 1/4 bulunur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 53
+  {
+    id: 'quadrilaterals-53',
+    topic: 'Paralelkenarda iç bölgedeki nokta ve açılar',
+    figure: {
+      viewBox: '0 0 400 219',
+      caption: 'Şekil 53',
+      label:
+        'ABCD paralelkenarının iç bölgesindeki E noktası A ve C köşeleriyle birleştirilmiş; BAE açısı 30°, ECB açısı 20°, AEC açısı 115° ve ECD açısı x olarak işaretlenmiş.',
+      svg: `
+          <path class="ln" d="M40.0,184.8 L289.7,184.8 L360.0,34.0 L110.3,34.0 Z"/>
+          <path class="ln" d="M110.3,34.0 L118.1,122.4 L289.7,184.8"/>
+          <path class="arc" d="M97.7,61.2 A30,30 0 0 0 113.0,63.9"/>
+          <text class="val" x="102.4" y="84.3" text-anchor="middle">30°</text>
+          <path class="arc" d="M257.7,173.2 A34,34 0 0 0 255.7,184.8"/>
+          <text class="val" x="240.4" y="181.2" text-anchor="middle">20°</text>
+          <path class="arc" d="M299.0,164.9 A22,22 0 0 0 269.0,177.3"/>
+          <text class="val" x="275.9" y="156.6" text-anchor="middle">x</text>
+          <path class="arc" d="M135.0,128.5 A18,18 0 0 0 116.5,104.5"/>
+          <text class="val" x="145.0" y="106.7" text-anchor="middle">115°</text>
+          <circle class="pt" cx="110.3" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="40.0" cy="184.8" r="3.2"/>
+          <circle class="pt" cx="289.7" cy="184.8" r="3.2"/>
+          <circle class="pt" cx="360.0" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="118.1" cy="122.4" r="3.2"/>
+          <text x="100.3" y="28.0" text-anchor="end">A</text>
+          <text x="28.0" y="198.8" text-anchor="end">B</text>
+          <text x="299.7" y="200.8">C</text>
+          <text x="372.0" y="34.0">D</text>
+          <text x="114.1" y="142.4" text-anchor="end">E</text>
+        `,
+    },
+    given: [
+      'ABCD paralelkenar',
+      'm(BAE) = 30°',
+      'm(ECB) = 20°',
+      'm(AEC) = 115°',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, m(ECD) = x kaç derecedir?',
+    choices: [
+      { key: 'A', text: '85' },
+      { key: 'B', text: '90' },
+      { key: 'C', text: '95' },
+      { key: 'D', text: '100' },
+      { key: 'E', text: '105' },
+    ],
+    answer: 'C',
+    hint: 'A, B, C ve E noktalarının oluşturduğu içbükey dörtgende E deki açı, diğer üç açının toplamına eşittir.',
+    solution: [
+      {
+        title: 'İçbükey dörtgen',
+        detail:
+          'ABCE içbükey dörtgeninde m(AEC) = m(BAE) + m(ABC) + m(ECB) olur.',
+      },
+      {
+        title: 'B açısı',
+        detail:
+          '115° = 30° + m(ABC) + 20° ⇒ m(ABC) = 65° olur.',
+      },
+      {
+        title: 'C açısı',
+        detail:
+          'Paralelkenarda ardışık açılar bütünler olduğundan m(BCD) = 180° − 65° = 115° olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x = m(BCD) − m(ECB) = 115° − 20° = 95° bulunur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 54
+  {
+    id: 'quadrilaterals-54',
+    topic: 'Paralelkenarda üçgen alanları',
+    figure: {
+      viewBox: '0 0 400 200',
+      caption: 'Şekil 54',
+      label:
+        'ABCD paralelkenarında E noktası [AB] kenarı üzerinde; E noktası D ve C köşeleriyle birleştirilmiş ve DEC üçgeni taralı gösterilmiş.',
+      svg: `
+          <path class="shade" d="M95.2,34.0 L238.6,166.4 L360.0,34.0 Z"/>
+          <path class="ln" d="M40.0,166.4 L304.8,166.4 L360.0,34.0 L95.2,34.0 Z"/>
+          <path class="ln" d="M95.2,34.0 L238.6,166.4 L360.0,34.0"/>
+          <circle class="pt" cx="40.0" cy="166.4" r="3.2"/>
+          <circle class="pt" cx="304.8" cy="166.4" r="3.2"/>
+          <circle class="pt" cx="360.0" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="95.2" cy="34.0" r="3.2"/>
+          <circle class="pt" cx="238.6" cy="166.4" r="3.2"/>
+          <text x="28.0" y="180.4" text-anchor="end">A</text>
+          <text x="314.8" y="182.4">B</text>
+          <text x="372.0" y="34.0">C</text>
+          <text x="85.2" y="28.0" text-anchor="end">D</text>
+          <text x="238.6" y="188.4" text-anchor="middle">E</text>
+        `,
+    },
+    given: [
+      'ABCD paralelkenar',
+      '|AE| = 3|EB|',
+      'A(DEC) = 32 cm²',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, A(AED) kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '24' },
+      { key: 'B', text: '28' },
+      { key: 'C', text: '30' },
+      { key: 'D', text: '32' },
+      { key: 'E', text: '36' },
+    ],
+    answer: 'A',
+    hint: 'Tabanı [DC] ve tepesi [AB] üzerinde olan üçgenin alanı paralelkenarın alanının yarısıdır.',
+    solution: [
+      {
+        title: 'Paralelkenarın alanı',
+        detail:
+          'E noktası [AB] üzerinde olduğundan A(DEC) = A(ABCD) / 2 ⇒ A(ABCD) = 64 cm² olur.',
+      },
+      {
+        title: 'Kalan üçgenler',
+        detail:
+          'A(AED) + A(EBC) = 64 − 32 = 32 cm² olur.',
+      },
+      {
+        title: 'Taban oranı',
+        detail:
+          'AED ve EBC üçgenlerinin yükseklikleri paralelkenarın yüksekliğine eşittir; alanları |AE| : |EB| = 3 : 1 oranındadır.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'A(AED) = 32 · 3/4 = 24 cm² bulunur.',
+      },
+    ],
+  },
 ];
 
 /** Resolves question ids to their bank entries, failing loudly on a typo. */
@@ -3751,6 +4168,21 @@ export const UNIT_4_QUADRILATERALS: Unit = {
         'quadrilaterals-46',
         'quadrilaterals-47',
         'quadrilaterals-48',
+      ),
+    },
+    {
+      id: 'quadrilaterals-m9',
+      order: 9,
+      title: 'Paralelkenarda açıortay, açı ve alan',
+      summary:
+        'Ardışık açıortaylarla çevre, açıortay ve açı hesabı, köşegen ve açıortayla alan oranları, iç bölgedeki nokta ve üçgen alanları.',
+      questions: pick(
+        'quadrilaterals-49',
+        'quadrilaterals-50',
+        'quadrilaterals-51',
+        'quadrilaterals-52',
+        'quadrilaterals-53',
+        'quadrilaterals-54',
       ),
     },
   ],
