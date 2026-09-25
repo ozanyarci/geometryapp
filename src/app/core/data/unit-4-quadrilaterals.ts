@@ -16050,6 +16050,566 @@ Q11 EF 5.0 FK 7.000000000000001 EFK 119.99999999999999 area 60.62177826491071 35
       },
     ],
   },
+  {
+    id: 'quadrilaterals-200',
+    topic: 'İkizkenar yamukta yükseklikle alan',
+    figure: {
+      viewBox: '0 0 400 260',
+      caption: 'Şekil 200',
+      label:
+        'ABCD yamuğunda [AB] ∥ [DC]; A ve B açıları eşit; [DH] ⊥ [AB]; |DC| = 6 cm, |DH| = 8 cm, |AH| = 3 cm.',
+      svg: `
+          <path class="ln" d="M50.0,230.0 L350.0,230.0 L275.0,30.0 L125.0,30.0 Z"/>
+          <path class="ln" d="M125.0,30.0 L125.0,230.0"/>
+          <path class="arc" d="M125.0,220.0 L135.0,220.0 L135.0,230.0"/>
+          <path class="arc" d="M76.0,230.0 A26,26 0 0,0 59.1,205.7"/>
+          <path class="arc" d="M340.9,205.7 A26,26 0 0,0 324.0,230.0"/>
+          <text class="val" x="200.0" y="21.0" text-anchor="middle">6</text>
+          <text class="val" x="133.0" y="136.0">8</text>
+          <text class="val" x="87.5" y="249.0" text-anchor="middle">3</text>
+          <circle class="pt" cx="50.0" cy="230.0" r="3.2"/>
+          <circle class="pt" cx="350.0" cy="230.0" r="3.2"/>
+          <circle class="pt" cx="275.0" cy="30.0" r="3.2"/>
+          <circle class="pt" cx="125.0" cy="30.0" r="3.2"/>
+          <circle class="pt" cx="125.0" cy="230.0" r="3.2"/>
+          <text x="42.0" y="246.0" text-anchor="end">A</text>
+          <text x="358.0" y="246.0">B</text>
+          <text x="283.0" y="24.0">C</text>
+          <text x="117.0" y="24.0" text-anchor="end">D</text>
+          <text x="125.0" y="250.0" text-anchor="middle">H</text>
+        `,
+    },
+    given: [
+      'ABCD bir yamuk',
+      '[DH] ⊥ [AB]',
+      'm(DAB) = m(ABC)',
+      '|DC| = 6 cm',
+      '|DH| = 8 cm',
+      '|AH| = 3 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, Alan(ABCD) kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '66' },
+      { key: 'B', text: '72' },
+      { key: 'C', text: '78' },
+      { key: 'D', text: '84' },
+      { key: 'E', text: '90' },
+    ],
+    answer: 'B',
+    hint: 'Taban açıları eşit olan yamuk ikizkenardır; C den de tabana bir dikme düşünün.',
+    solution: [
+      {
+        title: 'İkizkenar yamuk',
+        detail:
+          'm(DAB) = m(ABC) olduğundan ABCD ikizkenar yamuktur; C den [AB] ye inilen dikmenin ayağı K olsun.',
+      },
+      {
+        title: 'Yan parçalar',
+        detail:
+          'ADH ve BCK üçgenleri eş olduğundan |KB| = |AH| = 3 cm; HKCD dikdörtgen olduğundan |HK| = |DC| = 6 cm.',
+      },
+      {
+        title: 'Alt taban',
+        detail:
+          '|AB| = 3 + 6 + 3 = 12 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'Alan(ABCD) = (6 + 12) · 8 / 2 = 72 cm² bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'quadrilaterals-201',
+    topic: 'Dik yamukta Öklit bağıntısıyla alan',
+    figure: {
+      viewBox: '0 0 400 200',
+      caption: 'Şekil 201',
+      label:
+        'ABCD dik yamuğunda [AB] ∥ [DC]; A ve D açıları dik; [AC] ⊥ [BC]; |AB| = 20 cm, |DC| = 4 cm.',
+      svg: `
+          <path class="ln" d="M50.0,170.0 L350.0,170.0 L110.0,50.0 L50.0,50.0 Z"/>
+          <path class="ln" d="M50.0,170.0 L110.0,50.0"/>
+          <path class="arc" d="M60.0,170.0 L60.0,160.0 L50.0,160.0"/>
+          <path class="arc" d="M50.0,60.0 L60.0,60.0 L60.0,50.0"/>
+          <path class="arc" d="M105.5,58.9 L114.5,63.4 L118.9,54.5"/>
+          <text class="val" x="80.0" y="41.0" text-anchor="middle">4</text>
+          <text class="val" x="200.0" y="189.0" text-anchor="middle">20</text>
+          <circle class="pt" cx="50.0" cy="170.0" r="3.2"/>
+          <circle class="pt" cx="350.0" cy="170.0" r="3.2"/>
+          <circle class="pt" cx="110.0" cy="50.0" r="3.2"/>
+          <circle class="pt" cx="50.0" cy="50.0" r="3.2"/>
+          <text x="42.0" y="186.0" text-anchor="end">A</text>
+          <text x="358.0" y="186.0">B</text>
+          <text x="118.0" y="44.0">C</text>
+          <text x="42.0" y="44.0" text-anchor="end">D</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 0 400 200',
+      caption: 'Şekil 201',
+      label:
+        'ABCD dik yamuğunda C den [AB] ye [CH] dikmesi inilmiş.',
+      svg: `
+          <path class="ln" d="M50.0,170.0 L350.0,170.0 L110.0,50.0 L50.0,50.0 Z"/>
+          <path class="ln" d="M50.0,170.0 L110.0,50.0"/>
+          <path class="arc" d="M60.0,170.0 L60.0,160.0 L50.0,160.0"/>
+          <path class="arc" d="M50.0,60.0 L60.0,60.0 L60.0,50.0"/>
+          <path class="arc" d="M105.5,58.9 L114.5,63.4 L118.9,54.5"/>
+          <text class="val" x="80.0" y="41.0" text-anchor="middle">4</text>
+          <text class="val" x="200.0" y="189.0" text-anchor="middle">20</text>
+          <path class="aux" d="M110.0,50.0 L110.0,170.0"/>
+          <path class="arc" d="M110.0,160.0 L120.0,160.0 L120.0,170.0"/>
+          <circle class="pt" cx="110.0" cy="170.0" r="3.2"/>
+          <text x="110.0" y="189.0" text-anchor="middle">H</text>
+          <circle class="pt" cx="50.0" cy="170.0" r="3.2"/>
+          <circle class="pt" cx="350.0" cy="170.0" r="3.2"/>
+          <circle class="pt" cx="110.0" cy="50.0" r="3.2"/>
+          <circle class="pt" cx="50.0" cy="50.0" r="3.2"/>
+          <text x="42.0" y="186.0" text-anchor="end">A</text>
+          <text x="358.0" y="186.0">B</text>
+          <text x="118.0" y="44.0">C</text>
+          <text x="42.0" y="44.0" text-anchor="end">D</text>
+        `,
+    },
+    given: [
+      'ABCD bir dik yamuk',
+      '[AB] ∥ [DC]',
+      '[AD] ⊥ [AB]',
+      '[AC] ⊥ [BC]',
+      '|AB| = 20 cm',
+      '|DC| = 4 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, Alan(ABCD) kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '72' },
+      { key: 'B', text: '80' },
+      { key: 'C', text: '88' },
+      { key: 'D', text: '96' },
+      { key: 'E', text: '104' },
+    ],
+    answer: 'D',
+    hint: 'C den [AB] ye dikme inin ve ACB dik üçgeninde Öklit bağıntısını kullanın.',
+    solution: [
+      {
+        title: 'Dikme',
+        detail:
+          'C den [AB] ye [CH] dikmesini inelim. AHCD dikdörtgen olduğundan |AH| = |DC| = 4 cm, |HB| = 20 − 4 = 16 cm.',
+      },
+      {
+        title: 'Öklit',
+        detail:
+          'ACB üçgeninde C açısı dik ve [CH] yükseklik olduğundan |CH|² = |AH| · |HB| = 4 · 16 = 64.',
+      },
+      {
+        title: 'Yükseklik',
+        detail:
+          '|CH| = 8 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'Alan(ABCD) = (4 + 20) · 8 / 2 = 96 cm² bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'quadrilaterals-202',
+    topic: 'Yamukta eşit aralıklı paralel doğrular',
+    figure: {
+      viewBox: '0 0 400 260',
+      caption: 'Şekil 202',
+      label:
+        'ABCD yamuğunda [AD] ∥ [BC]; [AB] kenarı E, F, K noktalarıyla ve [DC] kenarı H, G, L noktalarıyla dört eş parçaya ayrılmış; [EH], [FG], [KL] tabanlara paralel; |AD| = 6 cm, |BC| = 18 cm.',
+      svg: `
+          <path class="ln" d="M130.0,30.0 L226.0,30.0 L344.0,230.0 L56.0,230.0 Z"/>
+          <path class="ln" d="M111.5,80.0 L255.5,80.0"/>
+          <path class="ln" d="M93.0,130.0 L285.0,130.0"/>
+          <path class="ln" d="M74.5,180.0 L314.5,180.0"/>
+          <path class="tick" d="M116.1,53.3 L125.4,56.7"/>
+          <path class="tick" d="M97.6,103.3 L106.9,106.7"/>
+          <path class="tick" d="M79.1,153.3 L88.4,156.7"/>
+          <path class="tick" d="M60.6,203.3 L69.9,206.7"/>
+          <path class="tick" d="M235.2,55.4 L243.8,50.3"/>
+          <path class="tick" d="M237.7,59.7 L246.3,54.6"/>
+          <path class="tick" d="M264.7,105.4 L273.3,100.3"/>
+          <path class="tick" d="M267.2,109.7 L275.8,104.6"/>
+          <path class="tick" d="M294.2,155.4 L302.8,150.3"/>
+          <path class="tick" d="M296.7,159.7 L305.3,154.6"/>
+          <path class="tick" d="M323.7,205.4 L332.3,200.3"/>
+          <path class="tick" d="M326.2,209.7 L334.8,204.6"/>
+          <text class="val" x="178.0" y="21.0" text-anchor="middle">6</text>
+          <text class="val" x="200.0" y="249.0" text-anchor="middle">18</text>
+          <circle class="pt" cx="130.0" cy="30.0" r="3.2"/>
+          <circle class="pt" cx="226.0" cy="30.0" r="3.2"/>
+          <circle class="pt" cx="111.5" cy="80.0" r="3.2"/>
+          <circle class="pt" cx="255.5" cy="80.0" r="3.2"/>
+          <circle class="pt" cx="93.0" cy="130.0" r="3.2"/>
+          <circle class="pt" cx="285.0" cy="130.0" r="3.2"/>
+          <circle class="pt" cx="74.5" cy="180.0" r="3.2"/>
+          <circle class="pt" cx="314.5" cy="180.0" r="3.2"/>
+          <circle class="pt" cx="56.0" cy="230.0" r="3.2"/>
+          <circle class="pt" cx="344.0" cy="230.0" r="3.2"/>
+          <text x="122.0" y="24.0" text-anchor="end">A</text>
+          <text x="234.0" y="24.0">D</text>
+          <text x="48.0" y="246.0" text-anchor="end">B</text>
+          <text x="352.0" y="246.0">C</text>
+          <text x="101.5" y="85.0" text-anchor="end">E</text>
+          <text x="265.5" y="85.0">H</text>
+          <text x="83.0" y="135.0" text-anchor="end">F</text>
+          <text x="295.0" y="135.0">G</text>
+          <text x="64.5" y="185.0" text-anchor="end">K</text>
+          <text x="324.5" y="185.0">L</text>
+        `,
+    },
+    given: [
+      'ABCD bir yamuk',
+      '|AE| = |EF| = |FK| = |KB|',
+      '|DH| = |HG| = |GL| = |LC|',
+      '|AD| = 6 cm',
+      '|BC| = 18 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |EH| + |FG| + |KL| toplamı kaç cm dir?',
+    choices: [
+      { key: 'A', text: '24' },
+      { key: 'B', text: '28' },
+      { key: 'C', text: '30' },
+      { key: 'D', text: '33' },
+      { key: 'E', text: '36' },
+    ],
+    answer: 'E',
+    hint: 'Eş aralıklı paralel doğruların uzunlukları üstten alta eşit adımlarla artar.',
+    solution: [
+      {
+        title: 'Orta taban',
+        detail:
+          '[FG], ABCD yamuğunun orta tabanıdır: |FG| = (6 + 18) / 2 = 12 cm.',
+      },
+      {
+        title: 'Üst yarı',
+        detail:
+          '[EH], AFGD yamuğunun orta tabanıdır: |EH| = (6 + 12) / 2 = 9 cm.',
+      },
+      {
+        title: 'Alt yarı',
+        detail:
+          '[KL], FBCG yamuğunun orta tabanıdır: |KL| = (12 + 18) / 2 = 15 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '|EH| + |FG| + |KL| = 9 + 12 + 15 = 36 cm bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'quadrilaterals-203',
+    topic: 'Dik yamukta dik köşegenler ve yan kenar',
+    figure: {
+      viewBox: '0 0 400 220',
+      caption: 'Şekil 203',
+      label:
+        'ABCD dik yamuğunda [AD] ∥ [BC]; A ve B açıları dik; [AC] ve [BD] köşegenleri E de dik kesişiyor; |AD| = 3 cm, |BC| = 12 cm, |DC| = x.',
+      svg: `
+          <path class="ln" d="M50.0,40.0 L50.0,190.0 L350.0,190.0 L125.0,40.0 Z"/>
+          <path class="ln" d="M50.0,40.0 L350.0,190.0"/>
+          <path class="ln" d="M50.0,190.0 L125.0,40.0"/>
+          <path class="arc" d="M50.0,50.0 L60.0,50.0 L60.0,40.0"/>
+          <path class="arc" d="M60.0,190.0 L60.0,180.0 L50.0,180.0"/>
+          <path class="arc" d="M114.5,61.1 L123.4,65.5 L118.9,74.5"/>
+          <text class="val" x="87.5" y="31.0" text-anchor="middle">3</text>
+          <text class="val" x="200.0" y="209.0" text-anchor="middle">12</text>
+          <text class="val" x="245.0" y="108.0">x</text>
+          <circle class="pt" cx="50.0" cy="40.0" r="3.2"/>
+          <circle class="pt" cx="50.0" cy="190.0" r="3.2"/>
+          <circle class="pt" cx="350.0" cy="190.0" r="3.2"/>
+          <circle class="pt" cx="125.0" cy="40.0" r="3.2"/>
+          <circle class="pt" cx="110.0" cy="70.0" r="3.2"/>
+          <text x="42.0" y="34.0" text-anchor="end">A</text>
+          <text x="42.0" y="206.0" text-anchor="end">B</text>
+          <text x="358.0" y="206.0">C</text>
+          <text x="133.0" y="34.0">D</text>
+          <text x="94.0" y="72.0" text-anchor="end">E</text>
+        `,
+    },
+    given: [
+      'ABCD dik yamuğunda',
+      '[AB] ⊥ [BC]',
+      '[AC] ⊥ [BD]',
+      '|AD| = 3 cm',
+      '|BC| = 12 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |DC| = x kaç cm dir?',
+    choices: [
+      { key: 'A', text: '√97' },
+      { key: 'B', text: '√101' },
+      { key: 'C', text: '√109' },
+      { key: 'D', text: '√117' },
+      { key: 'E', text: '√125' },
+    ],
+    answer: 'D',
+    hint: 'Köşegenler dik olduğundan DAB ve ABC dik üçgenleri benzerdir; önce |AB| yi bulun.',
+    solution: [
+      {
+        title: 'Benzerlik',
+        detail:
+          'm(ABD) = α olsun. [AC] ⊥ [BD] olduğundan m(BAC) = 90° − α ve m(BCA) = α; buradan DAB ∼ ABC.',
+      },
+      {
+        title: 'Yükseklik',
+        detail:
+          '|AD| / |AB| = |AB| / |BC| ⇒ |AB|² = 3 · 12 = 36 ⇒ |AB| = 6 cm.',
+      },
+      {
+        title: 'Dik üçgen',
+        detail:
+          'D den [BC] ye dikme inilirse dikey kenar 6 cm, yatay kenar 12 − 3 = 9 cm olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'x² = 6² + 9² = 36 + 81 = 117 ⇒ x = √117 cm bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'quadrilaterals-204',
+    topic: 'Yan kenar ortasından dikmeyle yamuk alanı',
+    figure: {
+      viewBox: '0 0 400 235',
+      caption: 'Şekil 204',
+      label:
+        'ABCD yamuğunda [AB] ∥ [DC]; E, [AD] kenarının orta noktası; [EH] ⊥ [BC]; |EH| = 8 cm, |BC| = 9 cm.',
+      svg: `
+          <path class="ln" d="M72.3,205.0 L348.3,205.0 L255.7,19.9 L120.3,19.9 Z"/>
+          <path class="ln" d="M96.3,112.4 L260.9,30.1"/>
+          <path class="arc" d="M251.9,34.6 L256.4,43.6 L265.4,39.1"/>
+          <path class="tick" d="M89.1,160.0 L79.5,157.5"/>
+          <path class="tick" d="M113.1,67.4 L103.5,64.9"/>
+          <text class="val" x="178.6" y="63.3" text-anchor="middle">8</text>
+          <text class="val" x="314.0" y="118.4">9</text>
+          <circle class="pt" cx="72.3" cy="205.0" r="3.2"/>
+          <circle class="pt" cx="348.3" cy="205.0" r="3.2"/>
+          <circle class="pt" cx="255.7" cy="19.9" r="3.2"/>
+          <circle class="pt" cx="120.3" cy="19.9" r="3.2"/>
+          <circle class="pt" cx="96.3" cy="112.4" r="3.2"/>
+          <circle class="pt" cx="260.9" cy="30.1" r="3.2"/>
+          <text x="64.3" y="221.0" text-anchor="end">A</text>
+          <text x="356.3" y="221.0">B</text>
+          <text x="263.7" y="13.9">C</text>
+          <text x="120.3" y="11.9" text-anchor="middle">D</text>
+          <text x="86.3" y="117.4" text-anchor="end">E</text>
+          <text x="274.9" y="38.1">H</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 0 400 235',
+      caption: 'Şekil 204',
+      label:
+        'ABCD yamuğunda E den [BC] ye paralel çizilmiş; bu doğru [AB] yi P de, [DC] nin uzantısını Q da kesiyor ve PBCQ paralelkenarı oluşuyor.',
+      svg: `
+          <path class="ln" d="M72.3,205.0 L348.3,205.0 L255.7,19.9 L120.3,19.9 Z"/>
+          <path class="ln" d="M96.3,112.4 L260.9,30.1"/>
+          <path class="arc" d="M251.9,34.6 L256.4,43.6 L265.4,39.1"/>
+          <path class="tick" d="M89.1,160.0 L79.5,157.5"/>
+          <path class="tick" d="M113.1,67.4 L103.5,64.9"/>
+          <text class="val" x="178.6" y="63.3" text-anchor="middle">8</text>
+          <text class="val" x="314.0" y="118.4">9</text>
+          <path class="aux" d="M50.0,19.9 L142.6,205.0"/>
+          <path class="aux" d="M120.3,19.9 L50.0,19.9"/>
+          <circle class="pt" cx="142.6" cy="205.0" r="3.2"/>
+          <circle class="pt" cx="50.0" cy="19.9" r="3.2"/>
+          <text x="142.6" y="223.0" text-anchor="middle">P</text>
+          <text x="42.0" y="13.9" text-anchor="end">Q</text>
+          <circle class="pt" cx="72.3" cy="205.0" r="3.2"/>
+          <circle class="pt" cx="348.3" cy="205.0" r="3.2"/>
+          <circle class="pt" cx="255.7" cy="19.9" r="3.2"/>
+          <circle class="pt" cx="120.3" cy="19.9" r="3.2"/>
+          <circle class="pt" cx="96.3" cy="112.4" r="3.2"/>
+          <circle class="pt" cx="260.9" cy="30.1" r="3.2"/>
+          <text x="64.3" y="221.0" text-anchor="end">A</text>
+          <text x="356.3" y="221.0">B</text>
+          <text x="263.7" y="13.9">C</text>
+          <text x="120.3" y="11.9" text-anchor="middle">D</text>
+          <text x="86.3" y="117.4" text-anchor="end">E</text>
+          <text x="274.9" y="38.1">H</text>
+        `,
+    },
+    given: [
+      'ABCD yamuğunda',
+      '[AB] ∥ [DC]',
+      '|AE| = |ED|',
+      '[EH] ⊥ [BC]',
+      '|EH| = 8 cm',
+      '|BC| = 9 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, Alan(ABCD) kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '36' },
+      { key: 'B', text: '72' },
+      { key: 'C', text: '90' },
+      { key: 'D', text: '108' },
+      { key: 'E', text: '144' },
+    ],
+    answer: 'B',
+    hint: 'E den [BC] ye paralel bir doğru çizip yamuğu bir paralelkenara dönüştürün.',
+    solution: [
+      {
+        title: 'Paralel',
+        detail:
+          'E den [BC] ye paralel çizelim; [AB] yi P de, [DC] nin uzantısını Q da kessin. PBCQ bir paralelkenardır.',
+      },
+      {
+        title: 'Eş üçgenler',
+        detail:
+          '|AE| = |ED| ve ters açılar eşit olduğundan EAP ≅ EDQ; bu yüzden Alan(ABCD) = Alan(PBCQ).',
+      },
+      {
+        title: 'Paralelkenar',
+        detail:
+          'PBCQ nun [BC] tabanına ait yüksekliği, E nin [BC] ye uzaklığıdır: |EH| = 8 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'Alan(ABCD) = |BC| · |EH| = 9 · 8 = 72 cm² bulunur.',
+      },
+    ],
+  },
+  {
+    id: 'quadrilaterals-205',
+    topic: 'Dik yamukta açıortaylar ve orta taban',
+    figure: {
+      viewBox: '0 0 400 230',
+      caption: 'Şekil 205',
+      label:
+        'ABCD dik yamuğunda [AD] ∥ [BC]; A ve B açıları dik; K, [AB] nin orta noktası; [KT] ⊥ [AB]; [DT] ve [CT], D ve C açılarının açıortayları; |KT| = 5 cm, |DC| = 14 cm.',
+      svg: `
+          <path class="ln" d="M47.0,25.0 L47.0,205.0 L351.2,205.0 L174.8,25.0 Z"/>
+          <path class="ln" d="M47.0,115.0 L137.0,115.0"/>
+          <path class="ln" d="M174.8,25.0 L137.0,115.0"/>
+          <path class="ln" d="M137.0,115.0 L351.2,205.0"/>
+          <path class="arc" d="M57.0,205.0 L57.0,195.0 L47.0,195.0"/>
+          <path class="arc" d="M47.0,35.0 L57.0,35.0 L57.0,25.0"/>
+          <path class="arc" d="M57.0,115.0 L57.0,105.0 L47.0,105.0"/>
+          <path class="tick" d="M42.0,70.0 L52.0,70.0"/>
+          <path class="tick" d="M42.0,160.0 L52.0,160.0"/>
+          <path class="arc" d="M152.8,25.0 A22,22 0 0,0 166.3,45.3"/>
+          <path class="arc" d="M166.3,45.3 A22,22 0 0,0 190.2,40.7"/>
+          <path class="arc" d="M334.4,187.9 A24,24 0 0,0 329.1,195.7"/>
+          <path class="arc" d="M331.6,185.0 A28,28 0 0,0 325.4,194.2"/>
+          <path class="arc" d="M329.1,195.7 A24,24 0 0,0 327.2,205.0"/>
+          <path class="arc" d="M325.4,194.2 A28,28 0 0,0 323.2,205.0"/>
+          <text class="val" x="92.0" y="107.0" text-anchor="middle">5</text>
+          <text class="val" x="279.0" y="109.0">14</text>
+          <circle class="pt" cx="47.0" cy="25.0" r="3.2"/>
+          <circle class="pt" cx="47.0" cy="205.0" r="3.2"/>
+          <circle class="pt" cx="351.2" cy="205.0" r="3.2"/>
+          <circle class="pt" cx="174.8" cy="25.0" r="3.2"/>
+          <circle class="pt" cx="47.0" cy="115.0" r="3.2"/>
+          <circle class="pt" cx="137.0" cy="115.0" r="3.2"/>
+          <text x="39.0" y="19.0" text-anchor="end">A</text>
+          <text x="39.0" y="221.0" text-anchor="end">B</text>
+          <text x="359.2" y="221.0">C</text>
+          <text x="176.8" y="17.0" text-anchor="middle">D</text>
+          <text x="37.0" y="120.0" text-anchor="end">K</text>
+          <text x="139.0" y="137.0" text-anchor="middle">T</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 0 400 230',
+      caption: 'Şekil 205',
+      label:
+        'ABCD dik yamuğunda T den [DC] nin orta noktası M ye [TM] çizilmiş.',
+      svg: `
+          <path class="ln" d="M47.0,25.0 L47.0,205.0 L351.2,205.0 L174.8,25.0 Z"/>
+          <path class="ln" d="M47.0,115.0 L137.0,115.0"/>
+          <path class="ln" d="M174.8,25.0 L137.0,115.0"/>
+          <path class="ln" d="M137.0,115.0 L351.2,205.0"/>
+          <path class="arc" d="M57.0,205.0 L57.0,195.0 L47.0,195.0"/>
+          <path class="arc" d="M47.0,35.0 L57.0,35.0 L57.0,25.0"/>
+          <path class="arc" d="M57.0,115.0 L57.0,105.0 L47.0,105.0"/>
+          <path class="tick" d="M42.0,70.0 L52.0,70.0"/>
+          <path class="tick" d="M42.0,160.0 L52.0,160.0"/>
+          <path class="arc" d="M152.8,25.0 A22,22 0 0,0 166.3,45.3"/>
+          <path class="arc" d="M166.3,45.3 A22,22 0 0,0 190.2,40.7"/>
+          <path class="arc" d="M334.4,187.9 A24,24 0 0,0 329.1,195.7"/>
+          <path class="arc" d="M331.6,185.0 A28,28 0 0,0 325.4,194.2"/>
+          <path class="arc" d="M329.1,195.7 A24,24 0 0,0 327.2,205.0"/>
+          <path class="arc" d="M325.4,194.2 A28,28 0 0,0 323.2,205.0"/>
+          <text class="val" x="92.0" y="107.0" text-anchor="middle">5</text>
+          <text class="val" x="279.0" y="109.0">14</text>
+          <path class="aux" d="M137.0,115.0 L263.0,115.0"/>
+          <circle class="pt" cx="263.0" cy="115.0" r="3.2"/>
+          <text x="254.0" y="106.0" text-anchor="end">M</text>
+          <circle class="pt" cx="47.0" cy="25.0" r="3.2"/>
+          <circle class="pt" cx="47.0" cy="205.0" r="3.2"/>
+          <circle class="pt" cx="351.2" cy="205.0" r="3.2"/>
+          <circle class="pt" cx="174.8" cy="25.0" r="3.2"/>
+          <circle class="pt" cx="47.0" cy="115.0" r="3.2"/>
+          <circle class="pt" cx="137.0" cy="115.0" r="3.2"/>
+          <text x="39.0" y="19.0" text-anchor="end">A</text>
+          <text x="39.0" y="221.0" text-anchor="end">B</text>
+          <text x="359.2" y="221.0">C</text>
+          <text x="176.8" y="17.0" text-anchor="middle">D</text>
+          <text x="37.0" y="120.0" text-anchor="end">K</text>
+          <text x="139.0" y="137.0" text-anchor="middle">T</text>
+        `,
+    },
+    given: [
+      'ABCD dik yamuk',
+      '[AB] ⊥ [BC]',
+      '[KT] ⊥ [AB]',
+      '|KA| = |KB|',
+      '[DT] ve [CT] açıortay',
+      '|KT| = 5 cm',
+      '|DC| = 14 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |AD| + |BC| toplamı kaç cm dir?',
+    choices: [
+      { key: 'A', text: '24' },
+      { key: 'B', text: '26' },
+      { key: 'C', text: '28' },
+      { key: 'D', text: '30' },
+      { key: 'E', text: '32' },
+    ],
+    answer: 'A',
+    hint: 'D ve C açılarının açıortayları dik kesişir; DTC dik üçgeninde hipotenüse ait kenarortayı düşünün.',
+    solution: [
+      {
+        title: 'Dik açı',
+        detail:
+          'm(ADC) + m(BCD) = 180° olduğundan yarıları toplamı 90° dir; DTC üçgeninde m(DTC) = 90°.',
+      },
+      {
+        title: 'Orta taban',
+        detail:
+          'T, [AD] ve [BC] ye eşit uzaklıktadır; bu yüzden K den geçen orta taban üzerindedir. Orta taban [DC] yi orta noktası M de keser.',
+      },
+      {
+        title: 'Kenarortay',
+        detail:
+          'DTC dik üçgeninde [TM] hipotenüse ait kenarortay olduğundan |TM| = 14 / 2 = 7 cm.',
+      },
+      {
+        title: 'Orta taban uzunluğu',
+        detail:
+          '|KM| = |KT| + |TM| = 5 + 7 = 12 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '|AD| + |BC| = 2 · |KM| = 24 cm bulunur.',
+      },
+    ],
+  },
 ];
 
 /** Resolves question ids to their bank entries, failing loudly on a typo. */
@@ -16569,6 +17129,21 @@ export const UNIT_4_QUADRILATERALS: Unit = {
         'quadrilaterals-197',
         'quadrilaterals-198',
         'quadrilaterals-199',
+      ),
+    },
+    {
+      id: 'quadrilaterals-m34',
+      order: 34,
+      title: 'Yamukta dikme, orta taban ve alan',
+      summary:
+        'İkizkenar yamukta alan, dik yamukta Öklit, eş aralıklı paraleller, dik köşegenler, yan kenar ortasından dikme ve açıortaylar.',
+      questions: pick(
+        'quadrilaterals-200',
+        'quadrilaterals-201',
+        'quadrilaterals-202',
+        'quadrilaterals-203',
+        'quadrilaterals-204',
+        'quadrilaterals-205',
       ),
     },
   ],
