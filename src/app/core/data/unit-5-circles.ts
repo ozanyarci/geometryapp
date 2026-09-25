@@ -16778,6 +16778,507 @@ const QUESTIONS: Question[] = [
       { title: 'Sonuç', detail: 'Taralı alan = 36√3 − 33π/2 cm² bulunur.' },
     ],
   },
+  // ---------------------------------------------------------------- 223
+  {
+    id: 'circles-223',
+    topic: 'Yarım daireye teğet ve eşit alanlar',
+    figure: {
+      viewBox: '0 130 400 149',
+      caption: 'Şekil 223',
+      label:
+        'O merkezli, [AB] çaplı yarım daireye P den çizilen [PE doğrusu T noktasında teğet; |PT| = 18, |OT| = r. AOT daire dilimi S₂, [PT], [PB] ve TB yayı arasında kalan bölge S₁ olarak taralı.',
+      svg: `
+          <path class="shade" d="M106.8,250.0 L130.1,176.8 A76.8,76.8 0 0 0 30.0,250.0 Z"/>
+          <path class="shade" d="M130.1,176.8 L359.9,250.0 L183.6,250.0 A76.8,76.8 0 0 0 130.1,176.8 Z"/>
+          <path class="ln" d="M30.0,250.0 A76.8,76.8 0 0 1 183.6,250.0 L359.9,250.0"/>
+          <path class="ln" d="M30.0,250.0 L183.6,250.0"/>
+          <path class="ln" d="M359.9,250.0 L79.0,160.6"/>
+          <path class="ln" d="M106.8,250.0 L130.1,176.8"/>
+          <circle class="pt" cx="30.0" cy="250.0" r="3.2"/>
+          <circle class="pt" cx="183.6" cy="250.0" r="3.2"/>
+          <circle class="pt" cx="359.9" cy="250.0" r="3.2"/>
+          <circle class="pt" cx="130.1" cy="176.8" r="3.2"/>
+          <circle class="pt" cx="106.8" cy="250.0" r="3.2"/>
+          <circle class="pt" cx="79.0" cy="160.6" r="3.2"/>
+          <text x="30.0" y="270.0" text-anchor="middle">A</text>
+          <text x="106.8" y="270.0" text-anchor="middle">O</text>
+          <text x="183.6" y="270.0" text-anchor="middle">B</text>
+          <text x="359.9" y="270.0" text-anchor="middle">P</text>
+          <text x="134.1" y="166.8">T</text>
+          <text x="73.0" y="154.6" text-anchor="end">E</text>
+          <text class="val" x="251.0" y="205.4">18</text>
+          <text class="val" x="126.4" y="217.4">r</text>
+          <text class="val" x="68.4" y="220.5" text-anchor="middle">S₂</text>
+          <text class="val" x="202.7" y="233.5" text-anchor="middle">S₁</text>
+        `,
+    },
+    given: ['[PE, T noktasında O merkezli yarım daireye teğettir', '|PT| = 18 cm', 'S₁ = S₂'],
+    stem: [],
+    ask: 'Taralı alanlar eşit olduğuna göre, |OT| = r kaç cm dir?',
+    choices: [
+      { key: 'A', text: '9/π' },
+      { key: 'B', text: '12/π' },
+      { key: 'C', text: '18/π' },
+      { key: 'D', text: '36/π' },
+      { key: 'E', text: '6' },
+    ],
+    answer: 'C',
+    hint: 'Her iki tarafa TOB dilimini ekleyin; S₁ tarafı OTP üçgenine dönüşür.',
+    solution: [
+      { title: 'Teğet', detail: '[OT] ⊥ [PT] olduğundan OTP dik üçgendir.' },
+      { title: 'Ekleme', detail: 'S₁ + A(TOB dilimi) = A(OTP) = ½ · r · 18 = 9r.' },
+      { title: 'Diğer taraf', detail: 'S₂ + A(TOB dilimi) = A(AOB yarım dairesi) = πr²/2.' },
+      { title: 'Eşitlik', detail: 'S₁ = S₂ ⇒ 9r = πr²/2 ⇒ πr = 18.' },
+      { title: 'Sonuç', detail: 'r = 18/π cm bulunur.' },
+    ],
+  },
+  // ---------------------------------------------------------------- 224
+  {
+    id: 'circles-224',
+    topic: 'Teğet ve daire dilimi',
+    figure: {
+      viewBox: '0 58 400 258',
+      caption: 'Şekil 224',
+      label:
+        'O merkezli çemberde [BC] çap, B, O, C, D doğrusal; [DA çembere A noktasında teğet; [AB] kirişi çizilmiş, |AB| = |AD| eşitliği eşit çentiklerle, |OB| = 4 gösterilmiş. [AD], [DC] ve AC yayı arasında kalan bölge taralı.',
+      svg: `
+          <path class="shade" d="M202.0,96.5 L364.0,190.0 L256.0,190.0 A108.0,108.0 0 0 0 202.0,96.5 Z"/>
+          <circle class="ln" cx="148.0" cy="190.0" r="108.0"/>
+          <path class="ln" d="M40.0,190.0 L364.0,190.0"/>
+          <path class="ln" d="M155.2,69.5 L364.0,190.0"/>
+          <path class="ln" d="M40.0,190.0 L202.0,96.5"/>
+          <path class="tick" d="M118.0,138.0 L124.0,148.4"/>
+          <path class="tick" d="M286.0,138.0 L280.0,148.4"/>
+          <circle class="pt" cx="148.0" cy="190.0" r="3.2"/>
+          <circle class="pt" cx="40.0" cy="190.0" r="3.2"/>
+          <circle class="pt" cx="256.0" cy="190.0" r="3.2"/>
+          <circle class="pt" cx="364.0" cy="190.0" r="3.2"/>
+          <circle class="pt" cx="202.0" cy="96.5" r="3.2"/>
+          <text x="32.0" y="184.0" text-anchor="end">B</text>
+          <text x="148.0" y="210.0" text-anchor="middle">O</text>
+          <text x="264.0" y="184.0">C</text>
+          <text x="364.0" y="210.0" text-anchor="middle">D</text>
+          <text x="202.0" y="86.5" text-anchor="middle">A</text>
+          <text class="val" x="94.0" y="208.0" text-anchor="middle">4</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 58 400 258',
+      caption: 'Şekil 224',
+      label: 'Aynı şekilde çözümde kullanılan yardımcı doğrular kesikli çizilmiş.',
+      svg: `
+          <path class="aux" d="M148.0,190.0 L202.0,96.5"/>
+          <path class="shade" d="M202.0,96.5 L364.0,190.0 L256.0,190.0 A108.0,108.0 0 0 0 202.0,96.5 Z"/>
+          <circle class="ln" cx="148.0" cy="190.0" r="108.0"/>
+          <path class="ln" d="M40.0,190.0 L364.0,190.0"/>
+          <path class="ln" d="M155.2,69.5 L364.0,190.0"/>
+          <path class="ln" d="M40.0,190.0 L202.0,96.5"/>
+          <path class="tick" d="M118.0,138.0 L124.0,148.4"/>
+          <path class="tick" d="M286.0,138.0 L280.0,148.4"/>
+          <circle class="pt" cx="148.0" cy="190.0" r="3.2"/>
+          <circle class="pt" cx="40.0" cy="190.0" r="3.2"/>
+          <circle class="pt" cx="256.0" cy="190.0" r="3.2"/>
+          <circle class="pt" cx="364.0" cy="190.0" r="3.2"/>
+          <circle class="pt" cx="202.0" cy="96.5" r="3.2"/>
+          <text x="32.0" y="184.0" text-anchor="end">B</text>
+          <text x="148.0" y="210.0" text-anchor="middle">O</text>
+          <text x="264.0" y="184.0">C</text>
+          <text x="364.0" y="210.0" text-anchor="middle">D</text>
+          <text x="202.0" y="86.5" text-anchor="middle">A</text>
+          <text class="val" x="94.0" y="208.0" text-anchor="middle">4</text>
+        `,
+    },
+    given: ['O merkezli çemberde A teğet noktası', '|AB| = |AD|', '|OB| = 4 cm'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, taralı bölgenin alanı kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '8√3 − 8π/3' },
+      { key: 'B', text: '8√3 − 4π/3' },
+      { key: 'C', text: '16√3 − 8π/3' },
+      { key: 'D', text: '4√3 − 4π/3' },
+      { key: 'E', text: '8√3 − 2π' },
+    ],
+    answer: 'A',
+    hint: '[OA] yarıçapını çizin; teğet yarıçapa diktir ve ABD ikizkenar üçgendir.',
+    solution: [
+      { title: 'Açılar', detail: 'm(ABD) = m(ADB) = α; |OA| = |OB| ⇒ m(OAB) = α; [OA] ⊥ [AD].' },
+      {
+        title: 'α',
+        detail: 'ABD üçgeninde α + α + (α + 90°) = 180° ⇒ α = 30°, m(AOC) = 2α = 60°.',
+      },
+      {
+        title: 'Üçgen',
+        detail: 'AOD dik üçgeninde |OA| = 4, |AD| = 4√3 ⇒ A(AOD) = ½ · 4 · 4√3 = 8√3.',
+      },
+      { title: 'Dilim', detail: 'A(AOC dilimi) = π · 16 · 60/360 = 8π/3.' },
+      { title: 'Sonuç', detail: 'Taralı alan = 8√3 − 8π/3 cm² bulunur.' },
+    ],
+  },
+  // ---------------------------------------------------------------- 225
+  {
+    id: 'circles-225',
+    topic: 'Çeyrek dairede dikdörtgen',
+    figure: {
+      viewBox: '0 6 400 320',
+      caption: 'Şekil 225',
+      label:
+        'O merkezli, AOB çeyrek daire diliminde E yay üzerinde; [EH] ⊥ [OB], [EK] ⊥ [OA]; |EH| = 6, |HB| = 2. Yay ile [KE] ve [KA] arasındaki bölge ile yay ile [EH] ve [HB] arasındaki bölge taralı.',
+      svg: `
+          <path class="shade" d="M95.0,138.0 L95.0,30.0 A270.0,270.0 0 0 1 311.0,138.0 Z"/>
+          <path class="shade" d="M311.0,138.0 L311.0,300.0 L365.0,300.0 A270.0,270.0 0 0 0 311.0,138.0 Z"/>
+          <path class="ln" d="M95.0,30.0 L95.0,300.0 L365.0,300.0 A270.0,270.0 0 0 0 95.0,30.0"/>
+          <path class="ln" d="M95.0,138.0 L311.0,138.0 L311.0,300.0"/>
+          <path class="ln" d="M106.0,300.0 L106.0,289.0 L95.0,289.0"/>
+          <path class="ln" d="M106.0,138.0 L106.0,149.0 L95.0,149.0"/>
+          <path class="ln" d="M300.0,300.0 L300.0,289.0 L311.0,289.0"/>
+          <circle class="pt" cx="95.0" cy="300.0" r="3.2"/>
+          <circle class="pt" cx="95.0" cy="30.0" r="3.2"/>
+          <circle class="pt" cx="365.0" cy="300.0" r="3.2"/>
+          <circle class="pt" cx="311.0" cy="138.0" r="3.2"/>
+          <circle class="pt" cx="95.0" cy="138.0" r="3.2"/>
+          <circle class="pt" cx="311.0" cy="300.0" r="3.2"/>
+          <text x="87.0" y="316.0" text-anchor="end">O</text>
+          <text x="87.0" y="34.0" text-anchor="end">A</text>
+          <text x="365.0" y="320.0" text-anchor="middle">B</text>
+          <text x="319.0" y="130.0">E</text>
+          <text x="87.0" y="143.0" text-anchor="end">K</text>
+          <text x="311.0" y="320.0" text-anchor="middle">H</text>
+          <text class="val" x="303.0" y="224.0" text-anchor="end">6</text>
+          <text class="val" x="338.0" y="320.0" text-anchor="middle">2</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 6 400 320',
+      caption: 'Şekil 225',
+      label: 'Aynı şekilde çözümde kullanılan yardımcı doğrular kesikli çizilmiş.',
+      svg: `
+          <path class="aux" d="M95.0,300.0 L311.0,138.0"/>
+          <path class="shade" d="M95.0,138.0 L95.0,30.0 A270.0,270.0 0 0 1 311.0,138.0 Z"/>
+          <path class="shade" d="M311.0,138.0 L311.0,300.0 L365.0,300.0 A270.0,270.0 0 0 0 311.0,138.0 Z"/>
+          <path class="ln" d="M95.0,30.0 L95.0,300.0 L365.0,300.0 A270.0,270.0 0 0 0 95.0,30.0"/>
+          <path class="ln" d="M95.0,138.0 L311.0,138.0 L311.0,300.0"/>
+          <path class="ln" d="M106.0,300.0 L106.0,289.0 L95.0,289.0"/>
+          <path class="ln" d="M106.0,138.0 L106.0,149.0 L95.0,149.0"/>
+          <path class="ln" d="M300.0,300.0 L300.0,289.0 L311.0,289.0"/>
+          <circle class="pt" cx="95.0" cy="300.0" r="3.2"/>
+          <circle class="pt" cx="95.0" cy="30.0" r="3.2"/>
+          <circle class="pt" cx="365.0" cy="300.0" r="3.2"/>
+          <circle class="pt" cx="311.0" cy="138.0" r="3.2"/>
+          <circle class="pt" cx="95.0" cy="138.0" r="3.2"/>
+          <circle class="pt" cx="311.0" cy="300.0" r="3.2"/>
+          <text x="87.0" y="316.0" text-anchor="end">O</text>
+          <text x="87.0" y="34.0" text-anchor="end">A</text>
+          <text x="365.0" y="320.0" text-anchor="middle">B</text>
+          <text x="319.0" y="130.0">E</text>
+          <text x="87.0" y="143.0" text-anchor="end">K</text>
+          <text x="311.0" y="320.0" text-anchor="middle">H</text>
+          <text class="val" x="303.0" y="224.0" text-anchor="end">6</text>
+          <text class="val" x="338.0" y="320.0" text-anchor="middle">2</text>
+        `,
+    },
+    given: ['[EH] ⊥ [OB]', '[EK] ⊥ [OA]', '|EH| = 6 cm', '|HB| = 2 cm'],
+    stem: [],
+    ask: 'O merkezli çeyrek daire dilimindeki verilere göre, taralı alanlar toplamı kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '25π − 50' },
+      { key: 'B', text: '25π − 48' },
+      { key: 'C', text: '20π − 48' },
+      { key: 'D', text: '25π − 36' },
+      { key: 'E', text: '50π − 48' },
+    ],
+    answer: 'B',
+    hint: '[OE] yarıçapını çizin ve OHE dik üçgeninde Pisagor yazın.',
+    solution: [
+      { title: 'Yarıçap', detail: '|OE| = |OB| = R, |OH| = R − 2.' },
+      { title: 'Pisagor', detail: '(R − 2)² + 6² = R² ⇒ −4R + 40 = 0 ⇒ R = 10, |OH| = 8.' },
+      { title: 'Çeyrek daire', detail: 'A = π · 100/4 = 25π.' },
+      { title: 'Dikdörtgen', detail: 'A(OHEK) = 8 · 6 = 48.' },
+      { title: 'Sonuç', detail: 'Taralı alanlar toplamı = 25π − 48 cm² bulunur.' },
+    ],
+  },
+  // ---------------------------------------------------------------- 226
+  {
+    id: 'circles-226',
+    topic: 'Dikdörtgende daire dilimi',
+    figure: {
+      viewBox: '0 13 400 229',
+      caption: 'Şekil 226',
+      label:
+        'ABCD dikdörtgeninde A merkezli çember yayı [AB] yi E, [DC] yi F noktasında kesiyor; [CE] çizilmiş. EF yayı, [FC] ve [CE] arasında kalan bölge taralı.',
+      svg: `
+          <path class="shade" d="M150.0,41.8 L350.0,41.8 L250.0,215.0 A200.0,200.0 0 0 0 150.0,41.8 Z"/>
+          <path class="ln" d="M50.0,215.0 L350.0,215.0 L350.0,41.8 L50.0,41.8 Z"/>
+          <path class="ln" d="M250.0,215.0 A200.0,200.0 0 0 0 150.0,41.8"/>
+          <path class="ln" d="M350.0,41.8 L250.0,215.0"/>
+          <path class="ln" d="M61.0,215.0 L61.0,204.0 L50.0,204.0"/>
+          <path class="ln" d="M339.0,215.0 L339.0,204.0 L350.0,204.0"/>
+          <circle class="pt" cx="50.0" cy="215.0" r="3.2"/>
+          <circle class="pt" cx="350.0" cy="215.0" r="3.2"/>
+          <circle class="pt" cx="350.0" cy="41.8" r="3.2"/>
+          <circle class="pt" cx="50.0" cy="41.8" r="3.2"/>
+          <circle class="pt" cx="250.0" cy="215.0" r="3.2"/>
+          <circle class="pt" cx="150.0" cy="41.8" r="3.2"/>
+          <text x="42.0" y="231.0" text-anchor="end">A</text>
+          <text x="358.0" y="231.0">B</text>
+          <text x="358.0" y="35.8">C</text>
+          <text x="42.0" y="35.8" text-anchor="end">D</text>
+          <text x="250.0" y="235.0" text-anchor="middle">E</text>
+          <text x="150.0" y="31.8" text-anchor="middle">F</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 13 400 229',
+      caption: 'Şekil 226',
+      label: 'Aynı şekilde çözümde kullanılan yardımcı doğrular kesikli çizilmiş.',
+      svg: `
+          <path class="aux" d="M50.0,215.0 L150.0,41.8"/>
+          <path class="aux" d="M50.0,215.0 L350.0,41.8"/>
+          <path class="shade" d="M150.0,41.8 L350.0,41.8 L250.0,215.0 A200.0,200.0 0 0 0 150.0,41.8 Z"/>
+          <path class="ln" d="M50.0,215.0 L350.0,215.0 L350.0,41.8 L50.0,41.8 Z"/>
+          <path class="ln" d="M250.0,215.0 A200.0,200.0 0 0 0 150.0,41.8"/>
+          <path class="ln" d="M350.0,41.8 L250.0,215.0"/>
+          <path class="ln" d="M61.0,215.0 L61.0,204.0 L50.0,204.0"/>
+          <path class="ln" d="M339.0,215.0 L339.0,204.0 L350.0,204.0"/>
+          <circle class="pt" cx="50.0" cy="215.0" r="3.2"/>
+          <circle class="pt" cx="350.0" cy="215.0" r="3.2"/>
+          <circle class="pt" cx="350.0" cy="41.8" r="3.2"/>
+          <circle class="pt" cx="50.0" cy="41.8" r="3.2"/>
+          <circle class="pt" cx="250.0" cy="215.0" r="3.2"/>
+          <circle class="pt" cx="150.0" cy="41.8" r="3.2"/>
+          <text x="42.0" y="231.0" text-anchor="end">A</text>
+          <text x="358.0" y="231.0">B</text>
+          <text x="358.0" y="35.8">C</text>
+          <text x="42.0" y="35.8" text-anchor="end">D</text>
+          <text x="250.0" y="235.0" text-anchor="middle">E</text>
+          <text x="150.0" y="31.8" text-anchor="middle">F</text>
+        `,
+    },
+    given: [
+      'ABCD bir dikdörtgen',
+      'A merkezli çember yayı dikdörtgeni E ve F noktalarında kesmektedir',
+      '|EB| = |DF| = |FC|/2 = 4 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, taralı bölgenin alanı kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '32√3 − 32π/3' },
+      { key: 'B', text: '16√3 − 32π/3' },
+      { key: 'C', text: '32√3 − 16π/3' },
+      { key: 'D', text: '16√3 − 16π/3' },
+      { key: 'E', text: '32√3 − 8π' },
+    ],
+    answer: 'A',
+    hint: '[AF] yarıçapını çizin; AEF dilimini AECF dörtgeninden çıkarın.',
+    solution: [
+      { title: 'Kenarlar', detail: '|FC| = 8 ⇒ |DC| = |AB| = 12, |AE| = 12 − 4 = 8 = |AF|.' },
+      {
+        title: 'Yükseklik',
+        detail:
+          'ADF dik üçgeninde |AD| = √(64 − 16) = 4√3; |DF| = ½ |AF| ⇒ m(DAF) = 30°, m(FAE) = 60°.',
+      },
+      { title: 'Dörtgen', detail: 'A(AECF) = A(AEC) + A(ACF) = ½ · 8 · 4√3 + ½ · 8 · 4√3 = 32√3.' },
+      { title: 'Dilim', detail: 'A(AEF dilimi) = π · 64 · 60/360 = 32π/3.' },
+      { title: 'Sonuç', detail: 'Taralı alan = 32√3 − 32π/3 cm² bulunur.' },
+    ],
+  },
+  // ---------------------------------------------------------------- 227
+  {
+    id: 'circles-227',
+    topic: 'Teğet yaylar ve düzgün altıgen',
+    figure: {
+      viewBox: '0 16 400 290',
+      caption: 'Şekil 227',
+      label:
+        'O merkezli çemberde O₁ ve O₂ çember üzerinde; O₁ ve O₂ merkezli, O dan geçen yaylar O noktasında teğet ve çemberi A, B ile C, D noktalarında kesiyor. ACO₂DBO₁ altıgeni çizilmiş; altıgen kenarları ile çember arasındaki dört kesme ve [AC], [BD] ile yaylar arasındaki iki bölge taralı.',
+      svg: `
+          <path class="shade" d="M96.1,100.0 L200.0,40.0 A120.0,120.0 0 0 0 96.1,100.0 Z"/>
+          <path class="shade" d="M200.0,40.0 L303.9,100.0 A120.0,120.0 0 0 0 200.0,40.0 Z"/>
+          <path class="shade" d="M303.9,220.0 L200.0,280.0 A120.0,120.0 0 0 0 303.9,220.0 Z"/>
+          <path class="shade" d="M200.0,280.0 L96.1,220.0 A120.0,120.0 0 0 0 200.0,280.0 Z"/>
+          <path class="shade" d="M96.1,100.0 L96.1,220.0 A120.0,120.0 0 0 1 200.0,160.0 A120.0,120.0 0 0 1 96.1,100.0 Z"/>
+          <path class="shade" d="M303.9,100.0 L303.9,220.0 A120.0,120.0 0 0 0 200.0,160.0 A120.0,120.0 0 0 0 303.9,100.0 Z"/>
+          <circle class="ln" cx="200.0" cy="160.0" r="120.0"/>
+          <path class="ln" d="M96.1,100.0 A120.0,120.0 0 0 0 303.9,100.0"/>
+          <path class="ln" d="M96.1,220.0 A120.0,120.0 0 0 1 303.9,220.0"/>
+          <path class="ln" d="M96.1,100.0 L200.0,40.0 L303.9,100.0 L303.9,220.0 L200.0,280.0 L96.1,220.0 Z"/>
+          <circle class="pt" cx="200.0" cy="160.0" r="3.2"/>
+          <circle class="pt" cx="200.0" cy="40.0" r="3.2"/>
+          <circle class="pt" cx="200.0" cy="280.0" r="3.2"/>
+          <circle class="pt" cx="96.1" cy="100.0" r="3.2"/>
+          <circle class="pt" cx="303.9" cy="100.0" r="3.2"/>
+          <circle class="pt" cx="96.1" cy="220.0" r="3.2"/>
+          <circle class="pt" cx="303.9" cy="220.0" r="3.2"/>
+          <text x="200.0" y="30.0" text-anchor="middle">O₁</text>
+          <text x="200.0" y="304.0" text-anchor="middle">O₂</text>
+          <text x="200.0" y="151.0" text-anchor="middle">O</text>
+          <text x="88.1" y="96.0" text-anchor="end">A</text>
+          <text x="311.9" y="96.0">B</text>
+          <text x="88.1" y="234.0" text-anchor="end">C</text>
+          <text x="311.9" y="234.0">D</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 16 400 290',
+      caption: 'Şekil 227',
+      label: 'Aynı şekilde çözümde kullanılan yardımcı doğrular kesikli çizilmiş.',
+      svg: `
+          <path class="aux" d="M96.1,100.0 L200.0,160.0 L96.1,220.0"/>
+          <path class="aux" d="M200.0,40.0 L200.0,160.0"/>
+          <path class="shade" d="M96.1,100.0 L200.0,40.0 A120.0,120.0 0 0 0 96.1,100.0 Z"/>
+          <path class="shade" d="M200.0,40.0 L303.9,100.0 A120.0,120.0 0 0 0 200.0,40.0 Z"/>
+          <path class="shade" d="M303.9,220.0 L200.0,280.0 A120.0,120.0 0 0 0 303.9,220.0 Z"/>
+          <path class="shade" d="M200.0,280.0 L96.1,220.0 A120.0,120.0 0 0 0 200.0,280.0 Z"/>
+          <path class="shade" d="M96.1,100.0 L96.1,220.0 A120.0,120.0 0 0 1 200.0,160.0 A120.0,120.0 0 0 1 96.1,100.0 Z"/>
+          <path class="shade" d="M303.9,100.0 L303.9,220.0 A120.0,120.0 0 0 0 200.0,160.0 A120.0,120.0 0 0 0 303.9,100.0 Z"/>
+          <circle class="ln" cx="200.0" cy="160.0" r="120.0"/>
+          <path class="ln" d="M96.1,100.0 A120.0,120.0 0 0 0 303.9,100.0"/>
+          <path class="ln" d="M96.1,220.0 A120.0,120.0 0 0 1 303.9,220.0"/>
+          <path class="ln" d="M96.1,100.0 L200.0,40.0 L303.9,100.0 L303.9,220.0 L200.0,280.0 L96.1,220.0 Z"/>
+          <circle class="pt" cx="200.0" cy="160.0" r="3.2"/>
+          <circle class="pt" cx="200.0" cy="40.0" r="3.2"/>
+          <circle class="pt" cx="200.0" cy="280.0" r="3.2"/>
+          <circle class="pt" cx="96.1" cy="100.0" r="3.2"/>
+          <circle class="pt" cx="303.9" cy="100.0" r="3.2"/>
+          <circle class="pt" cx="96.1" cy="220.0" r="3.2"/>
+          <circle class="pt" cx="303.9" cy="220.0" r="3.2"/>
+          <text x="200.0" y="30.0" text-anchor="middle">O₁</text>
+          <text x="200.0" y="304.0" text-anchor="middle">O₂</text>
+          <text x="200.0" y="151.0" text-anchor="middle">O</text>
+          <text x="88.1" y="96.0" text-anchor="end">A</text>
+          <text x="311.9" y="96.0">B</text>
+          <text x="88.1" y="234.0" text-anchor="end">C</text>
+          <text x="311.9" y="234.0">D</text>
+        `,
+    },
+    given: ['O₁ ve O₂ merkezli yaylar O noktasında teğettir', 'Taralı alanlar toplamı 8√3 cm²'],
+    stem: [],
+    ask: 'Şekildeki O merkezli dairenin içindeki verilere göre, ACO₂DBO₁ çokgeninin çevresi kaç cm dir?',
+    choices: [
+      { key: 'A', text: '12' },
+      { key: 'B', text: '16' },
+      { key: 'C', text: '24' },
+      { key: 'D', text: '12√3' },
+      { key: 'E', text: '24√3' },
+    ],
+    answer: 'C',
+    hint: 'Yarıçap R ise O₁A = O₁O = OA = R; altıgenin düzgün olduğunu görün ve taralı alanı R cinsinden yazın.',
+    solution: [
+      {
+        title: 'Düzgün altıgen',
+        detail:
+          '|O₁A| = |O₁O| = |OA| = R ⇒ AOO₁ eşkenar; altıgenin her kenarı R ve merkez açıları 60°.',
+      },
+      {
+        title: 'Kesme',
+        detail:
+          '60° lik bir kesmenin alanı R²(π/6 − √3/4); çember kenarında 4 tane: 2πR²/3 − √3R².',
+      },
+      {
+        title: 'Yan bölgeler',
+        detail:
+          'AOC eşkenar üçgeninden iki kesme çıkar: √3R²/4 − 2R²(π/6 − √3/4) = 3√3R²/4 − πR²/3; iki tane: 3√3R²/2 − 2πR²/3.',
+      },
+      { title: 'Toplam', detail: 'Taralı alan = √3R²/2 = 8√3 ⇒ R² = 16, R = 4.' },
+      { title: 'Sonuç', detail: 'Çevre = 6R = 24 cm bulunur.' },
+    ],
+  },
+  // ---------------------------------------------------------------- 228
+  {
+    id: 'circles-228',
+    topic: 'Dikdörtgende teğetle daire kesmeleri',
+    figure: {
+      viewBox: '0 33 400 241',
+      caption: 'Şekil 228',
+      label:
+        'ABCD dikdörtgeninde bir çember A, [AD] üzerindeki F ve [AB] üzerindeki E noktalarından geçiyor; [CE doğrusu çembere E noktasında teğet. |DF| = 8, |EB| = 32, |CE| = 40. Çemberin dikdörtgen dışında kalan iki parçası taralı.',
+      svg: `
+          <path class="shade" d="M48.0,240.0 L48.0,118.4 A76.0,76.0 0 0 0 48.0,240.0 Z"/>
+          <path class="shade" d="M48.0,240.0 A76.0,76.0 0 0 0 139.2,240.0 Z"/>
+          <path class="ln" d="M48.0,240.0 L382.4,240.0 L382.4,57.6 L48.0,57.6 Z"/>
+          <circle class="ln" cx="93.6" cy="179.2" r="76.0"/>
+          <path class="ln" d="M382.4,57.6 L102.7,267.4"/>
+          <circle class="pt" cx="48.0" cy="240.0" r="3.2"/>
+          <circle class="pt" cx="382.4" cy="240.0" r="3.2"/>
+          <circle class="pt" cx="382.4" cy="57.6" r="3.2"/>
+          <circle class="pt" cx="48.0" cy="57.6" r="3.2"/>
+          <circle class="pt" cx="48.0" cy="118.4" r="3.2"/>
+          <circle class="pt" cx="139.2" cy="240.0" r="3.2"/>
+          <text x="40.0" y="258.0" text-anchor="end">A</text>
+          <text x="390.4" y="256.0">B</text>
+          <text x="390.4" y="51.6">C</text>
+          <text x="40.0" y="51.6" text-anchor="end">D</text>
+          <text x="57.0" y="124.4">F</text>
+          <text x="145.2" y="258.0">E</text>
+          <text class="val" x="40.0" y="93.0" text-anchor="end">8</text>
+          <text class="val" x="260.8" y="258.0" text-anchor="middle">32</text>
+          <text class="val" x="254.8" y="142.8" text-anchor="end">40</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 33 400 241',
+      caption: 'Şekil 228',
+      label: 'Aynı şekilde çözümde kullanılan yardımcı doğrular kesikli çizilmiş.',
+      svg: `
+          <path class="aux" d="M48.0,118.4 L139.2,240.0"/>
+          <path class="shade" d="M48.0,240.0 L48.0,118.4 A76.0,76.0 0 0 0 48.0,240.0 Z"/>
+          <path class="shade" d="M48.0,240.0 A76.0,76.0 0 0 0 139.2,240.0 Z"/>
+          <path class="ln" d="M48.0,240.0 L382.4,240.0 L382.4,57.6 L48.0,57.6 Z"/>
+          <circle class="ln" cx="93.6" cy="179.2" r="76.0"/>
+          <path class="ln" d="M382.4,57.6 L102.7,267.4"/>
+          <circle class="pt" cx="48.0" cy="240.0" r="3.2"/>
+          <circle class="pt" cx="382.4" cy="240.0" r="3.2"/>
+          <circle class="pt" cx="382.4" cy="57.6" r="3.2"/>
+          <circle class="pt" cx="48.0" cy="57.6" r="3.2"/>
+          <circle class="pt" cx="48.0" cy="118.4" r="3.2"/>
+          <circle class="pt" cx="139.2" cy="240.0" r="3.2"/>
+          <text x="40.0" y="258.0" text-anchor="end">A</text>
+          <text x="390.4" y="256.0">B</text>
+          <text x="390.4" y="51.6">C</text>
+          <text x="40.0" y="51.6" text-anchor="end">D</text>
+          <text x="57.0" y="124.4">F</text>
+          <text x="145.2" y="258.0">E</text>
+          <text class="val" x="40.0" y="93.0" text-anchor="end">8</text>
+          <text class="val" x="260.8" y="258.0" text-anchor="middle">32</text>
+          <text class="val" x="254.8" y="142.8" text-anchor="end">40</text>
+          <circle class="pt" cx="93.6" cy="179.2" r="3.2"/>
+          <text x="101.6" y="175.2">M</text>
+        `,
+    },
+    given: [
+      'ABCD dikdörtgen',
+      '[CE, E noktasında çembere teğet',
+      '|EB| = 32 cm',
+      '|CE| = 40 cm',
+      '|DF| = 8 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, taralı alanlar toplamı kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '50π − 96' },
+      { key: 'B', text: '50π − 100' },
+      { key: 'C', text: '25π − 48' },
+      { key: 'D', text: '100π − 96' },
+      { key: 'E', text: '50π − 192' },
+    ],
+    answer: 'A',
+    hint: 'm(FAE) = 90° olduğundan [FE] çaptır; teğet çapa diktir.',
+    solution: [
+      { title: 'Kenar', detail: '|BC| = √(40² − 32²) = 24 = |AD| ⇒ |AF| = 16.' },
+      {
+        title: 'Çap',
+        detail: 'm(FAE) = 90° ⇒ [FE] çap; teğet ⇒ [FE] ⊥ [CE] ⇒ m(AEF) + m(BEC) = 90°, AFE ∼ BEC.',
+      },
+      {
+        title: 'Benzerlik',
+        detail: '|AE| / |AF| = |BC| / |EB| = 24/32 ⇒ |AE| = 12, |FE| = 20, r = 10.',
+      },
+      {
+        title: 'Parçalar',
+        detail: 'Taralı alanlar = yarım daire − A(AFE) = 100π/2 − ½ · 16 · 12.',
+      },
+      { title: 'Sonuç', detail: 'Taralı alanlar toplamı = 50π − 96 cm² bulunur.' },
+    ],
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -17348,6 +17849,21 @@ export const UNIT_5_CIRCLES: Unit = {
         'circles-220',
         'circles-221',
         'circles-222',
+      ),
+    },
+    {
+      id: 'circles-m38',
+      order: 38,
+      title: 'Dairede uzunluk ve alanlar VIII',
+      summary:
+        'Yarım daireye teğetle eşit alanlar, teğet ve ikizkenar üçgen, çeyrek dairede dikdörtgen, dikdörtgende dilim, teğet yaylar ve dikdörtgende teğetle kesmeler.',
+      questions: pick(
+        'circles-223',
+        'circles-224',
+        'circles-225',
+        'circles-226',
+        'circles-227',
+        'circles-228',
       ),
     },
   ],
