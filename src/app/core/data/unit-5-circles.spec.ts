@@ -189,6 +189,15 @@ describe('unit 5 answer key', () => {
     expect(answerOf('circles-95')).toBe('D'));
   it('96 — AH = 12, O₁H = 16, HO₂ = 144/16 = 9, r = √(144 + 81) = 15 → A', () =>
     expect(answerOf('circles-96')).toBe('A'));
+  it('97 — 144 = x(x + 10), x = 8 → C', () => expect(answerOf('circles-97')).toBe('C'));
+  it('98 — CE = 8, OE = √(100 − 64) = 6, EB = 10 − 6 = 4 → C', () =>
+    expect(answerOf('circles-98')).toBe('C'));
+  it('99 — AB = AE, CD = CE, çevre = PB + PD = 30 → D', () =>
+    expect(answerOf('circles-99')).toBe('D'));
+  it('100 — 6(x + 2) = 4·9, x = 4 → C', () => expect(answerOf('circles-100')).toBe('C'));
+  it('101 — 4·24 = a·3a, a = 4√2, AE = 12√2 → D', () => expect(answerOf('circles-101')).toBe('D'));
+  it('102 — OH = √(169 − 144) = 5, OK = √(169 − 25) = 12, 12 − 5 = 7 → B', () =>
+    expect(answerOf('circles-102')).toBe('B'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
