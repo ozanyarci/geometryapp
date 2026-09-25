@@ -316,6 +316,17 @@ describe('unit 5 answer key', () => {
     expect(answerOf('circles-161')).toBe('B'));
   it('162 — DA = 16/2 = 8, AE = 6, EF = 4 · 6/8 = 3, x = 6 → C', () =>
     expect(answerOf('circles-162')).toBe('C'));
+  it('163 — PA = 40/4 = 10, DA = 6, (x/3)(3/5)(4/6) = 1, x = 15/2 → D', () =>
+    expect(answerOf('circles-163')).toBe('D'));
+  it('164 — AD = DC = r + 2, (r + 2)² = r² + 36, r = 8, DE = 8 − 2 = 6 → E', () =>
+    expect(answerOf('circles-164')).toBe('E'));
+  it('165 — ABE ∼ DBC, 8/10 = 6/x, x = 15/2 → B', () => expect(answerOf('circles-165')).toBe('B'));
+  it('166 — OF² − OC² = 36 − 16 = 20, OF + OC = 10, OF − OC = 2 → C', () =>
+    expect(answerOf('circles-166')).toBe('C'));
+  it('167 — BE = 4, DC = AE = 2, alan = ½ · 4 · 2 · sin 120 = 2√3 → A', () =>
+    expect(answerOf('circles-167')).toBe('A'));
+  it('168 — r = OA = 3√3, m(DAO) = 60, AOD eşkenar, x = 3√3 → D', () =>
+    expect(answerOf('circles-168')).toBe('D'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
