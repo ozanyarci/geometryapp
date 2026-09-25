@@ -1,7 +1,7 @@
 import { Question, Unit } from '../models';
 
 /**
- * Unit 5 — Angles in a circle.
+ * Unit 5 — Circle and disc.
  * Original questions written in the style of the "Çemberde Açılar — Çözümlü Test"
  * source: central and inscribed angles, tangent-chord angles, tangents from an
  * outside point, and angles formed by intersecting chords and secants.
@@ -785,7 +785,7 @@ export const CIRCLES_BANK: readonly Question[] = QUESTIONS;
 export const UNIT_5_CIRCLES: Unit = {
   id: 'circles',
   order: 5,
-  title: 'Çemberde Açılar',
+  title: 'Çember ve Daire',
   subtitle: 'Ünite 5',
   description:
     'Merkez açı ve çevre açı, teğet-kiriş açısı, dış noktadan çizilen teğetler, çemberin içinde ve dışında kesişen kiriş ve kesenlerin oluşturduğu açılar.',
