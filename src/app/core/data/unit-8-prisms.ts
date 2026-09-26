@@ -2346,6 +2346,321 @@ const QUESTIONS: Question[] = [
         `,
     },
   },
+  // ---------------------------------------------------------------- 42
+  // Square prism, base edge 6 and height 18 at 12 px per cm; depth drawn at half
+  // scale along 45°. T, P, S sit at 4.5, 9 and 13.5 cm, where the unfolded
+  // straight path from A to E crosses [BF], [CG] and [DH].
+  {
+    id: 'prisms-42',
+    topic: 'Prizmanın yanal yüzünde en kısa yol',
+    given: ['ABCDEFGH kare tabanlı bir dik prizmadır.', '|AB| = 6 cm', '|AE| = 18 cm'],
+    stem: [
+      'A noktasındaki bir böcek, yanal yüzeyler üzerinde dolaşarak sırasıyla [BF], [CG] ve [DH] ayrıtları üzerindeki T, P ve S noktalarına uğradıktan sonra E noktasına ulaşıyor.',
+    ],
+    ask: 'Buna göre, en kısa |AT| + |TP| + |PS| + |SE| yolu kaç cm dir?',
+    choices: [
+      { key: 'A', text: '24' },
+      { key: 'B', text: '6√13' },
+      { key: 'C', text: '30' },
+      { key: 'D', text: '18√2' },
+      { key: 'E', text: '6√29' },
+    ],
+    answer: 'C',
+    hint: 'Dört yanal yüzü bir düzleme açınca yol bir dikdörtgenin köşegenine dönüşür.',
+    solution: [
+      {
+        title: 'Yanal yüzlerin açınımı',
+        detail:
+          'Dört yanal yüz yan yana açılınca eni 4 · 6 = 24 cm, boyu 18 cm olan bir dikdörtgen elde edilir; A ve E bu dikdörtgenin karşı köşeleri olur.',
+      },
+      {
+        title: 'En kısa yol',
+        detail:
+          'Düzlemde iki nokta arasındaki en kısa yol doğru parçasıdır; yol dikdörtgenin köşegenidir.',
+      },
+      {
+        title: 'Pisagor',
+        detail: '√(24² + 18²) = √(576 + 324) = √900.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'En kısa yol 30 cm dir.',
+      },
+    ],
+    figure: {
+      viewBox: '0 -20 400 300',
+      caption: 'Şekil 23',
+      label:
+        'ABCDEFGH kare tabanlı dik prizma; alt taban ABCD, üst taban EFGH. [BF] üzerinde T, [CG] üzerinde P, [DH] üzerinde S noktası; A dan T, P, S üzerinden E ye giden yol çizilmiş. |AB| = 6 cm, |AE| = 18 cm.',
+      svg: `
+          <path class="hid" d="M164,250 L189.5,224.5 L261.5,224.5 M189.5,224.5 L189.5,8.5"/>
+          <path class="hid" d="M261.5,116.5 L189.5,62.5 L164,34"/>
+          <path class="ln" d="M164,250 L236,250 L236,34 L164,34 Z M236,250 L261.5,224.5 L261.5,8.5 L236,34 M164,34 L189.5,8.5 L261.5,8.5"/>
+          <path class="ln" d="M164,250 L236,196 L261.5,116.5"/>
+          <circle class="pt" cx="164" cy="250" r="3.2"/>
+          <circle class="pt" cx="236" cy="250" r="3.2"/>
+          <circle class="pt" cx="261.5" cy="224.5" r="3.2"/>
+          <circle class="pt" cx="189.5" cy="224.5" r="3.2"/>
+          <circle class="pt" cx="164" cy="34" r="3.2"/>
+          <circle class="pt" cx="236" cy="34" r="3.2"/>
+          <circle class="pt" cx="261.5" cy="8.5" r="3.2"/>
+          <circle class="pt" cx="189.5" cy="8.5" r="3.2"/>
+          <circle class="pt" cx="236" cy="196" r="3.2"/>
+          <circle class="pt" cx="261.5" cy="116.5" r="3.2"/>
+          <circle class="pt" cx="189.5" cy="62.5" r="3.2"/>
+          <text x="156" y="266" text-anchor="end">A</text>
+          <text x="244" y="266">B</text>
+          <text x="269.5" y="230">C</text>
+          <text x="196" y="220">D</text>
+          <text x="156" y="38" text-anchor="end">E</text>
+          <text x="242" y="50">F</text>
+          <text x="269.5" y="6">G</text>
+          <text x="189.5" y="-4" text-anchor="middle">H</text>
+          <text x="244" y="200">T</text>
+          <text x="269.5" y="122">P</text>
+          <text x="196" y="60">S</text>
+          <text class="val" x="200" y="270" text-anchor="middle">6</text>
+          <text class="val" x="156" y="146" text-anchor="end">18</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 43
+  // Cube of edge 12 at 16 px per cm, depth at half scale along 45°. The wall sits
+  // 4 cm from the left face; compartment I holds water 9 cm deep.
+  {
+    id: 'prisms-43',
+    topic: 'Bölmeli kapta su seviyesi',
+    given: [
+      'Bir ayrıtı 12 cm olan küp biçimindeki kap, bir yan yüzüne paralel bir ara duvarla I ve II numaralı iki bölmeye ayrılmıştır.',
+      'I. bölmenin genişliği 4 cm, II. bölmenin genişliği 8 cm dir.',
+      'I. bölme tabandan 9 cm yüksekliğe kadar su ile doludur, II. bölme boştur.',
+    ],
+    stem: [],
+    ask: 'Ara duvarın tabanına açılan bir delikten su II. bölmeye geçip iki bölmedeki su seviyeleri eşitlendiğinde, suyun yüksekliği kaç cm olur? (Ara duvarın kalınlığı önemsenmeyecektir.)',
+    choices: [
+      { key: 'A', text: '2' },
+      { key: 'B', text: '2,5' },
+      { key: 'C', text: '3' },
+      { key: 'D', text: '3,5' },
+      { key: 'E', text: '4' },
+    ],
+    answer: 'C',
+    hint: 'Suyun hacmi değişmez; seviyeler eşitlenince su kabın tüm tabanına yayılır.',
+    solution: [
+      {
+        title: 'Suyun hacmi',
+        detail: 'I. bölmenin tabanı 4 · 12 = 48 cm² olduğundan su hacmi 48 · 9 = 432 cm³ tür.',
+      },
+      {
+        title: 'Yeni taban',
+        detail: 'Seviyeler eşitlenince su kabın tüm tabanını kaplar: 12 · 12 = 144 cm².',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Su yüksekliği 432 / 144 = 3 cm olur.',
+      },
+    ],
+    figure: {
+      viewBox: '0 -4 400 300',
+      caption: 'Şekil 24',
+      label:
+        'Ayrıtı 12 cm olan küp biçiminde kap, yan yüze paralel bir ara duvarla 4 cm genişliğindeki I. bölme ve 8 cm genişliğindeki II. bölmeye ayrılmış. I. bölmede 9 cm yüksekliğinde su var.',
+      svg: `
+          <path class="shade" d="M70,270 L134,270 L134,126 L202,58 L138,58 L70,126 Z"/>
+          <path class="hid" d="M70,270 L138,202 L330,202 M138,202 L138,10 M134,270 L202,202 L202,10"/>
+          <path class="ln" d="M70,270 L262,270 L262,78 L70,78 Z M262,270 L330,202 L330,10 L262,78 M70,78 L138,10 L330,10"/>
+          <path class="ln" d="M134,270 L134,78 L202,10"/>
+          <path class="ln" d="M70,126 L134,126 L202,58 L138,58 Z"/>
+          <text x="102" y="210" text-anchor="middle">I</text>
+          <text x="240" y="170" text-anchor="middle">II</text>
+          <text class="val" x="62" y="204" text-anchor="end">9</text>
+          <text class="val" x="102" y="290" text-anchor="middle">4</text>
+          <text class="val" x="198" y="290" text-anchor="middle">8</text>
+          <text class="val" x="338" y="110">12</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 44
+  {
+    id: 'prisms-44',
+    topic: 'Düzgün altıgen prizmanın tüm alanı',
+    stem: [],
+    ask: 'Taban çevresi 36 cm ve hacmi 324 cm³ olan bir düzgün altıgen dik prizmanın tüm alanı kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '144√3' },
+      { key: 'B', text: '162√3' },
+      { key: 'C', text: '180√3' },
+      { key: 'D', text: '198√3' },
+      { key: 'E', text: '216√3' },
+    ],
+    answer: 'C',
+    hint: 'Önce taban ayrıtını, sonra altı eşkenar üçgenden taban alanını bul.',
+    solution: [
+      {
+        title: 'Taban ayrıtı',
+        detail: '6a = 36 ⇒ a = 6 cm.',
+      },
+      {
+        title: 'Taban alanı',
+        detail: 'Düzgün altıgen 6 eşkenar üçgendir: 6 · (6²√3 / 4) = 54√3 cm².',
+      },
+      {
+        title: 'Yükseklik',
+        detail: '54√3 · h = 324 ⇒ h = 6 / √3 = 2√3 cm.',
+      },
+      {
+        title: 'Alanlar',
+        detail: 'İki taban 2 · 54√3 = 108√3 cm², yanal alan 36 · 2√3 = 72√3 cm².',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Tüm alan 108√3 + 72√3 = 180√3 cm² dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 45
+  {
+    id: 'prisms-45',
+    topic: 'Dikdörtgenden bükülen silindirlerin hacim oranı',
+    stem: [
+      'Kenar uzunlukları 12 cm ve 20 cm olan dikdörtgen biçimindeki bir kartondan iki farklı dik silindirin yanal yüzeyi yapılıyor.',
+      'Birinci silindirde 12 cm lik kenar taban çemberini, ikinci silindirde 20 cm lik kenar taban çemberini oluşturuyor. Silindirlerin hacimleri sırasıyla V₁ ve V₂ dir.',
+    ],
+    ask: 'Buna göre, V₁ / V₂ oranı kaçtır?',
+    choices: [
+      { key: 'A', text: '9/25' },
+      { key: 'B', text: '3/5' },
+      { key: 'C', text: '1' },
+      { key: 'D', text: '5/3' },
+      { key: 'E', text: '25/9' },
+    ],
+    answer: 'B',
+    hint: 'Taban çevresi c olan silindirin yarıçapı c / 2π dir; hacmi c ve h cinsinden yaz.',
+    solution: [
+      {
+        title: 'Genel hacim',
+        detail: 'Çevre c ⇒ r = c / 2π, V = πr²h = c²h / 4π.',
+      },
+      {
+        title: 'İki silindir',
+        detail: 'V₁ = 12² · 20 / 4π, V₂ = 20² · 12 / 4π.',
+      },
+      {
+        title: 'Oran',
+        detail: 'V₁ / V₂ = (144 · 20) / (400 · 12) = 2880 / 4800.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'V₁ / V₂ = 3/5 tir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 46
+  // Cylinder r = 4, h = 8 at 25 px per cm. E is on the base circle with |AE| = 6,
+  // so E = (0.5, 3.97) in cm from the centre, drawn toward the viewer.
+  {
+    id: 'prisms-46',
+    topic: 'Silindirde dik üçgenlerden hacim',
+    given: [
+      'Şekildeki dik silindirde [AB] alt taban dairesinin çapı, E alt taban çemberi üzerinde bir noktadır.',
+      'D noktası üst taban çemberi üzerinde, A nın tam üstündedir.',
+      '|AE| = 6 cm',
+      '|EB| = 2√7 cm',
+      '|ED| = 10 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, silindirin hacmi kaç cm³ tür?',
+    choices: [
+      { key: 'A', text: '96π' },
+      { key: 'B', text: '112π' },
+      { key: 'C', text: '128π' },
+      { key: 'D', text: '144π' },
+      { key: 'E', text: '160π' },
+    ],
+    answer: 'C',
+    hint: 'Çapı gören çevre açı diktir; [DA] ise tabana diktir.',
+    solution: [
+      {
+        title: 'Çap',
+        detail:
+          '[AB] çap olduğundan AEB açısı 90° dir: |AB|² = 6² + (2√7)² = 36 + 28 = 64 ⇒ |AB| = 8, r = 4 cm.',
+      },
+      {
+        title: 'Yükseklik',
+        detail:
+          '[DA] tabana dik olduğundan DAE üçgeni A da dik açılıdır: h² = 10² − 6² = 64 ⇒ h = 8 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'V = πr²h = π · 16 · 8 = 128π cm³ tür.',
+      },
+    ],
+    figure: {
+      viewBox: '0 0 400 280',
+      caption: 'Şekil 25',
+      label:
+        'Dik silindir; alt tabanda [AB] çapı ve çember üzerinde E noktası, A nın üstünde üst tabanda D, B nin üstünde C. [AE], [EB] ve [ED] çizilmiş.',
+      svg: `
+          <path class="hid" d="M100,230 A100,24 0 0 1 300,230"/>
+          <path class="ln" d="M100,230 A100,24 0 0 0 300,230"/>
+          <ellipse class="ln" cx="200" cy="30" rx="100" ry="24"/>
+          <path class="ln" d="M100,30 L100,230 M300,30 L300,230"/>
+          <path class="ln" d="M100,230 L300,230 M100,230 L212.5,253.8 L300,230 M100,30 L212.5,253.8"/>
+          <circle class="pt" cx="100" cy="30" r="3.2"/>
+          <circle class="pt" cx="300" cy="30" r="3.2"/>
+          <circle class="pt" cx="100" cy="230" r="3.2"/>
+          <circle class="pt" cx="300" cy="230" r="3.2"/>
+          <circle class="pt" cx="212.5" cy="253.8" r="3.2"/>
+          <text x="92" y="26" text-anchor="end">D</text>
+          <text x="308" y="26">C</text>
+          <text x="92" y="238" text-anchor="end">A</text>
+          <text x="308" y="238">B</text>
+          <text x="212.5" y="274" text-anchor="middle">E</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 47
+  {
+    id: 'prisms-47',
+    topic: 'Küplerden oluşan prizmanın en küçük yüzey alanı',
+    stem: [
+      'Her birinin yüzey alanı x cm² olan 4 eş küp, yüzleri tam çakışacak biçimde bir araya getirilerek bir dikdörtgenler prizması oluşturuluyor.',
+    ],
+    ask: 'Oluşan prizmanın yüzey alanı en az kaç x cm² dir?',
+    choices: [
+      { key: 'A', text: '3' },
+      { key: 'B', text: '8/3' },
+      { key: 'C', text: '7/3' },
+      { key: 'D', text: '2' },
+      { key: 'E', text: '10/3' },
+    ],
+    answer: 'B',
+    hint: 'Küplerin dizilişini karşılaştır: 4 × 1 × 1 mi, 2 × 2 × 1 mi?',
+    solution: [
+      {
+        title: 'Küpün ayrıtı',
+        detail: 'Küpün ayrıtı a ise 6a² = x dir.',
+      },
+      {
+        title: 'Olası prizmalar',
+        detail:
+          '4 küp ya 4a × a × a ya da 2a × 2a × a prizması oluşturur. İlkinin alanı 2(4a² + 4a² + a²) = 18a², ikincisinin 2(4a² + 2a² + 2a²) = 16a² dir.',
+      },
+      {
+        title: 'En küçük alan',
+        detail: 'En az alan 16a² = 16 · (x / 6) dır.',
+      },
+      {
+        title: 'Sonuç',
+        detail: '16x / 6 = 8x/3; yüzey alanı en az 8/3 x cm² dir.',
+      },
+    ],
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -2450,6 +2765,14 @@ export const UNIT_8_PRISMS: Unit = {
       summary:
         'Ayrıtlar toplamından alan, üstü açık kovanın boyanan yüzeyi, eğik prizmada dik kesit, silindirde uzaklık, orandan hacim ve eş parçalara bölünen prizma.',
       questions: pick('prisms-36', 'prisms-37', 'prisms-38', 'prisms-39', 'prisms-40', 'prisms-41'),
+    },
+    {
+      id: 'prisms-m7',
+      order: 7,
+      title: 'En kısa yol, bölmeli kap ve küp dizilişi',
+      summary:
+        'Yanal yüzde en kısa yol, bölmeli kapta su seviyesi, altıgen prizmanın alanı, dikdörtgenden silindir, dik üçgenlerle silindir hacmi ve küplerden prizma.',
+      questions: pick('prisms-42', 'prisms-43', 'prisms-44', 'prisms-45', 'prisms-46', 'prisms-47'),
     },
   ],
 };

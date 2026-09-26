@@ -70,6 +70,14 @@ describe('unit 8 answer key', () => {
   it('40 — 6πr² = 54π, r = 3, h = 9, π·9·9 = 81π → C', () =>
     expect(answerOf('prisms-40')).toBe('C'));
   it('41 — 4·3·2 = 24 cells, 24·6 = 144 → D', () => expect(answerOf('prisms-41')).toBe('D'));
+  it('42 — 4·6 = 24, √(24² + 18²) = √900 = 30 → C', () => expect(answerOf('prisms-42')).toBe('C'));
+  it('43 — 4·12·9 = 432, 432 / 144 = 3 → C', () => expect(answerOf('prisms-43')).toBe('C'));
+  it('44 — a = 6, base 54√3, h = 2√3, 108√3 + 72√3 = 180√3 → C', () =>
+    expect(answerOf('prisms-44')).toBe('C'));
+  it('45 — (12²·20)/(20²·12) = 12/20 = 3/5 → B', () => expect(answerOf('prisms-45')).toBe('B'));
+  it('46 — |AB|² = 36 + 28 = 64, r = 4, h² = 100 − 36, h = 8, π·16·8 = 128π → C', () =>
+    expect(answerOf('prisms-46')).toBe('C'));
+  it('47 — 2×2×1 block: 16a² = 16x/6 = 8x/3 → B', () => expect(answerOf('prisms-47')).toBe('B'));
 
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
