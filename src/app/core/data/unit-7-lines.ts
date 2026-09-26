@@ -1810,6 +1810,311 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+
+  // ---------------------------------------------------------------- 39
+  {
+    id: 'lines-39',
+    topic: 'Noktadan geçen doğrunun eğimi',
+    stem: [],
+    ask: '3y − mx + 9 = 0 doğrusu P(3, 1) noktasından geçtiğine göre, eğimi kaçtır?',
+    choices: [
+      { key: 'A', text: '−4/3' },
+      { key: 'B', text: '1' },
+      { key: 'C', text: '4/3' },
+      { key: 'D', text: '2' },
+      { key: 'E', text: '3' },
+    ],
+    answer: 'C',
+    hint: 'Önce P noktasının koordinatlarını denklemde yerine yazarak m yi bul.',
+    solution: [
+      {
+        title: 'Noktayı yerine yaz',
+        detail: 'x = 3, y = 1 için 3·1 − 3m + 9 = 0 ⇒ 12 = 3m ⇒ m = 4.',
+      },
+      {
+        title: 'Doğrunun denklemi',
+        detail: '3y − 4x + 9 = 0 ⇒ 3y = 4x − 9 ⇒ y = (4/3)x − 3.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Doğrunun eğimi 4/3 tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 40
+  {
+    id: 'lines-40',
+    topic: 'Kare ve dik doğrular',
+    // Origin (255, 170), 25 px per unit; d is y = x/3 + 3, A(1, 0), B(4, 1), C(3, 4), D(0, 3).
+    figure: {
+      viewBox: '0 0 400 200',
+      caption: 'Şekil 19',
+      label:
+        'Koordinat düzleminde eksenleri E ve D noktalarında kesen d doğrusu; ABCD karesinin A köşesi x ekseni üzerinde, DC kenarı d doğrusu üzerinde.',
+      svg: `
+          <path class="ln" d="M10,170 L385,170"/>
+          <path class="ln" d="M375,164 L385,170 L375,176"/>
+          <path class="ln" d="M255,195 L255,15"/>
+          <path class="ln" d="M249,25 L255,15 L261,25"/>
+          <text x="382" y="190" text-anchor="middle">x</text>
+          <text x="267" y="27">y</text>
+          <path class="ln" d="M15,175 L370,56.67"/>
+          <path class="ln" d="M255,95 L280,170 L355,145 L330,70"/>
+          <circle class="pt" cx="30" cy="170" r="3.2"/>
+          <circle class="pt" cx="255" cy="95" r="3.2"/>
+          <circle class="pt" cx="280" cy="170" r="3.2"/>
+          <circle class="pt" cx="355" cy="145" r="3.2"/>
+          <circle class="pt" cx="330" cy="70" r="3.2"/>
+          <text x="30" y="190" text-anchor="middle">E</text>
+          <text x="247" y="84" text-anchor="end">D</text>
+          <text x="280" y="190" text-anchor="middle">A</text>
+          <text x="362" y="150">B</text>
+          <text x="324" y="62" text-anchor="end">C</text>
+          <text x="374" y="72">d</text>
+        `,
+    },
+    given: ['ABCD bir kare', 'E(−9, 0)', 'D(0, 3)'],
+    stem: [
+      'Dik koordinat sisteminde verilen ABCD karesinin A köşesi x ekseni üzerinde, [DC] kenarı d doğrusu üzerindedir.',
+    ],
+    ask: 'd doğrusu eksenleri E(−9, 0) ve D(0, 3) noktalarında kestiğine göre, B köşesinin koordinatları aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: '(3, 1)' },
+      { key: 'B', text: '(4, 1)' },
+      { key: 'C', text: '(4, 2)' },
+      { key: 'D', text: '(5, 1)' },
+      { key: 'E', text: '(3, 4)' },
+    ],
+    answer: 'B',
+    hint: '[DA] kenarı d doğrusuna diktir; önce d nin eğimini, sonra DA nın eğimini bul.',
+    solution: [
+      {
+        title: 'd nin eğimi',
+        detail: 'm(d) = (3 − 0) / (0 − (−9)) = 3/9 = 1/3.',
+      },
+      {
+        title: 'A köşesi',
+        detail:
+          '[DA] ⊥ d olduğundan m(DA) = −3. D(0, 3) den geçen y = −3x + 3 doğrusu x eksenini x = 1 de keser ⇒ A(1, 0).',
+      },
+      {
+        title: 'Kenar vektörleri',
+        detail:
+          'D den A ya gidiş (1, −3) tür. Buna dik ve eşit uzunluktaki, d boyunca giden kenar (3, 1) olur ⇒ C = D + (3, 1) = (3, 4).',
+      },
+      {
+        title: 'B köşesi',
+        detail: 'B = A + (3, 1) = (1 + 3, 0 + 1) = (4, 1).',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'B köşesinin koordinatları (4, 1) dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 41
+  {
+    id: 'lines-41',
+    topic: 'Noktanın doğruya göre simetriği',
+    stem: [],
+    ask: 'Analitik düzlemde verilen A(1, 1) noktasının y = x + 3 doğrusuna göre simetriği olan nokta aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: '(−2, 4)' },
+      { key: 'B', text: '(4, −2)' },
+      { key: 'C', text: '(−4, 2)' },
+      { key: 'D', text: '(2, −4)' },
+      { key: 'E', text: '(−3, 4)' },
+    ],
+    answer: 'A',
+    hint: 'y = x + c doğrusuna göre simetride (x, y) noktası (y − c, x + c) noktasına gider.',
+    solution: [
+      {
+        title: 'Kural',
+        detail: 'y = x + 3 doğrusuna göre (x, y) noktasının simetriği (y − 3, x + 3) tür.',
+      },
+      {
+        title: 'Uygula',
+        detail: 'A(1, 1) için (1 − 3, 1 + 3) = (−2, 4).',
+      },
+      {
+        title: 'Kontrol',
+        detail:
+          'Orta nokta (−1/2, 5/2) doğrunun üzerindedir (−1/2 + 3 = 5/2); iki noktayı birleştiren doğrunun eğimi 3/(−3) = −1 dir, yani doğruya diktir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Simetrik nokta (−2, 4) tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 42
+  {
+    id: 'lines-42',
+    topic: 'Eğim açısı ve noktadan doğru denklemi',
+    // Origin (140, 250), 40 px per unit; d is y = −x + 4 through P(1, 3), cutting the x axis at (4, 0).
+    figure: {
+      viewBox: '0 0 400 320',
+      caption: 'Şekil 20',
+      label:
+        'Koordinat düzleminde P(1, 3) noktasından geçen, azalan d doğrusu; d ile x ekseni arasındaki dar açı 45 derece.',
+      svg: `
+          <path class="ln" d="M60,250 L385,250"/>
+          <path class="ln" d="M375,244 L385,250 L375,256"/>
+          <path class="ln" d="M140,305 L140,15"/>
+          <path class="ln" d="M134,25 L140,15 L146,25"/>
+          <text x="382" y="270" text-anchor="middle">x</text>
+          <text x="152" y="27">y</text>
+          <path class="ln" d="M108,58 L348,298"/>
+          <path class="arc" d="M328,250 A28,28 0 0 1 319.8,269.8"/>
+          <text class="val" x="336" y="272">45°</text>
+          <circle class="pt" cx="180" cy="130" r="3.2"/>
+          <text x="190" y="124">P(1, 3)</text>
+          <text x="132" y="268" text-anchor="end">O</text>
+          <text x="96" y="58" text-anchor="end">d</text>
+        `,
+    },
+    stem: [],
+    ask: 'Dik koordinat sisteminde verilen d doğrusunun denklemi aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: 'y = −x + 2' },
+      { key: 'B', text: 'y = −x + 4' },
+      { key: 'C', text: 'y = x + 2' },
+      { key: 'D', text: 'y = −x + 3' },
+      { key: 'E', text: 'y = x − 4' },
+    ],
+    answer: 'B',
+    hint: 'd azalan bir doğru; x ekseniyle pozitif yönde yaptığı açı 180° − 45° dir.',
+    solution: [
+      {
+        title: 'Eğim açısı',
+        detail:
+          'd azalan olduğundan x ekseninin pozitif yönüyle yaptığı açı 180° − 45° = 135° dir.',
+      },
+      {
+        title: 'Eğim',
+        detail: 'm = tan 135° = −1.',
+      },
+      {
+        title: 'Noktadan geçen doğru',
+        detail: 'y − 3 = −1·(x − 1) ⇒ y = −x + 4.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'd doğrusunun denklemi y = −x + 4 tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 43
+  {
+    id: 'lines-43',
+    topic: 'Doğru ve nokta ile oluşan üçgenin alanı',
+    stem: ['Analitik düzlemde A(5, 2) noktası ile 2x − 3y + 12 = 0 doğrusu veriliyor.'],
+    ask: 'Doğrunun eksenleri kestiği noktalar ile A(5, 2) noktasının oluşturduğu üçgenin alanı kaç birim karedir?',
+    choices: [
+      { key: 'A', text: '12' },
+      { key: 'B', text: '14' },
+      { key: 'C', text: '16' },
+      { key: 'D', text: '18' },
+      { key: 'E', text: '20' },
+    ],
+    answer: 'C',
+    hint: 'Doğrunun eksenleri kestiği iki nokta tabanı verir; yükseklik A nın doğruya uzaklığıdır.',
+    solution: [
+      {
+        title: 'Eksen kesim noktaları',
+        detail: 'y = 0 için x = −6, x = 0 için y = 4 ⇒ E(−6, 0) ve F(0, 4).',
+      },
+      {
+        title: 'Taban',
+        detail: '|EF| = √(6² + 4²) = √52 = 2√13.',
+      },
+      {
+        title: 'Yükseklik',
+        detail: 'A nın doğruya uzaklığı |2·5 − 3·2 + 12| / √(4 + 9) = 16/√13.',
+      },
+      {
+        title: 'Alan',
+        detail: 'Alan = (1/2) · 2√13 · 16/√13 = 16.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Üçgenin alanı 16 birim karedir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 44
+  {
+    id: 'lines-44',
+    topic: 'Eşkenar üçgen ve doğru',
+    // Origin (140, 250), 30 px per unit; B(−2, 0), C(6, 0), A(2, 4√3), line y = 2√3x.
+    figure: {
+      viewBox: '0 0 400 310',
+      caption: 'Şekil 21',
+      label:
+        'Koordinat düzleminde B ve C köşeleri x ekseni üzerinde olan ABC eşkenar üçgeni; y = 2√3x doğrusu başlangıç noktasından ve A köşesinden geçiyor, ABO üçgeni taralı.',
+      svg: `
+          <path class="shade" d="M80,250 L200,42.15 L140,250 Z"/>
+          <path class="ln" d="M40,250 L385,250"/>
+          <path class="ln" d="M375,244 L385,250 L375,256"/>
+          <path class="ln" d="M140,295 L140,15"/>
+          <path class="ln" d="M134,25 L140,15 L146,25"/>
+          <text x="382" y="270" text-anchor="middle">x</text>
+          <text x="128" y="27" text-anchor="end">y</text>
+          <path class="ln" d="M80,250 L200,42.15 L320,250"/>
+          <path class="ln" d="M131.34,280 L205.82,22"/>
+          <circle class="pt" cx="80" cy="250" r="3.2"/>
+          <circle class="pt" cx="200" cy="42.15" r="3.2"/>
+          <circle class="pt" cx="320" cy="250" r="3.2"/>
+          <text x="80" y="270" text-anchor="middle">B</text>
+          <text x="152" y="270">O</text>
+          <text x="320" y="270" text-anchor="middle">C</text>
+          <text x="190" y="44" text-anchor="end">A</text>
+          <text x="214" y="30">y = 2√3x</text>
+        `,
+    },
+    given: ['ABC eşkenar üçgen', 'C(6, 0)', 'B(b, 0)'],
+    stem: [
+      'Analitik düzlemde verilen y = 2√3x doğrusu eşkenar üçgenin A köşesinden ve başlangıç noktasından geçmektedir.',
+    ],
+    ask: 'Buna göre, Alan(ABO) kaç birim karedir?',
+    choices: [
+      { key: 'A', text: '2√3' },
+      { key: 'B', text: '3√3' },
+      { key: 'C', text: '4√3' },
+      { key: 'D', text: '6√3' },
+      { key: 'E', text: '8√3' },
+    ],
+    answer: 'C',
+    hint: 'Eşkenar üçgende A köşesi [BC] nin orta noktasının tam üstündedir; A yı b cinsinden yaz.',
+    solution: [
+      {
+        title: 'A köşesi',
+        detail:
+          '|BC| = 6 − b ve A, [BC] nin orta noktasının üstünde olduğundan A((b + 6)/2, (6 − b)√3/2) dir.',
+      },
+      {
+        title: 'Doğruya yerleştir',
+        detail: '(6 − b)√3/2 = 2√3 · (b + 6)/2 ⇒ 6 − b = 2b + 12 ⇒ b = −2.',
+      },
+      {
+        title: 'Koordinatlar',
+        detail: 'B(−2, 0) ve A(2, 4√3) bulunur; |BO| = 2.',
+      },
+      {
+        title: 'Alan',
+        detail: 'Alan(ABO) = (1/2) · |BO| · 4√3 = (1/2) · 2 · 4√3 = 4√3.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Alan(ABO) = 4√3 birim karedir.',
+      },
+    ],
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -1897,6 +2202,14 @@ export const UNIT_7_LINES: Unit = {
         'lines-37',
         'lines-38',
       ),
+    },
+    {
+      id: 'lines-m7',
+      order: 7,
+      title: 'Eğim, simetri ve alan',
+      summary:
+        'Noktadan geçen doğrunun eğimi, kare ve dik doğrular, doğruya göre simetri, eğim açısı, doğruyla üçgen alanı ve eşkenar üçgen.',
+      questions: pick('lines-39', 'lines-40', 'lines-41', 'lines-42', 'lines-43', 'lines-44'),
     },
   ],
 };
