@@ -2698,6 +2698,332 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+  // ---------------------------------------------------------------- 58
+  {
+    id: 'lines-58',
+    topic: 'Paralel doğrularla oluşan yamuğun alanı',
+    given: ['BC: y = 2x + 8', 'A(2, 8) noktası DE doğrusu üzerinde', '[CA] ∥ x ekseni', 'DE ∥ BC'],
+    // Origin (215, 250), 25 px per unit; B(−4, 0), D(−2, 0), E(0, 4), C(0, 8), A(2, 8).
+    figure: {
+      viewBox: '0 -10 400 320',
+      caption: 'Şekil 27',
+      label:
+        'Dik koordinat düzleminde y = 2x + 8 denklemli BC doğrusu ve ona paralel DE doğrusu. B ve D x ekseni üzerinde, C ve E y ekseni üzerinde; DE doğrusu A(2, 8) noktasından geçiyor ve BDEC yamuğu taralı.',
+      svg: `
+          <path class="shade" d="M115,250 L165,250 L215,150 L215,50 Z"/>
+          <path class="ln" d="M30,250 L385,250"/>
+          <path class="ln" d="M375,244 L385,250 L375,256"/>
+          <path class="ln" d="M215,300 L215,0"/>
+          <path class="ln" d="M209,10 L215,0 L221,10"/>
+          <text x="382" y="270" text-anchor="middle">x</text>
+          <text x="227" y="8">y</text>
+          <path class="ln" d="M96.25,287.5 L233.75,12.5"/>
+          <path class="ln" d="M146.25,287.5 L283.75,12.5"/>
+          <path class="ln" d="M215,50 L265,50 L265,250" stroke-dasharray="2 5"/>
+          <circle class="pt" cx="115" cy="250" r="3.2"/>
+          <circle class="pt" cx="165" cy="250" r="3.2"/>
+          <circle class="pt" cx="215" cy="150" r="3.2"/>
+          <circle class="pt" cx="215" cy="50" r="3.2"/>
+          <circle class="pt" cx="265" cy="50" r="3.2"/>
+          <text x="109" y="270" text-anchor="end">B</text>
+          <text x="178" y="270" text-anchor="middle">D</text>
+          <text x="223" y="156">E</text>
+          <text x="207" y="44" text-anchor="end">C</text>
+          <text x="273" y="46">A(2, 8)</text>
+          <text x="207" y="270" text-anchor="end">O</text>
+          <text x="265" y="270" text-anchor="middle">2</text>
+          <text x="130" y="196" text-anchor="end">y = 2x + 8</text>
+        `,
+    },
+    stem: [],
+    ask: 'Yukarıdaki şekilde A(2, 8) noktası DE doğrusu üzerinde olduğuna göre, BDEC yamuğunun alanı kaç birim karedir?',
+    choices: [
+      { key: 'A', text: '10' },
+      { key: 'B', text: '12' },
+      { key: 'C', text: '14' },
+      { key: 'D', text: '16' },
+      { key: 'E', text: '18' },
+    ],
+    answer: 'B',
+    hint: 'DE doğrusu BC ye paralel olduğundan eğimi de 2 dir; A noktasını kullanarak denklemini yaz.',
+    solution: [
+      {
+        title: 'B ve C noktaları',
+        detail: 'y = 2x + 8 doğrusunda y = 0 ⇒ B(−4, 0); x = 0 ⇒ C(0, 8).',
+      },
+      {
+        title: 'DE doğrusu',
+        detail: 'Eğim 2, A(2, 8) den geçer: y − 8 = 2(x − 2) ⇒ y = 2x + 4.',
+      },
+      {
+        title: 'D ve E noktaları',
+        detail: 'y = 0 ⇒ D(−2, 0); x = 0 ⇒ E(0, 4).',
+      },
+      {
+        title: 'Üçgenlerin farkı',
+        detail: 'Alan(BOC) = 4 · 8 / 2 = 16, Alan(DOE) = 2 · 4 / 2 = 4.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Alan(BDEC) = 16 − 4 = 12 birim karedir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 59
+  {
+    id: 'lines-59',
+    topic: 'Kesim noktasından geçen, eğimi verilen doğru',
+    stem: [
+      'Dik koordinat sisteminde x − 2y = 0 ve x + y − 3 = 0 doğrularının kesim noktasından geçen ve eğimi −2 olan bir doğru veriliyor.',
+    ],
+    ask: 'Bu doğrunun denklemi aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: 'x + 2y − 4 = 0' },
+      { key: 'B', text: '2x − y − 3 = 0' },
+      { key: 'C', text: '2x + y − 3 = 0' },
+      { key: 'D', text: 'x − 2y = 0' },
+      { key: 'E', text: '2x + y − 5 = 0' },
+    ],
+    answer: 'E',
+    hint: 'Önce iki denklemi birlikte çözerek kesim noktasını bul.',
+    solution: [
+      {
+        title: 'Kesim noktası',
+        detail: 'x = 2y yi ikinci denklemde yaz: 2y + y − 3 = 0 ⇒ y = 1, x = 2. Nokta (2, 1).',
+      },
+      {
+        title: 'Nokta-eğim denklemi',
+        detail: 'y − 1 = −2(x − 2) ⇒ y = −2x + 5.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Düzenlersek 2x + y − 5 = 0 bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 60
+  {
+    id: 'lines-60',
+    topic: 'Dik doğrular ve eksen kesim noktası',
+    given: ['d₁ ⊥ d₂', 'A(−6, 0)', 'B(a, 0)', 'C(x, 4)', 'D(0, 3)'],
+    // Origin (230, 250), 30 px per unit; A(−6, 0), D(0, 3), C(2, 4), B(4, 0).
+    figure: {
+      viewBox: '0 10 400 300',
+      caption: 'Şekil 28',
+      label:
+        'Analitik düzlemde d₂ doğrusu x eksenini A noktasında, y eksenini D noktasında kesiyor. d₁ doğrusu d₂ ye C noktasında dik ve x eksenini B noktasında kesiyor.',
+      svg: `
+          <path class="ln" d="M10,250 L385,250"/>
+          <path class="ln" d="M375,244 L385,250 L375,256"/>
+          <path class="ln" d="M230,300 L230,20"/>
+          <path class="ln" d="M224,30 L230,20 L236,30"/>
+          <text x="382" y="270" text-anchor="middle">x</text>
+          <text x="242" y="30">y</text>
+          <path class="ln" d="M20,265 L380,85"/>
+          <path class="ln" d="M245,40 L372.5,295"/>
+          <path class="ln" d="M279.27,135.37 L284.64,146.1 L295.37,140.73"/>
+          <circle class="pt" cx="50" cy="250" r="3.2"/>
+          <circle class="pt" cx="230" cy="160" r="3.2"/>
+          <circle class="pt" cx="290" cy="130" r="3.2"/>
+          <circle class="pt" cx="350" cy="250" r="3.2"/>
+          <text x="46" y="270" text-anchor="end">A</text>
+          <text x="222" y="270" text-anchor="end">O</text>
+          <text x="344" y="270" text-anchor="end">B</text>
+          <text x="222" y="156" text-anchor="end">D</text>
+          <text x="300" y="118" text-anchor="middle">C</text>
+          <text x="254" y="42">d₁</text>
+          <text x="368" y="78" text-anchor="end">d₂</text>
+        `,
+    },
+    stem: [],
+    ask: 'd₁ doğrusu x eksenini B(a, 0) noktasında; d₂ doğrusu x eksenini A(−6, 0), y eksenini D(0, 3) noktasında kesmektedir. Buna göre, d₁ doğrusunun x eksenini kestiği noktanın apsisi (a) kaçtır?',
+    choices: [
+      { key: 'A', text: '5/2' },
+      { key: 'B', text: '3' },
+      { key: 'C', text: '7/2' },
+      { key: 'D', text: '4' },
+      { key: 'E', text: '9/2' },
+    ],
+    answer: 'D',
+    hint: 'A ve D noktalarından d₂ nin eğimini bul; d₁ in eğimi bunun negatif tersidir.',
+    solution: [
+      {
+        title: 'd₂ doğrusu',
+        detail: 'm₂ = (3 − 0) / (0 − (−6)) = 1/2 ⇒ y = x/2 + 3.',
+      },
+      {
+        title: 'C noktası',
+        detail: 'y = 4 için 4 = x/2 + 3 ⇒ x = 2 ⇒ C(2, 4).',
+      },
+      {
+        title: 'd₁ in eğimi',
+        detail: 'd₁ ⊥ d₂ ⇒ m₁ · (1/2) = −1 ⇒ m₁ = −2.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'd₁: y − 4 = −2(x − 2). y = 0 için −4 = −2(a − 2) ⇒ a − 2 = 2 ⇒ a = 4.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 61
+  {
+    id: 'lines-61',
+    topic: 'Kenarortayın bulunduğu doğru',
+    stem: ['Analitik düzlemde verilen bir ABC üçgeninin C köşesi orijindedir.'],
+    ask: 'A(5, 1) ve B(−1, −7) olduğuna göre, [AB] kenarına ait kenarortayın üzerinde bulunduğu doğrunun denklemi aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: '3x + 2y = 0' },
+      { key: 'B', text: '2x + 3y = 0' },
+      { key: 'C', text: '3x − 2y = 0' },
+      { key: 'D', text: '2x − 3y = 0' },
+      { key: 'E', text: 'x + y = 0' },
+    ],
+    answer: 'A',
+    hint: 'Kenarortay C köşesini [AB] nin orta noktasına birleştirir.',
+    solution: [
+      {
+        title: 'Orta nokta',
+        detail: 'M = ((5 + (−1)) / 2, (1 + (−7)) / 2) = (2, −3).',
+      },
+      {
+        title: 'Eğim',
+        detail: 'Doğru orijinden ve M den geçer: m = −3 / 2.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'y = −3x/2 ⇒ 2y = −3x ⇒ 3x + 2y = 0.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 62
+  {
+    id: 'lines-62',
+    topic: 'Doğru üzerinde köşesi olan dikdörtgen',
+    given: ['d: y = −x/2 + 5', 'OABC dikdörtgen'],
+    // Origin (60, 220), 30 px per unit; A(6, 0), B(6, 2), C(0, 2).
+    figure: {
+      viewBox: '0 10 400 260',
+      caption: 'Şekil 29',
+      label:
+        'Dik koordinat düzleminde d doğrusu ve OABC dikdörtgeni; A köşesi x ekseni, C köşesi y ekseni üzerinde, B köşesi d doğrusu üzerinde.',
+      svg: `
+          <path class="ln" d="M20,220 L385,220"/>
+          <path class="ln" d="M375,214 L385,220 L375,226"/>
+          <path class="ln" d="M60,260 L60,20"/>
+          <path class="ln" d="M54,30 L60,20 L66,30"/>
+          <text x="382" y="240" text-anchor="middle">x</text>
+          <text x="72" y="30">y</text>
+          <path class="ln" d="M30,55 L378,229"/>
+          <path class="ln" d="M60,220 L240,220 L240,160 L60,160 Z"/>
+          <circle class="pt" cx="60" cy="220" r="3.2"/>
+          <circle class="pt" cx="240" cy="220" r="3.2"/>
+          <circle class="pt" cx="240" cy="160" r="3.2"/>
+          <circle class="pt" cx="60" cy="160" r="3.2"/>
+          <text x="52" y="238" text-anchor="end">O</text>
+          <text x="240" y="240" text-anchor="middle">A</text>
+          <text x="248" y="154">B</text>
+          <text x="52" y="164" text-anchor="end">C</text>
+          <text x="366" y="250">d</text>
+        `,
+    },
+    stem: [],
+    ask: 'OABC dikdörtgeninin çevresi 16 birim olduğuna göre, alanı kaç birim karedir?',
+    choices: [
+      { key: 'A', text: '6' },
+      { key: 'B', text: '9' },
+      { key: 'C', text: '12' },
+      { key: 'D', text: '15' },
+      { key: 'E', text: '18' },
+    ],
+    answer: 'C',
+    hint: 'B köşesini B(a, b) al; b yi d doğrusunun denkleminden a cinsinden yaz.',
+    solution: [
+      {
+        title: 'B köşesi',
+        detail: 'B(a, b) d üzerinde ⇒ b = −a/2 + 5. Kenarlar a ve b dir.',
+      },
+      {
+        title: 'Çevre',
+        detail: '2(a + b) = 16 ⇒ a + (−a/2 + 5) = 8 ⇒ a/2 = 3 ⇒ a = 6.',
+      },
+      {
+        title: 'Diğer kenar',
+        detail: 'b = −3 + 5 = 2.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Alan = 6 · 2 = 12 birim karedir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 63
+  {
+    id: 'lines-63',
+    topic: 'Diklik koşulu',
+    stem: [
+      'Analitik düzlemde verilen d₁: 3x + ay − 6 = 0 ve d₂: 2x − y + 4 = 0 doğruları dik olarak kesişmektedir.',
+    ],
+    ask: 'Buna göre, a kaçtır?',
+    choices: [
+      { key: 'A', text: '−6' },
+      { key: 'B', text: '−3/2' },
+      { key: 'C', text: '3/2' },
+      { key: 'D', text: '3' },
+      { key: 'E', text: '6' },
+    ],
+    answer: 'E',
+    hint: 'Dik doğruların eğimlerinin çarpımı −1 dir.',
+    solution: [
+      {
+        title: 'Eğimler',
+        detail: 'm₁ = −3/a, m₂ = −2/(−1) = 2.',
+      },
+      {
+        title: 'Diklik koşulu',
+        detail: 'm₁ · m₂ = −1 ⇒ (−3/a) · 2 = −1 ⇒ −6/a = −1.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'a = 6 dır.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 64
+  {
+    id: 'lines-64',
+    topic: 'Kesim noktasından ve orijinden geçen doğru',
+    stem: ['Analitik düzlemde d₁: 2x + y − 7 = 0 ve d₂: x − 2y + 4 = 0 doğruları veriliyor.'],
+    ask: 'd₁ ile d₂ doğrularının kesim noktasından ve orijinden geçen doğrunun eğimi aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: '1/2' },
+      { key: 'B', text: '2/3' },
+      { key: 'C', text: '1' },
+      { key: 'D', text: '3/2' },
+      { key: 'E', text: '2' },
+    ],
+    answer: 'D',
+    hint: 'd₂ den x = 2y − 4 yazıp d₁ de yerine koy.',
+    solution: [
+      {
+        title: 'Yerine koyma',
+        detail: 'x = 2y − 4 ⇒ 2(2y − 4) + y − 7 = 0 ⇒ 5y = 15 ⇒ y = 3.',
+      },
+      {
+        title: 'Kesim noktası',
+        detail: 'x = 2 · 3 − 4 = 2 ⇒ (2, 3).',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Orijinden ve (2, 3) ten geçen doğrunun eğimi 3 / 2 dir.',
+      },
+    ],
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -2817,6 +3143,22 @@ export const UNIT_7_LINES: Unit = {
       summary:
         'Noktanın doğruya uzaklığı, eksen üzerinde kesişen doğrular, eşkenar dörtgen köşegeni, dik doğru, taralı alan ve eksene dik doğru.',
       questions: pick('lines-52', 'lines-53', 'lines-54', 'lines-55', 'lines-56', 'lines-57'),
+    },
+    {
+      id: 'lines-m10',
+      order: 10,
+      title: 'Kesişim, diklik ve alan',
+      summary:
+        'Paralel doğrularla yamuk alanı, kesim noktasından geçen doğru, dik doğrular, kenarortay doğrusu, doğru üzerinde köşesi olan dikdörtgen ve diklik koşulu.',
+      questions: pick(
+        'lines-58',
+        'lines-59',
+        'lines-60',
+        'lines-61',
+        'lines-62',
+        'lines-63',
+        'lines-64',
+      ),
     },
   ],
 };
