@@ -2115,6 +2115,273 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+  // ---------------------------------------------------------------- 45
+  {
+    id: 'lines-45',
+    topic: 'Paralel doğruların eğimleri',
+    stem: ['(m − 1)x + (2m + 1)y − 3 = 0 doğrusu 3x + 2y + 1 = 0 doğrusuna paraleldir.'],
+    ask: 'Buna göre, m kaçtır?',
+    choices: [
+      { key: 'A', text: '5/4' },
+      { key: 'B', text: '−4/5' },
+      { key: 'C', text: '−5/4' },
+      { key: 'D', text: '1/4' },
+      { key: 'E', text: '−1/4' },
+    ],
+    answer: 'C',
+    hint: 'Paralel doğruların eğimleri eşittir; ax + by + c = 0 doğrusunun eğimi −a/b dir.',
+    solution: [
+      {
+        title: 'Eğimler',
+        detail: 'Birinci doğrunun eğimi −(m − 1)/(2m + 1), ikincisinin eğimi −3/2 dir.',
+      },
+      {
+        title: 'Eşitle',
+        detail: '(m − 1)/(2m + 1) = 3/2 ⇒ 2m − 2 = 6m + 3.',
+      },
+      {
+        title: 'Çöz',
+        detail: '−4m = 5 ⇒ m = −5/4.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'm = −5/4 tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 46
+  {
+    id: 'lines-46',
+    topic: 'Orta noktadan geçen doğru',
+    stem: [
+      'Analitik düzlemde A(−1, 6) ve B(5, 2) noktaları veriliyor.',
+      'y = 3x + n doğrusu [AB] doğru parçasının orta noktasından geçmektedir.',
+    ],
+    ask: 'Buna göre, n kaçtır?',
+    choices: [
+      { key: 'A', text: '−4' },
+      { key: 'B', text: '−2' },
+      { key: 'C', text: '0' },
+      { key: 'D', text: '2' },
+      { key: 'E', text: '4' },
+    ],
+    answer: 'B',
+    hint: 'Önce [AB] nin orta noktasını bul, sonra doğru denkleminde yerine yaz.',
+    solution: [
+      {
+        title: 'Orta nokta',
+        detail: 'M((−1 + 5)/2, (6 + 2)/2) = M(2, 4).',
+      },
+      {
+        title: 'Denklemde yerine yaz',
+        detail: '4 = 3 · 2 + n ⇒ 4 = 6 + n.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'n = −2 dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 47
+  {
+    id: 'lines-47',
+    topic: 'Paralel doğrunun eksen kesim noktası',
+    stem: [],
+    ask: 'A(4, 2) noktasından geçen ve y = 2x + 1 doğrusuna paralel olan doğrunun x eksenini kestiği noktanın apsisi kaçtır?',
+    choices: [
+      { key: 'A', text: '−3' },
+      { key: 'B', text: '1' },
+      { key: 'C', text: '2' },
+      { key: 'D', text: '3' },
+      { key: 'E', text: '6' },
+    ],
+    answer: 'D',
+    hint: 'Paralel doğrunun eğimi de 2 dir; A noktasını kullanarak denklemi yaz.',
+    solution: [
+      {
+        title: 'Eğim',
+        detail: 'Paralel doğruların eğimi eşit olduğundan m = 2.',
+      },
+      {
+        title: 'Doğru denklemi',
+        detail: 'y − 2 = 2(x − 4) ⇒ y = 2x − 6.',
+      },
+      {
+        title: 'x eksenini kestiği nokta',
+        detail: 'y = 0 için 2x − 6 = 0 ⇒ x = 3.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Kesim noktasının apsisi 3 tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 48
+  {
+    id: 'lines-48',
+    topic: 'Doğru parçasının orta dikmesi',
+    stem: [],
+    ask: 'A(1, 3) ve B(5, 7) noktalarının orta noktasından geçen ve AB doğrusuna dik olan doğrunun denklemi aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: 'x − y + 2 = 0' },
+      { key: 'B', text: '2x + y − 11 = 0' },
+      { key: 'C', text: 'x + y − 8 = 0' },
+      { key: 'D', text: 'x + y − 6 = 0' },
+      { key: 'E', text: 'x + y + 8 = 0' },
+    ],
+    answer: 'C',
+    hint: 'Dik doğruların eğimleri çarpımı −1 dir; önce AB nin eğimini ve orta noktayı bul.',
+    solution: [
+      {
+        title: 'Orta nokta',
+        detail: 'M((1 + 5)/2, (3 + 7)/2) = M(3, 5).',
+      },
+      {
+        title: 'AB nin eğimi',
+        detail: 'm(AB) = (7 − 3)/(5 − 1) = 1.',
+      },
+      {
+        title: 'Dik doğrunun eğimi',
+        detail: 'm · 1 = −1 ⇒ m = −1.',
+      },
+      {
+        title: 'Denklem',
+        detail: 'y − 5 = −1 · (x − 3) ⇒ x + y − 8 = 0.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Aranan doğru x + y − 8 = 0 dır.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 49
+  {
+    id: 'lines-49',
+    topic: 'Doğru parçasını verilen oranda bölen nokta',
+    stem: [
+      'Analitik düzlemde A(−2, 1) ve B(8, 6) noktaları veriliyor.',
+      'ax − y + 5 = 0 doğrusu, [AB] doğru parçasını |AC| / |CB| = 2/3 oranında bölen bir C noktasından geçmektedir.',
+    ],
+    ask: 'Buna göre, a sayısı kaçtır?',
+    choices: [
+      { key: 'A', text: '−2' },
+      { key: 'B', text: '−1' },
+      { key: 'C', text: '0' },
+      { key: 'D', text: '1' },
+      { key: 'E', text: '2' },
+    ],
+    answer: 'B',
+    hint: 'C noktası A dan B ye giden yolun 2/5 i kadar ilerisindedir.',
+    solution: [
+      {
+        title: 'Oran',
+        detail: '|AC| / |CB| = 2/3 ise |AC| = (2/5) · |AB| dir.',
+      },
+      {
+        title: 'C noktası',
+        detail: 'C = (−2 + (2/5) · 10, 1 + (2/5) · 5) = (2, 3).',
+      },
+      {
+        title: 'Denklemde yerine yaz',
+        detail: 'a · 2 − 3 + 5 = 0 ⇒ 2a = −2.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'a = −1 dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 50
+  {
+    id: 'lines-50',
+    topic: 'x ekseni üzerinde kesişen doğrular',
+    // Origin (220, 200), 30 px per unit; d₁: y = x + 2 and d₂: y = 3x + 6 meet at (−2, 0).
+    figure: {
+      viewBox: '0 0 400 300',
+      caption: 'Şekil 22',
+      label:
+        'Dik koordinat sisteminde d₁ ve d₂ doğruları; iki doğru x ekseninin negatif tarafında aynı noktada kesişiyor, d₂ daha dik.',
+      svg: `
+          <path class="ln" d="M40,200 L385,200"/>
+          <path class="ln" d="M375,194 L385,200 L375,206"/>
+          <path class="ln" d="M220,290 L220,15"/>
+          <path class="ln" d="M214,25 L220,15 L226,25"/>
+          <text x="382" y="220" text-anchor="middle">x</text>
+          <text x="232" y="27">y</text>
+          <text x="212" y="218" text-anchor="end">O</text>
+          <path class="ln" d="M85,275 L325,35"/>
+          <path class="ln" d="M136,272 L215,35"/>
+          <text x="333" y="40">d₁</text>
+          <text x="196" y="38" text-anchor="end">d₂</text>
+        `,
+    },
+    given: ['d₁: y = x + 2', 'd₂: 3x − y + k = 0'],
+    stem: [],
+    ask: 'Yukarıdaki dik koordinat sisteminde verilen d₁ ve d₂ doğruları x ekseni üzerinde kesiştiklerine göre, k kaçtır?',
+    choices: [
+      { key: 'A', text: '−6' },
+      { key: 'B', text: '−2' },
+      { key: 'C', text: '2' },
+      { key: 'D', text: '6' },
+      { key: 'E', text: '8' },
+    ],
+    answer: 'D',
+    hint: 'd₁ in x eksenini kestiği noktayı bul; d₂ de bu noktadan geçmelidir.',
+    solution: [
+      {
+        title: 'd₁ in x eksenini kestiği nokta',
+        detail: 'y = 0 için 0 = x + 2 ⇒ x = −2; nokta (−2, 0).',
+      },
+      {
+        title: 'd₂ bu noktadan geçer',
+        detail: '3 · (−2) − 0 + k = 0 ⇒ −6 + k = 0.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'k = 6 dır.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 51
+  {
+    id: 'lines-51',
+    topic: 'Noktadan geçen dik doğru',
+    stem: [],
+    ask: 'Analitik düzlemde P(1, −2) noktasından geçen ve 3x − 4y + 2 = 0 doğrusuna dik olan doğrunun denklemi aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: '4x + 3y − 2 = 0' },
+      { key: 'B', text: '4x − 3y − 10 = 0' },
+      { key: 'C', text: '3x − 4y − 11 = 0' },
+      { key: 'D', text: '4x + 3y + 10 = 0' },
+      { key: 'E', text: '4x + 3y + 2 = 0' },
+    ],
+    answer: 'E',
+    hint: 'Verilen doğrunun eğimini bul; dik doğrunun eğimi onun negatif tersidir.',
+    solution: [
+      {
+        title: 'Verilen doğrunun eğimi',
+        detail: 'm = −3/(−4) = 3/4.',
+      },
+      {
+        title: 'Dik doğrunun eğimi',
+        detail: '(3/4) · m′ = −1 ⇒ m′ = −4/3.',
+      },
+      {
+        title: 'Denklem',
+        detail: 'y + 2 = −(4/3)(x − 1) ⇒ 3y + 6 = −4x + 4 ⇒ 4x + 3y + 2 = 0.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Aranan doğru 4x + 3y + 2 = 0 dır.',
+      },
+    ],
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -2210,6 +2477,22 @@ export const UNIT_7_LINES: Unit = {
       summary:
         'Noktadan geçen doğrunun eğimi, kare ve dik doğrular, doğruya göre simetri, eğim açısı, doğruyla üçgen alanı ve eşkenar üçgen.',
       questions: pick('lines-39', 'lines-40', 'lines-41', 'lines-42', 'lines-43', 'lines-44'),
+    },
+    {
+      id: 'lines-m8',
+      order: 8,
+      title: 'Paralel ve dik doğrular',
+      summary:
+        'Paralellik koşulu, orta noktadan ve oranla bölen noktadan geçen doğru, orta dikme, eksen üzerinde kesişen doğrular ve dik doğru denklemi.',
+      questions: pick(
+        'lines-45',
+        'lines-46',
+        'lines-47',
+        'lines-48',
+        'lines-49',
+        'lines-50',
+        'lines-51',
+      ),
     },
   ],
 };
