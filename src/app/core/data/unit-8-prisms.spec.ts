@@ -26,6 +26,13 @@ describe('unit 8 answer key', () => {
   it('7 — a + b + c = 12, 144 − 94 = 50, √50 = 5√2 → D', () =>
     expect(answerOf('prisms-7')).toBe('D'));
   it('8 — h = 180/18 = 10, 9√3·10 = 90√3 → C', () => expect(answerOf('prisms-8')).toBe('C'));
+  it('9 — 21 + 2·14 = 49, √49 = 7 → B', () => expect(answerOf('prisms-9')).toBe('B'));
+  it('10 — 192π − π·4²·8/2 = 192π − 64π = 128π → C', () => expect(answerOf('prisms-10')).toBe('C'));
+  it('11 — area 48, u = 16, r = 3, π·9·10 = 90π → D', () =>
+    expect(answerOf('prisms-11')).toBe('D'));
+  it('12 — 96π + 48π + 2·27π = 198π → C', () => expect(answerOf('prisms-12')).toBe('C'));
+  it('13 — 4·8·16 = 512 = 8³, 8√3 → D', () => expect(answerOf('prisms-13')).toBe('D'));
+  it('14 — 2·(12 + 28) = 80, 80·3 = 240 → D', () => expect(answerOf('prisms-14')).toBe('D'));
 
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
