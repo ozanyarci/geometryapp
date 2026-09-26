@@ -48,6 +48,16 @@ describe('unit 9 answer key', () => {
     expect(answerOf('pyramids-17')).toBe('E'));
   it('18 — r = 6, h = 6·tan 30° = 2√3, (1/3)·36·2√3 = 24√3 → C', () =>
     expect(answerOf('pyramids-18')).toBe('C'));
+
+  it('19 — (1/3)·S·18 = S·x, x = 6 → C', () => expect(answerOf('pyramids-19')).toBe('C'));
+  it('20 — base 16²/2 = 128, h = √(289 − 64) = 15, (1/3)·128·15 = 640 → D', () =>
+    expect(answerOf('pyramids-20')).toBe('D'));
+  it('21 — π(3r)²·2h ÷ (πr²h/3) = 18·3 = 54 → E', () => expect(answerOf('pyramids-21')).toBe('E'));
+  it('22 — r = 6, ℓ = 60/6 = 10, cone 36·8/3 = 96, cylinder 36·10 = 360, 456 → C', () =>
+    expect(answerOf('pyramids-22')).toBe('C'));
+  it('23 — r = 5, h = 6√2·sin 45° = 6, (1/3)·25·6 = 50 → C', () =>
+    expect(answerOf('pyramids-23')).toBe('C'));
+  it('24 — (1/3)·(8·6/2)·10 = 80 → C', () => expect(answerOf('pyramids-24')).toBe('C'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)

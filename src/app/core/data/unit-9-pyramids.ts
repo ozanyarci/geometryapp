@@ -1161,6 +1161,325 @@ const QUESTIONS: Question[] = [
         `,
     },
   },
+  // ---------------------------------------------------------------- 19
+  {
+    id: 'pyramids-19',
+    topic: 'Koniden eş tabanlı silindire su',
+    stem: ['İçi su ile dolu olan bir dik koninin yüksekliği 18 cm dir.'],
+    ask: 'Koninin içindeki bu su, koni ile eş tabanlı bir dik silindire boşaltıldığında silindirin içindeki suyun yüksekliği kaç cm olur?',
+    choices: [
+      { key: 'A', text: '4' },
+      { key: 'B', text: '5' },
+      { key: 'C', text: '6' },
+      { key: 'D', text: '8' },
+      { key: 'E', text: '9' },
+    ],
+    answer: 'C',
+    hint: 'Taban alanları eşit olduğundan iki hacmi eşitleyip taban alanını sadeleştir.',
+    solution: [
+      {
+        title: 'Koninin hacmi',
+        detail: 'Taban alanı S ise suyun hacmi (1/3) · S · 18 = 6S dir.',
+      },
+      {
+        title: 'Silindirdeki su',
+        detail: 'Suyun silindirdeki yüksekliği x ise hacmi S · x olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'S · x = 6S olduğundan x = 6 cm dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 20
+  // Square base of edge 8√2 ≈ 11.31 in cabinet oblique at 15 px per cm; T stands
+  // 15 cm above the centre O of the base.
+  {
+    id: 'pyramids-20',
+    topic: 'Köşegen ve yan ayrıttan kare piramidin hacmi',
+    stem: ['Yandaki düzgün kare piramitte'],
+    given: ['|TC| = 17 cm', '|AC| = 16 cm'],
+    ask: 'Yukarıdaki verilere göre, piramidin hacmi kaç cm³ tür?',
+    choices: [
+      { key: 'A', text: '480' },
+      { key: 'B', text: '560' },
+      { key: 'C', text: '600' },
+      { key: 'D', text: '640' },
+      { key: 'E', text: '720' },
+    ],
+    answer: 'D',
+    hint: 'Tepe noktası köşegenlerin kesim noktasının üstündedir; yarım köşegen ve yan ayrıtla dik üçgen kur.',
+    solution: [
+      {
+        title: 'Taban alanı',
+        detail: 'Karenin alanı köşegenden bulunur: 16² / 2 = 128 cm².',
+      },
+      {
+        title: 'Yükseklik',
+        detail:
+          'O köşegenlerin kesim noktası ise |OC| = 16 / 2 = 8 cm; TOC dik üçgeninde |TO| = √(17² − 8²) = √225 = 15 cm dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'V = (1/3) · 128 · 15 = 640 cm³ tür.',
+      },
+    ],
+    figure: {
+      viewBox: '0 20 400 300',
+      caption: 'Şekil 14',
+      label:
+        'Tabanı ABCD karesi olan düzgün kare piramit; T tepe noktası, [AC] tabanın köşegeni. |TC| = 17 cm, |AC| = 16 cm.',
+      svg: `
+          <path class="hid" d="M90,300 L150,240 L319.7,240 M204.9,45 L150,240 M90,300 L319.7,240"/>
+          <path class="ln" d="M90,300 L259.7,300 L319.7,240 L204.9,45 Z M204.9,45 L259.7,300"/>
+          <circle class="pt" cx="204.9" cy="45" r="3.2"/>
+          <circle class="pt" cx="90" cy="300" r="3.2"/>
+          <circle class="pt" cx="259.7" cy="300" r="3.2"/>
+          <circle class="pt" cx="319.7" cy="240" r="3.2"/>
+          <circle class="pt" cx="150" cy="240" r="3.2"/>
+          <text x="204.9" y="35" text-anchor="middle">T</text>
+          <text x="82" y="316" text-anchor="end">A</text>
+          <text x="267.7" y="316">B</text>
+          <text x="327.7" y="246">C</text>
+          <text x="142" y="236" text-anchor="end">D</text>
+          <text class="val" x="272" y="136">17</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 21
+  // r = 1 and h = 3 at 20 px per cm; ellipses at 0.3 aspect.
+  {
+    id: 'pyramids-21',
+    topic: 'Koni biçimli kapla silindir doldurma',
+    stem: [
+      'Şekildeki r yarıçaplı, h yükseklikli koni biçimindeki küçük kap kullanılarak 3r yarıçaplı, 2h yüksekliğine sahip silindir biçimindeki kap doldurulmak isteniyor.',
+    ],
+    ask: 'Bu işlem için kaç küçük kap dolusu suya ihtiyaç vardır?',
+    choices: [
+      { key: 'A', text: '18' },
+      { key: 'B', text: '27' },
+      { key: 'C', text: '36' },
+      { key: 'D', text: '48' },
+      { key: 'E', text: '54' },
+    ],
+    answer: 'E',
+    hint: 'İki kabın hacmini r ve h cinsinden yazıp birbirine böl.',
+    solution: [
+      {
+        title: 'Küçük kap',
+        detail: 'Koninin hacmi (1/3) · πr² · h = πr²h / 3 tür.',
+      },
+      {
+        title: 'Silindir',
+        detail: 'Silindirin hacmi π · (3r)² · 2h = 18πr²h dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: '18πr²h ÷ (πr²h / 3) = 54 kap dolusu su gerekir.',
+      },
+    ],
+    figure: {
+      viewBox: '0 40 400 180',
+      caption: 'Şekil 15',
+      label:
+        'Solda r yarıçaplı, h yükseklikli, tepesi aşağıda koni biçiminde küçük kap; sağda 3r yarıçaplı, 2h yükseklikli silindir biçiminde kap.',
+      svg: `
+          <path class="ln" d="M60,100 A20,6 0 0 0 100,100 A20,6 0 0 0 60,100 Z M60,100 L80,160 L100,100"/>
+          <path class="hid" d="M80,100 L100,100 M80,100 L80,160"/>
+          <circle class="pt" cx="80" cy="100" r="3.2"/>
+          <text class="val" x="90" y="86" text-anchor="middle">r</text>
+          <text class="val" x="104" y="140">h</text>
+          <path class="ln" d="M210,70 A60,18 0 0 0 330,70 A60,18 0 0 0 210,70 Z M210,70 L210,190 A60,18 0 0 0 330,190 L330,70"/>
+          <path class="hid" d="M210,190 A60,18 0 0 1 330,190 M270,190 L330,190"/>
+          <circle class="pt" cx="270" cy="190" r="3.2"/>
+          <text class="val" x="300" y="184" text-anchor="middle">3r</text>
+          <text class="val" x="202" y="136" text-anchor="end">2h</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 22
+  // r = 6, cone height 8 and cylinder height 10 at 12 px per cm; ellipses at
+  // 0.3 aspect.
+  {
+    id: 'pyramids-22',
+    topic: 'Silindir üstündeki koninin toplam hacmi',
+    stem: ['Şekilde yarıçapları eşit silindir ve dik koni üst üste konulmuştur.'],
+    given: ['|BC| = |CD|', '|DE| = 12 cm', 'Koninin yanal alanı 60π cm²'],
+    ask: 'Yukarıdaki verilere göre, şeklin tüm hacmi kaç π cm³ tür?',
+    choices: [
+      { key: 'A', text: '420' },
+      { key: 'B', text: '432' },
+      { key: 'C', text: '456' },
+      { key: 'D', text: '480' },
+      { key: 'E', text: '504' },
+    ],
+    answer: 'C',
+    hint: 'Yanal alan πrℓ formülünden koninin ana doğrusunu bul; silindirin yüksekliği ona eşittir.',
+    solution: [
+      {
+        title: 'Ana doğru',
+        detail: '[DE] çap olduğundan r = 6 cm; π · 6 · ℓ = 60π ise ℓ = |BC| = 10 cm dir.',
+      },
+      {
+        title: 'Koninin hacmi',
+        detail: 'Koninin yüksekliği √(10² − 6²) = 8 cm; hacmi (1/3) · π · 6² · 8 = 96π cm³ tür.',
+      },
+      {
+        title: 'Silindirin hacmi',
+        detail: 'Silindirin yüksekliği |CD| = |BC| = 10 cm; hacmi π · 6² · 10 = 360π cm³ tür.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Tüm hacim 96π + 360π = 456π cm³ tür.',
+      },
+    ],
+    figure: {
+      viewBox: '0 0 400 282',
+      caption: 'Şekil 16',
+      label:
+        'Tepe noktası B olan dik koni, tabanı AC çaplı daire olacak biçimde silindirin üstüne konmuş; silindirin alt tabanının çapı [ED]. |BC| = |CD|, |DE| = 12 cm.',
+      svg: `
+          <path class="hid" d="M128,126 A72,21.6 0 0 1 272,126 M128,246 A72,21.6 0 0 1 272,246 M128,246 L272,246"/>
+          <path class="ln" d="M200,30 L128,126 A72,21.6 0 0 0 272,126 Z M128,126 L128,246 A72,21.6 0 0 0 272,246 L272,126"/>
+          <path class="tick" d="M231.2,81.6 L240.8,74.4 M266,186 L278,186"/>
+          <circle class="pt" cx="200" cy="30" r="3.2"/>
+          <circle class="pt" cx="128" cy="126" r="3.2"/>
+          <circle class="pt" cx="272" cy="126" r="3.2"/>
+          <circle class="pt" cx="128" cy="246" r="3.2"/>
+          <circle class="pt" cx="272" cy="246" r="3.2"/>
+          <text x="200" y="20" text-anchor="middle">B</text>
+          <text x="120" y="130" text-anchor="end">A</text>
+          <text x="280" y="130">C</text>
+          <text x="120" y="252" text-anchor="end">E</text>
+          <text x="280" y="252">D</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 23
+  // Base radius 5 at 20 px per cm, ellipse at 0.3 aspect; P sits 6 cm right of
+  // and 6 cm above B, so [PB] = 6√2 makes 45° with the base.
+  {
+    id: 'pyramids-23',
+    topic: 'Eğik koninin hacmi',
+    stem: [],
+    given: ['|AB| = 10 cm', '|PB| = 6√2 cm', 'm(PBT) = 45°'],
+    ask: 'Yukarıdaki eğik koni taban düzlemiyle 45° lik açı yaptığına göre, hacmi kaç cm³ tür?',
+    choices: [
+      { key: 'A', text: '40π' },
+      { key: 'B', text: '45π' },
+      { key: 'C', text: '50π' },
+      { key: 'D', text: '60π' },
+      { key: 'E', text: '75π' },
+    ],
+    answer: 'C',
+    hint: 'P den taban düzlemine inen dikme koninin yüksekliğidir; 45° lik açıyı içeren dik üçgeni kullan.',
+    solution: [
+      {
+        title: 'Yarıçap',
+        detail: '[AB] taban dairesinin çapıdır: r = 10 / 2 = 5 cm.',
+      },
+      {
+        title: 'Yükseklik',
+        detail:
+          'P den BT doğrusuna inen dikmenin ayağı H olsun. PHB ikizkenar dik üçgeninde |PH| = 6√2 · sin 45° = 6 cm dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'V = (1/3) · π · 5² · 6 = 50π cm³ tür.',
+      },
+    ],
+    figure: {
+      viewBox: '0 28 400 192',
+      caption: 'Şekil 17',
+      label:
+        'Tabanı AB çaplı daire olan eğik koni; P tepe noktası, T noktası AB doğrusu üzerinde B nin ötesinde. |AB| = 10 cm, |PB| = 6√2 cm, PBT açısı 45°.',
+      svg: `
+          <path class="shade" d="M350,60 L30,180 L230,180 Z"/>
+          <path class="hid" d="M30,180 A100,30 0 0 1 230,180 M30,180 L230,180"/>
+          <path class="ln" d="M30,180 A100,30 0 0 0 230,180 M350,60 L30,180 M350,60 L230,180 L380,180"/>
+          <path class="arc" d="M258,180 A28,28 0 0 0 249.8,160.2"/>
+          <circle class="pt" cx="350" cy="60" r="3.2"/>
+          <circle class="pt" cx="30" cy="180" r="3.2"/>
+          <circle class="pt" cx="230" cy="180" r="3.2"/>
+          <circle class="pt" cx="130" cy="180" r="3.2"/>
+          <circle class="pt" cx="380" cy="180" r="3.2"/>
+          <text x="350" y="50" text-anchor="middle">P</text>
+          <text x="22" y="186" text-anchor="end">A</text>
+          <text x="230" y="200" text-anchor="middle">B</text>
+          <text x="380" y="200" text-anchor="middle">T</text>
+          <text class="val" x="264" y="172">45°</text>
+          <text class="val" x="298" y="134">6√2</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 24
+  // Box 8 × 6 × 10 in cabinet oblique at 20 px per cm; L sits above B.
+  {
+    id: 'pyramids-24',
+    topic: 'Dikdörtgenler prizmasından kesilen piramit',
+    stem: ['Şekil bir dikdörtgenler prizmasıdır.'],
+    given: ['|AB| = 8 cm', '|BC| = 6 cm', '|MC| = 10 cm'],
+    ask: 'Yukarıdaki verilere göre, oluşan (L, ADC) piramidinin hacmi kaç cm³ tür?',
+    choices: [
+      { key: 'A', text: '64' },
+      { key: 'B', text: '72' },
+      { key: 'C', text: '80' },
+      { key: 'D', text: '96' },
+      { key: 'E', text: '120' },
+    ],
+    answer: 'C',
+    hint: 'L noktasının ABCD tabanına uzaklığı prizmanın yüksekliğidir.',
+    solution: [
+      {
+        title: 'Taban alanı',
+        detail: 'ADC üçgeni dikdörtgenin yarısıdır: (8 · 6) / 2 = 24 cm².',
+      },
+      {
+        title: 'Yükseklik',
+        detail: 'L, B nin tam üstündedir; tabana uzaklığı |LB| = |MC| = 10 cm dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'V = (1/3) · 24 · 10 = 80 cm³ tür.',
+      },
+    ],
+    figure: {
+      viewBox: '0 18 400 290',
+      caption: 'Şekil 18',
+      label:
+        'ABCDKLMN dikdörtgenler prizması; alt yüz ABCD, üst yüz KLMN, L noktası B nin üstünde. L noktası A, D ve C ile birleştirilmiş, ADC üçgeni taralı. |AB| = 8, |BC| = 6, |MC| = 10.',
+      svg: `
+          <path class="shade" d="M100,280 L142.4,237.6 L302.4,237.6 Z"/>
+          <path class="hid" d="M100,280 L142.4,237.6 L302.4,237.6 M142.4,237.6 L142.4,37.6 M100,280 L302.4,237.6 M260,80 L142.4,237.6"/>
+          <path class="ln" d="M100,280 L260,280 L302.4,237.6 L302.4,37.6 L142.4,37.6 L100,80 Z"/>
+          <path class="ln" d="M100,80 L260,80 L302.4,37.6 M260,80 L260,280 M260,80 L100,280 M260,80 L302.4,237.6"/>
+          <circle class="pt" cx="100" cy="280" r="3.2"/>
+          <circle class="pt" cx="260" cy="280" r="3.2"/>
+          <circle class="pt" cx="302.4" cy="237.6" r="3.2"/>
+          <circle class="pt" cx="142.4" cy="237.6" r="3.2"/>
+          <circle class="pt" cx="100" cy="80" r="3.2"/>
+          <circle class="pt" cx="260" cy="80" r="3.2"/>
+          <circle class="pt" cx="302.4" cy="37.6" r="3.2"/>
+          <circle class="pt" cx="142.4" cy="37.6" r="3.2"/>
+          <text x="92" y="296" text-anchor="end">A</text>
+          <text x="268" y="296">B</text>
+          <text x="310.4" y="243.6">C</text>
+          <text x="134.4" y="231.6" text-anchor="end">D</text>
+          <text x="92" y="86" text-anchor="end">K</text>
+          <text x="266" y="98">L</text>
+          <text x="310.4" y="34">M</text>
+          <text x="134.4" y="34" text-anchor="end">N</text>
+          <text class="val" x="180" y="298" text-anchor="middle">8</text>
+          <text class="val" x="290" y="274">6</text>
+          <text class="val" x="312" y="142">10</text>
+        `,
+    },
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -1228,6 +1547,21 @@ export const UNIT_9_PYRAMIDS: Unit = {
         'pyramids-16',
         'pyramids-17',
         'pyramids-18',
+      ),
+    },
+    {
+      id: 'pyramids-m4',
+      order: 4,
+      title: 'Koni, silindir ve kesilen piramit',
+      summary:
+        'Koniden eş tabanlı silindire su, köşegenden kare piramidin hacmi, koni kapla silindir doldurma, silindir üstündeki koni, eğik koni ve prizmadan kesilen piramit.',
+      questions: pick(
+        'pyramids-19',
+        'pyramids-20',
+        'pyramids-21',
+        'pyramids-22',
+        'pyramids-23',
+        'pyramids-24',
       ),
     },
   ],
