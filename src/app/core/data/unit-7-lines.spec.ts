@@ -237,6 +237,17 @@ describe('unit 7 answer key', () => {
   it('125 — 5x + 2y − 20 = 0, x = 0, y = 10 → E', () => expect(answerOf('lines-125')).toBe('E'));
   it('126 — (−1, 5), slope −3, y = −3x + 2, 3x + y − 2 = 0 → B', () =>
     expect(answerOf('lines-126')).toBe('B'));
+  it('127 — B(−3, −2), base 6, height 3, 6 · 3/2 = 9 → C', () =>
+    expect(answerOf('lines-127')).toBe('C'));
+  it('128 — y = 2x − 4, 5x = 15, (3, 2) → (2, 3) → B', () =>
+    expect(answerOf('lines-128')).toBe('B'));
+  it('129 — x ≥ 0, (0, 1) above y = 2x, O below x + y = 6 → IV → D', () =>
+    expect(answerOf('lines-129')).toBe('D'));
+  it('130 — m = (60 − 30)/3 = 10, 30 + 10 = 40 → A', () => expect(answerOf('lines-130')).toBe('A'));
+  it('131 — (2 − x) − 2(6 − y) + 3 = 0, x − 2y + 7 = 0 → E', () =>
+    expect(answerOf('lines-131')).toBe('E'));
+  it('132 — 3(4 − x) + (2 − y) − 4 = 0, 3x + y − 10 = 0, 3/2 + 1/2 = 2 → B', () =>
+    expect(answerOf('lines-132')).toBe('B'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)

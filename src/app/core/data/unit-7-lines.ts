@@ -5853,6 +5853,276 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+  // ---------------------------------------------------------------- 127
+  {
+    id: 'lines-127',
+    topic: 'Doğruya göre simetri ve üçgen alanı',
+    stem: [],
+    ask: 'Analitik düzlemde A(−3, 4) noktasının y = 1 doğrusuna göre simetriği B noktası ise, köşeleri A, B ve orijin olan üçgenin alanı kaç birimkaredir?',
+    choices: [
+      { key: 'A', text: '6' },
+      { key: 'B', text: '8' },
+      { key: 'C', text: '9' },
+      { key: 'D', text: '12' },
+      { key: 'E', text: '18' },
+    ],
+    answer: 'C',
+    hint: 'y = 1 doğrusuna göre simetride apsis değişmez; ordinat 1 in öbür yanına aynı uzaklıkta taşınır.',
+    solution: [
+      {
+        title: 'Simetrik nokta',
+        detail: 'A, y = 1 doğrusunun 3 birim üstündedir; B onun 3 birim altındadır: B(−3, −2).',
+      },
+      {
+        title: 'Taban',
+        detail: '[AB] düşeydir (x = −3); uzunluğu 4 − (−2) = 6 birimdir.',
+      },
+      {
+        title: 'Yükseklik',
+        detail: 'Orijinin x = −3 doğrusuna uzaklığı 3 birimdir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Alan = 6 · 3 / 2 = 9 birimkaredir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 128
+  {
+    id: 'lines-128',
+    topic: 'Kesim noktasının y = x doğrusuna göre simetriği',
+    stem: [],
+    ask: 'Dik koordinat sisteminde x + 2y − 7 = 0 ve 2x − y − 4 = 0 doğrularının kesim noktasının y = x doğrusuna göre simetriği olan nokta aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: '(−3, −2)' },
+      { key: 'B', text: '(2, 3)' },
+      { key: 'C', text: '(3, −2)' },
+      { key: 'D', text: '(−2, −3)' },
+      { key: 'E', text: '(−2, 3)' },
+    ],
+    answer: 'B',
+    hint: 'Önce iki denklemi birlikte çözerek kesim noktasını bul.',
+    solution: [
+      {
+        title: 'y yi yalnız bırak',
+        detail: '2x − y − 4 = 0 ⇒ y = 2x − 4.',
+      },
+      {
+        title: 'Yerine koy',
+        detail: 'x + 2(2x − 4) − 7 = 0 ⇒ 5x = 15 ⇒ x = 3, y = 2; kesim noktası (3, 2) dir.',
+      },
+      {
+        title: 'y = x e göre simetri',
+        detail: '(a, b) noktası (b, a) noktasına gider; koordinatlar yer değiştirir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Aranan nokta (2, 3) tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 129
+  {
+    id: 'lines-129',
+    topic: 'Eşitsizlik sisteminin belirttiği bölge',
+    // Origin (130, 280), 30 px per unit on both axes. y = 2x runs from
+    // (−0.3, −0.6) to (4.4, 8.8); x + y = 6 from (−1.5, 7.5) to (6.6, −0.6).
+    // The lines meet at (2, 4) → (190, 160). Region labels sit at (−2, 3),
+    // (2.67, 1.33), (5, 4), (0.67, 3.33) and (1, 7.5).
+    figure: {
+      viewBox: '0 0 400 325',
+      caption: 'Şekil 53',
+      label:
+        'Koordinat düzleminde orijinden geçen y = 2x doğrusu ile eksenleri (6, 0) ve (0, 6) noktalarında kesen x + y − 6 = 0 doğrusu çizili; doğrular (2, 4) noktasında kesişiyor. Doğrular ve y ekseniyle ayrılan bölgeler I, II, III, IV ve V ile numaralanmış: I y ekseninin solunda, II iki doğrunun altında kalan üçgende, III y = 2x in sağında ve x + y − 6 = 0 ın üstünde, IV y ekseni ile iki doğru arasındaki üçgende, V iki doğrunun üstünde.',
+      svg: `
+          <path class="ln" d="M20,280 L390,280"/>
+          <path class="ln" d="M380,274 L390,280 L380,286"/>
+          <path class="ln" d="M130,305 L130,12"/>
+          <path class="ln" d="M124,22 L130,12 L136,22"/>
+          <text x="386" y="302" text-anchor="middle">x</text>
+          <text x="142" y="24">y</text>
+          <path class="ln" d="M121,298 L262,16"/>
+          <path class="ln" d="M85,55 L328,298"/>
+          <circle class="pt" cx="190" cy="160" r="3.2"/>
+          <text x="138" y="298">O</text>
+          <text x="122" y="105" text-anchor="end">6</text>
+          <text x="302" y="298" text-anchor="middle">6</text>
+          <text x="268" y="30">y = 2x</text>
+          <text x="392" y="320" text-anchor="end">x + y − 6 = 0</text>
+          <text x="70" y="196" text-anchor="middle">I.</text>
+          <text x="210" y="246" text-anchor="middle">II.</text>
+          <text x="280" y="166" text-anchor="middle">III.</text>
+          <text x="152" y="186" text-anchor="middle">IV.</text>
+          <text x="160" y="60" text-anchor="middle">V.</text>
+        `,
+    },
+    stem: [],
+    ask: 'y ≥ 2x, x + y − 6 ≤ 0 ve x ≥ 0 eşitsizliklerini sağlayan bölge aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: 'I.' },
+      { key: 'B', text: 'II.' },
+      { key: 'C', text: 'III.' },
+      { key: 'D', text: 'IV.' },
+      { key: 'E', text: 'V.' },
+    ],
+    answer: 'D',
+    hint: 'Her eşitsizlik için bir deneme noktası seç ve doğrunun hangi tarafının istendiğini belirle.',
+    solution: [
+      {
+        title: 'x ≥ 0',
+        detail: 'Bölge y ekseninin sağındadır; I. bölge elenir.',
+      },
+      {
+        title: 'y ≥ 2x',
+        detail:
+          '(0, 1) noktası için 1 ≥ 0 doğrudur; bölge y = 2x doğrusunun y eksenine bakan tarafındadır. II. ve III. bölgeler elenir.',
+      },
+      {
+        title: 'x + y − 6 ≤ 0',
+        detail:
+          'Orijin için 0 − 6 ≤ 0 doğrudur; bölge x + y − 6 = 0 doğrusunun orijine bakan tarafındadır. V. bölge elenir.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'Üç koşulu birden sağlayan bölge, köşeleri (0, 0), (0, 6) ve (2, 4) olan IV. bölgedir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 130
+  {
+    id: 'lines-130',
+    topic: 'Doğrusal grafik yorumlama',
+    // Origin (50, 280); 40 px per month, 3.5 px per thousand TL. The graph runs
+    // (1, 10) → (4, 30) → (7, 60).
+    figure: {
+      viewBox: '0 10 400 305',
+      caption: 'Şekil 54',
+      label:
+        'Yatay eksen aylar, düşey eksen kâr (bin TL). Grafik 1. ayda 10 dan 4. ayda 30 a doğrusal olarak, ardından 4. aydan 7. ayda 60 a daha dik bir doğruyla yükseliyor; bu noktalardan eksenlere noktalı dikmeler çizilmiş.',
+      svg: `
+          <path class="ln" d="M20,280 L390,280"/>
+          <path class="ln" d="M380,274 L390,280 L380,286"/>
+          <path class="ln" d="M50,300 L50,22"/>
+          <path class="ln" d="M44,32 L50,22 L56,32"/>
+          <path class="ln" d="M90,245 L210,175 L330,70"/>
+          <path class="ln" stroke-dasharray="3 4" d="M50,245 L90,245 L90,280"/>
+          <path class="ln" stroke-dasharray="3 4" d="M50,175 L210,175 L210,280"/>
+          <path class="ln" stroke-dasharray="3 4" d="M50,70 L330,70 L330,280"/>
+          <circle class="pt" cx="90" cy="245" r="3.2"/>
+          <circle class="pt" cx="210" cy="175" r="3.2"/>
+          <circle class="pt" cx="330" cy="70" r="3.2"/>
+          <text x="42" y="250" text-anchor="end">10</text>
+          <text x="42" y="180" text-anchor="end">30</text>
+          <text x="42" y="75" text-anchor="end">60</text>
+          <text x="90" y="300" text-anchor="middle">1</text>
+          <text x="210" y="300" text-anchor="middle">4</text>
+          <text x="330" y="300" text-anchor="middle">7</text>
+          <text x="42" y="298" text-anchor="end">0</text>
+          <text x="62" y="28">Kâr (bin TL)</text>
+          <text x="390" y="302" text-anchor="end">Aylar</text>
+        `,
+    },
+    stem: ['Yukarıdaki grafik bir şirketin aylara göre kârını göstermektedir.'],
+    ask: 'Buna göre, bu şirketin 5. ayda yaptığı kâr kaç bin TL dir?',
+    choices: [
+      { key: 'A', text: '40' },
+      { key: 'B', text: '45' },
+      { key: 'C', text: '48' },
+      { key: 'D', text: '50' },
+      { key: 'E', text: '55' },
+    ],
+    answer: 'A',
+    hint: '5. ay, grafiğin 4. ile 7. aylar arasındaki parçasına düşer; o parçanın eğimini kullan.',
+    solution: [
+      {
+        title: 'Doğru parçayı seç',
+        detail: '5. ay, (4, 30) ile (7, 60) noktalarını birleştiren parçanın üzerindedir.',
+      },
+      {
+        title: 'Eğim',
+        detail: 'm = (60 − 30)/(7 − 4) = 10; bu aralıkta kâr her ay 10 bin TL artar.',
+      },
+      {
+        title: 'Sonuç',
+        detail: '5. ayda kâr 30 + 1 · 10 = 40 bin TL dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 131
+  {
+    id: 'lines-131',
+    topic: 'Doğrunun noktaya göre simetriği',
+    stem: [],
+    ask: 'Dik koordinat düzleminde x − 2y + 3 = 0 doğrusunun P(1, 3) noktasına göre simetriği olan doğrunun denklemi aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: 'x − 2y + 5 = 0' },
+      { key: 'B', text: 'x − 2y + 9 = 0' },
+      { key: 'C', text: '2x + y − 7 = 0' },
+      { key: 'D', text: 'x + 2y − 7 = 0' },
+      { key: 'E', text: 'x − 2y + 7 = 0' },
+    ],
+    answer: 'E',
+    hint: 'P(1, 3) noktasına göre simetride (x, y) noktası (2 − x, 6 − y) noktasına gider.',
+    solution: [
+      {
+        title: 'Simetri kuralı',
+        detail:
+          'Simetrik doğru üzerindeki (x, y) noktasının simetriği (2 − x, 6 − y), verilen doğru üzerindedir.',
+      },
+      {
+        title: 'Yerine koy',
+        detail: '(2 − x) − 2(6 − y) + 3 = 0 ⇒ 2 − x − 12 + 2y + 3 = 0.',
+      },
+      {
+        title: 'Düzenle',
+        detail: '−x + 2y − 7 = 0; her iki taraf −1 ile çarpılır.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Simetrik doğru x − 2y + 7 = 0 dır.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 132
+  {
+    id: 'lines-132',
+    topic: 'Doğrunun noktaya göre simetriği',
+    stem: [],
+    ask: 'Analitik düzlemde 3x + y − 4 = 0 denklemiyle verilen doğrunun P(2, 1) noktasına göre simetriği olan doğrunun denklemi ax + by − 5 = 0 ise, a + b toplamı kaçtır?',
+    choices: [
+      { key: 'A', text: '3/2' },
+      { key: 'B', text: '2' },
+      { key: 'C', text: '5/2' },
+      { key: 'D', text: '3' },
+      { key: 'E', text: '7/2' },
+    ],
+    answer: 'B',
+    hint: 'P(2, 1) noktasına göre simetride (x, y) noktası (4 − x, 2 − y) noktasına gider.',
+    solution: [
+      {
+        title: 'Yerine koy',
+        detail: '3(4 − x) + (2 − y) − 4 = 0 ⇒ 12 − 3x + 2 − y − 4 = 0.',
+      },
+      {
+        title: 'Simetrik doğru',
+        detail: '−3x − y + 10 = 0 yani 3x + y − 10 = 0 dır.',
+      },
+      {
+        title: 'Sabiti −5 yap',
+        detail: 'Denklem 2 ye bölünürse (3/2)x + (1/2)y − 5 = 0 olur; a = 3/2, b = 1/2.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'a + b = 3/2 + 1/2 = 2 dir.',
+      },
+    ],
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -6117,6 +6387,14 @@ export const UNIT_7_LINES: Unit = {
         'lines-125',
         'lines-126',
       ),
+    },
+    {
+      id: 'lines-m20',
+      order: 20,
+      title: 'Simetri, bölgeler ve grafikler',
+      summary:
+        'Doğruya göre simetriyle alan, kesim noktasının simetriği, eşitsizlik sisteminin bölgesi, parçalı doğrusal grafik ve doğrunun noktaya göre simetriği.',
+      questions: pick('lines-127', 'lines-128', 'lines-129', 'lines-130', 'lines-131', 'lines-132'),
     },
   ],
 };
