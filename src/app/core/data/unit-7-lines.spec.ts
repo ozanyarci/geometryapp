@@ -158,6 +158,17 @@ describe('unit 7 answer key', () => {
   it('83 — 3|7 − a|/2 = 15, a = −3 or 17, sum 14 → C', () =>
     expect(answerOf('lines-83')).toBe('C'));
 
+  it('84 — B(3, −4), C(−3, 4), √(36 + 64) = 10 → D', () => expect(answerOf('lines-84')).toBe('D'));
+  it('85 — x = 1 and x = 15, 7x = 21, (3, 4), 14 · 4 / 2 = 28 → C', () =>
+    expect(answerOf('lines-85')).toBe('C'));
+  it('86 — x + 2y = 0, −3x + y − 7 = 0, (−2, 1), 6/3 = 2 → D', () =>
+    expect(answerOf('lines-86')).toBe('D'));
+  it('87 — |8 + 15 + c|/5 = 2, c = −13 or −33 → B', () => expect(answerOf('lines-87')).toBe('B'));
+  it('88 — A(−6, 0), B(0, 4), C(6, 8), m = 8/6 = 4/3 → D', () =>
+    expect(answerOf('lines-88')).toBe('D'));
+  it("89 — B'(9, −5), y = −x + 4, x = 4 → B", () => expect(answerOf('lines-89')).toBe('B'));
+  it('90 — 3x = 9, (3, 3), |9 + 12 + 4|/5 = 5 → C', () => expect(answerOf('lines-90')).toBe('C'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)

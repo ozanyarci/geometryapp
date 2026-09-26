@@ -3965,6 +3965,303 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+
+  // ---------------------------------------------------------------- 84
+  {
+    id: 'lines-84',
+    topic: 'Eksenlere göre simetri ve uzaklık',
+    stem: [],
+    ask: 'Analitik düzlemde A(3, 4) noktasının x eksenine göre simetriği B, y eksenine göre simetriği C noktası ise |BC| kaç birimdir?',
+    choices: [
+      { key: 'A', text: '5' },
+      { key: 'B', text: '6' },
+      { key: 'C', text: '8' },
+      { key: 'D', text: '10' },
+      { key: 'E', text: '12' },
+    ],
+    answer: 'D',
+    hint: 'x eksenine göre simetride ordinatın, y eksenine göre simetride apsisin işareti değişir.',
+    solution: [
+      {
+        title: 'B noktası',
+        detail: 'x eksenine göre simetri: B(3, −4).',
+      },
+      {
+        title: 'C noktası',
+        detail: 'y eksenine göre simetri: C(−3, 4).',
+      },
+      {
+        title: 'Uzaklık',
+        detail: '|BC| = √((3 − (−3))² + (−4 − 4)²) = √(36 + 64) = √100.',
+      },
+      {
+        title: 'Sonuç',
+        detail: '|BC| = 10 birimdir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 85
+  {
+    id: 'lines-85',
+    topic: 'İki doğru ve x ekseniyle alan',
+    given: ['y = 2x − 2', 'x + 3y − 15 = 0'],
+    // Origin (35, 200), 22 px per unit; triangle (1, 0), (15, 0), (3, 4).
+    figure: {
+      viewBox: '0 45 400 190',
+      caption: 'Şekil 40',
+      label:
+        'Dik koordinat sisteminde y eşittir 2x eksi 2 doğrusu ile x artı 3y eksi 15 eşittir sıfır doğrusu birinci bölgede kesişiyor; iki doğru ile x ekseni arasında kalan üçgen bölge taralı.',
+      svg: `
+          <path class="shade" d="M57,200 L365,200 L101,112 Z"/>
+          <path class="ln" d="M10,200 L390,200"/>
+          <path class="ln" d="M380,194 L390,200 L380,206"/>
+          <path class="ln" d="M35,230 L35,55"/>
+          <path class="ln" d="M29,65 L35,55 L41,65"/>
+          <text x="386" y="190" text-anchor="middle">x</text>
+          <text x="47" y="65">y</text>
+          <path class="ln" d="M46,222 L123,68"/>
+          <path class="ln" d="M35,90 L378.2,204.4"/>
+          <circle class="pt" cx="57" cy="200" r="3.2"/>
+          <circle class="pt" cx="365" cy="200" r="3.2"/>
+          <circle class="pt" cx="101" cy="112" r="3.2"/>
+          <text x="128" y="72">y = 2x − 2</text>
+          <text x="240" y="150">x + 3y − 15 = 0</text>
+          <text x="27" y="218" text-anchor="end">O</text>
+        `,
+    },
+    stem: [],
+    ask: 'Yukarıdaki doğrular ve x ekseni arasında kalan bölgenin alanı kaç birim karedir?',
+    choices: [
+      { key: 'A', text: '21' },
+      { key: 'B', text: '24' },
+      { key: 'C', text: '28' },
+      { key: 'D', text: '32' },
+      { key: 'E', text: '35' },
+    ],
+    answer: 'C',
+    hint: 'Doğruların x eksenini kestiği noktalar tabanı, kesişim noktasının ordinatı yüksekliği verir.',
+    solution: [
+      {
+        title: 'x ekseniyle kesimler',
+        detail: 'y = 0 için 2x − 2 = 0 ⇒ x = 1; x − 15 = 0 ⇒ x = 15. Taban 15 − 1 = 14.',
+      },
+      {
+        title: 'Kesişim noktası',
+        detail: 'x + 3(2x − 2) − 15 = 0 ⇒ 7x = 21 ⇒ x = 3, y = 4.',
+      },
+      {
+        title: 'Alan',
+        detail: 'Yükseklik 4 olduğundan alan 14 · 4 / 2 dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Bölgenin alanı 28 birim karedir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 86
+  {
+    id: 'lines-86',
+    topic: 'Doğru demetinin sabit noktası',
+    stem: [],
+    ask: 'k bir reel sayı olmak üzere kx + 2ky − 3x + y − 7 = 0 doğrularının kesim noktasından ve A(1, 7) noktasından geçen doğrunun eğimi kaçtır?',
+    choices: [
+      { key: 'A', text: '1/2' },
+      { key: 'B', text: '1' },
+      { key: 'C', text: '3/2' },
+      { key: 'D', text: '2' },
+      { key: 'E', text: '3' },
+    ],
+    answer: 'D',
+    hint: 'Denklemi k(…) + (…) = 0 biçiminde yaz; her k için sağlanması iki parantezin de sıfır olmasını gerektirir.',
+    solution: [
+      {
+        title: 'Düzenleme',
+        detail: 'k(x + 2y) + (−3x + y − 7) = 0.',
+      },
+      {
+        title: 'Ortak nokta',
+        detail: 'x + 2y = 0 ⇒ x = −2y; 6y + y − 7 = 0 ⇒ y = 1, x = −2. Kesim noktası (−2, 1).',
+      },
+      {
+        title: 'Eğim',
+        detail: 'm = (7 − 1) / (1 − (−2)) = 6/3.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Doğrunun eğimi 2 dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 87
+  {
+    id: 'lines-87',
+    topic: 'Noktanın doğruya ve eksene uzaklığı',
+    stem: [
+      'Analitik düzlemde verilen A(2, 5) noktasının 4x + 3y + c = 0 doğrusuna uzaklığı, y eksenine uzaklığına eşittir.',
+    ],
+    ask: 'Buna göre, c aşağıdakilerden hangisi olabilir?',
+    choices: [
+      { key: 'A', text: '−23' },
+      { key: 'B', text: '−13' },
+      { key: 'C', text: '10' },
+      { key: 'D', text: '13' },
+      { key: 'E', text: '33' },
+    ],
+    answer: 'B',
+    hint: 'A nın y eksenine uzaklığı apsisinin mutlak değeridir.',
+    solution: [
+      {
+        title: 'y eksenine uzaklık',
+        detail: 'A(2, 5) için bu uzaklık 2 birimdir.',
+      },
+      {
+        title: 'Doğruya uzaklık',
+        detail: '|4 · 2 + 3 · 5 + c| / √(16 + 9) = |23 + c| / 5.',
+      },
+      {
+        title: 'Eşitlik',
+        detail: '|23 + c| / 5 = 2 ⇒ |23 + c| = 10 ⇒ c = −13 veya c = −33.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Seçeneklerde yer alan değer c = −13 tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 88
+  {
+    id: 'lines-88',
+    topic: 'Orta nokta ve eğim',
+    given: ['OC: y = mx', 'AC: 2x − 3y + 12 = 0', '|AB| = |BC|'],
+    // Origin (200, 230), 22 px per unit; A(−6, 0), B(0, 4), C(6, 8).
+    figure: {
+      viewBox: '0 10 400 290',
+      caption: 'Şekil 41',
+      label:
+        'Dik koordinat sisteminde bir doğru x eksenini A, y eksenini B noktasında kesiyor ve orijinden geçen doğruyla C noktasında kesişiyor; A B ve B C parçaları eşit uzunlukta.',
+      svg: `
+          <path class="ln" d="M15,230 L390,230"/>
+          <path class="ln" d="M380,224 L390,230 L380,236"/>
+          <path class="ln" d="M200,295 L200,20"/>
+          <path class="ln" d="M194,30 L200,20 L206,30"/>
+          <text x="386" y="220" text-anchor="middle">x</text>
+          <text x="212" y="30">y</text>
+          <path class="ln" d="M35,252 L365,32"/>
+          <path class="ln" d="M167,274 L354,24.67"/>
+          <path class="tick" d="M130.67,181.01 L137.33,190.99"/>
+          <path class="tick" d="M262.67,93.01 L269.33,102.99"/>
+          <circle class="pt" cx="68" cy="230" r="3.2"/>
+          <circle class="pt" cx="200" cy="142" r="3.2"/>
+          <circle class="pt" cx="332" cy="54" r="3.2"/>
+          <text x="66" y="250" text-anchor="end">A</text>
+          <text x="192" y="136" text-anchor="end">B</text>
+          <text x="342" y="68">C</text>
+          <text x="206" y="248">O</text>
+        `,
+    },
+    stem: [
+      'Şekildeki dik koordinat sisteminde OC doğrusunun denklemi y = mx, AC doğrusunun denklemi 2x − 3y + 12 = 0 dır.',
+    ],
+    ask: '|AB| = |BC| olduğuna göre, m nin değeri aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: '2/3' },
+      { key: 'B', text: '3/4' },
+      { key: 'C', text: '1' },
+      { key: 'D', text: '4/3' },
+      { key: 'E', text: '3/2' },
+    ],
+    answer: 'D',
+    hint: 'A ve B, AC doğrusunun eksenleri kestiği noktalardır; B, [AC] nin orta noktasıdır.',
+    solution: [
+      {
+        title: 'Eksen kesimleri',
+        detail: 'y = 0 için x = −6: A(−6, 0); x = 0 için y = 4: B(0, 4).',
+      },
+      {
+        title: 'C noktası',
+        detail: 'B orta nokta: (−6 + x)/2 = 0 ⇒ x = 6, (0 + y)/2 = 4 ⇒ y = 8; C(6, 8).',
+      },
+      {
+        title: 'Eğim',
+        detail: 'C, y = mx üzerinde: 8 = 6m.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'm = 8/6 = 4/3 tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 89
+  {
+    id: 'lines-89',
+    topic: 'Uzaklıklar toplamının en küçüğü',
+    stem: ['Analitik düzlemde A(1, 3), B(9, 5) ve x ekseni üzerinde P noktası alınıyor.'],
+    ask: '|AP| + |BP| toplamının minimum olabilmesi için P noktasının apsisi kaç olmalıdır?',
+    choices: [
+      { key: 'A', text: '3' },
+      { key: 'B', text: '4' },
+      { key: 'C', text: '5' },
+      { key: 'D', text: '6' },
+      { key: 'E', text: '7' },
+    ],
+    answer: 'B',
+    hint: 'A ve B, x ekseninin aynı tarafında; birini x eksenine göre yansıt.',
+    solution: [
+      {
+        title: 'Yansıtma',
+        detail: "B nin x eksenine göre simetriği B'(9, −5); |BP| = |B'P| olur.",
+      },
+      {
+        title: 'En kısa yol',
+        detail: "|AP| + |B'P| en küçük değerini P, [AB'] üzerindeyken alır.",
+      },
+      {
+        title: "AB' doğrusu",
+        detail: 'm = (−5 − 3)/(9 − 1) = −1; y − 3 = −(x − 1) ⇒ y = −x + 4.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'y = 0 için x = 4; P nin apsisi 4 tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 90
+  {
+    id: 'lines-90',
+    topic: 'Kesim noktasının doğruya uzaklığı',
+    stem: [],
+    ask: 'Analitik düzlemde denklemleri y = 2x − 3 ve x + y − 6 = 0 olan doğruların kesim noktasının, denklemi 3x + 4y + 4 = 0 olan doğruya uzaklığı kaç birimdir?',
+    choices: [
+      { key: 'A', text: '3' },
+      { key: 'B', text: '4' },
+      { key: 'C', text: '5' },
+      { key: 'D', text: '6' },
+      { key: 'E', text: '7' },
+    ],
+    answer: 'C',
+    hint: 'Önce iki doğruyu ortak çözerek kesim noktasını bul.',
+    solution: [
+      {
+        title: 'Kesim noktası',
+        detail: 'x + (2x − 3) − 6 = 0 ⇒ 3x = 9 ⇒ x = 3, y = 3.',
+      },
+      {
+        title: 'Uzaklık formülü',
+        detail: '|3 · 3 + 4 · 3 + 4| / √(9 + 16) = 25 / 5.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Uzaklık 5 birimdir.',
+      },
+    ],
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -4131,6 +4428,22 @@ export const UNIT_7_LINES: Unit = {
         'lines-81',
         'lines-82',
         'lines-83',
+      ),
+    },
+    {
+      id: 'lines-m14',
+      order: 14,
+      title: 'Simetri, uzaklık ve eğim',
+      summary:
+        'Eksenlere göre simetri, iki doğruyla alan, doğru demetinin sabit noktası, noktanın doğruya uzaklığı, orta noktayla eğim ve en kısa yol.',
+      questions: pick(
+        'lines-84',
+        'lines-85',
+        'lines-86',
+        'lines-87',
+        'lines-88',
+        'lines-89',
+        'lines-90',
       ),
     },
   ],
