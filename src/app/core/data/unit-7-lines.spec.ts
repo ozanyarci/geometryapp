@@ -33,6 +33,18 @@ describe('unit 7 answer key', () => {
   it('12 — b = 2a − 1, a + 2b = 13, (3, 5), 3 + 5 = 8 → C', () =>
     expect(answerOf('lines-12')).toBe('C'));
 
+  it('13 — 3·(−a/3) = −1, a = 1, A(1, 2), √(1 + 4) = √5 → B', () =>
+    expect(answerOf('lines-13')).toBe('B'));
+  it('14 — B(4, 0), A(0, −3), x/4 − y/3 = 1, 3x − 4y − 12 = 0 → A', () =>
+    expect(answerOf('lines-14')).toBe('A'));
+  it('15 — |m|a²/2 = 9a²/(2|m|), m² = 9, m = −3 → B', () =>
+    expect(answerOf('lines-15')).toBe('B'));
+  it('16 — 6/(2/3) + 6/(3/2) = 9 + 4 = 13 → C', () => expect(answerOf('lines-16')).toBe('C'));
+  it('17 — corner (4, 6), 10·6/2 + 2·4/2 = 30 + 4 = 34 → C', () =>
+    expect(answerOf('lines-17')).toBe('C'));
+  it('18 — 4x + 3y = 36, x + 3y = 18, P(6, 4), √52 = 2√13 → C', () =>
+    expect(answerOf('lines-18')).toBe('C'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
