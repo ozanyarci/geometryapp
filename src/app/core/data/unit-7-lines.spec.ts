@@ -222,6 +222,21 @@ describe('unit 7 answer key', () => {
     expect(answerOf('lines-116')).toBe('D'));
   it('117 — |4 + 26|/10 = 3, a = 6/√3 = 2√3 → C', () => expect(answerOf('lines-117')).toBe('C'));
   it('118 — m(AC) = −2/3, S₁/S₂ = (2/3)² = 4/9 → B', () => expect(answerOf('lines-118')).toBe('B'));
+
+  it('119 — image (−5, 2p − 5), −10 + 2p − 5 − 1 = 0, p = 8 → D', () =>
+    expect(answerOf('lines-119')).toBe('D'));
+  it('120 — widths 7 and 3, height 4, (7 + 3)/2 · 4 = 20 → C', () =>
+    expect(answerOf('lines-120')).toBe('C'));
+  it('121 — m = (90 − 120)/5 = −6, 120/6 = 20 → C', () => expect(answerOf('lines-121')).toBe('C'));
+  it('122 — (2 + c)/2 = 8, c = 14, 3x − y + 14 = 0 → D', () =>
+    expect(answerOf('lines-122')).toBe('D'));
+  it('123 — (1, 0): 0 ≤ 2, 1 + 0 ≥ 0 → y ≤ 2x, x + y ≥ 0 → B', () =>
+    expect(answerOf('lines-123')).toBe('B'));
+  it('124 — image (−3, −m), −6 + m + 1 = 0, m = 5 → E', () =>
+    expect(answerOf('lines-124')).toBe('E'));
+  it('125 — 5x + 2y − 20 = 0, x = 0, y = 10 → E', () => expect(answerOf('lines-125')).toBe('E'));
+  it('126 — (−1, 5), slope −3, y = −3x + 2, 3x + y − 2 = 0 → B', () =>
+    expect(answerOf('lines-126')).toBe('B'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)

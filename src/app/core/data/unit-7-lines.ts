@@ -5523,6 +5523,336 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+  // ---------------------------------------------------------------- 119
+  {
+    id: 'lines-119',
+    topic: 'Noktanın noktaya göre simetriği',
+    stem: [],
+    ask: '(3, 5) noktasının (−1, p) noktasına göre simetriği 2x + y − 1 = 0 doğrusu üzerindedir. Buna göre, p kaçtır?',
+    choices: [
+      { key: 'A', text: '−8' },
+      { key: 'B', text: '4' },
+      { key: 'C', text: '6' },
+      { key: 'D', text: '8' },
+      { key: 'E', text: '10' },
+    ],
+    answer: 'D',
+    hint: '(−1, p) noktası, verilen nokta ile simetriğini birleştiren doğru parçasının orta noktasıdır.',
+    solution: [
+      {
+        title: 'Orta nokta bağıntısı',
+        detail: 'Simetrik nokta (a, b) ise (3 + a)/2 = −1 ve (5 + b)/2 = p olur.',
+      },
+      {
+        title: 'Simetriği bul',
+        detail: 'a = −2 − 3 = −5 ve b = 2p − 5 tir; simetrik nokta (−5, 2p − 5) tir.',
+      },
+      {
+        title: 'Doğruda yerine koy',
+        detail: '2 · (−5) + (2p − 5) − 1 = 0 ⇒ 2p − 16 = 0.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'p = 8 dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 120
+  {
+    id: 'lines-120',
+    topic: 'Eşitsizlik sisteminin belirttiği bölgenin alanı',
+    stem: ['Analitik düzlemde x ≥ −1, 0 ≤ y ≤ 4 ve x + y − 6 ≤ 0 eşitsizlikleri veriliyor.'],
+    ask: 'Bu eşitsizlikleri sağlayan bölgenin alanı kaç birimkaredir?',
+    choices: [
+      { key: 'A', text: '16' },
+      { key: 'B', text: '18' },
+      { key: 'C', text: '20' },
+      { key: 'D', text: '22' },
+      { key: 'E', text: '24' },
+    ],
+    answer: 'C',
+    hint: 'Bölgenin köşelerini, sınır doğrularının kesim noktalarından bul.',
+    solution: [
+      {
+        title: 'Alt kenar',
+        detail:
+          'y = 0 doğrusu üzerinde bölge x = −1 den x + 0 = 6 yani x = 6 ya kadar uzanır; uzunluk 7 dir.',
+      },
+      {
+        title: 'Üst kenar',
+        detail:
+          'y = 4 doğrusu üzerinde bölge x = −1 den x = 6 − 4 = 2 ye kadar uzanır; uzunluk 3 tür.',
+      },
+      {
+        title: 'Bölgenin biçimi',
+        detail:
+          'Köşeler (−1, 0), (6, 0), (2, 4) ve (−1, 4) tür; paralel kenarları 7 ve 3, yüksekliği 4 olan bir dik yamuktur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Alan = (7 + 3)/2 · 4 = 20 birimkaredir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 121
+  {
+    id: 'lines-121',
+    topic: 'Doğrusal grafik yorumlama',
+    // Origin (70, 280); 30 px per hour, 2 px per cm³. The line runs from
+    // (0, 120) through (5, 90).
+    figure: {
+      viewBox: '0 10 400 305',
+      caption: 'Şekil 51',
+      label:
+        'Yatay eksen zaman (saat), düşey eksen hacim (santimetreküp). Doğru (0, 120) noktasından başlayıp aşağı doğru iniyor ve (5, 90) noktasından geçiyor; bu noktadan eksenlere noktalı dikmeler çizilmiş.',
+      svg: `
+          <path class="ln" d="M40,280 L390,280"/>
+          <path class="ln" d="M380,274 L390,280 L380,286"/>
+          <path class="ln" d="M70,300 L70,22"/>
+          <path class="ln" d="M64,32 L70,22 L76,32"/>
+          <path class="ln" d="M70,40 L250,112"/>
+          <path class="ln" stroke-dasharray="3 4" d="M70,100 L220,100"/>
+          <path class="ln" stroke-dasharray="3 4" d="M220,100 L220,280"/>
+          <circle class="pt" cx="70" cy="40" r="3.2"/>
+          <circle class="pt" cx="220" cy="100" r="3.2"/>
+          <text x="62" y="45" text-anchor="end">120</text>
+          <text x="62" y="105" text-anchor="end">90</text>
+          <text x="220" y="300" text-anchor="middle">5</text>
+          <text x="62" y="298" text-anchor="end">0</text>
+          <text x="82" y="28">Hacim (cm³)</text>
+          <text x="390" y="302" text-anchor="end">Zaman (saat)</text>
+        `,
+    },
+    stem: [
+      'Yukarıdaki grafik, dolu bir su deposundaki su miktarının zamana göre değişimini göstermektedir.',
+    ],
+    ask: 'Buna göre, depo toplam kaç saatte boşalır?',
+    choices: [
+      { key: 'A', text: '15' },
+      { key: 'B', text: '18' },
+      { key: 'C', text: '20' },
+      { key: 'D', text: '24' },
+      { key: 'E', text: '25' },
+    ],
+    answer: 'C',
+    hint: 'Doğrunun eğimi, deponun bir saatte ne kadar boşaldığını verir.',
+    solution: [
+      {
+        title: 'Eğim',
+        detail:
+          '(0, 120) ve (5, 90) noktalarından m = (90 − 120)/(5 − 0) = −6 dır; depo saatte 6 cm³ boşalır.',
+      },
+      {
+        title: 'Doğru denklemi',
+        detail: 'V = 120 − 6t dir.',
+      },
+      {
+        title: 'Boşalma anı',
+        detail: 'V = 0 ⇒ 6t = 120.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 't = 20 saattir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 122
+  {
+    id: 'lines-122',
+    topic: 'Doğrunun paralel doğruya göre simetriği',
+    stem: [],
+    ask: 'Analitik düzlemde 3x − y + 2 = 0 doğrusunun 3x − y + 8 = 0 doğrusuna göre simetriği olan doğrunun denklemi aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: '3x − y + 10 = 0' },
+      { key: 'B', text: '3x − y − 14 = 0' },
+      { key: 'C', text: '3x − y + 12 = 0' },
+      { key: 'D', text: '3x − y + 14 = 0' },
+      { key: 'E', text: '3x − y + 6 = 0' },
+    ],
+    answer: 'D',
+    hint: 'Doğrular paraleldir; simetrik doğru da onlara paraleldir ve simetri doğrusu tam ortada kalır.',
+    solution: [
+      {
+        title: 'Paralellik',
+        detail: 'Üç doğru da 3x − y + c = 0 biçimindedir; yalnızca sabit terimler farklıdır.',
+      },
+      {
+        title: 'Ortada kalma',
+        detail:
+          'Simetri doğrusunun sabiti, iki doğrunun sabitlerinin ortalamasıdır: (2 + c)/2 = 8.',
+      },
+      {
+        title: 'Sabiti bul',
+        detail: 'c = 16 − 2 = 14 tür.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Simetrik doğru 3x − y + 14 = 0 dır.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 123
+  {
+    id: 'lines-123',
+    topic: 'Taralı bölgeyi eşitsizlikle ifade etme',
+    // Origin (200, 160), 1 px per unit. y = 2x runs to (270, 20) and (130, 300);
+    // y = −x runs to (70, 30) and (330, 290). The shaded wedge contains the
+    // positive x-axis.
+    figure: {
+      viewBox: '0 0 400 320',
+      caption: 'Şekil 52',
+      label:
+        'Koordinat düzleminde orijinden geçen y = 2x ve y = −x doğruları çizili. İki doğrunun arasında kalan ve pozitif x eksenini içeren açısal bölge taralı.',
+      svg: `
+          <path class="shade" d="M200,160 L270,20 L380,20 L380,290 L330,290 Z"/>
+          <path class="ln" d="M20,160 L390,160"/>
+          <path class="ln" d="M380,154 L390,160 L380,166"/>
+          <path class="ln" d="M200,310 L200,12"/>
+          <path class="ln" d="M194,22 L200,12 L206,22"/>
+          <text x="386" y="182" text-anchor="middle">x</text>
+          <text x="212" y="24">y</text>
+          <path class="ln" d="M130,300 L270,20"/>
+          <path class="ln" d="M70,30 L330,290"/>
+          <text x="184" y="178" text-anchor="end">O</text>
+          <text x="274" y="40">y = 2x</text>
+          <text x="322" y="306" text-anchor="end">y = −x</text>
+        `,
+    },
+    stem: ['Yukarıdaki şekilde y = 2x ve y = −x doğruları verilmiştir.'],
+    ask: 'Buna göre, aşağıdakilerden hangisi taralı bölgeyi ifade eder?',
+    choices: [
+      { key: 'A', text: 'y ≥ 2x, x + y ≥ 0' },
+      { key: 'B', text: 'y ≤ 2x, x + y ≥ 0' },
+      { key: 'C', text: 'y ≤ 2x, x + y ≤ 0' },
+      { key: 'D', text: 'x ≥ 0, y ≥ 0' },
+      { key: 'E', text: 'y ≥ 2x, x + y ≤ 0' },
+    ],
+    answer: 'B',
+    hint: 'Taralı bölgeden bir nokta seç, örneğin (1, 0), ve her iki doğruya göre hangi tarafta olduğuna bak.',
+    solution: [
+      {
+        title: 'Deneme noktası',
+        detail: '(1, 0) noktası pozitif x ekseni üzerindedir ve taralı bölgenin içindedir.',
+      },
+      {
+        title: 'y = 2x doğrusu',
+        detail: '0 ≤ 2 · 1 olduğundan bölge y ≤ 2x tarafındadır.',
+      },
+      {
+        title: 'y = −x doğrusu',
+        detail: 'Denklem x + y = 0 dır; 1 + 0 ≥ 0 olduğundan bölge x + y ≥ 0 tarafındadır.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Taralı bölge y ≤ 2x ve x + y ≥ 0 eşitsizlikleriyle ifade edilir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 124
+  {
+    id: 'lines-124',
+    topic: 'Noktanın y = −x doğrusuna göre simetriği',
+    stem: [],
+    ask: 'Analitik düzlemde (m, 3) noktasının y = −x doğrusuna göre simetriği 2x − y + 1 = 0 doğrusu üzerinde olduğuna göre, m kaçtır?',
+    choices: [
+      { key: 'A', text: '−7' },
+      { key: 'B', text: '−5' },
+      { key: 'C', text: '1' },
+      { key: 'D', text: '3' },
+      { key: 'E', text: '5' },
+    ],
+    answer: 'E',
+    hint: 'y = −x doğrusuna göre simetride (a, b) noktası (−b, −a) noktasına gider.',
+    solution: [
+      {
+        title: 'Simetrik nokta',
+        detail: '(m, 3) noktasının y = −x e göre simetriği (−3, −m) dir.',
+      },
+      {
+        title: 'Doğruda yerine koy',
+        detail: '2 · (−3) − (−m) + 1 = 0 ⇒ −6 + m + 1 = 0.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'm = 5 tir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 125
+  {
+    id: 'lines-125',
+    topic: 'Doğrunun y = x doğrusuna göre simetriği',
+    stem: [],
+    ask: '2x + 5y − 20 = 0 doğrusunun y = x doğrusuna göre simetriği olan doğru, y eksenini hangi noktada keser?',
+    choices: [
+      { key: 'A', text: '2' },
+      { key: 'B', text: '4' },
+      { key: 'C', text: '5' },
+      { key: 'D', text: '8' },
+      { key: 'E', text: '10' },
+    ],
+    answer: 'E',
+    hint: 'y = x doğrusuna göre simetride denklemde x ile y yer değiştirir.',
+    solution: [
+      {
+        title: 'Simetrik doğru',
+        detail: 'x ile y yer değiştirilirse 2y + 5x − 20 = 0 yani 5x + 2y − 20 = 0 elde edilir.',
+      },
+      {
+        title: 'y eksenini kesme',
+        detail: 'x = 0 alınırsa 2y = 20 olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'y = 10; doğru y eksenini (0, 10) noktasında keser.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 126
+  {
+    id: 'lines-126',
+    topic: 'Doğru demetinin sabit noktası ve dik doğru',
+    stem: [],
+    ask: 'Analitik düzlemde (x + 1)m + 2x − y + 7 = 0 doğrularının kesim noktasından geçen ve x − 3y + 2 = 0 doğrusuna dik olan doğrunun denklemi aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: '3x + y + 2 = 0' },
+      { key: 'B', text: '3x + y − 2 = 0' },
+      { key: 'C', text: 'x − 3y + 16 = 0' },
+      { key: 'D', text: '3x − y + 8 = 0' },
+      { key: 'E', text: 'x + 3y − 14 = 0' },
+    ],
+    answer: 'B',
+    hint: 'Doğruların hepsinin geçtiği nokta, m nin katsayısını ve kalan ifadeyi aynı anda sıfır yapar.',
+    solution: [
+      {
+        title: 'Sabit nokta',
+        detail: 'x + 1 = 0 ve 2x − y + 7 = 0 ⇒ x = −1, y = 5; kesim noktası (−1, 5) tir.',
+      },
+      {
+        title: 'Verilen doğrunun eğimi',
+        detail: 'x − 3y + 2 = 0 ⇒ y = x/3 + 2/3; eğim 1/3 tür.',
+      },
+      {
+        title: 'Dik doğrunun eğimi',
+        detail: 'Eğimler çarpımı −1 olmalı; aranan eğim −3 tür.',
+      },
+      {
+        title: 'Denklem',
+        detail: 'y − 5 = −3(x + 1) ⇒ y = −3x + 2.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Aranan doğru 3x + y − 2 = 0 dır.',
+      },
+    ],
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -5769,6 +6099,23 @@ export const UNIT_7_LINES: Unit = {
         'lines-116',
         'lines-117',
         'lines-118',
+      ),
+    },
+    {
+      id: 'lines-m19',
+      order: 19,
+      title: 'Simetri, bölgeler ve doğru demeti',
+      summary:
+        'Noktaya ve doğruya göre simetri, eşitsizlik sistemiyle alan, doğrusal grafik, taralı bölgenin eşitsizlikleri ve demetin sabit noktasından geçen dik doğru.',
+      questions: pick(
+        'lines-119',
+        'lines-120',
+        'lines-121',
+        'lines-122',
+        'lines-123',
+        'lines-124',
+        'lines-125',
+        'lines-126',
       ),
     },
   ],
