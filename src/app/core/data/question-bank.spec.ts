@@ -6,6 +6,7 @@ import { POLYGONS_BANK } from './unit-3-polygons';
 import { QUADRILATERALS_BANK } from './unit-4-quadrilaterals';
 import { CIRCLES_BANK } from './unit-5-circles';
 import { ANALYTIC_BANK } from './unit-6-analytic';
+import { LINES_BANK } from './unit-7-lines';
 
 /**
  * As the question bank grows, the most common mistake is mistyping an answer
@@ -105,6 +106,7 @@ describe('question banks', () => {
     { unitId: 'quadrilaterals', questions: QUADRILATERALS_BANK },
     { unitId: 'circles', questions: CIRCLES_BANK },
     { unitId: 'analytic', questions: ANALYTIC_BANK },
+    { unitId: 'lines', questions: LINES_BANK },
   ];
 
   for (const bank of banks) {
