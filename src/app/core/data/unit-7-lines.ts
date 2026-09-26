@@ -7438,6 +7438,400 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+  // ---------------------------------------------------------------- 162
+  {
+    id: 'lines-162',
+    topic: 'Eksende kesişen doğrularla alan',
+    stem: [
+      'Analitik düzlemde verilen y = mx + n ve 2x + y − 8 = 0 doğruları y ekseni üzerinde kesişmektedir.',
+    ],
+    ask: 'x ekseni ve doğrular arasındaki alan 32 birimkare olduğuna göre, m nin negatif değeri kaçtır?',
+    choices: [
+      { key: 'A', text: '−1/2' },
+      { key: 'B', text: '−2/3' },
+      { key: 'C', text: '−3/4' },
+      { key: 'D', text: '−4/5' },
+      { key: 'E', text: '−2' },
+    ],
+    answer: 'B',
+    hint: 'Önce ortak noktayı bul: 2x + y − 8 = 0 doğrusunun y eksenini kestiği nokta, öbür doğrunun da üzerindedir.',
+    solution: [
+      {
+        title: 'Ortak nokta',
+        detail:
+          '2x + y − 8 = 0 doğrusu y eksenini (0, 8) de, x eksenini (4, 0) da keser. Doğrular y ekseninde kesiştiğinden n = 8 dir.',
+      },
+      {
+        title: 'Taban uzunluğu',
+        detail:
+          'Alan, tepesi (0, 8) olan ve tabanı x ekseninde olan bir üçgendir: taban · 8 / 2 = 32 ⇒ taban = 8.',
+      },
+      {
+        title: 'Öbür doğrunun x kesimi',
+        detail: 'y = mx + 8 doğrusu x eksenini 4 − 8 = −4 ya da 4 + 8 = 12 noktasında keser.',
+      },
+      {
+        title: 'Eğim',
+        detail: '(−4, 0) için m = 8/4 = 2, (12, 0) için m = −8/12 = −2/3 tür.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'm nin negatif değeri −2/3 tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 163
+  {
+    id: 'lines-163',
+    topic: 'Uzaklık farkının en büyük değeri',
+    stem: ['Analitik düzlemde A(3, 2) ve B(6, 8) noktaları veriliyor.'],
+    ask: '||AC| − |BC|| farkının en büyük olması için seçilen C(0, y) noktasının ordinatı kaçtır?',
+    choices: [
+      { key: 'A', text: '−8' },
+      { key: 'B', text: '−6' },
+      { key: 'C', text: '−5' },
+      { key: 'D', text: '−4' },
+      { key: 'E', text: '−2' },
+    ],
+    answer: 'D',
+    hint: 'Üçgen eşitsizliğine göre ||AC| − |BC|| ≤ |AB| dir; eşitlik A, B ve C doğrusal olduğunda sağlanır.',
+    solution: [
+      {
+        title: 'Üçgen eşitsizliği',
+        detail:
+          'Her C için ||AC| − |BC|| ≤ |AB| dir. A ve B, y ekseninin aynı tarafında olduğundan en büyük değer C, AB doğrusu üzerindeyken elde edilir.',
+      },
+      {
+        title: 'AB doğrusu',
+        detail: 'Eğim (8 − 2)/(6 − 3) = 2; denklem y − 2 = 2(x − 3) tür.',
+      },
+      {
+        title: 'y ekseniyle kesişim',
+        detail: 'x = 0 için y − 2 = −6 ⇒ y = −4.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'C(0, −4) iken fark |AB| = √45 = 3√5 ile en büyüktür; ordinat −4 tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 164
+  {
+    id: 'lines-164',
+    topic: 'Doğru parçasının doğru üzerindeki dik izdüşümü',
+    // Origin (60, 300), 30 px per unit. T(2, 8) → (120, 60). d: y = x drawn
+    // from (−0.5, −0.5) → (45, 315) to (9, 9) → (330, 30). The foot of the
+    // perpendicular from T is H(5, 5) → (210, 150).
+    figure: {
+      viewBox: '0 10 400 320',
+      caption: 'Şekil 64',
+      label:
+        'Dik koordinat sisteminde başlangıç noktası O ile T(2, 8) noktası birleştirilmiş; başlangıç noktasından y − x = 0 doğrusu olan d doğrusu geçiyor.',
+      svg: `
+          <path class="ln" d="M30,300 L385,300"/>
+          <path class="ln" d="M375,294 L385,300 L375,306"/>
+          <path class="ln" d="M60,325 L60,20"/>
+          <path class="ln" d="M54,30 L60,20 L66,30"/>
+          <path class="ln" d="M45,315 L330,30"/>
+          <path class="ln" d="M60,300 L120,60"/>
+          <circle class="pt" cx="60" cy="300" r="3.2"/>
+          <circle class="pt" cx="120" cy="60" r="3.2"/>
+          <text x="380" y="320" text-anchor="middle">x</text>
+          <text x="70" y="30">y</text>
+          <text x="52" y="318" text-anchor="end">O</text>
+          <text x="112" y="58" text-anchor="end">T(2, 8)</text>
+          <text x="338" y="36">d</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 10 400 320',
+      caption: 'Şekil 64',
+      label:
+        'Aynı şekilde T noktasından d doğrusuna dikme inilmiş; dikme ayağı H(5, 5) noktasıdır ve [OH] aranan izdüşümdür.',
+      svg: `
+          <path class="ln" d="M30,300 L385,300"/>
+          <path class="ln" d="M375,294 L385,300 L375,306"/>
+          <path class="ln" d="M60,325 L60,20"/>
+          <path class="ln" d="M54,30 L60,20 L66,30"/>
+          <path class="ln" d="M45,315 L330,30"/>
+          <path class="ln" d="M60,300 L120,60"/>
+          <path class="aux" d="M120,60 L210,150"/>
+          <path class="aux-head" d="M217.1,142.9 L210,135.9 L202.9,142.9"/>
+          <circle class="pt" cx="60" cy="300" r="3.2"/>
+          <circle class="pt" cx="120" cy="60" r="3.2"/>
+          <circle class="pt" cx="210" cy="150" r="3.2"/>
+          <text x="380" y="320" text-anchor="middle">x</text>
+          <text x="70" y="30">y</text>
+          <text x="52" y="318" text-anchor="end">O</text>
+          <text x="112" y="58" text-anchor="end">T(2, 8)</text>
+          <text x="218" y="168">H(5, 5)</text>
+          <text x="338" y="36">d</text>
+        `,
+    },
+    given: ['T(2, 8)', 'd: y − x = 0'],
+    stem: [],
+    ask: 'Analitik düzlemde verilen OT doğru parçasının d doğrusu üzerindeki dik izdüşümünün uzunluğu kaç birimdir?',
+    choices: [
+      { key: 'A', text: '4√2' },
+      { key: 'B', text: '9√2/2' },
+      { key: 'C', text: '5√2' },
+      { key: 'D', text: '11√2/2' },
+      { key: 'E', text: '6√2' },
+    ],
+    answer: 'C',
+    hint: 'T den d doğrusuna dikme in; O ile dikme ayağı arasındaki uzaklık aranan izdüşümdür.',
+    solution: [
+      {
+        title: 'Dikmenin denklemi',
+        detail:
+          'd nin eğimi 1 olduğundan T den geçen dikmenin eğimi −1 dir: y − 8 = −(x − 2), yani x + y = 10.',
+      },
+      {
+        title: 'Dikme ayağı',
+        detail: 'y = x ile x + y = 10 ortak çözülürse 2x = 10 ⇒ H(5, 5) bulunur.',
+      },
+      {
+        title: 'İzdüşümün uzunluğu',
+        detail:
+          'O başlangıç noktası d üzerinde olduğundan izdüşüm [OH] dir: |OH| = √(5² + 5²) = √50.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'İzdüşümün uzunluğu 5√2 birimdir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 165
+  {
+    id: 'lines-165',
+    topic: 'En kısa yol',
+    stem: [
+      'Analitik düzlemde koordinatları A(2, 5), B(x, 0) ve C(8, 3) olan A, B, C noktaları veriliyor.',
+    ],
+    ask: '|AB| + |BC| toplamının en kısa olabilmesi için x kaç olmalıdır?',
+    choices: [
+      { key: 'A', text: '17/4' },
+      { key: 'B', text: '19/4' },
+      { key: 'C', text: '21/4' },
+      { key: 'D', text: '11/2' },
+      { key: 'E', text: '23/4' },
+    ],
+    answer: 'E',
+    hint: 'C noktasının x eksenine göre simetriğini al; en kısa yol A dan bu simetriğe giden doğru parçasıdır.',
+    solution: [
+      {
+        title: 'Simetrik nokta',
+        detail:
+          'A ve C, x ekseninin aynı tarafındadır. C nin x eksenine göre simetriği C′(8, −3) tür ve her B için |BC| = |BC′| dür.',
+      },
+      {
+        title: 'En kısa yol',
+        detail: '|AB| + |BC′| ≥ |AC′|; eşitlik B, [AC′] üzerindeyken sağlanır.',
+      },
+      {
+        title: 'AC′ doğrusu',
+        detail: 'Eğim (−3 − 5)/(8 − 2) = −4/3; denklem y − 5 = −(4/3)(x − 2) dir.',
+      },
+      {
+        title: 'x ekseniyle kesişim',
+        detail: 'y = 0 için −5 = −(4/3)(x − 2) ⇒ x − 2 = 15/4 ⇒ x = 23/4.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Toplam, B(23/4, 0) iken en kısadır; x = 23/4 tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 166
+  {
+    id: 'lines-166',
+    topic: 'Doğrusal noktalar ve kare',
+    // Origin (60, 250), 28 px per unit. A(10, 0) → (340, 250), C(0, 6) →
+    // (60, 82), B(10, 6) → (340, 82). Square side 15/4 = 105 px: D (235, 82),
+    // E (235, 187), F (340, 187). E sits on CA: t = 175/280, y = 82 + 0.625·168.
+    figure: {
+      viewBox: '0 20 400 272',
+      caption: 'Şekil 65',
+      label:
+        'Dik koordinat sisteminde OABC dikdörtgeni ve B köşesini paylaşan taralı DEFB karesi var; D, [BC] üzerinde, F, [AB] üzerinde ve karenin E köşesi C ile A yı birleştiren doğru parçası üzerinde.',
+      svg: `
+          <path class="shade" d="M235,82 L340,82 L340,187 L235,187 Z"/>
+          <path class="ln" d="M30,250 L385,250"/>
+          <path class="ln" d="M375,244 L385,250 L375,256"/>
+          <path class="ln" d="M60,275 L60,30"/>
+          <path class="ln" d="M54,40 L60,30 L66,40"/>
+          <path class="ln" d="M60,82 L340,82 L340,250"/>
+          <path class="ln" d="M235,82 L235,187 L340,187"/>
+          <path class="ln" d="M60,82 L340,250"/>
+          <circle class="pt" cx="60" cy="250" r="3.2"/>
+          <circle class="pt" cx="340" cy="250" r="3.2"/>
+          <circle class="pt" cx="60" cy="82" r="3.2"/>
+          <circle class="pt" cx="340" cy="82" r="3.2"/>
+          <circle class="pt" cx="235" cy="82" r="3.2"/>
+          <circle class="pt" cx="235" cy="187" r="3.2"/>
+          <circle class="pt" cx="340" cy="187" r="3.2"/>
+          <text x="380" y="270" text-anchor="middle">x</text>
+          <text x="70" y="40">y</text>
+          <text x="52" y="268" text-anchor="end">O</text>
+          <text x="52" y="87" text-anchor="end">C</text>
+          <text x="235" y="72" text-anchor="middle">D</text>
+          <text x="348" y="78">B</text>
+          <text x="348" y="192">F</text>
+          <text x="228" y="204" text-anchor="end">E</text>
+          <text x="340" y="270" text-anchor="middle">A</text>
+        `,
+    },
+    given: ['OABC dikdörtgen', 'DEFB kare', 'D ∈ [BC]', 'F ∈ [AB]', 'A(10, 0)', 'C(0, 6)'],
+    stem: [],
+    ask: 'Analitik düzlemde verilen yukarıdaki şekilde C, E ve A doğrusal olduğuna göre, DEFB karesinin alanı kaç birimkaredir?',
+    choices: [
+      { key: 'A', text: '144/25' },
+      { key: 'B', text: '9' },
+      { key: 'C', text: '12' },
+      { key: 'D', text: '225/16' },
+      { key: 'E', text: '16' },
+    ],
+    answer: 'D',
+    hint: 'Karenin kenarına a de; E noktasının koordinatlarını a cinsinden yazıp CA doğrusunun denkleminde yerine koy.',
+    solution: [
+      {
+        title: 'CA doğrusu',
+        detail: 'Eksenleri (10, 0) ve (0, 6) da kestiğinden denklemi x/10 + y/6 = 1 dir.',
+      },
+      {
+        title: 'E noktası',
+        detail: 'B(10, 6) ve karenin kenarı a ise E(10 − a, 6 − a) olur.',
+      },
+      {
+        title: 'Denklemde yerine koy',
+        detail:
+          '(10 − a)/10 + (6 − a)/6 = 1 ⇒ 1 − a/10 + 1 − a/6 = 1 ⇒ a(1/10 + 1/6) = 1 ⇒ 8a/30 = 1 ⇒ a = 15/4.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Karenin alanı (15/4)² = 225/16 birimkaredir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 167
+  {
+    id: 'lines-167',
+    topic: 'Kesişen doğrularla üçgen alanı',
+    // Origin (120, 310), 28 px per unit. A(0, 9) → (120, 58), B(6, 0) →
+    // (288, 310), D(−2, 0) → (64, 310), E(2, 6) → (176, 142), C(0, 3) →
+    // (120, 226). d₁ drawn from x = −1 → (92, 16) to x = 7 → (316, 352);
+    // d₂ from x = −3 → (36, 352) to x = 4.5 → (246, 37). One tick at the
+    // middle of [DC] (92, 268) and of [CE] (148, 184), normal (0.832, 0.555).
+    figure: {
+      viewBox: '0 0 400 370',
+      caption: 'Şekil 66',
+      label:
+        'Dik koordinat sisteminde d₁ doğrusu y eksenini A, x eksenini B noktasında; d₂ doğrusu x eksenini D, y eksenini C noktasında kesiyor. İki doğru E noktasında kesişiyor, |DC| = |CE| ve ACE üçgeni taralı.',
+      svg: `
+          <path class="shade" d="M120,58 L120,226 L176,142 Z"/>
+          <path class="ln" d="M20,310 L385,310"/>
+          <path class="ln" d="M375,304 L385,310 L375,316"/>
+          <path class="ln" d="M120,360 L120,10"/>
+          <path class="ln" d="M114,20 L120,10 L126,20"/>
+          <path class="ln" d="M92,16 L316,352"/>
+          <path class="ln" d="M36,352 L246,37"/>
+          <path class="tick" d="M87,264.7 L97,271.3"/>
+          <path class="tick" d="M143,180.7 L153,187.3"/>
+          <circle class="pt" cx="120" cy="310" r="3.2"/>
+          <circle class="pt" cx="120" cy="58" r="3.2"/>
+          <circle class="pt" cx="288" cy="310" r="3.2"/>
+          <circle class="pt" cx="64" cy="310" r="3.2"/>
+          <circle class="pt" cx="176" cy="142" r="3.2"/>
+          <circle class="pt" cx="120" cy="226" r="3.2"/>
+          <text x="380" y="330" text-anchor="middle">x</text>
+          <text x="130" y="20">y</text>
+          <text x="112" y="328" text-anchor="end">O</text>
+          <text x="112" y="54" text-anchor="end">A</text>
+          <text x="112" y="218" text-anchor="end">C</text>
+          <text x="186" y="140">E</text>
+          <text x="58" y="302" text-anchor="end">D</text>
+          <text x="288" y="330" text-anchor="middle">B</text>
+          <text x="84" y="22" text-anchor="end">d₁</text>
+          <text x="252" y="38">d₂</text>
+        `,
+    },
+    given: ['d₁: y = mx + 9', 'd₂: x + ny + 2 = 0', 'd₁ ∩ d₂ = {E}', '|DC| = |CE|'],
+    stem: [],
+    ask: 'Analitik düzlemde verilen yukarıdaki şekilde B(6, 0) olduğuna göre, Alan(ACE) kaç birimkaredir?',
+    choices: [
+      { key: 'A', text: '5' },
+      { key: 'B', text: '6' },
+      { key: 'C', text: '13/2' },
+      { key: 'D', text: '15/2' },
+      { key: 'E', text: '9' },
+    ],
+    answer: 'B',
+    hint: 'C, [DE] nin orta noktasıdır; D nin apsisinden E nin apsisini bulabilirsin.',
+    solution: [
+      {
+        title: 'd₁ doğrusu',
+        detail: 'd₁, A(0, 9) ve B(6, 0) dan geçer: m = −9/6 = −3/2, yani y = −3x/2 + 9.',
+      },
+      {
+        title: 'D noktası',
+        detail: 'd₂ de y = 0 için x + 2 = 0 ⇒ D(−2, 0).',
+      },
+      {
+        title: 'E noktası',
+        detail:
+          'C, y ekseninde ve [DE] nin orta noktası olduğundan E nin apsisi 2 dir. d₁ de x = 2 için y = −3 + 9 = 6 ⇒ E(2, 6).',
+      },
+      {
+        title: 'C noktası',
+        detail: 'C, D(−2, 0) ile E(2, 6) nın orta noktasıdır: C(0, 3). Böylece |AC| = 9 − 3 = 6.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          '[AC] y ekseninde, E nin y eksenine uzaklığı 2 dir: Alan(ACE) = 6 · 2 / 2 = 6 birimkaredir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 168
+  {
+    id: 'lines-168',
+    topic: 'Orta dikme doğrusu',
+    stem: [],
+    ask: 'Analitik düzlemde verilen A(−2, 5) ve B(4, −3) noktalarına eşit uzaklıktaki noktaların geometrik yerini veren doğrunun denklemi aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: '4x + 3y − 7 = 0' },
+      { key: 'B', text: '3x + 4y − 7 = 0' },
+      { key: 'C', text: '4x − 3y − 1 = 0' },
+      { key: 'D', text: '3x − 4y + 1 = 0' },
+      { key: 'E', text: '3x − 4y − 1 = 0' },
+    ],
+    answer: 'D',
+    hint: 'İki noktaya eşit uzaklıktaki noktalar, [AB] nin orta dikmesi üzerindedir.',
+    solution: [
+      {
+        title: 'Orta nokta',
+        detail: '[AB] nin orta noktası ((−2 + 4)/2, (5 − 3)/2) = (1, 1) dir.',
+      },
+      {
+        title: 'Dik eğim',
+        detail: 'AB nin eğimi (−3 − 5)/(4 + 2) = −4/3; orta dikmenin eğimi 3/4 tür.',
+      },
+      {
+        title: 'Denklem',
+        detail: 'y − 1 = (3/4)(x − 1) ⇒ 4y − 4 = 3x − 3 ⇒ 3x − 4y + 1 = 0.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Aranan doğru 3x − 4y + 1 = 0 dır.',
+      },
+    ],
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -7767,6 +8161,22 @@ export const UNIT_7_LINES: Unit = {
         'lines-159',
         'lines-160',
         'lines-161',
+      ),
+    },
+    {
+      id: 'lines-m25',
+      order: 25,
+      title: 'Alan, izdüşüm ve en kısa yol',
+      summary:
+        'Eksende kesişen doğrularla alan, en büyük uzaklık farkı, dik izdüşüm, en kısa yol, dikdörtgen içinde kare, kesişen doğrularla üçgen alanı ve orta dikme.',
+      questions: pick(
+        'lines-162',
+        'lines-163',
+        'lines-164',
+        'lines-165',
+        'lines-166',
+        'lines-167',
+        'lines-168',
       ),
     },
   ],

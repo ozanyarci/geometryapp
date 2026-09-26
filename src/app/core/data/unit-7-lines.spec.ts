@@ -300,6 +300,20 @@ describe('unit 7 answer key', () => {
   it('160 — AB: y − 3 = −(x − 4)/3, y = 0 → x = 13 → C', () =>
     expect(answerOf('lines-160')).toBe('C'));
   it('161 — B(2, 5), C(−5, −2), −5 − 2 = −7 → D', () => expect(answerOf('lines-161')).toBe('D'));
+  it('162 — n = 8, base 64/8 = 8, x-intercept 4 + 8 = 12, m = −8/12 = −2/3 → B', () =>
+    expect(answerOf('lines-162')).toBe('B'));
+  it('163 — AB: y − 2 = 2(x − 3), x = 0 → y = −4 → D', () =>
+    expect(answerOf('lines-163')).toBe('D'));
+  it('164 — foot H(5, 5) on y = x, |OH| = √50 = 5√2 → C', () =>
+    expect(answerOf('lines-164')).toBe('C'));
+  it('165 — C′(8, −3), slope −4/3, x = 2 + 15/4 = 23/4 → E', () =>
+    expect(answerOf('lines-165')).toBe('E'));
+  it('166 — a(1/10 + 1/6) = 1, a = 15/4, a² = 225/16 → D', () =>
+    expect(answerOf('lines-166')).toBe('D'));
+  it('167 — D(−2, 0), E(2, 6), C(0, 3), 6 · 2/2 = 6 → B', () =>
+    expect(answerOf('lines-167')).toBe('B'));
+  it('168 — midpoint (1, 1), slope 3/4, 3x − 4y + 1 = 0 → D', () =>
+    expect(answerOf('lines-168')).toBe('D'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
