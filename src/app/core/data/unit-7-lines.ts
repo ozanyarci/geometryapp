@@ -1215,6 +1215,272 @@ const QUESTIONS: Question[] = [
     ],
   },
 
+  // ---------------------------------------------------------------- 25
+  {
+    id: 'lines-25',
+    topic: 'İki noktadan geçen doğrunun eğimi',
+    stem: [],
+    ask: 'Analitik düzlemde verilen A(2, −5) ve B(t, 3) noktalarından geçen doğrunun eğimi 2 olduğuna göre, t kaçtır?',
+    choices: [
+      { key: 'A', text: '4' },
+      { key: 'B', text: '5' },
+      { key: 'C', text: '6' },
+      { key: 'D', text: '7' },
+      { key: 'E', text: '8' },
+    ],
+    answer: 'C',
+    hint: 'Eğim, ordinatlar farkının apsisler farkına oranıdır: m = (y₂ − y₁)/(x₂ − x₁).',
+    solution: [
+      {
+        title: 'Eğim formülü',
+        detail: 'm = (3 − (−5)) / (t − 2) = 8 / (t − 2).',
+      },
+      {
+        title: 'Eğimi 2 ye eşitle',
+        detail: '8 / (t − 2) = 2 ⇒ t − 2 = 4.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 't = 6 dır.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 26
+  {
+    id: 'lines-26',
+    topic: 'Doğrunun y eksenini kestiği nokta',
+    stem: [],
+    ask: 'Analitik düzlemde 2x − y/3 = 1 denklemi ile verilen doğrunun y eksenini kestiği noktanın ordinatı kaçtır?',
+    choices: [
+      { key: 'A', text: '−3' },
+      { key: 'B', text: '−1/3' },
+      { key: 'C', text: '1/3' },
+      { key: 'D', text: '1' },
+      { key: 'E', text: '3' },
+    ],
+    answer: 'A',
+    hint: 'y eksenindeki her noktanın apsisi 0 dır; denklemde x = 0 yaz.',
+    solution: [
+      {
+        title: 'x = 0 al',
+        detail: 'y ekseni üzerindeki noktalar için x = 0 olduğundan 2·0 − y/3 = 1 olur.',
+      },
+      {
+        title: 'Denklemi çöz',
+        detail: '−y/3 = 1 ⇒ y = −3.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Doğru y eksenini (0, −3) noktasında keser; ordinat −3 tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 27
+  {
+    id: 'lines-27',
+    topic: 'Genel denklemden eğim',
+    stem: [],
+    ask: 'Analitik düzlemde 4x − 2y + 7 = 0 denklemi ile verilen doğrunun eğimi kaçtır?',
+    choices: [
+      { key: 'A', text: '−2' },
+      { key: 'B', text: '−1/2' },
+      { key: 'C', text: '1/2' },
+      { key: 'D', text: '2' },
+      { key: 'E', text: '4' },
+    ],
+    answer: 'D',
+    hint: 'Denklemi y yalnız kalacak biçimde düzenle; x in katsayısı eğimdir.',
+    solution: [
+      {
+        title: 'y yi yalnız bırak',
+        detail: '4x − 2y + 7 = 0 ⇒ 2y = 4x + 7 ⇒ y = 2x + 7/2.',
+      },
+      {
+        title: 'Eğimi oku',
+        detail: 'y = mx + n biçiminde x in katsayısı m = 2 dir. (Kısa yol: ax + by + c = 0 için m = −a/b = −4/(−2) = 2.)',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Doğrunun eğimi 2 dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 28
+  {
+    id: 'lines-28',
+    topic: 'Eğimi ve x kesimi verilen doğru',
+    stem: [],
+    ask: 'Eğimi −2 olan ve x eksenini apsisi 3 olan noktada kesen doğrunun denklemi aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: 'y − 2x + 6 = 0' },
+      { key: 'B', text: 'y + 2x − 6 = 0' },
+      { key: 'C', text: '2y + x − 3 = 0' },
+      { key: 'D', text: 'y + 2x + 6 = 0' },
+      { key: 'E', text: 'y − 2x − 6 = 0' },
+    ],
+    answer: 'B',
+    hint: 'Doğru (3, 0) noktasından geçer; y − y₁ = m(x − x₁) formülünü kullan.',
+    solution: [
+      {
+        title: 'Geçtiği nokta',
+        detail: 'x eksenini apsisi 3 olan noktada kestiğinden doğru (3, 0) noktasından geçer.',
+      },
+      {
+        title: 'Nokta-eğim formülü',
+        detail: 'y − 0 = −2(x − 3) ⇒ y = −2x + 6.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Terimleri bir tarafa toplarsak y + 2x − 6 = 0 bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 29
+  {
+    id: 'lines-29',
+    topic: 'Orijinden geçen doğrunun denklemi',
+    given: ['A(−2, 6)', 'A ∈ d'],
+    // Origin (200, 200), 24 px per unit; d is y = −3x.
+    figure: {
+      viewBox: '0 0 400 320',
+      caption: 'Şekil 14',
+      label:
+        'Koordinat düzleminde başlangıç noktasından ve ikinci bölgedeki A(−2, 6) noktasından geçen d doğrusu.',
+      svg: `
+          <path class="ln" d="M30,200 L385,200"/>
+          <path class="ln" d="M375,194 L385,200 L375,206"/>
+          <path class="ln" d="M200,315 L200,8"/>
+          <path class="ln" d="M194,18 L200,8 L206,18"/>
+          <text x="382" y="220" text-anchor="middle">x</text>
+          <text x="212" y="20">y</text>
+          <path class="ln" d="M137.6,12.8 L233.6,300.8"/>
+          <circle class="pt" cx="152" cy="56" r="3.2"/>
+          <circle class="pt" cx="200" cy="200" r="3.2"/>
+          <text x="140" y="60" text-anchor="end">A</text>
+          <text x="192" y="218" text-anchor="end">O</text>
+          <text x="128" y="26" text-anchor="end">d</text>
+        `,
+    },
+    stem: [],
+    ask: 'Yukarıdaki dik koordinat sisteminde A(−2, 6) noktasından ve başlangıç noktasından geçen d doğrusunun denklemi aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: 'y = −x' },
+      { key: 'B', text: 'y = −2x' },
+      { key: 'C', text: 'y = 3x' },
+      { key: 'D', text: 'y = −4x' },
+      { key: 'E', text: 'y = −3x' },
+    ],
+    answer: 'E',
+    hint: 'Orijinden geçen doğrunun denklemi y = mx biçimindedir; m yi A noktasından bul.',
+    solution: [
+      {
+        title: 'Denklemin biçimi',
+        detail: 'd doğrusu O(0, 0) dan geçtiği için denklemi y = mx tir.',
+      },
+      {
+        title: 'Eğim',
+        detail: 'm = (6 − 0) / (−2 − 0) = −3.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'd doğrusunun denklemi y = −3x tir. (Kontrol: x = −2 için y = 6.)',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 30
+  {
+    id: 'lines-30',
+    topic: 'Eğimi ve bir noktası verilen doğru',
+    stem: [],
+    ask: 'Eğimi 2/5 olan ve (−1, 0) noktasından geçen doğrunun denklemi aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: '2x − 5y − 2 = 0' },
+      { key: 'B', text: '5x − 2y + 5 = 0' },
+      { key: 'C', text: '2x − 5y + 2 = 0' },
+      { key: 'D', text: '2x + 5y + 2 = 0' },
+      { key: 'E', text: '5y − 2x + 2 = 0' },
+    ],
+    answer: 'C',
+    hint: 'y − y₁ = m(x − x₁) yaz, sonra paydadan kurtulmak için iki tarafı 5 ile çarp.',
+    solution: [
+      {
+        title: 'Nokta-eğim formülü',
+        detail: 'y − 0 = (2/5)(x − (−1)) ⇒ y = (2/5)(x + 1).',
+      },
+      {
+        title: 'Paydayı yok et',
+        detail: 'İki tarafı 5 ile çarparsak 5y = 2x + 2 olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Terimleri bir tarafa toplarsak 2x − 5y + 2 = 0 bulunur. (Kontrol: (−1, 0) için −2 − 0 + 2 = 0.)',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 31
+  {
+    id: 'lines-31',
+    topic: 'Eğimden eksen kesim noktası',
+    // Origin (200, 230), 40 px per unit; d is y = −3x/4 + 3/2 through A(−2, 3) and B(2, 0).
+    figure: {
+      viewBox: '0 0 400 320',
+      caption: 'Şekil 15',
+      label:
+        'Koordinat düzleminde A(−2, 3) noktasından geçen ve x eksenini pozitif tarafta B noktasında kesen d doğrusu.',
+      svg: `
+          <path class="ln" d="M30,230 L385,230"/>
+          <path class="ln" d="M375,224 L385,230 L375,236"/>
+          <path class="ln" d="M200,310 L200,15"/>
+          <path class="ln" d="M194,25 L200,15 L206,25"/>
+          <text x="382" y="250" text-anchor="middle">x</text>
+          <text x="212" y="27">y</text>
+          <path class="ln" d="M80,80 L350,282.5"/>
+          <circle class="pt" cx="120" cy="110" r="3.2"/>
+          <circle class="pt" cx="280" cy="230" r="3.2"/>
+          <circle class="pt" cx="200" cy="230" r="3.2"/>
+          <text x="128" y="100">A(−2, 3)</text>
+          <text x="192" y="248" text-anchor="end">O</text>
+          <text x="280" y="215" text-anchor="middle">B</text>
+          <text x="72" y="78" text-anchor="end">d</text>
+        `,
+    },
+    stem: [],
+    ask: 'Analitik düzlemde verilen yukarıdaki şekilde A(−2, 3) noktasından geçen d doğrusunun eğimi −3/4 tür. Buna göre, B noktasının apsisi kaçtır?',
+    choices: [
+      { key: 'A', text: '1' },
+      { key: 'B', text: '2' },
+      { key: 'C', text: '3' },
+      { key: 'D', text: '4' },
+      { key: 'E', text: '5' },
+    ],
+    answer: 'B',
+    hint: 'B x ekseni üzerinde olduğundan B(b, 0) yaz ve A ile B arasındaki eğimi −3/4 e eşitle.',
+    solution: [
+      {
+        title: 'B nin koordinatları',
+        detail: 'B, x ekseni üzerinde olduğundan B(b, 0) dır.',
+      },
+      {
+        title: 'Eğim eşitliği',
+        detail: '(0 − 3) / (b − (−2)) = −3/4 ⇒ −3 / (b + 2) = −3/4.',
+      },
+      {
+        title: 'Denklemi çöz',
+        detail: 'b + 2 = 4 ⇒ b = 2.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'B noktasının apsisi 2 dir.',
+      },
+    ],
+  },
+
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -1270,6 +1536,22 @@ export const UNIT_7_LINES: Unit = {
       summary:
         'İkizkenar dik üçgenle doğru denklemi, doğrunun noktaya göre simetriği, eşkenar dörtgen, dış açıortayın eğimi, doğru ile kare ve teğet çember.',
       questions: pick('lines-19', 'lines-20', 'lines-21', 'lines-22', 'lines-23', 'lines-24'),
+    },
+    {
+      id: 'lines-m5',
+      order: 5,
+      title: 'Eğim ve doğru denklemi',
+      summary:
+        'İki noktadan eğim, genel denklemden eğim, eksen kesim noktaları ve eğimi ile bir noktası bilinen doğrunun denklemi.',
+      questions: pick(
+        'lines-25',
+        'lines-26',
+        'lines-27',
+        'lines-28',
+        'lines-29',
+        'lines-30',
+        'lines-31',
+      ),
     },
   ],
 };

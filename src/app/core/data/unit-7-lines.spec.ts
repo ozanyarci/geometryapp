@@ -58,6 +58,16 @@ describe('unit 7 answer key', () => {
   it('24 — |OB| = 15, M(15, r), (r − 9)/3 = −4/3, r = 5 → D', () =>
     expect(answerOf('lines-24')).toBe('D'));
 
+  it('25 — (3 − (−5))/(t − 2) = 2, t − 2 = 4, t = 6 → C', () =>
+    expect(answerOf('lines-25')).toBe('C'));
+  it('26 — x = 0, −y/3 = 1, y = −3 → A', () => expect(answerOf('lines-26')).toBe('A'));
+  it('27 — m = −4/(−2) = 2 → D', () => expect(answerOf('lines-27')).toBe('D'));
+  it('28 — y = −2(x − 3), y + 2x − 6 = 0 → B', () => expect(answerOf('lines-28')).toBe('B'));
+  it('29 — m = 6/(−2) = −3, y = −3x → E', () => expect(answerOf('lines-29')).toBe('E'));
+  it('30 — 5y = 2(x + 1), 2x − 5y + 2 = 0 → C', () => expect(answerOf('lines-30')).toBe('C'));
+  it('31 — −3/(b + 2) = −3/4, b + 2 = 4, b = 2 → B', () =>
+    expect(answerOf('lines-31')).toBe('B'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
