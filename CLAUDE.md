@@ -33,6 +33,7 @@ src/app/core/data/unit-5-circles.ts    Unit 5 — Çember ve Daire
 src/app/core/data/unit-6-analytic.ts   Unit 6 — Noktanın Analitik İncelenmesi
 src/app/core/data/unit-7-lines.ts      Unit 7 — Doğrunun Analitik İncelenmesi
 src/app/core/data/unit-8-prisms.ts     Unit 8 — Prizmalar
+src/app/core/data/unit-9-pyramids.ts   Unit 9 — Piramitler
 src/app/core/data/unit-1-angles.spec.ts  integrity checks for ALL units
 src/app/ui/figure/figure.ts         renders a Figure's SVG
 src/styles.scss                     figure SVG classes live here
@@ -137,7 +138,7 @@ every banked question sitting in exactly one module, and figure shape (four-numb
 automatically.
 
 `unit-1-angles.spec.ts`, `unit-2-triangles.spec.ts`, `unit-3-polygons.spec.ts`,
-`unit-4-quadrilaterals.spec.ts`, `unit-5-circles.spec.ts`, `unit-6-analytic.spec.ts`, `unit-7-lines.spec.ts` and `unit-8-prisms.spec.ts` hold one answer-key line
+`unit-4-quadrilaterals.spec.ts`, `unit-5-circles.spec.ts`, `unit-6-analytic.spec.ts`, `unit-7-lines.spec.ts`, `unit-8-prisms.spec.ts` and `unit-9-pyramids.spec.ts` hold one answer-key line
 per question, each restating the arithmetic, plus a check that no question in the
 unit is missing its line.
 

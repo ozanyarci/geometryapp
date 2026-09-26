@@ -7,6 +7,7 @@ import { UNIT_5_CIRCLES } from './data/unit-5-circles';
 import { UNIT_6_ANALYTIC } from './data/unit-6-analytic';
 import { UNIT_7_LINES } from './data/unit-7-lines';
 import { UNIT_8_PRISMS } from './data/unit-8-prisms';
+import { UNIT_9_PYRAMIDS } from './data/unit-9-pyramids';
 
 /**
  * Every unit in the app. To add one, create its data file and append it here
@@ -21,6 +22,7 @@ export const UNITS: readonly Unit[] = [
   UNIT_6_ANALYTIC,
   UNIT_7_LINES,
   UNIT_8_PRISMS,
+  UNIT_9_PYRAMIDS,
 ];
 
 export function findUnit(id: string): Unit | undefined {
