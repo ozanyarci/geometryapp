@@ -33,6 +33,14 @@ describe('unit 8 answer key', () => {
   it('12 — 96π + 48π + 2·27π = 198π → C', () => expect(answerOf('prisms-12')).toBe('C'));
   it('13 — 4·8·16 = 512 = 8³, 8√3 → D', () => expect(answerOf('prisms-13')).toBe('D'));
   it('14 — 2·(12 + 28) = 80, 80·3 = 240 → D', () => expect(answerOf('prisms-14')).toBe('D'));
+  it('15 — 3·4·7 = 84 → B', () => expect(answerOf('prisms-15')).toBe('B'));
+  it('16 — a·a√2 = 8√2, a = 2√2, a³ = 16√2 → D', () => expect(answerOf('prisms-16')).toBe('D'));
+  it('17 — 6·(2²√3/4)·6 = 36√3 → C', () => expect(answerOf('prisms-17')).toBe('C'));
+  it('18 — 12² + 4² + 3² = 169, √169 = 13 → D', () => expect(answerOf('prisms-18')).toBe('D'));
+  it('19 — a(√3 − 1) = 4, a = 2√3 + 2, a√3 = 6 + 2√3 → E', () =>
+    expect(answerOf('prisms-19')).toBe('E'));
+  it('20 — 54√3/6 = 9√3, a = 6, 3·6·6 = 108 → A', () => expect(answerOf('prisms-20')).toBe('A'));
+  it('21 — a = 540/60 = 9, √(12² + 9²) = 15 → D', () => expect(answerOf('prisms-21')).toBe('D'));
 
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {

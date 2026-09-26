@@ -851,6 +851,371 @@ const QUESTIONS: Question[] = [
         `,
     },
   },
+  // ---------------------------------------------------------------- 15
+  {
+    id: 'prisms-15',
+    topic: 'Dikdörtgenler prizmasının hacmi',
+    stem: [],
+    ask: 'Ayrıtları 3 cm, 4 cm ve 7 cm olan dikdörtgenler prizmasının hacmi kaç cm³ tür?',
+    choices: [
+      { key: 'A', text: '72' },
+      { key: 'B', text: '84' },
+      { key: 'C', text: '96' },
+      { key: 'D', text: '108' },
+      { key: 'E', text: '112' },
+    ],
+    answer: 'B',
+    hint: 'Dikdörtgenler prizmasının hacmi üç ayrıtının çarpımıdır.',
+    solution: [
+      {
+        title: 'Hacim bağıntısı',
+        detail: 'Ayrıtları a, b, c olan dikdörtgenler prizmasında V = a · b · c dir.',
+      },
+      {
+        title: 'Taban alanı',
+        detail: '3 · 4 = 12 cm².',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'V = 12 · 7 = 84 cm³ tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 16
+  // Cube of edge 2√2 at 60 px per cm; the section BCHE is shaded.
+  {
+    id: 'prisms-16',
+    topic: 'Küpün köşegen kesitinden hacim',
+    stem: [],
+    given: ['ABCDEFGH bir küptür.', 'A(BCHE) = 8√2 cm²'],
+    ask: 'Yukarıdaki verilere göre, küpün hacmi kaç cm³ tür?',
+    choices: [
+      { key: 'A', text: '8√2' },
+      { key: 'B', text: '12√2' },
+      { key: 'C', text: '16' },
+      { key: 'D', text: '16√2' },
+      { key: 'E', text: '24√2' },
+    ],
+    answer: 'D',
+    hint: 'BCHE bir dikdörtgendir; kenarlarından biri küpün ayrıtı, diğeri bir yüz köşegenidir.',
+    solution: [
+      {
+        title: 'Kesitin kenarları',
+        detail:
+          'Küpün ayrıtı a olsun. |BC| = a, [CH] ise DCGH yüzünün köşegeni olduğundan |CH| = a√2 dir.',
+      },
+      {
+        title: 'Alan denklemi',
+        detail: 'A(BCHE) = a · a√2 = a²√2 = 8√2 ⇒ a² = 8.',
+      },
+      {
+        title: 'Ayrıt',
+        detail: 'a = √8 = 2√2 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'V = a³ = (2√2)³ = 16√2 cm³ tür.',
+      },
+    ],
+    figure: {
+      viewBox: '0 -8 400 284',
+      caption: 'Şekil 10',
+      label:
+        'ABCDEFGH küpü; alt yüz ABCD, üst yüz EFGH. B, C, H ve E köşelerinden geçen BCHE dikdörtgeni taralı.',
+      svg: `
+          <path class="shade" d="M254.9,252.0 L314.9,192.0 L145.1,22.3 L85.1,82.3 Z"/>
+          <path class="hid" d="M85.1,252.0 L145.1,192.0 L314.9,192.0"/>
+          <path class="hid" d="M145.1,192.0 L145.1,22.3"/>
+          <path class="ln" d="M85.1,252.0 L254.9,252.0 L314.9,192.0 L314.9,22.3 L145.1,22.3 L85.1,82.3 Z"/>
+          <path class="ln" d="M85.1,82.3 L254.9,82.3 L314.9,22.3"/>
+          <path class="ln" d="M254.9,252.0 L254.9,82.3"/>
+          <path class="ln" d="M254.9,252.0 L85.1,82.3"/>
+          <path class="hid" d="M314.9,192.0 L145.1,22.3"/>
+          <circle class="pt" cx="85.1" cy="252.0" r="3.2"/>
+          <circle class="pt" cx="254.9" cy="252.0" r="3.2"/>
+          <circle class="pt" cx="314.9" cy="192.0" r="3.2"/>
+          <circle class="pt" cx="145.1" cy="192.0" r="3.2"/>
+          <circle class="pt" cx="85.1" cy="82.3" r="3.2"/>
+          <circle class="pt" cx="254.9" cy="82.3" r="3.2"/>
+          <circle class="pt" cx="314.9" cy="22.3" r="3.2"/>
+          <circle class="pt" cx="145.1" cy="22.3" r="3.2"/>
+          <text x="77.1" y="268.0" text-anchor="end">A</text>
+          <text x="262.9" y="268.0">B</text>
+          <text x="324.9" y="198.0">C</text>
+          <text x="135.1" y="184.0" text-anchor="end">D</text>
+          <text x="75.1" y="88.3" text-anchor="end">E</text>
+          <text x="262.9" y="100.3">F</text>
+          <text x="324.9" y="16.3">G</text>
+          <text x="145.1" y="10.3" text-anchor="middle">H</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 17
+  // Regular hexagonal prism, base edge 2, height 6, at 36 px per cm; the base
+  // is shaded.
+  {
+    id: 'prisms-17',
+    topic: 'Düzgün altıgen dik prizmanın hacmi',
+    stem: [],
+    ask: 'Yukarıda verilen taban ayrıtı 2 cm ve yüksekliği 6 cm olan düzgün altıgen dik prizmanın hacmi kaç cm³ tür?',
+    choices: [
+      { key: 'A', text: '24√3' },
+      { key: 'B', text: '30√3' },
+      { key: 'C', text: '36√3' },
+      { key: 'D', text: '42√3' },
+      { key: 'E', text: '48√3' },
+    ],
+    answer: 'C',
+    hint: 'Düzgün altıgen, kenarı altıgenin kenarına eşit altı eşkenar üçgenden oluşur.',
+    solution: [
+      {
+        title: 'Bir eşkenar üçgenin alanı',
+        detail: 'Kenarı 2 cm olan eşkenar üçgenin alanı 2²√3 / 4 = √3 cm².',
+      },
+      {
+        title: 'Taban alanı',
+        detail: 'Düzgün altıgen altı eşkenar üçgenden oluşur: 6 · √3 = 6√3 cm².',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'V = taban alanı · yükseklik = 6√3 · 6 = 36√3 cm³ tür.',
+      },
+    ],
+    figure: {
+      viewBox: '0 38 400 302',
+      caption: 'Şekil 11',
+      label: 'Düzgün altıgen dik prizma; taban ayrıtı 2 cm, yüksekliği 6 cm. Alt taban taralı.',
+      svg: `
+          <path class="shade" d="M272.0,292.0 L258.0,270.0 L186.0,270.0 L128.0,292.0 L142.0,314.0 L214.0,314.0 Z"/>
+          <path class="hid" d="M272.0,292.0 L258.0,270.0 L186.0,270.0 L128.0,292.0"/>
+          <path class="hid" d="M258.0,270.0 L258.0,54.0"/>
+          <path class="hid" d="M186.0,270.0 L186.0,54.0"/>
+          <path class="ln" d="M128.0,292.0 L142.0,314.0 L214.0,314.0 L272.0,292.0"/>
+          <path class="ln" d="M272.0,76.0 L258.0,54.0 L186.0,54.0 L128.0,76.0 L142.0,98.0 L214.0,98.0 Z"/>
+          <path class="ln" d="M272.0,292.0 L272.0,76.0"/>
+          <path class="ln" d="M128.0,292.0 L128.0,76.0"/>
+          <path class="ln" d="M142.0,314.0 L142.0,98.0"/>
+          <path class="ln" d="M214.0,314.0 L214.0,98.0"/>
+          <text class="val" x="178.0" y="334.0" text-anchor="middle">2</text>
+          <text class="val" x="280.0" y="190.0">6</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 18
+  // Box 12 × 6 × 4 at 20 px per cm; depth at half scale along 45°.
+  {
+    id: 'prisms-18',
+    topic: 'Dikdörtgenler prizmasında uzaklık',
+    stem: [],
+    given: [
+      'ABCDEFGH bir dikdörtgenler prizmasıdır.',
+      '|AB| = 12 cm, |BC| = 6 cm, |AE| = 4 cm',
+      '|ET| = |TH|',
+    ],
+    ask: 'Yukarıdaki verilere göre, |BT| kaç cm dir?',
+    choices: [
+      { key: 'A', text: '11' },
+      { key: 'B', text: '12' },
+      { key: 'C', text: '4√10' },
+      { key: 'D', text: '13' },
+      { key: 'E', text: '15' },
+    ],
+    answer: 'D',
+    hint: '[BE] köşegenini çiz; [EH] ayrıtı ABFE yüzüne diktir.',
+    solution: [
+      {
+        title: 'Yüz köşegeni',
+        detail: 'ABFE dikdörtgeninde |BE|² = 12² + 4² = 160.',
+      },
+      {
+        title: '|ET|',
+        detail: '|EH| = |BC| = 6 cm ve T orta nokta olduğundan |ET| = 3 cm.',
+      },
+      {
+        title: 'Dik üçgen',
+        detail: '[EH] ayrıtı ABFE yüzüne dik olduğundan BET üçgeni E de dik açılıdır.',
+      },
+      {
+        title: 'Sonuç',
+        detail: '|BT|² = 160 + 3² = 169, dolayısıyla |BT| = 13 cm dir.',
+      },
+    ],
+    figure: {
+      viewBox: '0 14 400 180',
+      caption: 'Şekil 12',
+      label:
+        'ABCDEFGH dikdörtgenler prizması; |AB| = 12 cm, |BC| = 6 cm, |AE| = 4 cm. T noktası [EH] ayrıtının orta noktası, |ET| = |TH|, ve B ile T birleştirilmiş.',
+      svg: `
+          <path class="hid" d="M58.8,160.0 L101.2,117.6 L341.2,117.6"/>
+          <path class="hid" d="M101.2,117.6 L101.2,37.6"/>
+          <path class="ln" d="M58.8,160.0 L298.8,160.0 L341.2,117.6 L341.2,37.6 L101.2,37.6 L58.8,80.0 Z"/>
+          <path class="ln" d="M58.8,80.0 L298.8,80.0 L341.2,37.6"/>
+          <path class="ln" d="M298.8,160.0 L298.8,80.0"/>
+          <path class="ln" d="M298.8,160.0 L80.0,58.8"/>
+          <path class="tick" d="M65.9,65.9 L72.9,72.9"/>
+          <path class="tick" d="M87.1,44.6 L94.1,51.7"/>
+          <circle class="pt" cx="58.8" cy="160.0" r="3.2"/>
+          <circle class="pt" cx="298.8" cy="160.0" r="3.2"/>
+          <circle class="pt" cx="341.2" cy="117.6" r="3.2"/>
+          <circle class="pt" cx="101.2" cy="117.6" r="3.2"/>
+          <circle class="pt" cx="58.8" cy="80.0" r="3.2"/>
+          <circle class="pt" cx="298.8" cy="80.0" r="3.2"/>
+          <circle class="pt" cx="341.2" cy="37.6" r="3.2"/>
+          <circle class="pt" cx="101.2" cy="37.6" r="3.2"/>
+          <circle class="pt" cx="80.0" cy="58.8" r="3.2"/>
+          <text x="50.8" y="176.0" text-anchor="end">A</text>
+          <text x="306.8" y="176.0">B</text>
+          <text x="351.2" y="123.6">C</text>
+          <text x="109.2" y="133.6">D</text>
+          <text x="48.8" y="86.0" text-anchor="end">E</text>
+          <text x="306.8" y="98.0">F</text>
+          <text x="351.2" y="31.6">G</text>
+          <text x="101.2" y="25.6" text-anchor="middle">H</text>
+          <text x="70.0" y="48.8" text-anchor="end">T</text>
+          <text class="val" x="178.8" y="182.0" text-anchor="middle">12</text>
+          <text class="val" x="328.0" y="152.0">6</text>
+          <text class="val" x="50.8" y="126.0" text-anchor="end">4</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 14 400 180',
+      caption: 'Şekil 12',
+      label:
+        'Aynı prizmada ABFE yüzünün [BE] köşegeni kesikli çizilmiş; BET üçgeni E de dik açılıdır.',
+      svg: `
+          <path class="hid" d="M58.8,160.0 L101.2,117.6 L341.2,117.6"/>
+          <path class="hid" d="M101.2,117.6 L101.2,37.6"/>
+          <path class="ln" d="M58.8,160.0 L298.8,160.0 L341.2,117.6 L341.2,37.6 L101.2,37.6 L58.8,80.0 Z"/>
+          <path class="ln" d="M58.8,80.0 L298.8,80.0 L341.2,37.6"/>
+          <path class="ln" d="M298.8,160.0 L298.8,80.0"/>
+          <path class="ln" d="M298.8,160.0 L80.0,58.8"/>
+          <path class="tick" d="M65.9,65.9 L72.9,72.9"/>
+          <path class="tick" d="M87.1,44.6 L94.1,51.7"/>
+          <circle class="pt" cx="58.8" cy="160.0" r="3.2"/>
+          <circle class="pt" cx="298.8" cy="160.0" r="3.2"/>
+          <circle class="pt" cx="341.2" cy="117.6" r="3.2"/>
+          <circle class="pt" cx="101.2" cy="117.6" r="3.2"/>
+          <circle class="pt" cx="58.8" cy="80.0" r="3.2"/>
+          <circle class="pt" cx="298.8" cy="80.0" r="3.2"/>
+          <circle class="pt" cx="341.2" cy="37.6" r="3.2"/>
+          <circle class="pt" cx="101.2" cy="37.6" r="3.2"/>
+          <circle class="pt" cx="80.0" cy="58.8" r="3.2"/>
+          <text x="50.8" y="176.0" text-anchor="end">A</text>
+          <text x="306.8" y="176.0">B</text>
+          <text x="351.2" y="123.6">C</text>
+          <text x="109.2" y="133.6">D</text>
+          <text x="48.8" y="86.0" text-anchor="end">E</text>
+          <text x="306.8" y="98.0">F</text>
+          <text x="351.2" y="31.6">G</text>
+          <text x="101.2" y="25.6" text-anchor="middle">H</text>
+          <text x="70.0" y="48.8" text-anchor="end">T</text>
+          <text class="val" x="178.8" y="182.0" text-anchor="middle">12</text>
+          <text class="val" x="328.0" y="152.0">6</text>
+          <text class="val" x="50.8" y="126.0" text-anchor="end">4</text>
+          <path class="aux" d="M298.8,160.0 L58.8,80.0"/>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 19
+  {
+    id: 'prisms-19',
+    topic: 'Küpte cisim köşegeni ile ayrıt',
+    stem: [],
+    ask: 'Bir küpün cisim köşegeni bir ayrıtından 4 cm uzun ise, küpün cisim köşegeni kaç cm dir?',
+    choices: [
+      { key: 'A', text: '2 + 2√3' },
+      { key: 'B', text: '4 + 2√3' },
+      { key: 'C', text: '3 + 3√3' },
+      { key: 'D', text: '4 + 4√3' },
+      { key: 'E', text: '6 + 2√3' },
+    ],
+    answer: 'E',
+    hint: 'Ayrıtı a olan küpün cisim köşegeni a√3 tür; farkı a cinsinden yaz.',
+    solution: [
+      {
+        title: 'Denklem',
+        detail: 'Ayrıt a ise a√3 − a = 4, yani a(√3 − 1) = 4.',
+      },
+      {
+        title: 'Ayrıt',
+        detail: 'a = 4 / (√3 − 1) = 4(√3 + 1) / 2 = 2√3 + 2 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Cisim köşegeni a√3 = (2√3 + 2)√3 = 6 + 2√3 cm dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 20
+  {
+    id: 'prisms-20',
+    topic: 'Eşkenar üçgen prizmanın yanal alanı',
+    stem: ['Tabanı eşkenar üçgen olan bir dik prizmanın yüksekliği 6 cm ve hacmi 54√3 cm³ tür.'],
+    ask: 'Buna göre, prizmanın yanal alanı kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '108' },
+      { key: 'B', text: '120' },
+      { key: 'C', text: '126' },
+      { key: 'D', text: '144' },
+      { key: 'E', text: '162' },
+    ],
+    answer: 'A',
+    hint: 'Hacimden taban alanını, taban alanından da taban kenarını bul.',
+    solution: [
+      {
+        title: 'Taban alanı',
+        detail: '54√3 / 6 = 9√3 cm².',
+      },
+      {
+        title: 'Taban kenarı',
+        detail: 'a²√3 / 4 = 9√3 ⇒ a² = 36 ⇒ a = 6 cm.',
+      },
+      {
+        title: 'Yanal yüzler',
+        detail: 'Yanal yüzler, kenarları 6 cm ve 6 cm olan üç dikdörtgendir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Yanal alan 3 · 6 · 6 = 108 cm² dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 21
+  {
+    id: 'prisms-21',
+    topic: 'Hacimden ayrıt, yüzey köşegeni',
+    stem: ['Ayrıtları 5 cm, 12 cm ve a cm olan bir dikdörtgenler prizmasının hacmi 540 cm³ tür.'],
+    ask: 'Buna göre, prizmanın yüzey köşegenlerinden biri aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: '11' },
+      { key: 'B', text: '12' },
+      { key: 'C', text: '14' },
+      { key: 'D', text: '15' },
+      { key: 'E', text: '17' },
+    ],
+    answer: 'D',
+    hint: 'Önce hacimden a yı bul; sonra her yüzün köşegenini Pisagor ile hesapla.',
+    solution: [
+      {
+        title: 'Üçüncü ayrıt',
+        detail: '5 · 12 · a = 540 ⇒ 60a = 540 ⇒ a = 9 cm.',
+      },
+      {
+        title: 'Yüz köşegenleri',
+        detail: '√(5² + 12²) = 13, √(5² + 9²) = √106, √(12² + 9²) = √225 = 15.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Seçeneklerde yalnızca 15 yer alır; cevap 15 tir.',
+      },
+    ],
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -899,6 +1264,22 @@ export const UNIT_8_PRISMS: Unit = {
       summary:
         'Köşegenden ayrıtlar toplamı, eğilen silindirden dökülen su, deltoid prizmaya yerleşen silindir, delinmiş silindir, eş hacimli küp ve üstü açık kutu.',
       questions: pick('prisms-9', 'prisms-10', 'prisms-11', 'prisms-12', 'prisms-13', 'prisms-14'),
+    },
+    {
+      id: 'prisms-m3',
+      order: 3,
+      title: 'Hacim, köşegen ve kesit',
+      summary:
+        'Dikdörtgenler prizmasında hacim, küpün köşegen kesiti, düzgün altıgen prizma, prizmada uzaklık, cisim köşegeni, eşkenar üçgen prizma ve yüzey köşegeni.',
+      questions: pick(
+        'prisms-15',
+        'prisms-16',
+        'prisms-17',
+        'prisms-18',
+        'prisms-19',
+        'prisms-20',
+        'prisms-21',
+      ),
     },
   ],
 };
