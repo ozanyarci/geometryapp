@@ -3314,6 +3314,321 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+  // ---------------------------------------------------------------- 71
+  {
+    id: 'lines-71',
+    topic: 'Noktanın doğruya uzaklığı',
+    given: ['d: 3x − 4y = 0', '[BA] ⊥ d', 'B(0, 5)'],
+    // Origin (150, 250), 40 px per unit; B(0, 5), foot A(12/5, 9/5) on d.
+    figure: {
+      viewBox: '0 20 400 320',
+      caption: 'Şekil 33',
+      label:
+        'Dik koordinat sisteminde orijinden geçen d doğrusu ve y ekseni üzerindeki B noktası; B den d doğrusuna çizilen dikmenin ayağı A noktası.',
+      svg: `
+          <path class="ln" d="M20,250 L390,250"/>
+          <path class="ln" d="M380,244 L390,250 L380,256"/>
+          <path class="ln" d="M150,335 L150,30"/>
+          <path class="ln" d="M144,40 L150,30 L156,40"/>
+          <text x="386" y="240" text-anchor="middle">x</text>
+          <text x="162" y="40">y</text>
+          <path class="ln" d="M50,325 L370,85"/>
+          <path class="ln" d="M150,50 L246,178"/>
+          <path class="ln" d="M238,184 L232,176 L240,170"/>
+          <circle class="pt" cx="150" cy="50" r="3.2"/>
+          <circle class="pt" cx="246" cy="178" r="3.2"/>
+          <text x="142" y="56" text-anchor="end">B</text>
+          <text x="254" y="198">A</text>
+          <text x="142" y="268" text-anchor="end">O</text>
+          <text x="366" y="112">d</text>
+        `,
+    },
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |AB| kaç birimdir?',
+    choices: [
+      { key: 'A', text: '3' },
+      { key: 'B', text: '16/5' },
+      { key: 'C', text: '4' },
+      { key: 'D', text: '5' },
+      { key: 'E', text: '6' },
+    ],
+    answer: 'C',
+    hint: '|AB|, B noktasının d doğrusuna olan uzaklığıdır.',
+    solution: [
+      {
+        title: 'Uzaklık formülü',
+        detail: '|AB| = |3 · 0 − 4 · 5| / √(3² + 4²) bağıntısıyla bulunur.',
+      },
+      {
+        title: 'Hesap',
+        detail: '|AB| = |−20| / √25 = 20/5.',
+      },
+      {
+        title: 'Sonuç',
+        detail: '|AB| = 4 birimdir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 72
+  {
+    id: 'lines-72',
+    topic: 'Kesişen doğrularla üçgen alanları oranı',
+    given: ['d₁: x/6 + y/4 = 1', 'd₂: y − 2x = 0', 'd₁ ∩ d₂ = {C}'],
+    // Origin (100, 270), 40 px per unit; A(0, 4), B(6, 0), C(3/2, 3).
+    figure: {
+      viewBox: '0 50 400 280',
+      caption: 'Şekil 34',
+      label:
+        'Dik koordinat sisteminde d₁ doğrusu y eksenini A, x eksenini B noktasında kesiyor; orijinden geçen d₂ doğrusu d₁ i C noktasında kesiyor. OCB üçgeni taralı.',
+      svg: `
+          <path class="shade" d="M100,270 L160,150 L340,270 Z"/>
+          <path class="ln" d="M20,270 L390,270"/>
+          <path class="ln" d="M380,264 L390,270 L380,276"/>
+          <path class="ln" d="M100,325 L100,60"/>
+          <path class="ln" d="M94,70 L100,60 L106,70"/>
+          <text x="386" y="260" text-anchor="middle">x</text>
+          <text x="112" y="70">y</text>
+          <path class="ln" d="M60,83.33 L380,296.67"/>
+          <path class="ln" d="M80,310 L200,70"/>
+          <circle class="pt" cx="100" cy="110" r="3.2"/>
+          <circle class="pt" cx="340" cy="270" r="3.2"/>
+          <circle class="pt" cx="160" cy="150" r="3.2"/>
+          <text x="92" y="115" text-anchor="end">A</text>
+          <text x="340" y="292" text-anchor="middle">B</text>
+          <text x="172" y="150">C</text>
+          <text x="92" y="288" text-anchor="end">O</text>
+          <text x="52" y="80" text-anchor="end">d₁</text>
+          <text x="208" y="76">d₂</text>
+        `,
+    },
+    stem: [],
+    ask: 'Dik koordinat sistemindeki verilere göre, Alan(OCB) / Alan(OCA) oranı kaçtır?',
+    choices: [
+      { key: 'A', text: '1/2' },
+      { key: 'B', text: '2/3' },
+      { key: 'C', text: '3/2' },
+      { key: 'D', text: '3' },
+      { key: 'E', text: '4' },
+    ],
+    answer: 'D',
+    hint: 'Önce d₂ nin denklemindeki y = 2x ifadesini d₁ de yerine yazarak C noktasını bul.',
+    solution: [
+      {
+        title: 'Eksen noktaları',
+        detail: 'd₁ eksenleri A(0, 4) ve B(6, 0) noktalarında keser.',
+      },
+      {
+        title: 'C noktası',
+        detail: 'x/6 + 2x/4 = 1 ⇒ 2x/3 = 1 ⇒ x = 3/2, y = 3; C(3/2, 3).',
+      },
+      {
+        title: 'Alan(OCB)',
+        detail: 'Taban |OB| = 6, yükseklik C nin ordinatı 3: Alan = 6 · 3 / 2 = 9.',
+      },
+      {
+        title: 'Alan(OCA)',
+        detail: 'Taban |OA| = 4, yükseklik C nin apsisi 3/2: Alan = 4 · (3/2) / 2 = 3.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Alan(OCB) / Alan(OCA) = 9/3 = 3 tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 73
+  {
+    id: 'lines-73',
+    topic: 'Doğruların y ekseni ile oluşturduğu alan',
+    stem: [
+      'Dik koordinat düzleminde denklemleri 2x + y − 7 = 0 ve x − y + 1 = 0 olan doğrular veriliyor.',
+    ],
+    ask: 'Bu doğruların y ekseni ile oluşturduğu kapalı bölgenin alanı kaç birim karedir?',
+    choices: [
+      { key: 'A', text: '4' },
+      { key: 'B', text: '5' },
+      { key: 'C', text: '6' },
+      { key: 'D', text: '7' },
+      { key: 'E', text: '8' },
+    ],
+    answer: 'C',
+    hint: 'Her doğrunun y eksenini kestiği noktayı ve iki doğrunun kesim noktasını bul.',
+    solution: [
+      {
+        title: 'y ekseni kesim noktaları',
+        detail:
+          'x = 0 için 2x + y − 7 = 0 ⇒ y = 7; x − y + 1 = 0 ⇒ y = 1. Noktalar (0, 7) ve (0, 1).',
+      },
+      {
+        title: 'Kesim noktası',
+        detail: 'y = x + 1 i yerine yaz: 2x + x + 1 − 7 = 0 ⇒ x = 2, y = 3; nokta (2, 3).',
+      },
+      {
+        title: 'Taban ve yükseklik',
+        detail: 'Taban y ekseni üzerinde 7 − 1 = 6, yükseklik kesim noktasının apsisi 2 dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Alan = 6 · 2 / 2 = 6 birim karedir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 74
+  {
+    id: 'lines-74',
+    topic: 'İki doğrunun kesim noktası',
+    given: ['d₁: y = x + 1', 'd₂: x/8 + y/4 = 1'],
+    // Origin (60, 250), 35 px per unit; d₂ through (8, 0), (0, 4); P(2, 3).
+    figure: {
+      viewBox: '0 25 400 270',
+      caption: 'Şekil 35',
+      label:
+        'Analitik düzlemde eğimi pozitif olan d₁ doğrusu ile eksenleri kesen, eğimi negatif olan d₂ doğrusu birinci bölgede P noktasında kesişiyor.',
+      svg: `
+          <path class="ln" d="M20,250 L390,250"/>
+          <path class="ln" d="M380,244 L390,250 L380,256"/>
+          <path class="ln" d="M60,285 L60,35"/>
+          <path class="ln" d="M54,45 L60,35 L66,45"/>
+          <text x="386" y="240" text-anchor="middle">x</text>
+          <text x="72" y="45">y</text>
+          <path class="ln" d="M25,250 L235,40"/>
+          <path class="ln" d="M42.5,101.25 L375,267.5"/>
+          <circle class="pt" cx="130" cy="145" r="3.2"/>
+          <text x="130" y="168" text-anchor="middle">P</text>
+          <text x="52" y="268" text-anchor="end">O</text>
+          <text x="243" y="50">d₁</text>
+          <text x="352" y="282">d₂</text>
+        `,
+    },
+    stem: [],
+    ask: 'Analitik düzlemde verilen d₁ ve d₂ doğruları P noktasında kesiştiğine göre, P noktasının koordinatları aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: '(1, 2)' },
+      { key: 'B', text: '(2, 3)' },
+      { key: 'C', text: '(3, 4)' },
+      { key: 'D', text: '(4, 2)' },
+      { key: 'E', text: '(2, 4)' },
+    ],
+    answer: 'B',
+    hint: 'd₂ nin denkleminde y yerine x + 1 yaz.',
+    solution: [
+      {
+        title: 'Yerine koyma',
+        detail: 'x/8 + (x + 1)/4 = 1; her iki tarafı 8 ile çarp: x + 2x + 2 = 8.',
+      },
+      {
+        title: 'Apsis',
+        detail: '3x = 6 ⇒ x = 2.',
+      },
+      {
+        title: 'Ordinat',
+        detail: 'y = x + 1 = 3.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'P noktası (2, 3) tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 75
+  {
+    id: 'lines-75',
+    topic: 'Dik doğruların eğimleri',
+    stem: [
+      'Dik koordinat sisteminde A(2, 5) noktasından geçen bir d doğrusu, denklemi mx + 2y − 3 = 0 olan doğruya diktir.',
+    ],
+    ask: 'Bu d doğrusu (−2, 3) noktasından da geçtiğine göre, m kaçtır?',
+    choices: [
+      { key: 'A', text: '−4' },
+      { key: 'B', text: '−2' },
+      { key: 'C', text: '2' },
+      { key: 'D', text: '4' },
+      { key: 'E', text: '6' },
+    ],
+    answer: 'D',
+    hint: 'd nin eğimini iki noktasından bul; dik doğruların eğimleri çarpımı −1 dir.',
+    solution: [
+      {
+        title: 'd nin eğimi',
+        detail: 'm(d) = (5 − 3) / (2 − (−2)) = 2/4 = 1/2.',
+      },
+      {
+        title: 'Diğer doğrunun eğimi',
+        detail: 'mx + 2y − 3 = 0 ⇒ y = −(m/2)x + 3/2; eğim −m/2.',
+      },
+      {
+        title: 'Diklik koşulu',
+        detail: '(1/2) · (−m/2) = −1 ⇒ −m/4 = −1.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'm = 4 tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 76
+  {
+    id: 'lines-76',
+    topic: 'Dikme ayağının koordinatları',
+    given: ['[AB] ⊥ d', 'A(0, 10)', 'B ∈ d'],
+    // Origin (170, 300), 25 px per unit; d: y = 3x, A(0, 10), B(3, 9).
+    figure: {
+      viewBox: '0 5 400 355',
+      caption: 'Şekil 36',
+      label:
+        'Analitik düzlemde orijinden geçen d doğrusu; y ekseni üzerindeki A noktasından d doğrusuna çizilen dikmenin ayağı B noktası.',
+      svg: `
+          <path class="ln" d="M20,300 L390,300"/>
+          <path class="ln" d="M380,294 L390,300 L380,306"/>
+          <path class="ln" d="M170,355 L170,15"/>
+          <path class="ln" d="M164,25 L170,15 L176,25"/>
+          <text x="386" y="290" text-anchor="middle">x</text>
+          <text x="182" y="25">y</text>
+          <path class="ln" d="M155,345 L260,30"/>
+          <path class="ln" d="M170,50 L245,75"/>
+          <path class="ln" d="M235.51,71.84 L232.35,81.33 L241.84,84.49"/>
+          <circle class="pt" cx="170" cy="50" r="3.2"/>
+          <circle class="pt" cx="245" cy="75" r="3.2"/>
+          <text x="162" y="55" text-anchor="end">A</text>
+          <text x="254" y="82">B</text>
+          <text x="162" y="318" text-anchor="end">O</text>
+          <text x="266" y="45">d</text>
+        `,
+    },
+    stem: [],
+    ask: 'Analitik düzlemde verilen d doğrusunun denklemi y = 3x olduğuna göre, B noktasının koordinatları aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: '(3, 9)' },
+      { key: 'B', text: '(2, 6)' },
+      { key: 'C', text: '(1, 3)' },
+      { key: 'D', text: '(9, 3)' },
+      { key: 'E', text: '(3, 8)' },
+    ],
+    answer: 'A',
+    hint: '[AB] doğrusunun eğimi, d nin eğimiyle çarpıldığında −1 verir.',
+    solution: [
+      {
+        title: 'AB doğrusunun eğimi',
+        detail: 'd nin eğimi 3 olduğundan AB nin eğimi −1/3 tür.',
+      },
+      {
+        title: 'AB nin denklemi',
+        detail: 'A(0, 10) dan geçtiği için y = −x/3 + 10.',
+      },
+      {
+        title: 'Kesim noktası',
+        detail: '3x = −x/3 + 10 ⇒ 10x/3 = 10 ⇒ x = 3, y = 9.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'B noktası (3, 9) dur.',
+      },
+    ],
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -3457,6 +3772,14 @@ export const UNIT_7_LINES: Unit = {
       summary:
         'Eksen kesim noktalarıyla kesişim, dik doğrunun katsayıları, doğrunun y = 2x ile kesimi, üçüncü doğru üzerinde kesişme, paralel doğru ve dik üçgende eğim.',
       questions: pick('lines-65', 'lines-66', 'lines-67', 'lines-68', 'lines-69', 'lines-70'),
+    },
+    {
+      id: 'lines-m12',
+      order: 12,
+      title: 'Uzaklık, alan ve dikme ayağı',
+      summary:
+        'Noktanın doğruya uzaklığı, kesişen doğrularla alan oranı, y ekseniyle kapalı bölge, kesim noktası, diklik koşulu ve dikme ayağı.',
+      questions: pick('lines-71', 'lines-72', 'lines-73', 'lines-74', 'lines-75', 'lines-76'),
     },
   ],
 };

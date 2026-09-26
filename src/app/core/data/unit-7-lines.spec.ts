@@ -134,6 +134,15 @@ describe('unit 7 answer key', () => {
   it('70 — (y/9)(−y/4) = −1, y = 6, m = 6/9 = 2/3 → B', () =>
     expect(answerOf('lines-70')).toBe('B'));
 
+  it('71 — |3·0 − 4·5|/√25 = 20/5 = 4 → C', () => expect(answerOf('lines-71')).toBe('C'));
+  it('72 — x/6 + 2x/4 = 1, C(3/2, 3), (6·3/2)/(4·(3/2)/2) = 9/3 = 3 → D', () =>
+    expect(answerOf('lines-72')).toBe('D'));
+  it('73 — (0, 7), (0, 1), (2, 3), 6·2/2 = 6 → C', () => expect(answerOf('lines-73')).toBe('C'));
+  it('74 — x/8 + (x + 1)/4 = 1, 3x = 6, P(2, 3) → B', () => expect(answerOf('lines-74')).toBe('B'));
+  it('75 — m(d) = 2/4 = 1/2, (1/2)(−m/2) = −1, m = 4 → D', () =>
+    expect(answerOf('lines-75')).toBe('D'));
+  it('76 — 3x = −x/3 + 10, x = 3, B(3, 9) → A', () => expect(answerOf('lines-76')).toBe('A'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
