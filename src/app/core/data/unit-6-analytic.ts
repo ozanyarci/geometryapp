@@ -653,6 +653,401 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+
+  // ---------------------------------------------------------------- 15
+  // Origin (120, 180), 20 px per unit: A(−4, 0) → (40, 180), B(8, 0) → (280, 180),
+  // C(12, 6) → (360, 60), D(0, 6) → (120, 60), K(4, 3) → (200, 120).
+  {
+    id: 'analytic-15',
+    topic: 'Paralelkenarda köşegenlerin kesişimi',
+    figure: {
+      viewBox: '0 20 400 190',
+      caption: 'Şekil 5',
+      label:
+        'Koordinat düzleminde ABCD paralelkenarı; A ve B x ekseni üzerinde, D y ekseni üzerinde, köşegenler çizilmiş ve bir noktada kesişiyor.',
+      svg: `
+          <path class="ln" d="M20,180 L390,180"/>
+          <path class="ln" d="M380,174 L390,180 L380,186"/>
+          <path class="ln" d="M120,200 L120,34"/>
+          <path class="ln" d="M114,44 L120,34 L126,44"/>
+          <text x="386" y="200" text-anchor="middle">x</text>
+          <text x="130" y="44">y</text>
+          <path class="ln" d="M40,180 L280,180 L360,60 L120,60 Z"/>
+          <path class="ln" d="M40,180 L360,60"/>
+          <path class="ln" d="M280,180 L120,60"/>
+          <circle class="pt" cx="40" cy="180" r="3.2"/>
+          <circle class="pt" cx="280" cy="180" r="3.2"/>
+          <circle class="pt" cx="360" cy="60" r="3.2"/>
+          <circle class="pt" cx="120" cy="60" r="3.2"/>
+          <circle class="pt" cx="200" cy="120" r="3.2"/>
+          <text x="36" y="200" text-anchor="end">A</text>
+          <text x="112" y="200" text-anchor="end">O</text>
+          <text x="280" y="202" text-anchor="middle">B(8, 0)</text>
+          <text x="360" y="46" text-anchor="middle">C(12, 6)</text>
+          <text x="112" y="56" text-anchor="end">D</text>
+        `,
+    },
+    given: [
+      'ABCD paralelkenar',
+      'B(8, 0), C(12, 6)',
+      'A noktası x ekseni, D noktası y ekseni üzerinde',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, paralelkenarın köşegenlerinin kesişim noktasının koordinatları aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: '(3, 4)' },
+      { key: 'B', text: '(4, 2)' },
+      { key: 'C', text: '(5, 3)' },
+      { key: 'D', text: '(4, 3)' },
+      { key: 'E', text: '(6, 3)' },
+    ],
+    answer: 'D',
+    hint: '[AB] x ekseni üzerinde olduğundan [DC] de x eksenine paraleldir; önce D noktasını bul.',
+    solution: [
+      {
+        title: 'D noktasını bul',
+        detail:
+          '[DC] ∥ [AB] ve [AB] x ekseni üzerinde olduğundan D ile C’nin ordinatları eşittir. D y ekseni üzerinde olduğundan D(0, 6).',
+      },
+      {
+        title: 'Köşegenler birbirini ortalar',
+        detail: 'Kesişim noktası K, [BD] köşegeninin orta noktasıdır.',
+      },
+      {
+        title: 'Orta noktayı hesapla',
+        detail: 'K = ((8 + 0) / 2, (0 + 6) / 2) = (4, 3).',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'Kontrol: A = B + D − C = (−4, 0) ve [AC]’nin orta noktası ((−4 + 12) / 2, (0 + 6) / 2) = (4, 3). Kesişim noktası (4, 3)’tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 16
+  {
+    id: 'analytic-16',
+    topic: 'Doğru parçasını verilen oranda bölen nokta',
+    stem: [],
+    ask: 'A(−2, 7), B(12, −7) ve C ∈ [AB] olmak üzere, 4|AC| = 3|CB| bağıntısını sağlayan C noktasının koordinatları aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: '(4, 1)' },
+      { key: 'B', text: '(6, −1)' },
+      { key: 'C', text: '(1, 4)' },
+      { key: 'D', text: '(4, −1)' },
+      { key: 'E', text: '(5, 0)' },
+    ],
+    answer: 'A',
+    hint: '4|AC| = 3|CB| eşitliğini |AC| : |CB| oranına çevir.',
+    solution: [
+      {
+        title: 'Oranı yorumla',
+        detail: '4|AC| = 3|CB| ise |AC| : |CB| = 3 : 4, yani |AC| = (3/7)·|AB| olur.',
+      },
+      {
+        title: 'Farkı bul',
+        detail: 'B − A = (12 − (−2), −7 − 7) = (14, −14); bunun 3/7’si (6, −6).',
+      },
+      {
+        title: 'Noktayı bul',
+        detail: 'C = A + (6, −6) = (−2 + 6, 7 − 6).',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'C(4, 1).',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 17
+  // Origin (40, 230), 26 px per unit: A(4, 0) → (144, 230), D(0, 3) → (40, 152),
+  // B(7, 4) → (222, 126), C(3, 7) → (118, 48), E(37/3, 0) → (360.7, 230).
+  {
+    id: 'analytic-17',
+    topic: 'Karede benzerlikle üçgen alanı',
+    figure: {
+      viewBox: '0 20 400 240',
+      caption: 'Şekil 6',
+      label:
+        'Koordinat düzleminde ABCD karesi; A x ekseni üzerinde, D y ekseni üzerinde. C ve B’den geçen doğru x eksenini E noktasında kesiyor; ABE üçgeni taralı ve B’de dik açı var.',
+      svg: `
+          <path class="shade" d="M144,230 L222,126 L360.7,230 Z"/>
+          <path class="ln" d="M20,230 L390,230"/>
+          <path class="ln" d="M380,224 L390,230 L380,236"/>
+          <path class="ln" d="M40,245 L40,30"/>
+          <path class="ln" d="M34,40 L40,30 L46,40"/>
+          <text x="386" y="250" text-anchor="middle">x</text>
+          <text x="50" y="40">y</text>
+          <path class="ln" d="M144,230 L222,126 L118,48 L40,152 Z"/>
+          <path class="ln" d="M222,126 L360.7,230"/>
+          <path class="arc" d="M216,134 L224,140 L230,132"/>
+          <circle class="pt" cx="40" cy="230" r="3.2"/>
+          <circle class="pt" cx="144" cy="230" r="3.2"/>
+          <circle class="pt" cx="40" cy="152" r="3.2"/>
+          <circle class="pt" cx="222" cy="126" r="3.2"/>
+          <circle class="pt" cx="118" cy="48" r="3.2"/>
+          <circle class="pt" cx="360.7" cy="230" r="3.2"/>
+          <text x="32" y="250" text-anchor="end">O</text>
+          <text x="144" y="250" text-anchor="middle">A</text>
+          <text x="32" y="157" text-anchor="end">D</text>
+          <text x="232" y="122">B</text>
+          <text x="118" y="36" text-anchor="middle">C</text>
+          <text x="360.7" y="250" text-anchor="middle">E</text>
+        `,
+    },
+    given: ['ABCD kare', 'A(4, 0), D(0, 3)', 'E noktası x ekseni üzerinde', '[AB] ⊥ [CE]'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, ABE üçgeninin alanı kaç birim karedir?',
+    choices: [
+      { key: 'A', text: '12' },
+      { key: 'B', text: '50/3' },
+      { key: 'C', text: '15' },
+      { key: 'D', text: '18' },
+      { key: 'E', text: '20' },
+    ],
+    answer: 'B',
+    hint: 'DOA ve ABE dik üçgenlerindeki açıları karşılaştır; iki üçgen benzerdir.',
+    solution: [
+      {
+        title: 'Karenin kenarı',
+        detail: '|AD| = √(4² + 3²) = 5, dolayısıyla |AB| = 5 birimdir.',
+      },
+      {
+        title: 'Benzerliği gör',
+        detail:
+          'A noktasında m(OAD) + m(DAB) + m(BAE) = 180° ve m(DAB) = 90° olduğundan m(BAE) = 90° − m(OAD) = m(ODA). O ve B’deki açılar dik olduğundan DOA ∼ ABE.',
+      },
+      {
+        title: 'Oranı kur',
+        detail: '|BE| / |AB| = |OA| / |OD| ⇒ |BE| / 5 = 4 / 3 ⇒ |BE| = 20/3.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Alan(ABE) = (5 · 20/3) / 2 = 50/3 birim karedir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 18
+  // Origin (260, 290), 40 px per unit: A(−2, 6) → (180, 50), B(−5, 0) → (60, 290),
+  // C(0, 5) → (260, 90).
+  {
+    id: 'analytic-18',
+    topic: 'Dik açıdan bilinmeyen apsis',
+    figure: {
+      viewBox: '0 24 400 290',
+      caption: 'Şekil 7',
+      label:
+        'Koordinat düzleminde ikinci bölgede A(−2, 6) noktası, y ekseni üzerinde C(0, 5) noktası ve x ekseninin negatif yönünde B noktası; ABC üçgeninde A açısı dik.',
+      svg: `
+          <path class="ln" d="M25,290 L390,290"/>
+          <path class="ln" d="M380,284 L390,290 L380,296"/>
+          <path class="ln" d="M260,305 L260,34"/>
+          <path class="ln" d="M254,44 L260,34 L266,44"/>
+          <text x="386" y="310" text-anchor="middle">x</text>
+          <text x="270" y="44">y</text>
+          <path class="ln" d="M60,290 L180,50 L260,90 Z"/>
+          <path class="arc" d="M174.6,60.7 L185.4,66.1 L190.7,55.4"/>
+          <circle class="pt" cx="60" cy="290" r="3.2"/>
+          <circle class="pt" cx="180" cy="50" r="3.2"/>
+          <circle class="pt" cx="260" cy="90" r="3.2"/>
+          <circle class="pt" cx="260" cy="290" r="3.2"/>
+          <text x="180" y="40" text-anchor="middle">A(−2, 6)</text>
+          <text x="270" y="94">C(0, 5)</text>
+          <text x="60" y="310" text-anchor="middle">B</text>
+          <text x="252" y="310" text-anchor="end">O</text>
+        `,
+    },
+    given: ['A(−2, 6)', 'C(0, 5)', 'B noktası x ekseni üzerinde', '[BA] ⊥ [AC]'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, B noktasının apsisi kaçtır?',
+    choices: [
+      { key: 'A', text: '−3' },
+      { key: 'B', text: '−4' },
+      { key: 'C', text: '−5' },
+      { key: 'D', text: '−6' },
+      { key: 'E', text: '−7' },
+    ],
+    answer: 'C',
+    hint: 'B(b, 0) de ve ABC dik üçgeninde Pisagor bağıntısını uzaklık formülüyle yaz.',
+    solution: [
+      {
+        title: 'Noktayı adlandır',
+        detail: 'B(b, 0) olsun. A açısı dik olduğundan |AB|² + |AC|² = |BC|² olur.',
+      },
+      {
+        title: 'Uzaklıkları yaz',
+        detail: '|AB|² = (b + 2)² + 36, |AC|² = 2² + 1² = 5, |BC|² = b² + 25.',
+      },
+      {
+        title: 'Denklemi çöz',
+        detail: 'b² + 4b + 4 + 36 + 5 = b² + 25 ⇒ 4b = −20.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'b = −5, yani B noktasının apsisi −5’tir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 19
+  // Origin (200, 170), 30 px per unit: A(2, 2√3) → (260, 66.1); arc radius 26.
+  {
+    id: 'analytic-19',
+    topic: 'Orijin etrafında döndürme',
+    figure: {
+      viewBox: '0 20 400 200',
+      caption: 'Şekil 8',
+      label:
+        'Koordinat düzleminde birinci bölgede A(2, b) noktası; [OA] doğru parçası x ekseninin pozitif yönü ile 60 derecelik açı yapıyor.',
+      svg: `
+          <path class="ln" d="M20,170 L390,170"/>
+          <path class="ln" d="M380,164 L390,170 L380,176"/>
+          <path class="ln" d="M200,210 L200,32"/>
+          <path class="ln" d="M194,42 L200,32 L206,42"/>
+          <text x="386" y="190" text-anchor="middle">x</text>
+          <text x="210" y="42">y</text>
+          <path class="ln" d="M200,170 L260,66.1"/>
+          <path class="arc" d="M226,170 A26,26 0 0 0 213,147.5"/>
+          <text class="val" x="236" y="160">60°</text>
+          <circle class="pt" cx="200" cy="170" r="3.2"/>
+          <circle class="pt" cx="260" cy="66.1" r="3.2"/>
+          <text x="192" y="190" text-anchor="end">O</text>
+          <text x="268" y="62">A(2, b)</text>
+        `,
+    },
+    given: ['[OA] doğru parçası x ekseni ile 60° lik açı yapar', 'A(2, b)'],
+    stem: [],
+    ask: '[OA] doğru parçası O etrafında pozitif yönde 165° döndürülürse A noktasının yeni konumunun ordinatı kaç olur?',
+    choices: [
+      { key: 'A', text: '−2' },
+      { key: 'B', text: '−√2' },
+      { key: 'C', text: '−2√3' },
+      { key: 'D', text: '−2√2' },
+      { key: 'E', text: '−4' },
+    ],
+    answer: 'D',
+    hint: 'Önce |OA| uzunluğunu bul; döndürme uzunluğu değiştirmez, yalnızca açıyı değiştirir.',
+    solution: [
+      {
+        title: '|OA| uzunluğu',
+        detail:
+          'A’dan x eksenine dikme inilirse 30°–60°–90° üçgeni oluşur: apsis 2 olduğundan |OA| = 4 ve b = 2√3.',
+      },
+      {
+        title: 'Yeni açı',
+        detail:
+          'Döndürmeden sonra [OA’] x ekseninin pozitif yönü ile 60° + 165° = 225° lik açı yapar; nokta III. bölgededir.',
+      },
+      {
+        title: 'Ordinatı hesapla',
+        detail:
+          '225° − 180° = 45° olduğundan A’, x ekseni ile 45° yapan ve uzunluğu 4 olan doğru parçasının ucudur: ordinat −4 · (√2 / 2).',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'A’(−2√2, −2√2); ordinat −2√2’dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 20
+  // Origin (122, 130), 26 px per unit: A(−2, 0) → (70, 130), C(8, 0) → (330, 130),
+  // D(0, 4) → (122, 26), B(6, −4) → (278, 234).
+  {
+    id: 'analytic-20',
+    topic: 'Dikdörtgenin bilinmeyen köşesi',
+    figure: {
+      viewBox: '0 6 400 256',
+      caption: 'Şekil 9',
+      label:
+        'Koordinat düzleminde ABCD dikdörtgeni; A ve C x ekseni üzerinde, D y ekseninin pozitif kısmında, B dördüncü bölgede.',
+      svg: `
+          <path class="ln" d="M20,130 L390,130"/>
+          <path class="ln" d="M380,124 L390,130 L380,136"/>
+          <path class="ln" d="M122,255 L122,12"/>
+          <path class="ln" d="M116,22 L122,12 L128,22"/>
+          <text x="386" y="150" text-anchor="middle">x</text>
+          <text x="132" y="22">y</text>
+          <path class="ln" d="M70,130 L278,234 L330,130 L122,26 Z"/>
+          <circle class="pt" cx="70" cy="130" r="3.2"/>
+          <circle class="pt" cx="278" cy="234" r="3.2"/>
+          <circle class="pt" cx="330" cy="130" r="3.2"/>
+          <circle class="pt" cx="122" cy="26" r="3.2"/>
+          <text x="62" y="150" text-anchor="end">A</text>
+          <text x="114" y="122" text-anchor="end">O</text>
+          <text x="338" y="150">C</text>
+          <text x="278" y="254" text-anchor="middle">B</text>
+          <text x="114" y="30" text-anchor="end">D</text>
+        `,
+    },
+    given: ['ABCD dikdörtgen', 'A(−2, 0), C(8, 0)', 'D noktası y ekseni üzerinde'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, ABCD dikdörtgeninin B köşesinin koordinatları aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: '(5, −4)' },
+      { key: 'B', text: '(4, −6)' },
+      { key: 'C', text: '(6, −5)' },
+      { key: 'D', text: '(8, −4)' },
+      { key: 'E', text: '(6, −4)' },
+    ],
+    answer: 'E',
+    hint: 'ADC dik üçgeninde [DO] hipotenüse ait yüksekliktir; Öklid bağıntısıyla D’yi bul.',
+    solution: [
+      {
+        title: 'Öklid bağıntısı',
+        detail: 'm(ADC) = 90° ve [DO] ⊥ [AC] olduğundan |OD|² = |AO| · |OC| = 2 · 8 = 16.',
+      },
+      {
+        title: 'D noktası',
+        detail: '|OD| = 4 ve D pozitif y ekseninde olduğundan D(0, 4).',
+      },
+      {
+        title: 'Köşegenler birbirini ortalar',
+        detail: 'Dikdörtgende A + C = B + D olduğundan B = A + C − D = (−2 + 8 − 0, 0 + 0 − 4).',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'B(6, −4).',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 21
+  {
+    id: 'analytic-21',
+    topic: 'Bölen noktanın orijine uzaklığı',
+    stem: [],
+    ask: 'A(2, −3), B(−8, 12) ve C ∈ [AB] olmak üzere, 2|AC| = 3|CB| bağıntısını sağlayan C noktasının orijine uzaklığı kaç birimdir?',
+    choices: [
+      { key: 'A', text: '√13' },
+      { key: 'B', text: '2√10' },
+      { key: 'C', text: '2√13' },
+      { key: 'D', text: '3√5' },
+      { key: 'E', text: '5√2' },
+    ],
+    answer: 'C',
+    hint: '2|AC| = 3|CB| eşitliğinden |AC|’nin |AB|’nin kaçta kaçı olduğunu bul.',
+    solution: [
+      {
+        title: 'Oranı yorumla',
+        detail: '2|AC| = 3|CB| ise |AC| : |CB| = 3 : 2, yani |AC| = (3/5)·|AB|.',
+      },
+      {
+        title: 'Farkı bul',
+        detail: 'B − A = (−8 − 2, 12 − (−3)) = (−10, 15); bunun 3/5’i (−6, 9).',
+      },
+      {
+        title: 'Noktayı bul',
+        detail: 'C = (2 − 6, −3 + 9) = (−4, 6).',
+      },
+      {
+        title: 'Sonuç',
+        detail: '|OC| = √(16 + 36) = √52 = 2√13 birimdir.',
+      },
+    ],
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -707,6 +1102,22 @@ export const UNIT_6_ANALYTIC: Unit = {
         'analytic-12',
         'analytic-13',
         'analytic-14',
+      ),
+    },
+    {
+      id: 'analytic-m3',
+      order: 3,
+      title: 'Döndürme, bölen nokta ve dörtgen köşeleri',
+      summary:
+        'Paralelkenarda köşegenlerin kesişimi, oranla bölen nokta, karede benzerlik, dik açıdan apsis, orijin etrafında döndürme ve dikdörtgenin köşesi.',
+      questions: pick(
+        'analytic-15',
+        'analytic-16',
+        'analytic-17',
+        'analytic-18',
+        'analytic-19',
+        'analytic-20',
+        'analytic-21',
       ),
     },
   ],

@@ -30,6 +30,21 @@ describe('unit 6 answer key', () => {
   it('14 — C = (−2 + 6, 1 + 6) = (4, 7), 4 + 7 = 11 → C', () =>
     expect(answerOf('analytic-14')).toBe('C'));
 
+  it('15 — D(0, 6), K = ((8 + 0)/2, (0 + 6)/2) = (4, 3) → D', () =>
+    expect(answerOf('analytic-15')).toBe('D'));
+  it('16 — |AC| = 3/7·|AB|, (−2 + 6, 7 − 6) = (4, 1) → A', () =>
+    expect(answerOf('analytic-16')).toBe('A'));
+  it('17 — |AB| = 5, |BE| = 5·4/3 = 20/3, 5·(20/3)/2 = 50/3 → B', () =>
+    expect(answerOf('analytic-17')).toBe('B'));
+  it('18 — (b + 2)² + 36 + 5 = b² + 25, 4b = −20, b = −5 → C', () =>
+    expect(answerOf('analytic-18')).toBe('C'));
+  it('19 — |OA| = 4, 60° + 165° = 225°, 4·sin 225° = −2√2 → D', () =>
+    expect(answerOf('analytic-19')).toBe('D'));
+  it('20 — |OD|² = 2·8, D(0, 4), B = (−2 + 8 − 0, 0 − 4) = (6, −4) → E', () =>
+    expect(answerOf('analytic-20')).toBe('E'));
+  it('21 — C = (2 − 6, −3 + 9) = (−4, 6), √(16 + 36) = 2√13 → C', () =>
+    expect(answerOf('analytic-21')).toBe('C'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
