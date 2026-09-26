@@ -2382,6 +2382,322 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+  // ---------------------------------------------------------------- 52
+  {
+    id: 'lines-52',
+    topic: 'Noktanın doğruya uzaklığı',
+    given: ['[DB] ⊥ d', 'D(8, 0)', '|BD| = 2√2 birim'],
+    // Origin (80, 200), 30 px per unit; drawn with n = −4: C(4, 0), B(6, 2).
+    figure: {
+      viewBox: '0 0 400 300',
+      caption: 'Şekil 23',
+      label:
+        'Dik koordinat düzleminde d doğrusu x eksenini C noktasında kesiyor. x ekseni üzerinde C nin sağındaki D noktasından d doğrusuna çizilen dikme d yi B noktasında kesiyor; |BD| = 2√2 birim.',
+      svg: `
+          <path class="ln" d="M40,200 L385,200"/>
+          <path class="ln" d="M375,194 L385,200 L375,206"/>
+          <path class="ln" d="M80,295 L80,15"/>
+          <path class="ln" d="M74,25 L80,15 L86,25"/>
+          <text x="382" y="220" text-anchor="middle">x</text>
+          <text x="92" y="27">y</text>
+          <text x="72" y="218" text-anchor="end">O</text>
+          <path class="ln" d="M110,290 L365,35"/>
+          <path class="ln" d="M260,140 L320,200"/>
+          <path class="ln" d="M252.93,147.07 L260,154.14 L267.07,147.07"/>
+          <circle class="pt" cx="200" cy="200" r="3.2"/>
+          <circle class="pt" cx="320" cy="200" r="3.2"/>
+          <circle class="pt" cx="260" cy="140" r="3.2"/>
+          <text x="206" y="218">C</text>
+          <text x="320" y="220" text-anchor="middle">D</text>
+          <text x="248" y="132" text-anchor="end">B</text>
+          <text class="val" x="296" y="166">2√2</text>
+          <text x="348" y="40" text-anchor="end">d</text>
+        `,
+    },
+    stem: [],
+    ask: 'Yukarıdaki dik koordinat düzleminde d doğrusunun denklemi y = x + n olduğuna göre, n kaçtır?',
+    choices: [
+      { key: 'A', text: '−2' },
+      { key: 'B', text: '−3' },
+      { key: 'C', text: '−4' },
+      { key: 'D', text: '−5' },
+      { key: 'E', text: '−6' },
+    ],
+    answer: 'C',
+    hint: '|BD|, D noktasının d doğrusuna olan uzaklığıdır.',
+    solution: [
+      {
+        title: 'Genel denklem',
+        detail: 'y = x + n ⇒ x − y + n = 0.',
+      },
+      {
+        title: 'Uzaklık formülü',
+        detail: '|BD| = |8 − 0 + n| / √(1² + 1²) = |8 + n| / √2 = 2√2 ⇒ |8 + n| = 4.',
+      },
+      {
+        title: 'İki durum',
+        detail: '8 + n = 4 ⇒ n = −4 ya da 8 + n = −4 ⇒ n = −12.',
+      },
+      {
+        title: 'Şekle göre seç',
+        detail:
+          'd, x eksenini C(−n, 0) da keser ve C, D nin solundadır: −n < 8. n = −12 için C(12, 0) olurdu, bu yüzden n = −4 tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 53
+  {
+    id: 'lines-53',
+    topic: 'x ekseni üzerinde kesişen doğrular',
+    stem: ['3x + 2y + a = 0', 'x − y + 2a − 5 = 0'],
+    ask: 'doğrularının x ekseni üzerinde kesişmeleri için a kaç olmalıdır?',
+    choices: [
+      { key: 'A', text: '−3' },
+      { key: 'B', text: '−1' },
+      { key: 'C', text: '1' },
+      { key: 'D', text: '3' },
+      { key: 'E', text: '5' },
+    ],
+    answer: 'D',
+    hint: 'x ekseni üzerindeki noktalarda y = 0 dır; iki doğrunun x eksenini kestiği apsisleri eşitle.',
+    solution: [
+      {
+        title: 'Birinci doğru',
+        detail: 'y = 0 için 3x + a = 0 ⇒ x = −a/3.',
+      },
+      {
+        title: 'İkinci doğru',
+        detail: 'y = 0 için x + 2a − 5 = 0 ⇒ x = 5 − 2a.',
+      },
+      {
+        title: 'Apsisleri eşitle',
+        detail: '−a/3 = 5 − 2a ⇒ −a = 15 − 6a ⇒ 5a = 15.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'a = 3 tür; doğrular x ekseninde (−1, 0) noktasında kesişir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 54
+  {
+    id: 'lines-54',
+    topic: 'Eşkenar dörtgen ve köşegen doğrusu',
+    given: ['ABCD eşkenar dörtgen', 'B(9, 0)', 'D(0, 3)', 'E(0, n)'],
+    // Origin (140, 90), 20 px per unit; A(4, 0), C(5, 3), d: y = 3x − 12, E(0, −12).
+    figure: {
+      viewBox: '0 -20 400 380',
+      caption: 'Şekil 24',
+      label:
+        'Dik koordinat düzleminde ABCD eşkenar dörtgeni; A ve B köşeleri x ekseni üzerinde, D köşesi y ekseni üzerinde, [DC] kenarı x eksenine paralel. [AC] köşegeninin taşıyıcısı olan d doğrusu y eksenini E noktasında kesiyor.',
+      svg: `
+          <path class="ln" d="M60,90 L385,90"/>
+          <path class="ln" d="M375,84 L385,90 L375,96"/>
+          <path class="ln" d="M140,350 L140,-5"/>
+          <path class="ln" d="M134,5 L140,-5 L146,5"/>
+          <text x="382" y="110" text-anchor="middle">x</text>
+          <text x="152" y="2">y</text>
+          <text x="132" y="108" text-anchor="end">O</text>
+          <path class="ln" d="M220,90 L320,90 L240,30 L140,30 Z"/>
+          <path class="ln" d="M133.33,350 L250,0"/>
+          <circle class="pt" cx="220" cy="90" r="3.2"/>
+          <circle class="pt" cx="320" cy="90" r="3.2"/>
+          <circle class="pt" cx="240" cy="30" r="3.2"/>
+          <circle class="pt" cx="140" cy="30" r="3.2"/>
+          <circle class="pt" cx="140" cy="330" r="3.2"/>
+          <text x="228" y="108">A</text>
+          <text x="320" y="108" text-anchor="middle">B</text>
+          <text x="248" y="26">C</text>
+          <text x="132" y="26" text-anchor="end">D</text>
+          <text x="148" y="334">E</text>
+          <text x="236" y="8" text-anchor="end">d</text>
+        `,
+    },
+    stem: [],
+    ask: 'Yukarıdaki şekilde d doğrusu [AC] köşegeninin taşıyıcı doğrusu olduğuna göre, E(0, n) noktasının ordinatı (n) kaçtır?',
+    choices: [
+      { key: 'A', text: '−9' },
+      { key: 'B', text: '−10' },
+      { key: 'C', text: '−12' },
+      { key: 'D', text: '−14' },
+      { key: 'E', text: '−15' },
+    ],
+    answer: 'C',
+    hint: 'A(a, 0) de; eşkenar dörtgende |AB| = |AD| eşitliğinden a yı bul.',
+    solution: [
+      {
+        title: 'A köşesi',
+        detail:
+          'A(a, 0) olsun. |AB| = |AD| ⇒ (9 − a)² = a² + 3² ⇒ 81 − 18a = 9 ⇒ a = 4. Kenar 5 birimdir.',
+      },
+      {
+        title: 'C köşesi',
+        detail: '[DC] kenarı x eksenine paraleldir ve |DC| = 5 ⇒ C(5, 3).',
+      },
+      {
+        title: 'd doğrusu',
+        detail: 'm = (3 − 0) / (5 − 4) = 3 ⇒ y = 3(x − 4) = 3x − 12.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'x = 0 için y = −12 ⇒ n = −12 dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 55
+  {
+    id: 'lines-55',
+    topic: 'Dik doğrunun denklemi',
+    given: ['d₁: 2x + y − 8 = 0', 'A(3, p)', 'd₁ ⊥ d₂'],
+    // Origin (150, 270), 30 px per unit; A(3, 2), d₂: y = (x + 1)/2.
+    figure: {
+      viewBox: '0 0 400 310',
+      caption: 'Şekil 25',
+      label:
+        'Dik koordinat düzleminde azalan d₁ doğrusu ile artan d₂ doğrusu birinci bölgedeki A(3, p) noktasında dik kesişiyor.',
+      svg: `
+          <path class="ln" d="M40,270 L385,270"/>
+          <path class="ln" d="M375,264 L385,270 L375,276"/>
+          <path class="ln" d="M150,305 L150,10"/>
+          <path class="ln" d="M144,20 L150,10 L156,20"/>
+          <text x="382" y="290" text-anchor="middle">x</text>
+          <text x="162" y="22">y</text>
+          <text x="142" y="288" text-anchor="end">O</text>
+          <path class="ln" d="M142.5,15 L285,300"/>
+          <path class="ln" d="M90,285 L330,165"/>
+          <path class="ln" d="M235.53,201.06 L244.47,196.59 L248.94,205.53"/>
+          <circle class="pt" cx="240" cy="210" r="3.2"/>
+          <text x="256" y="228">A(3, p)</text>
+          <text x="292" y="298">d₁</text>
+          <text x="336" y="165">d₂</text>
+        `,
+    },
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, d₂ doğrusunun denklemi aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: 'x + 2y − 7 = 0' },
+      { key: 'B', text: 'x − 2y + 1 = 0' },
+      { key: 'C', text: '2x − y − 4 = 0' },
+      { key: 'D', text: 'x − 2y − 1 = 0' },
+      { key: 'E', text: 'x − 2y + 3 = 0' },
+    ],
+    answer: 'B',
+    hint: 'A noktası d₁ üzerindedir; önce p yi, sonra d₂ nin eğimini bul.',
+    solution: [
+      {
+        title: 'p değeri',
+        detail: 'A, d₁ üzerinde: 2 · 3 + p − 8 = 0 ⇒ p = 2; A(3, 2).',
+      },
+      {
+        title: 'd₁ in eğimi',
+        detail: 'm₁ = −2/1 = −2.',
+      },
+      {
+        title: 'd₂ nin eğimi',
+        detail: 'm₁ · m₂ = −1 ⇒ m₂ = 1/2.',
+      },
+      {
+        title: 'Denklem',
+        detail: 'y − 2 = (1/2)(x − 3) ⇒ 2y − 4 = x − 3 ⇒ x − 2y + 1 = 0.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 56
+  {
+    id: 'lines-56',
+    topic: 'Doğrular arasında kalan bölgenin alanı',
+    // Origin (160, 250), 30 px per unit; shaded triangle (0, 2), (0, 5), (3, 5).
+    figure: {
+      viewBox: '0 20 400 290',
+      caption: 'Şekil 26',
+      label:
+        'Dik koordinat düzleminde y = 5 doğrusu, x − y + 2 = 0 doğrusu ve y ekseni arasında kalan üçgensel bölge taralı.',
+      svg: `
+          <path class="shade" d="M160,190 L160,100 L250,100 Z"/>
+          <path class="ln" d="M40,250 L385,250"/>
+          <path class="ln" d="M375,244 L385,250 L375,256"/>
+          <path class="ln" d="M160,300 L160,30"/>
+          <path class="ln" d="M154,40 L160,30 L166,40"/>
+          <text x="382" y="270" text-anchor="middle">x</text>
+          <text x="172" y="42">y</text>
+          <text x="152" y="268" text-anchor="end">O</text>
+          <path class="ln" d="M60,100 L355,100"/>
+          <path class="ln" d="M70,280 L280,70"/>
+          <text x="355" y="120" text-anchor="end">y = 5</text>
+          <text x="288" y="74">x − y + 2 = 0</text>
+        `,
+    },
+    stem: [],
+    ask: 'Yukarıdaki dik koordinat düzleminde y = 5, x − y + 2 = 0 ve x = 0 doğruları arasında kalan taralı bölgenin alanı kaç birim karedir?',
+    choices: [
+      { key: 'A', text: '3' },
+      { key: 'B', text: '4' },
+      { key: 'C', text: '9/2' },
+      { key: 'D', text: '6' },
+      { key: 'E', text: '9' },
+    ],
+    answer: 'C',
+    hint: 'Taralı bölge bir dik üçgendir; üç doğrunun ikişer ikişer kesim noktalarını bul.',
+    solution: [
+      {
+        title: 'y eksenini kestiği nokta',
+        detail: 'x = 0 için y = 2 ⇒ (0, 2).',
+      },
+      {
+        title: 'y = 5 ile kesişim',
+        detail: 'x − 5 + 2 = 0 ⇒ x = 3 ⇒ (3, 5).',
+      },
+      {
+        title: 'Dik kenarlar',
+        detail: 'Üçüncü köşe (0, 5). Dik kenarlar 5 − 2 = 3 ve 3 birimdir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Alan = (3 · 3) / 2 = 9/2 birim karedir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 57
+  {
+    id: 'lines-57',
+    topic: 'Kesim noktasından geçen eksene dik doğru',
+    stem: [
+      'Analitik düzlemde verilen d₁: x + y − 5 = 0 ve d₂: 2x − y − 1 = 0 doğruları veriliyor.',
+    ],
+    ask: 'Bu doğruların kesim noktasından geçen ve y eksenine dik olan doğrunun denklemi aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: 'y = −3' },
+      { key: 'B', text: 'x = 2' },
+      { key: 'C', text: 'y = 2' },
+      { key: 'D', text: 'y = 3' },
+      { key: 'E', text: 'x = 3' },
+    ],
+    answer: 'D',
+    hint: 'y eksenine dik doğru yataydır; denklemi y = k biçimindedir.',
+    solution: [
+      {
+        title: 'Denklemleri topla',
+        detail: '(x + y − 5) + (2x − y − 1) = 0 ⇒ 3x − 6 = 0 ⇒ x = 2.',
+      },
+      {
+        title: 'y değeri',
+        detail: '2 + y − 5 = 0 ⇒ y = 3; kesim noktası (2, 3).',
+      },
+      {
+        title: 'Eksene dik doğru',
+        detail: 'y eksenine dik doğru x eksenine paraleldir: y = k. (2, 3) ten geçtiği için k = 3.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Aranan doğru y = 3 tür.',
+      },
+    ],
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -2493,6 +2809,14 @@ export const UNIT_7_LINES: Unit = {
         'lines-50',
         'lines-51',
       ),
+    },
+    {
+      id: 'lines-m9',
+      order: 9,
+      title: 'Uzaklık, kesişim ve alan',
+      summary:
+        'Noktanın doğruya uzaklığı, eksen üzerinde kesişen doğrular, eşkenar dörtgen köşegeni, dik doğru, taralı alan ve eksene dik doğru.',
+      questions: pick('lines-52', 'lines-53', 'lines-54', 'lines-55', 'lines-56', 'lines-57'),
     },
   ],
 };
