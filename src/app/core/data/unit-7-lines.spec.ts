@@ -45,6 +45,19 @@ describe('unit 7 answer key', () => {
   it('18 — 4x + 3y = 36, x + 3y = 18, P(6, 4), √52 = 2√13 → C', () =>
     expect(answerOf('lines-18')).toBe('C'));
 
+  it('19 — A(0, 8), B(0, −4), E(4, 0), x/4 + y/8 = 1, 2x + y − 8 = 0 → B', () =>
+    expect(answerOf('lines-19')).toBe('B'));
+  it('20 — (2, 0) → (6, −2), 2x − 5y − 22 = 0, x = 11 → C', () =>
+    expect(answerOf('lines-20')).toBe('C'));
+  it('21 — 16 + h² = 25, D(−5, 3), m = 3/4, 3x − 4y + 27 = 0 → D', () =>
+    expect(answerOf('lines-21')).toBe('D'));
+  it('22 — inner bisector through (3, 0), m = −2, outer −1/(−2) = 1/2 → A', () =>
+    expect(answerOf('lines-22')).toBe('A'));
+  it('23 — 3/9 + (a + 3)/12 = 1, a + 3 = 8, a = 5 → C', () =>
+    expect(answerOf('lines-23')).toBe('C'));
+  it('24 — |OB| = 15, M(15, r), (r − 9)/3 = −4/3, r = 5 → D', () =>
+    expect(answerOf('lines-24')).toBe('D'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)

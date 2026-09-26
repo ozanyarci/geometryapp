@@ -857,6 +857,364 @@ const QUESTIONS: Question[] = [
     ],
   },
 
+  // ---------------------------------------------------------------- 19
+  {
+    id: 'lines-19',
+    topic: 'İkizkenar dik üçgen ve doğru denklemi',
+    given: ['[AC] ⊥ [CB]', 'C(6, 2)', '|AC| = |BC|'],
+    // Origin (140, 200), 22 px per unit; drawn with A(0, 8), B(0, −4), E(4, 0).
+    figure: {
+      viewBox: '0 -6 400 316',
+      caption: 'Şekil 9',
+      label:
+        'Koordinat düzleminde A ve B noktaları y ekseni üzerinde, C(6, 2) noktası birinci bölgede. ACB açısı dik ve |AC| = |BC|. BC doğru parçası x eksenini E noktasında kesiyor; d doğrusu A ve E noktalarından geçiyor.',
+      svg: `
+          <path class="ln" d="M100,200 L390,200"/>
+          <path class="ln" d="M380,194 L390,200 L380,206"/>
+          <path class="ln" d="M140,305 L140,0"/>
+          <path class="ln" d="M134,10 L140,0 L146,10"/>
+          <text x="386" y="220" text-anchor="middle">x</text>
+          <text x="152" y="10">y</text>
+          <path class="ln" d="M140,24 L272,156 L140,288"/>
+          <path class="ln" d="M140,24 L270,284"/>
+          <path class="ln" d="M264.93,148.93 L257.86,156 L264.93,163.07"/>
+          <circle class="pt" cx="140" cy="24" r="3.2"/>
+          <circle class="pt" cx="140" cy="288" r="3.2"/>
+          <circle class="pt" cx="272" cy="156" r="3.2"/>
+          <circle class="pt" cx="228" cy="200" r="3.2"/>
+          <text x="132" y="218" text-anchor="end">O</text>
+          <text x="132" y="30" text-anchor="end">A</text>
+          <text x="132" y="294" text-anchor="end">B</text>
+          <text x="280" y="152">C(6, 2)</text>
+          <text x="228" y="226" text-anchor="middle">E</text>
+          <text x="278" y="290">d</text>
+        `,
+    },
+    stem: [],
+    ask: 'Dik koordinat sistemindeki verilere göre, A ve E noktalarından geçen d doğrusunun denklemi aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: 'x + 2y − 8 = 0' },
+      { key: 'B', text: '2x + y − 8 = 0' },
+      { key: 'C', text: '2x − y + 8 = 0' },
+      { key: 'D', text: 'x + y − 4 = 0' },
+      { key: 'E', text: '2x + y − 4 = 0' },
+    ],
+    answer: 'B',
+    hint: 'C den y eksenine bir dikme indir; oluşan iki dik üçgen eş olduğundan A ve B nin ordinatlarını bulabilirsin.',
+    solution: [
+      {
+        title: 'A ve B nin yeri',
+        detail: 'C den y eksenine indirilen dikmenin ayağı H(0, 2), |CH| = 6. ACH ve CBH eş dik üçgenlerdir, bu yüzden |AH| = |BH| = 6. A(0, 8) ve B(0, −4) tür.',
+      },
+      {
+        title: 'BC doğrusu',
+        detail: 'Eğim (2 − (−4)) / 6 = 1, denklem y = x − 4 tür. y = 0 için x = 4, yani E(4, 0).',
+      },
+      {
+        title: 'AE doğrusu',
+        detail: 'Eksenleri (4, 0) ve (0, 8) de kestiğinden x/4 + y/8 = 1 dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Her iki taraf 8 ile çarpılırsa 2x + y − 8 = 0 bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 20
+  {
+    id: 'lines-20',
+    topic: 'Doğrunun noktaya göre simetriği',
+    stem: [
+      'Analitik düzlemde denklemi 2x − 5y − 4 = 0 olan doğrunun A(4, −1) noktasına göre simetriği olan doğru çiziliyor.',
+    ],
+    ask: 'Buna göre, simetrik doğrunun x eksenini kestiği noktanın apsisi kaçtır?',
+    choices: [
+      { key: 'A', text: '7' },
+      { key: 'B', text: '9' },
+      { key: 'C', text: '11' },
+      { key: 'D', text: '13' },
+      { key: 'E', text: '15' },
+    ],
+    answer: 'C',
+    hint: 'Doğru üzerinde bir nokta seç ve A ya göre simetriğini al; simetrik doğru verilen doğruya paraleldir.',
+    solution: [
+      {
+        title: 'Paralel doğru',
+        detail: 'Bir doğrunun noktaya göre simetriği ona paraleldir, yani 2x − 5y + c = 0 biçimindedir.',
+      },
+      {
+        title: 'Bir noktanın simetriği',
+        detail: 'P(2, 0) verilen doğru üzerindedir. A(4, −1) orta nokta olduğundan simetriği P′(2·4 − 2, 2·(−1) − 0) = (6, −2) dir.',
+      },
+      {
+        title: 'c nin bulunması',
+        detail: '2·6 − 5·(−2) + c = 0 ⇒ 22 + c = 0 ⇒ c = −22. Simetrik doğru 2x − 5y − 22 = 0 dır.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'y = 0 için 2x = 22 ⇒ x = 11 dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 21
+  {
+    id: 'lines-21',
+    topic: 'Eşkenar dörtgen ve doğru denklemi',
+    given: ['ABCD eşkenar dörtgen', 'A(−9, 0)', 'B(−4, 0)', 'C noktası y ekseni üzerinde'],
+    // Origin (340, 260), 30 px per unit; drawn with C(0, 3), D(−5, 3), E(0, 27/4).
+    figure: {
+      viewBox: '0 0 400 300',
+      caption: 'Şekil 10',
+      label:
+        'Koordinat düzleminde A ve B noktaları x ekseninin negatif tarafında, C noktası y ekseni üzerinde olan ABCD eşkenar dörtgeni; dört kenar da eşit işaretli. AD kenarının uzantısı y eksenini E noktasında kesiyor.',
+      svg: `
+          <path class="ln" d="M30,260 L395,260"/>
+          <path class="ln" d="M385,254 L395,260 L385,266"/>
+          <path class="ln" d="M340,290 L340,10"/>
+          <path class="ln" d="M334,20 L340,10 L346,20"/>
+          <text x="390" y="282" text-anchor="middle">x</text>
+          <text x="352" y="22">y</text>
+          <path class="ln" d="M70,260 L220,260 L340,170 L190,170 Z"/>
+          <path class="ln" d="M50,275 L380,27.5"/>
+          <path class="tick" d="M145,253 L145,267"/>
+          <path class="tick" d="M265,163 L265,177"/>
+          <path class="tick" d="M125.8,209.4 L134.2,220.6"/>
+          <path class="tick" d="M275.8,209.4 L284.2,220.6"/>
+          <circle class="pt" cx="70" cy="260" r="3.2"/>
+          <circle class="pt" cx="220" cy="260" r="3.2"/>
+          <circle class="pt" cx="340" cy="170" r="3.2"/>
+          <circle class="pt" cx="190" cy="170" r="3.2"/>
+          <circle class="pt" cx="340" cy="57.5" r="3.2"/>
+          <text x="70" y="282" text-anchor="middle">A</text>
+          <text x="220" y="282" text-anchor="middle">B</text>
+          <text x="332" y="280" text-anchor="end">O</text>
+          <text x="348" y="166">C</text>
+          <text x="184" y="162" text-anchor="end">D</text>
+          <text x="322" y="50" text-anchor="end">E</text>
+        `,
+    },
+    stem: [],
+    ask: 'Yukarıdaki dik koordinat sisteminde verilenlere göre, A ve E noktalarından geçen doğrunun denklemi aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: '4x − 3y + 36 = 0' },
+      { key: 'B', text: '3x + 4y + 27 = 0' },
+      { key: 'C', text: '3x − 4y − 27 = 0' },
+      { key: 'D', text: '3x − 4y + 27 = 0' },
+      { key: 'E', text: '4x − 3y + 27 = 0' },
+    ],
+    answer: 'D',
+    hint: 'Eşkenar dörtgenin kenarı |AB| = 5 tir; |BC| = 5 eşitliğinden C nin ordinatını bul.',
+    solution: [
+      {
+        title: 'C noktası',
+        detail: '|AB| = 5 tir. C(0, h) için |BC|² = 4² + h² = 25 ⇒ h = 3, yani C(0, 3).',
+      },
+      {
+        title: 'D noktası',
+        detail: 'DC ∥ AB ve |DC| = 5 olduğundan D(−5, 3) tür.',
+      },
+      {
+        title: 'AD doğrusunun eğimi',
+        detail: 'm = (3 − 0) / (−5 − (−9)) = 3/4. E noktası AD doğrusu üzerindedir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'y = (3/4)(x + 9) ⇒ 4y = 3x + 27 ⇒ 3x − 4y + 27 = 0 dır.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 22
+  {
+    id: 'lines-22',
+    topic: 'Dış açıortay doğrusunun eğimi',
+    given: ['A(0, 6)', 'B(8, 0)'],
+    // Origin (70, 270), 26 px per unit; d has slope 1/2 through A.
+    figure: {
+      viewBox: '0 -30 400 330',
+      caption: 'Şekil 11',
+      label:
+        'Koordinat düzleminde A(0, 6) y ekseni, B(8, 0) x ekseni üzerinde; AOB dik üçgeni çizili. A dan geçen d doğrusu, y ekseninin A nın üstünde kalan parçası ile AB kenarı arasındaki dış açıyı iki eş α açısına bölüyor.',
+      svg: `
+          <path class="ln" d="M20,270 L390,270"/>
+          <path class="ln" d="M380,264 L390,270 L380,276"/>
+          <path class="ln" d="M70,295 L70,-24"/>
+          <path class="ln" d="M64,-14 L70,-24 L76,-14"/>
+          <text x="386" y="292" text-anchor="middle">x</text>
+          <text x="82" y="-12">y</text>
+          <path class="ln" d="M70,114 L278,270"/>
+          <path class="ln" d="M30,134 L330,-16"/>
+          <path class="arc" d="M70,92 A22,22 0 0 1 89.68,104.16"/>
+          <path class="arc" d="M89.68,104.16 A22,22 0 0 1 87.6,127.2"/>
+          <circle class="pt" cx="70" cy="114" r="3.2"/>
+          <circle class="pt" cx="278" cy="270" r="3.2"/>
+          <text class="val" x="84" y="80">α</text>
+          <text class="val" x="104" y="122">α</text>
+          <text x="62" y="290" text-anchor="end">O</text>
+          <text x="62" y="106" text-anchor="end">A</text>
+          <text x="278" y="292" text-anchor="middle">B</text>
+          <text x="300" y="-10">d</text>
+        `,
+    },
+    stem: [],
+    ask: 'Yukarıdaki dik koordinat sisteminde AOB üçgeninin A köşesindeki dış açıortayı olan d doğrusunun eğimi kaçtır?',
+    choices: [
+      { key: 'A', text: '1/2' },
+      { key: 'B', text: '2/3' },
+      { key: 'C', text: '1' },
+      { key: 'D', text: '3/2' },
+      { key: 'E', text: '2' },
+    ],
+    answer: 'A',
+    hint: 'Dış açıortay, iç açıortaya diktir; önce A daki iç açıortayın eğimini bul.',
+    solution: [
+      {
+        title: 'Kenar uzunlukları',
+        detail: '|OA| = 6, |OB| = 8 ⇒ |AB| = 10 dur.',
+      },
+      {
+        title: 'İç açıortay',
+        detail: 'A daki iç açıortay [OB] kenarını |OA| : |AB| = 6 : 10 oranında böler; kestiği noktanın O ya uzaklığı 8 · 6/16 = 3, yani (3, 0) noktasından geçer. Eğimi (0 − 6) / (3 − 0) = −2 dir.',
+      },
+      {
+        title: 'Dış açıortay',
+        detail: 'İç ve dış açıortaylar birbirine diktir; eğimler çarpımı −1 olmalıdır.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'm_d = −1 / (−2) = 1/2 dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 23
+  {
+    id: 'lines-23',
+    topic: 'Doğru ve kare',
+    given: ['d: x/9 + y/12 = 1', 'Alan(ABCD) = 9 birim kare'],
+    // Origin (110, 290), 22 px per unit; drawn with A(0, 5), C(3, 8), K(0, 12), L(9, 0).
+    figure: {
+      viewBox: '0 -10 400 350',
+      caption: 'Şekil 12',
+      label:
+        'Koordinat düzleminde d doğrusu y eksenini K, x eksenini L noktasında kesiyor. A ve D köşeleri y ekseni üzerinde olan ABCD karesi taralı; karenin C köşesi d doğrusu üzerinde.',
+      svg: `
+          <path class="shade" d="M110,180 L176,180 L176,114 L110,114 Z"/>
+          <path class="ln" d="M40,290 L390,290"/>
+          <path class="ln" d="M380,284 L390,290 L380,296"/>
+          <path class="ln" d="M110,320 L110,-4"/>
+          <path class="ln" d="M104,6 L110,-4 L116,6"/>
+          <text x="386" y="310" text-anchor="middle">x</text>
+          <text x="122" y="4">y</text>
+          <path class="ln" d="M110,180 L176,180 L176,114 L110,114 Z"/>
+          <path class="ln" d="M95,6 L338,330"/>
+          <circle class="pt" cx="110" cy="26" r="3.2"/>
+          <circle class="pt" cx="308" cy="290" r="3.2"/>
+          <circle class="pt" cx="176" cy="114" r="3.2"/>
+          <text x="100" y="36" text-anchor="end">K</text>
+          <text x="102" y="194" text-anchor="end">A</text>
+          <text x="182" y="198">B</text>
+          <text x="184" y="110">C</text>
+          <text x="102" y="110" text-anchor="end">D</text>
+          <text x="102" y="308" text-anchor="end">O</text>
+          <text x="300" y="308" text-anchor="end">L</text>
+          <text x="345" y="322">d</text>
+        `,
+    },
+    stem: [],
+    ask: 'Denklemi x/9 + y/12 = 1 olan d doğrusu, alanı 9 birim kare olan ABCD karesinin C köşesinden geçtiğine göre, karenin B köşesinin ordinatı kaçtır?',
+    choices: [
+      { key: 'A', text: '4' },
+      { key: 'B', text: '9/2' },
+      { key: 'C', text: '5' },
+      { key: 'D', text: '11/2' },
+      { key: 'E', text: '6' },
+    ],
+    answer: 'C',
+    hint: 'Karenin kenarı 3 tür; A(0, a) dersen C nin koordinatlarını a cinsinden yazıp doğruda yerine koy.',
+    solution: [
+      {
+        title: 'Karenin kenarı',
+        detail: 'Alan 9 olduğundan kenar 3 tür.',
+      },
+      {
+        title: 'Köşeler',
+        detail: 'A(0, a) dersek B(3, a), D(0, a + 3) ve C(3, a + 3) olur.',
+      },
+      {
+        title: 'C doğru üzerinde',
+        detail: '3/9 + (a + 3)/12 = 1 ⇒ (a + 3)/12 = 2/3 ⇒ a + 3 = 8 ⇒ a = 5.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'B(3, 5) olduğundan B nin ordinatı 5 tir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 24
+  {
+    id: 'lines-24',
+    topic: 'Doğruya ve eksene teğet çember',
+    given: ['B(12, 9)'],
+    // Origin (35, 260), 17 px per unit; drawn with A(15, 0), M(15, 5), r = 5.
+    figure: {
+      viewBox: '0 -10 400 300',
+      caption: 'Şekil 13',
+      label:
+        'Koordinat düzleminde orijinden geçen d doğrusu ve M merkezli bir çember. Çember x eksenine A noktasında, d doğrusuna B(12, 9) noktasında teğet.',
+      svg: `
+          <path class="ln" d="M15,260 L395,260"/>
+          <path class="ln" d="M385,254 L395,260 L385,266"/>
+          <path class="ln" d="M35,285 L35,-5"/>
+          <path class="ln" d="M29,5 L35,-5 L41,5"/>
+          <text x="390" y="280" text-anchor="middle">x</text>
+          <text x="47" y="4">y</text>
+          <path class="ln" d="M35,260 L375,5"/>
+          <circle class="ln" cx="290" cy="175" r="85"/>
+          <circle class="pt" cx="239" cy="107" r="3.2"/>
+          <circle class="pt" cx="290" cy="260" r="3.2"/>
+          <circle class="pt" cx="290" cy="175" r="3.2"/>
+          <text x="27" y="278" text-anchor="end">O</text>
+          <text x="228" y="100" text-anchor="end">B(12, 9)</text>
+          <text x="290" y="280" text-anchor="middle">A</text>
+          <text x="298" y="180">M</text>
+          <text x="384" y="22">d</text>
+        `,
+    },
+    stem: [],
+    ask: 'Yukarıdaki şekilde M merkezli çember A noktasında x eksenine ve B(12, 9) noktasında da d doğrusuna teğettir. Buna göre, M merkezli çemberin yarıçapı kaç birimdir?',
+    choices: [
+      { key: 'A', text: '3' },
+      { key: 'B', text: '4' },
+      { key: 'C', text: '9/2' },
+      { key: 'D', text: '5' },
+      { key: 'E', text: '6' },
+    ],
+    answer: 'D',
+    hint: 'Dışarıdaki bir noktadan çembere çizilen teğet parçaları eşittir: |OA| = |OB|.',
+    solution: [
+      {
+        title: 'Teğet uzunluğu',
+        detail: '|OB| = √(12² + 9²) = 15. O dan çizilen teğet parçaları eşit olduğundan |OA| = 15, yani A(15, 0).',
+      },
+      {
+        title: 'Merkez',
+        detail: 'Çember x eksenine A da teğet olduğundan M, A nın tam üstündedir: M(15, r).',
+      },
+      {
+        title: 'Yarıçap teğete dik',
+        detail: 'd nin eğimi 9/12 = 3/4 tür; MB ⊥ d olduğundan (r − 9) / (15 − 12) = −4/3 ⇒ r − 9 = −4.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'r = 5 birimdir. (Kontrol: |MB| = √(3² + 4²) = 5.)',
+      },
+    ],
+  },
+
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -904,6 +1262,14 @@ export const UNIT_7_LINES: Unit = {
       summary:
         'Dik doğruların kesişimi, eksen noktalarından doğru denklemi, kare ve eğim, dik doğrularla uzunluk, taralı alan ve kesişim noktasının uzaklığı.',
       questions: pick('lines-13', 'lines-14', 'lines-15', 'lines-16', 'lines-17', 'lines-18'),
+    },
+    {
+      id: 'lines-m4',
+      order: 4,
+      title: 'Teğetler, açıortaylar ve simetri',
+      summary:
+        'İkizkenar dik üçgenle doğru denklemi, doğrunun noktaya göre simetriği, eşkenar dörtgen, dış açıortayın eğimi, doğru ile kare ve teğet çember.',
+      questions: pick('lines-19', 'lines-20', 'lines-21', 'lines-22', 'lines-23', 'lines-24'),
     },
   ],
 };
