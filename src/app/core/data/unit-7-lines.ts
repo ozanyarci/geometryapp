@@ -4897,6 +4897,286 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+  // ---------------------------------------------------------------- 105
+  {
+    id: 'lines-105',
+    topic: 'Doğru demetinin sabit noktası',
+    stem: [],
+    ask: 'Dik koordinat sisteminde k nın her reel değeri için verilen (k + 2)x + (k − 1)y − 3k = 0 doğrularının kesim noktasının koordinatları aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: '(2, 1)' },
+      { key: 'B', text: '(1, 2)' },
+      { key: 'C', text: '(−1, 2)' },
+      { key: 'D', text: '(1, −2)' },
+      { key: 'E', text: '(2, 4)' },
+    ],
+    answer: 'B',
+    hint: 'Denklemi k lı ve k sız terimler olarak iki gruba ayır.',
+    solution: [
+      {
+        title: 'Gruplama',
+        detail: '(k + 2)x + (k − 1)y − 3k = 0 ⇒ k(x + y − 3) + (2x − y) = 0.',
+      },
+      {
+        title: 'Her k için sağlanma',
+        detail: 'Denklem her k için sağlanıyorsa x + y − 3 = 0 ve 2x − y = 0 olmalıdır.',
+      },
+      {
+        title: 'Çözüm',
+        detail: 'y = 2x ⇒ x + 2x = 3 ⇒ x = 1, y = 2.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Tüm doğrular (1, 2) noktasından geçer.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 106
+  {
+    id: 'lines-106',
+    topic: 'Paralel doğrular arasındaki kare',
+    stem: [],
+    ask: 'İki kenarı x − y + 3 = 0 ve 2x − 2y − 10 = 0 doğruları üzerinde olan karenin alanı kaç birimkaredir?',
+    choices: [
+      { key: 'A', text: '16' },
+      { key: 'B', text: '24' },
+      { key: 'C', text: '32' },
+      { key: 'D', text: '36' },
+      { key: 'E', text: '64' },
+    ],
+    answer: 'C',
+    hint: 'Doğrular paraleldir; aralarındaki uzaklık karenin bir kenarıdır.',
+    solution: [
+      {
+        title: 'Katsayıları eşitle',
+        detail:
+          '2x − 2y − 10 = 0 ⇒ x − y − 5 = 0; iki doğru da x − y + c = 0 biçimindedir, paraleldir.',
+      },
+      {
+        title: 'Uzaklık',
+        detail: '|3 − (−5)| / √(1² + 1²) = 8 / √2 = 4√2.',
+      },
+      {
+        title: 'Kenar',
+        detail: 'Karenin karşılıklı iki kenarı bu doğrular üzerinde olduğundan kenar 4√2 dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Alan (4√2)² = 32 birimkaredir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 107
+  {
+    id: 'lines-107',
+    topic: 'İki doğru arasındaki açının tanjantı',
+    stem: [],
+    ask: '3x − y + 1 = 0 doğrusu ile x + 2y − 4 = 0 doğrusu arasındaki dar açının tanjantı kaçtır?',
+    choices: [
+      { key: 'A', text: '1' },
+      { key: 'B', text: '3' },
+      { key: 'C', text: '5' },
+      { key: 'D', text: '7' },
+      { key: 'E', text: '9' },
+    ],
+    answer: 'D',
+    hint: 'Dar açının tanjantı |(m₁ − m₂) / (1 + m₁ · m₂)| dir.',
+    solution: [
+      {
+        title: 'Eğimler',
+        detail: '3x − y + 1 = 0 ⇒ m₁ = 3; x + 2y − 4 = 0 ⇒ m₂ = −1/2.',
+      },
+      {
+        title: 'Pay',
+        detail: 'm₁ − m₂ = 3 + 1/2 = 7/2.',
+      },
+      {
+        title: 'Payda',
+        detail: '1 + m₁ · m₂ = 1 − 3/2 = −1/2.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'tan θ = |(7/2) / (−1/2)| = 7.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 108
+  {
+    id: 'lines-108',
+    topic: 'Noktanın doğruya uzaklığı',
+    stem: ['Analitik düzlemde A(2, −1) noktasının ax + 3y + 1 = 0 doğrusuna uzaklığı 2 birimdir.'],
+    ask: 'Buna göre, a sayısı kaçtır?',
+    choices: [
+      { key: 'A', text: '−5' },
+      { key: 'B', text: '−4' },
+      { key: 'C', text: '−3' },
+      { key: 'D', text: '3' },
+      { key: 'E', text: '4' },
+    ],
+    answer: 'B',
+    hint: 'Uzaklık formülünü yaz: |a · 2 + 3 · (−1) + 1| / √(a² + 9) = 2.',
+    solution: [
+      {
+        title: 'Uzaklık formülü',
+        detail: '|2a − 3 + 1| / √(a² + 9) = 2 ⇒ |2a − 2| = 2√(a² + 9).',
+      },
+      {
+        title: 'Kare al',
+        detail: '4a² − 8a + 4 = 4a² + 36.',
+      },
+      {
+        title: 'Çöz',
+        detail: '−8a = 32 ⇒ a = −4.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Kontrol: −4x + 3y + 1 = 0 için |−8 − 3 + 1| / 5 = 2. a = −4 tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 109
+  {
+    id: 'lines-109',
+    topic: 'İki doğru arasındaki açı',
+    given: ['d₁: y − x − 2 = 0', 'd₂: √3y − x + 6 = 0'],
+    stem: [],
+    ask: 'Analitik düzlemde denklemleri verilen d₁ ve d₂ doğruları arasındaki dar açı kaç derecedir?',
+    choices: [
+      { key: 'A', text: '15' },
+      { key: 'B', text: '30' },
+      { key: 'C', text: '45' },
+      { key: 'D', text: '60' },
+      { key: 'E', text: '75' },
+    ],
+    answer: 'A',
+    hint: 'Her doğrunun eğiminden x ekseniyle yaptığı açıyı bul.',
+    solution: [
+      {
+        title: 'd₁ in eğim açısı',
+        detail: 'y = x + 2 ⇒ m₁ = 1 = tan 45°; d₁, x ekseniyle 45° yapar.',
+      },
+      {
+        title: 'd₂ nin eğim açısı',
+        detail: 'y = x/√3 − 6/√3 ⇒ m₂ = 1/√3 = tan 30°; d₂, x ekseniyle 30° yapar.',
+      },
+      {
+        title: 'Aradaki açı',
+        detail: 'İki doğru arasındaki açı 45° − 30° = 15° dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: '15° dar açı olduğundan aranan açı 15° dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 110
+  {
+    id: 'lines-110',
+    topic: 'Paralel doğru ve uzaklık',
+    stem: [],
+    ask: '−x/3 + y/4 = 1 doğrusuna paralel ve orijine 2 birim uzaklıkta olan doğrunun denklemi aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: '4x + 3y + 10 = 0' },
+      { key: 'B', text: '4x − 3y + 10 = 0' },
+      { key: 'C', text: '3x − 4y + 10 = 0' },
+      { key: 'D', text: '4x − 3y + 5 = 0' },
+      { key: 'E', text: '4x − 3y + 12 = 0' },
+    ],
+    answer: 'B',
+    hint: 'Denklemi 12 ile çarpıp genel biçime getir; paralel doğrular yalnızca sabit terimde farklıdır.',
+    solution: [
+      {
+        title: 'Genel biçim',
+        detail: '−x/3 + y/4 = 1 ⇒ −4x + 3y = 12 ⇒ 4x − 3y + 12 = 0.',
+      },
+      {
+        title: 'Paralel doğru',
+        detail: 'Aranan doğru 4x − 3y + c = 0 biçimindedir.',
+      },
+      {
+        title: 'Orijine uzaklık',
+        detail: '|c| / √(4² + 3²) = 2 ⇒ |c| = 10 ⇒ c = 10 veya c = −10.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Seçeneklerde yer alan 4x − 3y + 10 = 0 doğrusudur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 111
+  {
+    id: 'lines-111',
+    topic: 'Doğruların sınırladığı alan',
+    given: ['d doğrusu eksenleri 8 noktalarında keser'],
+    // Origin (110, 290), 25 px per unit; y = 3x meets d at (2, 6), y = x/3 meets
+    // d at (6, 2), d: x + y = 8.
+    figure: {
+      viewBox: '0 10 400 330',
+      caption: 'Şekil 47',
+      label:
+        'Dik koordinat sisteminde y eşittir 3x ve y eşittir x bölü 3 doğruları ile x eksenini ve y eksenini 8 noktasında kesen d doğrusu; üç doğrunun sınırladığı üçgensel bölge taralı.',
+      svg: `
+          <path class="shade" d="M110,290 L160,140 L260,240 Z"/>
+          <path class="ln" d="M40,290 L390,290"/>
+          <path class="ln" d="M380,284 L390,290 L380,296"/>
+          <path class="ln" d="M110,335 L110,20"/>
+          <path class="ln" d="M104,30 L110,20 L116,30"/>
+          <text x="386" y="310" text-anchor="middle">x</text>
+          <text x="122" y="32">y</text>
+          <path class="ln" d="M97.5,327.5 L190,50"/>
+          <path class="ln" d="M72.5,302.5 L380,200"/>
+          <path class="ln" d="M85,65 L345,325"/>
+          <circle class="pt" cx="110" cy="290" r="3.2"/>
+          <circle class="pt" cx="310" cy="290" r="3.2"/>
+          <circle class="pt" cx="110" cy="90" r="3.2"/>
+          <text x="102" y="308" text-anchor="end">O</text>
+          <text x="310" y="312" text-anchor="middle">8</text>
+          <text x="102" y="96" text-anchor="end">8</text>
+          <text x="196" y="54">y = 3x</text>
+          <text x="384" y="238" text-anchor="end">y = x/3</text>
+          <text x="352" y="334">d</text>
+        `,
+    },
+    stem: ['Şekildeki y = 3x ve y = x/3 doğruları ile d doğrusu verilmiştir.'],
+    ask: 'Buna göre, bu üç doğrunun sınırladığı taralı bölgenin alanı kaç birimkaredir?',
+    choices: [
+      { key: 'A', text: '12' },
+      { key: 'B', text: '14' },
+      { key: 'C', text: '16' },
+      { key: 'D', text: '18' },
+      { key: 'E', text: '20' },
+    ],
+    answer: 'C',
+    hint: 'Önce d nin denklemini yaz, sonra her iki doğruyla kesim noktalarını bul.',
+    solution: [
+      {
+        title: 'd nin denklemi',
+        detail: 'x/8 + y/8 = 1 ⇒ x + y = 8.',
+      },
+      {
+        title: 'y = 3x ile kesim',
+        detail: 'x + 3x = 8 ⇒ x = 2, y = 6; kesim noktası (2, 6).',
+      },
+      {
+        title: 'y = x/3 ile kesim',
+        detail: 'x + x/3 = 8 ⇒ x = 6, y = 2; kesim noktası (6, 2).',
+      },
+      {
+        title: 'Alan',
+        detail: 'Köşeleri O(0, 0), (2, 6), (6, 2) olan üçgen: |2 · 2 − 6 · 6| / 2 = 32 / 2 = 16.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Taralı bölgenin alanı 16 birimkaredir.',
+      },
+    ],
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -5111,6 +5391,22 @@ export const UNIT_7_LINES: Unit = {
         'lines-102',
         'lines-103',
         'lines-104',
+      ),
+    },
+    {
+      id: 'lines-m17',
+      order: 17,
+      title: 'Demet, açı ve uzaklık',
+      summary:
+        'Doğru demetinin sabit noktası, paralel doğrular arasındaki kare, doğrular arası açı ve tanjantı, noktanın doğruya uzaklığı, paralel doğru ve taralı alan.',
+      questions: pick(
+        'lines-105',
+        'lines-106',
+        'lines-107',
+        'lines-108',
+        'lines-109',
+        'lines-110',
+        'lines-111',
       ),
     },
   ],
