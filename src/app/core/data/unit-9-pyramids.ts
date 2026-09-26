@@ -1480,6 +1480,315 @@ const QUESTIONS: Question[] = [
         `,
     },
   },
+  // ---------------------------------------------------------------- 25
+  {
+    id: 'pyramids-25',
+    topic: 'Dikdörtgen tabanlı piramidin yanal alanı',
+    stem: [],
+    given: [
+      'Tabanı dikdörtgen olan bir dik piramidin yüksekliği 6 cm dir.',
+      'Taban kenarları 16 cm ve 9 cm dir.',
+    ],
+    ask: 'Buna göre, piramidin yanal alanlar toplamı kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '150' },
+      { key: 'B', text: '180' },
+      { key: 'C', text: '196' },
+      { key: 'D', text: '210' },
+      { key: 'E', text: '240' },
+    ],
+    answer: 'D',
+    hint: 'Her yan yüzün yüksekliği; piramidin yüksekliği ile tabanın merkezinden o kenara olan uzaklıktan oluşan dik üçgenin hipotenüsüdür.',
+    solution: [
+      {
+        title: 'Uzun kenardaki yan yüzler',
+        detail:
+          'Taban merkezinin 16 cm lik kenara uzaklığı 9 / 2 = 4,5 cm dir. Yan yüz yüksekliği √(6² + 4,5²) = √56,25 = 7,5 cm; iki yüzün alanı 2 · (16 · 7,5) / 2 = 120 cm².',
+      },
+      {
+        title: 'Kısa kenardaki yan yüzler',
+        detail:
+          'Taban merkezinin 9 cm lik kenara uzaklığı 16 / 2 = 8 cm dir. Yan yüz yüksekliği √(6² + 8²) = 10 cm; iki yüzün alanı 2 · (9 · 10) / 2 = 90 cm².',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Yanal alanlar toplamı 120 + 90 = 210 cm² dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 26
+  {
+    id: 'pyramids-26',
+    topic: 'Kare piramidin tüm alanı',
+    stem: [],
+    ask: 'Cisim yüksekliği 4 cm ve tabanının bir kenar uzunluğu 6 cm olan kare tabanlı dik piramidin tüm alanı kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '60' },
+      { key: 'B', text: '84' },
+      { key: 'C', text: '96' },
+      { key: 'D', text: '108' },
+      { key: 'E', text: '120' },
+    ],
+    answer: 'C',
+    hint: 'Tüm alan, taban alanı ile dört eş yan yüzün alanlarının toplamıdır.',
+    solution: [
+      {
+        title: 'Yan yüz yüksekliği',
+        detail:
+          'Taban merkezinin bir kenara uzaklığı 6 / 2 = 3 cm dir; yan yüz yüksekliği √(4² + 3²) = 5 cm.',
+      },
+      {
+        title: 'Yanal alan',
+        detail: 'Dört eş üçgen: 4 · (6 · 5) / 2 = 60 cm².',
+      },
+      {
+        title: 'Taban alanı',
+        detail: '6 · 6 = 36 cm².',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Tüm alan 60 + 36 = 96 cm² dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 27
+  {
+    id: 'pyramids-27',
+    topic: 'Daire diliminden koni',
+    stem: [],
+    ask: 'Merkez açısı 120° olan bir daire dilimi kıvrılarak bir koninin yanal yüzeyi elde edilirse koninin yüksekliğinin taban çapına oranı kaçtır?',
+    choices: [
+      { key: 'A', text: '√2/2' },
+      { key: 'B', text: '1' },
+      { key: 'C', text: '√2' },
+      { key: 'D', text: '2' },
+      { key: 'E', text: '2√2' },
+    ],
+    answer: 'C',
+    hint: 'Dilimin yarıçapı koninin ana doğrusu, dilimin yay uzunluğu ise koninin taban çevresi olur.',
+    solution: [
+      {
+        title: 'Taban yarıçapı',
+        detail:
+          'Dilimin yarıçapı R olsun; yay uzunluğu 2πR · 120/360 = 2πR/3 tür. Bu, taban çevresi 2πr ye eşit olduğundan r = R/3 tür.',
+      },
+      {
+        title: 'Yükseklik',
+        detail: 'Ana doğru R olduğundan h = √(R² − R²/9) = √(8R²/9) = 2√2 R / 3 tür.',
+      },
+      {
+        title: 'Taban çapı',
+        detail: '2r = 2R/3.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'h / 2r = (2√2 R / 3) / (2R / 3) = √2 dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 28
+  // Cone of height H drawn 260 px tall with radius 150 px; the cylinder has
+  // radius 100 px (|OA| = 2|AB|) and height 260/3 px. Ellipses at 0.3 aspect.
+  {
+    id: 'pyramids-28',
+    topic: 'Koni içindeki silindirin hacmi',
+    stem: [
+      'Şekildeki dik koninin içine, tabanları aynı düzlemde olacak biçimde bir dik silindir yerleştirilmiştir.',
+    ],
+    given: ['O, koninin taban merkezi', '|OA| = 2|AB|'],
+    ask: 'Buna göre, silindirin hacminin koninin hacmine oranı kaçtır?',
+    choices: [
+      { key: 'A', text: '1/3' },
+      { key: 'B', text: '4/9' },
+      { key: 'C', text: '1/2' },
+      { key: 'D', text: '2/3' },
+      { key: 'E', text: '8/27' },
+    ],
+    answer: 'B',
+    hint: 'Silindirin üst tabanındaki C noktası koninin ana doğrusu üzerindedir; tepe noktasından bakınca benzer üçgenler oluşur.',
+    solution: [
+      {
+        title: 'Yarıçaplar',
+        detail: '|AB| = k dersek silindirin yarıçapı |OA| = 2k, koninin yarıçapı |OB| = 3k olur.',
+      },
+      {
+        title: 'Silindirin yüksekliği',
+        detail:
+          'Koninin yüksekliği H olsun. Tepe noktasından silindirin üst tabanına inen küçük koni asıl koniye benzerdir: yarıçap oranı 2k / 3k = 2/3, yani küçük koninin yüksekliği 2H/3, silindirin yüksekliği H − 2H/3 = H/3 tür.',
+      },
+      {
+        title: 'Hacimler',
+        detail: 'V silindir = π(2k)² · H/3 = 4πk²H/3; V koni = (1/3) π(3k)² · H = 3πk²H.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Oran (4πk²H/3) / (3πk²H) = 4/9 dur.',
+      },
+    ],
+    figure: {
+      viewBox: '0 -4 400 340',
+      caption: 'Şekil 19',
+      label:
+        'Tepe noktası P olan dik koninin içinde aynı tabana oturan bir dik silindir. O koninin taban merkezi; A silindirin, B koninin taban çemberi üzerinde ve O, A, B doğrusal. Silindirin üst tabanındaki D ve C noktaları koninin ana doğruları üzerinde. |OA| = 2|AB|.',
+      svg: `
+          <path class="shade" d="M100,193.3 L100,280 A100,30 0 0 0 300,280 L300,193.3 A100,30 0 0 0 100,193.3 Z"/>
+          <path class="hid" d="M50,280 A150,45 0 0 1 350,280 M100,280 A100,30 0 0 1 300,280"/>
+          <path class="ln" d="M50,280 A150,45 0 0 0 350,280 M200,20 L50,280 M200,20 L350,280"/>
+          <path class="ln" d="M100,193.3 A100,30 0 0 1 300,193.3 A100,30 0 0 1 100,193.3 Z"/>
+          <path class="ln" d="M100,193.3 L100,280 A100,30 0 0 0 300,280 L300,193.3"/>
+          <path class="ln" d="M200,280 L350,280"/>
+          <circle class="pt" cx="200" cy="20" r="3.2"/>
+          <circle class="pt" cx="200" cy="280" r="3.2"/>
+          <circle class="pt" cx="300" cy="280" r="3.2"/>
+          <circle class="pt" cx="350" cy="280" r="3.2"/>
+          <circle class="pt" cx="100" cy="193.3" r="3.2"/>
+          <circle class="pt" cx="300" cy="193.3" r="3.2"/>
+          <text x="200" y="10" text-anchor="middle">P</text>
+          <text x="196" y="272" text-anchor="end">O</text>
+          <text x="305" y="272">A</text>
+          <text x="358" y="286">B</text>
+          <text x="90" y="189" text-anchor="end">D</text>
+          <text x="310" y="189">C</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 29
+  // Cube of edge 6 at 30 px per cm in cabinet oblique (depth 90 px along 45°).
+  // P is the front top right corner; A, B, C are the midpoints of its edges.
+  {
+    id: 'pyramids-29',
+    topic: 'Küpün köşelerinden kesilen piramitler',
+    stem: [
+      'Şekildeki küpün bir ayrıtının uzunluğu 6 cm dir. A, B, C bulundukları ayrıtların orta noktalarıdır ve küpün P köşesinden (P, ABC) piramidi kesilerek çıkarılmıştır.',
+    ],
+    ask: 'Aynı işlem küpün sekiz köşesine de uygulanırsa geriye kalan cismin hacmi kaç cm³ olur?',
+    choices: [
+      { key: 'A', text: '144' },
+      { key: 'B', text: '168' },
+      { key: 'C', text: '180' },
+      { key: 'D', text: '192' },
+      { key: 'E', text: '198' },
+    ],
+    answer: 'C',
+    hint: 'Kesilen her piramidin P köşesindeki üç ayrıtı karşılıklı diktir; tabanı dik üçgen, yüksekliği üçüncü ayrıt olarak al.',
+    solution: [
+      {
+        title: 'Bir piramidin ayrıtları',
+        detail:
+          'A, B, C orta noktalar olduğundan |PA| = |PB| = |PC| = 6 / 2 = 3 cm dir ve bu üç ayrıt karşılıklı diktir.',
+      },
+      {
+        title: 'Bir piramidin hacmi',
+        detail:
+          'Taban PAB dik üçgeni: (3 · 3) / 2 = 9/2 cm², yükseklik |PC| = 3 cm; V = (1/3) · (9/2) · 3 = 9/2 cm³.',
+      },
+      {
+        title: 'Sekiz köşe',
+        detail: 'Kesilen piramitler birbirine değmez; toplam 8 · 9/2 = 36 cm³.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Küpün hacmi 6³ = 216 cm³ olduğundan geriye 216 − 36 = 180 cm³ kalır.',
+      },
+    ],
+    figure: {
+      viewBox: '0 22 400 294',
+      caption: 'Şekil 20',
+      label:
+        'Ayrıtı 6 cm olan küp. Ön üst sağ köşe P; A, B ve C, P den çıkan üç ayrıtın orta noktaları. ABC üçgeni taralı ve P ile birleştirilmiş; (P, ABC) piramidi köşeden kesilen parçadır.',
+      svg: `
+          <path class="shade" d="M168,110 L258,200 L289.8,78.2 Z"/>
+          <path class="hid" d="M141.6,226.4 L78,290 M141.6,226.4 L321.6,226.4 M141.6,226.4 L141.6,46.4"/>
+          <path class="ln" d="M168,110 L78,110 L78,290 L258,290 L258,200 M78,110 L141.6,46.4 L321.6,46.4 L289.8,78.2 M321.6,46.4 L321.6,226.4 L258,290"/>
+          <path class="ln" d="M168,110 L258,200 L289.8,78.2 Z"/>
+          <path class="hid" d="M168,110 L258,110 L258,200 M258,110 L289.8,78.2"/>
+          <circle class="pt" cx="258" cy="110" r="3.2"/>
+          <circle class="pt" cx="168" cy="110" r="3.2"/>
+          <circle class="pt" cx="258" cy="200" r="3.2"/>
+          <circle class="pt" cx="289.8" cy="78.2" r="3.2"/>
+          <text x="264" y="126">P</text>
+          <text x="164" y="128" text-anchor="end">A</text>
+          <text x="248" y="216" text-anchor="end">B</text>
+          <text x="296" y="94">C</text>
+          <text class="val" x="168" y="308" text-anchor="middle">6</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 30
+  {
+    id: 'pyramids-30',
+    topic: 'Kesik piramidin yüksekliği',
+    stem: ['Yüksekliği 12 cm olan bir piramit, tabanına paralel bir düzlemle kesiliyor.'],
+    ask: 'Üstteki küçük piramidin hacminin kesik piramidin hacmine oranı 8/19 olduğuna göre, kesik piramidin yüksekliği kaç cm dir?',
+    choices: [
+      { key: 'A', text: '2' },
+      { key: 'B', text: '3' },
+      { key: 'C', text: '4' },
+      { key: 'D', text: '6' },
+      { key: 'E', text: '8' },
+    ],
+    answer: 'C',
+    hint: 'Önce küçük piramidin hacmini bütün piramidin hacmiyle karşılaştır; benzer cisimlerde hacim oranı benzerlik oranının küpüdür.',
+    solution: [
+      {
+        title: 'Bütün piramide oran',
+        detail:
+          'Küçük piramit 8k, kesik piramit 19k ise bütün piramit 8k + 19k = 27k dır; oran 8/27.',
+      },
+      {
+        title: 'Benzerlik oranı',
+        detail: '8/27 = (2/3)³ olduğundan yükseklikler oranı 2/3 tür.',
+      },
+      {
+        title: 'Küçük piramidin yüksekliği',
+        detail: '12 · 2/3 = 8 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Kesik piramidin yüksekliği 12 − 8 = 4 cm dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 31
+  {
+    id: 'pyramids-31',
+    topic: 'Düzgün altıgen piramidin yüksekliği',
+    stem: [],
+    ask: 'Tabanı, yarıçapı 6 cm olan bir çemberin içine yerleştirilmiş düzgün altıgen olan piramidin hacmi 144√3 cm³ tür. Buna göre, piramidin yüksekliği kaç cm dir?',
+    choices: [
+      { key: 'A', text: '4' },
+      { key: 'B', text: '6' },
+      { key: 'C', text: '8' },
+      { key: 'D', text: '9' },
+      { key: 'E', text: '12' },
+    ],
+    answer: 'C',
+    hint: 'Çembere yerleştirilmiş düzgün altıgenin bir kenarı çemberin yarıçapına eşittir.',
+    solution: [
+      {
+        title: 'Altıgenin kenarı',
+        detail: 'Altıgen, kenarı yarıçapa eşit altı eşkenar üçgenden oluşur: kenar 6 cm.',
+      },
+      {
+        title: 'Taban alanı',
+        detail: '6 · (6² · √3 / 4) = 6 · 9√3 = 54√3 cm².',
+      },
+      {
+        title: 'Hacimden yükseklik',
+        detail: '(1/3) · 54√3 · h = 144√3 ⇒ 18h = 144.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'h = 8 cm dir.',
+      },
+    ],
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -1562,6 +1871,22 @@ export const UNIT_9_PYRAMIDS: Unit = {
         'pyramids-22',
         'pyramids-23',
         'pyramids-24',
+      ),
+    },
+    {
+      id: 'pyramids-m5',
+      order: 5,
+      title: 'Yanal alan, kesik piramit ve iç içe cisimler',
+      summary:
+        'Dikdörtgen tabanlı piramidin yanal alanı, kare piramidin tüm alanı, daire diliminden koni, koni içindeki silindir, küpün köşelerinden kesilen piramitler, kesik piramit ve düzgün altıgen piramit.',
+      questions: pick(
+        'pyramids-25',
+        'pyramids-26',
+        'pyramids-27',
+        'pyramids-28',
+        'pyramids-29',
+        'pyramids-30',
+        'pyramids-31',
       ),
     },
   ],
