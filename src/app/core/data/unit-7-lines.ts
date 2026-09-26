@@ -6808,6 +6808,284 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+
+  // ---------------------------------------------------------------- 147
+  {
+    id: 'lines-147',
+    topic: 'Doğruya en yakın nokta',
+    stem: [],
+    ask: 'Dik koordinat sisteminde y = 2x − 1 doğrusunun T(6, 1) noktasına en yakın noktası H(a, b) olduğuna göre, a + b toplamı kaçtır?',
+    choices: [
+      { key: 'A', text: '3' },
+      { key: 'B', text: '4' },
+      { key: 'C', text: '5' },
+      { key: 'D', text: '6' },
+      { key: 'E', text: '7' },
+    ],
+    answer: 'C',
+    hint: 'Doğrunun T ye en yakın noktası, T den doğruya inilen dikmenin ayağıdır.',
+    solution: [
+      {
+        title: 'Dikmenin eğimi',
+        detail: 'y = 2x − 1 in eğimi 2 olduğundan T den inen dikmenin eğimi −1/2 dir.',
+      },
+      {
+        title: 'Dikmenin denklemi',
+        detail: 'y − 1 = −(1/2)(x − 6) ⇒ y = −x/2 + 4.',
+      },
+      {
+        title: 'Kesim noktası',
+        detail: '2x − 1 = −x/2 + 4 ⇒ 5x/2 = 5 ⇒ x = 2, y = 3; H(2, 3) tür.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'a + b = 2 + 3 = 5 tir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 148
+  {
+    id: 'lines-148',
+    topic: 'Doğrunun y eksenine göre simetriği',
+    stem: [],
+    ask: 'Analitik düzlemde verilen y − mx + 6 = 0 doğrusunun y eksenine göre simetriği olan doğru x eksenini P(3, 0) noktasında kestiğine göre, m kaçtır?',
+    choices: [
+      { key: 'A', text: '−3' },
+      { key: 'B', text: '−2' },
+      { key: 'C', text: '−1' },
+      { key: 'D', text: '2' },
+      { key: 'E', text: '3' },
+    ],
+    answer: 'B',
+    hint: 'y eksenine göre simetrikte x yerine −x yazılır.',
+    solution: [
+      {
+        title: 'Simetrik doğru',
+        detail: 'x yerine −x yazılır: y − m(−x) + 6 = 0 ⇒ y + mx + 6 = 0.',
+      },
+      {
+        title: 'P noktasını yerleştir',
+        detail: 'P(3, 0) bu doğru üzerinde: 0 + 3m + 6 = 0.',
+      },
+      {
+        title: 'Sonuç',
+        detail: '3m = −6 ⇒ m = −2 dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 149
+  {
+    id: 'lines-149',
+    topic: 'Doğrunun noktaya göre simetriği',
+    stem: [],
+    ask: 'Analitik düzlemde denklemi 3x − y + m = 0 olan doğrunun P(2, −1) noktasına göre simetriği 3x − y − 5 = 0 doğrusu olduğuna göre, m kaçtır?',
+    choices: [
+      { key: 'A', text: '−11' },
+      { key: 'B', text: '−9' },
+      { key: 'C', text: '−7' },
+      { key: 'D', text: '5' },
+      { key: 'E', text: '9' },
+    ],
+    answer: 'B',
+    hint: 'Noktaya göre simetrikte x yerine 2·2 − x, y yerine 2·(−1) − y yazılır.',
+    solution: [
+      {
+        title: 'Simetrik doğru',
+        detail: 'x yerine 4 − x, y yerine −2 − y yazılır: 3(4 − x) − (−2 − y) + m = 0.',
+      },
+      {
+        title: 'Düzenle',
+        detail: '12 − 3x + 2 + y + m = 0 ⇒ 3x − y − (14 + m) = 0.',
+      },
+      {
+        title: 'Karşılaştır',
+        detail: 'Bu doğru 3x − y − 5 = 0 olduğundan 14 + m = 5.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'm = −9 dur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 150
+  {
+    id: 'lines-150',
+    topic: 'Doğrunun x = a doğrusuna göre simetriği',
+    stem: [],
+    ask: 'Analitik düzlemde verilen d₁: 2x − y − 4 = 0 doğrusunun x = 3 doğrusuna göre simetriği olan doğru d₂: y = mx + n olduğuna göre, (m + n) toplamı kaçtır?',
+    choices: [
+      { key: 'A', text: '4' },
+      { key: 'B', text: '5' },
+      { key: 'C', text: '6' },
+      { key: 'D', text: '7' },
+      { key: 'E', text: '8' },
+    ],
+    answer: 'C',
+    hint: 'x = 3 doğrusuna göre simetrikte x yerine 6 − x yazılır, y değişmez.',
+    solution: [
+      {
+        title: 'Simetrik doğru',
+        detail: 'x yerine 2 · 3 − x = 6 − x yazılır: 2(6 − x) − y − 4 = 0.',
+      },
+      {
+        title: 'Düzenle',
+        detail: '12 − 2x − y − 4 = 0 ⇒ y = −2x + 8.',
+      },
+      {
+        title: 'm ve n',
+        detail: 'd₂: y = −2x + 8 olduğundan m = −2, n = 8 dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'm + n = −2 + 8 = 6 dır.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 151
+  {
+    id: 'lines-151',
+    topic: 'Doğrunun y = b doğrusuna göre simetriği',
+    stem: [],
+    ask: 'Analitik düzlemde x/5 − y/2 = 1 denklemi ile verilen d₁ doğrusunun y = 1 doğrusuna göre simetriği olan doğrunun y eksenini kestiği noktanın ordinatı kaçtır?',
+    choices: [
+      { key: 'A', text: '−4' },
+      { key: 'B', text: '−2' },
+      { key: 'C', text: '2' },
+      { key: 'D', text: '3' },
+      { key: 'E', text: '4' },
+    ],
+    answer: 'E',
+    hint: 'd₁ in y eksenini kestiği noktanın y = 1 doğrusuna göre simetriğini bul.',
+    solution: [
+      {
+        title: 'd₁ in y eksenini kestiği nokta',
+        detail: 'x = 0 için −y/2 = 1 ⇒ y = −2; nokta (0, −2) dir.',
+      },
+      {
+        title: 'Simetri',
+        detail:
+          'y = 1 doğrusu yataydır; y eksenindeki bir nokta yine y ekseninde kalır. (0, −2) nin simetriği (0, 2 · 1 − (−2)) = (0, 4) tür.',
+      },
+      {
+        title: 'Denklemle doğrulama',
+        detail: 'y yerine 2 − y yazılır: x/5 − (2 − y)/2 = 1; x = 0 için (y − 2)/2 = 1 ⇒ y = 4.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Simetrik doğru y eksenini ordinatı 4 olan noktada keser.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 152
+  {
+    id: 'lines-152',
+    topic: 'Simetrik doğrularla dörtgen alanı',
+    stem: [
+      'Analitik düzlemde verilen d: 5x + 2y − 20 = 0 doğrusunun başlangıç noktasına göre simetriği d₁, x eksenine göre simetriği d₂ ve y eksenine göre simetriği d₃ doğrularıdır.',
+    ],
+    ask: 'd, d₁, d₂ ve d₃ doğrularının oluşturduğu dörtgenin alanı kaç birimkaredir?',
+    choices: [
+      { key: 'A', text: '40' },
+      { key: 'B', text: '60' },
+      { key: 'C', text: '80' },
+      { key: 'D', text: '100' },
+      { key: 'E', text: '160' },
+    ],
+    answer: 'C',
+    hint: 'd nin eksenleri kestiği noktaları bul; simetrik doğrular bu noktaların simetriklerinden geçer.',
+    solution: [
+      {
+        title: 'Eksen kesim noktaları',
+        detail: 'd: 5x + 2y = 20 doğrusu eksenleri (4, 0) ve (0, 10) noktalarında keser.',
+      },
+      {
+        title: 'Simetrik doğrular',
+        detail:
+          'd₁: 5x + 2y = −20, d₂: 5x − 2y = 20, d₃: −5x + 2y = 20. Dört doğru (±4, 0) ve (0, ±10) noktalarından geçer.',
+      },
+      {
+        title: 'Dörtgen',
+        detail:
+          'Köşeleri (4, 0), (0, 10), (−4, 0), (0, −10) olan dörtgen köşegenleri 8 ve 20 birim olan bir eşkenar dörtgendir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Alan 8 · 20 / 2 = 80 birimkaredir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 153
+  {
+    id: 'lines-153',
+    topic: 'Açıortay ve eğim',
+    // Origin (140, 230); only the directions of the lines matter.
+    // y = 2x/3 at atan(2/3) = 33.69°: unit vector (0.83205, 0.55470), drawn for
+    // t = −25..250. y = 12x/5 at 67.38° = 2 · 33.69°: unit vector
+    // (0.38462, 0.92308), drawn for t = −25..220. Arcs of radius 40 (0°→33.69°)
+    // and 48 (33.69°→67.38°) mark the two equal angles.
+    figure: {
+      viewBox: '0 10 400 290',
+      caption: 'Şekil 61',
+      label:
+        'Dik koordinat sisteminde orijinden geçen y = 2x/3 doğrusu, x ekseni ile orijinden geçen y = mx doğrusu arasındaki açıyı iki eş açıya ayırıyor.',
+      svg: `
+          <path class="ln" d="M60,230 L390,230"/>
+          <path class="ln" d="M380,224 L390,230 L380,236"/>
+          <path class="ln" d="M140,295 L140,20"/>
+          <path class="ln" d="M134,30 L140,20 L146,30"/>
+          <text x="386" y="252" text-anchor="middle">x</text>
+          <text x="150" y="32">y</text>
+          <path class="ln" d="M119.2,243.87 L348.01,91.32"/>
+          <path class="ln" d="M130.38,253.08 L224.62,26.92"/>
+          <path class="arc" d="M180,230 A40,40 0 0,0 173.28,207.81"/>
+          <path class="arc" d="M179.94,203.37 A48,48 0 0,0 158.46,185.69"/>
+          <circle class="pt" cx="140" cy="230" r="3.2"/>
+          <text class="val" x="200" y="222">α</text>
+          <text class="val" x="178" y="184">α</text>
+          <text x="146" y="250">O</text>
+          <text x="232" y="36">y = mx</text>
+          <text x="390" y="130" text-anchor="end">y = 2x/3</text>
+        `,
+    },
+    stem: [
+      'Yukarıdaki şekilde y = 2x/3 doğrusu, x ekseni ile y = mx doğrusu arasındaki açının açıortayıdır.',
+    ],
+    ask: 'Buna göre, m kaçtır?',
+    choices: [
+      { key: 'A', text: '2' },
+      { key: 'B', text: '12/5' },
+      { key: 'C', text: '5/2' },
+      { key: 'D', text: '3' },
+      { key: 'E', text: '4/3' },
+    ],
+    answer: 'B',
+    hint: 'y = 2x/3 doğrusunun x ekseniyle yaptığı açı α ise y = mx doğrusu x ekseniyle 2α açısı yapar.',
+    solution: [
+      {
+        title: 'Açılar',
+        detail:
+          'y = 2x/3 doğrusunun eğim açısı α ise tan α = 2/3 tür. Açıortay olduğundan y = mx in eğim açısı 2α dır.',
+      },
+      {
+        title: 'İki kat açı formülü',
+        detail: 'm = tan 2α = 2 tan α / (1 − tan² α).',
+      },
+      {
+        title: 'Hesap',
+        detail: 'm = (4/3) / (1 − 4/9) = (4/3) / (5/9) = 12/5.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'm = 12/5 tir.',
+      },
+    ],
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -7105,6 +7383,22 @@ export const UNIT_7_LINES: Unit = {
       summary:
         'Taralı bölgenin eşitsizlikleri, noktanın doğruya göre simetriği, eksene teğet çember, doğrularla eksenler arasındaki alan, dik doğrunun denklemi ve taralı üçgenin alanı.',
       questions: pick('lines-141', 'lines-142', 'lines-143', 'lines-144', 'lines-145', 'lines-146'),
+    },
+    {
+      id: 'lines-m23',
+      order: 23,
+      title: 'Simetri, en yakın nokta ve açıortay',
+      summary:
+        'Doğruya en yakın nokta, doğrunun eksene, noktaya ve eksene paralel doğruya göre simetriği, simetrik doğrularla alan ve açıortayın eğimi.',
+      questions: pick(
+        'lines-147',
+        'lines-148',
+        'lines-149',
+        'lines-150',
+        'lines-151',
+        'lines-152',
+        'lines-153',
+      ),
     },
   ],
 };

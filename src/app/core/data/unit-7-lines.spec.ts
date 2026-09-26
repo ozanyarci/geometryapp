@@ -275,6 +275,19 @@ describe('unit 7 answer key', () => {
     expect(answerOf('lines-145')).toBe('D'));
   it('146 — y = −3x/4 + 6 meets x-axis at 8, 12 · 3/2 = 18 → D', () =>
     expect(answerOf('lines-146')).toBe('D'));
+  it('147 — foot of perpendicular from T(6, 1): H(2, 3), 2 + 3 = 5 → C', () =>
+    expect(answerOf('lines-147')).toBe('C'));
+  it('148 — image y + mx + 6 = 0, 3m + 6 = 0, m = −2 → B', () =>
+    expect(answerOf('lines-148')).toBe('B'));
+  it('149 — 3(4 − x) − (−2 − y) + m = 0, 14 + m = 5, m = −9 → B', () =>
+    expect(answerOf('lines-149')).toBe('B'));
+  it('150 — 2(6 − x) − y − 4 = 0, y = −2x + 8, −2 + 8 = 6 → C', () =>
+    expect(answerOf('lines-150')).toBe('C'));
+  it('151 — y-intercept −2 reflected in y = 1: 2 − (−2) = 4 → E', () =>
+    expect(answerOf('lines-151')).toBe('E'));
+  it('152 — vertices (±4, 0), (0, ±10), 8 · 20/2 = 80 → C', () =>
+    expect(answerOf('lines-152')).toBe('C'));
+  it('153 — tan 2α = (4/3)/(1 − 4/9) = 12/5 → B', () => expect(answerOf('lines-153')).toBe('B'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
