@@ -7086,6 +7086,358 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+  // ---------------------------------------------------------------- 154
+  {
+    id: 'lines-154',
+    topic: 'Noktanın doğruya göre simetriği',
+    stem: [],
+    ask: 'A(4, 3) noktasının x + y − 1 = 0 doğrusuna göre simetriği 2x − y + a − 1 = 0 doğrusu üzerinde bulunduğuna göre, a kaçtır?',
+    choices: [
+      { key: 'A', text: '−2' },
+      { key: 'B', text: '2' },
+      { key: 'C', text: '3' },
+      { key: 'D', text: '4' },
+      { key: 'E', text: '5' },
+    ],
+    answer: 'B',
+    hint: 'Simetrik nokta, A dan doğruya çizilen dikme üzerinde ve doğrunun öbür yanında aynı uzaklıktadır.',
+    solution: [
+      {
+        title: 'Dikme doğrusu',
+        detail:
+          'x + y − 1 = 0 doğrusunun eğimi −1 dir; A dan geçen dik doğrunun eğimi 1 dir: y − 3 = x − 4 ⇒ y = x − 1.',
+      },
+      {
+        title: 'Dikme ayağı',
+        detail: 'x + (x − 1) − 1 = 0 ⇒ x = 1, y = 0; dikme ayağı H(1, 0) dır.',
+      },
+      {
+        title: 'Simetrik nokta',
+        detail: 'H, [AA′] nün orta noktasıdır: A′(2 · 1 − 4, 2 · 0 − 3) = (−2, −3).',
+      },
+      {
+        title: 'Doğruda yerine yaz',
+        detail: '2 · (−2) − (−3) + a − 1 = 0 ⇒ −4 + 3 + a − 1 = 0 ⇒ a = 2 dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 155
+  {
+    id: 'lines-155',
+    topic: 'Doğruya eşit uzaklıktaki noktalar',
+    stem: [
+      'Dik koordinat düzleminde verilen A(1, 2) ve B(5, 4) noktaları 3x − 4y + n = 0 doğrusuna eşit uzaklıktadır.',
+    ],
+    ask: 'A ve B noktaları doğrunun farklı tarafında bulunduklarına göre, n kaçtır?',
+    choices: [
+      { key: 'A', text: '−5' },
+      { key: 'B', text: '−3' },
+      { key: 'C', text: '−1' },
+      { key: 'D', text: '1' },
+      { key: 'E', text: '3' },
+    ],
+    answer: 'E',
+    hint: 'Doğrunun iki yanında ve ona eşit uzaklıkta duran iki noktanın orta noktası doğrunun üzerindedir.',
+    solution: [
+      {
+        title: 'Orta nokta',
+        detail: '[AB] nin orta noktası ((1 + 5)/2, (2 + 4)/2) = (3, 3) tür.',
+      },
+      {
+        title: 'Orta nokta doğru üzerinde',
+        detail:
+          'A ve B farklı taraflarda ve eşit uzaklıkta olduğundan (3, 3) doğrunun üzerindedir.',
+      },
+      {
+        title: 'n yi bul',
+        detail: '3 · 3 − 4 · 3 + n = 0 ⇒ 9 − 12 + n = 0 ⇒ n = 3.',
+      },
+      {
+        title: 'Kontrol',
+        detail:
+          'A için 3 − 8 + 3 = −2, B için 15 − 16 + 3 = 2; işaretler zıt ve mutlak değerler eşittir. Sonuç n = 3 tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 156
+  {
+    id: 'lines-156',
+    topic: 'En kısa yol',
+    stem: [],
+    ask: 'A(2, 3), B(8, 5) ve C(x, 0) noktaları veriliyor. |AC| + |CB| toplamının en küçük değeri kaç birimdir?',
+    choices: [
+      { key: 'A', text: '8' },
+      { key: 'B', text: '2√17' },
+      { key: 'C', text: '10' },
+      { key: 'D', text: '2√26' },
+      { key: 'E', text: '12' },
+    ],
+    answer: 'C',
+    hint: 'A noktasının x eksenine göre simetriğini al; en kısa yol bu simetrikten B ye giden doğru parçasıdır.',
+    solution: [
+      {
+        title: 'Simetrik nokta',
+        detail:
+          'A ve B, x ekseninin aynı tarafındadır. A nın x eksenine göre simetriği A′(2, −3) tür ve her C için |AC| = |A′C| dir.',
+      },
+      {
+        title: 'En kısa yol',
+        detail: '|AC| + |CB| = |A′C| + |CB| ≥ |A′B|; eşitlik C, [A′B] üzerindeyken sağlanır.',
+      },
+      {
+        title: 'Uzaklık',
+        detail: '|A′B| = √((8 − 2)² + (5 − (−3))²) = √(36 + 64) = √100.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'En küçük değer 10 birimdir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 157
+  {
+    id: 'lines-157',
+    topic: 'Dış açıortaylar ve dış teğet çemberin merkezi',
+    // Origin (120, 270), 14 px per unit. A(0, 5) → (120, 200), B(12, 0) →
+    // (288, 270), C(15, 15) → (330, 60). The line 5x + 12y = 60 is drawn from
+    // x = −2.5 (y = 6.04) → (85, 185.4) to x = 16 (y = −1.67) → (344, 293.3).
+    figure: {
+      viewBox: '0 20 400 305',
+      caption: 'Şekil 62',
+      label:
+        'Dik koordinat sisteminde 5x + 12y − 60 = 0 doğrusu y eksenini A, x eksenini B noktasında kesiyor. A ve B den çizilen [AC] ve [BC] doğru parçaları C noktasında birleşiyor.',
+      svg: `
+          <path class="ln" d="M80,270 L385,270"/>
+          <path class="ln" d="M375,264 L385,270 L375,276"/>
+          <path class="ln" d="M120,300 L120,30"/>
+          <path class="ln" d="M114,40 L120,30 L126,40"/>
+          <path class="ln" d="M85,185.4 L344,293.3"/>
+          <path class="ln" d="M120,200 L330,60 L288,270"/>
+          <circle class="pt" cx="120" cy="270" r="3.2"/>
+          <circle class="pt" cx="120" cy="200" r="3.2"/>
+          <circle class="pt" cx="288" cy="270" r="3.2"/>
+          <circle class="pt" cx="330" cy="60" r="3.2"/>
+          <text x="380" y="292" text-anchor="middle">x</text>
+          <text x="130" y="40">y</text>
+          <text x="112" y="290" text-anchor="end">O</text>
+          <text x="112" y="196" text-anchor="end">A</text>
+          <text x="276" y="292" text-anchor="middle">B</text>
+          <text x="338" y="56">C</text>
+          <text x="390" y="318" text-anchor="end">5x + 12y − 60 = 0</text>
+        `,
+    },
+    stem: ['Yukarıdaki şekilde 5x + 12y − 60 = 0 doğrusu eksenleri A ve B noktalarında kesiyor.'],
+    ask: '[AC] ve [BC], AOB üçgeninin dış açıortayları olduğuna göre, C noktasının apsisi kaçtır?',
+    choices: [
+      { key: 'A', text: '10' },
+      { key: 'B', text: '12' },
+      { key: 'C', text: '13' },
+      { key: 'D', text: '15' },
+      { key: 'E', text: '17' },
+    ],
+    answer: 'D',
+    hint: 'Dış açıortaylar üzerindeki bir nokta, açının kollarına eşit uzaklıktadır; C üç doğruya da eşit uzaklıktadır.',
+    solution: [
+      {
+        title: 'Eşit uzaklık',
+        detail:
+          'C, A daki dış açıortay üzerinde olduğundan y eksenine ve AB ye; B deki dış açıortay üzerinde olduğundan x eksenine ve AB ye eşit uzaklıktadır.',
+      },
+      {
+        title: 'C nin koordinatları',
+        detail:
+          'C birinci bölgede ve iki eksene eşit uzaklıkta olduğundan C(r, r) biçimindedir; r, C nin AB doğrusuna uzaklığına da eşittir.',
+      },
+      {
+        title: 'Uzaklık denklemi',
+        detail: '|5r + 12r − 60| / √(5² + 12²) = r ⇒ |17r − 60| = 13r.',
+      },
+      {
+        title: 'Uygun kök',
+        detail:
+          '17r − 60 = 13r ⇒ r = 15; öteki kök r = 2 iç teğet çemberin merkezini verir. C, AB nin öbür yanında olduğundan r = 15 tir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'C(15, 15) olduğundan C nin apsisi 15 tir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 158
+  {
+    id: 'lines-158',
+    topic: 'Noktaların doğruya göre konumu',
+    stem: [],
+    ask: '(3, −2) ve (−1, 4) noktaları ax + 4 = 0 doğrusunun farklı tarafında ise, a aşağıdakilerden hangisi olabilir?',
+    choices: [
+      { key: 'A', text: '4' },
+      { key: 'B', text: '2' },
+      { key: 'C', text: '1' },
+      { key: 'D', text: '−1' },
+      { key: 'E', text: '−2' },
+    ],
+    answer: 'E',
+    hint: 'İki nokta doğrunun farklı tarafındaysa, koordinatları denklemin sol yanına yazıldığında zıt işaretli sonuçlar verir.',
+    solution: [
+      {
+        title: 'Değerleri yaz',
+        detail: '(3, −2) için 3a + 4, (−1, 4) için −a + 4 elde edilir.',
+      },
+      {
+        title: 'Zıt işaret koşulu',
+        detail: '(3a + 4)(4 − a) < 0 olmalıdır.',
+      },
+      {
+        title: 'Eşitsizliği çöz',
+        detail: 'Kökler −4/3 ve 4 tür; çarpım a < −4/3 ya da a > 4 iken negatiftir.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'Seçeneklerden yalnız −2 bu aralıktadır: (−6 + 4)(4 + 2) = −12 < 0. Doğru x = 2 olur ve noktalar onun iki yanındadır.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 159
+  {
+    id: 'lines-159',
+    topic: 'Doğrusal grafik yorumlama',
+    // Origin (80, 280); 80 px per hour, 5 px per km. K runs through (1, 40) →
+    // (160, 80), drawn to t = 1.15 → (172, 50). L runs through (2, 30) →
+    // (240, 130), drawn to t = 3.2 → (336, 40).
+    figure: {
+      viewBox: '0 10 400 315',
+      caption: 'Şekil 63',
+      label:
+        'Yatay eksen zaman (saat), düşey eksen yol (km). K doğrusu başlangıç noktasından çıkıp (1, 40) noktasından, L doğrusu başlangıç noktasından çıkıp (2, 30) noktasından geçiyor; bu noktalardan eksenlere noktalı dikmeler çizilmiş.',
+      svg: `
+          <path class="ln" d="M50,280 L385,280"/>
+          <path class="ln" d="M375,274 L385,280 L375,286"/>
+          <path class="ln" d="M80,300 L80,25"/>
+          <path class="ln" d="M74,35 L80,25 L86,35"/>
+          <path class="ln" d="M80,280 L172,50"/>
+          <path class="ln" d="M80,280 L336,40"/>
+          <path class="ln" stroke-dasharray="3 4" d="M80,80 L160,80 L160,280"/>
+          <path class="ln" stroke-dasharray="3 4" d="M80,130 L240,130 L240,280"/>
+          <path class="ln" d="M320,275 L320,285"/>
+          <circle class="pt" cx="160" cy="80" r="3.2"/>
+          <circle class="pt" cx="240" cy="130" r="3.2"/>
+          <text x="72" y="85" text-anchor="end">40</text>
+          <text x="72" y="135" text-anchor="end">30</text>
+          <text x="72" y="298" text-anchor="end">0</text>
+          <text x="160" y="300" text-anchor="middle">1</text>
+          <text x="240" y="300" text-anchor="middle">2</text>
+          <text x="320" y="300" text-anchor="middle">3</text>
+          <text x="180" y="54">K</text>
+          <text x="344" y="44">L</text>
+          <text x="92" y="32">y (km)</text>
+          <text x="390" y="320" text-anchor="end">x (saat)</text>
+        `,
+    },
+    stem: [
+      'Yukarıdaki grafik, aynı noktadan aynı anda ve aynı yöne doğru hareket eden K ve L araçlarının aldıkları yolun zamana göre değişimini göstermektedir.',
+    ],
+    ask: 'Buna göre, iki araç arasındaki mesafe, başlangıçtan kaç saat sonra 100 km olur?',
+    choices: [
+      { key: 'A', text: '4' },
+      { key: 'B', text: '4,5' },
+      { key: 'C', text: '5' },
+      { key: 'D', text: '5,5' },
+      { key: 'E', text: '6' },
+    ],
+    answer: 'A',
+    hint: 'Her doğrunun eğimi o aracın saatte aldığı yolu, yani hızını verir.',
+    solution: [
+      {
+        title: 'K nin hızı',
+        detail: 'K, 1 saatte 40 km yol alıyor; hızı 40 km/sa, t saatte 40t km yol alır.',
+      },
+      {
+        title: 'L nin hızı',
+        detail: 'L, 2 saatte 30 km yol alıyor; hızı 15 km/sa, t saatte 15t km yol alır.',
+      },
+      {
+        title: 'Aradaki mesafe',
+        detail: 'Aynı yöne gittiklerinden t saat sonra aralarındaki mesafe 40t − 15t = 25t km dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: '25t = 100 ⇒ t = 4 saattir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 160
+  {
+    id: 'lines-160',
+    topic: 'Uzaklık farkının en büyük değeri',
+    stem: ['Analitik düzlemde A(−2, 5), B(4, 3) ve C(x, 0) noktaları veriliyor.'],
+    ask: '||AC| − |CB|| farkı en büyük olduğunda x kaçtır?',
+    choices: [
+      { key: 'A', text: '9' },
+      { key: 'B', text: '11' },
+      { key: 'C', text: '13' },
+      { key: 'D', text: '15' },
+      { key: 'E', text: '17' },
+    ],
+    answer: 'C',
+    hint: 'Üçgen eşitsizliğine göre ||AC| − |CB|| ≤ |AB| dir; eşitlik A, B ve C doğrusal olduğunda sağlanır.',
+    solution: [
+      {
+        title: 'Üçgen eşitsizliği',
+        detail:
+          'Her C için ||AC| − |CB|| ≤ |AB| dir. A ve B, x ekseninin aynı tarafında olduğundan en büyük değer C, AB doğrusu üzerindeyken elde edilir.',
+      },
+      {
+        title: 'AB doğrusu',
+        detail: 'Eğim (3 − 5)/(4 − (−2)) = −1/3; denklem y − 3 = −(x − 4)/3 tür.',
+      },
+      {
+        title: 'x ekseniyle kesişim',
+        detail: 'y = 0 için −3 = −(x − 4)/3 ⇒ x − 4 = 9 ⇒ x = 13.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'C(13, 0) iken fark |AB| = √40 = 2√10 ile en büyüktür; x = 13 tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 161
+  {
+    id: 'lines-161',
+    topic: 'Eksene ve y = −x doğrusuna göre simetri',
+    stem: [],
+    ask: 'A(2, −5) noktasının x eksenine göre simetriği B, B noktasının y = −x doğrusuna göre simetriği C noktası olduğuna göre, C noktasının koordinatları toplamı nedir?',
+    choices: [
+      { key: 'A', text: '7' },
+      { key: 'B', text: '3' },
+      { key: 'C', text: '−3' },
+      { key: 'D', text: '−7' },
+      { key: 'E', text: '−10' },
+    ],
+    answer: 'D',
+    hint: 'x eksenine göre simetride ordinatın işareti değişir; y = −x doğrusuna göre simetride (x, y) noktası (−y, −x) olur.',
+    solution: [
+      {
+        title: 'x eksenine göre simetri',
+        detail: '(x, y) → (x, −y) olduğundan B(2, 5) tir.',
+      },
+      {
+        title: 'y = −x e göre simetri',
+        detail: '(x, y) → (−y, −x) olduğundan C(−5, −2) dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Koordinatlar toplamı −5 + (−2) = −7 dir.',
+      },
+    ],
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -7398,6 +7750,23 @@ export const UNIT_7_LINES: Unit = {
         'lines-151',
         'lines-152',
         'lines-153',
+      ),
+    },
+    {
+      id: 'lines-m24',
+      order: 24,
+      title: 'Simetri, en kısa yol ve konum',
+      summary:
+        'Noktanın doğruya ve y = −x e göre simetriği, doğruya eşit uzaklık, en kısa yol, dış açıortaylar, noktaların doğruya göre konumu, hız grafiği ve en büyük uzaklık farkı.',
+      questions: pick(
+        'lines-154',
+        'lines-155',
+        'lines-156',
+        'lines-157',
+        'lines-158',
+        'lines-159',
+        'lines-160',
+        'lines-161',
       ),
     },
   ],
