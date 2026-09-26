@@ -440,6 +440,395 @@ const QUESTIONS: Question[] = [
         `,
     },
   },
+  // ---------------------------------------------------------------- 7
+  // Right-angled corner at C, oblique projection at 20 px per cm: [CA] runs
+  // left at full scale, [CB] runs toward the viewer at half scale along 45°.
+  {
+    id: 'pyramids-7',
+    topic: 'Dik köşeli üçgen piramidin hacmi',
+    stem: [],
+    given: [
+      '(K, ABC) bir üçgen piramittir.',
+      '[KC] ⊥ [CA], [KC] ⊥ [CB], [AC] ⊥ [CB]',
+      '|KA| = 10 cm, |KB| = 17 cm, |KC| = 8 cm',
+    ],
+    ask: 'Yukarıdaki verilere göre, piramidin hacmi kaç cm³ tür?',
+    choices: [
+      { key: 'A', text: '96' },
+      { key: 'B', text: '108' },
+      { key: 'C', text: '120' },
+      { key: 'D', text: '144' },
+      { key: 'E', text: '180' },
+    ],
+    answer: 'C',
+    hint: 'KCA ve KCB dik üçgenlerinde Pisagor bağıntısıyla |CA| ve |CB| yi bul.',
+    solution: [
+      {
+        title: '|CA|',
+        detail: 'KCA dik üçgeninde |CA| = √(10² − 8²) = √36 = 6 cm dir.',
+      },
+      {
+        title: '|CB|',
+        detail: 'KCB dik üçgeninde |CB| = √(17² − 8²) = √225 = 15 cm dir.',
+      },
+      {
+        title: 'Taban ve yükseklik',
+        detail:
+          '[AC] ⊥ [CB] olduğundan ABC üçgeninin alanı 6 · 15 / 2 = 45 cm² dir. [KC] tabandaki iki kesişen doğruya dik olduğundan piramidin yüksekliği |KC| = 8 cm dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'V = (1/3) · 45 · 8 = 120 cm³ tür.',
+      },
+    ],
+    figure: {
+      viewBox: '0 4 400 326',
+      caption: 'Şekil 5',
+      label:
+        'K tepe noktası C nin tam üstünde olan (K, ABC) üçgen piramidi; C köşesinde [KC], [CA] ve [CB] birbirine dik. |KA| = 10, |KB| = 17, |KC| = 8; ABC tabanı taralı.',
+      svg: `
+          <path class="shade" d="M140,190 L260,190 L153.9,296.1 Z"/>
+          <path class="hid" d="M140,190 L260,190"/>
+          <path class="ln" d="M260,30 L140,190 L153.9,296.1 L260,190 Z M260,30 L153.9,296.1"/>
+          <path class="ln" d="M250,190 L250,180 L260,180"/>
+          <circle class="pt" cx="260" cy="30" r="3.2"/>
+          <circle class="pt" cx="140" cy="190" r="3.2"/>
+          <circle class="pt" cx="153.9" cy="296.1" r="3.2"/>
+          <circle class="pt" cx="260" cy="190" r="3.2"/>
+          <text x="260" y="20" text-anchor="middle">K</text>
+          <text x="132" y="196" text-anchor="end">A</text>
+          <text x="153.9" y="318" text-anchor="middle">B</text>
+          <text x="268" y="196">C</text>
+          <text class="val" x="192" y="106" text-anchor="end">10</text>
+          <text class="val" x="198" y="176" text-anchor="end">17</text>
+          <text class="val" x="268" y="114">8</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 8
+  // Base 18 × 10 in cabinet oblique at 16 px per cm (depth at half scale along
+  // 45°); T stands 12 cm above the centre O of the base.
+  {
+    id: 'pyramids-8',
+    topic: 'Dikdörtgen tabanlı piramidin tüm alanı',
+    stem: ['Yukarıdaki şekilde tabanı dikdörtgen olan dik piramit verilmiştir.'],
+    given: ['|AB| = 18 cm, |BC| = 10 cm', 'Piramidin hacmi 720 cm³ tür.'],
+    ask: 'Buna göre, piramidin tüm alanı kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '564' },
+      { key: 'B', text: '584' },
+      { key: 'C', text: '604' },
+      { key: 'D', text: '624' },
+      { key: 'E', text: '644' },
+    ],
+    answer: 'A',
+    hint: 'Hacimden yüksekliği bul; iki farklı yan yüzün yüksekliği farklıdır.',
+    solution: [
+      {
+        title: 'Yükseklik',
+        detail: 'Taban alanı 18 · 10 = 180 cm². (1/3) · 180 · h = 720 olduğundan h = 12 cm dir.',
+      },
+      {
+        title: '[AB] ye ait yan yüz yüksekliği',
+        detail:
+          'Tabanın merkezinin [AB] ye uzaklığı 10 / 2 = 5 cm dir; yan yüz yüksekliği √(12² + 5²) = 13 cm.',
+      },
+      {
+        title: '[BC] ye ait yan yüz yüksekliği',
+        detail:
+          'Tabanın merkezinin [BC] ye uzaklığı 18 / 2 = 9 cm dir; yan yüz yüksekliği √(12² + 9²) = 15 cm.',
+      },
+      {
+        title: 'Yanal alan',
+        detail: '2 · (18 · 13 / 2) + 2 · (10 · 15 / 2) = 234 + 150 = 384 cm².',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Tüm alan 180 + 384 = 564 cm² dir.',
+      },
+    ],
+    figure: {
+      viewBox: '0 32 400 276',
+      caption: 'Şekil 6',
+      label:
+        'Tabanı ABCD dikdörtgeni olan dik piramit; T tepe noktası tabanın merkezinin üstünde. |AB| = 18 cm, |BC| = 10 cm.',
+      svg: `
+          <path class="hid" d="M28,280 L84.6,223.4 L372.6,223.4 M200.3,59.7 L84.6,223.4"/>
+          <path class="ln" d="M28,280 L316,280 L372.6,223.4 L200.3,59.7 Z M200.3,59.7 L316,280"/>
+          <circle class="pt" cx="200.3" cy="59.7" r="3.2"/>
+          <circle class="pt" cx="28" cy="280" r="3.2"/>
+          <circle class="pt" cx="316" cy="280" r="3.2"/>
+          <circle class="pt" cx="372.6" cy="223.4" r="3.2"/>
+          <circle class="pt" cx="84.6" cy="223.4" r="3.2"/>
+          <text x="200.3" y="49.7" text-anchor="middle">T</text>
+          <text x="20" y="296" text-anchor="end">A</text>
+          <text x="324" y="296">B</text>
+          <text x="380.6" y="229.4">C</text>
+          <text x="92.6" y="241.4">D</text>
+          <text class="val" x="172" y="298" text-anchor="middle">18</text>
+          <text class="val" x="352" y="268">10</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 9
+  // Square base of edge 12 in cabinet oblique at 22 px per cm; T stands
+  // 6√2 ≈ 8.49 cm above the centre O.
+  {
+    id: 'pyramids-9',
+    topic: 'Yan yüzleri eşkenar üçgen olan kare piramit',
+    stem: ['Şekildeki düzgün kare piramidin yan yüzleri birer eşkenar üçgendir.'],
+    ask: 'Yukarıdaki şekilde |AB| = 12 cm olduğuna göre, (T, ABCD) piramidinin hacmi kaç cm³ tür?',
+    choices: [
+      { key: 'A', text: '96√2' },
+      { key: 'B', text: '144√2' },
+      { key: 'C', text: '192√2' },
+      { key: 'D', text: '216√2' },
+      { key: 'E', text: '288√2' },
+    ],
+    answer: 'E',
+    hint: 'Yan ayrıtlar da 12 cm dir; T yi tabanın merkezine ve bir köşeye bağlayan dik üçgeni kullan.',
+    solution: [
+      {
+        title: 'Yan ayrıt',
+        detail: 'Yan yüzler eşkenar üçgen olduğundan |TA| = |TB| = |TC| = |TD| = 12 cm dir.',
+      },
+      {
+        title: 'Merkezden köşeye',
+        detail: 'Tabanın köşegeni 12√2 cm; merkez O dan B ye uzaklık |OB| = 6√2 cm dir.',
+      },
+      {
+        title: 'Yükseklik',
+        detail: 'TOB dik üçgeninde |TO| = √(12² − (6√2)²) = √(144 − 72) = 6√2 cm dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'V = (1/3) · 12² · 6√2 = (1/3) · 144 · 6√2 = 288√2 cm³ tür.',
+      },
+    ],
+    figure: {
+      viewBox: '0 28 400 290',
+      caption: 'Şekil 7',
+      label:
+        'Tabanı ABCD karesi olan düzgün kare piramit; T tepe noktası tabanın merkezinin üstünde, yan yüzler eşkenar üçgen. |AB| = 12 cm.',
+      svg: `
+          <path class="hid" d="M20,290 L113.3,196.7 L377.3,196.7 M198.7,56.6 L113.3,196.7"/>
+          <path class="ln" d="M20,290 L284,290 L377.3,196.7 L198.7,56.6 Z M198.7,56.6 L284,290"/>
+          <circle class="pt" cx="198.7" cy="56.6" r="3.2"/>
+          <circle class="pt" cx="20" cy="290" r="3.2"/>
+          <circle class="pt" cx="284" cy="290" r="3.2"/>
+          <circle class="pt" cx="377.3" cy="196.7" r="3.2"/>
+          <circle class="pt" cx="113.3" cy="196.7" r="3.2"/>
+          <text x="198.7" y="46.6" text-anchor="middle">T</text>
+          <text x="20" y="310" text-anchor="middle">A</text>
+          <text x="292" y="306">B</text>
+          <text x="383.3" y="202.7">C</text>
+          <text x="121.3" y="214.7">D</text>
+          <text class="val" x="152" y="308" text-anchor="middle">12</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 28 400 290',
+      caption: 'Şekil 7',
+      label:
+        'Aynı piramitte T den tabanın merkezi O ya inen yükseklik ve [OB] kesikli çizilmiş; TOB dik üçgeninde |TB| = 12, |OB| = 6√2.',
+      svg: `
+          <path class="hid" d="M20,290 L113.3,196.7 L377.3,196.7 M198.7,56.6 L113.3,196.7"/>
+          <path class="ln" d="M20,290 L284,290 L377.3,196.7 L198.7,56.6 Z M198.7,56.6 L284,290"/>
+          <circle class="pt" cx="198.7" cy="56.6" r="3.2"/>
+          <circle class="pt" cx="20" cy="290" r="3.2"/>
+          <circle class="pt" cx="284" cy="290" r="3.2"/>
+          <circle class="pt" cx="377.3" cy="196.7" r="3.2"/>
+          <circle class="pt" cx="113.3" cy="196.7" r="3.2"/>
+          <text x="198.7" y="46.6" text-anchor="middle">T</text>
+          <text x="20" y="310" text-anchor="middle">A</text>
+          <text x="292" y="306">B</text>
+          <text x="383.3" y="202.7">C</text>
+          <text x="121.3" y="214.7">D</text>
+          <text class="val" x="152" y="308" text-anchor="middle">12</text>
+          <path class="aux" d="M198.7,56.6 L198.7,243.3 L284,290"/>
+          <circle class="pt" cx="198.7" cy="243.3" r="3.2"/>
+          <text x="190.7" y="249.3" text-anchor="end">O</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 10
+  // Square base of edge 6 in cabinet oblique at 30 px per cm; K stands 7 cm
+  // above the back corner D.
+  {
+    id: 'pyramids-10',
+    topic: 'Dik izdüşümden kare piramidin hacmi',
+    stem: [],
+    given: ['(K, ABCD) bir kare piramittir.', '[KD] ⊥ [DA], [KD] ⊥ [DC]', '|KB| = 11 cm'],
+    ask: 'Yukarıdaki şekilde, [KB] nin ABCD düzlemine dik izdüşümünün uzunluğu 6√2 cm olduğuna göre, piramidin hacmi kaç cm³ tür?',
+    choices: [
+      { key: 'A', text: '72' },
+      { key: 'B', text: '84' },
+      { key: 'C', text: '96' },
+      { key: 'D', text: '108' },
+      { key: 'E', text: '126' },
+    ],
+    answer: 'B',
+    hint: '[KD] tabana dik olduğundan [KB] nin izdüşümü [DB] köşegenidir.',
+    solution: [
+      {
+        title: 'İzdüşüm',
+        detail:
+          '[KD] tabandaki iki kesişen doğruya dik olduğundan tabana diktir; K nin izdüşümü D, [KB] nin izdüşümü de [DB] köşegenidir: |DB| = 6√2 cm.',
+      },
+      {
+        title: 'Taban kenarı',
+        detail: 'Karenin köşegeni a√2 = 6√2 olduğundan a = 6 cm, taban alanı 36 cm² dir.',
+      },
+      {
+        title: 'Yükseklik',
+        detail: 'KDB dik üçgeninde |KD| = √(11² − (6√2)²) = √(121 − 72) = √49 = 7 cm dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'V = (1/3) · 36 · 7 = 84 cm³ tür.',
+      },
+    ],
+    figure: {
+      viewBox: '0 -12 400 322',
+      caption: 'Şekil 8',
+      label:
+        'Tabanı ABCD karesi olan (K, ABCD) piramidi; K tepe noktası D köşesinin tam üstünde, [KD] hem [DA] ya hem [DC] ye dik. |KB| = 11 cm.',
+      svg: `
+          <path class="hid" d="M78,290 L141.6,226.4 L321.6,226.4 M141.6,16.4 L141.6,226.4"/>
+          <path class="hid" d="M141.6,216.4 L134.5,223.5 L134.5,233.5"/>
+          <path class="ln" d="M78,290 L258,290 L321.6,226.4 L141.6,16.4 Z M141.6,16.4 L258,290"/>
+          <circle class="pt" cx="141.6" cy="16.4" r="3.2"/>
+          <circle class="pt" cx="78" cy="290" r="3.2"/>
+          <circle class="pt" cx="258" cy="290" r="3.2"/>
+          <circle class="pt" cx="321.6" cy="226.4" r="3.2"/>
+          <circle class="pt" cx="141.6" cy="226.4" r="3.2"/>
+          <text x="141.6" y="6.4" text-anchor="middle">K</text>
+          <text x="70" y="306" text-anchor="end">A</text>
+          <text x="266" y="306">B</text>
+          <text x="329.6" y="232.4">C</text>
+          <text x="147.6" y="219.4">D</text>
+          <text class="val" x="214" y="150">11</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 -12 400 322',
+      caption: 'Şekil 8',
+      label:
+        'Aynı piramitte [DB] köşegeni kesikli çizilmiş; [KB] nin tabandaki izdüşümü [DB] dir ve KDB dik üçgeninde |DB| = 6√2 cm.',
+      svg: `
+          <path class="hid" d="M78,290 L141.6,226.4 L321.6,226.4 M141.6,16.4 L141.6,226.4"/>
+          <path class="hid" d="M141.6,216.4 L134.5,223.5 L134.5,233.5"/>
+          <path class="ln" d="M78,290 L258,290 L321.6,226.4 L141.6,16.4 Z M141.6,16.4 L258,290"/>
+          <circle class="pt" cx="141.6" cy="16.4" r="3.2"/>
+          <circle class="pt" cx="78" cy="290" r="3.2"/>
+          <circle class="pt" cx="258" cy="290" r="3.2"/>
+          <circle class="pt" cx="321.6" cy="226.4" r="3.2"/>
+          <circle class="pt" cx="141.6" cy="226.4" r="3.2"/>
+          <text x="141.6" y="6.4" text-anchor="middle">K</text>
+          <text x="70" y="306" text-anchor="end">A</text>
+          <text x="266" y="306">B</text>
+          <text x="329.6" y="232.4">C</text>
+          <text x="147.6" y="219.4">D</text>
+          <text class="val" x="214" y="150">11</text>
+          <path class="aux" d="M141.6,226.4 L258,290"/>
+          <text class="val" x="196" y="278" text-anchor="end">6√2</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 11
+  {
+    id: 'pyramids-11',
+    topic: 'Daire diliminden koni',
+    stem: [],
+    ask: 'Yarıçapı 15 cm ve merkez açısı 144° olan daire dilimi şeklindeki bir karton parçasının kıvrılmasıyla elde edilen dik koninin taban yarıçapı kaç cm olur?',
+    choices: [
+      { key: 'A', text: '4' },
+      { key: 'B', text: '5' },
+      { key: 'C', text: '6' },
+      { key: 'D', text: '8' },
+      { key: 'E', text: '9' },
+    ],
+    answer: 'C',
+    hint: 'Dilimin yay uzunluğu koninin taban çevresi olur.',
+    solution: [
+      {
+        title: 'Ana doğru',
+        detail: 'Dilimin yarıçapı koninin ana doğrusu olur: ℓ = 15 cm.',
+      },
+      {
+        title: 'Yay uzunluğu',
+        detail: 'Yay uzunluğu 2π · 15 · 144/360 = 12π cm dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Taban çevresi 2πr = 12π olduğundan r = 6 cm dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 12
+  // Height 9 at 26 px per cm; radius drawn at 60 px (it is not given), ellipses
+  // flattened to 0.3. Cone water reaches 6 cm; cylinder water is drawn at 26/9 cm.
+  {
+    id: 'pyramids-12',
+    topic: 'Koniden silindire boşaltılan su',
+    stem: [
+      'Yukarıdaki şekilde yükseklikleri 9 birim ve taban yarıçapları eşit olan dik koni ile dik silindir verilmiştir. Tabanı yere oturan koni, tabanından 6 birim yüksekliğe kadar su doludur ve bu su boş silindire boşaltılmaktadır.',
+    ],
+    ask: 'Buna göre, silindirdeki suyun yüksekliği h₂ kaç birim olur?',
+    choices: [
+      { key: 'A', text: '23/9' },
+      { key: 'B', text: '8/3' },
+      { key: 'C', text: '25/9' },
+      { key: 'D', text: '26/9' },
+      { key: 'E', text: '3' },
+    ],
+    answer: 'D',
+    hint: 'Koninin boş kalan tepe kısmı, asıl koniye benzer küçük bir konidir.',
+    solution: [
+      {
+        title: 'Boş koni',
+        detail:
+          'Su tabandan 6 birim yükseklikte olduğundan tepede yüksekliği 9 − 6 = 3 birim olan boş bir koni kalır; benzerlik oranı 3/9 = 1/3.',
+      },
+      {
+        title: 'Hacim oranı',
+        detail: 'Boş koninin hacmi asıl koninin (1/3)³ = 1/27 si, suyun hacmi ise 26/27 sidir.',
+      },
+      {
+        title: 'Suyun hacmi',
+        detail: 'Taban yarıçapı r olsun: su = (26/27) · (1/3) · πr² · 9 = (26/9) πr².',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Silindirde πr² · h₂ = (26/9) πr² olduğundan h₂ = 26/9 birimdir.',
+      },
+    ],
+    figure: {
+      viewBox: '0 -4 400 290',
+      caption: 'Şekil 9',
+      label:
+        'Solda tabanı yere oturan dik koni, sağda aynı yükseklikte ve aynı taban yarıçaplı dik silindir; ikisinin de yüksekliği 9 birim. Koni tabanından 6 birim yüksekliğe kadar su dolu; silindirdeki su yüksekliği h₂.',
+      svg: `
+          <path class="shade" d="M80,98 L40,254 A60,18 0 0 0 160,254 L120,98 A20,6 0 0 0 80,98 Z"/>
+          <path class="shade" d="M230,178.9 L230,254 A60,18 0 0 0 350,254 L350,178.9 A60,18 0 0 0 230,178.9 Z"/>
+          <path class="hid" d="M40,254 A60,18 0 0 1 160,254 M80,98 A20,6 0 0 0 120,98"/>
+          <path class="ln" d="M80,98 A20,6 0 0 1 120,98"/>
+          <path class="ln" d="M40,254 A60,18 0 0 0 160,254 M100,20 L40,254 M100,20 L160,254"/>
+          <path class="hid" d="M230,254 A60,18 0 0 1 350,254 M230,178.9 A60,18 0 0 0 350,178.9"/>
+          <path class="ln" d="M230,178.9 A60,18 0 0 1 350,178.9"/>
+          <path class="ln" d="M230,20 A60,18 0 0 1 350,20 A60,18 0 0 1 230,20 Z"/>
+          <path class="ln" d="M230,20 L230,254 A60,18 0 0 0 350,254 L350,20"/>
+          <text class="val" x="150" y="186">6</text>
+          <text class="val" x="366" y="120">9</text>
+          <text class="val" x="366" y="226">h₂</text>
+        `,
+    },
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -477,6 +866,21 @@ export const UNIT_9_PYRAMIDS: Unit = {
         'pyramids-4',
         'pyramids-5',
         'pyramids-6',
+      ),
+    },
+    {
+      id: 'pyramids-m2',
+      order: 2,
+      title: 'Dik piramit, alan ve koni açınımı',
+      summary:
+        'Dik köşeli üçgen piramit, dikdörtgen tabanlı piramidin tüm alanı, eşkenar yüzlü kare piramit, dik izdüşüm, daire diliminden koni ve koniden silindire su.',
+      questions: pick(
+        'pyramids-7',
+        'pyramids-8',
+        'pyramids-9',
+        'pyramids-10',
+        'pyramids-11',
+        'pyramids-12',
       ),
     },
   ],
