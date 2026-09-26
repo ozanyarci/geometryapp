@@ -1372,6 +1372,326 @@ const QUESTIONS: Question[] = [
     ],
   },
 
+  // ---------------------------------------------------------------- 30
+  {
+    id: 'analytic-30',
+    topic: 'Paralelkenarın dördüncü köşesi',
+    stem: [],
+    ask: 'Analitik düzlemde verilen bir ABCD paralelkenarının köşe noktalarının koordinatları sırası ile A(2, −1), B(5, 4) ve C(1, 6) olduğuna göre, D köşesinin koordinatları toplamı kaçtır?',
+    choices: [
+      { key: 'A', text: '−3' },
+      { key: 'B', text: '−1' },
+      { key: 'C', text: '0' },
+      { key: 'D', text: '1' },
+      { key: 'E', text: '3' },
+    ],
+    answer: 'B',
+    hint: 'Paralelkenarda köşegenler birbirini ortalar; [AC] ile [BD]’nin orta noktası aynıdır.',
+    solution: [
+      {
+        title: 'Köşegenlerin orta noktası',
+        detail: 'A + C = B + D olduğundan D = A + C − B yazılır.',
+      },
+      {
+        title: 'Apsis',
+        detail: 'x = 2 + 1 − 5 = −2.',
+      },
+      {
+        title: 'Ordinat',
+        detail: 'y = −1 + 6 − 4 = 1, yani D(−2, 1).',
+      },
+      {
+        title: 'Sonuç',
+        detail: '−2 + 1 = −1’dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 31
+  {
+    id: 'analytic-31',
+    topic: 'Bölgeden tamsayı değerleri',
+    stem: [],
+    ask: 'A(a + 4, a − 3) noktası koordinat sisteminde IV. bölgede olduğuna göre, a’nın alabileceği kaç tamsayı değeri vardır?',
+    choices: [
+      { key: 'A', text: '4' },
+      { key: 'B', text: '5' },
+      { key: 'C', text: '6' },
+      { key: 'D', text: '7' },
+      { key: 'E', text: '8' },
+    ],
+    answer: 'C',
+    hint: 'IV. bölgede apsis pozitif, ordinat negatiftir; iki eşitsizliği ayrı ayrı kur.',
+    solution: [
+      {
+        title: 'Apsis pozitif',
+        detail: 'a + 4 > 0 ⇒ a > −4.',
+      },
+      {
+        title: 'Ordinat negatif',
+        detail: 'a − 3 < 0 ⇒ a < 3.',
+      },
+      {
+        title: 'Aralık',
+        detail: '−4 < a < 3 aralığındaki tamsayılar −3, −2, −1, 0, 1, 2’dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'a’nın 6 tamsayı değeri vardır.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 32
+  {
+    id: 'analytic-32',
+    topic: 'Orta noktadan uç nokta',
+    stem: [],
+    ask: 'Dik koordinat sisteminde A(−5, 4) ve B(a, b) noktalarını uç nokta kabul eden AB doğru parçasının orta noktası P(1, −2) olduğuna göre, b − a farkı kaçtır?',
+    choices: [
+      { key: 'A', text: '−15' },
+      { key: 'B', text: '−9' },
+      { key: 'C', text: '−1' },
+      { key: 'D', text: '1' },
+      { key: 'E', text: '15' },
+    ],
+    answer: 'A',
+    hint: 'Orta noktanın her koordinatı, uç noktaların karşılık gelen koordinatlarının ortalamasıdır.',
+    solution: [
+      {
+        title: 'Apsis',
+        detail: '(−5 + a) / 2 = 1 ⇒ −5 + a = 2 ⇒ a = 7.',
+      },
+      {
+        title: 'Ordinat',
+        detail: '(4 + b) / 2 = −2 ⇒ 4 + b = −4 ⇒ b = −8.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'b − a = −8 − 7 = −15’tir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 33
+  // Origin (70, 150), 12 px per unit: centre (10, 0) → (190, 150), r = 10 → 120 px,
+  // B(20, 0) → (310, 150), A(4, 8) → (118, 54).
+  {
+    id: 'analytic-33',
+    topic: 'Eksene teğet çemberin alanı',
+    figure: {
+      viewBox: '0 0 400 300',
+      caption: 'Şekil 12',
+      label:
+        'Koordinat düzleminde çapı [OB] olan çember; O orijinde, B x ekseni üzerinde; çember y eksenine orijinde teğet ve A(4, 8) noktasından geçiyor.',
+      svg: `
+          <path class="ln" d="M30,150 L385,150"/>
+          <path class="ln" d="M375,144 L385,150 L375,156"/>
+          <path class="ln" d="M70,285 L70,12"/>
+          <path class="ln" d="M64,22 L70,12 L76,22"/>
+          <text x="385" y="172" text-anchor="middle">x</text>
+          <text x="80" y="22">y</text>
+          <circle class="ln" cx="190" cy="150" r="120"/>
+          <circle class="pt" cx="70" cy="150" r="3.2"/>
+          <circle class="pt" cx="310" cy="150" r="3.2"/>
+          <circle class="pt" cx="118" cy="54" r="3.2"/>
+          <text x="62" y="170" text-anchor="end">O</text>
+          <text x="318" y="170">B</text>
+          <text x="110" y="44" text-anchor="end">A</text>
+        `,
+    },
+    given: ['[OB] çaplı çember y eksenine orijinde teğet', 'A(4, 8)'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, dairenin alanı kaç π birim karedir?',
+    choices: [
+      { key: 'A', text: '25' },
+      { key: 'B', text: '50' },
+      { key: 'C', text: '64' },
+      { key: 'D', text: '80' },
+      { key: 'E', text: '100' },
+    ],
+    answer: 'E',
+    hint: 'Çember y eksenine orijinde teğet olduğundan merkezi x ekseni üzerinde, (r, 0) noktasındadır.',
+    solution: [
+      {
+        title: 'Merkez',
+        detail: 'Çember y eksenine O’da teğet ve [OB] çap olduğundan merkez M(r, 0), yarıçap r’dir.',
+      },
+      {
+        title: 'A noktası çember üzerinde',
+        detail: '|MA| = r ⇒ (4 − r)² + 8² = r².',
+      },
+      {
+        title: 'Çöz',
+        detail: '16 − 8r + r² + 64 = r² ⇒ 8r = 80 ⇒ r = 10.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Alan = π · 10² = 100π birim karedir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 34
+  {
+    id: 'analytic-34',
+    topic: 'Kenarortaylar ve ağırlık merkezi',
+    stem: [],
+    ask: 'Köşe koordinatları O(0, 0), A(0, 6) ve B(12, 0) olan üçgende A ve O noktalarından geçen kenarortaylar ile x ekseni arasında kalan alan kaç birim karedir?',
+    choices: [
+      { key: 'A', text: '4' },
+      { key: 'B', text: '6' },
+      { key: 'C', text: '8' },
+      { key: 'D', text: '9' },
+      { key: 'E', text: '12' },
+    ],
+    answer: 'B',
+    hint: 'İki kenarortay ağırlık merkezinde kesişir; A’dan çıkan kenarortay x eksenini [OB]’nin orta noktasında keser.',
+    solution: [
+      {
+        title: 'A’dan çıkan kenarortay',
+        detail: '[OB]’nin orta noktası D(6, 0)’dır; kenarortay x eksenini burada keser.',
+      },
+      {
+        title: 'Ağırlık merkezi',
+        detail: 'G = ((0 + 0 + 12) / 3, (0 + 6 + 0) / 3) = (4, 2).',
+      },
+      {
+        title: 'Aranan bölge',
+        detail: 'Bölge ODG üçgenidir: tabanı |OD| = 6, yüksekliği G’nin ordinatı 2.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Alan = (6 · 2) / 2 = 6 birim karedir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 35
+  // Origin (160, 250), 30 px per unit: B(−3, 0) → (70, 250), C(5, 0) → (310, 250),
+  // A(2, 7) → (220, 40); A's ordinate is the unknown.
+  {
+    id: 'analytic-35',
+    topic: 'Alandan ordinat',
+    figure: {
+      viewBox: '0 0 400 290',
+      caption: 'Şekil 13',
+      label:
+        'Koordinat düzleminde ABC üçgeni; B ve C x ekseni üzerinde, B orijinin solunda, C sağında; A birinci bölgede.',
+      svg: `
+          <path class="ln" d="M30,250 L385,250"/>
+          <path class="ln" d="M375,244 L385,250 L375,256"/>
+          <path class="ln" d="M160,275 L160,12"/>
+          <path class="ln" d="M154,22 L160,12 L166,22"/>
+          <text x="385" y="272" text-anchor="middle">x</text>
+          <text x="170" y="22">y</text>
+          <path class="ln" d="M70,250 L220,40 L310,250"/>
+          <circle class="pt" cx="70" cy="250" r="3.2"/>
+          <circle class="pt" cx="310" cy="250" r="3.2"/>
+          <circle class="pt" cx="220" cy="40" r="3.2"/>
+          <text x="152" y="270" text-anchor="end">O</text>
+          <text x="70" y="272" text-anchor="middle">B</text>
+          <text x="310" y="272" text-anchor="middle">C</text>
+          <text x="220" y="30" text-anchor="middle">A</text>
+        `,
+    },
+    given: ['B(−3, 0)', 'C(5, 0)'],
+    stem: [],
+    ask: 'Yukarıdaki şekilde verilen ABC üçgeninin alanı 28 birim kare olduğuna göre, A noktasının ordinatı kaçtır?',
+    choices: [
+      { key: 'A', text: '4' },
+      { key: 'B', text: '5' },
+      { key: 'C', text: '6' },
+      { key: 'D', text: '7' },
+      { key: 'E', text: '8' },
+    ],
+    answer: 'D',
+    hint: 'Taban [BC] x ekseni üzerindedir; yükseklik A’nın ordinatıdır.',
+    solution: [
+      {
+        title: 'Taban',
+        detail: '|BC| = 5 − (−3) = 8 birim.',
+      },
+      {
+        title: 'Yükseklik',
+        detail: 'A’nın x eksenine uzaklığı ordinatı y’dir.',
+      },
+      {
+        title: 'Denklem',
+        detail: '(8 · y) / 2 = 28 ⇒ 4y = 28.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'y = 7’dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 36
+  {
+    id: 'analytic-36',
+    topic: 'Orta noktalardan ağırlık merkezi',
+    stem: [],
+    ask: 'ABC üçgeninin kenarlarının orta noktaları D(5, 4), E(−1, 6) ve F(2, −1) dir. ABC üçgeninin ağırlık merkezinin koordinatları çarpımı kaçtır?',
+    choices: [
+      { key: 'A', text: '2' },
+      { key: 'B', text: '3' },
+      { key: 'C', text: '5' },
+      { key: 'D', text: '6' },
+      { key: 'E', text: '8' },
+    ],
+    answer: 'D',
+    hint: 'Bir üçgenin ağırlık merkezi, kenar orta noktalarının oluşturduğu üçgenin ağırlık merkeziyle aynıdır.',
+    solution: [
+      {
+        title: 'Köşe toplamları',
+        detail: 'D + E + F = (A + B)/2 + (B + C)/2 + (A + C)/2 = A + B + C olur.',
+      },
+      {
+        title: 'Apsis',
+        detail: 'x = (5 + (−1) + 2) / 3 = 6 / 3 = 2.',
+      },
+      {
+        title: 'Ordinat',
+        detail: 'y = (4 + 6 + (−1)) / 3 = 9 / 3 = 3, yani G(2, 3).',
+      },
+      {
+        title: 'Sonuç',
+        detail: '2 · 3 = 6’dır.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 37
+  {
+    id: 'analytic-37',
+    topic: 'Paralelkenarın köşegen uzunluğu',
+    stem: [],
+    ask: 'Köşe koordinatları A(2, 1), B(−1, 4), C(3, 6), D(x, y) olan ABCD paralelkenarının [BD] köşegeninin uzunluğu kaç birimdir?',
+    choices: [
+      { key: 'A', text: '2√10' },
+      { key: 'B', text: '3√5' },
+      { key: 'C', text: '5√2' },
+      { key: 'D', text: '2√13' },
+      { key: 'E', text: '8' },
+    ],
+    answer: 'C',
+    hint: 'Önce D’yi bul: köşegenlerin orta noktası ortak olduğundan D = A + C − B.',
+    solution: [
+      {
+        title: 'D köşesi',
+        detail: 'D = (2 + 3 − (−1), 1 + 6 − 4) = (6, 3).',
+      },
+      {
+        title: 'Uzaklık formülü',
+        detail: '|BD| = √((6 − (−1))² + (3 − 4)²) = √(49 + 1).',
+      },
+      {
+        title: 'Sonuç',
+        detail: '|BD| = √50 = 5√2 birimdir.',
+      },
+    ],
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -1459,6 +1779,23 @@ export const UNIT_6_ANALYTIC: Unit = {
         'analytic-27',
         'analytic-28',
         'analytic-29',
+      ),
+    },
+    {
+      id: 'analytic-m5',
+      order: 5,
+      title: 'Paralelkenar, kenarortay ve teğet çember',
+      summary:
+        'Paralelkenarın dördüncü köşesi ve köşegeni, bölgeden tamsayılar, orta noktadan uç nokta, teğet çember, kenarortaylar ve alandan ordinat.',
+      questions: pick(
+        'analytic-30',
+        'analytic-31',
+        'analytic-32',
+        'analytic-33',
+        'analytic-34',
+        'analytic-35',
+        'analytic-36',
+        'analytic-37',
       ),
     },
   ],

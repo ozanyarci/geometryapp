@@ -58,6 +58,19 @@ describe('unit 6 answer key', () => {
   it('29 — |AB| = 4, h = 9 − 2 = 7, 4·7/2 = 14 → B', () =>
     expect(answerOf('analytic-29')).toBe('B'));
 
+  it('30 — D = A + C − B = (−2, 1), −2 + 1 = −1 → B', () =>
+    expect(answerOf('analytic-30')).toBe('B'));
+  it('31 — a > −4, a < 3, {−3..2} = 6 values → C', () =>
+    expect(answerOf('analytic-31')).toBe('C'));
+  it('32 — a = 2 + 5 = 7, b = −4 − 4 = −8, −8 − 7 = −15 → A', () =>
+    expect(answerOf('analytic-32')).toBe('A'));
+  it('33 — (4 − r)² + 64 = r², 8r = 80, r = 10, 100π → E', () =>
+    expect(answerOf('analytic-33')).toBe('E'));
+  it('34 — D(6, 0), G(4, 2), 6·2/2 = 6 → B', () => expect(answerOf('analytic-34')).toBe('B'));
+  it('35 — |BC| = 8, 8·y/2 = 28, y = 7 → D', () => expect(answerOf('analytic-35')).toBe('D'));
+  it('36 — G(6/3, 9/3) = (2, 3), 2·3 = 6 → D', () => expect(answerOf('analytic-36')).toBe('D'));
+  it('37 — D(6, 3), √(49 + 1) = 5√2 → C', () => expect(answerOf('analytic-37')).toBe('C'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
