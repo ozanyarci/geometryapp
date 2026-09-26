@@ -169,6 +169,19 @@ describe('unit 7 answer key', () => {
   it("89 — B'(9, −5), y = −x + 4, x = 4 → B", () => expect(answerOf('lines-89')).toBe('B'));
   it('90 — 3x = 9, (3, 3), |9 + 12 + 4|/5 = 5 → C', () => expect(answerOf('lines-90')).toBe('C'));
 
+  it('91 — (a + 7)/2 = 2, a = −3 → A', () => expect(answerOf('lines-91')).toBe('A'));
+  it('92 — B = A reflected in y = x = (1, 7), √(1 + 49) = 5√2 → C', () =>
+    expect(answerOf('lines-92')).toBe('C'));
+  it('93 — m = 4/3, Δy = (4/3) · 12 = 16 → D', () => expect(answerOf('lines-93')).toBe('D'));
+  it('94 — 5x − 12y − 18 = 0, |8 + 18|/13 = 2, r = 1 → B', () =>
+    expect(answerOf('lines-94')).toBe('B'));
+  it('95 — D(12 − a, a), 12 − 3a − 3 = 0, a = 3, 3² = 9 → C', () =>
+    expect(answerOf('lines-95')).toBe('C'));
+  it('96 — P(0, 5), 13/√(m² + 1) = 5, m² = 144/25, m = 12/5 → D', () =>
+    expect(answerOf('lines-96')).toBe('D'));
+  it('97 — (3 − m)/(1 + 3m) = 1, m = 1/2, y = x/2 + 1, x = −2 → C', () =>
+    expect(answerOf('lines-97')).toBe('C'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)

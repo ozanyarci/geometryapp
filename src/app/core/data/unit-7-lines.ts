@@ -4262,6 +4262,327 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+
+  // ---------------------------------------------------------------- 91
+  {
+    id: 'lines-91',
+    topic: 'Doğruya göre simetri',
+    stem: [],
+    ask: 'y = −1 doğrusu üzerindeki bir A(a, b) noktasının x = 2 doğrusuna göre simetriği olan nokta B(7, −1) ise, a kaçtır?',
+    choices: [
+      { key: 'A', text: '−3' },
+      { key: 'B', text: '−1' },
+      { key: 'C', text: '1' },
+      { key: 'D', text: '3' },
+      { key: 'E', text: '5' },
+    ],
+    answer: 'A',
+    hint: 'x = 2 doğrusu, [AB] nin orta dikmesidir; orta noktanın apsisi 2 olur.',
+    solution: [
+      {
+        title: 'Simetri ekseni',
+        detail: 'x = 2 doğrusuna göre simetride ordinat değişmez, apsislerin ortalaması 2 olur.',
+      },
+      {
+        title: 'Orta nokta',
+        detail: '(a + 7)/2 = 2 ⇒ a + 7 = 4.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'a = −3 tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 92
+  {
+    id: 'lines-92',
+    topic: 'y = x doğrusuna göre simetri',
+    given: ['[AB] ⊥ d', '|BT| = |AT|', 'd: y − x = 0', 'A(7, 1)'],
+    // Origin (60, 290), 32 px per unit; A(7, 1), T(4, 4), B(1, 7).
+    figure: {
+      viewBox: '0 0 400 330',
+      caption: 'Şekil 42',
+      label:
+        'Dik koordinat sisteminde orijinden geçen d doğrusu ve A(7, 1) noktası; A dan d ye çizilen dik doğru d yi T noktasında kesiyor ve B(x, y) noktasına uzanıyor; |BT| = |AT|.',
+      svg: `
+          <path class="ln" d="M20,290 L390,290"/>
+          <path class="ln" d="M380,284 L390,290 L380,296"/>
+          <path class="ln" d="M60,320 L60,10"/>
+          <path class="ln" d="M54,20 L60,10 L66,20"/>
+          <text x="386" y="310" text-anchor="middle">x</text>
+          <text x="72" y="20">y</text>
+          <path class="ln" d="M34.4,315.6 L332,18"/>
+          <path class="ln" d="M92,66 L284,258"/>
+          <path class="ln" d="M195.07,154.93 L202.14,162 L195.07,169.07"/>
+          <path class="tick" d="M135.76,118.24 L144.24,109.76"/>
+          <path class="tick" d="M231.76,214.24 L240.24,205.76"/>
+          <circle class="pt" cx="92" cy="66" r="3.2"/>
+          <circle class="pt" cx="188" cy="162" r="3.2"/>
+          <circle class="pt" cx="284" cy="258" r="3.2"/>
+          <text x="100" y="58">B(x, y)</text>
+          <text x="188" y="146" text-anchor="middle">T</text>
+          <text x="292" y="276">A(7, 1)</text>
+          <text x="340" y="32">d</text>
+          <text x="68" y="310">O</text>
+        `,
+    },
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, B(x, y) noktasının orijine uzaklığı kaç birimdir?',
+    choices: [
+      { key: 'A', text: '6' },
+      { key: 'B', text: '4√3' },
+      { key: 'C', text: '5√2' },
+      { key: 'D', text: '2√13' },
+      { key: 'E', text: '3√6' },
+    ],
+    answer: 'C',
+    hint: 'd doğrusu [AB] nin orta dikmesidir; B, A nın d ye göre simetriğidir.',
+    solution: [
+      {
+        title: 'Simetri',
+        detail: '[AB] ⊥ d ve |BT| = |AT| olduğundan B, A nın y = x doğrusuna göre simetriğidir.',
+      },
+      {
+        title: 'y = x ye göre simetri',
+        detail: 'Koordinatlar yer değiştirir: A(7, 1) ⇒ B(1, 7).',
+      },
+      {
+        title: 'Orijine uzaklık',
+        detail: '|OB| = √(1² + 7²) = √50.',
+      },
+      {
+        title: 'Sonuç',
+        detail: '|OB| = 5√2 birimdir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 93
+  {
+    id: 'lines-93',
+    topic: 'Eğim ve ordinat farkı',
+    stem: ['4x − 3y + 12 = 0 doğrusunun üzerinde iki nokta A ve B dir.'],
+    ask: 'Bu iki noktanın apsisleri arasındaki fark 12 ise ordinatları arasındaki fark aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: '8' },
+      { key: 'B', text: '9' },
+      { key: 'C', text: '12' },
+      { key: 'D', text: '16' },
+      { key: 'E', text: '20' },
+    ],
+    answer: 'D',
+    hint: 'Doğrunun eğimi, ordinat farkının apsis farkına oranıdır.',
+    solution: [
+      {
+        title: 'Eğim',
+        detail: '3y = 4x + 12 ⇒ y = (4/3)x + 4; eğim 4/3 tür.',
+      },
+      {
+        title: 'Eğim tanımı',
+        detail: 'Δy / Δx = 4/3 ⇒ Δy = (4/3) · 12.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Ordinatlar arasındaki fark 16 dır.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 94
+  {
+    id: 'lines-94',
+    topic: 'Paralel doğrulara teğet çember',
+    stem: [],
+    ask: 'Dik koordinat sisteminde 5x − 12y + 8 = 0 ve 10x − 24y − 36 = 0 doğrularına teğet olan çemberin yarıçapı kaç birimdir?',
+    choices: [
+      { key: 'A', text: '1/2' },
+      { key: 'B', text: '1' },
+      { key: 'C', text: '3/2' },
+      { key: 'D', text: '2' },
+      { key: 'E', text: '3' },
+    ],
+    answer: 'B',
+    hint: 'Doğrular paraleldir; aralarındaki uzaklık çemberin çapıdır.',
+    solution: [
+      {
+        title: 'Katsayıları eşitle',
+        detail: '10x − 24y − 36 = 0 doğrusunu 2 ye böl: 5x − 12y − 18 = 0. Doğrular paraleldir.',
+      },
+      {
+        title: 'Paralel doğrular arası uzaklık',
+        detail: '|8 − (−18)| / √(5² + 12²) = 26 / 13 = 2.',
+      },
+      {
+        title: 'Çap ve yarıçap',
+        detail: 'Çember iki paralel doğruya teğet olduğundan çapı 2 dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Yarıçap 2 / 2 = 1 birimdir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 95
+  {
+    id: 'lines-95',
+    topic: 'Doğru ve kare',
+    given: ['d: x − 2y − 3 = 0', 'B(12, 0)'],
+    // Origin (30, 230), 25 px per unit; A(9, 0), B(12, 0), C(12, 3), D(9, 3).
+    figure: {
+      viewBox: '0 50 400 240',
+      caption: 'Şekil 43',
+      label:
+        'Dik koordinat sisteminde A B C D karesinin A ve B köşeleri x ekseni üzerinde; d doğrusu karenin D köşesinden geçiyor.',
+      svg: `
+          <path class="shade" d="M255,230 L330,230 L330,155 L255,155 Z"/>
+          <path class="ln" d="M10,230 L390,230"/>
+          <path class="ln" d="M380,224 L390,230 L380,236"/>
+          <path class="ln" d="M30,280 L30,60"/>
+          <path class="ln" d="M24,70 L30,60 L36,70"/>
+          <text x="386" y="250" text-anchor="middle">x</text>
+          <text x="42" y="70">y</text>
+          <path class="ln" d="M255,230 L330,230 L330,155 L255,155 Z"/>
+          <path class="ln" d="M42.5,261.25 L380,92.5"/>
+          <circle class="pt" cx="255" cy="230" r="3.2"/>
+          <circle class="pt" cx="330" cy="230" r="3.2"/>
+          <circle class="pt" cx="330" cy="155" r="3.2"/>
+          <circle class="pt" cx="255" cy="155" r="3.2"/>
+          <text x="255" y="250" text-anchor="middle">A</text>
+          <text x="330" y="250" text-anchor="middle">B</text>
+          <text x="338" y="150">C</text>
+          <text x="247" y="148" text-anchor="end">D</text>
+          <text x="372" y="80">d</text>
+          <text x="22" y="248" text-anchor="end">O</text>
+        `,
+    },
+    stem: ['Yukarıdaki şekilde d doğrusu ABCD karesinin D köşesinden geçmektedir.'],
+    ask: 'Buna göre, ABCD karesinin alanı kaç birimkaredir?',
+    choices: [
+      { key: 'A', text: '4' },
+      { key: 'B', text: '25/4' },
+      { key: 'C', text: '9' },
+      { key: 'D', text: '16' },
+      { key: 'E', text: '36' },
+    ],
+    answer: 'C',
+    hint: 'Karenin kenarına a de; D noktasının koordinatlarını a cinsinden yaz.',
+    solution: [
+      {
+        title: 'D nin koordinatları',
+        detail: 'Kenar a ise A(12 − a, 0) ve D(12 − a, a) olur.',
+      },
+      {
+        title: 'D, d üzerinde',
+        detail: '(12 − a) − 2a − 3 = 0 ⇒ 9 − 3a = 0 ⇒ a = 3.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Alan a² = 3² = 9 birimkaredir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 96
+  {
+    id: 'lines-96',
+    topic: 'Doğrulara eşit uzaklıktaki nokta',
+    given: ['d₁: y = 0', 'd₂: y = 10', 'd₃: y = mx + 18'],
+    stem: [],
+    ask: 'd₁, d₂, d₃ doğrularına eşit uzaklıkta bulunan nokta y ekseni üzerinde ise, d₃ doğrusunun eğimi aşağıdakilerden hangisi olabilir?',
+    choices: [
+      { key: 'A', text: '5/12' },
+      { key: 'B', text: '12/13' },
+      { key: 'C', text: '2' },
+      { key: 'D', text: '12/5' },
+      { key: 'E', text: '13/5' },
+    ],
+    answer: 'D',
+    hint: 'd₁ ve d₂ ye eşit uzaklıktaki nokta, bu iki paralel doğrunun tam ortasındadır.',
+    solution: [
+      {
+        title: 'Noktayı bul',
+        detail:
+          'y = 0 ve y = 10 a eşit uzaklıkta, y ekseni üzerindeki nokta P(0, 5); uzaklık 5 tir.',
+      },
+      {
+        title: 'd₃ e uzaklık',
+        detail: 'mx − y + 18 = 0 için |0 − 5 + 18| / √(m² + 1) = 13 / √(m² + 1).',
+      },
+      {
+        title: 'Eşitle',
+        detail: '13 / √(m² + 1) = 5 ⇒ m² + 1 = 169/25 ⇒ m² = 144/25.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'm = 12/5 veya m = −12/5; seçeneklerde 12/5 vardır.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 97
+  {
+    id: 'lines-97',
+    topic: 'İki doğru arasındaki açı',
+    given: ['tan α = 1', 'd₁: y = 3x − 3'],
+    // Origin (200, 210), 40 px per unit; A(−2, 0), d₂ meets the y axis at (0, 1),
+    // d₁ and d₂ meet at (1.6, 1.8).
+    figure: {
+      viewBox: '0 10 400 325',
+      caption: 'Şekil 44',
+      label:
+        'Analitik düzlemde d₁ doğrusu ve y eksenini 1 noktasında, x eksenini A noktasında kesen d₂ doğrusu; iki doğru birinci bölgede kesişiyor ve aralarındaki açı α.',
+      svg: `
+          <path class="ln" d="M20,210 L390,210"/>
+          <path class="ln" d="M380,204 L390,210 L380,216"/>
+          <path class="ln" d="M200,320 L200,20"/>
+          <path class="ln" d="M194,30 L200,20 L206,30"/>
+          <text x="386" y="230" text-anchor="middle">x</text>
+          <text x="212" y="30">y</text>
+          <path class="ln" d="M206.67,310 L300,30"/>
+          <path class="ln" d="M60,240 L376,82"/>
+          <path class="arc" d="M285.47,127.27 A24,24 0 0 0 271.59,115.23"/>
+          <circle class="pt" cx="120" cy="210" r="3.2"/>
+          <circle class="pt" cx="200" cy="170" r="3.2"/>
+          <text x="114" y="202" text-anchor="end">A</text>
+          <text x="192" y="166" text-anchor="end">1</text>
+          <text x="192" y="228" text-anchor="end">O</text>
+          <text class="val" x="289" y="112" text-anchor="middle">α</text>
+          <text x="212" y="328" text-anchor="middle">d₁</text>
+          <text x="56" y="262" text-anchor="end">d₂</text>
+        `,
+    },
+    stem: ['Yukarıdaki analitik düzlemde d₁ ve d₂ doğruları verilmiştir.'],
+    ask: 'tan α = 1 ve d₁ doğrusunun denklemi y = 3x − 3 ise, A noktasının apsisi kaçtır?',
+    choices: [
+      { key: 'A', text: '−1' },
+      { key: 'B', text: '−3/2' },
+      { key: 'C', text: '−2' },
+      { key: 'D', text: '−5/2' },
+      { key: 'E', text: '−3' },
+    ],
+    answer: 'C',
+    hint: 'İki doğru arasındaki açının tanjantı (m₁ − m₂) / (1 + m₁ · m₂) dir.',
+    solution: [
+      {
+        title: 'Eğimler',
+        detail: 'd₁ in eğimi m₁ = 3; d₂ nin eğimi m₂ olsun.',
+      },
+      {
+        title: 'Açı formülü',
+        detail: '(3 − m₂) / (1 + 3m₂) = 1 ⇒ 3 − m₂ = 1 + 3m₂ ⇒ m₂ = 1/2.',
+      },
+      {
+        title: 'd₂ nin denklemi',
+        detail: 'd₂, y eksenini 1 de keser: y = x/2 + 1.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'y = 0 için x/2 = −1 ⇒ x = −2; A nın apsisi −2 dir.',
+      },
+    ],
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -4444,6 +4765,22 @@ export const UNIT_7_LINES: Unit = {
         'lines-88',
         'lines-89',
         'lines-90',
+      ),
+    },
+    {
+      id: 'lines-m15',
+      order: 15,
+      title: 'Simetri, eğim ve doğrular arası açı',
+      summary:
+        'Doğruya göre simetri, y = x ye göre simetri, eğimle ordinat farkı, paralel doğrulara teğet çember, doğru ve kare, eşit uzaklıktaki nokta ve iki doğru arasındaki açı.',
+      questions: pick(
+        'lines-91',
+        'lines-92',
+        'lines-93',
+        'lines-94',
+        'lines-95',
+        'lines-96',
+        'lines-97',
       ),
     },
   ],
