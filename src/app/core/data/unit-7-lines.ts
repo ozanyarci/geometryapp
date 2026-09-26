@@ -46,7 +46,8 @@ const QUESTIONS: Question[] = [
       },
       {
         title: 'Sonuç',
-        detail: 'a = −5 bulunur. Sabit terimler orantılı olmadığından doğrular çakışık değil, paraleldir.',
+        detail:
+          'a = −5 bulunur. Sabit terimler orantılı olmadığından doğrular çakışık değil, paraleldir.',
       },
     ],
   },
@@ -227,7 +228,8 @@ const QUESTIONS: Question[] = [
     solution: [
       {
         title: 'Eğimi bul',
-        detail: '(0, 30) ve K(4, 22) noktalarından eğim m = (22 − 30)/(4 − 0) = −2 dir; mum saatte 2 cm kısalır.',
+        detail:
+          '(0, 30) ve K(4, 22) noktalarından eğim m = (22 − 30)/(4 − 0) = −2 dir; mum saatte 2 cm kısalır.',
       },
       {
         title: 'Doğrunun denklemi',
@@ -533,7 +535,8 @@ const QUESTIONS: Question[] = [
       },
       {
         title: 'Kesişim noktası',
-        detail: 'y = 3x − 1 ikinci denklemde yerine yazılırsa x + 9x − 3 − 7 = 0 ⇒ x = 1, y = 2. A(1, 2) dir.',
+        detail:
+          'y = 3x − 1 ikinci denklemde yerine yazılırsa x + 9x − 3 − 7 = 0 ⇒ x = 1, y = 2. A(1, 2) dir.',
       },
       {
         title: 'Sonuç',
@@ -718,7 +721,8 @@ const QUESTIONS: Question[] = [
       },
       {
         title: 'C ye olan yatay uzaklık',
-        detail: 'A nın yüksekliği 6 dır. d₁ boyunca 6 birim inmek için 6 / (2/3) = 9 birim sola gidilir.',
+        detail:
+          'A nın yüksekliği 6 dır. d₁ boyunca 6 birim inmek için 6 / (2/3) = 9 birim sola gidilir.',
       },
       {
         title: 'B ye olan yatay uzaklık',
@@ -772,7 +776,8 @@ const QUESTIONS: Question[] = [
     solution: [
       {
         title: 'Kesişim noktası',
-        detail: 'y = x + 2 ifadesi x + y = 10 da yerine yazılırsa 2x + 2 = 10 ⇒ x = 4, y = 6. Köşe (4, 6) dır.',
+        detail:
+          'y = x + 2 ifadesi x + y = 10 da yerine yazılırsa 2x + 2 = 10 ⇒ x = 4, y = 6. Köşe (4, 6) dır.',
       },
       {
         title: 'Köşeler',
@@ -784,7 +789,8 @@ const QUESTIONS: Question[] = [
       },
       {
         title: 'İkinci üçgen',
-        detail: 'O, (4, 6), (0, 2) üçgeni: y eksenindeki taban 2, yükseklik 4 ⇒ alan 2 · 4 / 2 = 4.',
+        detail:
+          'O, (4, 6), (0, 2) üçgeni: y eksenindeki taban 2, yükseklik 4 ⇒ alan 2 · 4 / 2 = 4.',
       },
       {
         title: 'Sonuç',
@@ -904,7 +910,8 @@ const QUESTIONS: Question[] = [
     solution: [
       {
         title: 'A ve B nin yeri',
-        detail: 'C den y eksenine indirilen dikmenin ayağı H(0, 2), |CH| = 6. ACH ve CBH eş dik üçgenlerdir, bu yüzden |AH| = |BH| = 6. A(0, 8) ve B(0, −4) tür.',
+        detail:
+          'C den y eksenine indirilen dikmenin ayağı H(0, 2), |CH| = 6. ACH ve CBH eş dik üçgenlerdir, bu yüzden |AH| = |BH| = 6. A(0, 8) ve B(0, −4) tür.',
       },
       {
         title: 'BC doğrusu',
@@ -941,11 +948,13 @@ const QUESTIONS: Question[] = [
     solution: [
       {
         title: 'Paralel doğru',
-        detail: 'Bir doğrunun noktaya göre simetriği ona paraleldir, yani 2x − 5y + c = 0 biçimindedir.',
+        detail:
+          'Bir doğrunun noktaya göre simetriği ona paraleldir, yani 2x − 5y + c = 0 biçimindedir.',
       },
       {
         title: 'Bir noktanın simetriği',
-        detail: 'P(2, 0) verilen doğru üzerindedir. A(4, −1) orta nokta olduğundan simetriği P′(2·4 − 2, 2·(−1) − 0) = (6, −2) dir.',
+        detail:
+          'P(2, 0) verilen doğru üzerindedir. A(4, −1) orta nokta olduğundan simetriği P′(2·4 − 2, 2·(−1) − 0) = (6, −2) dir.',
       },
       {
         title: 'c nin bulunması',
@@ -1076,7 +1085,8 @@ const QUESTIONS: Question[] = [
       },
       {
         title: 'İç açıortay',
-        detail: 'A daki iç açıortay [OB] kenarını |OA| : |AB| = 6 : 10 oranında böler; kestiği noktanın O ya uzaklığı 8 · 6/16 = 3, yani (3, 0) noktasından geçer. Eğimi (0 − 6) / (3 − 0) = −2 dir.',
+        detail:
+          'A daki iç açıortay [OB] kenarını |OA| : |AB| = 6 : 10 oranında böler; kestiği noktanın O ya uzaklığı 8 · 6/16 = 3, yani (3, 0) noktasından geçer. Eğimi (0 − 6) / (3 − 0) = −2 dir.',
       },
       {
         title: 'Dış açıortay',
@@ -1198,7 +1208,8 @@ const QUESTIONS: Question[] = [
     solution: [
       {
         title: 'Teğet uzunluğu',
-        detail: '|OB| = √(12² + 9²) = 15. O dan çizilen teğet parçaları eşit olduğundan |OA| = 15, yani A(15, 0).',
+        detail:
+          '|OB| = √(12² + 9²) = 15. O dan çizilen teğet parçaları eşit olduğundan |OA| = 15, yani A(15, 0).',
       },
       {
         title: 'Merkez',
@@ -1206,7 +1217,8 @@ const QUESTIONS: Question[] = [
       },
       {
         title: 'Yarıçap teğete dik',
-        detail: 'd nin eğimi 9/12 = 3/4 tür; MB ⊥ d olduğundan (r − 9) / (15 − 12) = −4/3 ⇒ r − 9 = −4.',
+        detail:
+          'd nin eğimi 9/12 = 3/4 tür; MB ⊥ d olduğundan (r − 9) / (15 − 12) = −4/3 ⇒ r − 9 = −4.',
       },
       {
         title: 'Sonuç',
@@ -1299,7 +1311,8 @@ const QUESTIONS: Question[] = [
       },
       {
         title: 'Eğimi oku',
-        detail: 'y = mx + n biçiminde x in katsayısı m = 2 dir. (Kısa yol: ax + by + c = 0 için m = −a/b = −4/(−2) = 2.)',
+        detail:
+          'y = mx + n biçiminde x in katsayısı m = 2 dir. (Kısa yol: ax + by + c = 0 için m = −a/b = −4/(−2) = 2.)',
       },
       {
         title: 'Sonuç',
@@ -1418,7 +1431,8 @@ const QUESTIONS: Question[] = [
       },
       {
         title: 'Sonuç',
-        detail: 'Terimleri bir tarafa toplarsak 2x − 5y + 2 = 0 bulunur. (Kontrol: (−1, 0) için −2 − 0 + 2 = 0.)',
+        detail:
+          'Terimleri bir tarafa toplarsak 2x − 5y + 2 = 0 bulunur. (Kontrol: (−1, 0) için −2 − 0 + 2 = 0.)',
       },
     ],
   },
@@ -1481,6 +1495,321 @@ const QUESTIONS: Question[] = [
     ],
   },
 
+  // ---------------------------------------------------------------- 32
+  {
+    id: 'lines-32',
+    topic: 'Eksen kesim noktalarından doğru denklemi',
+    // Origin (200, 220), 40 px per unit; d is y = 2x + 4 through (−2, 0) and (0, 4).
+    figure: {
+      viewBox: '0 0 400 320',
+      caption: 'Şekil 16',
+      label: 'Koordinat düzleminde x eksenini −2 de, y eksenini 4 te kesen d doğrusu.',
+      svg: `
+          <path class="ln" d="M30,220 L385,220"/>
+          <path class="ln" d="M375,214 L385,220 L375,226"/>
+          <path class="ln" d="M200,310 L200,15"/>
+          <path class="ln" d="M194,25 L200,15 L206,25"/>
+          <text x="382" y="240" text-anchor="middle">x</text>
+          <text x="212" y="27">y</text>
+          <path class="ln" d="M80,300 L220,20"/>
+          <circle class="pt" cx="120" cy="220" r="3.2"/>
+          <circle class="pt" cx="200" cy="60" r="3.2"/>
+          <text x="128" y="240" text-anchor="middle">−2</text>
+          <text x="210" y="66">4</text>
+          <text x="192" y="238" text-anchor="end">O</text>
+          <text x="230" y="30">d</text>
+        `,
+    },
+    stem: [],
+    ask: 'Yukarıdaki dik koordinat sisteminde verilen d doğrusunun denklemi aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: 'y = −2x − 4' },
+      { key: 'B', text: 'y = 2x + 4' },
+      { key: 'C', text: 'y = x/2 + 4' },
+      { key: 'D', text: 'x/2 + y/4 = 1' },
+      { key: 'E', text: '2y = x − 2' },
+    ],
+    answer: 'B',
+    hint: 'Eksenleri (a, 0) ve (0, b) noktalarında kesen doğrunun denklemi x/a + y/b = 1 dir.',
+    solution: [
+      {
+        title: 'Kesim noktaları',
+        detail: 'd doğrusu x eksenini (−2, 0), y eksenini (0, 4) noktasında keser.',
+      },
+      {
+        title: 'Eksen kesim formu',
+        detail: 'x/(−2) + y/4 = 1 yazılır.',
+      },
+      {
+        title: 'Düzenle',
+        detail: 'İki tarafı 4 ile çarparsak −2x + y = 4 ⇒ y = 2x + 4 olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'd doğrusunun denklemi y = 2x + 4 tür. (Kontrol: x = −2 için y = 0.)',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 33
+  {
+    id: 'lines-33',
+    topic: 'Doğrusal noktalar',
+    stem: [],
+    ask: 'Analitik düzlemde verilen A(−2, 1), B(1, n) ve C(4, 13) noktalarının doğrusal olması için n kaç olmalıdır?',
+    choices: [
+      { key: 'A', text: '7' },
+      { key: 'B', text: '9' },
+      { key: 'C', text: '11' },
+      { key: 'D', text: '13' },
+      { key: 'E', text: '15' },
+    ],
+    answer: 'A',
+    hint: 'Üç nokta doğrusal ise AB ve AC doğrularının eğimleri eşittir.',
+    solution: [
+      {
+        title: 'AC nin eğimi',
+        detail: 'm(AC) = (13 − 1) / (4 − (−2)) = 12/6 = 2.',
+      },
+      {
+        title: 'AB nin eğimi',
+        detail: 'm(AB) = (n − 1) / (1 − (−2)) = (n − 1)/3.',
+      },
+      {
+        title: 'Eğimleri eşitle',
+        detail: '(n − 1)/3 = 2 ⇒ n − 1 = 6.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'n = 7 dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 34
+  {
+    id: 'lines-34',
+    topic: 'Doğru üzerindeki nokta',
+    stem: [],
+    ask: '3y − 2x − 6 = 0 doğrusu üzerinde alınan iki nokta A(a, 4) ve B(b, −2) olduğuna göre, a − b farkı kaçtır?',
+    choices: [
+      { key: 'A', text: '1' },
+      { key: 'B', text: '3' },
+      { key: 'C', text: '5' },
+      { key: 'D', text: '7' },
+      { key: 'E', text: '9' },
+    ],
+    answer: 'E',
+    hint: 'Doğru üzerindeki bir nokta doğrunun denklemini sağlar; koordinatları denklemde yerine yaz.',
+    solution: [
+      {
+        title: 'A noktasını yerine yaz',
+        detail: '3·4 − 2a − 6 = 0 ⇒ 6 − 2a = 0 ⇒ a = 3.',
+      },
+      {
+        title: 'B noktasını yerine yaz',
+        detail: '3·(−2) − 2b − 6 = 0 ⇒ −12 − 2b = 0 ⇒ b = −6.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'a − b = 3 − (−6) = 9 dur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 35
+  {
+    id: 'lines-35',
+    topic: 'Doğru ile eksenlerin oluşturduğu üçgenin alanı',
+    stem: [],
+    ask: 'Denklemi −x/6 + y/a = 1 olan doğru ve koordinat eksenlerinin oluşturduğu üçgenin alanı 27 birimkare olduğuna göre, a nın pozitif değeri kaçtır?',
+    choices: [
+      { key: 'A', text: '6' },
+      { key: 'B', text: '9' },
+      { key: 'C', text: '12' },
+      { key: 'D', text: '15' },
+      { key: 'E', text: '18' },
+    ],
+    answer: 'B',
+    hint: 'Denklemi x/(−6) + y/a = 1 biçiminde oku; doğrunun eksenleri kestiği noktalar hemen görünür.',
+    solution: [
+      {
+        title: 'Kesim noktaları',
+        detail:
+          '−x/6 + y/a = 1 ⇔ x/(−6) + y/a = 1; doğru eksenleri (−6, 0) ve (0, a) noktalarında keser.',
+      },
+      {
+        title: 'Üçgenin alanı',
+        detail: 'Dik kenarlar 6 ve |a| olduğundan alan = 6·|a|/2 = 3|a| dır.',
+      },
+      {
+        title: 'Alanı eşitle',
+        detail: '3|a| = 27 ⇒ |a| = 9.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'a nın pozitif değeri 9 dur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 36
+  {
+    id: 'lines-36',
+    topic: 'İki noktadan geçen doğrunun denklemi',
+    stem: [],
+    ask: 'A(2, 3) ve B(−1, −3) noktalarından geçen doğrunun denklemi aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: 'x − 2y + 4 = 0' },
+      { key: 'B', text: '2x + y − 7 = 0' },
+      { key: 'C', text: '2x − y + 1 = 0' },
+      { key: 'D', text: '2x − y − 1 = 0' },
+      { key: 'E', text: 'x − y + 1 = 0' },
+    ],
+    answer: 'D',
+    hint: 'Önce iki noktadan eğimi bul, sonra y − y₁ = m(x − x₁) yaz.',
+    solution: [
+      {
+        title: 'Eğim',
+        detail: 'm = (−3 − 3) / (−1 − 2) = (−6)/(−3) = 2.',
+      },
+      {
+        title: 'Nokta-eğim formülü',
+        detail: 'A(2, 3) noktasını kullanırsak y − 3 = 2(x − 2) ⇒ y = 2x − 1.',
+      },
+      {
+        title: 'Genel biçim',
+        detail: 'Terimleri bir tarafa toplarsak 2x − y − 1 = 0 olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Kontrol: B için 2·(−1) − (−3) − 1 = 0. Doğrunun denklemi 2x − y − 1 = 0 dır.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 37
+  {
+    id: 'lines-37',
+    topic: 'Eğim açısı ve eğim',
+    // Origin (240, 200); y = ax at 120°, y = bx at 150°, both drawn through the origin.
+    figure: {
+      viewBox: '0 0 400 320',
+      caption: 'Şekil 17',
+      label:
+        'Orijinden geçen y = ax ve y = bx doğruları, y ekseninin pozitif yönü ile x ekseninin negatif yönü arasındaki açıyı üç eş parçaya bölüyor.',
+      svg: `
+          <path class="ln" d="M40,200 L385,200"/>
+          <path class="ln" d="M375,194 L385,200 L375,206"/>
+          <path class="ln" d="M240,310 L240,15"/>
+          <path class="ln" d="M234,25 L240,15 L246,25"/>
+          <text x="382" y="220" text-anchor="middle">x</text>
+          <text x="252" y="27">y</text>
+          <path class="ln" d="M155,52.8 L295,295.3"/>
+          <path class="ln" d="M92.8,115 L326.6,250"/>
+          <path class="arc" d="M240,170 A30,30 0 0 0 210,200"/>
+          <path class="tick" d="M233.53,175.85 L230.94,166.19"/>
+          <path class="tick" d="M222.32,182.32 L215.25,175.25"/>
+          <path class="tick" d="M215.85,193.53 L206.19,190.94"/>
+          <circle class="pt" cx="240" cy="200" r="3.2"/>
+          <text x="250" y="218">O</text>
+          <text x="150" y="48" text-anchor="end">y = ax</text>
+          <text x="86" y="112" text-anchor="end">y = bx</text>
+        `,
+    },
+    stem: [],
+    ask: 'Analitik düzlemde verilen y = ax ve y = bx doğruları, y ekseninin pozitif yönü ile x ekseninin negatif yönü arasındaki açıyı üç eş parçaya böldüğüne göre, b/a oranı kaçtır?',
+    choices: [
+      { key: 'A', text: '1/3' },
+      { key: 'B', text: '√3/3' },
+      { key: 'C', text: '1' },
+      { key: 'D', text: '√3' },
+      { key: 'E', text: '3' },
+    ],
+    answer: 'A',
+    hint: '90° lik açı üç eş parçaya bölünür; her doğrunun x ekseninin pozitif yönüyle yaptığı açıyı bul ve eğim = tan(açı) kullan.',
+    solution: [
+      {
+        title: 'Eş parçalar',
+        detail: '90° lik açı üç eş parçaya bölündüğünden her parça 30° dir.',
+      },
+      {
+        title: 'y = ax doğrusu',
+        detail:
+          'y eksenine yakın olan doğru x ekseninin pozitif yönüyle 90° + 30° = 120° yapar; a = tan 120° = −√3.',
+      },
+      {
+        title: 'y = bx doğrusu',
+        detail: 'Diğer doğru 90° + 60° = 150° yapar; b = tan 150° = −√3/3.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'b/a = (−√3/3) / (−√3) = 1/3 tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 38
+  {
+    id: 'lines-38',
+    topic: 'Orta nokta ve uzunluk',
+    // Origin (100, 280), 40 px per unit; A(0, 6), B(2√7, 0), C(√7, 3).
+    figure: {
+      viewBox: '0 0 400 320',
+      caption: 'Şekil 18',
+      label:
+        'Koordinat düzleminde A noktası y ekseni, B noktası x ekseni üzerinde; C noktası [AB] üzerinde ve AC ile CB eşit uzunlukta.',
+      svg: `
+          <path class="ln" d="M60,280 L385,280"/>
+          <path class="ln" d="M375,274 L385,280 L375,286"/>
+          <path class="ln" d="M100,310 L100,15"/>
+          <path class="ln" d="M94,25 L100,15 L106,25"/>
+          <text x="382" y="300" text-anchor="middle">x</text>
+          <text x="112" y="27">y</text>
+          <path class="ln" d="M100,40 L311.66,280"/>
+          <path class="tick" d="M147.66,104.63 L158.16,95.37"/>
+          <path class="tick" d="M253.5,224.63 L264,215.37"/>
+          <circle class="pt" cx="100" cy="40" r="3.2"/>
+          <circle class="pt" cx="205.83" cy="160" r="3.2"/>
+          <circle class="pt" cx="311.66" cy="280" r="3.2"/>
+          <text x="92" y="44" text-anchor="end">A</text>
+          <text x="214" y="156">C</text>
+          <text x="311.66" y="300" text-anchor="middle">B</text>
+          <text x="92" y="298" text-anchor="end">O</text>
+        `,
+    },
+    given: ['|AC| = |BC|', 'C(√7, 3)', 'A, C ve B doğrusal'],
+    stem: [],
+    ask: 'Dik koordinat sistemindeki verilere göre, |AB| kaç birimdir?',
+    choices: [
+      { key: 'A', text: '4' },
+      { key: 'B', text: '6' },
+      { key: 'C', text: '8' },
+      { key: 'D', text: '10' },
+      { key: 'E', text: '12' },
+    ],
+    answer: 'C',
+    hint: 'C, [AB] nin orta noktasıdır; A(0, y) ve B(x, 0) yazıp orta nokta formülünü kullan.',
+    solution: [
+      {
+        title: 'A ve B nin koordinatları',
+        detail:
+          'A y ekseni üzerinde olduğundan A(0, p), B x ekseni üzerinde olduğundan B(q, 0) dır.',
+      },
+      {
+        title: 'Orta nokta',
+        detail: 'C orta nokta olduğundan q/2 = √7 ve p/2 = 3 ⇒ B(2√7, 0), A(0, 6).',
+      },
+      {
+        title: 'Uzunluk',
+        detail: '|AB|² = (2√7)² + 6² = 28 + 36 = 64.',
+      },
+      {
+        title: 'Sonuç',
+        detail: '|AB| = 8 birimdir.',
+      },
+    ],
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -1551,6 +1880,22 @@ export const UNIT_7_LINES: Unit = {
         'lines-29',
         'lines-30',
         'lines-31',
+      ),
+    },
+    {
+      id: 'lines-m6',
+      order: 6,
+      title: 'Doğrusallık ve doğru denklemi',
+      summary:
+        'Grafikten doğru denklemi, doğrusal noktalar, doğru üzerindeki nokta, eksenlerle oluşan üçgenin alanı, eğim açısı ve orta nokta.',
+      questions: pick(
+        'lines-32',
+        'lines-33',
+        'lines-34',
+        'lines-35',
+        'lines-36',
+        'lines-37',
+        'lines-38',
       ),
     },
   ],

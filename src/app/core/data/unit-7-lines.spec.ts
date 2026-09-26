@@ -37,8 +37,7 @@ describe('unit 7 answer key', () => {
     expect(answerOf('lines-13')).toBe('B'));
   it('14 — B(4, 0), A(0, −3), x/4 − y/3 = 1, 3x − 4y − 12 = 0 → A', () =>
     expect(answerOf('lines-14')).toBe('A'));
-  it('15 — |m|a²/2 = 9a²/(2|m|), m² = 9, m = −3 → B', () =>
-    expect(answerOf('lines-15')).toBe('B'));
+  it('15 — |m|a²/2 = 9a²/(2|m|), m² = 9, m = −3 → B', () => expect(answerOf('lines-15')).toBe('B'));
   it('16 — 6/(2/3) + 6/(3/2) = 9 + 4 = 13 → C', () => expect(answerOf('lines-16')).toBe('C'));
   it('17 — corner (4, 6), 10·6/2 + 2·4/2 = 30 + 4 = 34 → C', () =>
     expect(answerOf('lines-17')).toBe('C'));
@@ -65,8 +64,18 @@ describe('unit 7 answer key', () => {
   it('28 — y = −2(x − 3), y + 2x − 6 = 0 → B', () => expect(answerOf('lines-28')).toBe('B'));
   it('29 — m = 6/(−2) = −3, y = −3x → E', () => expect(answerOf('lines-29')).toBe('E'));
   it('30 — 5y = 2(x + 1), 2x − 5y + 2 = 0 → C', () => expect(answerOf('lines-30')).toBe('C'));
-  it('31 — −3/(b + 2) = −3/4, b + 2 = 4, b = 2 → B', () =>
-    expect(answerOf('lines-31')).toBe('B'));
+  it('31 — −3/(b + 2) = −3/4, b + 2 = 4, b = 2 → B', () => expect(answerOf('lines-31')).toBe('B'));
+
+  it('32 — x/(−2) + y/4 = 1, y = 2x + 4 → B', () => expect(answerOf('lines-32')).toBe('B'));
+  it('33 — m = 12/6 = 2, (n − 1)/3 = 2, n = 7 → A', () => expect(answerOf('lines-33')).toBe('A'));
+  it('34 — 12 − 2a − 6 = 0, a = 3; −6 − 2b − 6 = 0, b = −6; 3 + 6 = 9 → E', () =>
+    expect(answerOf('lines-34')).toBe('E'));
+  it('35 — 6·|a|/2 = 27, |a| = 9 → B', () => expect(answerOf('lines-35')).toBe('B'));
+  it('36 — m = −6/(−3) = 2, y − 3 = 2(x − 2), 2x − y − 1 = 0 → D', () =>
+    expect(answerOf('lines-36')).toBe('D'));
+  it('37 — a = tan 120° = −√3, b = tan 150° = −√3/3, b/a = 1/3 → A', () =>
+    expect(answerOf('lines-37')).toBe('A'));
+  it('38 — A(0, 6), B(2√7, 0), √(28 + 36) = 8 → C', () => expect(answerOf('lines-38')).toBe('C'));
 
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
