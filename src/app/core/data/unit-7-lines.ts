@@ -4583,6 +4583,320 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+  // ---------------------------------------------------------------- 98
+  {
+    id: 'lines-98',
+    topic: 'Doğruya sabit uzaklıktaki noktalar',
+    stem: [],
+    ask: 'Analitik düzlemde 3x − 4y + 2 = 0 doğrusuna 2 birim uzaklıkta bulunan noktaların geometrik yerinin denklemi aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: '3x − 4y + 12 = 0 ve 3x − 4y − 8 = 0' },
+      { key: 'B', text: '3x − 4y + 4 = 0 ve 3x − 4y = 0' },
+      { key: 'C', text: '3x − 4y − 12 = 0 ve 3x − 4y + 8 = 0' },
+      { key: 'D', text: '4x + 3y + 12 = 0 ve 4x + 3y − 8 = 0' },
+      { key: 'E', text: '3x + 4y − 12 = 0' },
+    ],
+    answer: 'A',
+    hint: 'Aranan noktalar verilen doğruya paralel iki doğru üzerindedir; bu doğruları 3x − 4y + c = 0 biçiminde yaz.',
+    solution: [
+      {
+        title: 'Paralel doğrular',
+        detail:
+          'Bir doğruya sabit uzaklıktaki noktalar ona paralel iki doğru oluşturur: 3x − 4y + c = 0.',
+      },
+      {
+        title: 'Uzaklık koşulu',
+        detail: '|c − 2| / √(3² + 4²) = 2 ⇒ |c − 2| = 10.',
+      },
+      {
+        title: 'c değerleri',
+        detail: 'c − 2 = 10 ⇒ c = 12; c − 2 = −10 ⇒ c = −8.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Geometrik yer 3x − 4y + 12 = 0 ve 3x − 4y − 8 = 0 doğrularıdır.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 99
+  {
+    id: 'lines-99',
+    topic: 'Eşkenar dörtgen ve doğru',
+    given: ['OABC eşkenar dörtgen', 'A(10, 0)', 'D(0, 20)'],
+    // Origin (100, 300), 13 px per unit; A(10, 0), B(16, 8), C(6, 8), D(0, 20).
+    figure: {
+      viewBox: '0 0 400 350',
+      caption: 'Şekil 45',
+      label:
+        'Analitik düzlemde O A B C eşkenar dörtgeni; O başlangıç noktası, A köşesi x ekseni üzerinde; d doğrusu y eksenini D noktasında kesiyor ve C ile A köşelerinden geçiyor.',
+      svg: `
+          <path class="ln" d="M40,300 L390,300"/>
+          <path class="ln" d="M380,294 L390,300 L380,306"/>
+          <path class="ln" d="M100,340 L100,10"/>
+          <path class="ln" d="M94,20 L100,10 L106,20"/>
+          <text x="386" y="320" text-anchor="middle">x</text>
+          <text x="112" y="22">y</text>
+          <path class="ln" d="M100,300 L230,300 L308,196 L178,196 Z"/>
+          <path class="ln" d="M94.8,29.6 L243,326"/>
+          <circle class="pt" cx="100" cy="300" r="3.2"/>
+          <circle class="pt" cx="230" cy="300" r="3.2"/>
+          <circle class="pt" cx="308" cy="196" r="3.2"/>
+          <circle class="pt" cx="178" cy="196" r="3.2"/>
+          <circle class="pt" cx="100" cy="40" r="3.2"/>
+          <text x="92" y="318" text-anchor="end">O</text>
+          <text x="222" y="318" text-anchor="end">A</text>
+          <text x="316" y="192">B</text>
+          <text x="186" y="186">C</text>
+          <text x="92" y="46" text-anchor="end">D</text>
+          <text x="252" y="334">d</text>
+        `,
+    },
+    stem: ['Yukarıdaki şekilde D, C ve A noktaları d doğrusu üzerindedir.'],
+    ask: 'Buna göre, B noktasının apsisi kaçtır?',
+    choices: [
+      { key: 'A', text: '12' },
+      { key: 'B', text: '14' },
+      { key: 'C', text: '15' },
+      { key: 'D', text: '16' },
+      { key: 'E', text: '18' },
+    ],
+    answer: 'D',
+    hint: 'Önce d doğrusunun denklemini yaz; C noktası bu doğru üzerinde ve |OC| = |OA| dır.',
+    solution: [
+      {
+        title: 'd doğrusu',
+        detail: 'd, A(10, 0) ve D(0, 20) den geçer: x/10 + y/20 = 1 ⇒ y = −2x + 20.',
+      },
+      {
+        title: 'C nin koordinatları',
+        detail: 'C(c, 20 − 2c) ve |OC| = |OA| = 10: c² + (20 − 2c)² = 100.',
+      },
+      {
+        title: 'Denklemi çöz',
+        detail: '5c² − 80c + 300 = 0 ⇒ c² − 16c + 60 = 0 ⇒ c = 6 veya c = 10 (A). C(6, 8).',
+      },
+      {
+        title: 'B köşesi',
+        detail: 'Eşkenar dörtgende B = A + C: B(10 + 6, 0 + 8) = (16, 8).',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'B noktasının apsisi 16 dır.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 100
+  {
+    id: 'lines-100',
+    topic: 'Paralel doğrulara eşit uzaklıktaki doğru',
+    stem: ['4x − 2y + 6 = 0 ve 2x − y − 5 = 0 doğruları veriliyor.'],
+    ask: 'Bu doğrulara eşit uzaklıkta olan doğrunun denklemi aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: '2x − y + 1 = 0' },
+      { key: 'B', text: '4x − 2y + 1 = 0' },
+      { key: 'C', text: 'x + 2y − 1 = 0' },
+      { key: 'D', text: '2x − y − 4 = 0' },
+      { key: 'E', text: '4x − 2y − 2 = 0' },
+    ],
+    answer: 'E',
+    hint: 'Doğrular paraleldir; önce x ve y katsayılarını eşitle.',
+    solution: [
+      {
+        title: 'Katsayıları eşitle',
+        detail: '4x − 2y + 6 = 0 doğrusunu 2 ye böl: 2x − y + 3 = 0. Diğeri 2x − y − 5 = 0.',
+      },
+      {
+        title: 'Ortadaki doğru',
+        detail:
+          'İki paralel doğruya eşit uzaklıktaki doğrunun sabiti, sabitlerin ortalamasıdır: (3 + (−5)) / 2 = −1.',
+      },
+      {
+        title: 'Denklem',
+        detail: '2x − y − 1 = 0.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Her iki tarafı 2 ile çarparsak 4x − 2y − 2 = 0 elde edilir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 101
+  {
+    id: 'lines-101',
+    topic: 'Paralel doğrular arası uzaklık',
+    given: ['d₁: 5x + 12y − 7 = 0', 'd₂: 5x + 12y + n = 0'],
+    stem: ['Analitik düzlemde verilen d₁ ve d₂ doğruları arası uzaklık 2 birimdir.'],
+    ask: 'Buna göre, aşağıdakilerden hangisi n nin değerlerinden biridir?',
+    choices: [
+      { key: 'A', text: '−19' },
+      { key: 'B', text: '19' },
+      { key: 'C', text: '−7' },
+      { key: 'D', text: '26' },
+      { key: 'E', text: '33' },
+    ],
+    answer: 'B',
+    hint: 'Paralel doğrular arası uzaklık |c₁ − c₂| / √(a² + b²) dir.',
+    solution: [
+      {
+        title: 'Uzaklık formülü',
+        detail: '|n − (−7)| / √(5² + 12²) = |n + 7| / 13.',
+      },
+      {
+        title: 'Eşitle',
+        detail: '|n + 7| / 13 = 2 ⇒ |n + 7| = 26.',
+      },
+      {
+        title: 'İki değer',
+        detail: 'n + 7 = 26 ⇒ n = 19; n + 7 = −26 ⇒ n = −33.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Seçeneklerde bulunan değer n = 19 dur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 102
+  {
+    id: 'lines-102',
+    topic: 'Simetri ve üçgen alanı',
+    stem: [
+      'A(−2, 4) noktasının y = −x doğrusuna göre simetriği B noktası, B noktasının y eksenine göre simetriği C noktasıdır.',
+    ],
+    ask: 'Buna göre, ABC üçgeninin alanı kaç birimkaredir?',
+    choices: [
+      { key: 'A', text: '4' },
+      { key: 'B', text: '6' },
+      { key: 'C', text: '8' },
+      { key: 'D', text: '12' },
+      { key: 'E', text: '16' },
+    ],
+    answer: 'C',
+    hint: '(a, b) noktasının y = −x doğrusuna göre simetriği (−b, −a) dır.',
+    solution: [
+      {
+        title: 'B noktası',
+        detail: 'A(−2, 4) ün y = −x e göre simetriği B(−4, 2) dir.',
+      },
+      {
+        title: 'C noktası',
+        detail: 'B(−4, 2) nin y eksenine göre simetriği C(4, 2) dir.',
+      },
+      {
+        title: 'Taban ve yükseklik',
+        detail: '[BC] yatay, |BC| = 4 − (−4) = 8; A nın bu tabana uzaklığı 4 − 2 = 2.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Alan 8 · 2 / 2 = 8 birimkaredir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 103
+  {
+    id: 'lines-103',
+    topic: 'İki noktaya eşit uzaklıktaki noktalar',
+    stem: [],
+    ask: 'A(3, 1) ile B(−1, 5) noktalarına eşit uzaklıktaki noktaların belirttiği doğrunun denklemi aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: 'x + y − 4 = 0' },
+      { key: 'B', text: 'x − y − 2 = 0' },
+      { key: 'C', text: '2x − y + 1 = 0' },
+      { key: 'D', text: 'x − y + 2 = 0' },
+      { key: 'E', text: 'x + y + 2 = 0' },
+    ],
+    answer: 'D',
+    hint: 'İki noktaya eşit uzaklıktaki noktalar [AB] nın orta dikmesi üzerindedir.',
+    solution: [
+      {
+        title: 'Orta nokta',
+        detail: '[AB] nın orta noktası ((3 − 1)/2, (1 + 5)/2) = (1, 3).',
+      },
+      {
+        title: 'Eğimler',
+        detail: 'm(AB) = (5 − 1)/(−1 − 3) = −1; orta dikmenin eğimi 1 dir.',
+      },
+      {
+        title: 'Denklem',
+        detail: 'y − 3 = 1 · (x − 1) ⇒ y = x + 2.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Doğrunun denklemi x − y + 2 = 0 dır.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 104
+  {
+    id: 'lines-104',
+    topic: 'Doğrular arasında kalan alan',
+    given: ['A(−4, 0)', 'C(0, 2)', 'D(0, 6)'],
+    // Origin (190, 270), 36 px per unit; A(−4, 0), C(0, 2), D(0, 6), K(2, 3), B(4, 0).
+    figure: {
+      viewBox: '0 0 400 320',
+      caption: 'Şekil 46',
+      label:
+        'Dik koordinat sisteminde A ve C noktalarından geçen doğru ile D ve B noktalarından geçen doğru K noktasında kesişiyor; A ve B x ekseni, C ve D y ekseni üzerinde; K C D üçgeni taralı.',
+      svg: `
+          <path class="shade" d="M190,54 L190,198 L262,162 Z"/>
+          <path class="ln" d="M15,270 L390,270"/>
+          <path class="ln" d="M380,264 L390,270 L380,276"/>
+          <path class="ln" d="M190,310 L190,10"/>
+          <path class="ln" d="M184,20 L190,10 L196,20"/>
+          <text x="386" y="290" text-anchor="middle">x</text>
+          <text x="202" y="22">y</text>
+          <path class="ln" d="M28,279 L370,108"/>
+          <path class="ln" d="M168.4,21.6 L355.6,302.4"/>
+          <circle class="pt" cx="46" cy="270" r="3.2"/>
+          <circle class="pt" cx="190" cy="198" r="3.2"/>
+          <circle class="pt" cx="190" cy="54" r="3.2"/>
+          <circle class="pt" cx="262" cy="162" r="3.2"/>
+          <circle class="pt" cx="334" cy="270" r="3.2"/>
+          <text x="46" y="292" text-anchor="middle">A</text>
+          <text x="182" y="290" text-anchor="end">O</text>
+          <text x="182" y="206" text-anchor="end">C</text>
+          <text x="182" y="58" text-anchor="end">D</text>
+          <text x="262" y="148" text-anchor="middle">K</text>
+          <text x="322" y="292" text-anchor="middle">B</text>
+        `,
+    },
+    stem: [
+      'Dik koordinat sisteminde AC ve DB doğruları ile y ekseni arasında kalan KCD üçgensel bölgesinin alanı 4 birimkaredir.',
+    ],
+    ask: 'Buna göre, B noktasının apsisi kaçtır?',
+    choices: [
+      { key: 'A', text: '3' },
+      { key: 'B', text: '4' },
+      { key: 'C', text: '5' },
+      { key: 'D', text: '6' },
+      { key: 'E', text: '8' },
+    ],
+    answer: 'B',
+    hint: 'KCD üçgeninin tabanı [CD] y ekseni üzerindedir; yüksekliği K nın apsisidir.',
+    solution: [
+      {
+        title: 'K nın apsisi',
+        detail: '|CD| = 6 − 2 = 4. Alan 4 · x_K / 2 = 4 ⇒ x_K = 2.',
+      },
+      {
+        title: 'AC doğrusu',
+        detail: 'A(−4, 0) ve C(0, 2) den geçer: y = x/2 + 2. x = 2 için y = 3; K(2, 3).',
+      },
+      {
+        title: 'DB doğrusu',
+        detail: 'D(0, 6) ve K(2, 3) ten geçer: eğim (3 − 6)/2 = −3/2, y = −3x/2 + 6.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'y = 0 için 3x/2 = 6 ⇒ x = 4; B nin apsisi 4 tür.',
+      },
+    ],
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -4781,6 +5095,22 @@ export const UNIT_7_LINES: Unit = {
         'lines-95',
         'lines-96',
         'lines-97',
+      ),
+    },
+    {
+      id: 'lines-m16',
+      order: 16,
+      title: 'Uzaklık, simetri ve geometrik yer',
+      summary:
+        'Doğruya sabit uzaklıktaki noktalar, eşkenar dörtgen ve doğru, paralel doğrulara eşit uzaklık, paralel doğrular arası uzaklık, simetriyle alan, orta dikme ve taralı alan.',
+      questions: pick(
+        'lines-98',
+        'lines-99',
+        'lines-100',
+        'lines-101',
+        'lines-102',
+        'lines-103',
+        'lines-104',
       ),
     },
   ],
