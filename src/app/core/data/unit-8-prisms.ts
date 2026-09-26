@@ -1216,6 +1216,460 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+
+  // ---------------------------------------------------------------- 22
+  {
+    id: 'prisms-22',
+    topic: 'Kare dik prizmanın yanal alanı',
+    stem: [],
+    ask: 'Taban çevresi 20 cm olan bir kare dik prizmanın yüksekliği 9 cm ise prizmanın yanal alanları toplamı kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '90' },
+      { key: 'B', text: '120' },
+      { key: 'C', text: '135' },
+      { key: 'D', text: '150' },
+      { key: 'E', text: '180' },
+    ],
+    answer: 'E',
+    hint: 'Dik prizmada yanal alan, taban çevresi ile yüksekliğin çarpımıdır.',
+    solution: [
+      {
+        title: 'Taban kenarı',
+        detail: 'Kare tabanın çevresi 20 cm olduğundan bir kenarı 20 / 4 = 5 cm dir.',
+      },
+      {
+        title: 'Yanal yüzler',
+        detail: 'Yanal yüzler, kenarları 5 cm ve 9 cm olan dört eş dikdörtgendir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Yanal alan 4 · 5 · 9 = 20 · 9 = 180 cm² dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 23
+  {
+    id: 'prisms-23',
+    topic: 'Küpün içindeki en büyük silindir',
+    stem: [],
+    ask: 'Bir küpün içine yerleştirilebilecek en büyük dik silindirin tüm alanının küpün tüm alanına oranı kaçtır?',
+    choices: [
+      { key: 'A', text: 'π/2' },
+      { key: 'B', text: 'π/3' },
+      { key: 'C', text: 'π/4' },
+      { key: 'D', text: 'π/6' },
+      { key: 'E', text: 'π/8' },
+    ],
+    answer: 'C',
+    hint: 'En büyük silindirin tabanı küpün bir yüzüne içten teğet çemberdir, yüksekliği de küpün ayrıtıdır.',
+    solution: [
+      {
+        title: 'Silindirin boyutları',
+        detail: 'Küpün ayrıtı a ise silindirin yarıçapı a / 2, yüksekliği a dır.',
+      },
+      {
+        title: 'Silindirin tüm alanı',
+        detail: '2 · π(a / 2)² + 2π(a / 2) · a = πa² / 2 + πa² = 3πa² / 2.',
+      },
+      {
+        title: 'Küpün tüm alanı',
+        detail: 'Küpün altı yüzü vardır: 6a².',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Oran (3πa² / 2) / 6a² = 3π / 12 = π / 4 tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 24
+  // Box 6 × 5 × 4 at 30 px per metre, depth drawn at half scale along 45°;
+  // the water reaches 3 of the 4 metres.
+  {
+    id: 'prisms-24',
+    topic: 'Kısmen dolu deponun yüksekliği',
+    given: ['|AB| = 6 metre', '|BC| = 5 metre', '|AA′| = h'],
+    stem: [
+      'Yukarıdaki şekilde dikdörtgenler prizması biçiminde bir su deposu görülmektedir. Depoda 90 metreküp su vardır ve su, deponun 3/4 ünü doldurmaktadır.',
+    ],
+    ask: 'Buna göre, |AA′| = h kaç metredir?',
+    choices: [
+      { key: 'A', text: '3' },
+      { key: 'B', text: '4' },
+      { key: 'C', text: '5' },
+      { key: 'D', text: '6' },
+      { key: 'E', text: '8' },
+    ],
+    answer: 'B',
+    hint: 'Önce deponun tamamının hacmini bul.',
+    solution: [
+      {
+        title: 'Deponun hacmi',
+        detail: 'Su deponun 3/4 ü olduğundan deponun hacmi 90 · 4 / 3 = 120 m³ tür.',
+      },
+      {
+        title: 'Taban alanı',
+        detail: 'Taban alanı |AB| · |BC| = 6 · 5 = 30 m² dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: '30 · h = 120 ⇒ h = 4 metredir.',
+      },
+    ],
+    figure: {
+      viewBox: '0 20 400 222',
+      caption: 'Şekil 13',
+      label:
+        'ABCDA′B′C′D′ dikdörtgenler prizması biçiminde bir su deposu; |AB| = 6 metre, |BC| = 5 metre, |AA′| = h. Deponun alt kısmı suyla dolu olarak taranmış.',
+      svg: `
+          <path class="shade" d="M90.0,215.0 L270.0,215.0 L323.0,162.0 L323.0,72.0 L270.0,125.0 L90.0,125.0 Z"/>
+          <path class="hid" d="M90.0,215.0 L143.0,162.0 L323.0,162.0"/>
+          <path class="hid" d="M143.0,162.0 L143.0,42.0"/>
+          <path class="ln" d="M90.0,215.0 L270.0,215.0 L323.0,162.0 L323.0,42.0 L143.0,42.0 L90.0,95.0 Z"/>
+          <path class="ln" d="M90.0,95.0 L270.0,95.0 L323.0,42.0"/>
+          <path class="ln" d="M270.0,215.0 L270.0,95.0"/>
+          <path class="ln" d="M90.0,125.0 L270.0,125.0 L323.0,72.0"/>
+          <circle class="pt" cx="90.0" cy="215.0" r="3.2"/>
+          <circle class="pt" cx="270.0" cy="215.0" r="3.2"/>
+          <circle class="pt" cx="323.0" cy="162.0" r="3.2"/>
+          <circle class="pt" cx="143.0" cy="162.0" r="3.2"/>
+          <circle class="pt" cx="90.0" cy="95.0" r="3.2"/>
+          <circle class="pt" cx="270.0" cy="95.0" r="3.2"/>
+          <circle class="pt" cx="323.0" cy="42.0" r="3.2"/>
+          <circle class="pt" cx="143.0" cy="42.0" r="3.2"/>
+          <text x="82.0" y="231.0" text-anchor="end">A</text>
+          <text x="278.0" y="231.0">B</text>
+          <text x="333.0" y="168.0">C</text>
+          <text x="151.0" y="178.0">D</text>
+          <text x="80.0" y="101.0" text-anchor="end">A′</text>
+          <text x="278.0" y="111.0">B′</text>
+          <text x="333.0" y="36.0">C′</text>
+          <text x="143.0" y="30.0" text-anchor="middle">D′</text>
+          <text class="val" x="180.0" y="237.0" text-anchor="middle">6</text>
+          <text class="val" x="306.5" y="202.5">5</text>
+          <text class="val" x="80.0" y="161.0" text-anchor="end">h</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 25
+  {
+    id: 'prisms-25',
+    topic: 'Taban alanından silindirin yanal alanı',
+    stem: ['Yüksekliği 6 cm olan bir dik silindirin taban alanı 25π cm² dir.'],
+    ask: 'Buna göre, bu silindirin yanal alanı kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '60π' },
+      { key: 'B', text: '65π' },
+      { key: 'C', text: '70π' },
+      { key: 'D', text: '75π' },
+      { key: 'E', text: '80π' },
+    ],
+    answer: 'A',
+    hint: 'Taban alanından yarıçapı bul; yanal alan 2πr · h dir.',
+    solution: [
+      {
+        title: 'Yarıçap',
+        detail: 'πr² = 25π ⇒ r² = 25 ⇒ r = 5 cm.',
+      },
+      {
+        title: 'Taban çevresi',
+        detail: '2πr = 2π · 5 = 10π cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Yanal alan 10π · 6 = 60π cm² dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 26
+  // Square prism with base edge 4√2 and height 4 at 30 px per cm, depth drawn
+  // at half scale along 45°. L is the centre of ABCD and K the centre of EFGH.
+  {
+    id: 'prisms-26',
+    topic: 'Kare prizmada kesit alanından cisim köşegeni',
+    given: [
+      'Şekildeki kare prizmanın hacmi 128 cm³ tür.',
+      '|AL| = |LC|',
+      'K ∈ [EG]',
+      '[KL] ⊥ [AC]',
+      'A(KLC) = 8 cm²',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, prizmanın cisim köşegeni kaç cm dir?',
+    choices: [
+      { key: 'A', text: '2√5' },
+      { key: 'B', text: '3√5' },
+      { key: 'C', text: '4√5' },
+      { key: 'D', text: '5√5' },
+      { key: 'E', text: '6√5' },
+    ],
+    answer: 'C',
+    hint: '[KL] prizmanın yüksekliğine, [LC] de taban köşegeninin yarısına eşittir.',
+    solution: [
+      {
+        title: 'Üçgenin kenarları',
+        detail:
+          'ACGE dikdörtgeninde [KL] ⊥ [AC] olduğundan |KL| = h dir. Taban kenarı a ise |AC| = a√2, |LC| = a√2 / 2 olur.',
+      },
+      {
+        title: 'Alan denklemi',
+        detail: 'A(KLC) = h · (a√2 / 2) / 2 = 8 ⇒ a · h = 16√2.',
+      },
+      {
+        title: 'Hacim denklemi',
+        detail: 'a² · h = 128 ⇒ a = 128 / (16√2) = 4√2 cm ve h = 16√2 / (4√2) = 4 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Cisim köşegeni √(a² + a² + h²) = √(32 + 32 + 16) = √80 = 4√5 cm dir.',
+      },
+    ],
+    figure: {
+      viewBox: '0 50 400 226',
+      caption: 'Şekil 14',
+      label:
+        'ABCDEFGH kare prizması; L noktası [AC] taban köşegeninin orta noktası, |AL| = |LC|. K noktası [EG] üst yüz köşegeni üzerinde, [KL] ⊥ [AC] ve KLC üçgeni taranmış.',
+      svg: `
+          <path class="shade" d="M194.9,100.0 L194.9,220.0 L309.7,190.0 Z"/>
+          <path class="hid" d="M80.0,250.0 L140.0,190.0 L309.7,190.0"/>
+          <path class="hid" d="M140.0,190.0 L140.0,70.0"/>
+          <path class="hid" d="M80.0,250.0 L309.7,190.0"/>
+          <path class="hid" d="M194.9,100.0 L194.9,220.0"/>
+          <path class="hid" d="M194.9,100.0 L309.7,190.0"/>
+          <path class="ln" d="M80.0,250.0 L249.7,250.0 L309.7,190.0 L309.7,70.0 L140.0,70.0 L80.0,130.0 Z"/>
+          <path class="ln" d="M80.0,130.0 L249.7,130.0 L309.7,70.0"/>
+          <path class="ln" d="M249.7,250.0 L249.7,130.0"/>
+          <path class="ln" d="M80.0,130.0 L309.7,70.0"/>
+          <path class="tick" d="M136.2,230.2 L138.7,239.8"/>
+          <path class="tick" d="M251.0,200.2 L253.5,209.8"/>
+          <circle class="pt" cx="80.0" cy="250.0" r="3.2"/>
+          <circle class="pt" cx="249.7" cy="250.0" r="3.2"/>
+          <circle class="pt" cx="309.7" cy="190.0" r="3.2"/>
+          <circle class="pt" cx="140.0" cy="190.0" r="3.2"/>
+          <circle class="pt" cx="80.0" cy="130.0" r="3.2"/>
+          <circle class="pt" cx="249.7" cy="130.0" r="3.2"/>
+          <circle class="pt" cx="309.7" cy="70.0" r="3.2"/>
+          <circle class="pt" cx="140.0" cy="70.0" r="3.2"/>
+          <circle class="pt" cx="194.9" cy="220.0" r="3.2"/>
+          <circle class="pt" cx="194.9" cy="100.0" r="3.2"/>
+          <text x="72.0" y="266.0" text-anchor="end">A</text>
+          <text x="257.7" y="266.0">B</text>
+          <text x="319.7" y="196.0">C</text>
+          <text x="132.0" y="184.0" text-anchor="end">D</text>
+          <text x="72.0" y="136.0" text-anchor="end">E</text>
+          <text x="257.7" y="146.0">F</text>
+          <text x="317.7" y="64.0">G</text>
+          <text x="140.0" y="58.0" text-anchor="middle">H</text>
+          <text x="194.9" y="238.0" text-anchor="middle">L</text>
+          <text x="194.9" y="90.0" text-anchor="middle">K</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 50 400 226',
+      caption: 'Şekil 14',
+      label: 'Aynı prizmada [AG] cisim köşegeni kesikli çizilmiş.',
+      svg: `
+          <path class="shade" d="M194.9,100.0 L194.9,220.0 L309.7,190.0 Z"/>
+          <path class="hid" d="M80.0,250.0 L140.0,190.0 L309.7,190.0"/>
+          <path class="hid" d="M140.0,190.0 L140.0,70.0"/>
+          <path class="hid" d="M80.0,250.0 L309.7,190.0"/>
+          <path class="hid" d="M194.9,100.0 L194.9,220.0"/>
+          <path class="hid" d="M194.9,100.0 L309.7,190.0"/>
+          <path class="ln" d="M80.0,250.0 L249.7,250.0 L309.7,190.0 L309.7,70.0 L140.0,70.0 L80.0,130.0 Z"/>
+          <path class="ln" d="M80.0,130.0 L249.7,130.0 L309.7,70.0"/>
+          <path class="ln" d="M249.7,250.0 L249.7,130.0"/>
+          <path class="ln" d="M80.0,130.0 L309.7,70.0"/>
+          <path class="tick" d="M136.2,230.2 L138.7,239.8"/>
+          <path class="tick" d="M251.0,200.2 L253.5,209.8"/>
+          <circle class="pt" cx="80.0" cy="250.0" r="3.2"/>
+          <circle class="pt" cx="249.7" cy="250.0" r="3.2"/>
+          <circle class="pt" cx="309.7" cy="190.0" r="3.2"/>
+          <circle class="pt" cx="140.0" cy="190.0" r="3.2"/>
+          <circle class="pt" cx="80.0" cy="130.0" r="3.2"/>
+          <circle class="pt" cx="249.7" cy="130.0" r="3.2"/>
+          <circle class="pt" cx="309.7" cy="70.0" r="3.2"/>
+          <circle class="pt" cx="140.0" cy="70.0" r="3.2"/>
+          <circle class="pt" cx="194.9" cy="220.0" r="3.2"/>
+          <circle class="pt" cx="194.9" cy="100.0" r="3.2"/>
+          <text x="72.0" y="266.0" text-anchor="end">A</text>
+          <text x="257.7" y="266.0">B</text>
+          <text x="319.7" y="196.0">C</text>
+          <text x="132.0" y="184.0" text-anchor="end">D</text>
+          <text x="72.0" y="136.0" text-anchor="end">E</text>
+          <text x="257.7" y="146.0">F</text>
+          <text x="317.7" y="64.0">G</text>
+          <text x="140.0" y="58.0" text-anchor="middle">H</text>
+          <text x="194.9" y="238.0" text-anchor="middle">L</text>
+          <text x="194.9" y="90.0" text-anchor="middle">K</text>
+          <path class="aux" d="M80.0,250.0 L309.7,70.0"/>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 27
+  // Right triangular prism, right angle at C: |AC| = 5 (depth), |CB| = 12,
+  // height 6, at 22 px per cm with depth drawn at half scale along 45°.
+  {
+    id: 'prisms-27',
+    topic: 'Dik üçgen prizmada hacimden kenar',
+    stem: ['Şekildeki dik üçgen prizmanın hacmi 180 cm³ tür. Taban üçgeninde m(ACB) = 90° dir.'],
+    ask: '|AC| = 5 cm ve |CF| = 6 cm olduğuna göre, |AB| kaç cm dir?',
+    choices: [
+      { key: 'A', text: '12' },
+      { key: 'B', text: '13' },
+      { key: 'C', text: '5√7' },
+      { key: 'D', text: '14' },
+      { key: 'E', text: '15' },
+    ],
+    answer: 'B',
+    hint: 'Hacmi yüksekliğe bölerek taban alanını bul.',
+    solution: [
+      {
+        title: 'Taban alanı',
+        detail: 'Yükseklik |CF| = 6 cm olduğundan taban alanı 180 / 6 = 30 cm² dir.',
+      },
+      {
+        title: '|BC|',
+        detail:
+          'Taban C de dik açılı olduğundan |AC| · |BC| / 2 = 30 ⇒ 5 · |BC| = 60 ⇒ |BC| = 12 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail: '|AB|² = 5² + 12² = 169 ⇒ |AB| = 13 cm dir.',
+      },
+    ],
+    figure: {
+      viewBox: '0 44 400 220',
+      caption: 'Şekil 15',
+      label:
+        'ABCDEF dik üçgen prizması; taban üçgeni ABC, C köşesinde dik açılı. |AC| = 5 cm ve yan ayrıt |CF| = 6 cm.',
+      svg: `
+          <path class="hid" d="M62.0,238.0 L100.9,199.1 L364.9,199.1"/>
+          <path class="hid" d="M100.9,199.1 L100.9,67.1"/>
+          <path class="hid" d="M93.9,206.1 L113.7,206.1 L120.7,199.1"/>
+          <path class="ln" d="M62.0,238.0 L364.9,199.1 L364.9,67.1 L100.9,67.1 L62.0,106.0 Z"/>
+          <path class="ln" d="M62.0,106.0 L364.9,67.1"/>
+          <circle class="pt" cx="62.0" cy="238.0" r="3.2"/>
+          <circle class="pt" cx="364.9" cy="199.1" r="3.2"/>
+          <circle class="pt" cx="100.9" cy="199.1" r="3.2"/>
+          <circle class="pt" cx="62.0" cy="106.0" r="3.2"/>
+          <circle class="pt" cx="364.9" cy="67.1" r="3.2"/>
+          <circle class="pt" cx="100.9" cy="67.1" r="3.2"/>
+          <text x="54.0" y="254.0" text-anchor="end">A</text>
+          <text x="374.9" y="215.1">B</text>
+          <text x="110.9" y="217.1">C</text>
+          <text x="54.0" y="112.0" text-anchor="end">D</text>
+          <text x="374.9" y="67.1">E</text>
+          <text x="100.9" y="55.1" text-anchor="middle">F</text>
+          <text class="val" x="73.4" y="218.6" text-anchor="end">5</text>
+          <text class="val" x="108.9" y="139.1">6</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 28
+  // Oblique cylinder, radius 3 and generator 4√3 at 60° to the base, at
+  // 24 px per cm; the bases are drawn as ellipses flattened to 0.3.
+  {
+    id: 'prisms-28',
+    topic: 'Eğik silindirin hacmi',
+    given: ['Şekil eğik silindirdir.', 'C ∈ [DE]', 'm(BCE) = 60°', '|AD| = 4√3 cm'],
+    stem: [],
+    ask: 'Yukarıdaki şekilde verilen eğik silindirin taban yarıçapı 3 cm olduğuna göre, hacmi kaç cm³ tür?',
+    choices: [
+      { key: 'A', text: '27π' },
+      { key: 'B', text: '36π' },
+      { key: 'C', text: '45π' },
+      { key: 'D', text: '54π' },
+      { key: 'E', text: '72π' },
+    ],
+    answer: 'D',
+    hint: 'Eğik silindirin hacmi taban alanı ile dik yüksekliğin çarpımıdır; yüksekliği ana doğrudan bul.',
+    solution: [
+      {
+        title: 'Ana doğru',
+        detail: '[AD] ve [BC] ana doğrulardır: |BC| = |AD| = 4√3 cm.',
+      },
+      {
+        title: 'Yükseklik',
+        detail:
+          'B den taban düzlemine inilen dikmenin uzunluğu h = 4√3 · sin 60° = 4√3 · √3 / 2 = 6 cm.',
+      },
+      {
+        title: 'Taban alanı',
+        detail: 'π · 3² = 9π cm².',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Hacim 9π · 6 = 54π cm³ tür.',
+      },
+    ],
+    figure: {
+      viewBox: '0 106 400 206',
+      caption: 'Şekil 16',
+      label:
+        'Eğik silindir; alt tabanın merkezi O, çapı [DC] ve C noktası [DE] üzerinde. Ana doğrular [DA] ve [CB], |AD| = 4√3 cm ve m(BCE) = 60°.',
+      svg: `
+          <path class="hid" d="M53.0,280.0 L53.3,278.1 L54.1,276.2 L55.5,274.4 L57.3,272.6 L59.7,270.9 L62.6,269.2 L66.0,267.6 L69.8,266.1 L74.1,264.7 L78.7,263.5 L83.7,262.3 L89.0,261.3 L94.6,260.4 L100.4,259.7 L106.4,259.1 L112.5,258.7 L118.7,258.5 L125.0,258.4 L131.3,258.5 L137.5,258.7 L143.6,259.1 L149.6,259.7 L155.4,260.4 L161.0,261.3 L166.3,262.3 L171.3,263.5 L175.9,264.7 L180.2,266.1 L184.0,267.6 L187.4,269.2 L190.3,270.9 L192.7,272.6 L194.5,274.4 L195.9,276.2 L196.7,278.1 L197.0,280.0"/>
+          <path class="ln" d="M197.0,280.0 L196.7,281.9 L195.9,283.8 L194.5,285.6 L192.7,287.4 L190.3,289.1 L187.4,290.8 L184.0,292.4 L180.2,293.9 L175.9,295.3 L171.3,296.5 L166.3,297.7 L161.0,298.7 L155.4,299.6 L149.6,300.3 L143.6,300.9 L137.5,301.3 L131.3,301.5 L125.0,301.6 L118.7,301.5 L112.5,301.3 L106.4,300.9 L100.4,300.3 L94.6,299.6 L89.0,298.7 L83.7,297.7 L78.7,296.5 L74.1,295.3 L69.8,293.9 L66.0,292.4 L62.6,290.8 L59.7,289.1 L57.3,287.4 L55.5,285.6 L54.1,283.8 L53.3,281.9 L53.0,280.0"/>
+          <path class="ln" d="M280.1,136.0 L279.0,139.8 L275.8,143.4 L270.5,146.8 L263.3,149.9 L254.4,152.5 L244.1,154.7 L232.8,156.3 L220.6,157.3 L208.1,157.6 L195.6,157.3 L183.5,156.3 L172.1,154.7 L161.9,152.5 L153.0,149.9 L145.8,146.8 L140.5,143.4 L137.2,139.8 L136.1,136.0 L137.2,132.2 L140.5,128.6 L145.8,125.2 L153.0,122.1 L161.9,119.5 L172.1,117.3 L183.5,115.7 L195.6,114.7 L208.1,114.4 L220.6,114.7 L232.8,115.7 L244.1,117.3 L254.4,119.5 L263.3,122.1 L270.5,125.2 L275.8,128.6 L279.0,132.2 Z"/>
+          <path class="ln" d="M53.0,280.0 L136.1,136.0"/>
+          <path class="ln" d="M197.0,280.0 L280.1,136.0"/>
+          <path class="ln" d="M197.0,280.0 L237.0,280.0"/>
+          <path class="hid" d="M53.0,280.0 L197.0,280.0"/>
+          <path class="arc" d="M221.0,280.0 L220.9,277.9 L220.6,275.8 L220.2,273.8 L219.6,271.8 L218.8,269.9 L217.8,268.0 L216.7,266.2 L215.4,264.6 L214.0,263.0 L212.4,261.6 L210.8,260.3 L209.0,259.2"/>
+          <circle class="pt" cx="136.1" cy="136.0" r="3.2"/>
+          <circle class="pt" cx="280.1" cy="136.0" r="3.2"/>
+          <circle class="pt" cx="197.0" cy="280.0" r="3.2"/>
+          <circle class="pt" cx="53.0" cy="280.0" r="3.2"/>
+          <circle class="pt" cx="237.0" cy="280.0" r="3.2"/>
+          <circle class="pt" cx="125.0" cy="280.0" r="3.2"/>
+          <text x="136.1" y="124.0" text-anchor="middle">A</text>
+          <text x="280.1" y="124.0" text-anchor="middle">B</text>
+          <text x="197.0" y="302.0" text-anchor="middle">C</text>
+          <text x="45.0" y="286.0" text-anchor="end">D</text>
+          <text x="237.0" y="300.0" text-anchor="middle">E</text>
+          <text x="125.0" y="272.0" text-anchor="middle">O</text>
+          <text class="val" x="86.6" y="208.0" text-anchor="end">4√3</text>
+          <text class="val" x="227.0" y="270.0">60°</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 106 400 206',
+      caption: 'Şekil 16',
+      label:
+        'Aynı silindirde B den [DE] doğrusuna inilen dikme kesikli çizilmiş; bu dikme silindirin yüksekliğidir.',
+      svg: `
+          <path class="hid" d="M53.0,280.0 L53.3,278.1 L54.1,276.2 L55.5,274.4 L57.3,272.6 L59.7,270.9 L62.6,269.2 L66.0,267.6 L69.8,266.1 L74.1,264.7 L78.7,263.5 L83.7,262.3 L89.0,261.3 L94.6,260.4 L100.4,259.7 L106.4,259.1 L112.5,258.7 L118.7,258.5 L125.0,258.4 L131.3,258.5 L137.5,258.7 L143.6,259.1 L149.6,259.7 L155.4,260.4 L161.0,261.3 L166.3,262.3 L171.3,263.5 L175.9,264.7 L180.2,266.1 L184.0,267.6 L187.4,269.2 L190.3,270.9 L192.7,272.6 L194.5,274.4 L195.9,276.2 L196.7,278.1 L197.0,280.0"/>
+          <path class="ln" d="M197.0,280.0 L196.7,281.9 L195.9,283.8 L194.5,285.6 L192.7,287.4 L190.3,289.1 L187.4,290.8 L184.0,292.4 L180.2,293.9 L175.9,295.3 L171.3,296.5 L166.3,297.7 L161.0,298.7 L155.4,299.6 L149.6,300.3 L143.6,300.9 L137.5,301.3 L131.3,301.5 L125.0,301.6 L118.7,301.5 L112.5,301.3 L106.4,300.9 L100.4,300.3 L94.6,299.6 L89.0,298.7 L83.7,297.7 L78.7,296.5 L74.1,295.3 L69.8,293.9 L66.0,292.4 L62.6,290.8 L59.7,289.1 L57.3,287.4 L55.5,285.6 L54.1,283.8 L53.3,281.9 L53.0,280.0"/>
+          <path class="ln" d="M280.1,136.0 L279.0,139.8 L275.8,143.4 L270.5,146.8 L263.3,149.9 L254.4,152.5 L244.1,154.7 L232.8,156.3 L220.6,157.3 L208.1,157.6 L195.6,157.3 L183.5,156.3 L172.1,154.7 L161.9,152.5 L153.0,149.9 L145.8,146.8 L140.5,143.4 L137.2,139.8 L136.1,136.0 L137.2,132.2 L140.5,128.6 L145.8,125.2 L153.0,122.1 L161.9,119.5 L172.1,117.3 L183.5,115.7 L195.6,114.7 L208.1,114.4 L220.6,114.7 L232.8,115.7 L244.1,117.3 L254.4,119.5 L263.3,122.1 L270.5,125.2 L275.8,128.6 L279.0,132.2 Z"/>
+          <path class="ln" d="M53.0,280.0 L136.1,136.0"/>
+          <path class="ln" d="M197.0,280.0 L280.1,136.0"/>
+          <path class="ln" d="M197.0,280.0 L237.0,280.0"/>
+          <path class="hid" d="M53.0,280.0 L197.0,280.0"/>
+          <path class="arc" d="M221.0,280.0 L220.9,277.9 L220.6,275.8 L220.2,273.8 L219.6,271.8 L218.8,269.9 L217.8,268.0 L216.7,266.2 L215.4,264.6 L214.0,263.0 L212.4,261.6 L210.8,260.3 L209.0,259.2"/>
+          <circle class="pt" cx="136.1" cy="136.0" r="3.2"/>
+          <circle class="pt" cx="280.1" cy="136.0" r="3.2"/>
+          <circle class="pt" cx="197.0" cy="280.0" r="3.2"/>
+          <circle class="pt" cx="53.0" cy="280.0" r="3.2"/>
+          <circle class="pt" cx="237.0" cy="280.0" r="3.2"/>
+          <circle class="pt" cx="125.0" cy="280.0" r="3.2"/>
+          <text x="136.1" y="124.0" text-anchor="middle">A</text>
+          <text x="280.1" y="124.0" text-anchor="middle">B</text>
+          <text x="197.0" y="302.0" text-anchor="middle">C</text>
+          <text x="45.0" y="286.0" text-anchor="end">D</text>
+          <text x="237.0" y="300.0" text-anchor="middle">E</text>
+          <text x="125.0" y="272.0" text-anchor="middle">O</text>
+          <text class="val" x="86.6" y="208.0" text-anchor="end">4√3</text>
+          <text class="val" x="227.0" y="270.0">60°</text>
+          <path class="aux" d="M237.0,280.0 L280.1,280.0"/>
+          <path class="aux" d="M280.1,136.0 L280.1,280.0"/>
+        `,
+    },
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -1279,6 +1733,22 @@ export const UNIT_8_PRISMS: Unit = {
         'prisms-19',
         'prisms-20',
         'prisms-21',
+      ),
+    },
+    {
+      id: 'prisms-m4',
+      order: 4,
+      title: 'Yanal alan, hacim ve eğik silindir',
+      summary:
+        'Kare prizmanın yanal alanı, küpteki en büyük silindir, kısmen dolu depo, silindirin yanal alanı, kesit alanından cisim köşegeni, dik üçgen prizma ve eğik silindir.',
+      questions: pick(
+        'prisms-22',
+        'prisms-23',
+        'prisms-24',
+        'prisms-25',
+        'prisms-26',
+        'prisms-27',
+        'prisms-28',
       ),
     },
   ],
