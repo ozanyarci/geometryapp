@@ -1048,6 +1048,330 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+  // ---------------------------------------------------------------- 22
+  {
+    id: 'analytic-22',
+    topic: 'İki nokta arası uzaklık',
+    stem: [],
+    ask: 'Analitik düzlemde verilen A(−2, 5) ve B(4, −3) noktaları arasındaki uzaklık kaç birimdir?',
+    choices: [
+      { key: 'A', text: '8' },
+      { key: 'B', text: '2√17' },
+      { key: 'C', text: '10' },
+      { key: 'D', text: '6√3' },
+      { key: 'E', text: '12' },
+    ],
+    answer: 'C',
+    hint: 'Apsisler farkının ve ordinatlar farkının karelerini topla.',
+    solution: [
+      {
+        title: 'Farkları bul',
+        detail: 'Apsisler farkı 4 − (−2) = 6, ordinatlar farkı −3 − 5 = −8.',
+      },
+      {
+        title: 'Uzaklık formülü',
+        detail: '|AB| = √(6² + (−8)²) = √(36 + 64) = √100.',
+      },
+      {
+        title: 'Sonuç',
+        detail: '|AB| = 10 birimdir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 23
+  // Origin (128, 170), 36 px per unit: B(−2, 0) → (56, 170), C(6, 0) → (344, 170),
+  // A(0, 2√3) → (128, 45.3).
+  {
+    id: 'analytic-23',
+    topic: 'Dik üçgende köşenin apsisi',
+    figure: {
+      viewBox: '0 0 400 210',
+      caption: 'Şekil 10',
+      label:
+        'Koordinat düzleminde ABC üçgeni; B x ekseninin negatif kısmında, C pozitif kısmında, A y ekseni üzerinde. A köşesinde dik açı, B köşesinde 60 derecelik açı var.',
+      svg: `
+          <path class="ln" d="M20,170 L390,170"/>
+          <path class="ln" d="M380,164 L390,170 L380,176"/>
+          <path class="ln" d="M128,200 L128,14"/>
+          <path class="ln" d="M122,24 L128,14 L134,24"/>
+          <text x="386" y="158" text-anchor="middle">x</text>
+          <text x="138" y="24">y</text>
+          <path class="ln" d="M56,170 L128,45.3 L344,170"/>
+          <path class="arc" d="M122,55.7 L132.4,61.7 L138.4,51.3"/>
+          <path class="arc" d="M80,170 A24,24 0 0 0 68,149.2"/>
+          <text class="val" x="86" y="162">60°</text>
+          <circle class="pt" cx="56" cy="170" r="3.2"/>
+          <circle class="pt" cx="128" cy="45.3" r="3.2"/>
+          <circle class="pt" cx="344" cy="170" r="3.2"/>
+          <text x="56" y="192" text-anchor="middle">B(−2, 0)</text>
+          <text x="120" y="190" text-anchor="end">O</text>
+          <text x="344" y="192" text-anchor="middle">C(x, 0)</text>
+          <text x="118" y="42" text-anchor="end">A</text>
+        `,
+    },
+    given: ['[BA] ⊥ [CA]', 'm(ABC) = 60°', 'B(−2, 0)'],
+    stem: [],
+    ask: 'Yukarıdaki dik koordinat sisteminde verilenlere göre, C noktasının apsisi kaçtır?',
+    choices: [
+      { key: 'A', text: '4' },
+      { key: 'B', text: '4√3' },
+      { key: 'C', text: '6' },
+      { key: 'D', text: '6√3' },
+      { key: 'E', text: '8' },
+    ],
+    answer: 'C',
+    hint: 'AOB dik üçgeninde 60° lik açıdan |OA|’yı bul; sonra [AO] hipotenüse ait yüksekliktir.',
+    solution: [
+      {
+        title: '|OA| uzunluğu',
+        detail: 'AOB dik üçgeninde |OB| = 2 ve m(ABO) = 60° olduğundan |OA| = 2 · tan 60° = 2√3.',
+      },
+      {
+        title: 'Öklid bağıntısı',
+        detail: 'BAC dik üçgeninde [AO] ⊥ [BC] olduğundan |OA|² = |OB| · |OC|.',
+      },
+      {
+        title: '|OC| uzunluğu',
+        detail: '(2√3)² = 2 · |OC| ⇒ 12 = 2 · |OC| ⇒ |OC| = 6.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'C pozitif x ekseninde olduğundan C(6, 0); apsis 6’dır.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 24
+  {
+    id: 'analytic-24',
+    topic: 'İşaretlerden bölge bulma',
+    stem: [],
+    ask: 'A(−a, b) noktası dik koordinat sisteminde III. bölgede ise B(a · b, a − b) noktası hangi bölgededir?',
+    choices: [
+      { key: 'A', text: 'Orijinde' },
+      { key: 'B', text: 'I' },
+      { key: 'C', text: 'II' },
+      { key: 'D', text: 'III' },
+      { key: 'E', text: 'IV' },
+    ],
+    answer: 'C',
+    hint: 'III. bölgede apsis de ordinat da negatiftir; buradan a ve b’nin işaretini bul.',
+    solution: [
+      {
+        title: 'a ve b’nin işareti',
+        detail: 'A(−a, b) III. bölgede olduğundan −a < 0 ve b < 0, yani a > 0 ve b < 0.',
+      },
+      {
+        title: 'Apsisin işareti',
+        detail: 'a · b: pozitif ile negatifin çarpımı olduğundan a · b < 0.',
+      },
+      {
+        title: 'Ordinatın işareti',
+        detail: 'a − b: pozitif sayıdan negatif sayı çıkarıldığından a − b > 0.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Apsisi negatif, ordinatı pozitif olan B noktası II. bölgededir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 25
+  {
+    id: 'analytic-25',
+    topic: 'Ağırlık merkezinin eksenlere uzaklığı',
+    stem: [],
+    ask: 'Bir üçgenin köşe koordinatları A(−3, 7), B(2, −1) ve C(7, 3) noktalarıdır. Bu üçgenin ağırlık merkezinin x ve y eksenlerine olan uzaklıklarının toplamı kaç birimdir?',
+    choices: [
+      { key: 'A', text: '3' },
+      { key: 'B', text: '4' },
+      { key: 'C', text: '5' },
+      { key: 'D', text: '6' },
+      { key: 'E', text: '7' },
+    ],
+    answer: 'C',
+    hint: 'Ağırlık merkezinin koordinatları köşe koordinatlarının aritmetik ortalamasıdır.',
+    solution: [
+      {
+        title: 'Ağırlık merkezi',
+        detail: 'G = ((−3 + 2 + 7) / 3, (7 + (−1) + 3) / 3) = (6 / 3, 9 / 3) = (2, 3).',
+      },
+      {
+        title: 'Eksenlere uzaklıklar',
+        detail: 'G’nin x eksenine uzaklığı |3| = 3, y eksenine uzaklığı |2| = 2 birimdir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: '3 + 2 = 5 birimdir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 26
+  {
+    id: 'analytic-26',
+    topic: 'Koordinat düzleminin bölgeleri',
+    stem: [],
+    ask: 'Analitik düzlemde verilen A(a, −b) noktası II. bölgede olduğuna göre, (a, b) ikilisi aşağıdakilerden hangisi olabilir?',
+    choices: [
+      { key: 'A', text: '(2, 3)' },
+      { key: 'B', text: '(−2, 3)' },
+      { key: 'C', text: '(2, −3)' },
+      { key: 'D', text: '(−2, −3)' },
+      { key: 'E', text: '(0, −1)' },
+    ],
+    answer: 'D',
+    hint: 'II. bölgede apsis negatif, ordinat pozitiftir.',
+    solution: [
+      {
+        title: 'II. bölgenin işaretleri',
+        detail: 'A(a, −b) II. bölgede olduğundan a < 0 ve −b > 0 olmalıdır.',
+      },
+      {
+        title: 'b’nin işareti',
+        detail: '−b > 0 ise b < 0; yani a ve b’nin ikisi de negatiftir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'İkisi de negatif olan tek seçenek (−2, −3) tür; A(−2, 3) gerçekten II. bölgededir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 27
+  {
+    id: 'analytic-27',
+    topic: 'Uzaklıktan bilinmeyen koordinat',
+    stem: [],
+    ask: 'A(1, k) ve B(k, 5) noktaları arasındaki uzaklık 2√5 birim ise k’nin alabileceği değerler toplamı kaçtır?',
+    choices: [
+      { key: 'A', text: '−6' },
+      { key: 'B', text: '3' },
+      { key: 'C', text: '4' },
+      { key: 'D', text: '6' },
+      { key: 'E', text: '8' },
+    ],
+    answer: 'D',
+    hint: 'Uzaklık formülünün iki tarafının karesini al ve k’ye göre ikinci dereceden denklem kur.',
+    solution: [
+      {
+        title: 'Denklemi kur',
+        detail: '(k − 1)² + (5 − k)² = (2√5)² = 20.',
+      },
+      {
+        title: 'Aç ve düzenle',
+        detail: 'k² − 2k + 1 + k² − 10k + 25 = 20 ⇒ 2k² − 12k + 6 = 0 ⇒ k² − 6k + 3 = 0.',
+      },
+      {
+        title: 'Köklerin varlığı',
+        detail: 'Diskriminant 36 − 12 = 24 > 0 olduğundan iki farklı gerçek kök vardır.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Kökler toplamı −(−6) / 1 = 6’dır.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 28
+  {
+    id: 'analytic-28',
+    topic: 'Eşit uzaklıktan bilinmeyen apsis',
+    stem: [],
+    ask: 'Analitik düzlemde A(1, 2), B(4, 6) ve C(a, 3) noktaları veriliyor. A ile B arasındaki uzaklık, B ile C arasındaki uzaklığa eşit ise a aşağıdakilerden hangisi olabilir?',
+    choices: [
+      { key: 'A', text: '2' },
+      { key: 'B', text: '−4' },
+      { key: 'C', text: '8' },
+      { key: 'D', text: '6' },
+      { key: 'E', text: '3' },
+    ],
+    answer: 'C',
+    hint: 'Önce |AB|’yi hesapla, sonra |BC|² için denklem kur.',
+    solution: [
+      {
+        title: '|AB| uzunluğu',
+        detail: '|AB| = √((4 − 1)² + (6 − 2)²) = √(9 + 16) = 5.',
+      },
+      {
+        title: 'Denklemi kur',
+        detail: '|BC|² = (a − 4)² + (3 − 6)² = 25 ⇒ (a − 4)² = 16.',
+      },
+      {
+        title: 'Çöz',
+        detail: 'a − 4 = 4 veya a − 4 = −4, yani a = 8 veya a = 0.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Seçeneklerde yer alan değer a = 8’dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 29
+  // Origin (40, 240), 36 px per unit: A(2, 6) → (112, 24), B(2, 2) → (112, 168),
+  // C(9, 3) → (364, 132); C is drawn at y = 3, which the question leaves open.
+  {
+    id: 'analytic-29',
+    topic: 'Koordinatları verilen üçgenin alanı',
+    figure: {
+      viewBox: '0 4 400 270',
+      caption: 'Şekil 11',
+      label:
+        'Koordinat düzleminde ABC üçgeni taralı; A ve B aynı dikey doğru üzerinde, A’nın ordinatı 6, B’nin ordinatı 2, apsisleri 2; C sağda.',
+      svg: `
+          <path class="shade" d="M112,24 L112,168 L364,132 Z"/>
+          <path class="ln" d="M20,240 L392,240"/>
+          <path class="ln" d="M382,234 L392,240 L382,246"/>
+          <path class="ln" d="M40,255 L40,12"/>
+          <path class="ln" d="M34,22 L40,12 L46,22"/>
+          <text x="386" y="262" text-anchor="middle">x</text>
+          <text x="50" y="22">y</text>
+          <path class="ln" d="M34,24 L46,24"/>
+          <path class="ln" d="M34,168 L46,168"/>
+          <path class="ln" d="M112,234 L112,246"/>
+          <text x="28" y="29" text-anchor="end">6</text>
+          <text x="28" y="173" text-anchor="end">2</text>
+          <text x="112" y="262" text-anchor="middle">2</text>
+          <path class="ln" d="M112,24 L112,168 L364,132 Z"/>
+          <circle class="pt" cx="112" cy="24" r="3.2"/>
+          <circle class="pt" cx="112" cy="168" r="3.2"/>
+          <circle class="pt" cx="364" cy="132" r="3.2"/>
+          <text x="32" y="260" text-anchor="end">O</text>
+          <text x="104" y="22" text-anchor="end">A</text>
+          <text x="120" y="188">B</text>
+          <text x="372" y="137">C</text>
+        `,
+    },
+    given: ['A(2, 6)', 'B(2, 2)', 'C(9, y)'],
+    stem: [],
+    ask: 'Analitik düzlemdeki verilere göre, A(ABC) kaç birim karedir?',
+    choices: [
+      { key: 'A', text: '12' },
+      { key: 'B', text: '14' },
+      { key: 'C', text: '16' },
+      { key: 'D', text: '18' },
+      { key: 'E', text: '28' },
+    ],
+    answer: 'B',
+    hint: '[AB] y eksenine paraleldir; onu taban al, yükseklik C’nin bu doğruya yatay uzaklığıdır.',
+    solution: [
+      {
+        title: 'Taban',
+        detail: 'A ve B’nin apsisleri eşit olduğundan [AB] dikeydir: |AB| = 6 − 2 = 4.',
+      },
+      {
+        title: 'Yükseklik',
+        detail: 'C’nin x = 2 doğrusuna uzaklığı 9 − 2 = 7’dir; y ne olursa olsun değişmez.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'A(ABC) = (4 · 7) / 2 = 14 birim karedir.',
+      },
+    ],
+  },
+
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -1118,6 +1442,23 @@ export const UNIT_6_ANALYTIC: Unit = {
         'analytic-19',
         'analytic-20',
         'analytic-21',
+      ),
+    },
+    {
+      id: 'analytic-m4',
+      order: 4,
+      title: 'Uzaklık, bölgeler ve ağırlık merkezi',
+      summary:
+        'İki nokta arası uzaklık, işaretlerden bölge, ağırlık merkezinin eksenlere uzaklığı, uzaklıktan bilinmeyen, dik üçgende apsis ve üçgen alanı.',
+      questions: pick(
+        'analytic-22',
+        'analytic-23',
+        'analytic-24',
+        'analytic-25',
+        'analytic-26',
+        'analytic-27',
+        'analytic-28',
+        'analytic-29',
       ),
     },
   ],
