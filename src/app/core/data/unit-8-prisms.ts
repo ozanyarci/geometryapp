@@ -1670,6 +1670,392 @@ const QUESTIONS: Question[] = [
         `,
     },
   },
+
+  // ---------------------------------------------------------------- 29
+  // Square right prism, base edge 3√6 and height 6, at 26 px per cm.
+  {
+    id: 'prisms-29',
+    topic: 'Cisim köşegeninin taban ile yaptığı açı',
+    stem: [],
+    given: [
+      'ABCDEFGH bir kare dik prizmadır.',
+      'Cisim köşegeni |BH| = 12 cm',
+      'Cisim köşegeninin taban düzlemi ile yaptığı açı m(HBD) = 30°',
+    ],
+    ask: 'Yukarıdaki verilere göre, prizmanın hacmi kaç cm³ tür?',
+    choices: [
+      { key: 'A', text: '243' },
+      { key: 'B', text: '288' },
+      { key: 'C', text: '300' },
+      { key: 'D', text: '324' },
+      { key: 'E', text: '360' },
+    ],
+    answer: 'D',
+    hint: 'HDB üçgeni D de dik açılıdır; 30° lik açıyla |HD| ve |BD| yi bul.',
+    solution: [
+      {
+        title: 'Dik üçgen',
+        detail: '[HD] taban düzlemine dik olduğundan HDB üçgeni D de dik açılıdır.',
+      },
+      {
+        title: 'Yükseklik',
+        detail: '|HD| = 12 · sin 30° = 6 cm.',
+      },
+      {
+        title: 'Taban köşegeni',
+        detail: '|BD| = 12 · cos 30° = 6√3 cm.',
+      },
+      {
+        title: 'Taban ayrıtı',
+        detail: 'Taban kenarı a ise a√2 = 6√3 ⇒ a² = 108 / 2 = 54 cm².',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'V = a² · h = 54 · 6 = 324 cm³ tür.',
+      },
+    ],
+    figure: {
+      viewBox: '0 -256 400 280',
+      caption: 'Şekil 17',
+      label:
+        'ABCDEFGH kare dik prizması; alt yüz ABCD, üst yüz EFGH. [BH] cisim köşegeni 12 cm, [BD] taban köşegeni ve m(HBD) = 30°.',
+      svg: `
+          <path class="hid" d="M70.7,0.0 L138.2,-67.5 L329.3,-67.5"/>
+          <path class="hid" d="M138.2,-67.5 L138.2,-223.5"/>
+          <path class="hid" d="M261.8,0.0 L138.2,-67.5"/>
+          <path class="ln" d="M70.7,0.0 L261.8,0.0 L329.3,-67.5 L329.3,-223.5 L138.2,-223.5 L70.7,-156.0 Z"/>
+          <path class="ln" d="M70.7,-156.0 L261.8,-156.0 L329.3,-223.5"/>
+          <path class="ln" d="M261.8,0.0 L261.8,-156.0"/>
+          <path class="ln" d="M261.8,0.0 L138.2,-223.5"/>
+          <path class="arc" d="M238.9,-12.5 L239.6,-13.5 L240.2,-14.6 L240.9,-15.6 L241.7,-16.5 L242.5,-17.5 L243.3,-18.3 L244.2,-19.2 L245.1,-20.0 L246.1,-20.8 L247.1,-21.5 L248.1,-22.1 L249.2,-22.8"/>
+          <circle class="pt" cx="70.7" cy="0.0" r="3.2"/>
+          <circle class="pt" cx="261.8" cy="0.0" r="3.2"/>
+          <circle class="pt" cx="329.3" cy="-67.5" r="3.2"/>
+          <circle class="pt" cx="138.2" cy="-67.5" r="3.2"/>
+          <circle class="pt" cx="70.7" cy="-156.0" r="3.2"/>
+          <circle class="pt" cx="261.8" cy="-156.0" r="3.2"/>
+          <circle class="pt" cx="329.3" cy="-223.5" r="3.2"/>
+          <circle class="pt" cx="138.2" cy="-223.5" r="3.2"/>
+          <text x="62.7" y="16.0" text-anchor="end">A</text>
+          <text x="269.8" y="16.0">B</text>
+          <text x="339.3" y="-61.5">C</text>
+          <text x="128.2" y="-73.5" text-anchor="end">D</text>
+          <text x="60.7" y="-150.0" text-anchor="end">E</text>
+          <text x="269.8" y="-138.0">F</text>
+          <text x="339.3" y="-229.5">G</text>
+          <text x="138.2" y="-235.5" text-anchor="middle">H</text>
+          <text class="val" x="208.0" y="-107.8">12</text>
+          <text class="val" x="230.6" y="-26.0" text-anchor="middle">30°</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 30
+  // Cube of edge 8 at 22 px per cm; P is the midpoint of [CG].
+  {
+    id: 'prisms-30',
+    topic: 'Küpte uzunluktan tüm alan',
+    stem: [],
+    given: ['ABCDEFGH bir küptür.', 'P ∈ [CG] ve |GP| = |PC|', '|AP| = 12 cm'],
+    ask: 'Yukarıdaki şekilde verilenlere göre, küpün tüm alanı kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '256' },
+      { key: 'B', text: '320' },
+      { key: 'C', text: '384' },
+      { key: 'D', text: '432' },
+      { key: 'E', text: '512' },
+    ],
+    answer: 'C',
+    hint: '[AC] taban köşegenini çiz; [PC] ayrıtı tabana dik olduğundan ACP üçgeni C de dik açılıdır.',
+    solution: [
+      {
+        title: 'Uzunluklar',
+        detail: 'Küpün ayrıtı a olsun. |AC| = a√2 ve P orta nokta olduğundan |PC| = a / 2 dir.',
+      },
+      {
+        title: 'Pisagor',
+        detail: '|AP|² = |AC|² + |PC|² = 2a² + a² / 4 = 9a² / 4 ⇒ |AP| = 3a / 2.',
+      },
+      {
+        title: 'Ayrıt',
+        detail: '3a / 2 = 12 ⇒ a = 8 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Tüm alan 6a² = 6 · 64 = 384 cm² dir.',
+      },
+    ],
+    figure: {
+      viewBox: '0 -270 400 294',
+      caption: 'Şekil 18',
+      label:
+        'ABCDEFGH küpü; P noktası [CG] ayrıtının orta noktası, |GP| = |PC|. A ile P birleştirilmiş ve |AP| = 12 cm.',
+      svg: `
+          <path class="hid" d="M80.9,0.0 L143.1,-62.2 L319.1,-62.2"/>
+          <path class="hid" d="M143.1,-62.2 L143.1,-238.2"/>
+          <path class="ln" d="M80.9,0.0 L256.9,0.0 L319.1,-62.2 L319.1,-238.2 L143.1,-238.2 L80.9,-176.0 Z"/>
+          <path class="ln" d="M80.9,-176.0 L256.9,-176.0 L319.1,-238.2"/>
+          <path class="ln" d="M256.9,0.0 L256.9,-176.0"/>
+          <path class="hid" d="M80.9,0.0 L319.1,-150.2"/>
+          <path class="tick" d="M324.1,-194.2 L314.1,-194.2"/>
+          <path class="tick" d="M324.1,-106.2 L314.1,-106.2"/>
+          <circle class="pt" cx="80.9" cy="0.0" r="3.2"/>
+          <circle class="pt" cx="256.9" cy="0.0" r="3.2"/>
+          <circle class="pt" cx="319.1" cy="-62.2" r="3.2"/>
+          <circle class="pt" cx="143.1" cy="-62.2" r="3.2"/>
+          <circle class="pt" cx="80.9" cy="-176.0" r="3.2"/>
+          <circle class="pt" cx="256.9" cy="-176.0" r="3.2"/>
+          <circle class="pt" cx="319.1" cy="-238.2" r="3.2"/>
+          <circle class="pt" cx="143.1" cy="-238.2" r="3.2"/>
+          <circle class="pt" cx="319.1" cy="-150.2" r="3.2"/>
+          <text x="72.9" y="16.0" text-anchor="end">A</text>
+          <text x="264.9" y="16.0">B</text>
+          <text x="329.1" y="-56.2">C</text>
+          <text x="133.1" y="-68.2" text-anchor="end">D</text>
+          <text x="70.9" y="-170.0" text-anchor="end">E</text>
+          <text x="264.9" y="-158.0">F</text>
+          <text x="329.1" y="-244.2">G</text>
+          <text x="143.1" y="-250.2" text-anchor="middle">H</text>
+          <text x="329.1" y="-144.2">P</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 -270 400 294',
+      caption: 'Şekil 18',
+      label: 'Aynı küpte [AC] taban köşegeni kesikli çizilmiş; ACP üçgeni C de dik açılıdır.',
+      svg: `
+          <path class="hid" d="M80.9,0.0 L143.1,-62.2 L319.1,-62.2"/>
+          <path class="hid" d="M143.1,-62.2 L143.1,-238.2"/>
+          <path class="ln" d="M80.9,0.0 L256.9,0.0 L319.1,-62.2 L319.1,-238.2 L143.1,-238.2 L80.9,-176.0 Z"/>
+          <path class="ln" d="M80.9,-176.0 L256.9,-176.0 L319.1,-238.2"/>
+          <path class="ln" d="M256.9,0.0 L256.9,-176.0"/>
+          <path class="hid" d="M80.9,0.0 L319.1,-150.2"/>
+          <path class="tick" d="M324.1,-194.2 L314.1,-194.2"/>
+          <path class="tick" d="M324.1,-106.2 L314.1,-106.2"/>
+          <circle class="pt" cx="80.9" cy="0.0" r="3.2"/>
+          <circle class="pt" cx="256.9" cy="0.0" r="3.2"/>
+          <circle class="pt" cx="319.1" cy="-62.2" r="3.2"/>
+          <circle class="pt" cx="143.1" cy="-62.2" r="3.2"/>
+          <circle class="pt" cx="80.9" cy="-176.0" r="3.2"/>
+          <circle class="pt" cx="256.9" cy="-176.0" r="3.2"/>
+          <circle class="pt" cx="319.1" cy="-238.2" r="3.2"/>
+          <circle class="pt" cx="143.1" cy="-238.2" r="3.2"/>
+          <circle class="pt" cx="319.1" cy="-150.2" r="3.2"/>
+          <text x="72.9" y="16.0" text-anchor="end">A</text>
+          <text x="264.9" y="16.0">B</text>
+          <text x="329.1" y="-56.2">C</text>
+          <text x="133.1" y="-68.2" text-anchor="end">D</text>
+          <text x="70.9" y="-170.0" text-anchor="end">E</text>
+          <text x="264.9" y="-158.0">F</text>
+          <text x="329.1" y="-244.2">G</text>
+          <text x="143.1" y="-250.2" text-anchor="middle">H</text>
+          <text x="329.1" y="-144.2">P</text>
+          <path class="aux" d="M80.9,0.0 L319.1,-62.2"/>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 31
+  {
+    id: 'prisms-31',
+    topic: 'Ayrıtlar toplamı ve alandan cisim köşegeni',
+    stem: [],
+    ask: 'Ayrıtları a, b, c olan dikdörtgenler prizmasının alanı 52 cm² ve a + b + c = 9 cm olduğuna göre, bu dikdörtgenler prizmasının cisim köşegeninin uzunluğu kaç cm dir?',
+    choices: [
+      { key: 'A', text: '√26' },
+      { key: 'B', text: '√29' },
+      { key: 'C', text: '4√2' },
+      { key: 'D', text: '√31' },
+      { key: 'E', text: '6' },
+    ],
+    answer: 'B',
+    hint: '(a + b + c)² açılımında 2(ab + bc + ca) terimi prizmanın alanıdır.',
+    solution: [
+      {
+        title: 'Bağıntılar',
+        detail: 'Alan 2(ab + bc + ca) = 52, cisim köşegeni d = √(a² + b² + c²) dir.',
+      },
+      {
+        title: 'Kare açılımı',
+        detail: '(a + b + c)² = a² + b² + c² + 2(ab + bc + ca) ⇒ 81 = a² + b² + c² + 52.',
+      },
+      {
+        title: 'Kareler toplamı',
+        detail: 'a² + b² + c² = 81 − 52 = 29.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'd = √29 cm dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 32
+  {
+    id: 'prisms-32',
+    topic: 'Silindirin alanlarından hacim',
+    stem: [],
+    ask: 'Bir silindirin yanal alanı 48π cm² ve tüm alanı 80π cm² ise, silindirin hacmi kaç cm³ tür?',
+    choices: [
+      { key: 'A', text: '72π' },
+      { key: 'B', text: '84π' },
+      { key: 'C', text: '90π' },
+      { key: 'D', text: '96π' },
+      { key: 'E', text: '112π' },
+    ],
+    answer: 'D',
+    hint: 'Tüm alandan yanal alanı çıkarınca iki taban alanı kalır.',
+    solution: [
+      {
+        title: 'Taban alanları',
+        detail: '2πr² = 80π − 48π = 32π ⇒ r² = 16 ⇒ r = 4 cm.',
+      },
+      {
+        title: 'Yükseklik',
+        detail: '2πrh = 48π ⇒ 2 · 4 · h = 48 ⇒ h = 6 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'V = πr²h = π · 16 · 6 = 96π cm³ tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 33
+  {
+    id: 'prisms-33',
+    topic: 'Orantılı ayrıtlar ve cisim köşegeni',
+    stem: [],
+    ask: 'Ayrıtları 2, 3, 6 sayıları ile orantılı olan dikdörtgenler prizmasının cisim köşegeni 14 cm ise hacmi kaç cm³ tür?',
+    choices: [
+      { key: 'A', text: '216' },
+      { key: 'B', text: '240' },
+      { key: 'C', text: '256' },
+      { key: 'D', text: '272' },
+      { key: 'E', text: '288' },
+    ],
+    answer: 'E',
+    hint: 'Ayrıtları 2k, 3k, 6k al ve cisim köşegenini k cinsinden yaz.',
+    solution: [
+      {
+        title: 'Ayrıtlar',
+        detail: 'Ayrıtlar 2k, 3k ve 6k olsun.',
+      },
+      {
+        title: 'Cisim köşegeni',
+        detail: '√(4k² + 9k² + 36k²) = √(49k²) = 7k = 14 ⇒ k = 2.',
+      },
+      {
+        title: 'Ayrıt uzunlukları',
+        detail: '4 cm, 6 cm ve 12 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'V = 4 · 6 · 12 = 288 cm³ tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 34
+  {
+    id: 'prisms-34',
+    topic: 'Orantılı ayrıtlar ve hacimden ayrıt',
+    stem: [],
+    ask: 'Ayrıtları 2, 3, 4 ile orantılı olan bir dikdörtgenler prizmasının hacmi 648 cm³ olduğuna göre, bu prizmanın en uzun ayrıtının uzunluğu kaç cm dir?',
+    choices: [
+      { key: 'A', text: '12' },
+      { key: 'B', text: '10' },
+      { key: 'C', text: '9' },
+      { key: 'D', text: '8' },
+      { key: 'E', text: '6' },
+    ],
+    answer: 'A',
+    hint: 'Ayrıtları 2k, 3k, 4k alıp çarpımlarını hacme eşitle.',
+    solution: [
+      {
+        title: 'Ayrıtlar',
+        detail: 'Ayrıtlar 2k, 3k ve 4k olsun.',
+      },
+      {
+        title: 'Hacim denklemi',
+        detail: '2k · 3k · 4k = 24k³ = 648 ⇒ k³ = 27 ⇒ k = 3.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'En uzun ayrıt 4k = 12 cm dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 35
+  // Right triangular prism lying on the square face ABCD (edge 6), with the
+  // right angles at A and D and |AF| = |DE| = 8, at 22 px per cm.
+  {
+    id: 'prisms-35',
+    topic: 'Dik üçgen prizmanın hacmi',
+    stem: [],
+    given: [
+      'Şekil, ABCD yüzü kare olan dik üçgen prizmadır.',
+      'm(FAB) = m(EDC) = 90°',
+      '|BC| = 6 cm ve |EC| = 10 cm',
+    ],
+    ask: 'Yukarıdaki verilere göre, prizmanın hacmi kaç cm³ tür?',
+    choices: [
+      { key: 'A', text: '96' },
+      { key: 'B', text: '120' },
+      { key: 'C', text: '144' },
+      { key: 'D', text: '192' },
+      { key: 'E', text: '288' },
+    ],
+    answer: 'C',
+    hint: 'EDC dik üçgeninde |DC| = |BC| olduğunu kullanarak |ED| yi bul.',
+    solution: [
+      {
+        title: 'Kare yüz',
+        detail: 'ABCD kare olduğundan |DC| = |AB| = |AD| = 6 cm.',
+      },
+      {
+        title: 'Pisagor',
+        detail: 'EDC üçgeni D de dik açılı: |ED|² = 10² − 6² = 64 ⇒ |ED| = 8 cm.',
+      },
+      {
+        title: 'Taban alanı',
+        detail: 'Üçgen taban EDC nin alanı 8 · 6 / 2 = 24 cm² dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Prizmanın yüksekliği |AD| = 6 cm olduğundan V = 24 · 6 = 144 cm³ tür.',
+      },
+    ],
+    figure: {
+      viewBox: '0 -256 400 280',
+      caption: 'Şekil 19',
+      label:
+        'ABCDEF dik üçgen prizması; ABCD karesi alt yüz, F noktası A nın, E noktası D nin üstünde. FAB ve EDC üçgenleri A ve D de dik açılı, |BC| = 6 cm ve |EC| = 10 cm.',
+      svg: `
+          <path class="hid" d="M110.7,0.0 L157.3,-46.7 L289.3,-46.7"/>
+          <path class="hid" d="M157.3,-46.7 L157.3,-222.7"/>
+          <path class="hid" d="M157.3,-56.7 L167.3,-56.7 L167.3,-46.7"/>
+          <path class="ln" d="M110.7,0.0 L242.7,0.0 L289.3,-46.7 L157.3,-222.7 L110.7,-176.0 Z"/>
+          <path class="ln" d="M110.7,-176.0 L242.7,0.0"/>
+          <path class="ln" d="M110.7,-10.0 L120.7,-10.0 L120.7,0.0"/>
+          <circle class="pt" cx="110.7" cy="0.0" r="3.2"/>
+          <circle class="pt" cx="242.7" cy="0.0" r="3.2"/>
+          <circle class="pt" cx="289.3" cy="-46.7" r="3.2"/>
+          <circle class="pt" cx="157.3" cy="-46.7" r="3.2"/>
+          <circle class="pt" cx="157.3" cy="-222.7" r="3.2"/>
+          <circle class="pt" cx="110.7" cy="-176.0" r="3.2"/>
+          <text x="102.7" y="16.0" text-anchor="end">A</text>
+          <text x="250.7" y="16.0">B</text>
+          <text x="299.3" y="-40.7">C</text>
+          <text x="167.3" y="-28.7">D</text>
+          <text x="157.3" y="-234.7" text-anchor="middle">E</text>
+          <text x="100.7" y="-176.0" text-anchor="end">F</text>
+          <text class="val" x="276.0" y="-15.3">6</text>
+          <text class="val" x="233.3" y="-134.7">10</text>
+        `,
+    },
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -1749,6 +2135,22 @@ export const UNIT_8_PRISMS: Unit = {
         'prisms-26',
         'prisms-27',
         'prisms-28',
+      ),
+    },
+    {
+      id: 'prisms-m5',
+      order: 5,
+      title: 'Köşegen, orantılı ayrıtlar ve silindir',
+      summary:
+        'Cisim köşegeninin taban ile açısı, küpte uzunluktan tüm alan, ayrıtlar toplamından köşegen, silindirin alanları, orantılı ayrıtlar ve dik üçgen prizma.',
+      questions: pick(
+        'prisms-29',
+        'prisms-30',
+        'prisms-31',
+        'prisms-32',
+        'prisms-33',
+        'prisms-34',
+        'prisms-35',
       ),
     },
   ],
