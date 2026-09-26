@@ -5177,6 +5177,352 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+  // ---------------------------------------------------------------- 112
+  {
+    id: 'lines-112',
+    topic: 'Doğru üzerinde noktaya en yakın nokta',
+    stem: [],
+    ask: 'Eğimi 2 olup A(1, 1) noktasından geçen doğrunun üzerinde bulunan ve B(6, 1) noktasına en yakın olan noktanın ordinatı kaçtır?',
+    choices: [
+      { key: 'A', text: '1' },
+      { key: 'B', text: '2' },
+      { key: 'C', text: '5/2' },
+      { key: 'D', text: '3' },
+      { key: 'E', text: '4' },
+    ],
+    answer: 'D',
+    hint: 'Doğru üzerinde B ye en yakın nokta, B den doğruya inilen dikmenin ayağıdır.',
+    solution: [
+      {
+        title: 'Doğrunun denklemi',
+        detail: 'y − 1 = 2(x − 1) ⇒ y = 2x − 1.',
+      },
+      {
+        title: 'B den geçen dik doğru',
+        detail: 'Dik doğrunun eğimi −1/2 dir: y − 1 = −(x − 6)/2 ⇒ y = −x/2 + 4.',
+      },
+      {
+        title: 'Kesim noktası',
+        detail: '2x − 1 = −x/2 + 4 ⇒ 5x/2 = 5 ⇒ x = 2, y = 2 · 2 − 1 = 3.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'En yakın nokta (2, 3) tür; ordinatı 3 tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 113
+  {
+    id: 'lines-113',
+    topic: 'Kesim noktasının koordinatları',
+    stem: [
+      'Analitik düzlemde verilen 2x + y − 7 = 0 ve x + my − 2 = 0 doğrularının kesim noktasının koordinatları P(a, b) dir.',
+    ],
+    ask: 'a − b = 5 olduğuna göre, m kaçtır?',
+    choices: [
+      { key: 'A', text: '1' },
+      { key: 'B', text: '2' },
+      { key: 'C', text: '3' },
+      { key: 'D', text: '4' },
+      { key: 'E', text: '5' },
+    ],
+    answer: 'B',
+    hint: 'P noktası birinci doğrunun üzerindedir; 2a + b = 7 ile a − b = 5 i birlikte çöz.',
+    solution: [
+      {
+        title: 'P birinci doğrunun üzerinde',
+        detail: '2a + b − 7 = 0 ⇒ 2a + b = 7.',
+      },
+      {
+        title: 'Denklem sistemini çöz',
+        detail: '2a + b = 7 ve a − b = 5 taraf tarafa toplanırsa 3a = 12 ⇒ a = 4, b = −1.',
+      },
+      {
+        title: 'P ikinci doğrunun üzerinde',
+        detail: '4 + m · (−1) − 2 = 0 ⇒ 2 − m = 0.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'm = 2 dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 114
+  {
+    id: 'lines-114',
+    topic: 'Parametreye bağlı noktaların doğrusu',
+    stem: [],
+    ask: 'A(2k − 1, k + 3) noktalarının belirttiği doğrunun denklemi aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: 'x − 2y + 7 = 0' },
+      { key: 'B', text: 'x + 2y − 7 = 0' },
+      { key: 'C', text: 'x − 2y − 7 = 0' },
+      { key: 'D', text: '2x − y + 7 = 0' },
+      { key: 'E', text: 'x − 2y + 5 = 0' },
+    ],
+    answer: 'A',
+    hint: 'x = 2k − 1 ve y = k + 3 yaz; iki eşitlikten k yı yok et.',
+    solution: [
+      {
+        title: 'Koordinatları yaz',
+        detail: 'x = 2k − 1 ve y = k + 3 tür.',
+      },
+      {
+        title: 'k yı yalnız bırak',
+        detail: 'İkinci eşitlikten k = y − 3 bulunur.',
+      },
+      {
+        title: 'Yerine koy',
+        detail: 'x = 2(y − 3) − 1 = 2y − 7 ⇒ x − 2y + 7 = 0.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'Noktaların belirttiği doğru x − 2y + 7 = 0 doğrusudur. Kontrol: k = 0 için (−1, 3) noktası −1 − 6 + 7 = 0 sağlar.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 115
+  {
+    id: 'lines-115',
+    topic: 'İç açıortay doğrusu üzerindeki nokta',
+    given: ['A(4, y)', 'B(−4, 0)', 'C(0, 3)', 'm(CBA) = m(ABO)'],
+    // Origin (200, 250), 40 px per unit; BA has slope 1/3, A = (4, 8/3).
+    figure: {
+      viewBox: '0 60 400 250',
+      caption: 'Şekil 48',
+      label:
+        'Koordinat düzleminde B(−4, 0) noktası x ekseni, C(0, 3) noktası y ekseni üzerinde; BC doğrusu çizili. B den geçen ikinci doğru A(4, y) noktasından geçiyor ve CBO açısını iki eş açıya bölüyor.',
+      svg: `
+          <path class="ln" d="M10,250 L390,250"/>
+          <path class="ln" d="M380,244 L390,250 L380,256"/>
+          <path class="ln" d="M200,300 L200,72"/>
+          <path class="ln" d="M194,82 L200,72 L206,82"/>
+          <text x="386" y="272" text-anchor="middle">x</text>
+          <text x="212" y="84">y</text>
+          <path class="ln" d="M20,265 L232,106"/>
+          <path class="ln" d="M20,256.67 L380,136.67"/>
+          <path class="arc" d="M85,250 A45,45 0 0 0 82.69,235.77"/>
+          <path class="arc" d="M82.69,235.77 A45,45 0 0 0 76,223"/>
+          <circle class="pt" cx="40" cy="250" r="3.2"/>
+          <circle class="pt" cx="200" cy="130" r="3.2"/>
+          <circle class="pt" cx="360" cy="143.33" r="3.2"/>
+          <text x="192" y="268" text-anchor="end">O</text>
+          <text x="40" y="272" text-anchor="middle">B</text>
+          <text x="192" y="126" text-anchor="end">C</text>
+          <text x="360" y="126" text-anchor="middle">A(4, y)</text>
+        `,
+    },
+    stem: [],
+    ask: 'Analitik düzlemdeki verilere göre, A noktasının ordinatı (y) kaçtır?',
+    choices: [
+      { key: 'A', text: '2' },
+      { key: 'B', text: '7/3' },
+      { key: 'C', text: '8/3' },
+      { key: 'D', text: '3' },
+      { key: 'E', text: '10/3' },
+    ],
+    answer: 'C',
+    hint: 'BA doğrusu OBC üçgeninde B köşesinin iç açıortayıdır; açıortay teoremiyle y eksenini kestiği noktayı bul.',
+    solution: [
+      {
+        title: 'OBC dik üçgeni',
+        detail: '|OB| = 4, |OC| = 3 olduğundan |BC| = √(16 + 9) = 5 tir.',
+      },
+      {
+        title: 'Açıortay teoremi',
+        detail:
+          'Açıortay y eksenini D noktasında kessin: |OD| / |DC| = |OB| / |BC| = 4/5. |OD| + |DC| = 3 olduğundan |OD| = 3 · 4/9 = 4/3 tür.',
+      },
+      {
+        title: 'Açıortayın eğimi',
+        detail: 'B(−4, 0) ve D(0, 4/3) noktalarından geçen doğrunun eğimi (4/3) / 4 = 1/3 tür.',
+      },
+      {
+        title: 'A noktasının ordinatı',
+        detail: 'y = (1/3)(x + 4) doğrusunda x = 4 için y = 8/3 bulunur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 116
+  {
+    id: 'lines-116',
+    topic: 'Doğruların oluşturduğu taralı alan',
+    // Origin (150, 290), 20 px per unit; drawn with n = 4, so y = 2x + 4 meets
+    // y = 6 at (1, 6) and x = 4 at (4, 12).
+    figure: {
+      viewBox: '0 10 400 330',
+      caption: 'Şekil 49',
+      label:
+        'Koordinat düzleminde x = 4, y = 6 ve y = 2x + n doğruları çizili. y = 2x + n doğrusu y eksenini y = 6 nın altında, y = 6 doğrusunu x = 4 ün solunda kesiyor. y ekseni, y = 6 ve eğik doğrunun sınırladığı küçük üçgen ile y = 6, x = 4 ve eğik doğrunun sınırladığı üçgen taralı.',
+      svg: `
+          <path class="shade" d="M150,210 L150,170 L170,170 Z"/>
+          <path class="shade" d="M170,170 L230,170 L230,50 Z"/>
+          <path class="ln" d="M20,290 L390,290"/>
+          <path class="ln" d="M380,284 L390,290 L380,296"/>
+          <path class="ln" d="M150,330 L150,22"/>
+          <path class="ln" d="M144,32 L150,22 L156,32"/>
+          <text x="386" y="312" text-anchor="middle">x</text>
+          <text x="162" y="34">y</text>
+          <path class="ln" d="M40,170 L390,170"/>
+          <path class="ln" d="M230,330 L230,22"/>
+          <path class="ln" d="M90,330 L242,26"/>
+          <text x="142" y="308" text-anchor="end">O</text>
+          <text x="390" y="162" text-anchor="end">y = 6</text>
+          <text x="238" y="326">x = 4</text>
+          <text x="84" y="326" text-anchor="end">y = 2x + n</text>
+        `,
+    },
+    stem: [
+      'Analitik düzlemde x = 4, y = 6 ve y = 2x + n doğruları veriliyor.',
+      'n > 0 olmak üzere taralı bölgelerin alanları toplamı 10 birimkaredir.',
+    ],
+    ask: 'Yukarıdaki verilere göre, n kaçtır?',
+    choices: [
+      { key: 'A', text: '1' },
+      { key: 'B', text: '2' },
+      { key: 'C', text: '3' },
+      { key: 'D', text: '4' },
+      { key: 'E', text: '5' },
+    ],
+    answer: 'D',
+    hint: 'Eğik doğrunun y eksenini, y = 6 doğrusunu ve x = 4 doğrusunu kestiği noktaları n cinsinden yaz.',
+    solution: [
+      {
+        title: 'Kesim noktaları',
+        detail:
+          'y = 2x + n doğrusu y eksenini (0, n), y = 6 doğrusunu ((6 − n)/2, 6), x = 4 doğrusunu (4, 8 + n) noktasında keser.',
+      },
+      {
+        title: 'Soldaki üçgen',
+        detail: 'Dik kenarları 6 − n ve (6 − n)/2 dir; alanı (6 − n)² / 4 tür.',
+      },
+      {
+        title: 'Sağdaki üçgen',
+        detail:
+          'Dik kenarları 4 − (6 − n)/2 = (n + 2)/2 ve (8 + n) − 6 = n + 2 dir; alanı (n + 2)² / 4 tür.',
+      },
+      {
+        title: 'Denklemi kur',
+        detail: '(6 − n)² + (n + 2)² = 40 ⇒ 2n² − 8n + 40 = 40 ⇒ 2n(n − 4) = 0.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'n > 0 olduğundan n = 4 tür. Kontrol: alanlar 1 ve 9, toplamı 10.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 117
+  {
+    id: 'lines-117',
+    topic: 'Paralel doğrular arasında eşkenar üçgen',
+    stem: [],
+    ask: 'İki köşesi 3x − 4y + 2 = 0 doğrusu üzerinde, diğer köşesi 6x − 8y − 26 = 0 doğrusu üzerinde bulunan eşkenar üçgenin bir kenar uzunluğu kaç birimdir?',
+    choices: [
+      { key: 'A', text: '2' },
+      { key: 'B', text: '√6' },
+      { key: 'C', text: '2√3' },
+      { key: 'D', text: '3√2' },
+      { key: 'E', text: '4' },
+    ],
+    answer: 'C',
+    hint: 'Doğrular paraleldir; aralarındaki uzaklık üçgenin yüksekliğidir.',
+    solution: [
+      {
+        title: 'Katsayıları eşitle',
+        detail: 'Birinci doğru 2 ile çarpılırsa 6x − 8y + 4 = 0 olur; doğrular paraleldir.',
+      },
+      {
+        title: 'Paralel doğrular arası uzaklık',
+        detail: 'h = |4 − (−26)| / √(36 + 64) = 30 / 10 = 3 birimdir.',
+      },
+      {
+        title: 'Yükseklikten kenara',
+        detail: 'Eşkenar üçgende h = a√3 / 2 ⇒ a = 2 · 3 / √3.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'a = 6/√3 = 2√3 birimdir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 118
+  {
+    id: 'lines-118',
+    topic: 'Dik üçgende yüksekliğin ayırdığı alanlar',
+    given: ['[AC] ⊥ [OB]', 'A(AOB) = S₁', 'A(BOC) = S₂'],
+    // Origin (100, 270), 40 px per unit; drawn with A(0, 4), C(6, 0), so B is
+    // the foot (24/13, 36/13) on y = 3x/2.
+    figure: {
+      viewBox: '0 30 400 290',
+      caption: 'Şekil 50',
+      label:
+        'Koordinat düzleminde A noktası y ekseni, C noktası x ekseni üzerinde. Orijinden geçen y = 3x/2 doğrusu AC doğru parçasını B noktasında dik kesiyor. AOB üçgeninin alanı S₁, BOC üçgeninin alanı S₂.',
+      svg: `
+          <path class="ln" d="M50,270 L390,270"/>
+          <path class="ln" d="M380,264 L390,270 L380,276"/>
+          <path class="ln" d="M100,310 L100,42"/>
+          <path class="ln" d="M94,52 L100,42 L106,52"/>
+          <text x="386" y="292" text-anchor="middle">x</text>
+          <text x="112" y="54">y</text>
+          <path class="ln" d="M100,110 L340,270"/>
+          <path class="ln" d="M80,300 L228,78"/>
+          <path class="ln" d="M168.3,167.55 L176.62,173.1 L182.17,164.78"/>
+          <circle class="pt" cx="100" cy="110" r="3.2"/>
+          <circle class="pt" cx="173.85" cy="159.23" r="3.2"/>
+          <circle class="pt" cx="340" cy="270" r="3.2"/>
+          <text x="92" y="288" text-anchor="end">O</text>
+          <text x="92" y="114" text-anchor="end">A</text>
+          <text x="188" y="160">B</text>
+          <text x="340" y="292" text-anchor="middle">C</text>
+          <text x="116" y="192">S₁</text>
+          <text x="196" y="240">S₂</text>
+          <text x="232" y="76">y = 3x/2</text>
+        `,
+    },
+    stem: [],
+    ask: 'Verilen bilgilere göre, S₁ / S₂ oranı kaçtır?',
+    choices: [
+      { key: 'A', text: '2/3' },
+      { key: 'B', text: '4/9' },
+      { key: 'C', text: '9/4' },
+      { key: 'D', text: '4/13' },
+      { key: 'E', text: '3/2' },
+    ],
+    answer: 'B',
+    hint: 'OB ⊥ AC olduğundan AC nin eğimi, OB nin eğiminin negatif tersidir; bu eğim |OA| / |OC| oranını verir.',
+    solution: [
+      {
+        title: 'AC nin eğimi',
+        detail: 'OB nin eğimi 3/2 olduğundan AC nin eğimi −2/3 tür.',
+      },
+      {
+        title: 'Kenar oranı',
+        detail:
+          'AC doğrusu eksenleri A(0, |OA|) ve C(|OC|, 0) noktalarında keser; eğim −|OA| / |OC| = −2/3 ⇒ |OA| / |OC| = 2/3.',
+      },
+      {
+        title: 'Alanlar tabanlarla orantılı',
+        detail:
+          'AOB ve BOC üçgenlerinin O dan inen ortak yüksekliği OB dir; S₁ / S₂ = |AB| / |BC|.',
+      },
+      {
+        title: 'Öklid bağıntısı',
+        detail:
+          '|OA|² = |AB| · |AC| ve |OC|² = |BC| · |AC| ⇒ |AB| / |BC| = |OA|² / |OC|² = (2/3)².',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'S₁ / S₂ = 4/9 dur.',
+      },
+    ],
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -5407,6 +5753,22 @@ export const UNIT_7_LINES: Unit = {
         'lines-109',
         'lines-110',
         'lines-111',
+      ),
+    },
+    {
+      id: 'lines-m18',
+      order: 18,
+      title: 'En yakın nokta, açıortay ve alan oranı',
+      summary:
+        'Doğruya en yakın nokta, kesim noktası, parametreli noktaların doğrusu, açıortay üzerindeki nokta, taralı alan, paralel doğrular arasında eşkenar üçgen ve alan oranı.',
+      questions: pick(
+        'lines-112',
+        'lines-113',
+        'lines-114',
+        'lines-115',
+        'lines-116',
+        'lines-117',
+        'lines-118',
       ),
     },
   ],
