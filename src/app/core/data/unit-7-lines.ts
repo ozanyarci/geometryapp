@@ -6468,6 +6468,346 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+  // ---------------------------------------------------------------- 141
+  {
+    id: 'lines-141',
+    topic: 'Taralı bölgenin eşitsizlikleri',
+    // Origin (150, 250), 40 px per unit. d: 2x + y = 4 runs from (−0.5, 5) to
+    // (2.75, −1.5); A(0, 4) → (150, 90), B(2, 0) → (230, 250). The shaded
+    // strip 0 ≤ x ≤ 2 below d is cut off at the bottom edge of the drawing.
+    figure: {
+      viewBox: '0 10 400 310',
+      caption: 'Şekil 57',
+      label:
+        'Dik koordinat sisteminde d doğrusu y eksenini A(0, 4) noktasında, x = 2 doğrusu ile birlikte x eksenini B noktasında kesiyor. y ekseni ile x = 2 doğrusu arasında, d doğrusunun altında kalan bölge taralı ve aşağı doğru devam ediyor.',
+      svg: `
+          <path class="shade" d="M150,90 L230,250 L230,320 L150,320 Z"/>
+          <path class="ln" d="M30,250 L390,250"/>
+          <path class="ln" d="M380,244 L390,250 L380,256"/>
+          <path class="ln" d="M150,320 L150,22"/>
+          <path class="ln" d="M144,32 L150,22 L156,32"/>
+          <text x="386" y="272" text-anchor="middle">x</text>
+          <text x="162" y="34">y</text>
+          <path class="ln" d="M230,320 L230,30"/>
+          <path class="ln" d="M130,50 L260,310"/>
+          <circle class="pt" cx="150" cy="90" r="3.2"/>
+          <circle class="pt" cx="230" cy="250" r="3.2"/>
+          <text x="142" y="86" text-anchor="end">A(0, 4)</text>
+          <text x="236" y="244">B</text>
+          <text x="142" y="268" text-anchor="end">O</text>
+          <text x="120" y="50" text-anchor="end">d</text>
+          <text x="238" y="44">x = 2</text>
+        `,
+    },
+    stem: [
+      'Şekildeki dik koordinat sisteminde x = 2 doğrusu ile d doğrusunun kesişim noktası B dir.',
+    ],
+    ask: 'Buna göre, taralı kısım aşağıdakilerden hangisi ile belirtilebilir?',
+    choices: [
+      { key: 'A', text: 'x ≥ 0, x ≤ 2, 2x + y ≥ 4' },
+      { key: 'B', text: 'x ≥ 0, x ≤ 2, 2x + y ≤ 4' },
+      { key: 'C', text: 'x ≤ 0, x ≤ 2, 2x + y ≤ 4' },
+      { key: 'D', text: 'x ≥ 0, x ≥ 2, 2x + y ≤ 4' },
+      { key: 'E', text: 'x ≥ 0, x ≤ 2, x + 2y ≤ 4' },
+    ],
+    answer: 'B',
+    hint: 'Önce d doğrusunun denklemini A ve B noktalarından yaz, sonra taralı bölgeden bir noktayı dene.',
+    solution: [
+      {
+        title: 'B noktası',
+        detail: 'B hem x = 2 doğrusunda hem x ekseninde olduğundan B(2, 0) dır.',
+      },
+      {
+        title: 'd doğrusu',
+        detail: 'A(0, 4) ve B(2, 0) dan geçen doğru x/2 + y/4 = 1, yani 2x + y = 4 tür.',
+      },
+      {
+        title: 'Dikey sınırlar',
+        detail: 'Taralı bölge y ekseninin sağında ve x = 2 doğrusunun solunda: x ≥ 0 ve x ≤ 2.',
+      },
+      {
+        title: 'Eğik sınır',
+        detail:
+          'Taralı bölgedeki (1, 0) noktası için 2 · 1 + 0 = 2 ≤ 4 olduğundan bölge 2x + y ≤ 4 tarafındadır.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Taralı kısım x ≥ 0, x ≤ 2, 2x + y ≤ 4 ile belirtilir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 142
+  {
+    id: 'lines-142',
+    topic: 'Noktanın doğruya göre simetriği',
+    stem: ['A(−2, 5) noktasının y = 2x + n doğrusuna göre simetriği B(6, 1) noktasıdır.'],
+    ask: 'Bu durumda n değeri aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: '−3' },
+      { key: 'B', text: '−2' },
+      { key: 'C', text: '−1' },
+      { key: 'D', text: '0' },
+      { key: 'E', text: '1' },
+    ],
+    answer: 'C',
+    hint: 'Simetri doğrusu [AB] nin orta noktasından geçer.',
+    solution: [
+      {
+        title: 'Diklik kontrolü',
+        detail:
+          'AB nin eğimi (1 − 5)/(6 + 2) = −1/2 dir; 2 · (−1/2) = −1 olduğundan AB doğruya diktir.',
+      },
+      {
+        title: 'Orta nokta',
+        detail: '[AB] nin orta noktası ((−2 + 6)/2, (5 + 1)/2) = (2, 3) tür.',
+      },
+      {
+        title: 'Doğruda yerine koy',
+        detail: '(2, 3) noktası y = 2x + n üzerinde: 3 = 2 · 2 + n.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'n = 3 − 4 = −1 dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 143
+  {
+    id: 'lines-143',
+    topic: 'Eksene teğet çember',
+    // Origin (120, 290), 20 px per unit. Centre (2√5, 6) → (209.44, 170),
+    // r = 6 → 120 px. B(0, 2) → (120, 250), C(0, 10) → (120, 90),
+    // A(2√5, 0) → (209.44, 290).
+    figure: {
+      viewBox: '0 10 400 320',
+      caption: 'Şekil 58',
+      label:
+        'Dik koordinat sisteminde O merkezli çember x eksenine A noktasında teğet, y eksenini B ve C noktalarında kesiyor; B noktası C nin altında.',
+      svg: `
+          <path class="ln" d="M30,290 L390,290"/>
+          <path class="ln" d="M380,284 L390,290 L380,296"/>
+          <path class="ln" d="M120,318 L120,22"/>
+          <path class="ln" d="M114,32 L120,22 L126,32"/>
+          <text x="386" y="312" text-anchor="middle">x</text>
+          <text x="132" y="34">y</text>
+          <circle class="ln" cx="209.44" cy="170" r="120"/>
+          <circle class="pt" cx="209.44" cy="170" r="3.2"/>
+          <circle class="pt" cx="209.44" cy="290" r="3.2"/>
+          <circle class="pt" cx="120" cy="250" r="3.2"/>
+          <circle class="pt" cx="120" cy="90" r="3.2"/>
+          <text x="217" y="166">O</text>
+          <text x="209.44" y="312" text-anchor="middle">A</text>
+          <text x="112" y="268" text-anchor="end">B</text>
+          <text x="112" y="80" text-anchor="end">C</text>
+        `,
+    },
+    given: ['A(a, 0)', 'B(0, 2)', 'C(0, 10)'],
+    stem: [
+      'O merkezli çember x eksenine A noktasında teğet, y eksenini ise B ve C noktalarında kesmektedir.',
+    ],
+    ask: 'Buna göre, a kaçtır?',
+    choices: [
+      { key: 'A', text: '4' },
+      { key: 'B', text: '2√5' },
+      { key: 'C', text: '3√2' },
+      { key: 'D', text: '2√6' },
+      { key: 'E', text: '5' },
+    ],
+    answer: 'B',
+    hint: 'Merkezin ordinatı [BC] kirişinin orta noktasının ordinatına, yarıçap da bu ordinata eşittir.',
+    solution: [
+      {
+        title: 'Merkezin ordinatı',
+        detail:
+          'Merkezden [BC] ye inen dikme kirişi ortalar: merkezin ordinatı (2 + 10)/2 = 6 dır.',
+      },
+      {
+        title: 'Yarıçap',
+        detail: 'Çember x eksenine teğet olduğundan r = 6 dır; merkez (a, 6) noktasıdır.',
+      },
+      {
+        title: 'Dik üçgen',
+        detail: 'Merkez, C(0, 10) ve (0, 6) noktalarıyla dik üçgen kurulur: a² + (10 − 6)² = 6².',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'a² = 36 − 16 = 20 ⇒ a = 2√5 tir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 144
+  {
+    id: 'lines-144',
+    topic: 'Doğrularla eksenler arasındaki alan',
+    stem: [],
+    ask: 'Analitik düzlemde y = −2x + k ve y = 6 denklemleri ile verilen doğrularla eksenler arasında kalan dörtgensel bölgenin alanı 27 birimkare olduğuna göre, k aşağıdakilerden hangisi olabilir?',
+    choices: [
+      { key: 'A', text: '−4' },
+      { key: 'B', text: '3' },
+      { key: 'C', text: '6' },
+      { key: 'D', text: '9' },
+      { key: 'E', text: '12' },
+    ],
+    answer: 'E',
+    hint: 'k > 6 için dörtgen, tabanları x ekseni ve y = 6 üzerinde olan bir yamuktur.',
+    solution: [
+      {
+        title: 'Kesim noktaları',
+        detail:
+          'k > 6 iken doğru x eksenini (k/2, 0), y = 6 doğrusunu ((k − 6)/2, 6) noktasında keser.',
+      },
+      {
+        title: 'Yamuk',
+        detail: 'Paralel kenarlar k/2 ve (k − 6)/2, yükseklik 6 dır.',
+      },
+      {
+        title: 'Alan',
+        detail: '(k/2 + (k − 6)/2) · 6 / 2 = 3(k − 3) = 27 ⇒ k − 3 = 9.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'k = 12 bulunur. (k < 0 için aynı hesap k = −6 verir; 0 ≤ k ≤ 6 için dörtgen oluşmaz.) Seçeneklerde olan 12 dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 145
+  {
+    id: 'lines-145',
+    topic: 'Dik doğrunun denklemi',
+    // Origin (100, 150), 30 px per unit. d₁: y = x/2 − 3 from (−1, −3.5) to
+    // (8, 1); d₂: y = −2x + 2 from (−0.8, 3.6) to (3, −4). A(6, 0) → (280, 150),
+    // B(0, −3) → (100, 240), T(2, −2) → (160, 210). The right-angle mark sits
+    // in the up-right / up-left quadrant, 10 px along each line.
+    figure: {
+      viewBox: '0 10 400 300',
+      caption: 'Şekil 59',
+      label:
+        'Dik koordinat sisteminde d₁ doğrusu x eksenini A, y eksenini B noktasında kesiyor. d₂ doğrusu d₁ e A ile B arasındaki T noktasında dik.',
+      svg: `
+          <path class="ln" d="M20,150 L390,150"/>
+          <path class="ln" d="M380,144 L390,150 L380,156"/>
+          <path class="ln" d="M100,300 L100,22"/>
+          <path class="ln" d="M94,32 L100,22 L106,32"/>
+          <text x="386" y="172" text-anchor="middle">x</text>
+          <text x="110" y="34">y</text>
+          <path class="ln" d="M70,255 L340,120"/>
+          <path class="ln" d="M76,42 L190,270"/>
+          <path class="ln" d="M168.94,205.53 L164.47,196.59 L155.53,201.06"/>
+          <circle class="pt" cx="280" cy="150" r="3.2"/>
+          <circle class="pt" cx="100" cy="240" r="3.2"/>
+          <circle class="pt" cx="160" cy="210" r="3.2"/>
+          <text x="92" y="168" text-anchor="end">O</text>
+          <text x="288" y="170">A</text>
+          <text x="92" y="246" text-anchor="end">B</text>
+          <text x="150" y="242" text-anchor="middle">T</text>
+          <text x="344" y="114">d₁</text>
+          <text x="70" y="42" text-anchor="end">d₂</text>
+        `,
+    },
+    given: ['d₁: x/6 − y/3 = 1', 'd₁ ⊥ d₂'],
+    stem: [
+      'Dik koordinat sisteminde eksenleri A ve B noktalarında kesen d₁ doğrusu T noktasında d₂ doğrusuna diktir.',
+    ],
+    ask: '|AT| = 2|BT| olduğuna göre, d₂ doğrusunun denklemi aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: '2x + y + 2 = 0' },
+      { key: 'B', text: '2x + y − 7 = 0' },
+      { key: 'C', text: 'x − 2y − 6 = 0' },
+      { key: 'D', text: '2x + y − 2 = 0' },
+      { key: 'E', text: 'x + 2y + 2 = 0' },
+    ],
+    answer: 'D',
+    hint: 'T noktası [AB] yi B den başlayarak 1 : 2 oranında böler.',
+    solution: [
+      {
+        title: 'A ve B',
+        detail: 'd₁: x/6 − y/3 = 1 doğrusu eksenleri A(6, 0) ve B(0, −3) noktalarında keser.',
+      },
+      {
+        title: 'T noktası',
+        detail:
+          '|BT| : |TA| = 1 : 2 olduğundan T = (2B + A)/3 = ((0 + 6)/3, (−6 + 0)/3) = (2, −2) dir.',
+      },
+      {
+        title: 'd₂ nin eğimi',
+        detail: 'd₁ in eğimi 3/6 = 1/2 olduğundan ona dik d₂ nin eğimi −2 dir.',
+      },
+      {
+        title: 'Denklem',
+        detail: 'y + 2 = −2(x − 2) ⇒ y = −2x + 2.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'd₂ doğrusunun denklemi 2x + y − 2 = 0 dır.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 146
+  {
+    id: 'lines-146',
+    topic: 'İki doğru ve x ekseni arasındaki alan',
+    // Origin (140, 250), 25 px per unit. Through (−4, 0) and P(4, 3):
+    // y = 3x/8 + 3/2, drawn from x = −5 to 7. Through (0, 6) and P:
+    // y = −3x/4 + 6, drawn from x = −1 to 9; it meets the x-axis at (8, 0).
+    figure: {
+      viewBox: '0 20 400 280',
+      caption: 'Şekil 60',
+      label:
+        'Dik koordinat sisteminde x eksenini −4 noktasında kesen doğru ile y eksenini 6 noktasında kesen doğru P(4, 3) noktasında kesişiyor. İki doğru ile x ekseni arasında kalan üçgensel bölge taralı.',
+      svg: `
+          <path class="shade" d="M40,250 L340,250 L240,175 Z"/>
+          <path class="ln" d="M10,250 L390,250"/>
+          <path class="ln" d="M380,244 L390,250 L380,256"/>
+          <path class="ln" d="M140,285 L140,30"/>
+          <path class="ln" d="M134,40 L140,30 L146,40"/>
+          <text x="386" y="272" text-anchor="middle">x</text>
+          <text x="150" y="42">y</text>
+          <path class="ln" d="M15,259.38 L315,146.88"/>
+          <path class="ln" d="M115,81.25 L365,268.75"/>
+          <circle class="pt" cx="240" cy="175" r="3.2"/>
+          <text x="40" y="272" text-anchor="middle">−4</text>
+          <text x="132" y="104" text-anchor="end">6</text>
+          <text x="132" y="272" text-anchor="end">O</text>
+          <text x="262" y="188">P(4, 3)</text>
+        `,
+    },
+    stem: [],
+    ask: 'Analitik düzlemde x eksenini (−4, 0) noktasında kesen doğru ile y eksenini (0, 6) noktasında kesen doğru P(4, 3) noktasında kesiştiğine göre, taralı alan kaç birimkaredir?',
+    choices: [
+      { key: 'A', text: '12' },
+      { key: 'B', text: '15' },
+      { key: 'C', text: '16' },
+      { key: 'D', text: '18' },
+      { key: 'E', text: '24' },
+    ],
+    answer: 'D',
+    hint: 'İkinci doğrunun x eksenini kestiği noktayı bul; taralı üçgenin yüksekliği P nin ordinatıdır.',
+    solution: [
+      {
+        title: 'İkinci doğrunun eğimi',
+        detail:
+          '(0, 6) ve P(4, 3) noktalarından geçen doğrunun eğimi (3 − 6)/4 = −3/4 tür: y = −3x/4 + 6.',
+      },
+      {
+        title: 'x eksenini kestiği nokta',
+        detail: 'y = 0 için 3x/4 = 6 ⇒ x = 8; kesim noktası (8, 0) dır.',
+      },
+      {
+        title: 'Taban ve yükseklik',
+        detail: 'Taban 8 − (−4) = 12, yükseklik P nin ordinatı 3 tür.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Taralı alan 12 · 3 / 2 = 18 birimkaredir.',
+      },
+    ],
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -6757,6 +7097,14 @@ export const UNIT_7_LINES: Unit = {
         'lines-139',
         'lines-140',
       ),
+    },
+    {
+      id: 'lines-m22',
+      order: 22,
+      title: 'Bölgeler, simetri ve alanlar',
+      summary:
+        'Taralı bölgenin eşitsizlikleri, noktanın doğruya göre simetriği, eksene teğet çember, doğrularla eksenler arasındaki alan, dik doğrunun denklemi ve taralı üçgenin alanı.',
+      questions: pick('lines-141', 'lines-142', 'lines-143', 'lines-144', 'lines-145', 'lines-146'),
     },
   ],
 };

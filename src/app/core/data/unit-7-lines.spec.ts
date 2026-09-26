@@ -263,6 +263,18 @@ describe('unit 7 answer key', () => {
   it('139 — |3n + 7|/5 = 4, n = 13/3 or n = −9 → A', () => expect(answerOf('lines-139')).toBe('A'));
   it('140 — B(−1, 3), |(m + 3)/(1 − 3m)| = 1, m = −1/2, x + 1 = 6, x = 5 → C', () =>
     expect(answerOf('lines-140')).toBe('C'));
+  it('141 — B(2, 0), d: 2x + y = 4, (1, 0): 2 ≤ 4, x ≥ 0, x ≤ 2 → B', () =>
+    expect(answerOf('lines-141')).toBe('B'));
+  it('142 — slope −1/2 ⊥ 2, midpoint (2, 3), 3 = 4 + n, n = −1 → C', () =>
+    expect(answerOf('lines-142')).toBe('C'));
+  it('143 — centre y = 6, r = 6, a² + 4² = 36, a = 2√5 → B', () =>
+    expect(answerOf('lines-143')).toBe('B'));
+  it('144 — (k/2 + (k − 6)/2) · 3 = 3k − 9 = 27, k = 12 → E', () =>
+    expect(answerOf('lines-144')).toBe('E'));
+  it('145 — A(6, 0), B(0, −3), T(2, −2), slope −2, 2x + y − 2 = 0 → D', () =>
+    expect(answerOf('lines-145')).toBe('D'));
+  it('146 — y = −3x/4 + 6 meets x-axis at 8, 12 · 3/2 = 18 → D', () =>
+    expect(answerOf('lines-146')).toBe('D'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
