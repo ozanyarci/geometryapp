@@ -1692,6 +1692,335 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+
+  // ---------------------------------------------------------------- 38
+  {
+    id: 'analytic-38',
+    topic: 'Alandan bilinmeyen koordinat',
+    given: ['A(2, 1)', 'B(4, 5)', 'C(2, b)', 'Alan(ABC) = 6 birim kare'],
+    stem: [],
+    ask: 'Buna göre, b aşağıdakilerden hangisi olabilir?',
+    choices: [
+      { key: 'A', text: '−3' },
+      { key: 'B', text: '−1' },
+      { key: 'C', text: '3' },
+      { key: 'D', text: '5' },
+      { key: 'E', text: '7' },
+    ],
+    answer: 'E',
+    hint: 'A ile C’nin apsisleri aynı; [AC]’yi taban al, B’nin x = 2 doğrusuna uzaklığı yükseklik olur.',
+    solution: [
+      {
+        title: 'Taban',
+        detail: 'A ve C, x = 2 doğrusu üzerindedir; |AC| = |b − 1|.',
+      },
+      {
+        title: 'Yükseklik',
+        detail: 'B’nin x = 2 doğrusuna uzaklığı 4 − 2 = 2 birimdir.',
+      },
+      {
+        title: 'Denklem',
+        detail: '|b − 1| · 2 / 2 = 6 ⇒ |b − 1| = 6 ⇒ b = 7 ya da b = −5.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Seçeneklerde yer alan değer b = 7’dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 39
+  {
+    id: 'analytic-39',
+    topic: 'Düzgün altıgenin köşe koordinatları',
+    // Scale 22 px per unit, origin at (70, 270); side a = 6.
+    figure: {
+      viewBox: '0 0 400 300',
+      caption: 'Şekil 14',
+      label:
+        'Koordinat düzleminde ABCDEF düzgün altıgeni; A ve B x ekseni üzerinde, F y ekseni üzerinde, C sağda, D ve E üstte.',
+      svg: `
+          <path class="ln" d="M40,270 L385,270"/>
+          <path class="ln" d="M375,264 L385,270 L375,276"/>
+          <path class="ln" d="M70,292 L70,12"/>
+          <path class="ln" d="M64,22 L70,12 L76,22"/>
+          <text x="385" y="292" text-anchor="middle">x</text>
+          <text x="80" y="22">y</text>
+          <path class="ln" d="M136,270 L268,270 L334,155.7 L268,41.4 L136,41.4 L70,155.7 Z"/>
+          <circle class="pt" cx="136" cy="270" r="3.2"/>
+          <circle class="pt" cx="268" cy="270" r="3.2"/>
+          <circle class="pt" cx="334" cy="155.7" r="3.2"/>
+          <circle class="pt" cx="268" cy="41.4" r="3.2"/>
+          <circle class="pt" cx="136" cy="41.4" r="3.2"/>
+          <circle class="pt" cx="70" cy="155.7" r="3.2"/>
+          <text x="62" y="288" text-anchor="end">O</text>
+          <text x="136" y="292" text-anchor="middle">A</text>
+          <text x="268" y="292" text-anchor="middle">B</text>
+          <text x="342" y="161">C</text>
+          <text x="268" y="31" text-anchor="middle">D</text>
+          <text x="136" y="31" text-anchor="middle">E</text>
+          <text x="62" y="161" text-anchor="end">F</text>
+        `,
+    },
+    stem: [],
+    ask: 'Yukarıda verilen ABCDEF düzgün altıgeninde D noktasının apsisi 9 olduğuna göre, C noktasının ordinatı kaçtır?',
+    choices: [
+      { key: 'A', text: '2√3' },
+      { key: 'B', text: '3√3' },
+      { key: 'C', text: '4√3' },
+      { key: 'D', text: '6' },
+      { key: 'E', text: '6√3' },
+    ],
+    answer: 'B',
+    hint: 'Kenara a de; OAF, 30°-60°-90° üçgenidir ve |FA| = a hipotenüstür.',
+    solution: [
+      {
+        title: 'OAF üçgeni',
+        detail: 'Altıgenin iç açısı 120° olduğundan OAF’de A açısı 60°’dir: |OA| = a/2, |OF| = a√3/2.',
+      },
+      {
+        title: 'D’nin apsisi',
+        detail: 'D, B’nin tam üstündedir; apsisi |OA| + |AB| = a/2 + a = 3a/2.',
+      },
+      {
+        title: 'Kenar',
+        detail: '3a/2 = 9 ⇒ a = 6.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'C, F ile aynı yüksekliktedir: ordinatı a√3/2 = 6√3/2 = 3√3’tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 40
+  {
+    id: 'analytic-40',
+    topic: 'Dıştan bölen nokta',
+    given: ['A(1, −4)', 'B(4, 2)'],
+    stem: [],
+    ask: '|AB| / |BC| = 3/2 oranını sağlayan ve [AB]’yi dıştan bölen C(x, y) noktasının koordinatları toplamı kaçtır?',
+    choices: [
+      { key: 'A', text: '8' },
+      { key: 'B', text: '10' },
+      { key: 'C', text: '12' },
+      { key: 'D', text: '14' },
+      { key: 'E', text: '16' },
+    ],
+    answer: 'C',
+    hint: '|BC| < |AB| olduğundan C, B’nin ötesindedir; A’dan B’ye gidiş vektörünün 2/3’ü kadar daha ilerle.',
+    solution: [
+      {
+        title: 'C’nin yeri',
+        detail: '|BC| = (2/3)|AB| < |AB| olduğundan sıra A, B, C’dir; C, B’nin ötesindedir.',
+      },
+      {
+        title: 'A’dan B’ye',
+        detail: 'B − A = (4 − 1, 2 − (−4)) = (3, 6).',
+      },
+      {
+        title: 'C noktası',
+        detail: 'C = B + (2/3)(3, 6) = (4 + 2, 2 + 4) = (6, 6).',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'x + y = 6 + 6 = 12’dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 41
+  {
+    id: 'analytic-41',
+    topic: 'Dik açıdan köşe ve alan',
+    // Scale 36 px per unit, origin at (60, 230); A(0, 3), B(3, 0), C(8, 5).
+    figure: {
+      viewBox: '0 0 400 270',
+      caption: 'Şekil 15',
+      label:
+        'Koordinat düzleminde ABC üçgeni; A y ekseni üzerinde, B x ekseni üzerinde, B köşesinde dik açı var ve |OA| = |OB|.',
+      svg: `
+          <path class="ln" d="M30,230 L385,230"/>
+          <path class="ln" d="M375,224 L385,230 L375,236"/>
+          <path class="ln" d="M60,252 L60,12"/>
+          <path class="ln" d="M54,22 L60,12 L66,22"/>
+          <text x="385" y="252" text-anchor="middle">x</text>
+          <text x="70" y="22">y</text>
+          <path class="ln" d="M60,122 L168,230 L348,50 Z"/>
+          <path class="arc" d="M160.9,222.9 L168,215.9 L175.1,222.9"/>
+          <path class="tick" d="M53,176 L67,176"/>
+          <path class="tick" d="M114,223 L114,237"/>
+          <circle class="pt" cx="60" cy="122" r="3.2"/>
+          <circle class="pt" cx="168" cy="230" r="3.2"/>
+          <circle class="pt" cx="348" cy="50" r="3.2"/>
+          <text x="52" y="248" text-anchor="end">O</text>
+          <text x="52" y="127" text-anchor="end">A</text>
+          <text x="168" y="252" text-anchor="middle">B</text>
+          <text x="356" y="46">C</text>
+        `,
+    },
+    given: ['[AB] ⊥ [BC]', '|OA| = |OB|', 'B(3, 0)', 'C(x, 5)'],
+    stem: [],
+    ask: 'Analitik düzlemdeki verilere göre, ABC üçgeninin alanı kaç birim karedir?',
+    choices: [
+      { key: 'A', text: '12' },
+      { key: 'B', text: '15' },
+      { key: 'C', text: '18' },
+      { key: 'D', text: '20' },
+      { key: 'E', text: '24' },
+    ],
+    answer: 'B',
+    hint: 'OAB ikizkenar dik üçgen olduğundan [AB] eksenlerle 45° yapar; [BC] de öyle.',
+    solution: [
+      {
+        title: 'A noktası',
+        detail: '|OA| = |OB| = 3 ⇒ A(0, 3); ABO açısı 45°’dir.',
+      },
+      {
+        title: 'C noktası',
+        detail: 'ABC = 90° olduğundan [BC] x ekseniyle 45° yapar: 5 birim yukarı, 5 birim sağa, C(8, 5).',
+      },
+      {
+        title: 'Dik kenarlar',
+        detail: '|AB| = √(9 + 9) = 3√2, |BC| = √(25 + 25) = 5√2.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Alan = 3√2 · 5√2 / 2 = 30 / 2 = 15 birim karedir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 42
+  {
+    id: 'analytic-42',
+    topic: 'Eşit uzaklıktaki nokta',
+    stem: [],
+    ask: 'Analitik düzlemde A(5, −1) ve B(−2, 3) noktalarına eşit uzaklıkta bulunan ve y ekseni üzerinde olan T(0, y) noktasının ordinatı kaçtır?',
+    choices: [
+      { key: 'A', text: '−2' },
+      { key: 'B', text: '−13/8' },
+      { key: 'C', text: '−3/2' },
+      { key: 'D', text: '13/8' },
+      { key: 'E', text: '2' },
+    ],
+    answer: 'B',
+    hint: '|TA|² = |TB|² yaz; y² terimleri sadeleşir.',
+    solution: [
+      {
+        title: 'Eşitlik',
+        detail: '|TA|² = |TB|² ⇒ 5² + (y + 1)² = (−2)² + (y − 3)².',
+      },
+      {
+        title: 'Açılım',
+        detail: '25 + y² + 2y + 1 = 4 + y² − 6y + 9.',
+      },
+      {
+        title: 'Sadeleştirme',
+        detail: '26 + 2y = 13 − 6y ⇒ 8y = −13.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'y = −13/8’dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 43
+  {
+    id: 'analytic-43',
+    topic: 'Dikdörtgenin köşesinin orijine uzaklığı',
+    // Scale 30 px per unit, origin at (160, 180); x from −3 to 6, y from −2 to 4.
+    figure: {
+      viewBox: '0 0 400 280',
+      caption: 'Şekil 16',
+      label:
+        'Dik koordinat düzleminde kenarları eksenlere paralel ABCD dikdörtgeni; D(−3, 4) sol üstte, A(−3, −2) sol altta, C sağ üstte, B sağ altta.',
+      svg: `
+          <path class="ln" d="M30,180 L385,180"/>
+          <path class="ln" d="M375,174 L385,180 L375,186"/>
+          <path class="ln" d="M160,268 L160,14"/>
+          <path class="ln" d="M154,24 L160,14 L166,24"/>
+          <text x="385" y="202" text-anchor="middle">x</text>
+          <text x="170" y="24">y</text>
+          <path class="ln" d="M70,240 L340,240 L340,60 L70,60 Z"/>
+          <circle class="pt" cx="70" cy="240" r="3.2"/>
+          <circle class="pt" cx="340" cy="240" r="3.2"/>
+          <circle class="pt" cx="340" cy="60" r="3.2"/>
+          <circle class="pt" cx="70" cy="60" r="3.2"/>
+          <text x="152" y="198" text-anchor="end">O</text>
+          <text x="70" y="262" text-anchor="middle">A(−3, −2)</text>
+          <text x="348" y="258">B</text>
+          <text x="348" y="54">C</text>
+          <text x="70" y="50" text-anchor="middle">D(−3, 4)</text>
+        `,
+    },
+    stem: [],
+    ask: 'Yukarıdaki dik koordinat düzleminde ABCD dikdörtgeninin alanı 54 birim kare olduğuna göre, |OB| kaç birimdir?',
+    choices: [
+      { key: 'A', text: '6' },
+      { key: 'B', text: '2√10' },
+      { key: 'C', text: '3√5' },
+      { key: 'D', text: '7' },
+      { key: 'E', text: '5√2' },
+    ],
+    answer: 'B',
+    hint: '|AD| iki ordinatın farkıdır; alandan |AB|’yi bul.',
+    solution: [
+      {
+        title: 'Kısa kenar',
+        detail: '|AD| = 4 − (−2) = 6 birim.',
+      },
+      {
+        title: 'Uzun kenar',
+        detail: '|AB| · 6 = 54 ⇒ |AB| = 9.',
+      },
+      {
+        title: 'B noktası',
+        detail: 'B, A’nın 9 birim sağındadır: B(−3 + 9, −2) = (6, −2).',
+      },
+      {
+        title: 'Sonuç',
+        detail: '|OB| = √(6² + (−2)²) = √40 = 2√10 birimdir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 44
+  {
+    id: 'analytic-44',
+    topic: 'Alandan bilinmeyenin değerleri',
+    given: ['A(1, 1)', 'B(5, 4)', 'C(k, 1)', 'Alan(ABC) = 9 birim kare'],
+    stem: [],
+    ask: 'Buna göre, k’nin alabileceği değerlerin toplamı kaçtır?',
+    choices: [
+      { key: 'A', text: '−2' },
+      { key: 'B', text: '0' },
+      { key: 'C', text: '2' },
+      { key: 'D', text: '6' },
+      { key: 'E', text: '12' },
+    ],
+    answer: 'C',
+    hint: 'A ile C aynı yatay doğru üzerinde; [AC]’yi taban al.',
+    solution: [
+      {
+        title: 'Taban',
+        detail: 'A ve C, y = 1 doğrusu üzerindedir; |AC| = |k − 1|.',
+      },
+      {
+        title: 'Yükseklik',
+        detail: 'B’nin y = 1 doğrusuna uzaklığı 4 − 1 = 3 birimdir.',
+      },
+      {
+        title: 'Denklem',
+        detail: '|k − 1| · 3 / 2 = 9 ⇒ |k − 1| = 6 ⇒ k = 7 ya da k = −5.',
+      },
+      {
+        title: 'Sonuç',
+        detail: '7 + (−5) = 2’dir.',
+      },
+    ],
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -1796,6 +2125,22 @@ export const UNIT_6_ANALYTIC: Unit = {
         'analytic-35',
         'analytic-36',
         'analytic-37',
+      ),
+    },
+    {
+      id: 'analytic-m6',
+      order: 6,
+      title: 'Alan, altıgen ve dıştan bölme',
+      summary:
+        'Alandan bilinmeyen koordinat, düzgün altıgenin köşesi, dıştan bölen nokta, dik açıdan üçgen alanı, eşit uzaklıktaki nokta ve dikdörtgenin köşesi.',
+      questions: pick(
+        'analytic-38',
+        'analytic-39',
+        'analytic-40',
+        'analytic-41',
+        'analytic-42',
+        'analytic-43',
+        'analytic-44',
       ),
     },
   ],
