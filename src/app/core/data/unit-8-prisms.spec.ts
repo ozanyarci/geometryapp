@@ -62,6 +62,14 @@ describe('unit 8 answer key', () => {
   it('34 — 24k³ = 648, k = 3, 4k = 12 → A', () => expect(answerOf('prisms-34')).toBe('A'));
   it('35 — |ED| = √(100 − 36) = 8, (8·6/2)·6 = 144 → C', () =>
     expect(answerOf('prisms-35')).toBe('C'));
+  it('36 — 11² − 7² = 121 − 49 = 72 → D', () => expect(answerOf('prisms-36')).toBe('D'));
+  it('37 — 2·(2π·3·5 + π·3²) = 2·39π = 78π → C', () => expect(answerOf('prisms-37')).toBe('C'));
+  it('38 — 12√3 / cos30 = 12√3 · 2/√3 = 24 → B', () => expect(answerOf('prisms-38')).toBe('B'));
+  it('39 — rh = 48, r²h = 288, r = 6, h = 8, √(36 + 64) = 10 → E', () =>
+    expect(answerOf('prisms-39')).toBe('E'));
+  it('40 — 6πr² = 54π, r = 3, h = 9, π·9·9 = 81π → C', () =>
+    expect(answerOf('prisms-40')).toBe('C'));
+  it('41 — 4·3·2 = 24 cells, 24·6 = 144 → D', () => expect(answerOf('prisms-41')).toBe('D'));
 
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {

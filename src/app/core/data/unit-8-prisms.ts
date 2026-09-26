@@ -2056,6 +2056,296 @@ const QUESTIONS: Question[] = [
         `,
     },
   },
+  // ---------------------------------------------------------------- 36
+  {
+    id: 'prisms-36',
+    topic: 'Ayrıtlar toplamı ve köşegenden alan',
+    stem: [
+      'Bir dikdörtgenler prizmasının 3 farklı ayrıtının toplamı 11 cm, cisim köşegeni ise 7 cm dir.',
+    ],
+    ask: 'Buna göre, prizmanın tüm alanı kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '60' },
+      { key: 'B', text: '64' },
+      { key: 'C', text: '68' },
+      { key: 'D', text: '72' },
+      { key: 'E', text: '76' },
+    ],
+    answer: 'D',
+    hint: '(a + b + c)² açılımında hem a² + b² + c² hem de tüm alan görünür.',
+    solution: [
+      {
+        title: 'Bilinenler',
+        detail: 'Ayrıtlar a, b, c olsun: a + b + c = 11 ve a² + b² + c² = 7² = 49.',
+      },
+      {
+        title: 'Kare açılımı',
+        detail: '(a + b + c)² = a² + b² + c² + 2(ab + bc + ac) ⇒ 121 = 49 + 2(ab + bc + ac).',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Tüm alan 2(ab + bc + ac) = 121 − 49 = 72 cm² dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 37
+  // Open-top cylinder with radius 3 and height 5 at 30 px per cm.
+  {
+    id: 'prisms-37',
+    topic: 'Üstü açık silindirin boyanan yüzeyi',
+    stem: [
+      'Taban çapı 6 cm ve yüksekliği 5 cm olan, üstü açık kova şeklindeki metalden yapılmış bir dik silindir boya kazanına atılıp çıkarılıyor.',
+    ],
+    ask: 'Silindirin boyanan toplam yüzey alanı kaç cm² dir? (Kovanın yapıldığı sacın kalınlığı önemsenmeyecektir.)',
+    choices: [
+      { key: 'A', text: '96π' },
+      { key: 'B', text: '87π' },
+      { key: 'C', text: '78π' },
+      { key: 'D', text: '69π' },
+      { key: 'E', text: '39π' },
+    ],
+    answer: 'C',
+    hint: 'Kova kazana atılınca sacın hem içi hem dışı boyanır; üst taban yoktur.',
+    solution: [
+      {
+        title: 'Yanal alan',
+        detail: 'r = 3 cm olduğundan yanal alan 2πrh = 2π · 3 · 5 = 30π cm² dir.',
+      },
+      {
+        title: 'Taban alanı',
+        detail: 'Kovanın yalnızca alt tabanı vardır: πr² = 9π cm².',
+      },
+      {
+        title: 'İki yüz',
+        detail: 'Sacın bir yüzünün alanı 30π + 9π = 39π cm²; iç ve dış yüzler boyanır.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Boyanan alan 2 · 39π = 78π cm² dir.',
+      },
+    ],
+    figure: {
+      viewBox: '0 0 400 244',
+      caption: 'Şekil 20',
+      label:
+        'Üstü açık dik silindir biçiminde kova; üst ağız çapı [DC], alt taban çapı [AB]. Taban çapı 6 cm, yüksekliği 5 cm.',
+      svg: `
+          <path class="shade" d="M110,40 L110,190 A90,22 0 0 0 290,190 L290,40 A90,22 0 0 1 110,40 Z"/>
+          <path class="hid" d="M110,190 A90,22 0 0 1 290,190"/>
+          <path class="hid" d="M110,190 L290,190"/>
+          <path class="ln" d="M110,190 A90,22 0 0 0 290,190"/>
+          <ellipse class="ln" cx="200" cy="40" rx="90" ry="22"/>
+          <path class="ln" d="M110,40 L290,40"/>
+          <path class="ln" d="M110,40 L110,190"/>
+          <path class="ln" d="M290,40 L290,190"/>
+          <circle class="pt" cx="110" cy="40" r="3.2"/>
+          <circle class="pt" cx="290" cy="40" r="3.2"/>
+          <circle class="pt" cx="110" cy="190" r="3.2"/>
+          <circle class="pt" cx="290" cy="190" r="3.2"/>
+          <text x="102" y="36" text-anchor="end">D</text>
+          <text x="298" y="36">C</text>
+          <text x="102" y="198" text-anchor="end">A</text>
+          <text x="298" y="198">B</text>
+          <text class="val" x="298" y="120">5</text>
+          <text class="val" x="200" y="236" text-anchor="middle">6</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 38
+  {
+    id: 'prisms-38',
+    topic: 'Eğik prizmada dik kesitten taban alanı',
+    stem: [],
+    ask: 'Bir eğik prizmanın dik kesit alanı 12√3 cm², bir yanal ayrıtının taban düzlemiyle yaptığı açının ölçüsü 60° olduğuna göre, bu prizmanın taban alanı kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '18' },
+      { key: 'B', text: '24' },
+      { key: 'C', text: '30' },
+      { key: 'D', text: '36' },
+      { key: 'E', text: '48' },
+    ],
+    answer: 'B',
+    hint: 'Dik kesit, tabanın yanal ayrıtlara dik düzlem üzerindeki dik izdüşümüdür.',
+    solution: [
+      {
+        title: 'Düzlemler arasındaki açı',
+        detail:
+          'Dik kesit düzlemi yanal ayrıtlara diktir. Ayrıt tabanla 60° yaptığından taban düzlemi ile dik kesit düzlemi arasındaki açı 90° − 60° = 30° dir.',
+      },
+      {
+        title: 'İzdüşüm bağıntısı',
+        detail: 'Dik kesit alanı = taban alanı · cos 30° ⇒ 12√3 = T · (√3 / 2).',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'T = 12√3 · 2 / √3 = 24 cm² dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 39
+  // Right cylinder with r = 6 and h = 8 at 18 px per cm; C lies directly above B.
+  {
+    id: 'prisms-39',
+    topic: 'Silindirde merkezden üst çembere uzaklık',
+    given: [
+      'Taban dairesinin merkezi O olan şekildeki dik silindirin yanal alanı 96π cm² ve hacmi 288π cm³ tür.',
+    ],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, |OC| kaç cm dir?',
+    choices: [
+      { key: 'A', text: '8' },
+      { key: 'B', text: '6√2' },
+      { key: 'C', text: '4√5' },
+      { key: 'D', text: '4√6' },
+      { key: 'E', text: '10' },
+    ],
+    answer: 'E',
+    hint: 'Hacmi yanal alana bölünce yarıçap kolayca çıkar.',
+    solution: [
+      {
+        title: 'İki denklem',
+        detail: '2πrh = 96π ⇒ rh = 48 ve πr²h = 288π ⇒ r²h = 288.',
+      },
+      {
+        title: 'Yarıçap ve yükseklik',
+        detail: 'r = 288 / 48 = 6 cm, h = 48 / 6 = 8 cm.',
+      },
+      {
+        title: 'Dik üçgen',
+        detail: 'C, B nin tam üstündedir; OBC üçgeni B de dik açılı, |OB| = 6 ve |BC| = 8.',
+      },
+      {
+        title: 'Sonuç',
+        detail: '|OC| = √(6² + 8²) = √100 = 10 cm dir.',
+      },
+    ],
+    figure: {
+      viewBox: '0 0 400 224',
+      caption: 'Şekil 21',
+      label:
+        'Dik silindir; alt tabanda merkezi O olan [AB] çapı, üst tabanda A nın üstünde D, B nin üstünde C. [OC] kesikli çizgiyle gösterilmiş.',
+      svg: `
+          <path class="hid" d="M92,174 A108,24 0 0 1 308,174"/>
+          <path class="hid" d="M92,174 L308,174"/>
+          <path class="hid" d="M200,174 L308,30"/>
+          <path class="ln" d="M92,174 A108,24 0 0 0 308,174"/>
+          <ellipse class="ln" cx="200" cy="30" rx="108" ry="24"/>
+          <path class="ln" d="M92,30 L92,174"/>
+          <path class="ln" d="M308,30 L308,174"/>
+          <circle class="pt" cx="92" cy="30" r="3.2"/>
+          <circle class="pt" cx="308" cy="30" r="3.2"/>
+          <circle class="pt" cx="92" cy="174" r="3.2"/>
+          <circle class="pt" cx="308" cy="174" r="3.2"/>
+          <circle class="pt" cx="200" cy="174" r="3.2"/>
+          <text x="84" y="26" text-anchor="end">D</text>
+          <text x="316" y="26">C</text>
+          <text x="84" y="182" text-anchor="end">A</text>
+          <text x="316" y="182">B</text>
+          <text x="200" y="192" text-anchor="middle">O</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 40
+  {
+    id: 'prisms-40',
+    topic: 'Yükseklik–yarıçap oranından silindirin hacmi',
+    stem: [],
+    ask: 'Yüksekliği taban yarıçapının 3 katı olan bir dik silindirin yanal alanı 54π cm² olduğuna göre, hacmi kaç cm³ tür?',
+    choices: [
+      { key: 'A', text: '108π' },
+      { key: 'B', text: '90π' },
+      { key: 'C', text: '81π' },
+      { key: 'D', text: '72π' },
+      { key: 'E', text: '54π' },
+    ],
+    answer: 'C',
+    hint: 'Yüksekliği 3r yazıp yanal alanı r cinsinden kur.',
+    solution: [
+      {
+        title: 'Yükseklik',
+        detail: 'Yarıçap r ise yükseklik h = 3r dir.',
+      },
+      {
+        title: 'Yanal alan',
+        detail: '2πr · 3r = 6πr² = 54π ⇒ r² = 9 ⇒ r = 3 cm, h = 9 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'V = πr²h = π · 9 · 9 = 81π cm³ tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 41
+  // Box split 4 × 3 × 2 into equal cells, one cell drawn at corner A. Cells are
+  // 55 px wide, depth drawn at half scale along 45°.
+  {
+    id: 'prisms-41',
+    topic: 'Eş parçalara bölünen prizmanın hacmi',
+    given: [
+      'Şekildeki büyük dikdörtgenler prizmasının [AB] kenarı 4 eşit, [BC] kenarı 3 eşit, [AE] kenarı 2 eşit parçaya ayrılıyor.',
+      'A köşesindeki küçük dikdörtgenler prizmasının ayrıtları bu parçaların birer tanesine eşittir.',
+    ],
+    stem: [],
+    ask: 'İçteki küçük dikdörtgenler prizmasının hacmi 6 cm³ ise, büyük dikdörtgenler prizmasının hacmi kaç cm³ tür?',
+    choices: [
+      { key: 'A', text: '72' },
+      { key: 'B', text: '96' },
+      { key: 'C', text: '120' },
+      { key: 'D', text: '144' },
+      { key: 'E', text: '168' },
+    ],
+    answer: 'D',
+    hint: 'Büyük prizma, küçük prizmanın eşlerinden kaç tanesiyle doldurulur?',
+    solution: [
+      {
+        title: 'Ayrıtlar',
+        detail: 'Küçük prizmanın ayrıtları a, b, c ise büyük prizmanın ayrıtları 4a, 3b ve 2c dir.',
+      },
+      {
+        title: 'Hacim oranı',
+        detail:
+          'Büyük hacim = 4a · 3b · 2c = 24 · abc; yani büyük prizma 24 küçük prizmadan oluşur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'V = 24 · 6 = 144 cm³ tür.',
+      },
+    ],
+    figure: {
+      viewBox: '0 -6 400 226',
+      caption: 'Şekil 22',
+      label:
+        'ABCDEFGH dikdörtgenler prizması; [AB] 4, [BC] 3, [AE] 2 eş parçaya bölünmüş ve bölme çizgileri kesikli çizilmiş. A köşesinde bir parçalık küçük dikdörtgenler prizması var.',
+      svg: `
+          <path class="hid" d="M61.0,190.0 L119.3,131.7 M119.3,131.7 L339.3,131.7 M119.3,131.7 L119.3,21.7"/>
+          <path class="hid" d="M135.4,170.6 L174.3,131.7 M171.0,190.0 L229.3,131.7 M226.0,190.0 L284.3,131.7 M135.4,170.6 L300.4,170.6 M99.9,151.1 L319.9,151.1 M116.0,135.0 L281.0,135.0 M281.0,135.0 L339.3,76.7"/>
+          <path class="hid" d="M80.4,170.6 L80.4,115.6 M80.4,170.6 L135.4,170.6"/>
+          <path class="ln" d="M61.0,190.0 L281.0,190.0 L281.0,80.0 L61.0,80.0 Z M281.0,190.0 L339.3,131.7 L339.3,21.7 L281.0,80.0 Z M61.0,80.0 L119.3,21.7 L339.3,21.7"/>
+          <path class="ln" d="M61.0,135.0 L116.0,135.0 L116.0,190.0 M116.0,135.0 L135.4,115.6 L135.4,170.6 L116.0,190.0 M61.0,135.0 L80.4,115.6 L135.4,115.6"/>
+          <circle class="pt" cx="61.0" cy="190.0" r="3.2"/>
+          <circle class="pt" cx="281.0" cy="190.0" r="3.2"/>
+          <circle class="pt" cx="339.3" cy="131.7" r="3.2"/>
+          <circle class="pt" cx="119.3" cy="131.7" r="3.2"/>
+          <circle class="pt" cx="61.0" cy="80.0" r="3.2"/>
+          <circle class="pt" cx="281.0" cy="80.0" r="3.2"/>
+          <circle class="pt" cx="339.3" cy="21.7" r="3.2"/>
+          <circle class="pt" cx="119.3" cy="21.7" r="3.2"/>
+          <text x="53.0" y="206.0" text-anchor="end">A</text>
+          <text x="289.0" y="206.0">B</text>
+          <text x="347.3" y="137.7">C</text>
+          <text x="113.3" y="109.7" text-anchor="end">D</text>
+          <text x="53.0" y="84.0" text-anchor="end">E</text>
+          <text x="289.0" y="96.0">F</text>
+          <text x="347.3" y="17.7">G</text>
+          <text x="119.3" y="9.7" text-anchor="middle">H</text>
+        `,
+    },
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -2152,6 +2442,14 @@ export const UNIT_8_PRISMS: Unit = {
         'prisms-34',
         'prisms-35',
       ),
+    },
+    {
+      id: 'prisms-m6',
+      order: 6,
+      title: 'Silindir, eğik prizma ve bölünen prizma',
+      summary:
+        'Ayrıtlar toplamından alan, üstü açık kovanın boyanan yüzeyi, eğik prizmada dik kesit, silindirde uzaklık, orandan hacim ve eş parçalara bölünen prizma.',
+      questions: pick('prisms-36', 'prisms-37', 'prisms-38', 'prisms-39', 'prisms-40', 'prisms-41'),
     },
   ],
 };
