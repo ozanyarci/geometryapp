@@ -3629,6 +3629,342 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+
+  // ---------------------------------------------------------------- 77
+  {
+    id: 'lines-77',
+    topic: 'Dik kesişen doğrularla yamuk alanı',
+    given: ['[CD] ⊥ [AB]', 'AB: x + y − 8 = 0', '[EF] ⊥ Ox', 'C(−2, 0)'],
+    // Origin (110, 290), 30 px per unit; CD: y = x + 2, D(0, 2), E(3, 5), F(3, 0).
+    figure: {
+      viewBox: '0 5 400 325',
+      caption: 'Şekil 37',
+      label:
+        'Dik koordinat sisteminde AB doğrusu eksenleri A ve B noktalarında kesiyor; x ekseni üzerindeki C noktasından geçen doğru y eksenini D noktasında kesiyor ve AB ye E noktasında dik. E den x eksenine inen dikmenin ayağı F; DOFE dörtgeni taralı.',
+      svg: `
+          <path class="shade" d="M110,230 L110,290 L200,290 L200,140 Z"/>
+          <path class="ln" d="M15,290 L390,290"/>
+          <path class="ln" d="M380,284 L390,290 L380,296"/>
+          <path class="ln" d="M110,320 L110,15"/>
+          <path class="ln" d="M104,25 L110,15 L116,25"/>
+          <text x="386" y="280" text-anchor="middle">x</text>
+          <text x="122" y="25">y</text>
+          <path class="ln" d="M95,35 L380,320"/>
+          <path class="ln" d="M20,320 L260,80"/>
+          <path class="ln" d="M200,140 L200,290"/>
+          <path class="ln" d="M192.93,147.07 L200,154.14 L207.07,147.07"/>
+          <path class="ln" d="M190,290 L190,280 L200,280"/>
+          <circle class="pt" cx="110" cy="50" r="3.2"/>
+          <circle class="pt" cx="350" cy="290" r="3.2"/>
+          <circle class="pt" cx="50" cy="290" r="3.2"/>
+          <circle class="pt" cx="110" cy="230" r="3.2"/>
+          <circle class="pt" cx="200" cy="140" r="3.2"/>
+          <circle class="pt" cx="200" cy="290" r="3.2"/>
+          <text x="102" y="55" text-anchor="end">A</text>
+          <text x="345" y="310" text-anchor="end">B</text>
+          <text x="50" y="310" text-anchor="middle">C</text>
+          <text x="102" y="228" text-anchor="end">D</text>
+          <text x="208" y="134">E</text>
+          <text x="208" y="308">F</text>
+          <text x="102" y="308" text-anchor="end">O</text>
+        `,
+    },
+    stem: [],
+    ask: 'Dik koordinat sisteminde verilen şekilde doğrular E noktasında dik kesiştiğine göre, Alan(DOFE) kaç birim karedir?',
+    choices: [
+      { key: 'A', text: '9' },
+      { key: 'B', text: '10' },
+      { key: 'C', text: '21/2' },
+      { key: 'D', text: '12' },
+      { key: 'E', text: '25/2' },
+    ],
+    answer: 'C',
+    hint: 'AB nin eğimi −1 olduğundan CD nin eğimi 1 dir; C den geçen bu doğrunun denklemini yaz.',
+    solution: [
+      {
+        title: 'CD doğrusu',
+        detail:
+          'AB nin eğimi −1, dik doğrunun eğimi 1; C(−2, 0) dan geçtiği için y = x + 2. D(0, 2).',
+      },
+      {
+        title: 'E noktası',
+        detail: 'x + 2 = 8 − x ⇒ x = 3, y = 5; E(3, 5), dolayısıyla F(3, 0).',
+      },
+      {
+        title: 'Yamuk',
+        detail:
+          'DOFE, paralel kenarları |OD| = 2 ve |FE| = 5, yüksekliği |OF| = 3 olan dik yamuktur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Alan = (2 + 5) / 2 · 3 = 21/2 birim karedir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 78
+  {
+    id: 'lines-78',
+    topic: 'Bir noktadan geçen dik doğru denklemi',
+    stem: [],
+    ask: 'x − 3y + 6 = 0 doğrusuna dik olan ve A(2, 1) noktasından geçen doğrunun denklemi aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: 'x − 3y + 1 = 0' },
+      { key: 'B', text: '3x − y − 5 = 0' },
+      { key: 'C', text: 'x + 3y − 5 = 0' },
+      { key: 'D', text: '3x + y − 7 = 0' },
+      { key: 'E', text: '3x + y + 7 = 0' },
+    ],
+    answer: 'D',
+    hint: 'Verilen doğrunun eğimini bul; dik doğrunun eğimi bunun ters işaretlisinin tersidir.',
+    solution: [
+      {
+        title: 'Verilen doğrunun eğimi',
+        detail: 'x − 3y + 6 = 0 ⇒ y = x/3 + 2; eğim 1/3.',
+      },
+      {
+        title: 'Dik doğrunun eğimi',
+        detail: '(1/3) · m = −1 ⇒ m = −3.',
+      },
+      {
+        title: 'Denklem',
+        detail: 'y − 1 = −3(x − 2) ⇒ y = −3x + 7.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Doğrunun denklemi 3x + y − 7 = 0 dır.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 79
+  {
+    id: 'lines-79',
+    topic: 'Dik doğru denklemi',
+    given: ['A(2, 4)', '[OA] ⊥ [AB]'],
+    // Origin (45, 230), 30 px per unit; AB: x + 2y − 10 = 0, B(10, 0).
+    figure: {
+      viewBox: '0 40 400 235',
+      caption: 'Şekil 38',
+      label:
+        'Dik koordinat sisteminde orijin ile A noktası birleştirilmiş; A dan geçen ve OA ya dik olan doğru x eksenini B noktasında kesiyor.',
+      svg: `
+          <path class="ln" d="M15,230 L390,230"/>
+          <path class="ln" d="M380,224 L390,230 L380,236"/>
+          <path class="ln" d="M45,260 L45,50"/>
+          <path class="ln" d="M39,60 L45,50 L51,60"/>
+          <text x="386" y="220" text-anchor="middle">x</text>
+          <text x="57" y="60">y</text>
+          <path class="ln" d="M45,80 L375,245"/>
+          <path class="ln" d="M45,230 L105,110"/>
+          <path class="ln" d="M100.53,118.94 L109.47,123.41 L113.94,114.47"/>
+          <circle class="pt" cx="105" cy="110" r="3.2"/>
+          <circle class="pt" cx="345" cy="230" r="3.2"/>
+          <text x="108" y="96">A(2, 4)</text>
+          <text x="340" y="250" text-anchor="end">B</text>
+          <text x="37" y="248" text-anchor="end">O</text>
+        `,
+    },
+    stem: [],
+    ask: 'Dik koordinat sistemindeki verilere göre, AB doğrusunun denklemi aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: '2x − y = 0' },
+      { key: 'B', text: 'x + 2y − 10 = 0' },
+      { key: 'C', text: 'x − 2y + 6 = 0' },
+      { key: 'D', text: '2x + y − 8 = 0' },
+      { key: 'E', text: 'x + 2y − 8 = 0' },
+    ],
+    answer: 'B',
+    hint: 'OA nın eğimini bul; AB nin eğimiyle çarpımı −1 olmalı.',
+    solution: [
+      {
+        title: 'OA nın eğimi',
+        detail: 'm(OA) = 4/2 = 2.',
+      },
+      {
+        title: 'AB nin eğimi',
+        detail: '2 · m(AB) = −1 ⇒ m(AB) = −1/2.',
+      },
+      {
+        title: 'Denklem',
+        detail: 'y − 4 = −(x − 2)/2 ⇒ 2y − 8 = −x + 2.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'AB: x + 2y − 10 = 0 dır.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 80
+  {
+    id: 'lines-80',
+    topic: 'Diklik koşuluyla üçgen alanı',
+    given: ['[BA] ⊥ [AC]', 'C(3, 4)', 'B(−4, 0)', 'A(0, y), y < 0'],
+    // Origin (200, 190), 32 px per unit; A(0, −2).
+    figure: {
+      viewBox: '0 10 400 300',
+      caption: 'Şekil 39',
+      label:
+        'Dik koordinat sisteminde x ekseni üzerindeki B, birinci bölgedeki C ve y ekseninin negatif tarafındaki A noktaları bir üçgen oluşturuyor; A daki açı dik. AOB üçgeni taralı.',
+      svg: `
+          <path class="shade" d="M200,190 L72,190 L200,254 Z"/>
+          <path class="ln" d="M15,190 L390,190"/>
+          <path class="ln" d="M380,184 L390,190 L380,196"/>
+          <path class="ln" d="M200,295 L200,20"/>
+          <path class="ln" d="M194,30 L200,20 L206,30"/>
+          <text x="386" y="180" text-anchor="middle">x</text>
+          <text x="212" y="30">y</text>
+          <path class="ln" d="M72,190 L296,62 L200,254 Z"/>
+          <path class="ln" d="M191.06,249.53 L195.53,240.59 L204.47,245.06"/>
+          <circle class="pt" cx="72" cy="190" r="3.2"/>
+          <circle class="pt" cx="296" cy="62" r="3.2"/>
+          <circle class="pt" cx="200" cy="254" r="3.2"/>
+          <text x="64" y="185" text-anchor="end">B</text>
+          <text x="304" y="60">C</text>
+          <text x="208" y="272">A</text>
+          <text x="192" y="182" text-anchor="end">O</text>
+        `,
+    },
+    stem: [],
+    ask: 'Dik koordinat sistemindeki verilere göre, AOB üçgeninin alanı kaç birim karedir?',
+    choices: [
+      { key: 'A', text: '2' },
+      { key: 'B', text: '3' },
+      { key: 'C', text: '4' },
+      { key: 'D', text: '6' },
+      { key: 'E', text: '8' },
+    ],
+    answer: 'C',
+    hint: 'BA ve AC doğrularının eğimlerini y cinsinden yaz; çarpımları −1 dir.',
+    solution: [
+      {
+        title: 'Eğimler',
+        detail: 'm(BA) = (y − 0)/(0 + 4) = y/4, m(AC) = (4 − y)/(3 − 0) = (4 − y)/3.',
+      },
+      {
+        title: 'Diklik koşulu',
+        detail: '(y/4) · (4 − y)/3 = −1 ⇒ y(4 − y) = −12 ⇒ y² − 4y − 12 = 0.',
+      },
+      {
+        title: 'A noktası',
+        detail: '(y − 6)(y + 2) = 0; y < 0 olduğundan y = −2, A(0, −2).',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Alan(AOB) = |OB| · |OA| / 2 = 4 · 2 / 2 = 4 birim karedir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 81
+  {
+    id: 'lines-81',
+    topic: 'Doğruların sınırladığı bölgenin alanı',
+    stem: [
+      'Analitik düzlemde verilen y + 2 = 0, x − 2y + 4 = 0 ve x − 6 = 0 doğruları ile y ekseni bir bölge sınırlıyor.',
+    ],
+    ask: 'Bu bölgenin alanı kaç birim karedir?',
+    choices: [
+      { key: 'A', text: '27' },
+      { key: 'B', text: '30' },
+      { key: 'C', text: '33' },
+      { key: 'D', text: '36' },
+      { key: 'E', text: '42' },
+    ],
+    answer: 'C',
+    hint: 'Bölge, paralel kenarları y eksenine paralel olan bir dik yamuktur; x = 0 ve x = 6 daki kenar uzunluklarını bul.',
+    solution: [
+      {
+        title: 'Doğrular',
+        detail: 'y = −2 yatay, y = x/2 + 2 eğik, x = 0 ve x = 6 düşey doğrulardır.',
+      },
+      {
+        title: 'x = 0 daki kenar',
+        detail: 'Eğik doğru (0, 2) den geçer; kenar 2 − (−2) = 4.',
+      },
+      {
+        title: 'x = 6 daki kenar',
+        detail: 'Eğik doğru (6, 5) ten geçer; kenar 5 − (−2) = 7.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Yamuğun yüksekliği 6: Alan = (4 + 7) / 2 · 6 = 33 birim karedir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 82
+  {
+    id: 'lines-82',
+    topic: 'Orta dikme denklemi',
+    stem: [],
+    ask: 'Dik koordinat sisteminde A(1, −2) ve B(5, 4) noktalarından eşit uzaklıktaki noktaların geometrik yerinin denklemi aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: '3x − 2y − 7 = 0' },
+      { key: 'B', text: '2x + 3y − 9 = 0' },
+      { key: 'C', text: '2x + 3y − 5 = 0' },
+      { key: 'D', text: '3x + 2y − 11 = 0' },
+      { key: 'E', text: '2x − 3y − 3 = 0' },
+    ],
+    answer: 'B',
+    hint: 'Aranan doğru [AB] nin orta dikmesidir: orta noktadan geçer ve AB ye diktir.',
+    solution: [
+      {
+        title: 'Orta nokta',
+        detail: '((1 + 5)/2, (−2 + 4)/2) = (3, 1).',
+      },
+      {
+        title: 'AB nin eğimi',
+        detail: 'm(AB) = (4 − (−2)) / (5 − 1) = 6/4 = 3/2; orta dikmenin eğimi −2/3.',
+      },
+      {
+        title: 'Denklem',
+        detail: 'y − 1 = −(2/3)(x − 3) ⇒ 3y − 3 = −2x + 6.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Geometrik yer 2x + 3y − 9 = 0 doğrusudur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 83
+  {
+    id: 'lines-83',
+    topic: 'Eksen kesim noktalarıyla üçgen alanı',
+    stem: [
+      'a ≠ 0 olmak üzere denklemi x/a + y/3 = 1 olan doğru koordinat eksenlerini P ve T noktalarında kesmektedir.',
+    ],
+    ask: 'K(7, 0) noktası için PKT üçgeninin alanı 15 birim kare olduğuna göre, a nın alabileceği değerler toplamı kaçtır?',
+    choices: [
+      { key: 'A', text: '7' },
+      { key: 'B', text: '10' },
+      { key: 'C', text: '14' },
+      { key: 'D', text: '17' },
+      { key: 'E', text: '20' },
+    ],
+    answer: 'C',
+    hint: 'P ve K ikisi de x ekseni üzerindedir; T nin ordinatı üçgenin yüksekliğidir.',
+    solution: [
+      {
+        title: 'Kesim noktaları',
+        detail: 'y = 0 için x = a: P(a, 0); x = 0 için y = 3: T(0, 3).',
+      },
+      {
+        title: 'Alan',
+        detail: 'Taban |PK| = |7 − a|, yükseklik 3: 3 · |7 − a| / 2 = 15 ⇒ |7 − a| = 10.',
+      },
+      {
+        title: 'a nın değerleri',
+        detail: '7 − a = 10 ⇒ a = −3; 7 − a = −10 ⇒ a = 17.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Toplam −3 + 17 = 14 tür.',
+      },
+    ],
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -3780,6 +4116,22 @@ export const UNIT_7_LINES: Unit = {
       summary:
         'Noktanın doğruya uzaklığı, kesişen doğrularla alan oranı, y ekseniyle kapalı bölge, kesim noktası, diklik koşulu ve dikme ayağı.',
       questions: pick('lines-71', 'lines-72', 'lines-73', 'lines-74', 'lines-75', 'lines-76'),
+    },
+    {
+      id: 'lines-m13',
+      order: 13,
+      title: 'Diklik, orta dikme ve alanlar',
+      summary:
+        'Dik kesişen doğrularla yamuk alanı, dik doğru denklemi, diklik koşuluyla üçgen alanı, doğruların sınırladığı bölge, orta dikme ve eksen kesimleriyle alan.',
+      questions: pick(
+        'lines-77',
+        'lines-78',
+        'lines-79',
+        'lines-80',
+        'lines-81',
+        'lines-82',
+        'lines-83',
+      ),
     },
   ],
 };
