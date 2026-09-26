@@ -78,6 +78,16 @@ describe('unit 8 answer key', () => {
   it('46 — |AB|² = 36 + 28 = 64, r = 4, h² = 100 − 36, h = 8, π·16·8 = 128π → C', () =>
     expect(answerOf('prisms-46')).toBe('C'));
   it('47 — 2×2×1 block: 16a² = 16x/6 = 8x/3 → B', () => expect(answerOf('prisms-47')).toBe('B'));
+  it('48 — 6a² = 384, a = 8, 512 − 440 = 72 = 3²·8, 384 − 2·9 = 366 → D', () =>
+    expect(answerOf('prisms-48')).toBe('D'));
+  it('49 — mean height (6 + 12)/2 = 9, half of it 9/2 < 6 → C', () =>
+    expect(answerOf('prisms-49')).toBe('C'));
+  it('50 — 864/9 = 96, b = 4, 64/1728 = 1/27 → B', () => expect(answerOf('prisms-50')).toBe('B'));
+  it('51 — water (8 + 3)/2 = 11/2, 8 − 11/2 = 5/2 → B', () =>
+    expect(answerOf('prisms-51')).toBe('B'));
+  it('52 — base 48/2 = 24, b = 4, h = 160/20 = 8, 24·8 = 192 → E', () =>
+    expect(answerOf('prisms-52')).toBe('E'));
+  it('53 — √((2·10π)² + (15π)²) = 25π → C', () => expect(answerOf('prisms-53')).toBe('C'));
 
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {

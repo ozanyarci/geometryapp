@@ -2661,6 +2661,274 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+
+  // ---------------------------------------------------------------- 48
+  // Cube of edge 8 at 24 px per cm, depth at half scale along 45°. The 3 × 3
+  // square prism cut along the front-right vertical edge is outlined dashed.
+  {
+    id: 'prisms-48',
+    topic: 'Küpten prizma çıkarılınca kalan alan',
+    stem: [
+      'Şekildeki küpün bir ayrıtı boyunca, tabanı kare olan bir dik prizma kesilip çıkartılmıştır. Kesilmeden önce küpün tüm alanı 384 cm² dir.',
+    ],
+    ask: 'Kalan kısmın hacmi 440 cm³ olduğuna göre, kalan kısmın tüm alanı kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '348' },
+      { key: 'B', text: '354' },
+      { key: 'C', text: '360' },
+      { key: 'D', text: '366' },
+      { key: 'E', text: '384' },
+    ],
+    answer: 'D',
+    hint: 'Çıkarılan prizmanın yan yüzleri yerine aynı büyüklükte iç yüzler açılır; değişen yalnızca alt ve üst yüzdür.',
+    solution: [
+      {
+        title: 'Küpün ayrıtı',
+        detail: '6a² = 384 ise a² = 64, a = 8 cm; küpün hacmi 8³ = 512 cm³ tür.',
+      },
+      {
+        title: 'Çıkarılan prizma',
+        detail:
+          'Çıkarılan hacim 512 − 440 = 72 cm³ tür. Prizmanın yüksekliği 8 cm olduğundan taban alanı 72 / 8 = 9 cm², taban ayrıtı 3 cm dir.',
+      },
+      {
+        title: 'Alan değişimi',
+        detail:
+          'İki yan yüzden 3 · 8 lik şeritler gider, yerine aynı büyüklükte iki iç yüz gelir. Alt ve üst yüzlerin her birinden 3² = 9 cm² eksilir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Kalan kısmın tüm alanı 384 − 2 · 9 = 366 cm² dir.',
+      },
+    ],
+    figure: {
+      viewBox: '20 20 400 290',
+      caption: 'Şekil 26',
+      label:
+        'Bir küpün ön sağ düşey ayrıtı boyunca kare tabanlı bir dik prizma kesilip çıkarılmış; çıkarılan parçanın ayrıtları kesikli çizilmiş.',
+      svg: `
+          <path class="hid" d="M90.0,290.0 L157.9,222.1 L349.9,222.1 M157.9,222.1 L157.9,30.1"/>
+          <path class="hid" d="M210.0,290.0 L282.0,290.0 L307.5,264.5 M210.0,98.0 L282.0,98.0 L307.5,72.5 M282.0,290.0 L282.0,98.0"/>
+          <path class="ln" d="M90.0,290.0 L210.0,290.0 L210.0,98.0 L90.0,98.0 Z"/>
+          <path class="ln" d="M210.0,290.0 L235.5,264.5 L235.5,72.5 L210.0,98.0"/>
+          <path class="ln" d="M235.5,264.5 L307.5,264.5 L349.9,222.1 L349.9,30.1 L307.5,72.5 L235.5,72.5"/>
+          <path class="ln" d="M307.5,264.5 L307.5,72.5"/>
+          <path class="ln" d="M90.0,98.0 L157.9,30.1 L349.9,30.1"/>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 49
+  // Cylinder of radius 4 at 18 px per cm, bases flattened to 0.3. The slanted top
+  // runs from 6 cm on the left generator to 12 cm on the right one.
+  {
+    id: 'prisms-49',
+    topic: 'Eğik kesilmiş silindiri hacimce ikiye bölme',
+    stem: [
+      'Üst yüzeyi eğik olan dik silindir biçimindeki bir kütük, tabana paralel bir düzlemle kesilerek hacimce iki eş parçaya ayrılmak isteniyor.',
+    ],
+    given: [
+      'Eğik yüzeyin tabana en yakın noktası 6 cm',
+      'Eğik yüzeyin tabana en uzak noktası 12 cm',
+    ],
+    ask: 'Buna göre, kütük tabandan kaç cm yükseklikten kesilmelidir?',
+    choices: [
+      { key: 'A', text: '3' },
+      { key: 'B', text: '4' },
+      { key: 'C', text: '9/2' },
+      { key: 'D', text: '5' },
+      { key: 'E', text: '6' },
+    ],
+    answer: 'C',
+    hint: 'Eğik kesilmiş silindirin hacmi, yüksekliği en kısa ve en uzun ana doğruların ortalaması olan silindirin hacmine eşittir.',
+    solution: [
+      {
+        title: 'Kütüğün hacmi',
+        detail:
+          'Eş iki kütük ters çevrilip üst üste konursa yüksekliği 6 + 12 = 18 cm olan bir silindir oluşur; bir kütüğün hacmi πr² · 18 / 2 = 9πr² dir.',
+      },
+      {
+        title: 'Kesilen alt parça',
+        detail:
+          'Kesim 6 cm den alçakta yapılırsa alt parça yüksekliği k olan düz bir silindirdir; hacmi πr² · k dır.',
+      },
+      {
+        title: 'Denklem',
+        detail:
+          'πr² · k = 9πr² / 2 ise k = 9/2 dir; bu değer 6 dan küçük olduğundan kesim eğik yüzeye değmez.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Kütük tabandan 9/2 = 4,5 cm yükseklikten kesilmelidir.',
+      },
+    ],
+    figure: {
+      viewBox: '0 56 400 264',
+      caption: 'Şekil 27',
+      label:
+        'Üst yüzeyi eğik kesilmiş dik silindir biçiminde kütük; eğik yüzeyin tabana en yakın noktası 6 cm, en uzak noktası 12 cm yükseklikte.',
+      svg: `
+          <path class="hid" d="M128,290 A72,21.6 0 0 1 272,290"/>
+          <path class="ln" d="M128,290 A72,21.6 0 0 0 272,290"/>
+          <path class="ln" d="M128,290 L128,182 M272,290 L272,74"/>
+          <path class="ln" d="M272.0,74.0 L271.7,76.1 L270.9,78.6 L269.5,81.4 L267.7,84.6 L265.3,88.2 L262.4,92.0 L259.0,96.2 L255.2,100.5 L250.9,105.1 L246.3,109.8 L241.3,114.7 L236.0,119.7 L230.4,124.8 L224.6,129.8 L218.6,134.9 L212.5,139.9 L206.3,144.8 L200.0,149.6 L193.7,154.2 L187.5,158.6 L181.4,162.8 L175.4,166.8 L169.6,170.4 L164.0,173.7 L158.7,176.7 L153.7,179.3 L149.1,181.5 L144.8,183.3 L141.0,184.6 L137.6,185.6 L134.7,186.1 L132.3,186.1 L130.5,185.8 L129.1,184.9 L128.3,183.7 L128.0,182.0 L128.3,179.9 L129.1,177.4 L130.5,174.6 L132.3,171.4 L134.7,167.8 L137.6,164.0 L141.0,159.8 L144.8,155.5 L149.1,150.9 L153.7,146.2 L158.7,141.3 L164.0,136.3 L169.6,131.2 L175.4,126.2 L181.4,121.1 L187.5,116.1 L193.7,111.2 L200.0,106.4 L206.3,101.8 L212.5,97.4 L218.6,93.2 L224.6,89.2 L230.4,85.6 L236.0,82.3 L241.3,79.3 L246.3,76.7 L250.9,74.5 L255.2,72.7 L259.0,71.4 L262.4,70.4 L265.3,69.9 L267.7,69.9 L269.5,70.2 L270.9,71.1 L271.7,72.3 Z"/>
+          <text class="val" x="118" y="242" text-anchor="end">6 cm</text>
+          <text class="val" x="282" y="188">12 cm</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 50
+  {
+    id: 'prisms-50',
+    topic: 'Aynı kartondan yapılan küplerin hacim oranı',
+    stem: [
+      'Bir ayrıtının uzunluğu 12 cm olan küp biçimindeki bir karton kutunun tamamı kullanılarak özdeş 9 tane küp yapılacaktır.',
+    ],
+    ask: 'Yapılan bu küplerden birinin hacminin ilk küpün hacmine oranı kaçtır?',
+    choices: [
+      { key: 'A', text: '1/81' },
+      { key: 'B', text: '1/27' },
+      { key: 'C', text: '1/18' },
+      { key: 'D', text: '1/9' },
+      { key: 'E', text: '1/3' },
+    ],
+    answer: 'B',
+    hint: 'Karton aynı kaldığı için paylaşılan şey hacim değil, yüzey alanıdır.',
+    solution: [
+      {
+        title: 'Kartonun alanı',
+        detail: 'İlk küpün tüm alanı 6 · 12² = 864 cm² dir.',
+      },
+      {
+        title: 'Küçük küpün ayrıtı',
+        detail: 'Her küçük küpün alanı 864 / 9 = 96 cm² dir; 6b² = 96 ise b² = 16, b = 4 cm dir.',
+      },
+      {
+        title: 'Hacimler',
+        detail: 'Küçük küpün hacmi 4³ = 64 cm³, ilk küpün hacmi 12³ = 1728 cm³ tür.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Oran 64 / 1728 = 1/27 dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 51
+  {
+    id: 'prisms-51',
+    topic: 'Eğik silindirdeki su dik konumda',
+    stem: [
+      'Yüksekliği 8 cm olan dik silindir biçimindeki bir kap, ağzından su dökülmeye başlayacak kadar eğilmiştir: su yüzeyi kabın ağzının en alçak noktasından geçmektedir.',
+      'Bu durumda kabın en üstte kalan ana doğrusu boyunca su, tabandan 3 cm yüksekliğe kadar çıkmaktadır.',
+      'Kap, içindeki su dökülmeden dik konuma getiriliyor.',
+    ],
+    ask: 'Buna göre, kabın ağzı ile su yüzeyi arasındaki uzaklık kaç cm dir?',
+    choices: [
+      { key: 'A', text: '2' },
+      { key: 'B', text: '5/2' },
+      { key: 'C', text: '3' },
+      { key: 'D', text: '7/2' },
+      { key: 'E', text: '11/2' },
+    ],
+    answer: 'B',
+    hint: 'Su yüzeyi tabanı kesmiyorsa, suyun hacmi karşılıklı iki ana doğru üzerindeki su yüksekliklerinin ortalaması kadar yüksek bir silindirin hacmidir.',
+    solution: [
+      {
+        title: 'Ana doğrulardaki su',
+        detail:
+          'Eğik durumda su, alttaki ana doğru boyunca ağza kadar yani 8 cm, üstteki ana doğru boyunca 3 cm yükselir.',
+      },
+      {
+        title: 'Suyun hacmi',
+        detail:
+          'Su, üst yüzü eğik kesilmiş bir silindir oluşturur; hacmi πr² · (8 + 3) / 2 = πr² · 11/2 dir.',
+      },
+      {
+        title: 'Dik konumda su yüksekliği',
+        detail: 'Kap dik durunca su yüksekliği 11/2 cm olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Ağız ile su yüzeyi arasındaki uzaklık 8 − 11/2 = 5/2 cm dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 52
+  {
+    id: 'prisms-52',
+    topic: 'Alanlardan dikdörtgenler prizmasının hacmi',
+    stem: [],
+    ask: 'Tüm alanı 208 cm², yanal alanlar toplamı 160 cm² ve taban ayrıtlarından biri 6 cm olan bir dikdörtgenler prizmasının hacmi kaç cm³ tür?',
+    choices: [
+      { key: 'A', text: '96' },
+      { key: 'B', text: '128' },
+      { key: 'C', text: '144' },
+      { key: 'D', text: '160' },
+      { key: 'E', text: '192' },
+    ],
+    answer: 'E',
+    hint: 'Tüm alandan yanal alanı çıkarınca iki tabanın alanı kalır.',
+    solution: [
+      {
+        title: 'Taban alanı',
+        detail: 'İki tabanın alanı 208 − 160 = 48 cm², bir tabanın alanı 24 cm² dir.',
+      },
+      {
+        title: 'Diğer taban ayrıtı',
+        detail: '6 · b = 24 ise b = 4 cm; taban çevresi 2 · (6 + 4) = 20 cm dir.',
+      },
+      {
+        title: 'Yükseklik',
+        detail: 'Yanal alan = taban çevresi · h: 20 · h = 160 ise h = 8 cm dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Hacim 24 · 8 = 192 cm³ tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 53
+  {
+    id: 'prisms-53',
+    topic: 'Silindiri iki kez dolanan en kısa yol',
+    stem: [
+      'Yarıçapı 5 cm, yüksekliği 15π cm olan dik silindir biçimindeki bir kutunun alt tabanının çemberi üzerindeki A noktasından hareket eden bir karınca, silindirin yan yüzeyi üzerinde yürüyerek silindirin çevresini tam iki kez dolanıyor ve A nın tam üstünde, üst taban çemberi üzerindeki B noktasına ulaşıyor.',
+    ],
+    ask: 'Buna göre, karıncanın aldığı en kısa yol kaç cm dir?',
+    choices: [
+      { key: 'A', text: '15π' },
+      { key: 'B', text: '5√13 π' },
+      { key: 'C', text: '25π' },
+      { key: 'D', text: '30π' },
+      { key: 'E', text: '35π' },
+    ],
+    answer: 'C',
+    hint: 'Yan yüzeyi iki kez yan yana açarak yolu tek bir doğru parçasına çevir.',
+    solution: [
+      {
+        title: 'Yan yüzeyin açınımı',
+        detail:
+          'Yan yüzey açılınca eni taban çevresi 2π · 5 = 10π, boyu 15π olan bir dikdörtgen elde edilir.',
+      },
+      {
+        title: 'İki tur',
+        detail:
+          'İki tur için iki açınım yan yana konur: eni 2 · 10π = 20π, boyu 15π olan dikdörtgen. A ve B bu dikdörtgenin karşı köşeleridir.',
+      },
+      {
+        title: 'Pisagor',
+        detail: '√((20π)² + (15π)²) = √(400π² + 225π²) = √(625π²).',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'En kısa yol 25π cm dir.',
+      },
+    ],
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -2773,6 +3041,14 @@ export const UNIT_8_PRISMS: Unit = {
       summary:
         'Yanal yüzde en kısa yol, bölmeli kapta su seviyesi, altıgen prizmanın alanı, dikdörtgenden silindir, dik üçgenlerle silindir hacmi ve küplerden prizma.',
       questions: pick('prisms-42', 'prisms-43', 'prisms-44', 'prisms-45', 'prisms-46', 'prisms-47'),
+    },
+    {
+      id: 'prisms-m8',
+      order: 8,
+      title: 'Kesilen küp, eğik kütük ve alanlardan hacim',
+      summary:
+        'Küpten prizma çıkarınca kalan alan, eğik kütüğü ikiye bölme, kartondan küpler, eğik kaptaki su, alanlardan hacim ve silindirde iki turluk en kısa yol.',
+      questions: pick('prisms-48', 'prisms-49', 'prisms-50', 'prisms-51', 'prisms-52', 'prisms-53'),
     },
   ],
 };
