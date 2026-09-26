@@ -248,6 +248,21 @@ describe('unit 7 answer key', () => {
     expect(answerOf('lines-131')).toBe('E'));
   it('132 — 3(4 − x) + (2 − y) − 4 = 0, 3x + y − 10 = 0, 3/2 + 1/2 = 2 → B', () =>
     expect(answerOf('lines-132')).toBe('B'));
+  it('133 — I: 1 m/yıl, II: 1/3 m/yıl, 4 ÷ (2/3) = 6 → C', () =>
+    expect(answerOf('lines-133')).toBe('C'));
+  it('134 — (4 − x) − 2y + 6 = 0, x + 2y − 10 = 0 → D', () =>
+    expect(answerOf('lines-134')).toBe('D'));
+  it('135 — (−1, 2), (7, 2), (7, −4), (−1, −4), −1 + 7 + 7 − 1 = 12 → C', () =>
+    expect(answerOf('lines-135')).toBe('C'));
+  it('136 — (−2 + c)/2 = 4, c = 10, 3x + y + 10 = 0 → C', () =>
+    expect(answerOf('lines-136')).toBe('C'));
+  it('137 — (1 + n)/2 = −5, n = −11, 2x − y − 11 = 0 → D', () =>
+    expect(answerOf('lines-137')).toBe('D'));
+  it('138 — m(x − 2) − x + 3y − 1 = 0, (2, 1), 2 + 2 − t = 0, t = 4 → C', () =>
+    expect(answerOf('lines-138')).toBe('C'));
+  it('139 — |3n + 7|/5 = 4, n = 13/3 or n = −9 → A', () => expect(answerOf('lines-139')).toBe('A'));
+  it('140 — B(−1, 3), |(m + 3)/(1 − 3m)| = 1, m = −1/2, x + 1 = 6, x = 5 → C', () =>
+    expect(answerOf('lines-140')).toBe('C'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)

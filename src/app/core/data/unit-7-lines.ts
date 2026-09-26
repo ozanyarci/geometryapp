@@ -6123,6 +6123,351 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+  // ---------------------------------------------------------------- 133
+  {
+    id: 'lines-133',
+    topic: 'Doğrusal grafik yorumlama',
+    // Origin (60, 270); 60 px per year, 40 px per metre. Tree I runs from
+    // (0, 2) to (4, 6), tree II from (0, 4) to (4, 16/3); they meet at (3, 5).
+    figure: {
+      viewBox: '0 10 400 300',
+      caption: 'Şekil 55',
+      label:
+        'Yatay eksen zaman (yıl), düşey eksen boy (metre). I. ağacın grafiği 0. yılda 2 metreden, II. ağacın grafiği 0. yılda 4 metreden başlayan birer doğru; iki doğru 3. yılda 5 metrede kesişiyor ve bu noktadan eksenlere noktalı dikmeler çizilmiş.',
+      svg: `
+          <path class="ln" d="M40,270 L390,270"/>
+          <path class="ln" d="M380,264 L390,270 L380,276"/>
+          <path class="ln" d="M60,290 L60,16"/>
+          <path class="ln" d="M54,26 L60,16 L66,26"/>
+          <path class="ln" d="M56,230 L64,230 M56,190 L64,190 M56,150 L64,150 M56,110 L64,110 M56,70 L64,70 M56,30 L64,30"/>
+          <text x="50" y="235" text-anchor="end">1</text>
+          <text x="50" y="195" text-anchor="end">2</text>
+          <text x="50" y="155" text-anchor="end">3</text>
+          <text x="50" y="115" text-anchor="end">4</text>
+          <text x="50" y="75" text-anchor="end">5</text>
+          <text x="50" y="35" text-anchor="end">6</text>
+          <text x="50" y="290" text-anchor="end">0</text>
+          <path class="ln" stroke-dasharray="3 4" d="M60,70 L240,70 L240,270"/>
+          <path class="ln" d="M60,190 L300,30"/>
+          <path class="ln" d="M60,110 L300,56.7"/>
+          <circle class="pt" cx="240" cy="70" r="3.2"/>
+          <text x="240" y="290" text-anchor="middle">3</text>
+          <text x="308" y="34">I</text>
+          <text x="308" y="62">II</text>
+          <text x="72" y="26">Boy (m)</text>
+          <text x="390" y="294" text-anchor="end">zaman (yıl)</text>
+        `,
+    },
+    stem: ['Yukarıdaki grafik iki ağacın boyunun yıllara göre değişimini göstermektedir.'],
+    ask: 'Buna göre, iki ağacın boyları eşit olduktan kaç yıl sonra boyları arasındaki fark 4 metre olur?',
+    choices: [
+      { key: 'A', text: '4' },
+      { key: 'B', text: '5' },
+      { key: 'C', text: '6' },
+      { key: 'D', text: '8' },
+      { key: 'E', text: '9' },
+    ],
+    answer: 'C',
+    hint: 'Her ağacın yılda kaç metre uzadığını grafiğin eğiminden bul.',
+    solution: [
+      {
+        title: 'I. ağacın hızı',
+        detail: 'I. ağaç 3 yılda 2 metreden 5 metreye çıkar; yılda (5 − 2)/3 = 1 metre uzar.',
+      },
+      {
+        title: 'II. ağacın hızı',
+        detail: 'II. ağaç 3 yılda 4 metreden 5 metreye çıkar; yılda (5 − 4)/3 = 1/3 metre uzar.',
+      },
+      {
+        title: 'Farkın artışı',
+        detail: '3. yılda boylar eşittir; bundan sonra fark her yıl 1 − 1/3 = 2/3 metre artar.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Farkın 4 metre olması için 4 ÷ (2/3) = 6 yıl geçmelidir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 134
+  {
+    id: 'lines-134',
+    topic: 'Doğrunun doğruya göre simetriği',
+    stem: [],
+    ask: 'Analitik düzlemde verilen x − 2y + 6 = 0 doğrusunun x − 2 = 0 doğrusuna göre simetriği olan doğrunun denklemi aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: 'x − 2y + 2 = 0' },
+      { key: 'B', text: '2x + y − 10 = 0' },
+      { key: 'C', text: 'x + 2y + 2 = 0' },
+      { key: 'D', text: 'x + 2y − 10 = 0' },
+      { key: 'E', text: 'x − 2y − 10 = 0' },
+    ],
+    answer: 'D',
+    hint: 'x = 2 doğrusuna göre simetride (x, y) noktası (4 − x, y) noktasına gider.',
+    solution: [
+      {
+        title: 'Simetri kuralı',
+        detail:
+          'Simetrik doğru üzerindeki (x, y) noktasının x = 2 ye göre simetriği (4 − x, y), verilen doğru üzerindedir.',
+      },
+      {
+        title: 'Yerine koy',
+        detail: '(4 − x) − 2y + 6 = 0 ⇒ −x − 2y + 10 = 0.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Her iki taraf −1 ile çarpılırsa simetrik doğru x + 2y − 10 = 0 olur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 135
+  {
+    id: 'lines-135',
+    topic: 'Simetri eksenleri ve dikdörtgen',
+    stem: [],
+    ask: 'Simetri eksenleri x = 3 ve y = −1 doğruları olan dikdörtgenin bir köşesi A(−1, 2) noktası olduğuna göre, dört köşesinin apsisleri toplamı kaçtır?',
+    choices: [
+      { key: 'A', text: '8' },
+      { key: 'B', text: '10' },
+      { key: 'C', text: '12' },
+      { key: 'D', text: '14' },
+      { key: 'E', text: '16' },
+    ],
+    answer: 'C',
+    hint: 'A noktasının x = 3 doğrusuna, y = −1 doğrusuna ve iki eksenin kesişimine göre simetriklerini bul.',
+    solution: [
+      {
+        title: 'x = 3 e göre simetri',
+        detail: 'A(−1, 2) noktasının x = 3 e göre simetriği (2 · 3 − (−1), 2) = (7, 2) dir.',
+      },
+      {
+        title: 'y = −1 e göre simetri',
+        detail: 'A nın y = −1 e göre simetriği (−1, 2 · (−1) − 2) = (−1, −4) tür.',
+      },
+      {
+        title: 'Dördüncü köşe',
+        detail: 'Kalan köşe (7, −4) tür; köşeler (−1, 2), (7, 2), (7, −4) ve (−1, −4) olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Apsisler toplamı −1 + 7 + 7 − 1 = 12 dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 136
+  {
+    id: 'lines-136',
+    topic: 'Doğrunun paralel doğruya göre simetriği',
+    stem: [],
+    ask: 'Analitik düzlemde verilen 3x + y − 2 = 0 doğrusunun 3x + y + 4 = 0 doğrusuna göre simetriği olan doğrunun denklemi aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: '3x + y + 6 = 0' },
+      { key: 'B', text: '3x + y + 8 = 0' },
+      { key: 'C', text: '3x + y + 10 = 0' },
+      { key: 'D', text: '3x + y − 10 = 0' },
+      { key: 'E', text: '3x + y + 12 = 0' },
+    ],
+    answer: 'C',
+    hint: 'Doğrular paraleldir; simetri doğrusu, verilen doğru ile simetriğinin tam ortasında durur.',
+    solution: [
+      {
+        title: 'Paralellik',
+        detail:
+          'İki doğrunun katsayıları aynıdır; simetrik doğru da 3x + y + c = 0 biçiminde bir paralel doğrudur.',
+      },
+      {
+        title: 'Orta doğru',
+        detail:
+          '3x + y + 4 = 0 doğrusu, 3x + y − 2 = 0 ile 3x + y + c = 0 doğrularının tam ortasındadır: (−2 + c)/2 = 4.',
+      },
+      {
+        title: 'c yi bul',
+        detail: '−2 + c = 8 ⇒ c = 10.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Simetrik doğru 3x + y + 10 = 0 dır.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 137
+  {
+    id: 'lines-137',
+    topic: 'Doğrunun paralel doğruya göre simetriği',
+    stem: [],
+    ask: 'y = 2x + 1 doğrusunun y = 2x − 5 doğrusuna göre simetriği aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: 'y = 2x − 9' },
+      { key: 'B', text: 'y = −2x + 11' },
+      { key: 'C', text: 'y = 2x + 7' },
+      { key: 'D', text: '2x − y − 11 = 0' },
+      { key: 'E', text: 'y = 2x − 6' },
+    ],
+    answer: 'D',
+    hint: 'Paralel doğrularda simetri doğrusunun y kesimi, iki doğrunun y kesimlerinin ortalamasıdır.',
+    solution: [
+      {
+        title: 'Paralellik',
+        detail: 'Eğimler eşit (2) olduğundan simetrik doğru y = 2x + n biçimindedir.',
+      },
+      {
+        title: 'Orta doğru',
+        detail: 'y = 2x − 5 doğrusu tam ortada kalır: (1 + n)/2 = −5.',
+      },
+      {
+        title: 'n yi bul',
+        detail: '1 + n = −10 ⇒ n = −11; simetrik doğru y = 2x − 11 dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'y = 2x − 11 denklemi 2x − y − 11 = 0 biçiminde yazılır; bu D seçeneğidir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 138
+  {
+    id: 'lines-138',
+    topic: 'Doğru demetinin sabit noktası',
+    stem: [],
+    ask: 'Analitik düzlemde, denklemi (m − 1)x + 3y − 2m − 1 = 0 olan doğru demetinin bir elemanı, denklemi x + 2y − t = 0 olan doğru olduğuna göre, t kaçtır?',
+    choices: [
+      { key: 'A', text: '2' },
+      { key: 'B', text: '3' },
+      { key: 'C', text: '4' },
+      { key: 'D', text: '5' },
+      { key: 'E', text: '−4' },
+    ],
+    answer: 'C',
+    hint: 'Denklemi m nin katsayısı ve m den bağımsız kısım olarak ayır; demetteki her doğru aynı sabit noktadan geçer.',
+    solution: [
+      {
+        title: 'm ye göre düzenle',
+        detail: 'm(x − 2) + (−x + 3y − 1) = 0.',
+      },
+      {
+        title: 'Sabit nokta',
+        detail: 'Her m için sağlanması için x − 2 = 0 ve −x + 3y − 1 = 0 olmalıdır: x = 2, y = 1.',
+      },
+      {
+        title: 'Doğruya yerleştir',
+        detail:
+          'x + 2y − t = 0 doğrusu da demetin elemanı olduğundan (2, 1) den geçer: 2 + 2 − t = 0.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 't = 4 tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 139
+  {
+    id: 'lines-139',
+    topic: 'Noktanın doğruya uzaklığı',
+    stem: [],
+    ask: 'Analitik düzlemde P(n, 2) noktasının 3x + 4y − 1 = 0 doğrusuna uzaklığı, x eksenine uzaklığının 2 katı ise n aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: '−9' },
+      { key: 'B', text: '−3' },
+      { key: 'C', text: '1' },
+      { key: 'D', text: '3' },
+      { key: 'E', text: '11/3' },
+    ],
+    answer: 'A',
+    hint: 'P noktasının x eksenine uzaklığı ordinatının mutlak değeridir.',
+    solution: [
+      {
+        title: 'x eksenine uzaklık',
+        detail: 'P(n, 2) nin x eksenine uzaklığı 2 dir; doğruya uzaklığı 2 · 2 = 4 olmalıdır.',
+      },
+      {
+        title: 'Uzaklık formülü',
+        detail: '|3n + 4 · 2 − 1| / √(3² + 4²) = |3n + 7| / 5 = 4 ⇒ |3n + 7| = 20.',
+      },
+      {
+        title: 'İki durum',
+        detail: '3n + 7 = 20 ⇒ n = 13/3; 3n + 7 = −20 ⇒ n = −9.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Seçeneklerde yer alan değer n = −9 dur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 140
+  {
+    id: 'lines-140',
+    topic: 'İki doğru arasındaki açı',
+    // Origin (130, 230), 40 px per unit on both axes. y = −3x runs from
+    // (−1.6, 4.8) to (0.4, −1.2); d: y = −x/2 + 5/2 from (−2, 3.5) to
+    // (6.2, −0.6). B(−1, 3) → (90, 110), A(5, 0) → (330, 230). The upward rays
+    // from B point at 108.43° and 153.43°, so the arc spans exactly 45°.
+    figure: {
+      viewBox: '0 20 400 290',
+      caption: 'Şekil 56',
+      label:
+        'Koordinat düzleminde orijinden geçen y = −3x doğrusu ile d doğrusu B noktasında kesişiyor; d doğrusu x eksenini A noktasında kesiyor. B noktasında iki doğru arasındaki açı 45° olarak işaretli.',
+      svg: `
+          <path class="ln" d="M20,230 L390,230"/>
+          <path class="ln" d="M380,224 L390,230 L380,236"/>
+          <path class="ln" d="M130,300 L130,28"/>
+          <path class="ln" d="M124,38 L130,28 L136,38"/>
+          <text x="388" y="220" text-anchor="end">x</text>
+          <text x="140" y="40">y</text>
+          <path class="ln" d="M66,38 L146,278"/>
+          <path class="ln" d="M50,90 L378,254"/>
+          <path class="arc" d="M83.04,89.13 A22,22 0 0,0 70.32,100.16"/>
+          <circle class="pt" cx="90" cy="110" r="3.2"/>
+          <circle class="pt" cx="130" cy="230" r="3.2"/>
+          <circle class="pt" cx="330" cy="230" r="3.2"/>
+          <text class="val" x="62" y="76" text-anchor="middle">45°</text>
+          <text x="82" y="130" text-anchor="end">B</text>
+          <text x="122" y="250" text-anchor="end">O</text>
+          <text x="330" y="252" text-anchor="middle">A</text>
+          <text x="384" y="272" text-anchor="middle">d</text>
+          <text x="60" y="36" text-anchor="end">y = −3x</text>
+        `,
+    },
+    stem: ['Yukarıdaki şekilde y = −3x doğrusu ile AB doğrusu arasındaki açı 45° dir.'],
+    ask: 'B noktasının apsisi −1 olduğuna göre, A noktasının apsisi kaçtır?',
+    choices: [
+      { key: 'A', text: '3' },
+      { key: 'B', text: '4' },
+      { key: 'C', text: '5' },
+      { key: 'D', text: '6' },
+      { key: 'E', text: '7' },
+    ],
+    answer: 'C',
+    hint: 'İki doğru arasındaki açının tanjantı |(m₁ − m₂)/(1 + m₁m₂)| formülüyle bulunur; tan 45° = 1.',
+    solution: [
+      {
+        title: 'B noktası',
+        detail: 'B, y = −3x üzerinde ve apsisi −1 olduğundan B(−1, 3) tür.',
+      },
+      {
+        title: 'd nin eğimi',
+        detail:
+          '|(m + 3)/(1 − 3m)| = 1 ⇒ m + 3 = 1 − 3m ya da m + 3 = 3m − 1; buradan m = −1/2 ya da m = 2.',
+      },
+      {
+        title: 'Doğru eğimi seç',
+        detail: 'Şekilde d azalan ve y = −3x ten daha yatık bir doğrudur; m = −1/2 alınır.',
+      },
+      {
+        title: 'd nin denklemi',
+        detail: 'y − 3 = −(1/2)(x + 1); y = 0 için x + 1 = 6.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'A noktasının apsisi x = 5 tir.',
+      },
+    ],
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -6395,6 +6740,23 @@ export const UNIT_7_LINES: Unit = {
       summary:
         'Doğruya göre simetriyle alan, kesim noktasının simetriği, eşitsizlik sisteminin bölgesi, parçalı doğrusal grafik ve doğrunun noktaya göre simetriği.',
       questions: pick('lines-127', 'lines-128', 'lines-129', 'lines-130', 'lines-131', 'lines-132'),
+    },
+    {
+      id: 'lines-m21',
+      order: 21,
+      title: 'Simetri, demet ve doğrular arası açı',
+      summary:
+        'Doğrusal büyüme grafiği, doğruya ve paralel doğruya göre simetri, simetri eksenleriyle dikdörtgen, demetin sabit noktası, noktanın doğruya uzaklığı ve 45° lik açı.',
+      questions: pick(
+        'lines-133',
+        'lines-134',
+        'lines-135',
+        'lines-136',
+        'lines-137',
+        'lines-138',
+        'lines-139',
+        'lines-140',
+      ),
     },
   ],
 };
