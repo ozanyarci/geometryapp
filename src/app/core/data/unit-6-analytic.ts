@@ -1234,7 +1234,8 @@ const QUESTIONS: Question[] = [
       },
       {
         title: 'Sonuç',
-        detail: 'İkisi de negatif olan tek seçenek (−2, −3) tür; A(−2, 3) gerçekten II. bölgededir.',
+        detail:
+          'İkisi de negatif olan tek seçenek (−2, −3) tür; A(−2, 3) gerçekten II. bölgededir.',
       },
     ],
   },
@@ -1515,7 +1516,8 @@ const QUESTIONS: Question[] = [
     solution: [
       {
         title: 'Merkez',
-        detail: 'Çember y eksenine O’da teğet ve [OB] çap olduğundan merkez M(r, 0), yarıçap r’dir.',
+        detail:
+          'Çember y eksenine O’da teğet ve [OB] çap olduğundan merkez M(r, 0), yarıçap r’dir.',
       },
       {
         title: 'A noktası çember üzerinde',
@@ -1776,7 +1778,8 @@ const QUESTIONS: Question[] = [
     solution: [
       {
         title: 'OAF üçgeni',
-        detail: 'Altıgenin iç açısı 120° olduğundan OAF’de A açısı 60°’dir: |OA| = a/2, |OF| = a√3/2.',
+        detail:
+          'Altıgenin iç açısı 120° olduğundan OAF’de A açısı 60°’dir: |OA| = a/2, |OF| = a√3/2.',
       },
       {
         title: 'D’nin apsisi',
@@ -1878,7 +1881,8 @@ const QUESTIONS: Question[] = [
       },
       {
         title: 'C noktası',
-        detail: 'ABC = 90° olduğundan [BC] x ekseniyle 45° yapar: 5 birim yukarı, 5 birim sağa, C(8, 5).',
+        detail:
+          'ABC = 90° olduğundan [BC] x ekseniyle 45° yapar: 5 birim yukarı, 5 birim sağa, C(8, 5).',
       },
       {
         title: 'Dik kenarlar',
@@ -2021,6 +2025,320 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+  // ---------------------------------------------------------------- 45
+  {
+    id: 'analytic-45',
+    topic: 'Paralel kenardan köşe koordinatı',
+    // Scale 20 px per unit; px = 60 + 20(x + 3), py = 40 + 20(8 − y).
+    figure: {
+      viewBox: '0 0 400 260',
+      caption: 'Şekil 17',
+      label:
+        'ABC üçgeni; D noktası [AB] üzerinde, E noktası [AC] üzerinde ve [DE], [BC]’ye paraleldir.',
+      svg: `
+          <path class="ln" d="M180,40 L60,220 L360,220 Z"/>
+          <path class="ln" d="M140,100 L240,100"/>
+          <circle class="pt" cx="180" cy="40" r="3.2"/>
+          <circle class="pt" cx="140" cy="100" r="3.2"/>
+          <circle class="pt" cx="240" cy="100" r="3.2"/>
+          <circle class="pt" cx="60" cy="220" r="3.2"/>
+          <circle class="pt" cx="360" cy="220" r="3.2"/>
+          <text x="180" y="30" text-anchor="middle">A(3, 8)</text>
+          <text x="132" y="100" text-anchor="end">D(1, 5)</text>
+          <text x="248" y="100">E(6, 5)</text>
+          <text x="60" y="242" text-anchor="middle">B(−3, −1)</text>
+          <text x="360" y="242" text-anchor="middle">C(x, y)</text>
+        `,
+    },
+    given: ['[DE] // [BC]'],
+    stem: ['Şekilde ABC üçgeninin köşe koordinatları verilmiştir.'],
+    ask: '[DE] // [BC] olduğuna göre, x + y toplamı kaçtır?',
+    choices: [
+      { key: 'A', text: '9' },
+      { key: 'B', text: '10' },
+      { key: 'C', text: '11' },
+      { key: 'D', text: '12' },
+      { key: 'E', text: '13' },
+    ],
+    answer: 'C',
+    hint: 'A’dan D’ye gidiş, A’dan B’ye gidişin kaçta kaçı? Aynı oran [AC] üzerinde de geçerlidir.',
+    solution: [
+      {
+        title: '[AB] üzerindeki oran',
+        detail: 'D − A = (−2, −3), B − A = (−6, −9); yani |AD| / |AB| = 1/3.',
+      },
+      {
+        title: 'Temel orantı',
+        detail: '[DE] // [BC] olduğundan |AE| / |AC| = |AD| / |AB| = 1/3.',
+      },
+      {
+        title: 'C noktası',
+        detail: 'E − A = (3, −3) ⇒ C = A + 3 · (3, −3) = (3 + 9, 8 − 9) = (12, −1).',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'x + y = 12 + (−1) = 11’dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 46
+  {
+    id: 'analytic-46',
+    topic: 'Köşeleri verilen dörtgenin alanı',
+    stem: [],
+    ask: 'A(−1, 1), B(2, 5), C(6, 4), D(4, −1) köşe noktaları ile ifade edilen dörtgenin alanı kaç birim karedir?',
+    choices: [
+      { key: 'A', text: '20' },
+      { key: 'B', text: '22' },
+      { key: 'C', text: '24' },
+      { key: 'D', text: '26' },
+      { key: 'E', text: '28' },
+    ],
+    answer: 'C',
+    hint: 'Dörtgeni kenarları eksenlere paralel bir dikdörtgenin içine yerleştir; köşelerde kalan dik üçgenleri çıkar.',
+    solution: [
+      {
+        title: 'Çevreleyen dikdörtgen',
+        detail: 'x, −1’den 6’ya; y, −1’den 5’e uzanır: 7 · 6 = 42 birim kare.',
+      },
+      {
+        title: 'Üst köşeler',
+        detail: 'A–B arasında dik kenarları 3 ve 4 olan üçgen: 6; B–C arasında 4 ve 1: 2.',
+      },
+      {
+        title: 'Alt köşeler',
+        detail: 'C–D arasında dik kenarları 2 ve 5 olan üçgen: 5; D–A arasında 5 ve 2: 5.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Alan = 42 − (6 + 2 + 5 + 5) = 42 − 18 = 24 birim karedir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 47
+  {
+    id: 'analytic-47',
+    topic: 'İkizkenar dik üçgenin alanı',
+    // Scale 20 px per unit, origin at (260, 240); A(0, 10), B(−6, 6), C(−2, 0).
+    figure: {
+      viewBox: '0 0 400 280',
+      caption: 'Şekil 18',
+      label:
+        'Analitik düzlemde ABC üçgeni; A y ekseni üzerinde, C x ekseni üzerinde, B köşesinde dik açı var ve |AB| = |BC|.',
+      svg: `
+          <path class="ln" d="M100,240 L385,240"/>
+          <path class="ln" d="M375,234 L385,240 L375,246"/>
+          <path class="ln" d="M260,262 L260,12"/>
+          <path class="ln" d="M254,22 L260,12 L266,22"/>
+          <text x="385" y="262" text-anchor="middle">x</text>
+          <text x="270" y="22">y</text>
+          <path class="ln" d="M260,40 L140,120 L220,240 Z"/>
+          <path class="arc" d="M149.98,113.34 L156.64,123.32 L146.66,129.98"/>
+          <path class="tick" d="M196.1,74.2 L203.9,85.8"/>
+          <path class="tick" d="M174.2,183.9 L185.8,176.1"/>
+          <circle class="pt" cx="260" cy="40" r="3.2"/>
+          <circle class="pt" cx="140" cy="120" r="3.2"/>
+          <circle class="pt" cx="220" cy="240" r="3.2"/>
+          <text x="268" y="44">A</text>
+          <text x="132" y="116" text-anchor="end">B(−6, 6)</text>
+          <text x="220" y="262" text-anchor="middle">C</text>
+          <text x="268" y="258">O</text>
+        `,
+    },
+    given: ['[AB] ⊥ [BC]', '|AB| = |BC|', 'B(−6, 6)', '|OA| = 10'],
+    stem: [],
+    ask: 'Dik koordinat düzlemindeki verilere göre, ABC üçgeninin alanı kaç birim karedir?',
+    choices: [
+      { key: 'A', text: '20' },
+      { key: 'B', text: '24' },
+      { key: 'C', text: '26' },
+      { key: 'D', text: '30' },
+      { key: 'E', text: '36' },
+    ],
+    answer: 'C',
+    hint: 'B’den eksenlere dikme indir; oluşan iki dik üçgen eştir.',
+    solution: [
+      {
+        title: 'Eş üçgenler',
+        detail:
+          'B’den y eksenine H(0, 6), x eksenine K(−6, 0) dikmeleri inilir. |AB| = |BC| ve ABC = 90° olduğundan BHA ile BKC eştir.',
+      },
+      {
+        title: 'C noktası',
+        detail: '|AH| = 10 − 6 = 4 ⇒ |KC| = 4, yani C(−6 + 4, 0) = (−2, 0).',
+      },
+      {
+        title: 'Kenar uzunluğu',
+        detail: '|AB|² = 6² + 4² = 52.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Alan(ABC) = |AB| · |BC| / 2 = 52 / 2 = 26 birim karedir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 48
+  {
+    id: 'analytic-48',
+    topic: 'Dikdörtgende benzerlikten ordinat',
+    // Scale 14 px per unit, origin at (110, 260); A(0, 4), B(8, 0), C(14, 12), D(6, 16).
+    figure: {
+      viewBox: '0 0 400 300',
+      caption: 'Şekil 19',
+      label:
+        'Dik koordinat düzleminde ABCD dikdörtgeni; A y ekseni üzerinde, B x ekseni üzerinde, C ve D birinci bölgede.',
+      svg: `
+          <path class="ln" d="M80,260 L385,260"/>
+          <path class="ln" d="M375,254 L385,260 L375,266"/>
+          <path class="ln" d="M110,282 L110,12"/>
+          <path class="ln" d="M104,22 L110,12 L116,22"/>
+          <text x="385" y="282" text-anchor="middle">x</text>
+          <text x="120" y="22">y</text>
+          <path class="ln" d="M110,204 L222,260 L306,92 L194,36 Z"/>
+          <path class="arc" d="M211.27,254.63 L216.64,243.9 L227.37,249.27"/>
+          <circle class="pt" cx="110" cy="204" r="3.2"/>
+          <circle class="pt" cx="222" cy="260" r="3.2"/>
+          <circle class="pt" cx="306" cy="92" r="3.2"/>
+          <circle class="pt" cx="194" cy="36" r="3.2"/>
+          <text x="102" y="208" text-anchor="end">A(0, 4)</text>
+          <text x="222" y="282" text-anchor="middle">B</text>
+          <text x="314" y="96">C(14, k)</text>
+          <text x="194" y="26" text-anchor="middle">D</text>
+          <text x="102" y="278" text-anchor="end">O</text>
+        `,
+    },
+    given: ['ABCD dikdörtgen', '|AB| / |BC| = 2/3', 'A(0, 4)', 'C(14, k)'],
+    stem: [],
+    ask: 'Yukarıdaki verilere göre, k kaçtır?',
+    choices: [
+      { key: 'A', text: '8' },
+      { key: 'B', text: '9' },
+      { key: 'C', text: '10' },
+      { key: 'D', text: '12' },
+      { key: 'E', text: '15' },
+    ],
+    answer: 'D',
+    hint: 'C’den x eksenine dikme indir; AOB ve BHC üçgenleri benzerdir.',
+    solution: [
+      {
+        title: 'Benzer üçgenler',
+        detail:
+          'B(b, 0) ve C’nin x eksenindeki izdüşümü H(14, 0) olsun. ABC = 90° olduğundan AOB ∼ BHC ve benzerlik oranı |BC| / |AB| = 3/2’dir.',
+      },
+      {
+        title: 'Yatay uzaklık',
+        detail: '|BH| = (3/2) · |OA| = (3/2) · 4 = 6 ⇒ b = 14 − 6 = 8, B(8, 0).',
+      },
+      {
+        title: 'Düşey uzaklık',
+        detail: '|CH| = (3/2) · |OB| = (3/2) · 8 = 12.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'k = 12’dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 49
+  {
+    id: 'analytic-49',
+    topic: 'Doğrusal noktalarda oran',
+    stem: ['Analitik düzlemde A(−3, −1), B(1, 1) ve C(x, 4) noktaları doğrusaldır.'],
+    ask: '|AB| / |BC| = 2/3 olduğuna göre, C noktasının apsisi (x) kaçtır?',
+    choices: [
+      { key: 'A', text: '5' },
+      { key: 'B', text: '6' },
+      { key: 'C', text: '7' },
+      { key: 'D', text: '8' },
+      { key: 'E', text: '9' },
+    ],
+    answer: 'C',
+    hint: 'Ordinatlar A’dan B’ye 2 artıyor, B’den C’ye kaç artıyor? Apsisler aynı oranda değişir.',
+    solution: [
+      {
+        title: 'Sıralama',
+        detail: 'Ordinatlar −1, 1, 4 olduğundan B, A ile C arasındadır.',
+      },
+      {
+        title: 'Oranın kontrolü',
+        detail: 'A’dan B’ye y 2 artar, B’den C’ye 3 artar: 2/3 oranı ordinatlarda da görülür.',
+      },
+      {
+        title: 'Apsis farkı',
+        detail: 'A’dan B’ye x 4 artar ⇒ B’den C’ye x, 4 · 3/2 = 6 artar.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'x = 1 + 6 = 7’dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 50
+  {
+    id: 'analytic-50',
+    topic: 'Orijin etrafında 90° döndürme',
+    // Scale 10 px per unit, origin at (80, 210); A(16, 12), B(25, 0).
+    figure: {
+      viewBox: '0 0 400 270',
+      caption: 'Şekil 20',
+      label:
+        'Dik koordinat düzleminde ABO dik üçgeni; B x ekseninin pozitif tarafında, A köşesinde dik açı var, |OA| = 20 ve |AB| = 15.',
+      svg: `
+          <path class="ln" d="M30,210 L385,210"/>
+          <path class="ln" d="M375,204 L385,210 L375,216"/>
+          <path class="ln" d="M80,250 L80,12"/>
+          <path class="ln" d="M74,22 L80,12 L86,22"/>
+          <text x="385" y="232" text-anchor="middle">x</text>
+          <text x="90" y="22">y</text>
+          <path class="ln" d="M80,210 L240,90 L330,210"/>
+          <path class="arc" d="M230.4,97.2 L237.6,106.8 L247.2,99.6"/>
+          <circle class="pt" cx="80" cy="210" r="3.2"/>
+          <circle class="pt" cx="240" cy="90" r="3.2"/>
+          <circle class="pt" cx="330" cy="210" r="3.2"/>
+          <text class="val" x="152" y="140" text-anchor="end">20</text>
+          <text class="val" x="292" y="142">15</text>
+          <text x="240" y="78" text-anchor="middle">A</text>
+          <text x="330" y="232" text-anchor="middle">B</text>
+          <text x="72" y="228" text-anchor="end">O</text>
+        `,
+    },
+    given: ['[OA] ⊥ [AB]', '|OA| = 20', '|AB| = 15'],
+    stem: [],
+    ask: 'Dik koordinat sisteminde verilen ABO dik üçgeni orijin etrafında saat yönünün tersine 90° döndürülürse A noktasının yeni koordinatları ne olur?',
+    choices: [
+      { key: 'A', text: '(−16, 12)' },
+      { key: 'B', text: '(−12, 16)' },
+      { key: 'C', text: '(12, −16)' },
+      { key: 'D', text: '(16, 12)' },
+      { key: 'E', text: '(−12, −16)' },
+    ],
+    answer: 'B',
+    hint: 'Önce A’nın koordinatlarını bul: A’dan [OB]’ye dikme indir ve dik üçgen bağıntılarını kullan.',
+    solution: [
+      {
+        title: 'Hipotenüs',
+        detail: '|OB| = √(20² + 15²) = 25.',
+      },
+      {
+        title: 'A’nın izdüşümü',
+        detail:
+          'A’dan x eksenine dikme H olsun: |OH| = |OA|² / |OB| = 400 / 25 = 16, |AH| = 20 · 15 / 25 = 12. Yani A(16, 12).',
+      },
+      {
+        title: 'Döndürme kuralı',
+        detail: 'Orijin etrafında saat yönünün tersine 90° döndürmede (x, y) → (−y, x) olur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'A(16, 12) → A′(−12, 16).',
+      },
+    ],
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -2141,6 +2459,21 @@ export const UNIT_6_ANALYTIC: Unit = {
         'analytic-42',
         'analytic-43',
         'analytic-44',
+      ),
+    },
+    {
+      id: 'analytic-m7',
+      order: 7,
+      title: 'Oran, benzerlik ve döndürme',
+      summary:
+        'Paralel kenardan köşe, dörtgenin alanı, ikizkenar dik üçgen, dikdörtgende benzerlik, doğrusal noktalarda oran ve 90° döndürme.',
+      questions: pick(
+        'analytic-45',
+        'analytic-46',
+        'analytic-47',
+        'analytic-48',
+        'analytic-49',
+        'analytic-50',
       ),
     },
   ],

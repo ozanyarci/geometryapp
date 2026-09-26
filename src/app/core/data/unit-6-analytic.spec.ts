@@ -46,22 +46,19 @@ describe('unit 6 answer key', () => {
     expect(answerOf('analytic-21')).toBe('C'));
 
   it('22 — √(6² + 8²) = √100 = 10 → C', () => expect(answerOf('analytic-22')).toBe('C'));
-  it('23 — |OA| = 2√3, 12 = 2·|OC|, |OC| = 6 → C', () =>
-    expect(answerOf('analytic-23')).toBe('C'));
+  it('23 — |OA| = 2√3, 12 = 2·|OC|, |OC| = 6 → C', () => expect(answerOf('analytic-23')).toBe('C'));
   it('24 — a > 0, b < 0, ab < 0, a − b > 0 → II → C', () =>
     expect(answerOf('analytic-24')).toBe('C'));
   it('25 — G(6/3, 9/3) = (2, 3), 3 + 2 = 5 → C', () => expect(answerOf('analytic-25')).toBe('C'));
   it('26 — a < 0, b < 0, (−2, −3) → D', () => expect(answerOf('analytic-26')).toBe('D'));
-  it('27 — k² − 6k + 3 = 0, sum of roots 6 → D', () =>
-    expect(answerOf('analytic-27')).toBe('D'));
+  it('27 — k² − 6k + 3 = 0, sum of roots 6 → D', () => expect(answerOf('analytic-27')).toBe('D'));
   it('28 — |AB| = 5, (a − 4)² = 16, a = 8 → C', () => expect(answerOf('analytic-28')).toBe('C'));
   it('29 — |AB| = 4, h = 9 − 2 = 7, 4·7/2 = 14 → B', () =>
     expect(answerOf('analytic-29')).toBe('B'));
 
   it('30 — D = A + C − B = (−2, 1), −2 + 1 = −1 → B', () =>
     expect(answerOf('analytic-30')).toBe('B'));
-  it('31 — a > −4, a < 3, {−3..2} = 6 values → C', () =>
-    expect(answerOf('analytic-31')).toBe('C'));
+  it('31 — a > −4, a < 3, {−3..2} = 6 values → C', () => expect(answerOf('analytic-31')).toBe('C'));
   it('32 — a = 2 + 5 = 7, b = −4 − 4 = −8, −8 − 7 = −15 → A', () =>
     expect(answerOf('analytic-32')).toBe('A'));
   it('33 — (4 − r)² + 64 = r², 8r = 80, r = 10, 100π → E', () =>
@@ -79,7 +76,20 @@ describe('unit 6 answer key', () => {
   it('42 — 26 + 2y = 13 − 6y, y = −13/8 → B', () => expect(answerOf('analytic-42')).toBe('B'));
   it('43 — |AD| = 6, |AB| = 9, B(6, −2), √40 = 2√10 → B', () =>
     expect(answerOf('analytic-43')).toBe('B'));
-  it('44 — |k − 1|·3/2 = 9, k = 7 or −5, sum 2 → C', () => expect(answerOf('analytic-44')).toBe('C'));
+  it('44 — |k − 1|·3/2 = 9, k = 7 or −5, sum 2 → C', () =>
+    expect(answerOf('analytic-44')).toBe('C'));
+
+  it('45 — |AD|/|AB| = 1/3, C = (3 + 9, 8 − 9) = (12, −1), 12 − 1 = 11 → C', () =>
+    expect(answerOf('analytic-45')).toBe('C'));
+  it('46 — 7·6 = 42, 42 − (6 + 2 + 5 + 5) = 24 → C', () =>
+    expect(answerOf('analytic-46')).toBe('C'));
+  it('47 — C(−2, 0), |AB|² = 36 + 16 = 52, 52/2 = 26 → C', () =>
+    expect(answerOf('analytic-47')).toBe('C'));
+  it('48 — |BH| = 3/2·4 = 6, B(8, 0), k = 3/2·8 = 12 → D', () =>
+    expect(answerOf('analytic-48')).toBe('D'));
+  it('49 — Δx = 4·3/2 = 6, x = 1 + 6 = 7 → C', () => expect(answerOf('analytic-49')).toBe('C'));
+  it('50 — |OB| = 25, A(400/25, 300/25) = (16, 12), (−y, x) = (−12, 16) → B', () =>
+    expect(answerOf('analytic-50')).toBe('B'));
 
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
