@@ -138,6 +138,16 @@ button {
   stroke-width: 1.4;
 }
 
+/* Hidden edges of a solid, dashed in the figure's own ink. Part of the given
+   figure, unlike .aux. */
+.figure-svg .hid {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.2;
+  stroke-dasharray: 5 4;
+  stroke-linecap: round;
+}
+
 /* Construction lines added for the solution, drawn dashed so they read as
    annotation rather than part of the given figure. */
 .figure-svg .aux {
