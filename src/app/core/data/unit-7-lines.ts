@@ -3024,6 +3024,296 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+  // ---------------------------------------------------------------- 65
+  {
+    id: 'lines-65',
+    topic: 'Eksen kesim noktalarından kesişim noktası',
+    given: [
+      'd₁ doğrusu x eksenini −3, y eksenini 2 noktasında keser',
+      'd₂ doğrusu x eksenini 4, y eksenini 4 noktasında keser',
+      'P(x, y) = d₁ ∩ d₂',
+    ],
+    // Origin (190, 230), 40 px per unit; d₁ through (−3, 0), (0, 2); d₂ through (4, 0), (0, 4); P(6/5, 14/5).
+    figure: {
+      viewBox: '0 10 400 280',
+      caption: 'Şekil 30',
+      label:
+        'Analitik düzlemde d₁ doğrusu x eksenini −3, y eksenini 2 noktasında; d₂ doğrusu x eksenini 4, y eksenini 4 noktasında kesiyor. İki doğru P(x, y) noktasında kesişiyor.',
+      svg: `
+          <path class="ln" d="M10,230 L390,230"/>
+          <path class="ln" d="M380,224 L390,230 L380,236"/>
+          <path class="ln" d="M190,280 L190,20"/>
+          <path class="ln" d="M184,30 L190,20 L196,30"/>
+          <text x="386" y="220" text-anchor="middle">x</text>
+          <text x="202" y="30">y</text>
+          <path class="ln" d="M46,246 L298,78"/>
+          <path class="ln" d="M170,50 L374,254"/>
+          <circle class="pt" cx="70" cy="230" r="3.2"/>
+          <circle class="pt" cx="190" cy="150" r="3.2"/>
+          <circle class="pt" cx="190" cy="70" r="3.2"/>
+          <circle class="pt" cx="350" cy="230" r="3.2"/>
+          <circle class="pt" cx="238" cy="118" r="3.2"/>
+          <text x="70" y="254" text-anchor="middle">−3</text>
+          <text x="344" y="250" text-anchor="end">4</text>
+          <text x="198" y="168">2</text>
+          <text x="198" y="62">4</text>
+          <text x="182" y="248" text-anchor="end">O</text>
+          <text x="242" y="100" text-anchor="middle">P</text>
+          <text x="306" y="76">d₁</text>
+          <text x="162" y="50" text-anchor="end">d₂</text>
+        `,
+    },
+    stem: [],
+    ask: 'Buna göre, kesişme noktası P nin apsisi (x) kaçtır?',
+    choices: [
+      { key: 'A', text: '1' },
+      { key: 'B', text: '6/5' },
+      { key: 'C', text: '4/3' },
+      { key: 'D', text: '3/2' },
+      { key: 'E', text: '8/5' },
+    ],
+    answer: 'B',
+    hint: 'Eksenleri kestiği noktalar bilinen bir doğrunun denklemi x/a + y/b = 1 biçiminde yazılır.',
+    solution: [
+      {
+        title: 'd₁ doğrusu',
+        detail: 'x/(−3) + y/2 = 1 ⇒ y = (2/3)x + 2.',
+      },
+      {
+        title: 'd₂ doğrusu',
+        detail: 'x/4 + y/4 = 1 ⇒ y = 4 − x.',
+      },
+      {
+        title: 'Eşitleme',
+        detail: '(2/3)x + 2 = 4 − x ⇒ (5/3)x = 2.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'x = 6/5 bulunur (y = 14/5).',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 66
+  {
+    id: 'lines-66',
+    topic: 'Dik doğrunun katsayıları',
+    stem: [
+      'Analitik düzlemde 2x − y + 5 = 0 doğrusuna dik olan x + ay + c = 0 doğrusu P(3, −2) noktasından geçmektedir.',
+    ],
+    ask: 'Buna göre, a + c toplamı kaçtır?',
+    choices: [
+      { key: 'A', text: '−1' },
+      { key: 'B', text: '1' },
+      { key: 'C', text: '2' },
+      { key: 'D', text: '3' },
+      { key: 'E', text: '5' },
+    ],
+    answer: 'D',
+    hint: 'Dik doğruların eğimlerinin çarpımı −1 dir.',
+    solution: [
+      {
+        title: 'Verilen doğrunun eğimi',
+        detail: '2x − y + 5 = 0 ⇒ y = 2x + 5, eğim 2.',
+      },
+      {
+        title: 'Dik doğrunun eğimi',
+        detail: 'x + ay + c = 0 doğrusunun eğimi −1/a dır; −1/a = −1/2 ⇒ a = 2.',
+      },
+      {
+        title: 'Noktayı yerine koyma',
+        detail: '3 + 2 · (−2) + c = 0 ⇒ c = 1.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'a + c = 2 + 1 = 3 tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 67
+  {
+    id: 'lines-67',
+    topic: 'İki doğrunun kesim noktası',
+    given: ['d: x/3 + y/4 = 1', 'K(x, y) = d ∩ (y = 2x)'],
+    // Origin (150, 260), 50 px per unit; d through (3, 0), (0, 4); K(6/5, 12/5).
+    figure: {
+      viewBox: '0 10 400 300',
+      caption: 'Şekil 31',
+      label:
+        'Analitik düzlemde x eksenini 3, y eksenini 4 noktasında kesen d doğrusu ile orijinden geçen y = 2x doğrusu K noktasında kesişiyor.',
+      svg: `
+          <path class="ln" d="M20,260 L390,260"/>
+          <path class="ln" d="M380,254 L390,260 L380,266"/>
+          <path class="ln" d="M150,300 L150,20"/>
+          <path class="ln" d="M144,30 L150,20 L156,30"/>
+          <text x="386" y="250" text-anchor="middle">x</text>
+          <text x="162" y="30">y</text>
+          <path class="ln" d="M130,33.33 L325,293.33"/>
+          <path class="ln" d="M135,290 L245,70"/>
+          <circle class="pt" cx="300" cy="260" r="3.2"/>
+          <circle class="pt" cx="150" cy="60" r="3.2"/>
+          <circle class="pt" cx="210" cy="140" r="3.2"/>
+          <text x="296" y="280" text-anchor="end">3</text>
+          <text x="142" y="66" text-anchor="end">4</text>
+          <text x="158" y="280">O</text>
+          <text x="200" y="136" text-anchor="end">K</text>
+          <text x="253" y="74">y = 2x</text>
+          <text x="334" y="298">d</text>
+        `,
+    },
+    stem: [],
+    ask: 'Analitik düzlemde verilen d doğrusu ile y = 2x doğrusunun kesim noktası K(x, y) olduğuna göre, K noktasının ordinatı (y) kaçtır?',
+    choices: [
+      { key: 'A', text: '2' },
+      { key: 'B', text: '12/5' },
+      { key: 'C', text: '5/2' },
+      { key: 'D', text: '8/3' },
+      { key: 'E', text: '3' },
+    ],
+    answer: 'B',
+    hint: 'd doğrusunun denkleminde y yerine 2x yaz.',
+    solution: [
+      {
+        title: 'Yerine koyma',
+        detail: 'x/3 + 2x/4 = 1 ⇒ x/3 + x/2 = 1.',
+      },
+      {
+        title: 'Apsis',
+        detail: '5x/6 = 1 ⇒ x = 6/5.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'y = 2x = 12/5 tir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 68
+  {
+    id: 'lines-68',
+    topic: 'Üçüncü doğru üzerinde kesişen doğrular',
+    stem: [
+      'Dik koordinat sisteminde verilen x + y − 6 = 0 ve 3x + my + 2 = 0 doğruları, y − 2x = 0 doğrusu üzerinde kesişiyor.',
+    ],
+    ask: 'Buna göre, m kaçtır?',
+    choices: [
+      { key: 'A', text: '−3' },
+      { key: 'B', text: '−2' },
+      { key: 'C', text: '−1/2' },
+      { key: 'D', text: '1/2' },
+      { key: 'E', text: '2' },
+    ],
+    answer: 'B',
+    hint: 'Önce parametre içermeyen iki doğrunun kesim noktasını bul.',
+    solution: [
+      {
+        title: 'Ortak nokta',
+        detail: 'y = 2x i x + y − 6 = 0 da yaz: 3x = 6 ⇒ x = 2, y = 4.',
+      },
+      {
+        title: 'Üçüncü doğruda yerine koyma',
+        detail: '3 · 2 + m · 4 + 2 = 0 ⇒ 4m = −8.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'm = −2 dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 69
+  {
+    id: 'lines-69',
+    topic: 'Paralel doğru ve eksen üzerinde kesişim',
+    stem: [
+      '2x + 3y − 6 = 0 doğrusuna paralel olan ve x − y + 4 = 0 doğrusu ile y ekseni üzerinde kesişen bir doğru veriliyor.',
+    ],
+    ask: 'Bu doğrunun denklemi aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: '2x + 3y − 4 = 0' },
+      { key: 'B', text: '2x + 3y + 12 = 0' },
+      { key: 'C', text: '2x + 3y − 12 = 0' },
+      { key: 'D', text: '2x + 3y − 8 = 0' },
+      { key: 'E', text: '2x + 3y + 4 = 0' },
+    ],
+    answer: 'C',
+    hint: 'y ekseni üzerindeki noktaların apsisi 0 dır.',
+    solution: [
+      {
+        title: 'Kesişim noktası',
+        detail: 'x − y + 4 = 0 da x = 0 ⇒ y = 4; nokta (0, 4).',
+      },
+      {
+        title: 'Paralel doğru',
+        detail: 'Paralel doğru 2x + 3y + c = 0 biçimindedir.',
+      },
+      {
+        title: 'Noktayı yerine koyma',
+        detail: '2 · 0 + 3 · 4 + c = 0 ⇒ c = −12.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Doğrunun denklemi 2x + 3y − 12 = 0 dır.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 70
+  {
+    id: 'lines-70',
+    topic: 'Dik üçgende kenarın eğimi',
+    given: ['ABC dik üçgen', '[AB] ⊥ [BC]', 'A(−7, 0)', 'B(2, y)', 'C(6, 0)'],
+    // Origin (215, 250), 25 px per unit; A(−7, 0), B(2, 6), C(6, 0).
+    figure: {
+      viewBox: '0 20 400 285',
+      caption: 'Şekil 32',
+      label:
+        'Dik koordinat sisteminde A ve C noktaları x ekseni üzerinde; B noktası birinci bölgede ve ABC üçgeninin B köşesindeki açı dik.',
+      svg: `
+          <path class="ln" d="M15,250 L390,250"/>
+          <path class="ln" d="M380,244 L390,250 L380,256"/>
+          <path class="ln" d="M215,290 L215,30"/>
+          <path class="ln" d="M209,40 L215,30 L221,40"/>
+          <text x="386" y="240" text-anchor="middle">x</text>
+          <text x="227" y="40">y</text>
+          <path class="ln" d="M40,250 L265,100 L365,250"/>
+          <path class="ln" d="M255.02,106.66 L261.68,116.64 L271.66,109.98"/>
+          <circle class="pt" cx="40" cy="250" r="3.2"/>
+          <circle class="pt" cx="265" cy="100" r="3.2"/>
+          <circle class="pt" cx="365" cy="250" r="3.2"/>
+          <text x="40" y="270" text-anchor="middle">A</text>
+          <text x="273" y="94">B</text>
+          <text x="365" y="270" text-anchor="middle">C</text>
+          <text x="207" y="268" text-anchor="end">O</text>
+        `,
+    },
+    stem: [],
+    ask: 'Dik koordinat sistemindeki verilere göre, [AB] kenarının taşıyıcı doğrusunun eğimi aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: '1/2' },
+      { key: 'B', text: '2/3' },
+      { key: 'C', text: '3/4' },
+      { key: 'D', text: '3/2' },
+      { key: 'E', text: '2' },
+    ],
+    answer: 'B',
+    hint: 'AB ve BC eğimlerini y cinsinden yaz; dik olduklarından çarpımları −1 dir.',
+    solution: [
+      {
+        title: 'Eğimler',
+        detail: 'm(AB) = (y − 0)/(2 − (−7)) = y/9, m(BC) = (0 − y)/(6 − 2) = −y/4.',
+      },
+      {
+        title: 'Diklik koşulu',
+        detail: '(y/9) · (−y/4) = −1 ⇒ y² = 36 ⇒ y = 6 (B birinci bölgede).',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'm(AB) = 6/9 = 2/3 tür.',
+      },
+    ],
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -3159,6 +3449,14 @@ export const UNIT_7_LINES: Unit = {
         'lines-63',
         'lines-64',
       ),
+    },
+    {
+      id: 'lines-m11',
+      order: 11,
+      title: 'Kesişim, paralellik ve diklik',
+      summary:
+        'Eksen kesim noktalarıyla kesişim, dik doğrunun katsayıları, doğrunun y = 2x ile kesimi, üçüncü doğru üzerinde kesişme, paralel doğru ve dik üçgende eğim.',
+      questions: pick('lines-65', 'lines-66', 'lines-67', 'lines-68', 'lines-69', 'lines-70'),
     },
   ],
 };

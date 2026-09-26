@@ -124,6 +124,16 @@ describe('unit 7 answer key', () => {
   it('63 — (−3/a)·2 = −1, a = 6 → E', () => expect(answerOf('lines-63')).toBe('E'));
   it('64 — 5y = 15, (2, 3), m = 3/2 → D', () => expect(answerOf('lines-64')).toBe('D'));
 
+  it('65 — y = 2x/3 + 2, y = 4 − x, 5x/3 = 2, x = 6/5 → B', () =>
+    expect(answerOf('lines-65')).toBe('B'));
+  it('66 — −1/a = −1/2, a = 2, 3 − 4 + c = 0, c = 1, 3 → D', () =>
+    expect(answerOf('lines-66')).toBe('D'));
+  it('67 — x/3 + x/2 = 1, x = 6/5, y = 12/5 → B', () => expect(answerOf('lines-67')).toBe('B'));
+  it('68 — (2, 4), 6 + 4m + 2 = 0, m = −2 → B', () => expect(answerOf('lines-68')).toBe('B'));
+  it('69 — (0, 4), 12 + c = 0, 2x + 3y − 12 = 0 → C', () => expect(answerOf('lines-69')).toBe('C'));
+  it('70 — (y/9)(−y/4) = −1, y = 6, m = 6/9 = 2/3 → B', () =>
+    expect(answerOf('lines-70')).toBe('B'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
