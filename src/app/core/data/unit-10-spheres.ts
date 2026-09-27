@@ -1867,6 +1867,325 @@ const QUESTIONS: Question[] = [
         `,
     },
   },
+  // ---------------------------------------------------------------- 38
+  // Axes at 20 px per unit: O (100,280), A (100,40), B (340,280); y = x meets
+  // [AB] at M (220,160).
+  {
+    id: 'spheres-38',
+    topic: 'y = x doğrusu etrafında dönen dik üçgen',
+    stem: [],
+    given: ['A(0, 12)', 'B(12, 0)'],
+    ask: 'Dik koordinat sisteminde verilen AOB dik üçgeni y = x doğrusu etrafında 180° döndürülüyor. Buna göre, oluşan cismin hacmi kaç birim küptür?',
+    choices: [
+      { key: 'A', text: '72π√2' },
+      { key: 'B', text: '96π√2' },
+      { key: 'C', text: '128π√2' },
+      { key: 'D', text: '144π√2' },
+      { key: 'E', text: '192π√2' },
+    ],
+    answer: 'D',
+    hint: 'y = x doğrusu üçgeni iki eş dik üçgene ayırır; her biri öbürünün bıraktığı yarıyı süpürür.',
+    solution: [
+      {
+        title: 'Eksenin üçgeni kestiği nokta',
+        detail:
+          'y = x doğrusu [AB] yi orta noktası M(6, 6) da dik keser; üçgen bu doğruya göre simetriktir.',
+      },
+      {
+        title: 'Oluşan cisim',
+        detail:
+          'OMA ve OMB üçgenlerinin her biri 180° dönerek aynı koninin birer yarısını süpürür; oluşan cisim tam bir konidir.',
+      },
+      {
+        title: 'Koninin ölçüleri',
+        detail: 'Yükseklik |OM| = 6√2, taban yarıçapı |MA| = 6√2 birimdir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Hacim (1/3)π · (6√2)² · 6√2 = (1/3)π · 72 · 6√2 = 144π√2 birim küptür.',
+      },
+    ],
+    figure: {
+      viewBox: '0 10 400 310',
+      caption: 'Şekil 21',
+      label:
+        'Analitik düzlemde A noktası y ekseni, B noktası x ekseni üzerinde olan taralı AOB dik üçgeni ve kesikli çizilmiş y eşittir x doğrusu.',
+      svg: `
+          <path class="shade" d="M100,280 L100,40 L340,280 Z"/>
+          <path class="ln" d="M60,280 L385,280"/>
+          <path class="ln" d="M375,274 L385,280 L375,286"/>
+          <path class="ln" d="M100,312 L100,20"/>
+          <path class="ln" d="M94,30 L100,20 L106,30"/>
+          <path class="ln" d="M100,40 L340,280"/>
+          <path class="hid" d="M80,300 L360,20"/>
+          <circle class="pt" cx="100" cy="280" r="3.2"/>
+          <circle class="pt" cx="100" cy="40" r="3.2"/>
+          <circle class="pt" cx="340" cy="280" r="3.2"/>
+          <text x="382" y="302" text-anchor="middle">x</text>
+          <text x="112" y="30">y</text>
+          <text x="92" y="300" text-anchor="end">O</text>
+          <text x="92" y="46" text-anchor="end">A</text>
+          <text x="340" y="302" text-anchor="middle">B</text>
+          <text x="270" y="100">y = x</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 39
+  {
+    id: 'spheres-39',
+    topic: 'Silindirdeki suya atılan küre',
+    stem: [
+      'Taban yarıçapı 4 cm ve yüksekliği 10 cm olan dik dairesel silindir biçimindeki bir kabın içinde 8 cm yüksekliğinde su vardır.',
+    ],
+    ask: 'Bu kabın içine yarıçapı 3 cm olan metal bir küre atıldığında kaç cm³ su taşmış olur?',
+    choices: [
+      { key: 'A', text: '2π' },
+      { key: 'B', text: '4π' },
+      { key: 'C', text: '6π' },
+      { key: 'D', text: '8π' },
+      { key: 'E', text: '12π' },
+    ],
+    answer: 'B',
+    hint: 'Kürenin hacmini, kapta suyun üstünde kalan boş hacimle karşılaştır.',
+    solution: [
+      {
+        title: 'Kürenin hacmi',
+        detail: '(4/3)π · 3³ = 36π cm³; çapı 6 cm olduğundan küre suyun tamamen altında kalır.',
+      },
+      {
+        title: 'Kaptaki boş hacim',
+        detail: 'Suyun üstünde 10 − 8 = 2 cm boşluk vardır: π · 4² · 2 = 32π cm³.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Taşan su 36π − 32π = 4π cm³ tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 40
+  // Sphere of radius 5 at 25 px per unit: O (200,150), r = 125. |OT| = 3 → 75 px,
+  // so T (200,225); cone base radius 4 → 100 px, apex P (200,25).
+  {
+    id: 'spheres-40',
+    topic: 'Küre içine yerleştirilen koni',
+    stem: [
+      'Şekildeki O merkezli ve R yarıçaplı küre içine yerleştirilen dik koninin tepe noktası P ve tabanının çevresi küre üzerindedir; koninin taban merkezi T dir.',
+    ],
+    given: ['|OT| = 3R/5'],
+    ask: 'Yukarıdaki verilere göre, koninin hacminin kürenin hacmine oranı kaçtır?',
+    choices: [
+      { key: 'A', text: '24/125' },
+      { key: 'B', text: '27/125' },
+      { key: 'C', text: '32/125' },
+      { key: 'D', text: '36/125' },
+      { key: 'E', text: '48/125' },
+    ],
+    answer: 'C',
+    hint: 'O merkezini tabandaki bir A noktasına birleştir; OTA dik üçgeninden taban yarıçapını bul.',
+    solution: [
+      {
+        title: 'Taban yarıçapı',
+        detail: '|TA|² = R² − (3R/5)² = 16R²/25 ⇒ |TA| = 4R/5.',
+      },
+      {
+        title: 'Koninin yüksekliği',
+        detail: '|PT| = R + 3R/5 = 8R/5.',
+      },
+      {
+        title: 'Koninin hacmi',
+        detail: '(1/3)π · (16R²/25) · (8R/5) = 128πR³/375.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Oran (128πR³/375) / (4πR³/3) = 384/1500 = 32/125 tir.',
+      },
+    ],
+    figure: {
+      viewBox: '0 5 400 290',
+      caption: 'Şekil 22',
+      label:
+        'O merkezli kürenin içinde tepe noktası P küre üzerinde olan dik koni; koninin tabanı A ve B noktalarından geçen, merkezi T olan daire.',
+      svg: `
+          <circle class="ln" cx="200" cy="150" r="125"/>
+          <path class="hid" d="M100,225 A100,24 0 0 1 300,225"/>
+          <path class="ln" d="M100,225 A100,24 0 0 0 300,225"/>
+          <path class="ln" d="M100,225 L200,25 L300,225"/>
+          <path class="hid" d="M200,25 L200,225"/>
+          <circle class="pt" cx="200" cy="25" r="3.2"/>
+          <circle class="pt" cx="200" cy="150" r="3.2"/>
+          <circle class="pt" cx="200" cy="225" r="3.2"/>
+          <circle class="pt" cx="100" cy="225" r="3.2"/>
+          <circle class="pt" cx="300" cy="225" r="3.2"/>
+          <text x="200" y="17" text-anchor="middle">P</text>
+          <text x="208" y="146">O</text>
+          <text x="208" y="221">T</text>
+          <text x="90" y="232" text-anchor="end">A</text>
+          <text x="310" y="232">B</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 41
+  {
+    id: 'spheres-41',
+    topic: 'Küre kesitine oturan en büyük silindir',
+    stem: [
+      'Yarıçapı 13 cm olan bir kürenin bir düzlemle kesildiğinde elde edilen kesit alanı 25π cm² dir.',
+    ],
+    ask: 'Bu kesiti taban kabul eden kürenin içindeki en büyük hacimli silindirin hacmi kaç π cm³ tür?',
+    choices: [
+      { key: 'A', text: '480' },
+      { key: 'B', text: '540' },
+      { key: 'C', text: '600' },
+      { key: 'D', text: '650' },
+      { key: 'E', text: '720' },
+    ],
+    answer: 'C',
+    hint: 'Silindirin öbür tabanı da küre üzerinde olmalı; bu taban kesite göre merkezin simetriğinde durur.',
+    solution: [
+      {
+        title: 'Kesitin yarıçapı',
+        detail: 'πr² = 25π ⇒ r = 5 cm.',
+      },
+      {
+        title: 'Merkezin kesite uzaklığı',
+        detail: 'd = √(13² − 5²) = √144 = 12 cm.',
+      },
+      {
+        title: 'Silindirin yüksekliği',
+        detail:
+          'Yarıçapı 5 cm olan öbür taban merkeze yine 12 cm uzaklıkta, karşı tarafta durur: h = 2 · 12 = 24 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Hacim 25π · 24 = 600π cm³, yani 600 dür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 42
+  // Right trapezoid at 40 px per cm: A (60,280), E (220,280), B (340,280),
+  // C (220,40), D (60,40).
+  {
+    id: 'spheres-42',
+    topic: 'Dik yamuğun iç eksen etrafında 180° döndürülmesi',
+    stem: [],
+    given: ['ABCD dik yamuk', '[CE] ⊥ [AB]', '|AD| = 6 cm', '|DC| = 4 cm', '|AB| = 7 cm'],
+    ask: 'Yukarıdaki verilere göre, yamuğun [CE] etrafında 180° döndürülmesiyle oluşan cismin hacmi kaç cm³ tür?',
+    choices: [
+      { key: 'A', text: '48π' },
+      { key: 'B', text: '51π' },
+      { key: 'C', text: '54π' },
+      { key: 'D', text: '57π' },
+      { key: 'E', text: '66π' },
+    ],
+    answer: 'D',
+    hint: '[CE] yamuğu bir dikdörtgen ile bir dik üçgene ayırır; 180° dönüşte ikisi eksenin farklı yarılarını süpürür.',
+    solution: [
+      {
+        title: 'Parçalar',
+        detail: 'AECD dikdörtgeninde |AE| = 4, |CE| = 6; CEB dik üçgeninde |EB| = 7 − 4 = 3 cm.',
+      },
+      {
+        title: 'Dikdörtgenden yarım silindir',
+        detail: '(1/2) · π · 4² · 6 = 48π cm³.',
+      },
+      {
+        title: 'Üçgenden yarım koni',
+        detail: '(1/2) · (1/3) · π · 3² · 6 = 9π cm³.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'İki parça eksenin karşı yarılarında döndüğünden üst üste binmez: 48π + 9π = 57π cm³ tür.',
+      },
+    ],
+    figure: {
+      viewBox: '0 10 400 300',
+      caption: 'Şekil 23',
+      label:
+        'A ve E noktalarında dik açı bulunan ABCD dik yamuğu; C noktasından [AB] ye inen dikme [CE], |AD| = 6 ve |DC| = 4.',
+      svg: `
+          <path class="ln" d="M60,40 L220,40 L340,280 L60,280 Z"/>
+          <path class="ln" d="M220,40 L220,280"/>
+          <path class="ln" d="M60,268 L72,268 L72,280"/>
+          <path class="ln" d="M220,268 L232,268 L232,280"/>
+          <circle class="pt" cx="60" cy="40" r="3.2"/>
+          <circle class="pt" cx="220" cy="40" r="3.2"/>
+          <circle class="pt" cx="60" cy="280" r="3.2"/>
+          <circle class="pt" cx="220" cy="280" r="3.2"/>
+          <circle class="pt" cx="340" cy="280" r="3.2"/>
+          <text x="52" y="36" text-anchor="end">D</text>
+          <text x="228" y="34">C</text>
+          <text x="52" y="296" text-anchor="end">A</text>
+          <text x="220" y="300" text-anchor="middle">E</text>
+          <text x="348" y="296">B</text>
+          <text class="val" x="140" y="32" text-anchor="middle">4</text>
+          <text class="val" x="50" y="166" text-anchor="end">6</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 43
+  // Sphere of radius 6 at 20 px per cm: O (200,150), r = 120. O₁ is 4 cm above O
+  // (y = 70, half-chord √20 → 89.44 px), O₂ is 3 cm below (y = 210, half-chord
+  // √27 → 103.92 px), so |O₁O₂| = 7 cm.
+  {
+    id: 'spheres-43',
+    topic: 'Küre kuşağının alanı',
+    stem: [],
+    given: ['Yarıçapı 6 cm olan O merkezli küre iki paralel düzlemle kesiliyor', '|O₁O₂| = 7 cm'],
+    ask: 'Yukarıdaki verilere göre, O₁ ve O₂ merkezli daireler arasında kalan küre kuşağının alanı kaç π cm² dir?',
+    choices: [
+      { key: 'A', text: '42' },
+      { key: 'B', text: '72' },
+      { key: 'C', text: '84' },
+      { key: 'D', text: '96' },
+      { key: 'E', text: '144' },
+    ],
+    answer: 'C',
+    hint: 'Küre kuşağının alanı yalnızca kürenin yarıçapına ve kuşağın yüksekliğine bağlıdır.',
+    solution: [
+      {
+        title: 'Kuşak alanı formülü',
+        detail: 'Yarıçapı R, yüksekliği h olan küre kuşağının alanı 2πRh dir.',
+      },
+      {
+        title: 'Kuşağın yüksekliği',
+        detail: 'Düzlemler [O₁O₂] ye diktir, yani h = |O₁O₂| = 7 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Alan 2π · 6 · 7 = 84π cm², yani 84 tür.',
+      },
+    ],
+    figure: {
+      viewBox: '0 18 400 264',
+      caption: 'Şekil 24',
+      label:
+        'O merkezli küre, merkezleri O₁ ve O₂ olan iki paralel daire boyunca kesilmiş; iki daire arasındaki kuşak taralı, OA yarıçapı 6.',
+      svg: `
+          <path class="shade" d="M110.56,70 A120,120 0 0 0 96.08,210 L303.92,210 A120,120 0 0 0 289.44,70 Z"/>
+          <circle class="ln" cx="200" cy="150" r="120"/>
+          <path class="hid" d="M110.56,70 A89.44,20 0 0 1 289.44,70"/>
+          <path class="ln" d="M110.56,70 A89.44,20 0 0 0 289.44,70"/>
+          <path class="hid" d="M96.08,210 A103.92,24 0 0 1 303.92,210"/>
+          <path class="ln" d="M96.08,210 A103.92,24 0 0 0 303.92,210"/>
+          <path class="ln" d="M200,70 L200,210 M200,150 L320,150"/>
+          <circle class="pt" cx="200" cy="70" r="3.2"/>
+          <circle class="pt" cx="200" cy="150" r="3.2"/>
+          <circle class="pt" cx="200" cy="210" r="3.2"/>
+          <circle class="pt" cx="320" cy="150" r="3.2"/>
+          <text x="208" y="64">O₁</text>
+          <text x="190" y="156" text-anchor="end">O</text>
+          <text x="208" y="204">O₂</text>
+          <text x="328" y="156">A</text>
+          <text class="val" x="262" y="142" text-anchor="middle">6</text>
+        `,
+    },
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -1973,6 +2292,21 @@ export const UNIT_10_SPHERES: Unit = {
         'spheres-35',
         'spheres-36',
         'spheres-37',
+      ),
+    },
+    {
+      id: 'spheres-m7',
+      order: 7,
+      title: 'Dönen üçgen ve yamuk, küre içindeki koni ve kuşak',
+      summary:
+        'y = x etrafında dönen dik üçgen, silindirden taşan su, küre içindeki koninin hacim oranı, kesite oturan en büyük silindir, 180° dönen dik yamuk ve küre kuşağı.',
+      questions: pick(
+        'spheres-38',
+        'spheres-39',
+        'spheres-40',
+        'spheres-41',
+        'spheres-42',
+        'spheres-43',
       ),
     },
   ],

@@ -81,6 +81,17 @@ describe('unit 10 answer key', () => {
     expect(answerOf('spheres-36')).toBe('B'));
   it('37 — (1/3)π·36·8 − (2/3)π·27 = 96π − 18π = 78π → C', () =>
     expect(answerOf('spheres-37')).toBe('C'));
+  it('38 — M(6, 6), cone r = h = 6√2, (1/3)π·72·6√2 = 144π√2 → D', () =>
+    expect(answerOf('spheres-38')).toBe('D'));
+  it('39 — (4/3)π·27 = 36π, empty π·16·2 = 32π, 36π − 32π = 4π → B', () =>
+    expect(answerOf('spheres-39')).toBe('B'));
+  it('40 — r² = 16R²/25, h = 8R/5, (128/375)/(4/3) = 32/125 → C', () =>
+    expect(answerOf('spheres-40')).toBe('C'));
+  it('41 — r = 5, d = √(169 − 25) = 12, h = 24, 25·24 = 600 → C', () =>
+    expect(answerOf('spheres-41')).toBe('C'));
+  it('42 — π·16·6/2 + (1/3)π·9·6/2 = 48π + 9π = 57π → D', () =>
+    expect(answerOf('spheres-42')).toBe('D'));
+  it('43 — 2πRh = 2π·6·7 = 84π → C', () => expect(answerOf('spheres-43')).toBe('C'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
