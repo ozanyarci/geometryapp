@@ -1539,6 +1539,334 @@ const QUESTIONS: Question[] = [
         `,
     },
   },
+
+  // ---------------------------------------------------------------- 32
+  // Rectangle at 30 px per cm: B (110,220), C (290,220), A (110,100), D (290,100).
+  {
+    id: 'spheres-32',
+    topic: 'Dikdörtgenin iki farklı kenarı etrafında döndürülmesi',
+    stem: [
+      'Şekildeki ABCD dikdörtgeni [AB] kenarı etrafında 360° döndürüldüğünde oluşan cismin hacmi V₁, [BC] kenarı etrafında 360° döndürüldüğünde oluşan cismin hacmi V₂ dir.',
+    ],
+    given: ['|AB| = 4 cm', '|BC| = 6 cm'],
+    ask: 'Buna göre, V₁ / V₂ oranı kaçtır?',
+    choices: [
+      { key: 'A', text: '2/3' },
+      { key: 'B', text: '1' },
+      { key: 'C', text: '4/3' },
+      { key: 'D', text: '3/2' },
+      { key: 'E', text: '9/4' },
+    ],
+    answer: 'D',
+    hint: 'Dönme ekseni olan kenar silindirin yüksekliği, ona dik kenar ise taban yarıçapı olur.',
+    solution: [
+      {
+        title: '[AB] etrafında',
+        detail: 'Yükseklik 4 cm, yarıçap 6 cm olan silindir: V₁ = π · 6² · 4 = 144π cm³.',
+      },
+      {
+        title: '[BC] etrafında',
+        detail: 'Yükseklik 6 cm, yarıçap 4 cm olan silindir: V₂ = π · 4² · 6 = 96π cm³.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'V₁ / V₂ = 144π / 96π = 3/2 dir.',
+      },
+    ],
+    figure: {
+      viewBox: '0 70 400 180',
+      caption: 'Şekil 16',
+      label: 'ABCD dikdörtgeni; dik kenar AB 4, yatay kenar BC 6 santimetre.',
+      svg: `
+          <path class="ln" d="M110,100 L110,220 L290,220 L290,100 Z"/>
+          <path class="ln" d="M110,208 L122,208 L122,220"/>
+          <circle class="pt" cx="110" cy="100" r="3.2"/>
+          <circle class="pt" cx="110" cy="220" r="3.2"/>
+          <circle class="pt" cx="290" cy="220" r="3.2"/>
+          <circle class="pt" cx="290" cy="100" r="3.2"/>
+          <text x="102" y="96" text-anchor="end">A</text>
+          <text x="102" y="238" text-anchor="end">B</text>
+          <text x="298" y="238">C</text>
+          <text x="298" y="96">D</text>
+          <text class="val" x="98" y="166" text-anchor="end">4</text>
+          <text class="val" x="200" y="240" text-anchor="middle">6</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 33
+  // Sphere of radius 13 at 10 px per cm: O (200,150), R = 130. Upper section
+  // 12 above O with radius 5, lower section 5 below O with radius 12;
+  // section ellipses flattened to 0.3.
+  {
+    id: 'spheres-33',
+    topic: 'Kürenin iki paralel düzlemle kesitleri',
+    stem: [
+      'Yarıçapı 13 cm olan bir küre, merkezin farklı taraflarında bulunan paralel iki düzlemle kesiliyor. Kesit dairelerinin yarıçapları 5 cm ve 12 cm dir.',
+    ],
+    ask: 'Buna göre, iki düzlem arasındaki uzaklık kaç cm dir?',
+    choices: [
+      { key: 'A', text: '7' },
+      { key: 'B', text: '12' },
+      { key: 'C', text: '13' },
+      { key: 'D', text: '17' },
+      { key: 'E', text: '24' },
+    ],
+    answer: 'D',
+    hint: 'Her kesit için merkezden kesite inen dikme, kesit yarıçapı ve küre yarıçapı bir dik üçgen kurar.',
+    solution: [
+      {
+        title: 'Birinci kesit',
+        detail: 'Yarıçapı 5 cm olan kesitin merkeze uzaklığı √(13² − 5²) = √144 = 12 cm.',
+      },
+      {
+        title: 'İkinci kesit',
+        detail: 'Yarıçapı 12 cm olan kesitin merkeze uzaklığı √(13² − 12²) = √25 = 5 cm.',
+      },
+      {
+        title: 'Uzaklıkların toplamı',
+        detail: 'Düzlemler merkezin farklı taraflarında olduğundan uzaklıklar toplanır: 12 + 5.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Düzlemler arasındaki uzaklık 17 cm dir.',
+      },
+    ],
+    figure: {
+      viewBox: '0 5 400 290',
+      caption: 'Şekil 17',
+      label:
+        'O merkezli küre, merkezin üstünde ve altında iki paralel düzlemle kesilmiş; üstteki kesitin merkezi O₁ ve yarıçapı 5, alttaki kesitin merkezi O₂ ve yarıçapı 12.',
+      svg: `
+          <circle class="ln" cx="200" cy="150" r="130"/>
+          <path class="hid" d="M150,30 A50,15 0 0 1 250,30"/>
+          <path class="ln" d="M150,30 A50,15 0 0 0 250,30"/>
+          <path class="hid" d="M80,200 A120,36 0 0 1 320,200"/>
+          <path class="ln" d="M80,200 A120,36 0 0 0 320,200"/>
+          <path class="ln" d="M200,30 L250,30 M200,200 L320,200"/>
+          <circle class="pt" cx="200" cy="30" r="3.2"/>
+          <circle class="pt" cx="200" cy="150" r="3.2"/>
+          <circle class="pt" cx="200" cy="200" r="3.2"/>
+          <text x="142" y="36" text-anchor="end">O₁</text>
+          <text x="208" y="146">O</text>
+          <text x="192" y="196" text-anchor="end">O₂</text>
+          <text class="val" x="258" y="36">5</text>
+          <text class="val" x="260" y="194" text-anchor="middle">12</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 34
+  // Hemisphere of radius 5 at 30 px per cm: O (200,230), R = 150; base ellipse
+  // flattened to 0.3. The prism's base square is drawn as a diamond with its
+  // diagonals along the axes: half diagonal 4 → 120 px across, 36 px deep;
+  // height 3 → 90 px.
+  {
+    id: 'spheres-34',
+    topic: 'Yarım küre içine yerleştirilen kare dik prizma',
+    stem: [
+      'Yarıçapı 5 cm olan bir yarım kürenin içine, taban ayrıtı 4√2 cm olan bir kare dik prizma yerleştiriliyor. Prizmanın alt tabanı yarım kürenin düz yüzeyi üzerindedir ve merkezi yarım kürenin merkezidir; üst tabanının dört köşesi yarım küre yüzeyi üzerindedir.',
+    ],
+    ask: 'Buna göre, prizmanın hacmi kaç cm³ tür?',
+    choices: [
+      { key: 'A', text: '64' },
+      { key: 'B', text: '72' },
+      { key: 'C', text: '96' },
+      { key: 'D', text: '108' },
+      { key: 'E', text: '128' },
+    ],
+    answer: 'C',
+    hint: 'Yarım kürenin merkezinden üst köşeye çizilen yarıçap; yarım köşegen ve prizma yüksekliğiyle bir dik üçgen kurar.',
+    solution: [
+      {
+        title: 'Yarım köşegen',
+        detail: 'Taban köşegeni 4√2 · √2 = 8 cm, yarısı 4 cm dir.',
+      },
+      {
+        title: 'Prizmanın yüksekliği',
+        detail: 'Üst köşe küre üzerinde olduğundan 4² + h² = 5² ⇒ h² = 9 ⇒ h = 3 cm.',
+      },
+      {
+        title: 'Taban alanı',
+        detail: '(4√2)² = 32 cm².',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'V = 32 · 3 = 96 cm³ tür.',
+      },
+    ],
+    figure: {
+      viewBox: '0 60 400 240',
+      caption: 'Şekil 18',
+      label:
+        'Yarım kürenin düz yüzeyine oturan kare dik prizma; prizmanın üst tabanının dört köşesi yarım küre yüzeyi üzerinde.',
+      svg: `
+          <path class="hid" d="M50,230 A150,45 0 0 1 350,230"/>
+          <path class="ln" d="M50,230 A150,45 0 0 0 350,230"/>
+          <path class="ln" d="M50,230 A150,150 0 0 1 350,230"/>
+          <path class="hid" d="M80,230 L200,194 L320,230 M200,194 L200,104"/>
+          <path class="ln" d="M80,230 L200,266 L320,230"/>
+          <path class="ln" d="M80,140 L200,104 L320,140 L200,176 Z"/>
+          <path class="ln" d="M80,140 L80,230 M200,176 L200,266 M320,140 L320,230"/>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 35
+  {
+    id: 'spheres-35',
+    topic: 'Hacimleri eşit küre ve koni',
+    stem: [],
+    ask: 'Yarıçapı 3 cm olan bir kürenin hacmi, taban yarıçapı 3 cm olan bir dik dairesel koninin hacmine eşittir. Buna göre, koninin yüksekliği kaç cm dir?',
+    choices: [
+      { key: 'A', text: '4' },
+      { key: 'B', text: '6' },
+      { key: 'C', text: '8' },
+      { key: 'D', text: '9' },
+      { key: 'E', text: '12' },
+    ],
+    answer: 'E',
+    hint: 'Küre ve koni hacim formüllerini yazıp eşitle.',
+    solution: [
+      {
+        title: 'Kürenin hacmi',
+        detail: '(4/3)π · 3³ = 36π cm³.',
+      },
+      {
+        title: 'Koninin hacmi',
+        detail: '(1/3)π · 3² · h = 3πh.',
+      },
+      {
+        title: 'Eşitlik',
+        detail: '3πh = 36π ⇒ h = 12.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Koninin yüksekliği 12 cm dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 36
+  // Cone of radius 6 and height 8 at 20 px per cm: T (200,40), H (200,200),
+  // A (80,200), B (320,200). Inscribed sphere centre (200,140), r = 60; the
+  // tangent plane at y = 80 cuts the cone in a circle of radius 30 px.
+  {
+    id: 'spheres-36',
+    topic: 'Koni içine teğet küre ve paralel kesit',
+    stem: [
+      'Taban yarıçapı 6 cm, yüksekliği 8 cm olan bir dik dairesel koninin içine, koninin yan yüzeyine ve tabanına teğet bir küre yerleştiriliyor.',
+      'Kürenin en üst noktasından geçen ve koninin tabanına paralel olan bir düzlem koniyi kesiyor.',
+    ],
+    ask: 'Buna göre, bu kesitin alanı kaç cm² dir?',
+    choices: [
+      { key: 'A', text: 'π' },
+      { key: 'B', text: '9π/4' },
+      { key: 'C', text: '4π' },
+      { key: 'D', text: '9π/2' },
+      { key: 'E', text: '9π' },
+    ],
+    answer: 'B',
+    hint: 'Koninin eksen kesiti bir ikizkenar üçgendir; kürenin kesiti bu üçgenin iç teğet çemberidir.',
+    solution: [
+      {
+        title: 'Eksen kesiti',
+        detail:
+          'Eksen kesiti tabanı 12 cm, yüksekliği 8 cm olan ikizkenar üçgendir; ana doğru √(36 + 64) = 10 cm.',
+      },
+      {
+        title: 'Kürenin yarıçapı',
+        detail: 'İç teğet çember: r = Alan / (Çevre / 2) = (12 · 8 / 2) / 16 = 48 / 16 = 3 cm.',
+      },
+      {
+        title: 'Kesitin konumu',
+        detail:
+          'Kürenin en üst noktası tabandan 2r = 6 cm yukarıdadır; tepe noktasına uzaklığı 8 − 6 = 2 cm.',
+      },
+      {
+        title: 'Kesitin yarıçapı',
+        detail: 'Benzerlikten r′ / 6 = 2 / 8 ⇒ r′ = 3/2 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Kesitin alanı π · (3/2)² = 9π/4 cm² dir.',
+      },
+    ],
+    figure: {
+      viewBox: '0 20 400 240',
+      caption: 'Şekil 19',
+      label:
+        'T tepe noktalı dik dairesel koninin içinde yan yüzeye ve tabana teğet bir küre; kürenin en üst noktasından tabana paralel bir kesit geçiyor.',
+      svg: `
+          <path class="hid" d="M80,200 A120,36 0 0 1 320,200"/>
+          <path class="ln" d="M80,200 A120,36 0 0 0 320,200"/>
+          <path class="ln" d="M80,200 L200,40 L320,200"/>
+          <circle class="ln" cx="200" cy="140" r="60"/>
+          <path class="hid" d="M170,80 A30,9 0 0 1 230,80"/>
+          <path class="ln" d="M170,80 A30,9 0 0 0 230,80"/>
+          <circle class="pt" cx="200" cy="40" r="3.2"/>
+          <circle class="pt" cx="80" cy="200" r="3.2"/>
+          <circle class="pt" cx="320" cy="200" r="3.2"/>
+          <circle class="pt" cx="200" cy="140" r="3.2"/>
+          <text x="200" y="32" text-anchor="middle">T</text>
+          <text x="72" y="206" text-anchor="end">A</text>
+          <text x="328" y="206">B</text>
+          <text x="208" y="136">O</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 37
+  // Cone of radius 6 and height 8 at 20 px per cm: T (200,40), H (200,200);
+  // hemisphere of radius 3 → 60 px centred on H, all hidden inside the cone.
+  {
+    id: 'spheres-37',
+    topic: 'Koninin tabanından oyulan yarım küre',
+    stem: [
+      'Taban yarıçapı 6 cm, yüksekliği 8 cm olan dolu bir dik dairesel koninin tabanından, merkezi tabanın merkezi H olan ve yarıçapı 3 cm olan bir yarım küre oyularak çıkarılıyor.',
+    ],
+    ask: 'Buna göre, kalan cismin hacmi kaç cm³ tür?',
+    choices: [
+      { key: 'A', text: '66π' },
+      { key: 'B', text: '72π' },
+      { key: 'C', text: '78π' },
+      { key: 'D', text: '80π' },
+      { key: 'E', text: '84π' },
+    ],
+    answer: 'C',
+    hint: 'Kalan hacim, koninin hacminden yarım kürenin hacmi çıkarılarak bulunur.',
+    solution: [
+      {
+        title: 'Koninin hacmi',
+        detail: '(1/3)π · 6² · 8 = 96π cm³.',
+      },
+      {
+        title: 'Yarım kürenin hacmi',
+        detail: '(2/3)π · 3³ = 18π cm³.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Kalan hacim 96π − 18π = 78π cm³ tür.',
+      },
+    ],
+    figure: {
+      viewBox: '0 20 400 240',
+      caption: 'Şekil 20',
+      label:
+        'T tepe noktalı dik dairesel koninin tabanından, merkezi taban merkezi H olan bir yarım küre oyulmuş; oyuk kesikli çizgilerle gösterilmiş.',
+      svg: `
+          <path class="hid" d="M80,200 A120,36 0 0 1 320,200"/>
+          <path class="ln" d="M80,200 A120,36 0 0 0 320,200"/>
+          <path class="ln" d="M80,200 L200,40 L320,200"/>
+          <path class="hid" d="M140,200 A60,60 0 0 1 260,200"/>
+          <path class="hid" d="M140,200 A60,18 0 0 0 260,200 A60,18 0 0 0 140,200"/>
+          <circle class="pt" cx="200" cy="40" r="3.2"/>
+          <circle class="pt" cx="200" cy="200" r="3.2"/>
+          <text x="200" y="32" text-anchor="middle">T</text>
+          <text x="200" y="196" text-anchor="middle">H</text>
+        `,
+    },
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -1630,6 +1958,21 @@ export const UNIT_10_SPHERES: Unit = {
         'spheres-29',
         'spheres-30',
         'spheres-31',
+      ),
+    },
+    {
+      id: 'spheres-m6',
+      order: 6,
+      title: 'İç içe cisimler, paralel kesitler ve oyulan koni',
+      summary:
+        'İki kenarı etrafında dönen dikdörtgen, kürenin iki paralel kesiti, yarım küre içindeki prizma, hacmi eşit küre ve koni, koni içindeki küre ve oyulan yarım küre.',
+      questions: pick(
+        'spheres-32',
+        'spheres-33',
+        'spheres-34',
+        'spheres-35',
+        'spheres-36',
+        'spheres-37',
       ),
     },
   ],
