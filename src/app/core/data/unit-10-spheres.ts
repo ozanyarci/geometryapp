@@ -1210,6 +1210,335 @@ const QUESTIONS: Question[] = [
         `,
     },
   },
+  // ---------------------------------------------------------------- 26
+  // Rectangle at 36 px per cm: A (92,250), E (164,250), B (308,250), C (308,70),
+  // D (92,70); d is the vertical line x = 164.
+  {
+    id: 'spheres-26',
+    topic: 'Dikdörtgenin iç eksen etrafında 180° döndürülmesi',
+    stem: [],
+    given: ['ABCD dikdörtgen', 'd ⊥ [AB]', 'E ∈ d', '|AE| = 2 cm', '|EB| = 4 cm', '|BC| = 5 cm'],
+    ask: 'ABCD dikdörtgeni d doğrusu etrafında 180° döndürüldüğünde oluşan cismin hacmi kaç cm³ tür?',
+    choices: [
+      { key: 'A', text: '30π' },
+      { key: 'B', text: '40π' },
+      { key: 'C', text: '50π' },
+      { key: 'D', text: '60π' },
+      { key: 'E', text: '80π' },
+    ],
+    answer: 'C',
+    hint: 'd doğrusunun iki yanındaki dikdörtgenler, eksenin karşı taraflarında ayrı birer yarım silindir tarar.',
+    solution: [
+      {
+        title: 'İki parça',
+        detail:
+          'd doğrusu dikdörtgeni genişliği 2 cm ve 4 cm olan iki dikdörtgene ayırır; ikisinin de yüksekliği 5 cm dir.',
+      },
+      {
+        title: 'Taranan bölgeler',
+        detail:
+          '180° dönüşte sağdaki parça eksenin bir yanında yarıçapı 4 cm olan yarım silindir, soldaki parça öbür yanında yarıçapı 2 cm olan yarım silindir tarar; bu iki bölge çakışmaz.',
+      },
+      {
+        title: 'Yarım silindirler',
+        detail: '(1/2)π · 4² · 5 = 40π ve (1/2)π · 2² · 5 = 10π.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Oluşan cismin hacmi 40π + 10π = 50π cm³ tür.',
+      },
+    ],
+    figure: {
+      viewBox: '0 30 400 256',
+      caption: 'Şekil 12',
+      label:
+        'ABCD dikdörtgeni; [AB] kenarına E noktasında dik olan d doğrusu dikdörtgeni ikiye ayırıyor. AE 2, EB 4, BC 5 santimetre.',
+      svg: `
+          <path class="ln" d="M92,250 L308,250 L308,70 L92,70 Z"/>
+          <path class="ln" d="M164,40 L164,282"/>
+          <path class="ln" d="M164,238 L176,238 L176,250"/>
+          <circle class="pt" cx="92" cy="250" r="3.2"/>
+          <circle class="pt" cx="164" cy="250" r="3.2"/>
+          <circle class="pt" cx="308" cy="250" r="3.2"/>
+          <circle class="pt" cx="308" cy="70" r="3.2"/>
+          <circle class="pt" cx="92" cy="70" r="3.2"/>
+          <text x="84" y="268" text-anchor="end">A</text>
+          <text x="170" y="270">E</text>
+          <text x="316" y="268">B</text>
+          <text x="316" y="66">C</text>
+          <text x="84" y="66" text-anchor="end">D</text>
+          <text x="172" y="50">d</text>
+          <text class="val" x="128" y="270" text-anchor="middle">2</text>
+          <text class="val" x="236" y="270" text-anchor="middle">4</text>
+          <text class="val" x="322" y="164">5</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 27
+  {
+    id: 'spheres-27',
+    topic: 'Yarım dairenin çapı etrafında 240° döndürülmesi',
+    stem: [],
+    ask: 'Yarıçapı 3 cm olan bir yarım daire, çapı etrafında 240° döndürülüyor. Oluşan cismin hacmi kaç π cm³ tür?',
+    choices: [
+      { key: 'A', text: '12' },
+      { key: 'B', text: '18' },
+      { key: 'C', text: '24' },
+      { key: 'D', text: '27' },
+      { key: 'E', text: '36' },
+    ],
+    answer: 'C',
+    hint: 'Yarım daire çapı etrafında 360° dönünce bir küre oluşur; 240° bu tam turun kaçta kaçıdır?',
+    solution: [
+      {
+        title: 'Tam tur',
+        detail: '360° dönüşte yarıçapı 3 cm olan küre oluşur: (4/3)π · 3³ = 36π cm³.',
+      },
+      {
+        title: 'Dönüş oranı',
+        detail: '240° / 360° = 2/3; oluşan cisim kürenin 2/3 ü kadardır.',
+      },
+      {
+        title: 'Sonuç',
+        detail: '36π · 2/3 = 24π cm³ tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 28
+  // Section through the apex and a base diagonal at 10 px per cm: O (200,150),
+  // R = 130, T (200,20), H (200,200), A (80,200), C (320,200).
+  {
+    id: 'spheres-28',
+    topic: 'Küre içine yerleştirilen kare dik piramit',
+    stem: [
+      'Yarıçapı 13 cm olan bir kürenin içine, taban ayrıtı 12√2 cm olan bir kare dik piramit bütün köşeleri küre üzerinde olacak şekilde yerleştiriliyor. Kürenin merkezi piramidin içindedir.',
+      'Şekilde kürenin, piramidin tepe noktasından ve tabanın [AC] köşegeninden geçen düzlemle kesiti verilmiştir.',
+    ],
+    ask: 'Buna göre, piramidin yüksekliği kaç cm dir?',
+    choices: [
+      { key: 'A', text: '8' },
+      { key: 'B', text: '13' },
+      { key: 'C', text: '15' },
+      { key: 'D', text: '18' },
+      { key: 'E', text: '20' },
+    ],
+    answer: 'D',
+    hint: 'Kürenin merkezinden taban köşesine çizilen yarıçap, tabanın yarım köşegeniyle bir dik üçgen kurar.',
+    solution: [
+      {
+        title: 'Yarım köşegen',
+        detail: 'Taban köşegeni 12√2 · √2 = 24 cm, yarısı |HA| = 12 cm dir.',
+      },
+      {
+        title: 'Merkezin tabana uzaklığı',
+        detail: 'OHA dik üçgeninde |OA| = 13 olduğundan |OH| = √(169 − 144) = 5 cm.',
+      },
+      {
+        title: 'Yükseklik',
+        detail: 'Merkez piramidin içinde olduğundan |TH| = |TO| + |OH| = 13 + 5.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Piramidin yüksekliği 18 cm dir.',
+      },
+    ],
+    figure: {
+      viewBox: '0 -6 400 300',
+      caption: 'Şekil 13',
+      label:
+        'O merkezli kürenin kesit çemberi; çemberin en üst noktası T ile çember üzerindeki A ve C noktaları TAC üçgenini oluşturuyor.',
+      svg: `
+          <circle class="ln" cx="200" cy="150" r="130"/>
+          <path class="ln" d="M200,20 L80,200 L320,200 Z"/>
+          <circle class="pt" cx="200" cy="20" r="3.2"/>
+          <circle class="pt" cx="80" cy="200" r="3.2"/>
+          <circle class="pt" cx="320" cy="200" r="3.2"/>
+          <circle class="pt" cx="200" cy="150" r="3.2"/>
+          <text x="200" y="12" text-anchor="middle">T</text>
+          <text x="72" y="214" text-anchor="end">A</text>
+          <text x="328" y="214">C</text>
+          <text x="208" y="146">O</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 -6 400 300',
+      caption: 'Şekil 13',
+      label:
+        'Aynı şekilde T den tabana [TH] yüksekliği ve O dan A ya 13 birimlik yarıçap çizilmiş; |OH| 5, |HA| 12.',
+      svg: `
+          <circle class="ln" cx="200" cy="150" r="130"/>
+          <path class="ln" d="M200,20 L80,200 L320,200 Z"/>
+          <path class="aux" d="M200,20 L200,200 M200,150 L80,200"/>
+          <circle class="pt" cx="200" cy="20" r="3.2"/>
+          <circle class="pt" cx="80" cy="200" r="3.2"/>
+          <circle class="pt" cx="320" cy="200" r="3.2"/>
+          <circle class="pt" cx="200" cy="150" r="3.2"/>
+          <circle class="pt" cx="200" cy="200" r="3.2"/>
+          <text x="200" y="12" text-anchor="middle">T</text>
+          <text x="72" y="214" text-anchor="end">A</text>
+          <text x="328" y="214">C</text>
+          <text x="208" y="146">O</text>
+          <text x="200" y="220" text-anchor="middle">H</text>
+          <text class="val" x="140" y="166" text-anchor="middle">13</text>
+          <text class="val" x="208" y="182">5</text>
+          <text class="val" x="140" y="220" text-anchor="middle">12</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 29
+  {
+    id: 'spheres-29',
+    topic: 'Eritilen kürenin küçük kürelere dönüşmesi',
+    stem: ['Yarıçapı 6 cm olan metal bir küre eritilerek yarıçapı 2 cm olan eş küreler yapılıyor.'],
+    ask: 'Buna göre, elde edilen küçük kürelerin yüzey alanları toplamı kaç π cm² dir?',
+    choices: [
+      { key: 'A', text: '144' },
+      { key: 'B', text: '216' },
+      { key: 'C', text: '288' },
+      { key: 'D', text: '432' },
+      { key: 'E', text: '576' },
+    ],
+    answer: 'D',
+    hint: 'Eritmede hacim korunur; önce kaç küre çıktığını hacimlerin oranından bul.',
+    solution: [
+      {
+        title: 'Küre sayısı',
+        detail: 'Hacimler oranı (6/2)³ = 27 olduğundan 27 küçük küre elde edilir.',
+      },
+      {
+        title: 'Bir kürenin alanı',
+        detail: '4π · 2² = 16π cm².',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Toplam alan 27 · 16π = 432π cm² dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 30
+  // Right trapezoid at 20 px per cm: A (90,60), D (150,60), B (90,180), C (310,180).
+  {
+    id: 'spheres-30',
+    topic: 'Dik yamuğun 360° döndürülmesiyle oluşan kesik koni',
+    stem: [],
+    given: ['ABCD dik yamuk', '|AB| = 6 cm', '|AD| = 3 cm', '|DC| = 10 cm'],
+    ask: 'Şekildeki ABCD dik yamuğu [AB] kenarı etrafında 360° döndürüldüğünde oluşan cismin tüm yüzey alanı kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '230π' },
+      { key: 'B', text: '250π' },
+      { key: 'C', text: '260π' },
+      { key: 'D', text: '270π' },
+      { key: 'E', text: '290π' },
+    ],
+    answer: 'D',
+    hint: 'D den [BC] ye dikme indir; dik üçgenden |BC| yi bul, sonra kesik koninin iki taban ve yanal alanını topla.',
+    solution: [
+      {
+        title: 'Alt taban',
+        detail:
+          'D den [BC] ye inen dikmenin boyu 6 cm; hipotenüs 10 cm olduğundan yatay fark √(100 − 36) = 8 cm, |BC| = 3 + 8 = 11 cm.',
+      },
+      {
+        title: 'Oluşan cisim',
+        detail:
+          'Taban yarıçapları r = 3 cm ve R = 11 cm, ana doğrusu 10 cm olan kesik koni oluşur.',
+      },
+      {
+        title: 'Taban alanları',
+        detail: 'π · 3² + π · 11² = 9π + 121π = 130π cm².',
+      },
+      {
+        title: 'Yanal alan',
+        detail: 'π(r + R) · ℓ = π(3 + 11) · 10 = 140π cm².',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Tüm alan 130π + 140π = 270π cm² dir.',
+      },
+    ],
+    figure: {
+      viewBox: '0 30 400 180',
+      caption: 'Şekil 14',
+      label:
+        'A ve B köşelerinde dik açı bulunan ABCD dik yamuğu; üst taban AD = 3, dik kenar AB = 6, eğik kenar DC = 10.',
+      svg: `
+          <path class="ln" d="M90,60 L150,60 L310,180 L90,180 Z"/>
+          <path class="ln" d="M90,72 L102,72 L102,60"/>
+          <path class="ln" d="M90,168 L102,168 L102,180"/>
+          <circle class="pt" cx="90" cy="60" r="3.2"/>
+          <circle class="pt" cx="150" cy="60" r="3.2"/>
+          <circle class="pt" cx="90" cy="180" r="3.2"/>
+          <circle class="pt" cx="310" cy="180" r="3.2"/>
+          <text x="82" y="56" text-anchor="end">A</text>
+          <text x="156" y="54">D</text>
+          <text x="82" y="196" text-anchor="end">B</text>
+          <text x="318" y="196">C</text>
+          <text class="val" x="120" y="52" text-anchor="middle">3</text>
+          <text class="val" x="80" y="124" text-anchor="end">6</text>
+          <text class="val" x="238" y="112">10</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 31
+  // Cylinder of radius r at 20 px per unit for r = 3: 120 wide, 240 tall;
+  // ellipses flattened to 0.3. Sphere centres (200,80) and (200,200).
+  {
+    id: 'spheres-31',
+    topic: 'Silindir içindeki iki teğet küre',
+    stem: [
+      'Şekildeki dik dairesel silindirin içine, yarıçapı silindirin yarıçapına eşit olan iki eş küre yerleştirilmiştir. Küreler birbirine, silindirin yan yüzeyine ve tabanlarına teğettir.',
+    ],
+    ask: 'Silindir ile küreler arasında kalan boşluğun hacmi 36π cm³ olduğuna göre, silindirin yarıçapı kaç cm dir?',
+    choices: [
+      { key: 'A', text: '2' },
+      { key: 'B', text: '3' },
+      { key: 'C', text: '3√2' },
+      { key: 'D', text: '4' },
+      { key: 'E', text: '6' },
+    ],
+    answer: 'B',
+    hint: 'Silindirin yüksekliği iki kürenin çaplarının toplamıdır: h = 4r.',
+    solution: [
+      {
+        title: 'Silindirin hacmi',
+        detail: 'Yükseklik 4r olduğundan V = πr² · 4r = 4πr³.',
+      },
+      {
+        title: 'Kürelerin hacmi',
+        detail: '2 · (4/3)πr³ = (8/3)πr³.',
+      },
+      {
+        title: 'Boşluk',
+        detail: '4πr³ − (8/3)πr³ = (4/3)πr³ = 36π ⇒ r³ = 27.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Silindirin yarıçapı r = 3 cm dir.',
+      },
+    ],
+    figure: {
+      viewBox: '0 -10 400 300',
+      caption: 'Şekil 15',
+      label:
+        'Dik dairesel silindirin içinde üst üste duran, birbirine, yan yüzeye ve iki tabana teğet iki eş küre.',
+      svg: `
+          <path class="hid" d="M140,260 A60,18 0 0 1 260,260"/>
+          <path class="ln" d="M140,20 A60,18 0 0 0 260,20 A60,18 0 0 0 140,20"/>
+          <path class="ln" d="M140,20 L140,260 A60,18 0 0 0 260,260 L260,20"/>
+          <circle class="ln" cx="200" cy="80" r="60"/>
+          <circle class="ln" cx="200" cy="200" r="60"/>
+          <circle class="pt" cx="200" cy="80" r="3.2"/>
+          <circle class="pt" cx="200" cy="200" r="3.2"/>
+          <text x="208" y="76">O₁</text>
+          <text x="208" y="196">O₂</text>
+        `,
+    },
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -1286,6 +1615,21 @@ export const UNIT_10_SPHERES: Unit = {
         'spheres-23',
         'spheres-24',
         'spheres-25',
+      ),
+    },
+    {
+      id: 'spheres-m5',
+      order: 5,
+      title: 'Dönen dikdörtgen ve yamuk, küre içindeki piramit',
+      summary:
+        'İç eksen etrafında 180° dönen dikdörtgen, 240° dönen yarım daire, küre içindeki kare piramit, eritilen küre, dönen dik yamuğun alanı ve silindirdeki iki küre.',
+      questions: pick(
+        'spheres-26',
+        'spheres-27',
+        'spheres-28',
+        'spheres-29',
+        'spheres-30',
+        'spheres-31',
       ),
     },
   ],
