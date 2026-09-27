@@ -82,6 +82,18 @@ describe('unit 9 answer key', () => {
     expect(answerOf('pyramids-36')).toBe('C'));
   it('37 — (1/2)³ = 1/8, frustum 7V = 56, V = 8, whole 64 → C', () =>
     expect(answerOf('pyramids-37')).toBe('C'));
+  it('38 — (1/3)·r²·(4H/3) = R²·H, r²/R² = 9/4, r/R = 3/2 → C', () =>
+    expect(answerOf('pyramids-38')).toBe('C'));
+  it('39 — a√6/3 = 2√6, a = 6, 6√3/2 = 3√3 → D', () => expect(answerOf('pyramids-39')).toBe('D'));
+  it('40 — k = 2/6 = 1/3, 1/27, top V, bottom 26V → 1/26 → D', () =>
+    expect(answerOf('pyramids-40')).toBe('D'));
+  it('41 — diagonal 20, h = √(676 − 100) = 24, (1/3)·192·24 = 1536 → C', () =>
+    expect(answerOf('pyramids-41')).toBe('C'));
+  it('42 — 36h − 12h = 24h = 240, h = 10 → D', () => expect(answerOf('pyramids-42')).toBe('D'));
+  it('43 — 24s = 240, s = 10, h = √(100 − 36) = 8, (1/3)·144·8 = 384 → C', () =>
+    expect(answerOf('pyramids-43')).toBe('C'));
+  it('44 — h = √(49 − 9) = 2√10, (1/3)·9·2√10 = 6√10 → 6π√10 → B', () =>
+    expect(answerOf('pyramids-44')).toBe('B'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
