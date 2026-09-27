@@ -94,6 +94,18 @@ describe('unit 9 answer key', () => {
     expect(answerOf('pyramids-43')).toBe('C'));
   it('44 — h = √(49 − 9) = 2√10, (1/3)·9·2√10 = 6√10 → 6π√10 → B', () =>
     expect(answerOf('pyramids-44')).toBe('B'));
+  it('45 — 2π·10·216/360 = 12π, r = 6, h = 8, (1/3)·36·8 = 96 → 96π → C', () =>
+    expect(answerOf('pyramids-45')).toBe('C'));
+  it('46 — |OM| = 4, h = 4·tan 60° = 4√3, (1/3)·64·4√3 = 256√3/3 → B', () =>
+    expect(answerOf('pyramids-46')).toBe('B'));
+  it('47 — section at H/2, V₂ = (1/3)π(r/2)²(H/2) = V₁/8 → 8 → C', () =>
+    expect(answerOf('pyramids-47')).toBe('C'));
+  it('48 — a√2 = 6, a = 3√2, a³/6 = 54√2/6 = 9√2 → B', () =>
+    expect(answerOf('pyramids-48')).toBe('B'));
+  it('49 — h = √(25 − 9) = 4, (4π/3)·(36 + 18 + 9) = 84π → B', () =>
+    expect(answerOf('pyramids-49')).toBe('B'));
+  it('50 — liquid 1 − (2/3)³ = 19/27, h₂ = H∛19/3, h₁ = H/3 → ∛19 → C', () =>
+    expect(answerOf('pyramids-50')).toBe('C'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)

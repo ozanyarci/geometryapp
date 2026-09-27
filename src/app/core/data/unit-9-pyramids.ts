@@ -2430,6 +2430,392 @@ const QUESTIONS: Question[] = [
         `,
     },
   },
+
+  // ---------------------------------------------------------------- 45
+  // Sector of radius 10 at 14 px per cm with its 216° angle opening to the
+  // right: O (180, 160), A at 108° (136.7, 26.9), B at −108° (136.7, 293.1).
+  {
+    id: 'pyramids-45',
+    topic: 'Daire diliminden koninin hacmi',
+    stem: ['Yukarıda verilen daire dilimi kıvrılarak bir dik koni elde ediliyor.'],
+    given: ['O merkez', '|OA| = 10 cm', 'm(AOB) = 216°'],
+    ask: 'Buna göre, dik koninin hacmi kaç cm³ tür?',
+    choices: [
+      { key: 'A', text: '64π' },
+      { key: 'B', text: '72π' },
+      { key: 'C', text: '96π' },
+      { key: 'D', text: '108π' },
+      { key: 'E', text: '128π' },
+    ],
+    answer: 'C',
+    hint: 'Dilimin yay uzunluğu koninin taban çevresine, yarıçapı ise ana doğrusuna eşittir.',
+    solution: [
+      {
+        title: 'Yay uzunluğu',
+        detail: '2π · 10 · 216/360 = 12π cm.',
+      },
+      {
+        title: 'Taban yarıçapı',
+        detail: '2πr = 12π ⇒ r = 6 cm; ana doğru ℓ = 10 cm dir.',
+      },
+      {
+        title: 'Yükseklik',
+        detail: 'h = √(10² − 6²) = √64 = 8 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'V = (1/3) · π · 6² · 8 = 96π cm³ tür.',
+      },
+    ],
+    figure: {
+      viewBox: '0 6 400 308',
+      caption: 'Şekil 28',
+      label:
+        'Merkezi O, yarıçapı 10 cm, merkez açısı 216° olan AOB daire dilimi; dilim taralı.',
+      svg: `
+          <path class="shade" d="M180,160 L136.7,26.9 A140,140 0 1 1 136.7,293.1 Z"/>
+          <path class="ln" d="M180,160 L136.7,26.9 A140,140 0 1 1 136.7,293.1 Z"/>
+          <path class="arc" d="M172.6,137.2 A24,24 0 1 1 172.6,182.8"/>
+          <circle class="pt" cx="180" cy="160" r="3.2"/>
+          <circle class="pt" cx="136.7" cy="26.9" r="3.2"/>
+          <circle class="pt" cx="136.7" cy="293.1" r="3.2"/>
+          <text x="170" y="165" text-anchor="end">O</text>
+          <text x="128" y="24" text-anchor="end">A</text>
+          <text x="128" y="306" text-anchor="end">B</text>
+          <text class="val" x="210" y="165">216°</text>
+          <text class="val" x="148" y="232" text-anchor="end">10</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 46
+  // Square base of edge 8 in cabinet oblique at 26 px per cm (depth at half
+  // scale along 45°): A (70, 300), B (278, 300), C (351.5, 226.5),
+  // D (143.5, 226.5). The height is 4√3 cm, so T sits 180.1 px above the
+  // centre O (210.8, 263.2); M is the midpoint of [AB].
+  {
+    id: 'pyramids-46',
+    topic: 'Yan yüzün tabanla açısından piramidin hacmi',
+    stem: [
+      'Şekildeki düzgün kare piramidin bir yan yüzü taban düzlemiyle 60° lik açı yapmaktadır.',
+    ],
+    ask: 'Piramidin tabanının bir kenar uzunluğu 8 cm olduğuna göre, hacmi kaç cm³ tür?',
+    choices: [
+      { key: 'A', text: '64√3' },
+      { key: 'B', text: '256√3/3' },
+      { key: 'C', text: '96√3' },
+      { key: 'D', text: '128√3' },
+      { key: 'E', text: '256√3' },
+    ],
+    answer: 'B',
+    hint: 'Taban merkezinden bir kenarın orta noktasına ve tepeye giden doğrular, açısı 60° olan bir dik üçgen oluşturur.',
+    solution: [
+      {
+        title: 'Dik üçgen',
+        detail:
+          'O taban merkezi, M [AB] nin orta noktası olsun. TOM dik üçgeninde |OM| = 8 / 2 = 4 cm ve m(TMO) = 60° dir.',
+      },
+      {
+        title: 'Yükseklik',
+        detail: '|TO| = |OM| · tan 60° = 4√3 cm.',
+      },
+      {
+        title: 'Taban alanı',
+        detail: '8 · 8 = 64 cm².',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'V = (1/3) · 64 · 4√3 = 256√3/3 cm³ tür.',
+      },
+    ],
+    figure: {
+      viewBox: '0 56 400 268',
+      caption: 'Şekil 29',
+      label:
+        'Tepe noktası T, tabanı ABCD karesi olan düzgün kare piramit; taban kenarı 8 cm.',
+      svg: `
+          <path class="hid" d="M70,300 L143.5,226.5 L351.5,226.5 M210.8,83.1 L143.5,226.5"/>
+          <path class="ln" d="M70,300 L278,300 L351.5,226.5 M210.8,83.1 L70,300 M210.8,83.1 L278,300 M210.8,83.1 L351.5,226.5"/>
+          <circle class="pt" cx="70" cy="300" r="3.2"/>
+          <circle class="pt" cx="278" cy="300" r="3.2"/>
+          <circle class="pt" cx="351.5" cy="226.5" r="3.2"/>
+          <circle class="pt" cx="143.5" cy="226.5" r="3.2"/>
+          <circle class="pt" cx="210.8" cy="83.1" r="3.2"/>
+          <text x="210.8" y="74" text-anchor="middle">T</text>
+          <text x="62" y="314" text-anchor="end">A</text>
+          <text x="286" y="314">B</text>
+          <text x="359.5" y="232">C</text>
+          <text x="150" y="246">D</text>
+          <text class="val" x="174" y="318" text-anchor="middle">8</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 56 400 268',
+      caption: 'Şekil 29',
+      label:
+        'Aynı piramitte T den tabana inen [TO] yüksekliği, O dan [AB] nin orta noktası M ye çizilen [OM] ve yan yüz yüksekliği [TM]; m(TMO) = 60°.',
+      svg: `
+          <path class="hid" d="M70,300 L143.5,226.5 L351.5,226.5 M210.8,83.1 L143.5,226.5"/>
+          <path class="ln" d="M70,300 L278,300 L351.5,226.5 M210.8,83.1 L70,300 M210.8,83.1 L278,300 M210.8,83.1 L351.5,226.5"/>
+          <path class="aux" d="M210.8,83.1 L210.8,263.2 L174,300 Z"/>
+          <circle class="pt" cx="70" cy="300" r="3.2"/>
+          <circle class="pt" cx="278" cy="300" r="3.2"/>
+          <circle class="pt" cx="351.5" cy="226.5" r="3.2"/>
+          <circle class="pt" cx="143.5" cy="226.5" r="3.2"/>
+          <circle class="pt" cx="210.8" cy="83.1" r="3.2"/>
+          <circle class="pt" cx="210.8" cy="263.2" r="3.2"/>
+          <circle class="pt" cx="174" cy="300" r="3.2"/>
+          <text x="210.8" y="74" text-anchor="middle">T</text>
+          <text x="62" y="314" text-anchor="end">A</text>
+          <text x="286" y="314">B</text>
+          <text x="359.5" y="232">C</text>
+          <text x="150" y="246">D</text>
+          <text x="218" y="262">O</text>
+          <text x="174" y="318" text-anchor="middle">M</text>
+          <text class="val" x="186" y="286">60°</text>
+          <text class="val" x="204" y="180" text-anchor="end">4√3</text>
+          <text class="val" x="202" y="298">4</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 47
+  // Large cone: apex (200, 20), base centre O1 (200, 290), radius 150 px.
+  // The small cone's base is the section at half height, O2 (200, 155) with
+  // radius 75 px, and its apex is O1. Ellipses at 0.3 aspect.
+  {
+    id: 'pyramids-47',
+    topic: 'İç içe konilerin hacim oranı',
+    stem: [
+      'Şekilde O₁ merkezli büyük koninin içine, tepe noktası O₁ olan ters bir koni yerleştirilmiştir. Küçük koninin O₂ merkezli tabanı büyük koninin tabanına paraleldir ve taban çemberi büyük koninin yanal yüzeyi üzerindedir.',
+    ],
+    given: ['r₂ / r₁ = 1/2'],
+    ask: 'Buna göre, büyük koninin hacminin küçük koninin hacmine oranı kaçtır?',
+    choices: [
+      { key: 'A', text: '4' },
+      { key: 'B', text: '6' },
+      { key: 'C', text: '8' },
+      { key: 'D', text: '12' },
+      { key: 'E', text: '16' },
+    ],
+    answer: 'C',
+    hint: 'Küçük koninin tabanı büyük koniden alınmış bir kesittir; kesitin tepeye uzaklığını benzerlikten bul.',
+    solution: [
+      {
+        title: 'Kesitin yeri',
+        detail:
+          'Büyük koninin yüksekliği H olsun. Kesitin yarıçapı r₁/2 olduğundan benzerlikten kesit tepeden H/2 uzaklıktadır; böylece |O₁O₂| = H/2 dir.',
+      },
+      {
+        title: 'Büyük koni',
+        detail: 'V₁ = (1/3) · π · r₁² · H.',
+      },
+      {
+        title: 'Küçük koni',
+        detail: 'V₂ = (1/3) · π · (r₁/2)² · (H/2) = (1/3) · π · r₁² · H / 8.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'V₁ / V₂ = 8 dir.',
+      },
+    ],
+    figure: {
+      viewBox: '0 6 400 336',
+      caption: 'Şekil 30',
+      label:
+        'Tepe noktası yukarıda, taban merkezi O₁ olan büyük dik koni; içinde tepe noktası O₁, taban merkezi O₂ olan ters koni taralı. Küçük koninin taban çemberi büyük koninin yanal yüzeyinde; yarıçaplar r₁ ve r₂.',
+      svg: `
+          <path class="shade" d="M125,155 A75,22.5 0 0 1 275,155 L200,290 Z"/>
+          <path class="shade" d="M125,155 A75,22.5 0 0 0 275,155 L200,290 Z"/>
+          <path class="hid" d="M50,290 A150,45 0 0 1 350,290 M125,155 A75,22.5 0 0 1 275,155"/>
+          <path class="ln" d="M50,290 A150,45 0 0 0 350,290 M200,20 L50,290 M200,20 L350,290"/>
+          <path class="ln" d="M125,155 A75,22.5 0 0 0 275,155 M125,155 L200,290 L275,155 M200,290 L350,290 M200,155 L275,155"/>
+          <circle class="pt" cx="200" cy="290" r="3.2"/>
+          <circle class="pt" cx="200" cy="155" r="3.2"/>
+          <text x="194" y="152" text-anchor="end">O₂</text>
+          <text x="194" y="306" text-anchor="end">O₁</text>
+          <text class="val" x="236" y="148" text-anchor="middle">r₂</text>
+          <text class="val" x="275" y="284" text-anchor="middle">r₁</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 48
+  // Right-angled corner at P in cabinet oblique at 50 px per cm: [PA] up,
+  // [PC] right at full scale, [PB] toward the viewer at half scale along 45°.
+  // Each lateral edge is 3√2 ≈ 4.24 cm. P lies behind face ABC.
+  {
+    id: 'pyramids-48',
+    topic: 'Yan ayrıtları dik düzgün üçgen piramit',
+    stem: [],
+    given: ['(P, ABC) düzgün piramit', 'ABC eşkenar üçgen', '|AB| = 6 cm'],
+    ask: 'm(APB) = m(BPC) = m(APC) = 90° olduğuna göre, piramidin hacmi kaç cm³ tür?',
+    choices: [
+      { key: 'A', text: '6√2' },
+      { key: 'B', text: '9√2' },
+      { key: 'C', text: '12√2' },
+      { key: 'D', text: '18√2' },
+      { key: 'E', text: '27√2' },
+    ],
+    answer: 'B',
+    hint: 'Yan ayrıtlar eşit ve birbirine dik; APB ikizkenar dik üçgeninden bir yan ayrıtı bul.',
+    solution: [
+      {
+        title: 'Yan ayrıt',
+        detail: 'APB ikizkenar dik üçgeninde |PA| √2 = 6 ⇒ |PA| = |PB| = |PC| = 3√2 cm.',
+      },
+      {
+        title: 'Taban ve yükseklik',
+        detail:
+          'BPC yüzünü taban alalım: alanı (3√2)² / 2 = 9 cm². [PA] hem [PB] ye hem [PC] ye dik olduğundan yükseklik |PA| = 3√2 cm dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'V = (1/3) · 9 · 3√2 = 9√2 cm³ tür.',
+      },
+    ],
+    figure: {
+      viewBox: '0 8 400 340',
+      caption: 'Şekil 31',
+      label:
+        'P köşesindeki [PA], [PB] ve [PC] ayrıtları birbirine dik olan düzgün üçgen piramit; ABC eşkenar üçgen, |AB| = 6 cm.',
+      svg: `
+          <path class="hid" d="M150,250 L150,38 M150,250 L362,250 M150,250 L75,325"/>
+          <path class="hid" d="M150,238 L162,238 L162,250 M162,250 L153.5,258.5 L141.5,258.5 M150,238 L141.5,246.5 L141.5,258.5"/>
+          <path class="ln" d="M150,38 L75,325 L362,250 Z"/>
+          <circle class="pt" cx="150" cy="38" r="3.2"/>
+          <circle class="pt" cx="75" cy="325" r="3.2"/>
+          <circle class="pt" cx="362" cy="250" r="3.2"/>
+          <circle class="pt" cx="150" cy="250" r="3.2"/>
+          <text x="150" y="28" text-anchor="middle">A</text>
+          <text x="67" y="340" text-anchor="end">B</text>
+          <text x="370" y="256">C</text>
+          <text x="158" y="270">P</text>
+          <text class="val" x="104" y="180" text-anchor="end">6</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 49
+  // Frustum with r = 3, R = 6, height 4 at 28 px per cm: O2 (200, 138),
+  // O1 (200, 250), A (284, 138), B (368, 250). Ellipses at 0.3 aspect.
+  {
+    id: 'pyramids-49',
+    topic: 'Kesik koninin hacmi',
+    stem: [
+      'Şekildeki kesik koninin üst dairesinin yarıçapı 3 cm, alt dairesinin yarıçapı 6 cm dir.',
+    ],
+    ask: '|AB| = 5 cm ise, kesik koninin hacmi kaç cm³ tür?',
+    choices: [
+      { key: 'A', text: '72π' },
+      { key: 'B', text: '84π' },
+      { key: 'C', text: '96π' },
+      { key: 'D', text: '108π' },
+      { key: 'E', text: '126π' },
+    ],
+    answer: 'B',
+    hint: 'Yüksekliği bulmak için A dan alt tabana dik indir; yarıçapların farkı dik üçgenin bir kenarı olur.',
+    solution: [
+      {
+        title: 'Yükseklik',
+        detail: 'Yarıçap farkı 6 − 3 = 3 cm; h = √(5² − 3²) = 4 cm.',
+      },
+      {
+        title: 'Hacim formülü',
+        detail: 'V = (πh/3) · (R² + R·r + r²).',
+      },
+      {
+        title: 'Yerine koy',
+        detail: 'V = (4π/3) · (36 + 18 + 9) = (4π/3) · 63.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'V = 84π cm³ tür.',
+      },
+    ],
+    figure: {
+      viewBox: '0 98 400 222',
+      caption: 'Şekil 32',
+      label:
+        'Üst tabanının merkezi O₂, alt tabanının merkezi O₁ olan dik kesik koni. A üst, B alt taban çemberi üzerinde; üst yarıçap 3 cm, alt yarıçap 6 cm, |AB| = 5 cm.',
+      svg: `
+          <path class="hid" d="M32,250 A168,50.4 0 0 1 368,250 M200,138 L200,250"/>
+          <path class="ln" d="M32,250 A168,50.4 0 0 0 368,250 M116,138 A84,25.2 0 0 0 284,138 A84,25.2 0 0 0 116,138 M116,138 L32,250 M284,138 L368,250 M200,138 L284,138 M200,250 L368,250"/>
+          <circle class="pt" cx="200" cy="138" r="3.2"/>
+          <circle class="pt" cx="200" cy="250" r="3.2"/>
+          <circle class="pt" cx="284" cy="138" r="3.2"/>
+          <circle class="pt" cx="368" cy="250" r="3.2"/>
+          <text x="194" y="132" text-anchor="end">O₂</text>
+          <text x="194" y="268" text-anchor="end">O₁</text>
+          <text x="292" y="134">A</text>
+          <text x="376" y="256">B</text>
+          <text class="val" x="242" y="132" text-anchor="middle">3</text>
+          <text class="val" x="284" y="244" text-anchor="middle">6</text>
+          <text class="val" x="332" y="190">5</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 50
+  // Cone of height 200 px and radius 70 px, drawn twice. I: apex up at
+  // (105, 40), base at y = 240, liquid up to H/3 (y = 173.3, radius 46.7).
+  // II: apex down at (295, 240), base at y = 40, liquid cone of height
+  // H·∛19/3 = 177.9 px (level y = 62.1, radius 62.3). Ellipses at 0.3 aspect.
+  {
+    id: 'pyramids-50',
+    topic: 'Ters çevrilen koni biçimli kapta sıvı yüksekliği',
+    stem: [
+      'Koni biçimindeki kapalı bir kabın içinde bir miktar sıvı vardır. Kap, tabanı yerde olacak biçimde I konumundayken sıvının yüksekliği h₁, kabın yüksekliğinin 1/3 ü kadardır.',
+    ],
+    ask: 'Kap, tabanı yere paralel olacak şekilde ters çevrilip II konumuna getirilince sıvının yüksekliği h₂ oluyor. Buna göre, h₂ / h₁ oranı kaçtır?',
+    choices: [
+      { key: 'A', text: '∛2' },
+      { key: 'B', text: '∛9' },
+      { key: 'C', text: '∛19' },
+      { key: 'D', text: '∛26' },
+      { key: 'E', text: '3' },
+    ],
+    answer: 'C',
+    hint: 'I konumunda sıvının üstündeki boş kısım tepe noktasında küçük bir konidir; önce sıvının hacmini bütün koniye oranla.',
+    solution: [
+      {
+        title: 'Boş kısım',
+        detail:
+          'Kabın yüksekliği H, hacmi V olsun. I konumunda boş kısım yüksekliği 2H/3 olan benzer bir konidir; hacmi (2/3)³ V = 8V/27.',
+      },
+      {
+        title: 'Sıvının hacmi',
+        detail: 'V − 8V/27 = 19V/27.',
+      },
+      {
+        title: 'II konumu',
+        detail:
+          'Ters çevrilince sıvı tepede benzer bir koni oluşturur: (h₂/H)³ = 19/27 ⇒ h₂ = H · ∛19 / 3.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'h₂ / h₁ = (H · ∛19 / 3) / (H / 3) = ∛19 tür.',
+      },
+    ],
+    figure: {
+      viewBox: '0 8 400 300',
+      caption: 'Şekil 33',
+      label:
+        'Aynı koni biçimli kap iki konumda. I konumunda tepe yukarıda, taban yerde ve sıvı tabandan yüksekliğin üçte birine kadar; II konumunda kap ters çevrilmiş, tepe aşağıda ve sıvı tepeden başlayarak h₂ yüksekliğine kadar. Sıvı taralı.',
+      svg: `
+          <path class="shade" d="M58.3,173.3 L35,240 A70,21 0 0 0 175,240 L151.7,173.3 A46.7,14 0 0 0 58.3,173.3 Z"/>
+          <path class="shade" d="M232.7,62.1 A62.3,18.7 0 0 1 357.3,62.1 L295,240 Z"/>
+          <path class="shade" d="M232.7,62.1 A62.3,18.7 0 0 0 357.3,62.1 L295,240 Z"/>
+          <path class="hid" d="M35,240 A70,21 0 0 1 175,240 M58.3,173.3 A46.7,14 0 0 1 151.7,173.3 M232.7,62.1 A62.3,18.7 0 0 1 357.3,62.1"/>
+          <path class="ln" d="M105,40 L35,240 A70,21 0 0 0 175,240 Z M58.3,173.3 A46.7,14 0 0 0 151.7,173.3"/>
+          <path class="ln" d="M225,40 A70,21 0 0 0 365,40 A70,21 0 0 0 225,40 M225,40 L295,240 L365,40 M232.7,62.1 A62.3,18.7 0 0 0 357.3,62.1"/>
+          <text x="105" y="296" text-anchor="middle">I</text>
+          <text x="295" y="296" text-anchor="middle">II</text>
+          <text class="val" x="182" y="212">h₁</text>
+          <text class="val" x="334" y="160">h₂</text>
+        `,
+    },
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -2559,6 +2945,21 @@ export const UNIT_9_PYRAMIDS: Unit = {
         'pyramids-42',
         'pyramids-43',
         'pyramids-44',
+      ),
+    },
+    {
+      id: 'pyramids-m8',
+      order: 8,
+      title: 'Koni açınımı, kesik koni ve ters çevrilen kap',
+      summary:
+        'Daire diliminden koninin hacmi, 60° lik yan yüzden kare piramit, iç içe koniler, yan ayrıtları dik düzgün piramit, kesik koninin hacmi ve ters çevrilen kapta sıvı yüksekliği.',
+      questions: pick(
+        'pyramids-45',
+        'pyramids-46',
+        'pyramids-47',
+        'pyramids-48',
+        'pyramids-49',
+        'pyramids-50',
       ),
     },
   ],
