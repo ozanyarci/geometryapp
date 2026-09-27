@@ -9,6 +9,7 @@ import { ANALYTIC_BANK } from './unit-6-analytic';
 import { LINES_BANK } from './unit-7-lines';
 import { PRISMS_BANK } from './unit-8-prisms';
 import { PYRAMIDS_BANK } from './unit-9-pyramids';
+import { SPHERES_BANK } from './unit-10-spheres';
 
 /**
  * As the question bank grows, the most common mistake is mistyping an answer
@@ -111,6 +112,7 @@ describe('question banks', () => {
     { unitId: 'lines', questions: LINES_BANK },
     { unitId: 'prisms', questions: PRISMS_BANK },
     { unitId: 'pyramids', questions: PYRAMIDS_BANK },
+    { unitId: 'spheres', questions: SPHERES_BANK },
   ];
 
   for (const bank of banks) {
