@@ -31,7 +31,20 @@ describe('unit 10 answer key', () => {
     expect(answerOf('spheres-10')).toBe('C'));
   it('11 — r = 12, d = 5, h = 18, (1/3)π·144·18 = 864π → D', () =>
     expect(answerOf('spheres-11')).toBe('D'));
-  it('12 — cone r = 4, h = 6, (1/3)π·16·6 = 32π → C', () => expect(answerOf('spheres-12')).toBe('C'));
+  it('12 — cone r = 4, h = 6, (1/3)π·16·6 = 32π → C', () =>
+    expect(answerOf('spheres-12')).toBe('C'));
+  it('13 — 4πR² = 144π, R = 6, (4/3)π·216 = 288π → D', () =>
+    expect(answerOf('spheres-13')).toBe('D'));
+  it('14 — R = 5, a = 2R = 10, 10³ = 1000 → E', () => expect(answerOf('spheres-14')).toBe('E'));
+  it('15 — R³ = 216, R = 6, π·36·12 = 432π → D', () => expect(answerOf('spheres-15')).toBe('D'));
+  it('16 — (r₁/r₂)³ = 8/27, r₁/r₂ = 2/3, (2/3)² = 4/9 → B', () =>
+    expect(answerOf('spheres-16')).toBe('B'));
+  it('17 — hyp 25, h = 300/25 = 12, (1/3)π·144·25 = 1200π → C', () =>
+    expect(answerOf('spheres-17')).toBe('C'));
+  it('18 — a = 4, r = 2, 64 − (4/3)π·8 = 64 − 32π/3 → C', () =>
+    expect(answerOf('spheres-18')).toBe('C'));
+  it('19 — |BC| = h/√3, |CD| = h√3, (h²/3)/(3h²) = 1/9 → C', () =>
+    expect(answerOf('spheres-19')).toBe('C'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)

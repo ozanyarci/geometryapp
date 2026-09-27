@@ -334,9 +334,7 @@ const QUESTIONS: Question[] = [
   {
     id: 'spheres-7',
     topic: 'Küre kesitine oturan koni',
-    stem: [
-      'Yarıçapı 13 cm olan bir küre, merkezinden 5 cm uzaklıktaki bir düzlemle kesiliyor.',
-    ],
+    stem: ['Yarıçapı 13 cm olan bir küre, merkezinden 5 cm uzaklıktaki bir düzlemle kesiliyor.'],
     ask: 'Oluşan ara kesit dairesi taban ve kürenin merkezi tepe noktası olan koninin hacmi kaç cm³ tür?',
     choices: [
       { key: 'A', text: '180π' },
@@ -354,7 +352,8 @@ const QUESTIONS: Question[] = [
       },
       {
         title: 'Koninin yüksekliği',
-        detail: 'Koninin tepesi merkezde, tabanı kesitte olduğundan yüksekliği merkez uzaklığına eşittir: h = 5 cm.',
+        detail:
+          'Koninin tepesi merkezde, tabanı kesitte olduğundan yüksekliği merkez uzaklığına eşittir: h = 5 cm.',
       },
       {
         title: 'Hacim',
@@ -490,8 +489,7 @@ const QUESTIONS: Question[] = [
       },
       {
         title: 'İç teğet çember',
-        detail:
-          'r = Alan / u ⇒ 4 = 12h / (12 + √(144 + h²)) ⇒ 12 + √(144 + h²) = 3h.',
+        detail: 'r = Alan / u ⇒ 4 = 12h / (12 + √(144 + h²)) ⇒ 12 + √(144 + h²) = 3h.',
       },
       {
         title: 'Yüksekliği bul',
@@ -635,7 +633,8 @@ const QUESTIONS: Question[] = [
     solution: [
       {
         title: 'Eksenleri kestiği noktalar',
-        detail: 'x = 0 için y = 4, y = 0 için x = 6. Bölge, dik kenarları 6 ve 4 olan dik üçgendir.',
+        detail:
+          'x = 0 için y = 4, y = 0 için x = 6. Bölge, dik kenarları 6 ve 4 olan dik üçgendir.',
       },
       {
         title: 'Oluşan koni',
@@ -667,6 +666,270 @@ const QUESTIONS: Question[] = [
           <text class="val" x="70" y="112" text-anchor="end">4</text>
           <text class="val" x="316" y="282" text-anchor="middle">6</text>
           <text x="340" y="246">d</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 13
+  {
+    id: 'spheres-13',
+    topic: 'Alanı verilen kürenin hacmi',
+    stem: [],
+    ask: 'Yüzey alanı 144π cm² olan bir kürenin hacmi kaç π cm³ tür?',
+    choices: [
+      { key: 'A', text: '144' },
+      { key: 'B', text: '216' },
+      { key: 'C', text: '256' },
+      { key: 'D', text: '288' },
+      { key: 'E', text: '324' },
+    ],
+    answer: 'D',
+    hint: 'Yüzey alanı formülünden kürenin yarıçapını bul.',
+    solution: [
+      {
+        title: 'Yarıçap',
+        detail: '4πR² = 144π ⇒ R² = 36 ⇒ R = 6 cm.',
+      },
+      {
+        title: 'Hacim',
+        detail: 'V = (4/3)πR³ = (4/3)π · 216.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'V = 288π cm³, yani 288 π cm³ tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 14
+  {
+    id: 'spheres-14',
+    topic: 'Küreden küpe geçiş',
+    stem: [],
+    ask: 'Bir ayrıtının uzunluğu, yüzey alanı 100π cm² olan bir kürenin çapına eşit olan küpün hacmi kaç cm³ tür?',
+    choices: [
+      { key: 'A', text: '125' },
+      { key: 'B', text: '216' },
+      { key: 'C', text: '512' },
+      { key: 'D', text: '729' },
+      { key: 'E', text: '1000' },
+    ],
+    answer: 'E',
+    hint: 'Önce kürenin yarıçapını, sonra çapını bul; küpün ayrıtı bu çaptır.',
+    solution: [
+      {
+        title: 'Kürenin yarıçapı',
+        detail: '4πR² = 100π ⇒ R² = 25 ⇒ R = 5 cm.',
+      },
+      {
+        title: 'Küpün ayrıtı',
+        detail: 'Ayrıt, kürenin çapına eşittir: a = 2 · 5 = 10 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Küpün hacmi a³ = 10³ = 1000 cm³ tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 15
+  {
+    id: 'spheres-15',
+    topic: 'Küreyi içine alan en küçük silindir',
+    stem: [],
+    ask: 'Hacmi 288π cm³ olan bir küreyi içine alabilecek en küçük dik dairesel silindirin hacmi kaç π cm³ tür?',
+    choices: [
+      { key: 'A', text: '288' },
+      { key: 'B', text: '324' },
+      { key: 'C', text: '384' },
+      { key: 'D', text: '432' },
+      { key: 'E', text: '576' },
+    ],
+    answer: 'D',
+    hint: 'En küçük silindirde küre hem yan yüzeye hem iki tabana teğettir; silindirin yarıçapı ve yüksekliği küreye göre ne olur?',
+    solution: [
+      {
+        title: 'Kürenin yarıçapı',
+        detail: '(4/3)πR³ = 288π ⇒ R³ = 216 ⇒ R = 6 cm.',
+      },
+      {
+        title: 'Silindirin boyutları',
+        detail:
+          'Küre silindirin yan yüzeyine ve iki tabanına teğettir: taban yarıçapı r = 6 cm, yükseklik h = 2 · 6 = 12 cm.',
+      },
+      {
+        title: 'Silindirin hacmi',
+        detail: 'V = πr²h = π · 36 · 12.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'V = 432π cm³, yani 432 π cm³ tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 16
+  {
+    id: 'spheres-16',
+    topic: 'Kürelerin hacim ve alan oranı',
+    stem: [],
+    ask: 'Hacimleri oranı 8/27 olan iki kürenin yüzey alanları oranı kaçtır?',
+    choices: [
+      { key: 'A', text: '2/3' },
+      { key: 'B', text: '4/9' },
+      { key: 'C', text: '8/27' },
+      { key: 'D', text: '16/81' },
+      { key: 'E', text: '9/4' },
+    ],
+    answer: 'B',
+    hint: 'Hacimler oranı yarıçaplar oranının küpüdür; önce yarıçaplar oranını bul.',
+    solution: [
+      {
+        title: 'Yarıçaplar oranı',
+        detail: '(r₁ / r₂)³ = 8/27 ⇒ r₁ / r₂ = 2/3.',
+      },
+      {
+        title: 'Alanlar oranı',
+        detail: 'Yüzey alanları oranı yarıçaplar oranının karesidir: (2/3)².',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Alanlar oranı 4/9 dur.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 17
+  {
+    id: 'spheres-17',
+    topic: 'Dik üçgenin hipotenüs etrafında döndürülmesi',
+    stem: [],
+    ask: 'Dik kenarları 15 cm ve 20 cm olan bir dik üçgenin hipotenüsü etrafında 360° döndürülmesiyle oluşan cismin hacmi kaç π cm³ tür?',
+    choices: [
+      { key: 'A', text: '960' },
+      { key: 'B', text: '1000' },
+      { key: 'C', text: '1200' },
+      { key: 'D', text: '1500' },
+      { key: 'E', text: '1600' },
+    ],
+    answer: 'C',
+    hint: 'Üçgen hipotenüs etrafında dönünce tabanları ortak iki koni oluşur; ortak tabanın yarıçapı hipotenüse ait yüksekliktir.',
+    solution: [
+      {
+        title: 'Hipotenüs',
+        detail: '15² + 20² = 225 + 400 = 625 ⇒ hipotenüs 25 cm.',
+      },
+      {
+        title: 'Hipotenüse ait yükseklik',
+        detail: 'h = (15 · 20) / 25 = 12 cm. Bu, iki koninin ortak taban yarıçapıdır.',
+      },
+      {
+        title: 'İki koninin hacmi',
+        detail:
+          'Koni yükseklikleri toplamı hipotenüse eşittir: V = (1/3)π · 12² · 25 = (1/3)π · 3600.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'V = 1200π cm³, yani 1200 π cm³ tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 18
+  {
+    id: 'spheres-18',
+    topic: 'Küpün içine teğet küre',
+    stem: [
+      'Cisim köşegeni 4√3 cm olan bir küpün içine, küpün tüm yüzeylerine teğet olacak şekilde bir küre yerleştiriliyor.',
+    ],
+    ask: 'Bu küre ile küp arasında kalan boşluğun hacmi kaç cm³ tür?',
+    choices: [
+      { key: 'A', text: '64 − 16π' },
+      { key: 'B', text: '64 − 8π' },
+      { key: 'C', text: '64 − 32π/3' },
+      { key: 'D', text: '32 + 32π/3' },
+      { key: 'E', text: '32 − 32π/3' },
+    ],
+    answer: 'C',
+    hint: 'Cisim köşegeni a√3 tür; yüzeylere teğet kürenin çapı küpün ayrıtına eşittir.',
+    solution: [
+      {
+        title: 'Küpün ayrıtı',
+        detail: 'a√3 = 4√3 ⇒ a = 4 cm; küpün hacmi 4³ = 64 cm³.',
+      },
+      {
+        title: 'Kürenin yarıçapı',
+        detail: 'Küre tüm yüzeylere teğet olduğundan çapı a ya eşittir: r = 4 / 2 = 2 cm.',
+      },
+      {
+        title: 'Kürenin hacmi',
+        detail: 'V = (4/3)π · 2³ = 32π/3 cm³.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Boşluğun hacmi 64 − 32π/3 cm³ tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 19
+  // |AC| = 140 px; |BC| = 140/√3 ≈ 80.83 (60° at B), |CD| = 140√3 ≈ 242.49 (30° at D).
+  {
+    id: 'spheres-19',
+    topic: 'Yükseklik etrafında dönen üçgen',
+    stem: [],
+    given: ['ABD bir üçgen', '[AC] ⊥ [BD]', 'm(ABC) = 60°', 'm(ADC) = 30°'],
+    ask: 'Şekildeki ABD üçgeni [AC] ekseni etrafında 180° döndürüldüğünde, ABC üçgeninin oluşturacağı cismin hacminin ACD üçgeninin oluşturacağı cismin hacmine oranı kaçtır?',
+    choices: [
+      { key: 'A', text: '1/2' },
+      { key: 'B', text: '1/3' },
+      { key: 'C', text: '1/9' },
+      { key: 'D', text: '2/9' },
+      { key: 'E', text: '1/27' },
+    ],
+    answer: 'C',
+    hint: 'İki üçgen de [AC] etrafında dönünce yüksekliği |AC| olan yarım koniler oluşur; oran yalnızca taban yarıçaplarına bağlıdır.',
+    solution: [
+      {
+        title: 'Oluşan cisimler',
+        detail:
+          '180° dönüşte ABC üçgeni yarıçapı |BC|, ACD üçgeni yarıçapı |CD| olan birer yarım koni oluşturur; ikisinin yüksekliği de |AC| dir.',
+      },
+      {
+        title: 'Kenarlar',
+        detail:
+          '|AC| = h diyelim. ABC de tan 60° = h / |BC| ⇒ |BC| = h/√3; ACD de tan 30° = h / |CD| ⇒ |CD| = h√3.',
+      },
+      {
+        title: 'Hacimler oranı',
+        detail:
+          'Yükseklikler eşit olduğundan oran taban yarıçaplarının karelerinin oranıdır: (h²/3) / (3h²).',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Oran 1/9 dur.',
+      },
+    ],
+    figure: {
+      viewBox: '0 80 400 205',
+      caption: 'Şekil 8',
+      label: 'ABD üçgeninde A dan [BD] ye inen dikme [AC]; B açısı 60 derece, D açısı 30 derece.',
+      svg: `
+          <path class="ln" d="M38,250 L361.32,250 L118.83,110 Z"/>
+          <path class="ln" d="M118.83,110 L118.83,250"/>
+          <path class="ln" d="M118.83,236 L132.83,236 L132.83,250"/>
+          <path class="arc" d="M62,250 A24,24 0 0 0 50,229.22"/>
+          <path class="arc" d="M331.32,250 A30,30 0 0 1 335.34,235"/>
+          <circle class="pt" cx="38" cy="250" r="3.2"/>
+          <circle class="pt" cx="118.83" cy="250" r="3.2"/>
+          <circle class="pt" cx="361.32" cy="250" r="3.2"/>
+          <circle class="pt" cx="118.83" cy="110" r="3.2"/>
+          <text x="118.83" y="100" text-anchor="middle">A</text>
+          <text x="30" y="272" text-anchor="end">B</text>
+          <text x="118.83" y="272" text-anchor="middle">C</text>
+          <text x="369" y="272">D</text>
+          <text class="val" x="68" y="244">60°</text>
+          <text class="val" x="318" y="244" text-anchor="end">30°</text>
         `,
     },
   },
@@ -715,6 +978,22 @@ export const UNIT_10_SPHERES: Unit = {
         'spheres-10',
         'spheres-11',
         'spheres-12',
+      ),
+    },
+    {
+      id: 'spheres-m3',
+      order: 3,
+      title: 'Küre hacmi, teğet cisimler ve dönen üçgenler',
+      summary:
+        'Alandan hacme, küreden küpe, küreyi saran silindir, hacim ve alan oranı, hipotenüs etrafında dönen üçgen, küp içindeki küre ve yükseklik etrafında dönen üçgen.',
+      questions: pick(
+        'spheres-13',
+        'spheres-14',
+        'spheres-15',
+        'spheres-16',
+        'spheres-17',
+        'spheres-18',
+        'spheres-19',
       ),
     },
   ],
