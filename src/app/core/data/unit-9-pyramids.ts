@@ -1789,6 +1789,325 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+  // ---------------------------------------------------------------- 32
+  // Rectangular base 8 × 6 at 30 px per cm in cabinet oblique (depth 90 px
+  // along 45°). T sits 6 cm (180 px) above the base centre (221.8, 258.2).
+  {
+    id: 'pyramids-32',
+    topic: 'Hacimden yan yüzün alanı',
+    stem: [],
+    given: ['ABCD bir dikdörtgen', '|AB| = 8 cm', '|BC| = 6 cm'],
+    ask: 'Yukarıdaki şekilde (T, ABCD) dik piramidinin hacmi 96 cm³ olduğuna göre, A(TBC) kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '4√13' },
+      { key: 'B', text: '6√10' },
+      { key: 'C', text: '6√13' },
+      { key: 'D', text: '8√10' },
+      { key: 'E', text: '12√13' },
+    ],
+    answer: 'C',
+    hint: 'Önce hacimden piramidin yüksekliğini bul; TBC yüzünün yüksekliği, bu yükseklik ile taban merkezinin [BC] ye uzaklığından oluşan dik üçgenin hipotenüsüdür.',
+    solution: [
+      {
+        title: 'Yükseklik',
+        detail: 'Taban alanı 8 · 6 = 48 cm²; (1/3) · 48 · h = 96 ⇒ 16h = 96 ⇒ h = 6 cm.',
+      },
+      {
+        title: 'Merkezin [BC] ye uzaklığı',
+        detail: 'Taban merkezinin [BC] kenarına uzaklığı |AB| / 2 = 8 / 2 = 4 cm dir.',
+      },
+      {
+        title: 'Yan yüz yüksekliği',
+        detail: 'TBC yüzünün yüksekliği √(6² + 4²) = √52 = 2√13 cm dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'A(TBC) = (6 · 2√13) / 2 = 6√13 cm² dir.',
+      },
+    ],
+    figure: {
+      viewBox: '0 56 400 262',
+      caption: 'Şekil 21',
+      label:
+        'Tabanı ABCD dikdörtgeni olan T tepeli dik piramit. |AB| = 8 cm, |BC| = 6 cm; TBC yan yüzü taralı.',
+      svg: `
+          <path class="shade" d="M221.8,78.2 L310,290 L373.6,226.4 Z"/>
+          <path class="hid" d="M70,290 L133.6,226.4 L373.6,226.4 M133.6,226.4 L221.8,78.2"/>
+          <path class="ln" d="M70,290 L310,290 L373.6,226.4 L221.8,78.2 Z M221.8,78.2 L310,290"/>
+          <circle class="pt" cx="221.8" cy="78.2" r="3.2"/>
+          <circle class="pt" cx="70" cy="290" r="3.2"/>
+          <circle class="pt" cx="310" cy="290" r="3.2"/>
+          <circle class="pt" cx="373.6" cy="226.4" r="3.2"/>
+          <circle class="pt" cx="133.6" cy="226.4" r="3.2"/>
+          <text x="221.8" y="68" text-anchor="middle">T</text>
+          <text x="62" y="306" text-anchor="end">A</text>
+          <text x="314" y="308">B</text>
+          <text x="380" y="230">C</text>
+          <text x="126" y="222" text-anchor="end">D</text>
+          <text class="val" x="190" y="310" text-anchor="middle">8</text>
+          <text class="val" x="350" y="276">6</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 33
+  {
+    id: 'pyramids-33',
+    topic: 'Hacimden yan yüz yüksekliği',
+    stem: [],
+    ask: 'Taban kenarının uzunluğu 6√3 cm olan eşkenar üçgen dik piramidin hacmi 36√3 cm³ olduğuna göre, yan yüz yüksekliği kaç cm dir?',
+    choices: [
+      { key: 'A', text: '4' },
+      { key: 'B', text: '5' },
+      { key: 'C', text: '2√13' },
+      { key: 'D', text: '√97' },
+      { key: 'E', text: '6' },
+    ],
+    answer: 'B',
+    hint: 'Yan yüz yüksekliği; piramidin yüksekliği ile tabanın ağırlık merkezinden bir kenara olan uzaklıktan (iç teğet çemberin yarıçapı) oluşan dik üçgenin hipotenüsüdür.',
+    solution: [
+      {
+        title: 'Taban alanı',
+        detail: '(6√3)² · √3 / 4 = 108√3 / 4 = 27√3 cm².',
+      },
+      {
+        title: 'Yükseklik',
+        detail: '(1/3) · 27√3 · h = 36√3 ⇒ 9h = 36 ⇒ h = 4 cm.',
+      },
+      {
+        title: 'Merkezin kenara uzaklığı',
+        detail:
+          'Eşkenar üçgenin yüksekliği 6√3 · √3 / 2 = 9 cm; ağırlık merkezinin kenara uzaklığı bunun üçte biri, 3 cm dir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Yan yüz yüksekliği √(4² + 3²) = 5 cm dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 34
+  // Cone of height 12 and radius 9 at 18 px per cm: apex (200, 30), base centre
+  // (200, 246), rx 162. The oil surface sits 4 cm (72 px) below the apex with
+  // radius 54. Ellipses at 0.3 aspect.
+  {
+    id: 'pyramids-34',
+    topic: 'Koni biçimli kapta iki sıvı',
+    stem: [
+      'Yüksekliği 12 cm olan dik koni şeklindeki kabın bir kısmı su, bir kısmı zeytinyağı ile tamamen doludur. Zeytinyağı suyun üstündedir.',
+    ],
+    given: ['|PO| = 12 cm', '|OB| = 9 cm', 'V su = 312π cm³'],
+    ask: 'Buna göre, zeytinyağı tabakasının yüksekliği kaç cm dir?',
+    choices: [
+      { key: 'A', text: '2' },
+      { key: 'B', text: '3' },
+      { key: 'C', text: '4' },
+      { key: 'D', text: '6' },
+      { key: 'E', text: '8' },
+    ],
+    answer: 'C',
+    hint: 'Zeytinyağı, tepe noktası P olan ve asıl koniye benzer küçük bir koni oluşturur.',
+    solution: [
+      {
+        title: 'Koninin hacmi',
+        detail: '(1/3) · π · 9² · 12 = 324π cm³.',
+      },
+      {
+        title: 'Zeytinyağının hacmi',
+        detail: '324π − 312π = 12π cm³.',
+      },
+      {
+        title: 'Benzerlik oranı',
+        detail: 'Hacim oranı 12π / 324π = 1/27 = (1/3)³ olduğundan yükseklikler oranı 1/3 tür.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Zeytinyağının yüksekliği 12 · 1/3 = 4 cm dir.',
+      },
+    ],
+    figure: {
+      viewBox: '0 8 400 298',
+      caption: 'Şekil 22',
+      label:
+        'Tepe noktası P, taban merkezi O olan dik koni biçiminde kap. B taban çemberi üzerinde. Tepeye yakın üst kısımda zeytinyağı, altındaki taralı kısımda su var.',
+      svg: `
+          <path class="shade" d="M146,102 A54,16.2 0 0 1 254,102 L362,246 A162,48.6 0 0 1 38,246 Z"/>
+          <path class="hid" d="M38,246 A162,48.6 0 0 1 362,246 M200,30 L200,246"/>
+          <path class="ln" d="M38,246 A162,48.6 0 0 0 362,246 M200,30 L38,246 M200,30 L362,246"/>
+          <path class="ln" d="M146,102 A54,16.2 0 0 1 254,102 A54,16.2 0 0 1 146,102 Z"/>
+          <path class="ln" d="M200,246 L362,246"/>
+          <circle class="pt" cx="200" cy="30" r="3.2"/>
+          <circle class="pt" cx="200" cy="246" r="3.2"/>
+          <circle class="pt" cx="362" cy="246" r="3.2"/>
+          <text x="200" y="20" text-anchor="middle">P</text>
+          <text x="194" y="240" text-anchor="end">O</text>
+          <text x="370" y="252">B</text>
+          <text x="244" y="72">Zeytinyağı</text>
+          <text x="150" y="200" text-anchor="middle">Su</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 35
+  {
+    id: 'pyramids-35',
+    topic: 'Düzgün sekizyüzlünün hacmi',
+    stem: [],
+    ask: 'Bir düzgün sekizyüzlünün alanı 72√3 cm² ise, hacmi kaç cm³ tür?',
+    choices: [
+      { key: 'A', text: '36√2' },
+      { key: 'B', text: '54√2' },
+      { key: 'C', text: '72' },
+      { key: 'D', text: '72√2' },
+      { key: 'E', text: '144√2' },
+    ],
+    answer: 'D',
+    hint: 'Düzgün sekizyüzlü, tabanları çakışık iki eş kare piramitten oluşur ve sekiz yüzü eş eşkenar üçgendir.',
+    solution: [
+      {
+        title: 'Ayrıt',
+        detail: 'Sekiz eşkenar üçgen: 8 · a²√3 / 4 = 2√3 a² = 72√3 ⇒ a² = 36 ⇒ a = 6 cm.',
+      },
+      {
+        title: 'Piramidin yüksekliği',
+        detail:
+          'Ortak kare tabanın köşegeni 6√2 cm; tepe noktaları karşılıklı köşeler gibi olduğundan her piramidin yüksekliği köşegenin yarısı, 3√2 cm dir.',
+      },
+      {
+        title: 'Bir piramidin hacmi',
+        detail: '(1/3) · 6² · 3√2 = 36√2 cm³.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Sekizyüzlünün hacmi 2 · 36√2 = 72√2 cm³ tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 36
+  // Cone with r = 4 and slant 16 (height √240 ≈ 15.49) at 16 px per cm:
+  // apex (200, 24), base centre (200, 271.9), rx 64. Ellipse at 0.3 aspect.
+  {
+    id: 'pyramids-36',
+    topic: 'Koni yüzeyinde en kısa yol',
+    stem: [
+      'Şekildeki dik koni, 90° lik bir daire diliminin kıvrılmasıyla elde edilmiştir ve taban çevresi 8π cm dir.',
+    ],
+    ask: 'Buna göre, B noktasından hareket eden bir karıncanın koni yüzeyinden dolaşarak tekrar B noktasına dönmesi için izleyeceği en kısa yol kaç cm dir?',
+    choices: [
+      { key: 'A', text: '16' },
+      { key: 'B', text: '8√2' },
+      { key: 'C', text: '16√2' },
+      { key: 'D', text: '16√3' },
+      { key: 'E', text: '32' },
+    ],
+    answer: 'C',
+    hint: 'Koniyi [AB] boyunca kesip aç: yol, açınımdaki daire diliminin iki ucundaki B noktalarını birleştiren kiriş olur.',
+    solution: [
+      {
+        title: 'Taban yarıçapı',
+        detail: '2πr = 8π ⇒ r = 4 cm.',
+      },
+      {
+        title: 'Ana doğru',
+        detail: 'r / ℓ = 90° / 360° ⇒ 4 / ℓ = 1/4 ⇒ ℓ = 16 cm.',
+      },
+      {
+        title: 'Açınım',
+        detail:
+          'Koni [AB] boyunca açılınca yarıçapı 16 cm, merkez açısı 90° olan bir daire dilimi elde edilir; B noktası dilimin iki ucuna düşer.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'En kısa yol bu iki ucu birleştiren kiriştir; dik açının karşısında olduğundan √(16² + 16²) = 16√2 cm dir.',
+      },
+    ],
+    figure: {
+      viewBox: '0 4 400 300',
+      caption: 'Şekil 23',
+      label:
+        'Tepe noktası A olan dik koni. B ve C taban çemberinin çapının uçları; taban merkezinden C ye r yarıçapı çizili.',
+      svg: `
+          <path class="hid" d="M136,271.9 A64,19.2 0 0 1 264,271.9"/>
+          <path class="ln" d="M136,271.9 A64,19.2 0 0 0 264,271.9 M200,24 L136,271.9 M200,24 L264,271.9"/>
+          <path class="ln" d="M200,271.9 L264,271.9"/>
+          <circle class="pt" cx="200" cy="24" r="3.2"/>
+          <circle class="pt" cx="200" cy="271.9" r="3.2"/>
+          <circle class="pt" cx="136" cy="271.9" r="3.2"/>
+          <circle class="pt" cx="264" cy="271.9" r="3.2"/>
+          <text x="200" y="14" text-anchor="middle">A</text>
+          <text x="128" y="278" text-anchor="end">B</text>
+          <text x="272" y="278">C</text>
+          <text class="val" x="232" y="266" text-anchor="middle">r</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 37
+  // D, E, F are the midpoints of [TA], [TB], [TC], matching the ratio 1/2.
+  {
+    id: 'pyramids-37',
+    topic: 'Kesik piramitten bütün piramidin hacmi',
+    stem: ['Şekildeki üçgen piramitte DEF düzlemi ABC tabanına paraleldir.'],
+    given: ['A(ABC) = 4 · A(DEF)', 'Kesik piramidin hacmi 56 cm³'],
+    ask: 'Buna göre, (T, ABC) piramidinin hacmi kaç cm³ tür?',
+    choices: [
+      { key: 'A', text: '60' },
+      { key: 'B', text: '63' },
+      { key: 'C', text: '64' },
+      { key: 'D', text: '72' },
+      { key: 'E', text: '84' },
+    ],
+    answer: 'C',
+    hint: 'Benzer cisimlerde alanlar oranı benzerlik oranının karesi, hacimler oranı ise küpüdür.',
+    solution: [
+      {
+        title: 'Benzerlik oranı',
+        detail:
+          'Alanlar oranı 1/4 = (1/2)² olduğundan (T, DEF) ile (T, ABC) nin benzerlik oranı 1/2 dir.',
+      },
+      {
+        title: 'Hacim oranı',
+        detail:
+          '(1/2)³ = 1/8: küçük piramit V ise bütün piramit 8V, kesik piramit 8V − V = 7V dir.',
+      },
+      {
+        title: 'Küçük piramit',
+        detail: '7V = 56 ⇒ V = 8 cm³.',
+      },
+      {
+        title: 'Sonuç',
+        detail: '(T, ABC) piramidinin hacmi 8 · 8 = 64 cm³ tür.',
+      },
+    ],
+    figure: {
+      viewBox: '0 8 400 336',
+      caption: 'Şekil 24',
+      label:
+        'T tepeli ABC tabanlı üçgen piramit. D, E, F sırasıyla [TA], [TB], [TC] üzerinde ve DEF üçgeni tabana paralel. ABC tabanı taralı.',
+      svg: `
+          <path class="shade" d="M60,250 L170,320 L340,250 Z"/>
+          <path class="hid" d="M60,250 L340,250 M135,140 L275,140"/>
+          <path class="ln" d="M210,30 L60,250 L170,320 L340,250 Z M210,30 L170,320"/>
+          <path class="ln" d="M135,140 L190,175 L275,140"/>
+          <circle class="pt" cx="210" cy="30" r="3.2"/>
+          <circle class="pt" cx="60" cy="250" r="3.2"/>
+          <circle class="pt" cx="170" cy="320" r="3.2"/>
+          <circle class="pt" cx="340" cy="250" r="3.2"/>
+          <circle class="pt" cx="135" cy="140" r="3.2"/>
+          <circle class="pt" cx="190" cy="175" r="3.2"/>
+          <circle class="pt" cx="275" cy="140" r="3.2"/>
+          <text x="210" y="20" text-anchor="middle">T</text>
+          <text x="52" y="256" text-anchor="end">A</text>
+          <text x="170" y="338" text-anchor="middle">B</text>
+          <text x="348" y="256">C</text>
+          <text x="127" y="138" text-anchor="end">D</text>
+          <text x="184" y="192" text-anchor="end">E</text>
+          <text x="283" y="138">F</text>
+        `,
+    },
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -1887,6 +2206,21 @@ export const UNIT_9_PYRAMIDS: Unit = {
         'pyramids-29',
         'pyramids-30',
         'pyramids-31',
+      ),
+    },
+    {
+      id: 'pyramids-m6',
+      order: 6,
+      title: 'Yan yüz, iki sıvı ve en kısa yol',
+      summary:
+        'Hacimden yan yüzün alanı ve yüksekliği, koni biçimli kapta iki sıvı, düzgün sekizyüzlünün hacmi, koni yüzeyinde en kısa yol ve kesik piramitten bütün piramit.',
+      questions: pick(
+        'pyramids-32',
+        'pyramids-33',
+        'pyramids-34',
+        'pyramids-35',
+        'pyramids-36',
+        'pyramids-37',
       ),
     },
   ],
