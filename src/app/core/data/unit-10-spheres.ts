@@ -933,6 +933,283 @@ const QUESTIONS: Question[] = [
         `,
     },
   },
+  // ---------------------------------------------------------------- 20
+  // Radius 6 at 20 px per cm: O = (170,150), B = (170,30), A = (170,270).
+  {
+    id: 'spheres-20',
+    topic: 'Yarım dairenin çapı etrafında döndürülmesi',
+    stem: [],
+    given: ['|OB| = 6 cm'],
+    ask: 'Şekildeki O merkezli yarım daire, [AB] çapı etrafında 90° döndürüldüğünde oluşan cismin hacmi kaç π cm³ olur?',
+    choices: [
+      { key: 'A', text: '36' },
+      { key: 'B', text: '48' },
+      { key: 'C', text: '72' },
+      { key: 'D', text: '96' },
+      { key: 'E', text: '144' },
+    ],
+    answer: 'C',
+    hint: 'Yarım daire çapı etrafında 360° dönse bir küre oluşurdu; 90° bu tam turun kaçta kaçıdır?',
+    solution: [
+      {
+        title: 'Tam dönüş',
+        detail: 'Yarım daire [AB] çapı etrafında 360° dönse yarıçapı 6 cm olan bir küre oluşurdu.',
+      },
+      {
+        title: 'Kürenin hacmi',
+        detail: 'V = (4/3)π · 6³ = (4/3)π · 216 = 288π cm³.',
+      },
+      {
+        title: '90° lik dönüş',
+        detail: '90° tam turun 90/360 = 1/4 üdür; oluşan cisim kürenin dörtte biridir: 288π / 4.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Hacim 72π cm³, yani 72 π cm³ olur.',
+      },
+    ],
+    figure: {
+      viewBox: '0 10 400 280',
+      caption: 'Şekil 9',
+      label:
+        'Çapı [AB] olan, O merkezli, yarıçapı 6 santimetre olan taralı bir yarım daire; çap düşey, yay sağda.',
+      svg: `
+          <path class="shade" d="M170,30 A120,120 0 0 1 170,270 Z"/>
+          <path class="ln" d="M170,30 A120,120 0 0 1 170,270 Z"/>
+          <path class="ln" d="M170,150 L290,150"/>
+          <circle class="pt" cx="170" cy="30" r="3.2"/>
+          <circle class="pt" cx="170" cy="150" r="3.2"/>
+          <circle class="pt" cx="170" cy="270" r="3.2"/>
+          <text x="162" y="34" text-anchor="end">B</text>
+          <text x="162" y="155" text-anchor="end">O</text>
+          <text x="162" y="280" text-anchor="end">A</text>
+          <text class="val" x="230" y="142" text-anchor="middle">6</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 21
+  {
+    id: 'spheres-21',
+    topic: 'Kürenin içindeki en büyük küp',
+    stem: [],
+    ask: 'Bir kürenin içine çizilen en büyük hacimli küpün yüzey alanı 72 cm² ise kürenin hacmi kaç cm³ tür?',
+    choices: [
+      { key: 'A', text: '32π' },
+      { key: 'B', text: '36π' },
+      { key: 'C', text: '48π' },
+      { key: 'D', text: '54π' },
+      { key: 'E', text: '72π' },
+    ],
+    answer: 'B',
+    hint: 'En büyük küpün köşeleri küre üzerindedir; küpün cisim köşegeni kürenin çapıdır.',
+    solution: [
+      {
+        title: 'Küpün ayrıtı',
+        detail: '6a² = 72 ⇒ a² = 12 ⇒ a = 2√3 cm.',
+      },
+      {
+        title: 'Cisim köşegeni',
+        detail: 'Köşegen a√3 = 2√3 · √3 = 6 cm; bu, kürenin çapıdır, R = 3 cm.',
+      },
+      {
+        title: 'Kürenin hacmi',
+        detail: 'V = (4/3)π · 3³ = (4/3)π · 27.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'V = 36π cm³ tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 22
+  {
+    id: 'spheres-22',
+    topic: 'Sekizde biri çıkarılmış küre',
+    stem: [
+      'O merkezli, yarıçapı 6 cm olan bir küreden; birbirine dik [OA], [OB] ve [OC] yarıçaplarının sınırladığı parça kesilip çıkarılıyor.',
+    ],
+    given: ['[OA] ⊥ [OB]', '[OA] ⊥ [OC]', '[OB] ⊥ [OC]'],
+    ask: 'Buna göre, geriye kalan katı cismin hacmi kaç π cm³ tür?',
+    choices: [
+      { key: 'A', text: '216' },
+      { key: 'B', text: '240' },
+      { key: 'C', text: '246' },
+      { key: 'D', text: '252' },
+      { key: 'E', text: '288' },
+    ],
+    answer: 'D',
+    hint: 'Merkezden çıkan birbirine dik üç yarıçap, küreyi eş parçalara bölen üç dik düzlemin kesişimidir; çıkarılan parça kürenin kaçta kaçıdır?',
+    solution: [
+      {
+        title: 'Kürenin hacmi',
+        detail: 'V = (4/3)π · 6³ = (4/3)π · 216 = 288π cm³.',
+      },
+      {
+        title: 'Çıkarılan parça',
+        detail:
+          'Birbirine dik üç düzlem küreyi 8 eş parçaya böler; çıkarılan parça bunlardan biridir: 288π / 8 = 36π cm³.',
+      },
+      {
+        title: 'Kalan cisim',
+        detail: '288π − 36π = 252π cm³, yani kürenin 7/8 i.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Kalan cismin hacmi 252 π cm³ tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 23
+  // |AB| = 8, |BC| = 3 at 32 px per cm: A = (72,230), B = (328,230).
+  {
+    id: 'spheres-23',
+    topic: 'Dikdörtgenin kenarı etrafında döndürülmesi',
+    stem: [],
+    given: ['ABCD dikdörtgen', '|AB| = 8 cm', '|BC| = 3 cm'],
+    ask: 'Şekildeki ABCD dikdörtgeninin [BC] kenarı etrafında 360° döndürülmesiyle oluşan cismin tüm yüzey alanı kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '66π' },
+      { key: 'B', text: '128π' },
+      { key: 'C', text: '152π' },
+      { key: 'D', text: '176π' },
+      { key: 'E', text: '192π' },
+    ],
+    answer: 'D',
+    hint: '[BC] etrafında dönen dikdörtgen bir silindir oluşturur; eksene dik olan kenar taban yarıçapı olur.',
+    solution: [
+      {
+        title: 'Oluşan cisim',
+        detail:
+          'Taban yarıçapı r = |AB| = 8 cm, yüksekliği h = |BC| = 3 cm olan bir dik silindir oluşur.',
+      },
+      {
+        title: 'Yanal alan',
+        detail: '2πrh = 2π · 8 · 3 = 48π cm².',
+      },
+      {
+        title: 'Taban alanları',
+        detail: '2πr² = 2π · 64 = 128π cm².',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Tüm alan 48π + 128π = 176π cm² dir.',
+      },
+    ],
+    figure: {
+      viewBox: '0 110 400 150',
+      caption: 'Şekil 10',
+      label: 'ABCD dikdörtgeni; alt kenar [AB] 8 santimetre, sağ kenar [BC] 3 santimetre.',
+      svg: `
+          <path class="ln" d="M72,230 L328,230 L328,134 L72,134 Z"/>
+          <path class="ln" d="M314,230 L314,216 L328,216"/>
+          <circle class="pt" cx="72" cy="230" r="3.2"/>
+          <circle class="pt" cx="328" cy="230" r="3.2"/>
+          <circle class="pt" cx="328" cy="134" r="3.2"/>
+          <circle class="pt" cx="72" cy="134" r="3.2"/>
+          <text x="64" y="248" text-anchor="end">A</text>
+          <text x="336" y="248">B</text>
+          <text x="336" y="130">C</text>
+          <text x="64" y="130" text-anchor="end">D</text>
+          <text class="val" x="200" y="252" text-anchor="middle">8</text>
+          <text class="val" x="340" y="188">3</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 24
+  {
+    id: 'spheres-24',
+    topic: 'Kürenin içine yerleşen en büyük küp',
+    stem: ['Yüzey alanı 108π cm² olan bir kürenin içine en büyük hacme sahip küp yerleştiriliyor.'],
+    ask: 'Buna göre, küpün hacmi kaç cm³ tür?',
+    choices: [
+      { key: 'A', text: '27' },
+      { key: 'B', text: '64' },
+      { key: 'C', text: '125' },
+      { key: 'D', text: '108√3' },
+      { key: 'E', text: '216' },
+    ],
+    answer: 'E',
+    hint: 'Önce yüzey alanından kürenin yarıçapını bul; en büyük küpün cisim köşegeni kürenin çapına eşittir.',
+    solution: [
+      {
+        title: 'Kürenin yarıçapı',
+        detail: '4πR² = 108π ⇒ R² = 27 ⇒ R = 3√3 cm; çap 6√3 cm.',
+      },
+      {
+        title: 'Küpün ayrıtı',
+        detail: 'Cisim köşegeni çapa eşittir: a√3 = 6√3 ⇒ a = 6 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Küpün hacmi 6³ = 216 cm³ tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 25
+  // 36 px per unit, origin at (140,280): y = 6 at y = 64, the corner (2, 6) at (212,64).
+  {
+    id: 'spheres-25',
+    topic: 'Doğrular arasındaki bölgenin y ekseni etrafında döndürülmesi',
+    stem: [],
+    ask: 'Analitik düzlemde y = 3x, y = 6 doğruları ve y ekseni arasında kalan bölgenin y ekseni etrafında 360° döndürülmesiyle oluşan cismin hacmi kaç birim küptür?',
+    choices: [
+      { key: 'A', text: '8π' },
+      { key: 'B', text: '9π' },
+      { key: 'C', text: '12π' },
+      { key: 'D', text: '16π' },
+      { key: 'E', text: '24π' },
+    ],
+    answer: 'A',
+    hint: 'Bölge bir dik üçgendir; y ekseni etrafında dönünce tepesi orijinde olan bir koni oluşur.',
+    solution: [
+      {
+        title: 'Köşe noktası',
+        detail: 'y = 3x ile y = 6 in kesişimi: 3x = 6 ⇒ x = 2; köşe (2, 6).',
+      },
+      {
+        title: 'Oluşan koni',
+        detail:
+          'Köşeleri (0, 0), (0, 6), (2, 6) olan dik üçgen y ekseni etrafında dönünce taban yarıçapı 2, yüksekliği 6 olan bir koni oluşur.',
+      },
+      {
+        title: 'Koninin hacmi',
+        detail: 'V = (1/3)π · 2² · 6 = (1/3)π · 24.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'V = 8π birim küptür.',
+      },
+    ],
+    figure: {
+      viewBox: '0 10 400 310',
+      caption: 'Şekil 11',
+      label:
+        'Analitik düzlemde y eşittir 3x ve y eşittir 6 doğruları ile y ekseni arasında kalan taralı üçgen bölge.',
+      svg: `
+          <path class="shade" d="M140,280 L140,64 L212,64 Z"/>
+          <path class="ln" d="M60,280 L385,280"/>
+          <path class="ln" d="M375,274 L385,280 L375,286"/>
+          <path class="ln" d="M140,312 L140,20"/>
+          <path class="ln" d="M134,30 L140,20 L146,30"/>
+          <path class="ln" d="M129.2,312.4 L222.8,31.6"/>
+          <path class="ln" d="M100,64 L330,64"/>
+          <circle class="pt" cx="140" cy="280" r="3.2"/>
+          <circle class="pt" cx="140" cy="64" r="3.2"/>
+          <circle class="pt" cx="212" cy="64" r="3.2"/>
+          <text x="382" y="302" text-anchor="middle">x</text>
+          <text x="152" y="30">y</text>
+          <text x="132" y="300" text-anchor="end">O</text>
+          <text x="132" y="58" text-anchor="end">6</text>
+          <text x="210" y="160">y = 3x</text>
+          <text x="300" y="56">y = 6</text>
+        `,
+    },
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -994,6 +1271,21 @@ export const UNIT_10_SPHERES: Unit = {
         'spheres-17',
         'spheres-18',
         'spheres-19',
+      ),
+    },
+    {
+      id: 'spheres-m4',
+      order: 4,
+      title: 'Dönen yarım daire, küre içindeki küp ve dönen bölgeler',
+      summary:
+        'Çapı etrafında 90° dönen yarım daire, küp ile küre arasında geçişler, sekizde biri çıkarılmış küre, kenarı etrafında dönen dikdörtgen ve iki doğru arasındaki dönen bölge.',
+      questions: pick(
+        'spheres-20',
+        'spheres-21',
+        'spheres-22',
+        'spheres-23',
+        'spheres-24',
+        'spheres-25',
       ),
     },
   ],

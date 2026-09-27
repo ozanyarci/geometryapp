@@ -45,6 +45,18 @@ describe('unit 10 answer key', () => {
     expect(answerOf('spheres-18')).toBe('C'));
   it('19 — |BC| = h/√3, |CD| = h√3, (h²/3)/(3h²) = 1/9 → C', () =>
     expect(answerOf('spheres-19')).toBe('C'));
+  it('20 — sphere (4/3)π·216 = 288π, 90° is 1/4, 72π → C', () =>
+    expect(answerOf('spheres-20')).toBe('C'));
+  it('21 — 6a² = 72, a = 2√3, 2R = a√3 = 6, (4/3)π·27 = 36π → B', () =>
+    expect(answerOf('spheres-21')).toBe('B'));
+  it('22 — (4/3)π·216 = 288π, 7/8 of it = 252π → D', () =>
+    expect(answerOf('spheres-22')).toBe('D'));
+  it('23 — r = 8, h = 3, 2π·8·3 + 2π·64 = 48π + 128π = 176π → D', () =>
+    expect(answerOf('spheres-23')).toBe('D'));
+  it('24 — 4πR² = 108π, R = 3√3, a√3 = 6√3, a = 6, 216 → E', () =>
+    expect(answerOf('spheres-24')).toBe('E'));
+  it('25 — corner (2, 6), cone (1/3)π·4·6 = 8π → A', () =>
+    expect(answerOf('spheres-25')).toBe('A'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
