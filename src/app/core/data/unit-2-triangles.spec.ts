@@ -1287,6 +1287,19 @@ describe('unit 2 answer key', () => {
   it('620 — |AP| = (2/5)|AD| ⇒ (2/5)·15 = 6 → B', () =>
     expect(answerOf('triangles-620')).toBe('B'));
 
+  it('621 — |AB| = 8 ⇒ A, B merkezli 8 cm lik çemberde; 8 > 6 tek kesim → C', () =>
+    expect(answerOf('triangles-621')).toBe('C'));
+  it('622 — I tek; II: 8·sin 30 = 4 = b teğet, tek; III: 5 < 7 < 10 iki → C', () =>
+    expect(answerOf('triangles-622')).toBe('C'));
+  it('623 — düzlemler A ya 1 ve 5, r = 5 ⇒ çember + teğet nokta → D', () =>
+    expect(answerOf('triangles-623')).toBe('D'));
+  it('624 — 4 + 6 = 10 = |AB| ⇒ dıştan teğet, bir nokta → A', () =>
+    expect(answerOf('triangles-624')).toBe('A'));
+  it('625 — 12·h₁ = 5·h₂ ⇒ [BD], √(144 + 25) = 13 → C', () =>
+    expect(answerOf('triangles-625')).toBe('C'));
+  it('626 — r = √(13² − 5²) = 12 ⇒ 12 birimlik çember → B', () =>
+    expect(answerOf('triangles-626')).toBe('B'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)

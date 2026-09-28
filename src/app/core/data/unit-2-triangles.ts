@@ -52328,6 +52328,330 @@ Q4 DE 6.928203230275509 6.928203230275509 AE 10.0 EC 2.0
       },
     ],
   },
+  // ---------------------------------------------------------------- 621
+  {
+    id: 'triangles-621',
+    topic: 'Köşenin yerini veren çember',
+    figure: {
+      viewBox: '0 0 400 292',
+      caption: 'Şekil 621',
+      label:
+        'B ve C noktaları yatay bir doğru üzerindedir, |BC| = 6 cm dir; C noktasından çıkan C-x ışını [CB ile 50° lik açı yapar.',
+      svg: `
+          <path class="ln" d="M300,260 L40,260"/>
+          <path class="ln" d="M300,260 L107.2,30.2"/>
+          <path class="arc" d="M270,260 A30,30 0 0 1 280.7,237"/>
+          <text class="val" x="262" y="246" text-anchor="end">50°</text>
+          <text class="val" x="225" y="282" text-anchor="middle">6</text>
+          <circle class="pt" cx="150" cy="260" r="3.2"/>
+          <circle class="pt" cx="300" cy="260" r="3.2"/>
+          <text x="150" y="282" text-anchor="middle">B</text>
+          <text x="300" y="282" text-anchor="middle">C</text>
+          <text x="99" y="30" text-anchor="end">x</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 0 400 292',
+      caption: 'Şekil 621 — B merkezli yay',
+      label:
+        'Aynı şekle B merkezli 8 cm yarıçaplı yay kesikli çizgiyle eklenmiştir; yay C-x ışınını A noktasında keser.',
+      svg: `
+          <path class="ln" d="M300,260 L40,260"/>
+          <path class="ln" d="M300,260 L107.2,30.2"/>
+          <path class="aux" d="M250,86.8 A200,200 0 0 0 50,86.8"/>
+          <path class="aux" d="M150,260 L132.9,60.8"/>
+          <path class="arc" d="M270,260 A30,30 0 0 1 280.7,237"/>
+          <text class="val" x="262" y="246" text-anchor="end">50°</text>
+          <text class="val" x="225" y="282" text-anchor="middle">6</text>
+          <text class="val" x="133" y="170" text-anchor="end">8</text>
+          <circle class="pt" cx="150" cy="260" r="3.2"/>
+          <circle class="pt" cx="300" cy="260" r="3.2"/>
+          <circle class="pt" cx="132.9" cy="60.8" r="3.2"/>
+          <text x="150" y="282" text-anchor="middle">B</text>
+          <text x="300" y="282" text-anchor="middle">C</text>
+          <text x="99" y="30" text-anchor="end">x</text>
+          <text x="142" y="52">A</text>
+        `,
+    },
+    given: ['m(C) = 50°', '|BC| = 6 cm', '|AB| = 8 cm'],
+    stem: ['Yukarıdaki şekil tamamlanarak ABC üçgeni çizilecektir.'],
+    ask: 'Buna göre, A köşesi C-x ışını ile aşağıdakilerden hangisinin kesim noktasıdır?',
+    choices: [
+      { key: 'A', text: 'C merkezli 8 cm yarıçaplı çember' },
+      { key: 'B', text: 'B merkezli 6 cm yarıçaplı çember' },
+      { key: 'C', text: 'B merkezli 8 cm yarıçaplı çember' },
+      { key: 'D', text: '[BC] nin kenar orta dikmesi' },
+      { key: 'E', text: '[CB ye paralel ve 8 cm uzaklıktaki doğru' },
+    ],
+    answer: 'C',
+    hint: 'A noktasının hangi sabit noktaya uzaklığı verilmiş?',
+    solution: [
+      {
+        title: 'Işın',
+        detail: 'm(C) = 50° olduğundan A köşesi C-x ışını üzerindedir.',
+      },
+      {
+        title: 'Uzaklık',
+        detail:
+          '|AB| = 8 cm olduğundan A, B noktasına 8 cm uzaklıktadır; yani B merkezli 8 cm yarıçaplı çemberin üzerindedir.',
+      },
+      {
+        title: 'Kesişim',
+        detail:
+          '|AB| = 8 > |BC| = 6 olduğundan bu çember C-x ışınını yalnız bir noktada keser; o nokta A dır.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'A köşesi, C-x ışını ile B merkezli 8 cm yarıçaplı çemberin kesim noktasıdır.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 622
+  {
+    id: 'triangles-622',
+    topic: 'Tek üçgen belirten elemanlar',
+    given: [
+      'I. a = 8 cm, hₐ = 4 cm ve m(B) = 60°',
+      'II. m(B) = 30°, a = 8 cm ve b = 4 cm',
+      'III. m(A) = 30°, b = 10 cm ve a = 7 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıda verilenlerden hangileri ile sadece bir (tek) ABC üçgeni oluşturulabilir?',
+    choices: [
+      { key: 'A', text: 'Yalnız I' },
+      { key: 'B', text: 'Yalnız II' },
+      { key: 'C', text: 'I ve II' },
+      { key: 'D', text: 'I ve III' },
+      { key: 'E', text: 'II ve III' },
+    ],
+    answer: 'C',
+    hint: 'Açının kolunda duran köşenin öbür kola uzaklığını hesapla ve açının karşısındaki kenarla karşılaştır.',
+    solution: [
+      {
+        title: 'I',
+        detail:
+          '[BC] = 8 cm çizilir. A, [BC] ye 4 cm uzaklıktaki paralel doğru üzerindedir ve B den çıkan 60° lik ışın bu doğruyu yalnız bir noktada keser: tek üçgen.',
+      },
+      {
+        title: 'II',
+        detail:
+          'C nin B açısının öbür koluna uzaklığı 8·sin 30° = 4 tür ve b = 4 tür. C merkezli 4 cm lik yay kola teğet olur, tek nokta verir: A da dik açılı tek üçgen.',
+      },
+      {
+        title: 'III',
+        detail:
+          'C nin A açısının öbür koluna uzaklığı 10·sin 30° = 5 tir. 5 < 7 < 10 olduğundan C merkezli 7 cm lik yay kolu iki noktada keser: iki farklı üçgen.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Tek üçgen I ve II ile oluşturulabilir.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 623
+  {
+    id: 'triangles-623',
+    topic: 'Uzayda küre ile düzlemlerin kesişimi',
+    stem: ['Uzayda (R³ te) bir E düzlemi ile bu düzleme 2 birim uzaklıkta bir A noktası veriliyor.'],
+    ask: 'A noktasına 5 birim, E düzlemine 3 birim uzaklıktaki noktaların geometrik yeri aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: 'İki nokta' },
+      { key: 'B', text: 'Bir çember' },
+      { key: 'C', text: 'İki çember' },
+      { key: 'D', text: 'Bir çember ve bir nokta' },
+      { key: 'E', text: 'Düzlem' },
+    ],
+    answer: 'D',
+    hint: 'E ye 3 birim uzaklıktaki iki paralel düzlemin A ya uzaklıklarını bul.',
+    solution: [
+      {
+        title: 'A ya 5 birim',
+        detail: 'A noktasına 5 birim uzaklıktaki noktalar A merkezli 5 birim yarıçaplı küredir.',
+      },
+      {
+        title: 'E ye 3 birim',
+        detail:
+          'E ye 3 birim uzaklıktaki noktalar, E nin iki yanında ona paralel iki düzlemdir. A ile aynı taraftaki düzlemin A ya uzaklığı 3 − 2 = 1, öbür taraftakinin 3 + 2 = 5 birimdir.',
+      },
+      {
+        title: 'Yakın düzlem',
+        detail: '1 < 5 olduğundan küre bu düzlemi √(25 − 1) = 2√6 birim yarıçaplı bir çemberde keser.',
+      },
+      {
+        title: 'Uzak düzlem',
+        detail: 'Uzaklık 5 = yarıçap olduğundan düzlem küreye teğettir; ortak nokta yalnız bir tanedir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Geometrik yer bir çember ve bir noktadır.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 624
+  {
+    id: 'triangles-624',
+    topic: 'İki noktaya verilen uzaklıktaki noktalar',
+    stem: ['Düzlemde |AB| = 10 birim olan bir [AB] doğru parçası veriliyor.'],
+    ask: 'A noktasından 4 birim, B noktasından 6 birim uzaklıktaki noktaların geometrik yeri aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: 'Bir nokta' },
+      { key: 'B', text: 'İki nokta' },
+      { key: 'C', text: 'Doğru parçası' },
+      { key: 'D', text: 'Doğru' },
+      { key: 'E', text: 'Çember' },
+    ],
+    answer: 'A',
+    hint: 'İki çemberin yarıçapları toplamını merkezler arası uzaklıkla karşılaştır.',
+    solution: [
+      {
+        title: 'İki çember',
+        detail:
+          'Aranan noktalar A merkezli 4 birim ve B merkezli 6 birim yarıçaplı çemberlerin ortak noktalarıdır.',
+      },
+      {
+        title: 'Karşılaştırma',
+        detail: 'Yarıçaplar toplamı 4 + 6 = 10 = |AB| dir; çemberler dıştan teğettir.',
+      },
+      {
+        title: 'Ortak nokta',
+        detail: 'Dıştan teğet iki çemberin tek ortak noktası vardır: [AB] üzerinde A dan 4 birim uzaktaki nokta.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Geometrik yer bir noktadır.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 625
+  {
+    id: 'triangles-625',
+    topic: 'Alan eşitliğiyle geometrik yer',
+    figure: {
+      viewBox: '0 80 400 185',
+      caption: 'Şekil 625',
+      label:
+        'ABCD dikdörtgeninin içinde bir P noktası alınmış ve A, B, C köşelerine birleştirilmiştir; PAB üçgeninin alanı S₁, PBC üçgeninin alanı S₂ dir.',
+      svg: `
+          <path class="ln" d="M50,230 L350,230 L350,105 L50,105 Z"/>
+          <path class="ln" d="M50,230 L230,140 L350,230"/>
+          <path class="ln" d="M230,140 L350,105"/>
+          <text class="val" x="210" y="205" text-anchor="middle">S₁</text>
+          <text class="val" x="310" y="163" text-anchor="middle">S₂</text>
+          <circle class="pt" cx="50" cy="230" r="3.2"/>
+          <circle class="pt" cx="350" cy="230" r="3.2"/>
+          <circle class="pt" cx="350" cy="105" r="3.2"/>
+          <circle class="pt" cx="50" cy="105" r="3.2"/>
+          <circle class="pt" cx="230" cy="140" r="3.2"/>
+          <text x="42" y="248" text-anchor="end">A</text>
+          <text x="358" y="248">B</text>
+          <text x="358" y="100">C</text>
+          <text x="42" y="100" text-anchor="end">D</text>
+          <text x="230" y="130" text-anchor="middle">P</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 80 400 185',
+      caption: 'Şekil 625 — [BD] köşegeni',
+      label:
+        'Aynı şekle [BD] köşegeni kesikli çizgiyle eklenmiştir; alanları eşit yapan P noktaları bu köşegen üzerindedir.',
+      svg: `
+          <path class="ln" d="M50,230 L350,230 L350,105 L50,105 Z"/>
+          <path class="ln" d="M50,230 L230,140 L350,230"/>
+          <path class="ln" d="M230,140 L350,105"/>
+          <path class="aux" d="M350,230 L50,105"/>
+          <text class="val" x="210" y="205" text-anchor="middle">S₁</text>
+          <text class="val" x="310" y="163" text-anchor="middle">S₂</text>
+          <circle class="pt" cx="50" cy="230" r="3.2"/>
+          <circle class="pt" cx="350" cy="230" r="3.2"/>
+          <circle class="pt" cx="350" cy="105" r="3.2"/>
+          <circle class="pt" cx="50" cy="105" r="3.2"/>
+          <circle class="pt" cx="230" cy="140" r="3.2"/>
+          <text x="42" y="248" text-anchor="end">A</text>
+          <text x="358" y="248">B</text>
+          <text x="358" y="100">C</text>
+          <text x="42" y="100" text-anchor="end">D</text>
+          <text x="230" y="130" text-anchor="middle">P</text>
+        `,
+    },
+    given: [
+      'ABCD dikdörtgen',
+      '|AB| = 12 birim, |BC| = 5 birim',
+      'A(PAB) = S₁, A(PBC) = S₂',
+      'P, dikdörtgenin içinde değişken bir nokta',
+    ],
+    stem: [],
+    ask: 'S₁ = S₂ olduğuna göre, P noktalarının geometrik yerinin uzunluğu kaç birimdir?',
+    choices: [
+      { key: 'A', text: '10' },
+      { key: 'B', text: '12' },
+      { key: 'C', text: '13' },
+      { key: 'D', text: '15' },
+      { key: 'E', text: '17' },
+    ],
+    answer: 'C',
+    hint: 'Alan eşitliğini P nin [AB] ve [BC] kenarlarına uzaklıklarıyla yaz ve bu eşitliği sağlayan bir köşe bul.',
+    solution: [
+      {
+        title: 'Uzaklıklar',
+        detail:
+          'P nin [AB] ye uzaklığı h₁, [BC] ye uzaklığı h₂ olsun. S₁ = S₂ ⇒ 12·h₁ / 2 = 5·h₂ / 2 ⇒ h₁ / h₂ = 5 / 12.',
+      },
+      {
+        title: 'B den geçen doğru',
+        detail:
+          'İki kenara uzaklıkları oranı sabit olan noktalar, bu kenarların kesiştiği B köşesinden geçen bir doğru üzerindedir.',
+      },
+      {
+        title: 'D köşesi',
+        detail:
+          'D nin [AB] ye uzaklığı 5, [BC] ye uzaklığı 12 dir; 5 / 12 oranı sağlanır. Doğru B ve D den geçer; dikdörtgenin içinde kalan kısmı [BD] köşegenidir.',
+      },
+      {
+        title: 'Uzunluk',
+        detail: '|BD| = √(12² + 5²) = √169 = 13 birim.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'P noktalarının geometrik yeri 13 birim uzunluğundaki [BD] köşegenidir.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 626
+  {
+    id: 'triangles-626',
+    topic: 'Uzayda iki noktaya eşit uzaklıktaki noktalar',
+    stem: ['Uzayda (R³ te) |AB| = 10 birim olan sabit A ve B noktaları alınıyor.'],
+    ask: '|PA| = |PB| = 13 birim olan P noktalarının geometrik yeri aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: 'İki nokta' },
+      { key: 'B', text: '12 birim yarıçaplı çember' },
+      { key: 'C', text: '13 birim yarıçaplı çember' },
+      { key: 'D', text: 'Düzlem' },
+      { key: 'E', text: 'Küre' },
+    ],
+    answer: 'B',
+    hint: 'Uzayda A ve B ye eşit uzaklıktaki noktalar bir düzlem oluşturur; bu düzlemin A merkezli küreyi nasıl kestiğini düşün.',
+    solution: [
+      {
+        title: 'Eşit uzaklık',
+        detail:
+          '|PA| = |PB| koşulunu sağlayan noktalar [AB] nin orta noktası M den geçen ve [AB] ye dik olan orta dikme düzlemidir.',
+      },
+      {
+        title: 'Küre',
+        detail: '|PA| = 13 koşulunu sağlayan noktalar A merkezli 13 birim yarıçaplı küredir.',
+      },
+      {
+        title: 'Kesişim',
+        detail:
+          'Düzlemin A ya uzaklığı |AM| = 5 < 13 olduğundan küre düzlemi M merkezli bir çemberde keser. Yarıçap r = √(13² − 5²) = √144 = 12.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'P noktalarının geometrik yeri 12 birim yarıçaplı bir çemberdir.',
+      },
+    ],
+  },
 ];
 
 /** Looks questions up by id so the modules below read as a running order. */
@@ -53898,6 +54222,21 @@ export const UNIT_2_TRIANGLES: Unit = {
         'triangles-618',
         'triangles-619',
         'triangles-620',
+      ),
+    },
+    {
+      id: 'triangles-m104',
+      order: 104,
+      title: 'Üçgen çizimleri ve geometrik yer — Test 2',
+      summary:
+        'Köşeyi veren çember, tek üçgen belirten elemanlar, uzayda küre ile düzlemler, teğet çemberler, alan eşitliğiyle geometrik yer ve uzayda orta dikme düzlemi.',
+      questions: pick(
+        'triangles-621',
+        'triangles-622',
+        'triangles-623',
+        'triangles-624',
+        'triangles-625',
+        'triangles-626',
       ),
     },
   ],
