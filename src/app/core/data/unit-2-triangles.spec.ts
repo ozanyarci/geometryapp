@@ -1274,6 +1274,19 @@ describe('unit 2 answer key', () => {
   it('614 — |AD| > |DC| ⇒ |AB| > |BC| ⇒ m(C) > m(A) → E', () =>
     expect(answerOf('triangles-614')).toBe('E'));
 
+  it('615 — I: 12 ≥ 10 tek; II: 6 < 7 < 6√2; III: 4√3 < 7 < 8 → E', () =>
+    expect(answerOf('triangles-615')).toBe('E'));
+  it('616 — 75, 67,5, 105, 150 çizilir; 100 3 ün katı değil → D', () =>
+    expect(answerOf('triangles-616')).toBe('D'));
+  it('617 — M nin d₂ ye uzaklığı h/2 sabit ⇒ doğru → C', () =>
+    expect(answerOf('triangles-617')).toBe('C'));
+  it('618 — A = (B, 7) ∩ (M, 6) yayları → B', () =>
+    expect(answerOf('triangles-618')).toBe('B'));
+  it('619 — paraleller P ye 3 ve 13, r = 5 ⇒ 2 + 0 = 2 nokta → B', () =>
+    expect(answerOf('triangles-619')).toBe('B'));
+  it('620 — |AP| = (2/5)|AD| ⇒ (2/5)·15 = 6 → B', () =>
+    expect(answerOf('triangles-620')).toBe('B'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)

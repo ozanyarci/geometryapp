@@ -51886,6 +51886,448 @@ Q4 DE 6.928203230275509 6.928203230275509 AE 10.0 EC 2.0
       },
     ],
   },
+  // ---------------------------------------------------------------- 615
+  {
+    id: 'triangles-615',
+    topic: 'İki farklı üçgen veren elemanlar',
+    given: [
+      'I. m(B) = 30°, |AB| = 10 cm, |AC| = 12 cm',
+      'II. m(B) = 45°, |BC| = 6√2 cm, |AC| = 7 cm',
+      'III. m(B) = 60°, |BC| = 8 cm, |AC| = 7 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıda verilenlerden hangisi ya da hangilerinde iki farklı ABC üçgeni elde edilebilir?',
+    choices: [
+      { key: 'A', text: 'Yalnız I' },
+      { key: 'B', text: 'Yalnız II' },
+      { key: 'C', text: 'I ve II' },
+      { key: 'D', text: 'I ve III' },
+      { key: 'E', text: 'II ve III' },
+    ],
+    answer: 'E',
+    hint: 'B açısının kolunda işaretlenen köşenin öbür kola uzaklığını bul ve karşı kenarla karşılaştır.',
+    solution: [
+      {
+        title: 'Kural',
+        detail:
+          'B dar açısı, B ye komşu k kenarı ve B nin karşısındaki b kenarı verilsin. k kenarının ucunun öbür kola uzaklığı h = k·sin B dir. h < b < k ise iki farklı üçgen, b = h ya da b ≥ k ise tek üçgen oluşur.',
+      },
+      {
+        title: 'I',
+        detail:
+          'h = 10·sin 30° = 5. |AC| = 12 ≥ 10 olduğundan A merkezli 12 cm lik yay öbür kolu yalnız bir kez keser: tek üçgen.',
+      },
+      {
+        title: 'II',
+        detail:
+          'h = 6√2·sin 45° = 6. 6 < 7 < 6√2 ≈ 8,49 olduğundan C merkezli 7 cm lik yay öbür kolu iki kez keser: iki üçgen.',
+      },
+      {
+        title: 'III',
+        detail:
+          'h = 8·sin 60° = 4√3 ≈ 6,93. 6,93 < 7 < 8 olduğundan yay öbür kolu iki kez keser: iki üçgen.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'İki farklı üçgen II ve III te elde edilir.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 616
+  {
+    id: 'triangles-616',
+    topic: 'Pergel ve cetvelle çizilebilen açılar',
+    stem: [],
+    ask: 'Sadece pergel ve cetvel kullanılarak aşağıdaki açılardan hangisi çizilemez?',
+    choices: [
+      { key: 'A', text: '75°' },
+      { key: 'B', text: '67,5°' },
+      { key: 'C', text: '105°' },
+      { key: 'D', text: '100°' },
+      { key: 'E', text: '150°' },
+    ],
+    answer: 'D',
+    hint: '60° ve 90° açılarından başlayıp açıortay, toplama ve çıkarma ile hangi açılara ulaşabildiğini düşün.',
+    solution: [
+      {
+        title: 'Temel açılar',
+        detail:
+          '60° eşkenar üçgenle, 90° dikme ile çizilir. Açıortay çizerek bir açı yarıya bölünür; iki açı yan yana koyularak toplanır ya da çıkarılır.',
+      },
+      {
+        title: 'Çizilebilenler',
+        detail:
+          '75° = 60° + 15° (15° = 30° nin yarısı), 67,5° = 45° + 22,5°, 105° = 60° + 45°, 150° = 180° − 30°.',
+      },
+      {
+        title: '100°',
+        detail:
+          'Pergel ve cetvelle çizilebilen tam sayı dereceli açılar yalnızca 3 ün katlarıdır. 100 sayısı 3 ün katı değildir.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'Çizilemeyen açı 100° dir.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 617
+  {
+    id: 'triangles-617',
+    topic: 'Orta noktanın geometrik yeri',
+    figure: {
+      viewBox: '0 0 400 230',
+      caption: 'Şekil 617',
+      label:
+        'Birbirine paralel d₁ ve d₂ doğruları çizilmiştir; A noktası d₂ üzerinde, B noktası d₁ üzerindedir ve M, [AB] nin orta noktasıdır.',
+      svg: `
+          <path class="ln" d="M24,40 L356,40"/>
+          <path class="ln" d="M24,200 L356,200"/>
+          <path class="ln" d="M120,200 L230,40"/>
+          <circle class="pt" cx="120" cy="200" r="3.2"/>
+          <circle class="pt" cx="230" cy="40" r="3.2"/>
+          <circle class="pt" cx="175" cy="120" r="3.2"/>
+          <text x="120" y="222" text-anchor="middle">A</text>
+          <text x="230" y="28" text-anchor="middle">B</text>
+          <text x="185" y="125">M</text>
+          <text x="364" y="45">d₁</text>
+          <text x="364" y="205">d₂</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 0 400 230',
+      caption: 'Şekil 617 — orta paralel',
+      label:
+        'Aynı şekle B nin başka bir konumu B′ ve [AB′] nin orta noktası M′ eklenmiştir; M ve M′ noktalarından geçen, d₁ ile d₂ nin tam ortasındaki paralel doğru kesikli çizgiyle gösterilmiştir.',
+      svg: `
+          <path class="ln" d="M24,40 L356,40"/>
+          <path class="ln" d="M24,200 L356,200"/>
+          <path class="ln" d="M120,200 L230,40"/>
+          <path class="aux" d="M120,200 L330,40"/>
+          <path class="aux" d="M24,120 L356,120"/>
+          <circle class="pt" cx="120" cy="200" r="3.2"/>
+          <circle class="pt" cx="230" cy="40" r="3.2"/>
+          <circle class="pt" cx="330" cy="40" r="3.2"/>
+          <circle class="pt" cx="175" cy="120" r="3.2"/>
+          <circle class="pt" cx="225" cy="120" r="3.2"/>
+          <text x="120" y="222" text-anchor="middle">A</text>
+          <text x="230" y="28" text-anchor="middle">B</text>
+          <text x="330" y="28" text-anchor="middle">B′</text>
+          <text x="170" y="112" text-anchor="end">M</text>
+          <text x="233" y="140">M′</text>
+          <text x="364" y="45">d₁</text>
+          <text x="364" y="205">d₂</text>
+        `,
+    },
+    given: [
+      'd₁ ∥ d₂',
+      'A ∈ d₂ sabit bir nokta',
+      'B ∈ d₁ değişken bir nokta',
+      'M, [AB] nin orta noktası',
+    ],
+    stem: [],
+    ask: 'Buna göre, M noktalarının geometrik yeri aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: 'Bir nokta' },
+      { key: 'B', text: 'Çember' },
+      { key: 'C', text: 'Doğru' },
+      { key: 'D', text: 'Işın' },
+      { key: 'E', text: 'Doğru parçası' },
+    ],
+    answer: 'C',
+    hint: 'M nin d₂ doğrusuna uzaklığının B nin konumuna bağlı olup olmadığına bak.',
+    solution: [
+      {
+        title: 'Uzaklık',
+        detail:
+          'd₁ ile d₂ arasındaki uzaklık h olsun. M, [AB] nin orta noktası olduğundan M nin d₂ ye uzaklığı her zaman h/2 dir.',
+      },
+      {
+        title: 'Yer',
+        detail:
+          'Öyleyse bütün M noktaları d₁ ile d₂ nin tam ortasından geçen, onlara paralel doğru üzerindedir.',
+      },
+      {
+        title: 'Her nokta elde edilir',
+        detail:
+          'Bu doğru üzerindeki her N noktası için [AN] yi d₁ e kadar uzatınca bir B bulunur ve N, [AB] nin orta noktası olur. B, d₁ in tamamını taradığından M de doğrunun tamamını tarar.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'M noktalarının geometrik yeri bir doğrudur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 618
+  {
+    id: 'triangles-618',
+    topic: 'Kenarortayı verilen üçgenin çizimi',
+    figure: {
+      viewBox: '0 0 400 236',
+      caption: 'Şekil 618',
+      label:
+        'ABC üçgeninde [AM] kenarortaydır; M noktası [BC] üzerindedir ve |BM| = |MC| dir; |AB| = 7 cm ve |AM| = 6 cm dir.',
+      svg: `
+          <path class="ln" d="M164,33.64 L50,210 L350,210 Z"/>
+          <path class="ln" d="M164,33.64 L200,210"/>
+          <path class="tick" d="M125,203 L125,217"/>
+          <path class="tick" d="M275,203 L275,217"/>
+          <text class="val" x="98" y="120" text-anchor="end">7</text>
+          <text class="val" x="192" y="126">6</text>
+          <circle class="pt" cx="164" cy="33.64" r="3.2"/>
+          <circle class="pt" cx="50" cy="210" r="3.2"/>
+          <circle class="pt" cx="350" cy="210" r="3.2"/>
+          <circle class="pt" cx="200" cy="210" r="3.2"/>
+          <text x="164" y="21.64" text-anchor="middle">A</text>
+          <text x="42" y="228" text-anchor="end">B</text>
+          <text x="358" y="228">C</text>
+          <text x="200" y="230" text-anchor="middle">M</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 0 400 236',
+      caption: 'Şekil 618 — iki yay',
+      label:
+        'Aynı şekle B merkezli 7 cm yarıçaplı yay ile M merkezli 6 cm yarıçaplı yay kesikli çizgiyle eklenmiştir; iki yay A noktasında kesişir.',
+      svg: `
+          <path class="ln" d="M164,33.64 L50,210 L350,210 Z"/>
+          <path class="ln" d="M164,33.64 L200,210"/>
+          <path class="aux" d="M124.84,13.79 A210,210 0 0 1 198.18,61.19"/>
+          <path class="aux" d="M128.12,44.98 A180,180 0 0 1 201.45,30.01"/>
+          <path class="tick" d="M125,203 L125,217"/>
+          <path class="tick" d="M275,203 L275,217"/>
+          <text class="val" x="98" y="120" text-anchor="end">7</text>
+          <text class="val" x="192" y="126">6</text>
+          <circle class="pt" cx="164" cy="33.64" r="3.2"/>
+          <circle class="pt" cx="50" cy="210" r="3.2"/>
+          <circle class="pt" cx="350" cy="210" r="3.2"/>
+          <circle class="pt" cx="200" cy="210" r="3.2"/>
+          <text x="152" y="21.64" text-anchor="end">A</text>
+          <text x="42" y="228" text-anchor="end">B</text>
+          <text x="358" y="228">C</text>
+          <text x="200" y="230" text-anchor="middle">M</text>
+        `,
+    },
+    given: [
+      '[AM] kenarortay, |BM| = |MC|',
+      '|BC| = 10 cm',
+      '|AM| = 6 cm',
+      '|AB| = 7 cm',
+    ],
+    stem: [],
+    ask: 'Yukarıda verilen üçgenin çizimi için aşağıdaki yardımcı çizimlerden hangisi gereklidir?',
+    choices: [
+      { key: 'A', text: 'C merkezli 7 cm yarıçaplı çember yayı' },
+      { key: 'B', text: 'M merkezli 6 cm yarıçaplı çember yayı' },
+      { key: 'C', text: '[BC] ye paralel ve [BC] den 6 cm uzaklıktaki doğru' },
+      { key: 'D', text: '[BC] çaplı bir çember' },
+      { key: 'E', text: 'M noktasından [BC] ye dik 6 cm uzunluğundaki doğru parçası' },
+    ],
+    answer: 'B',
+    hint: 'A noktası, yerleri bilinen hangi iki noktaya verilen uzaklıklarda duruyor?',
+    solution: [
+      {
+        title: 'Taban',
+        detail:
+          '|BC| = 10 cm çizilir ve orta dikmesiyle orta noktası M bulunur; |BM| = |MC| = 5 cm.',
+      },
+      {
+        title: 'Birinci yay',
+        detail:
+          '|AB| = 7 olduğundan A, B merkezli 7 cm yarıçaplı yay üzerindedir.',
+      },
+      {
+        title: 'İkinci yay',
+        detail:
+          '|AM| = 6 olduğundan A, M merkezli 6 cm yarıçaplı yay üzerindedir. ABM üçgeninin kenarları 7, 6, 5 olup üçgen eşitsizliğini sağlar, yani yaylar kesişir ve A bulunur.',
+      },
+      {
+        title: 'Diğer seçenekler',
+        detail:
+          '|AC| = 7, A dan [BC] ye uzaklık 6, m(A) = 90° ya da [AM] ⊥ [BC] verilmemiştir; bu çizimler gerekmez.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'Gerekli yardımcı çizim M merkezli 6 cm yarıçaplı çember yayıdır.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 619
+  {
+    id: 'triangles-619',
+    topic: 'Doğruya ve noktaya eşit uzaklıktaki noktalar',
+    figure: {
+      viewBox: '0 10 400 295',
+      caption: 'Şekil 619',
+      label:
+        'Bir d doğrusu ve d ye uzaklığı 8 birim olan bir P noktası çizilmiştir; P den d ye inen dikmenin ayağı H dir.',
+      svg: `
+          <path class="ln" d="M24,215 L356,215"/>
+          <path class="ln" d="M200,95 L200,215"/>
+          <path class="ln" d="M200,205 L210,205 L210,215"/>
+          <text class="val" x="190" y="160" text-anchor="end">8</text>
+          <circle class="pt" cx="200" cy="95" r="3.2"/>
+          <circle class="pt" cx="200" cy="215" r="3.2"/>
+          <text x="200" y="83" text-anchor="middle">P</text>
+          <text x="200" y="237" text-anchor="middle">H</text>
+          <text x="364" y="220">d</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 10 400 295',
+      caption: 'Şekil 619 — paraleller ve çember',
+      label:
+        'Aynı şekle d ye 5 birim uzaklıktaki iki paralel doğru ve P merkezli 5 birim yarıçaplı çember kesikli çizgiyle eklenmiştir; çember yakın paraleli K ve L noktalarında keser, uzak paraleli kesmez.',
+      svg: `
+          <path class="ln" d="M24,215 L356,215"/>
+          <path class="ln" d="M200,95 L200,215"/>
+          <path class="ln" d="M200,205 L210,205 L210,215"/>
+          <path class="aux" d="M24,140 L356,140"/>
+          <path class="aux" d="M24,290 L356,290"/>
+          <circle class="aux" cx="200" cy="95" r="75"/>
+          <text class="val" x="190" y="185" text-anchor="end">5</text>
+          <circle class="pt" cx="200" cy="95" r="3.2"/>
+          <circle class="pt" cx="200" cy="215" r="3.2"/>
+          <circle class="pt" cx="140" cy="140" r="3.2"/>
+          <circle class="pt" cx="260" cy="140" r="3.2"/>
+          <text x="210" y="90">P</text>
+          <text x="200" y="237" text-anchor="middle">H</text>
+          <text x="132" y="158" text-anchor="end">K</text>
+          <text x="268" y="158">L</text>
+          <text x="364" y="220">d</text>
+        `,
+    },
+    stem: ['Düzlemde bir d doğrusu ve bu doğruya uzaklığı 8 birim olan bir P noktası veriliyor.'],
+    ask: 'd doğrusuna ve P noktasına 5 birim uzaklıktaki noktaların geometrik yeri nedir?',
+    choices: [
+      { key: 'A', text: 'Bir nokta' },
+      { key: 'B', text: 'İki nokta' },
+      { key: 'C', text: 'Dört nokta' },
+      { key: 'D', text: 'Bir doğru' },
+      { key: 'E', text: 'Çember' },
+    ],
+    answer: 'B',
+    hint: 'd ye 5 birim uzaklıktaki noktaları ve P ye 5 birim uzaklıktaki noktaları ayrı ayrı çiz, sonra ortak noktaları say.',
+    solution: [
+      {
+        title: 'd ye 5 birim',
+        detail:
+          'd ye 5 birim uzaklıktaki noktalar, d nin iki yanında ona paralel iki doğrudur. Bunların P ye uzaklıkları 8 − 5 = 3 ve 8 + 5 = 13 birimdir.',
+      },
+      {
+        title: 'P ye 5 birim',
+        detail:
+          'P ye 5 birim uzaklıktaki noktalar P merkezli 5 birim yarıçaplı çemberdir.',
+      },
+      {
+        title: 'Kesişim',
+        detail:
+          '3 < 5 olduğundan çember yakın paraleli iki noktada keser; 13 > 5 olduğundan uzak paraleli kesmez.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'Geometrik yer iki noktadır.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 620
+  {
+    id: 'triangles-620',
+    topic: 'Oranla bölen noktanın geometrik yeri',
+    figure: {
+      viewBox: '0 0 400 276',
+      caption: 'Şekil 620',
+      label:
+        'ABC üçgeninde D noktası [BC] üzerinde, P noktası [AD] üzerindedir ve 3|AP| = 2|PD| dir; |BC| = 15 cm dir.',
+      svg: `
+          <path class="ln" d="M150,30 L40,250 L360,250 Z"/>
+          <path class="ln" d="M150,30 L250,250"/>
+          <circle class="pt" cx="150" cy="30" r="3.2"/>
+          <circle class="pt" cx="40" cy="250" r="3.2"/>
+          <circle class="pt" cx="360" cy="250" r="3.2"/>
+          <circle class="pt" cx="250" cy="250" r="3.2"/>
+          <circle class="pt" cx="190" cy="118" r="3.2"/>
+          <text x="150" y="18" text-anchor="middle">A</text>
+          <text x="32" y="268" text-anchor="end">B</text>
+          <text x="368" y="268">C</text>
+          <text x="250" y="270" text-anchor="middle">D</text>
+          <text x="200" y="118">P</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 0 400 276',
+      caption: 'Şekil 620 — [P₁P₂] ∥ [BC]',
+      label:
+        'Aynı şekle D = B ve D = C konumlarına karşılık gelen P₁ ∈ [AB] ve P₂ ∈ [AC] noktaları ile [BC] ye paralel [P₁P₂] doğru parçası kesikli çizgiyle eklenmiştir.',
+      svg: `
+          <path class="ln" d="M150,30 L40,250 L360,250 Z"/>
+          <path class="ln" d="M150,30 L250,250"/>
+          <path class="aux" d="M106,118 L234,118"/>
+          <circle class="pt" cx="150" cy="30" r="3.2"/>
+          <circle class="pt" cx="40" cy="250" r="3.2"/>
+          <circle class="pt" cx="360" cy="250" r="3.2"/>
+          <circle class="pt" cx="250" cy="250" r="3.2"/>
+          <circle class="pt" cx="190" cy="118" r="3.2"/>
+          <circle class="pt" cx="106" cy="118" r="3.2"/>
+          <circle class="pt" cx="234" cy="118" r="3.2"/>
+          <text x="150" y="18" text-anchor="middle">A</text>
+          <text x="32" y="268" text-anchor="end">B</text>
+          <text x="368" y="268">C</text>
+          <text x="250" y="270" text-anchor="middle">D</text>
+          <text x="190" y="108" text-anchor="middle">P</text>
+          <text x="98" y="118" text-anchor="end">P₁</text>
+          <text x="242" y="118">P₂</text>
+        `,
+    },
+    given: [
+      'ABC bir üçgen',
+      '|BC| = 15 cm',
+      'D ∈ [BC], P ∈ [AD]',
+      '3|AP| = 2|PD|',
+    ],
+    stem: [],
+    ask: 'D noktası [BC] üzerinde değişken bir nokta olmak üzere, P noktalarının geometrik yerinin uzunluğu kaç cm dir?',
+    choices: [
+      { key: 'A', text: '5' },
+      { key: 'B', text: '6' },
+      { key: 'C', text: '8' },
+      { key: 'D', text: '9' },
+      { key: 'E', text: '10' },
+    ],
+    answer: 'B',
+    hint: '3|AP| = 2|PD| eşitliğinden |AP| nin |AD| ye oranını bul.',
+    solution: [
+      {
+        title: 'Oran',
+        detail:
+          '3|AP| = 2|PD| ⇒ |AP| : |PD| = 2 : 3 ⇒ |AP| = (2/5)|AD|.',
+      },
+      {
+        title: 'Uç konumlar',
+        detail:
+          'D = B iken P, [AB] üzerinde |AP₁| = (2/5)|AB| olan P₁ noktasıdır; D = C iken [AC] üzerinde |AP₂| = (2/5)|AC| olan P₂ noktasıdır.',
+      },
+      {
+        title: 'Paralellik',
+        detail:
+          'Her D için |AP| / |AD| = 2/5 sabit olduğundan temel orantı teoremine göre P noktaları [BC] ye paralel [P₁P₂] doğru parçası üzerindedir ve onu baştan sona tarar.',
+      },
+      {
+        title: 'Uzunluk',
+        detail:
+          '|P₁P₂| = (2/5)·|BC| = (2/5)·15 = 6 cm.',
+      },
+      {
+        title: 'Sonuç',
+        detail:
+          'P noktalarının geometrik yeri 6 cm uzunluğunda bir doğru parçasıdır.',
+      },
+    ],
+  },
 ];
 
 /** Looks questions up by id so the modules below read as a running order. */
@@ -53441,6 +53883,21 @@ export const UNIT_2_TRIANGLES: Unit = {
         'triangles-612',
         'triangles-613',
         'triangles-614',
+      ),
+    },
+    {
+      id: 'triangles-m103',
+      order: 103,
+      title: 'Üçgen çizimleri ve geometrik yer — Test 1',
+      summary:
+        'İki farklı üçgen veren elemanlar, pergel ve cetvelle çizilebilen açılar, orta noktanın geometrik yeri, kenarortayla üçgen çizimi, doğruya ve noktaya uzaklık, oranla bölen noktanın yeri.',
+      questions: pick(
+        'triangles-615',
+        'triangles-616',
+        'triangles-617',
+        'triangles-618',
+        'triangles-619',
+        'triangles-620',
       ),
     },
   ],
