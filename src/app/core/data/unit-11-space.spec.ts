@@ -26,6 +26,16 @@ describe('unit 11 answer key', () => {
     expect(answerOf('space-6')).toBe('C'));
   it('7 — |HK| = √(100 − 36) = 8, √(64 + 225) = 17 → C', () =>
     expect(answerOf('space-7')).toBe('C'));
+  it('8 — a line perpendicular to a plane is perpendicular to every line in it → D', () =>
+    expect(answerOf('space-8')).toBe('D'));
+  it('9 — |BC| = √(100 − 64) = 6, BC ⊥ CD, 6 · 5 / 2 = 15 → B', () =>
+    expect(answerOf('space-9')).toBe('B'));
+  it('10 — AD ⊥ BC, |AD| = 16 · cos 60° = 8, √(36 + 64) = 10 → C', () =>
+    expect(answerOf('space-10')).toBe('C'));
+  it('11 — cos = 12/13, 26 · 12/13 = 24 → E', () => expect(answerOf('space-11')).toBe('E'));
+  it('12 — 10√2 · sin 45° = 10 → B', () => expect(answerOf('space-12')).toBe('B'));
+  it('13 — long side 36√2/6 = 6√2, cos α = 6/(6√2), α = 45° → C', () =>
+    expect(answerOf('space-13')).toBe('C'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)

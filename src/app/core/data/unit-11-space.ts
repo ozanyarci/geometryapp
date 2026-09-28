@@ -6,6 +6,9 @@ import { Question, Unit } from '../models';
  * source: two square cards hinged along a common edge, true/false statements
  * about lines and planes, the plane axioms, the area of an orthogonal
  * projection, two perpendicular squares and the theorem of three perpendiculars.
+ * Questions 8–13 follow a second workbook page: "always true" statements, the
+ * three-perpendiculars theorem used for an area and a length, the projection of
+ * a segment, a point's distance to a plane and the angle between two planes.
  *
  * All learner-facing text is Turkish by design; only the code around it is English.
  *
@@ -454,6 +457,430 @@ const QUESTIONS: Question[] = [
         `,
     },
   },
+
+  // ---------------------------------------------------------------- 8
+  {
+    id: 'space-8',
+    topic: 'Uzayda doğru ve düzlemlerin durumları',
+    stem: [],
+    ask: 'Aşağıdaki önermelerden hangisi daima doğrudur?',
+    choices: [
+      {
+        key: 'A',
+        text: 'Uzayda bir doğruya, dışındaki bir noktadan sonsuz sayıda paralel doğru çizilebilir.',
+      },
+      {
+        key: 'B',
+        text: 'Birbirine dik iki düzlemden birine paralel olan bir doğru, diğer düzleme diktir.',
+      },
+      { key: 'C', text: 'Aynı doğruya paralel olan farklı iki düzlem birbirine paraleldir.' },
+      {
+        key: 'D',
+        text: 'Bir düzleme dik olan bir doğru, bu düzlemin içindeki her doğruya diktir.',
+      },
+      { key: 'E', text: 'Kesişen iki düzlemin her ikisine de paralel olan bir doğru yoktur.' },
+    ],
+    answer: 'D',
+    hint: 'Her seçenek için bir küpün ayrıtları ve yüzleri arasında bir karşı örnek ara.',
+    solution: [
+      {
+        title: 'A',
+        detail:
+          'Bir doğru ile dışındaki bir nokta tek bir düzlem belirtir; bu düzlemde noktadan geçen yalnız bir paralel vardır. Yanlıştır.',
+      },
+      {
+        title: 'B ve C',
+        detail:
+          'Küpün tavanındaki bir ayrıt hem tabana hem de ona dik olan bir yan yüze paralel olabilir; ayrıca kesişen iki yan yüz aynı dikey ayrıta paraleldir. İkisi de yanlıştır.',
+      },
+      {
+        title: 'E',
+        detail:
+          'İki düzlemin ara kesit doğrusuna paralel olan ve düzlemlerin dışındaki bir doğru, her iki düzleme de paraleldir. Yanlıştır.',
+      },
+      {
+        title: 'D',
+        detail:
+          'Bir doğrunun düzleme dik olması, düzlemin içindeki her doğruya dik olması demektir. Doğrudur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Daima doğru olan önerme D seçeneğidir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 9
+  // Plane E is z = 0; C at the origin, D 5 to the right, B 6 into the page and
+  // A 8 above B. 20 px per cm.
+  {
+    id: 'space-9',
+    topic: 'Üç dikme teoremiyle alan',
+    stem: ['B, C ve D noktaları E düzleminin üzerinde, A noktası ise E düzleminin dışındadır.'],
+    given: ['[AB] ⊥ E', '[AC] ⊥ [CD]', '|AB| = 8 cm', '|AC| = 10 cm', '|CD| = 5 cm'],
+    ask: 'Buna göre, BCD üçgeninin alanı kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '12' },
+      { key: 'B', text: '15' },
+      { key: 'C', text: '20' },
+      { key: 'D', text: '24' },
+      { key: 'E', text: '30' },
+    ],
+    answer: 'B',
+    hint: '[AB] ⊥ E ve [AC] ⊥ [CD] olduğundan üç dikme teoremine göre [BC] ile [CD] arasındaki açıyı düşün.',
+    solution: [
+      {
+        title: 'ABC dik üçgeni',
+        detail: '[AB] ⊥ E olduğundan [AB] ⊥ [BC]: |BC|² = 10² − 8² = 36 ⇒ |BC| = 6 cm.',
+      },
+      {
+        title: 'Üç dikme teoremi',
+        detail: '[AB] ⊥ E ve [AC] ⊥ [CD] olduğundan [BC] ⊥ [CD] dir.',
+      },
+      {
+        title: 'BCD dik üçgeni',
+        detail: 'Alan = |BC| · |CD| / 2 = 6 · 5 / 2.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'BCD üçgeninin alanı 15 cm² dir.',
+      },
+    ],
+    figure: {
+      viewBox: '0 18 400 262',
+      caption: 'Şekil 4',
+      label:
+        'Yatay E düzleminde taralı BCD üçgeni; B nin üstünde düzleme dik [AB] ve A dan C ye [AC] çizilmiş. [AC] ⊥ [CD], |AB| = 8, |AC| = 10, |CD| = 5.',
+      svg: `
+          <path class="shade" d="M129,242 L171.4,199.6 L229,242 Z"/>
+          <path class="ln" d="M27.8,263.2 L287.8,263.2 L372.6,178.4 L112.6,178.4 Z"/>
+          <path class="ln" d="M129,242 L171.4,199.6 L229,242 Z"/>
+          <path class="ln" d="M171.4,39.6 L171.4,199.6 M171.4,39.6 L129,242"/>
+          <path class="ln" d="M171.4,190.6 L165,197 L165,206"/>
+          <path class="ln" d="M131.1,232.2 L141.1,232.2 L139,242"/>
+          <circle class="pt" cx="171.4" cy="39.6" r="3.2"/>
+          <circle class="pt" cx="171.4" cy="199.6" r="3.2"/>
+          <circle class="pt" cx="129" cy="242" r="3.2"/>
+          <circle class="pt" cx="229" cy="242" r="3.2"/>
+          <text x="171.4" y="30" text-anchor="middle">A</text>
+          <text x="179" y="196">B</text>
+          <text x="121" y="250" text-anchor="end">C</text>
+          <text x="237" y="250">D</text>
+          <text x="46" y="256">E</text>
+          <text class="val" x="179" y="124">8</text>
+          <text class="val" x="142" y="146" text-anchor="end">10</text>
+          <text class="val" x="179" y="258" text-anchor="middle">5</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 18 400 262',
+      caption: 'Şekil 4',
+      label:
+        'Aynı şekilde [BC] vurgulanmış: ABC üçgeni B de dik, |BC| = 6; üç dikme teoremine göre BCD üçgeni C de dik.',
+      svg: `
+          <path class="shade" d="M129,242 L171.4,199.6 L229,242 Z"/>
+          <path class="ln" d="M27.8,263.2 L287.8,263.2 L372.6,178.4 L112.6,178.4 Z"/>
+          <path class="ln" d="M129,242 L171.4,199.6 L229,242 Z"/>
+          <path class="ln" d="M171.4,39.6 L171.4,199.6 M171.4,39.6 L129,242"/>
+          <path class="ln" d="M171.4,190.6 L165,197 L165,206"/>
+          <path class="ln" d="M131.1,232.2 L141.1,232.2 L139,242"/>
+          <path class="aux" d="M129,242 L171.4,199.6"/>
+          <circle class="pt" cx="171.4" cy="39.6" r="3.2"/>
+          <circle class="pt" cx="171.4" cy="199.6" r="3.2"/>
+          <circle class="pt" cx="129" cy="242" r="3.2"/>
+          <circle class="pt" cx="229" cy="242" r="3.2"/>
+          <text x="171.4" y="30" text-anchor="middle">A</text>
+          <text x="179" y="196">B</text>
+          <text x="121" y="250" text-anchor="end">C</text>
+          <text x="237" y="250">D</text>
+          <text x="46" y="256">E</text>
+          <text class="val" x="179" y="124">8</text>
+          <text class="val" x="142" y="146" text-anchor="end">10</text>
+          <text class="val" x="179" y="258" text-anchor="middle">5</text>
+          <text class="val" x="160" y="236">6</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 10
+  // Plane E is z = 0; A at the origin, D 8 to the right, B and C 8√3 in front of
+  // and behind D, P 6 above A. 13 px per cm.
+  {
+    id: 'space-10',
+    topic: 'Üç dikme teoremi',
+    stem: ['Şekildeki ABC üçgeni E düzleminin üzerindedir.'],
+    given: [
+      '[PA] ⊥ E',
+      '[PD] ⊥ [BC]',
+      '|BD| = |DC|',
+      '|AP| = 6 cm',
+      '|AB| = 16 cm',
+      'm(CAB) = 120°',
+    ],
+    ask: 'Buna göre, |PD| kaç cm dir?',
+    choices: [
+      { key: 'A', text: '8' },
+      { key: 'B', text: '9' },
+      { key: 'C', text: '10' },
+      { key: 'D', text: '12' },
+      { key: 'E', text: '8√2' },
+    ],
+    answer: 'C',
+    hint: '[AD] yi çiz: üç dikme teoremine göre [AD] de [BC] ye diktir.',
+    solution: [
+      {
+        title: 'Üç dikme teoremi',
+        detail: '[PA] ⊥ E ve [PD] ⊥ [BC] olduğundan [AD] ⊥ [BC] dir.',
+      },
+      {
+        title: 'İkizkenar üçgen',
+        detail:
+          '[AD] hem yükseklik hem kenarortay olduğundan ABC ikizkenardır ve [AD] açıortaydır: m(BAD) = 60°.',
+      },
+      {
+        title: 'ABD dik üçgeni',
+        detail: '|AD| = |AB| · cos 60° = 16 · 1/2 = 8 cm.',
+      },
+      {
+        title: 'PAD dik üçgeni',
+        detail: '|PD|² = |AP|² + |AD|² = 6² + 8² = 100.',
+      },
+      {
+        title: 'Sonuç',
+        detail: '|PD| = 10 cm dir.',
+      },
+    ],
+    figure: {
+      viewBox: '0 100 400 190',
+      caption: 'Şekil 5',
+      label:
+        'Yatay E düzleminde ABC üçgeni, A daki açı 120°. A nın üstünde düzleme dik [PA], P den [BC] nin orta noktası D ye [PD] dikmesi çizilmiş. |AP| = 6, |AB| = 16.',
+      svg: `
+          <path class="ln" d="M28.5,273.5 L223.5,273.5 L370.5,126.5 L175.5,126.5 Z"/>
+          <path class="ln" d="M141,200 L181.3,263.7 L308.7,136.3 Z"/>
+          <path class="ln" d="M141,122 L141,200 M141,122 L245,200"/>
+          <path class="ln" d="M237.8,194.6 L244.2,188.2 L251.4,193.6"/>
+          <path class="arc" d="M159.7,192.9 A20,20 0 0 1 151.7,216.9"/>
+          <path class="tick" d="M209,227.7 L217.4,236.1 M272.7,163.9 L281.1,172.3"/>
+          <circle class="pt" cx="141" cy="122" r="3.2"/>
+          <circle class="pt" cx="141" cy="200" r="3.2"/>
+          <circle class="pt" cx="181.3" cy="263.7" r="3.2"/>
+          <circle class="pt" cx="308.7" cy="136.3" r="3.2"/>
+          <circle class="pt" cx="245" cy="200" r="3.2"/>
+          <text x="141" y="112" text-anchor="middle">P</text>
+          <text x="133" y="205" text-anchor="end">A</text>
+          <text x="181.3" y="284" text-anchor="middle">B</text>
+          <text x="316" y="134">C</text>
+          <text x="250" y="214">D</text>
+          <text x="60" y="262">E</text>
+          <text class="val" x="166" y="214">120°</text>
+          <text class="val" x="133" y="150" text-anchor="end">6</text>
+          <text class="val" x="155" y="242" text-anchor="end">16</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 100 400 190',
+      caption: 'Şekil 5',
+      label:
+        'Aynı şekilde [AD] çizilmiş: [AD] ⊥ [BC], |AD| = 8; PAD üçgeni A da dik.',
+      svg: `
+          <path class="ln" d="M28.5,273.5 L223.5,273.5 L370.5,126.5 L175.5,126.5 Z"/>
+          <path class="ln" d="M141,200 L181.3,263.7 L308.7,136.3 Z"/>
+          <path class="ln" d="M141,122 L141,200 M141,122 L245,200"/>
+          <path class="ln" d="M237.8,194.6 L244.2,188.2 L251.4,193.6"/>
+          <path class="arc" d="M159.7,192.9 A20,20 0 0 1 151.7,216.9"/>
+          <path class="tick" d="M209,227.7 L217.4,236.1 M272.7,163.9 L281.1,172.3"/>
+          <path class="aux" d="M141,200 L245,200"/>
+          <circle class="pt" cx="141" cy="122" r="3.2"/>
+          <circle class="pt" cx="141" cy="200" r="3.2"/>
+          <circle class="pt" cx="181.3" cy="263.7" r="3.2"/>
+          <circle class="pt" cx="308.7" cy="136.3" r="3.2"/>
+          <circle class="pt" cx="245" cy="200" r="3.2"/>
+          <text x="141" y="112" text-anchor="middle">P</text>
+          <text x="133" y="205" text-anchor="end">A</text>
+          <text x="181.3" y="284" text-anchor="middle">B</text>
+          <text x="316" y="134">C</text>
+          <text x="250" y="214">D</text>
+          <text x="60" y="262">E</text>
+          <text class="val" x="166" y="214">120°</text>
+          <text class="val" x="133" y="150" text-anchor="end">6</text>
+          <text class="val" x="155" y="242" text-anchor="end">16</text>
+          <text class="val" x="206" y="194" text-anchor="middle">8</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 11
+  // Plane E is z = 0; d lies in the front plane y = −8, so its slope is drawn
+  // true: A on E, B at (12, 5) and C at (36, 15) along d. 6.5 px per cm.
+  {
+    id: 'space-11',
+    topic: 'Doğru parçasının dik izdüşümü',
+    stem: [
+      'd doğrusu E düzlemini A noktasında kesiyor. B ve C noktaları d doğrusu üzerindedir ve D noktası, B noktasının E düzlemi üzerindeki dik izdüşümüdür.',
+    ],
+    given: ['d ∩ E = {A}', '|AB| = 13 cm', '|AD| = 12 cm', '|BC| = 26 cm'],
+    ask: 'Buna göre, [BC] nin E düzlemi üzerindeki dik izdüşümünün uzunluğu kaç cm dir?',
+    choices: [
+      { key: 'A', text: '16' },
+      { key: 'B', text: '18' },
+      { key: 'C', text: '20' },
+      { key: 'D', text: '22' },
+      { key: 'E', text: '24' },
+    ],
+    answer: 'E',
+    hint: 'd doğrusunun E düzlemiyle yaptığı açının kosinüsünü ABD dik üçgeninden bul.',
+    solution: [
+      {
+        title: 'Açının kosinüsü',
+        detail: 'ABD üçgeni D de diktir: cos(BAD) = |AD| / |AB| = 12 / 13.',
+      },
+      {
+        title: 'İzdüşüm kuralı',
+        detail:
+          'C nin izdüşümü C′ olsun. [BC] ile [DC′] arasındaki açı da BAD açısına eşittir: |DC′| = |BC| · cos(BAD).',
+      },
+      {
+        title: 'Hesap',
+        detail: '|DC′| = 26 · 12 / 13 = 2 · 12.',
+      },
+      {
+        title: 'Sonuç',
+        detail: '[BC] nin dik izdüşümünün uzunluğu 24 cm dir.',
+      },
+    ],
+    figure: {
+      viewBox: '0 124 400 172',
+      caption: 'Şekil 6',
+      label:
+        'd doğrusu yatay E düzlemini A noktasında eğik olarak kesiyor; d üzerindeki B noktasından düzleme [BD] dikmesi inmiş, C noktası d üzerinde B nin ötesinde. |AB| = 13, |AD| = 12, |BC| = 26.',
+      svg: `
+          <path class="ln" d="M9.8,272.2 L321.8,272.2 L390.8,203.2 L78.8,203.2 Z"/>
+          <path class="ln" d="M44.4,271.4 L339.5,148.4"/>
+          <path class="ln" d="M153.6,225.9 L153.6,258.4 M75.6,258.4 L153.6,258.4"/>
+          <path class="ln" d="M153.6,250.4 L145.6,250.4 L145.6,258.4"/>
+          <circle class="pt" cx="75.6" cy="258.4" r="3.2"/>
+          <circle class="pt" cx="153.6" cy="225.9" r="3.2"/>
+          <circle class="pt" cx="309.6" cy="160.9" r="3.2"/>
+          <circle class="pt" cx="153.6" cy="258.4" r="3.2"/>
+          <text x="70" y="252" text-anchor="end">A</text>
+          <text x="146" y="222" text-anchor="end">B</text>
+          <text x="302" y="156" text-anchor="end">C</text>
+          <text x="158" y="274">D</text>
+          <text x="346" y="150">d</text>
+          <text x="100" y="222">E</text>
+          <text class="val" x="110" y="236" text-anchor="end">13</text>
+          <text class="val" x="118" y="271" text-anchor="middle">12</text>
+          <text class="val" x="226" y="186" text-anchor="end">26</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 124 400 172',
+      caption: 'Şekil 6',
+      label:
+        'Aynı şekilde C den düzleme [CC′] dikmesi ve [DC′] izdüşümü çizilmiş; ABD ve ACC′ üçgenleri benzer, |DC′| = 24.',
+      svg: `
+          <path class="ln" d="M9.8,272.2 L321.8,272.2 L390.8,203.2 L78.8,203.2 Z"/>
+          <path class="ln" d="M44.4,271.4 L339.5,148.4"/>
+          <path class="ln" d="M153.6,225.9 L153.6,258.4 M75.6,258.4 L153.6,258.4"/>
+          <path class="ln" d="M153.6,250.4 L145.6,250.4 L145.6,258.4"/>
+          <path class="aux" d="M309.6,160.9 L309.6,258.4 M153.6,258.4 L309.6,258.4"/>
+          <path class="ln" d="M309.6,250.4 L301.6,250.4 L301.6,258.4"/>
+          <circle class="pt" cx="75.6" cy="258.4" r="3.2"/>
+          <circle class="pt" cx="153.6" cy="225.9" r="3.2"/>
+          <circle class="pt" cx="309.6" cy="160.9" r="3.2"/>
+          <circle class="pt" cx="153.6" cy="258.4" r="3.2"/>
+          <circle class="pt" cx="309.6" cy="258.4" r="3.2"/>
+          <text x="70" y="252" text-anchor="end">A</text>
+          <text x="146" y="222" text-anchor="end">B</text>
+          <text x="302" y="156" text-anchor="end">C</text>
+          <text x="158" y="274">D</text>
+          <text x="316" y="270">C′</text>
+          <text x="346" y="150">d</text>
+          <text x="100" y="222">E</text>
+          <text class="val" x="110" y="236" text-anchor="end">13</text>
+          <text class="val" x="118" y="271" text-anchor="middle">12</text>
+          <text class="val" x="226" y="186" text-anchor="end">26</text>
+          <text class="val" x="231.6" y="271" text-anchor="middle">24</text>
+        `,
+    },
+  },
+
+  // ---------------------------------------------------------------- 12
+  {
+    id: 'space-12',
+    topic: 'Noktanın düzleme uzaklığı',
+    stem: [
+      'Uzayda |AB| = 20√2 cm lik bir doğru parçası ile bu doğru parçasını 45° lik açıyla orta noktasından kesen bir E düzlemi veriliyor.',
+    ],
+    ask: 'Buna göre, A noktasının E düzlemine olan uzaklığı kaç cm dir?',
+    choices: [
+      { key: 'A', text: '5' },
+      { key: 'B', text: '10' },
+      { key: 'C', text: '10√2' },
+      { key: 'D', text: '15' },
+      { key: 'E', text: '20' },
+    ],
+    answer: 'B',
+    hint: 'A dan düzleme bir dikme in; orta nokta ile dikme ayağı bir dik üçgen oluşturur.',
+    solution: [
+      {
+        title: 'Orta nokta',
+        detail: 'Kesişim noktası M olsun: |AM| = 20√2 / 2 = 10√2 cm.',
+      },
+      {
+        title: 'Dik üçgen',
+        detail:
+          'A dan E ye inen dikmenin ayağı H olsun. AHM üçgeni H de diktir ve m(AMH) = 45° dir.',
+      },
+      {
+        title: 'Hesap',
+        detail: '|AH| = |AM| · sin 45° = 10√2 · √2 / 2 = 10.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'A noktasının E düzlemine uzaklığı 10 cm dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 13
+  {
+    id: 'space-13',
+    topic: 'Düzlemler arasındaki açı',
+    stem: [
+      'Alanı 36√2 cm² olan bir dikdörtgenin 6 cm lik kısa kenarı E düzlemi üzerindedir.',
+    ],
+    ask: 'Dikdörtgenin E düzlemi üzerindeki dik izdüşümü bir kare olduğuna göre, dikdörtgen ile düzlemin ölçek açısı kaç derecedir?',
+    choices: [
+      { key: 'A', text: '15' },
+      { key: 'B', text: '30' },
+      { key: 'C', text: '45' },
+      { key: 'D', text: '60' },
+      { key: 'E', text: '75' },
+    ],
+    answer: 'C',
+    hint: 'Düzlemdeki kenar izdüşümde değişmez; karenin kenarını ve uzun kenarın izdüşümünü karşılaştır.',
+    solution: [
+      {
+        title: 'Uzun kenar',
+        detail: 'Uzun kenar = 36√2 / 6 = 6√2 cm.',
+      },
+      {
+        title: 'İzdüşüm kare',
+        detail:
+          'Kısa kenar düzlemde olduğundan izdüşümü 6 cm kalır; izdüşüm kare olduğundan uzun kenarın izdüşümü de 6 cm dir.',
+      },
+      {
+        title: 'Açının kosinüsü',
+        detail: 'cos α = 6 / (6√2) = √2 / 2.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'α = 45° dir.',
+      },
+    ],
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -493,6 +920,14 @@ export const UNIT_11_SPACE: Unit = {
         'space-6',
         'space-7',
       ),
+    },
+    {
+      id: 'space-m2',
+      order: 2,
+      title: 'İzdüşüm, uzaklık ve üç dikme',
+      summary:
+        'Daima doğru önermeler, üç dikme teoremiyle alan ve uzunluk, doğru parçasının izdüşümü, düzleme uzaklık ve ölçek açısı.',
+      questions: pick('space-8', 'space-9', 'space-10', 'space-11', 'space-12', 'space-13'),
     },
   ],
 };
