@@ -36,6 +36,18 @@ describe('unit 11 answer key', () => {
   it('12 — 10√2 · sin 45° = 10 → B', () => expect(answerOf('space-12')).toBe('B'));
   it('13 — long side 36√2/6 = 6√2, cos α = 6/(6√2), α = 45° → C', () =>
     expect(answerOf('space-13')).toBe('C'));
+  it('14 — a line parallel to a plane can be skew to lines in it → C', () =>
+    expect(answerOf('space-14')).toBe('C'));
+  it('15 — in a plane, a line cutting one of two parallels cuts the other → C', () =>
+    expect(answerOf('space-15')).toBe('C'));
+  it('16 — I and III true, skew lines determine no plane → D', () =>
+    expect(answerOf('space-16')).toBe('D'));
+  it('17 — infinitely many perpendiculars through a point on a line → B', () =>
+    expect(answerOf('space-17')).toBe('B'));
+  it('18 — a line in one of two parallel planes is parallel to the other → C', () =>
+    expect(answerOf('space-18')).toBe('C'));
+  it('19 — |KC| = 6√2, |KE| = 6, |AK|² = 100 − 72 = 28, √(28 + 36) = 8 → C', () =>
+    expect(answerOf('space-19')).toBe('C'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)

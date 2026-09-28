@@ -9,6 +9,9 @@ import { Question, Unit } from '../models';
  * Questions 8–13 follow a second workbook page: "always true" statements, the
  * three-perpendiculars theorem used for an area and a length, the projection of
  * a segment, a point's distance to a plane and the angle between two planes.
+ * Questions 14–19 follow a third page ("Uzay Geometri — Test 1"): statements
+ * about lines and planes, three lines in one plane, numbered premises, and a
+ * perpendicular raised on the plane of a right isosceles triangle.
  *
  * All learner-facing text is Turkish by design; only the code around it is English.
  *
@@ -881,6 +884,295 @@ const QUESTIONS: Question[] = [
       },
     ],
   },
+
+  // ---------------------------------------------------------------- 14
+  {
+    id: 'space-14',
+    topic: 'Uzayda doğru ve düzlemlerin durumları',
+    stem: [],
+    ask: 'Uzayda aşağıdakilerden hangisi yanlıştır?',
+    choices: [
+      {
+        key: 'A',
+        text: 'Bir düzlemin dışındaki bir noktadan bu düzleme paralel olan bir tek düzlem çizilebilir.',
+      },
+      { key: 'B', text: 'Paralel iki düzlemden birine dik olan doğru diğerine de diktir.' },
+      {
+        key: 'C',
+        text: 'Bir düzleme paralel olan bir doğru, bu düzlemin içindeki her doğruya paraleldir.',
+      },
+      { key: 'D', text: 'Bir doğruya dik olan farklı iki düzlem birbirine paraleldir.' },
+      { key: 'E', text: 'Kesişen iki doğru bir tek düzlem belirtir.' },
+    ],
+    answer: 'C',
+    hint: 'Bir küpün tavanındaki bir ayrıtı ve tabandaki ayrıtları düşün.',
+    solution: [
+      {
+        title: 'A, B, D ve E',
+        detail: 'Bu dördü uzay geometrisinin temel özellikleridir ve doğrudur.',
+      },
+      {
+        title: 'C nin karşı örneği',
+        detail:
+          'Küpün tavanındaki bir ayrıt taban düzlemine paraleldir; ama tabanda ona dik olan ayrıtla aykırıdır, paralel değildir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Yanlış olan önerme C seçeneğidir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 15
+  {
+    id: 'space-15',
+    topic: 'Düzlemde üç doğrunun durumu',
+    stem: [],
+    ask: 'Bir düzlem içindeki farklı üç doğru ile ilgili aşağıdaki ifadelerden hangisi kesinlikle yanlıştır?',
+    choices: [
+      { key: 'A', text: 'Üç doğru aynı noktada kesişebilir.' },
+      { key: 'B', text: 'Üç doğru birbirine paralel olabilir.' },
+      { key: 'C', text: 'İki doğru paralel ise, üçüncü doğru bunlardan yalnız birini kesebilir.' },
+      {
+        key: 'D',
+        text: 'Üç doğru birbirini ikişer ikişer farklı üç noktada kesebilir.',
+      },
+      { key: 'E', text: 'İki doğru paralel ise, üçüncü doğru her ikisini de kesebilir.' },
+    ],
+    answer: 'C',
+    hint: 'Düzlemde bir doğru, paralel iki doğrudan birine paralel değilse diğerine paralel olabilir mi?',
+    solution: [
+      {
+        title: 'A, B, D ve E',
+        detail:
+          'Bu durumların her biri çizilebilir: ortak noktalı üç doğru, üç paralel doğru, bir üçgenin kenar doğruları ve paralel iki doğruyu kesen bir kesen.',
+      },
+      {
+        title: 'C',
+        detail:
+          'Üçüncü doğru paralellerden birini keserse ona paralel değildir; düzlemde o zaman diğerine de paralel olamaz ve onu da keser.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Kesinlikle yanlış olan ifade C seçeneğidir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 16
+  {
+    id: 'space-16',
+    topic: 'Düzlem ve doğruya ilişkin öncüller',
+    stem: [
+      'I. Doğrusal olmayan üç nokta bir tek düzlem belirtir.',
+      'II. Aykırı iki doğru bir düzlem belirtir.',
+      'III. Bir düzleme dik olan bir doğruyu içine alan her düzlem, o düzleme diktir.',
+    ],
+    ask: 'Uzayda belirtilen yukarıdaki öncüllerden hangisi veya hangileri doğrudur?',
+    choices: [
+      { key: 'A', text: 'Yalnız I' },
+      { key: 'B', text: 'Yalnız III' },
+      { key: 'C', text: 'I ve II' },
+      { key: 'D', text: 'I ve III' },
+      { key: 'E', text: 'I, II ve III' },
+    ],
+    answer: 'D',
+    hint: 'Aykırı doğruların tanımını hatırla: aynı düzlemde bulunabilirler mi?',
+    solution: [
+      {
+        title: 'I',
+        detail: 'Doğrusal olmayan üç noktadan bir ve yalnız bir düzlem geçer. Doğrudur.',
+      },
+      {
+        title: 'II',
+        detail: 'Aykırı doğrular aynı düzlemde bulunmayan doğrulardır; düzlem belirtmezler. Yanlıştır.',
+      },
+      {
+        title: 'III',
+        detail:
+          'Bir düzleme dik doğruyu içeren her düzlem o düzleme diktir; küpün yan yüzleri tabana bu yüzden diktir. Doğrudur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Doğru olan öncüller I ve III tür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 17
+  {
+    id: 'space-17',
+    topic: 'Uzayda dik ve paralel doğrular',
+    stem: [],
+    ask: 'R³ te aşağıdaki önermelerden hangisi yanlıştır?',
+    choices: [
+      {
+        key: 'A',
+        text: 'Bir doğrunun dışındaki bir noktadan bu doğruya bir tek paralel doğru çizilebilir.',
+      },
+      {
+        key: 'B',
+        text: 'Bir doğrunun üzerindeki bir noktadan bu doğruya dik olan bir tek doğru çizilebilir.',
+      },
+      { key: 'C', text: 'Aynı doğruya paralel olan farklı iki doğru birbirine paraleldir.' },
+      {
+        key: 'D',
+        text: 'Bir doğrunun üzerindeki bir noktadan bu doğruya dik olan bir tek düzlem çizilebilir.',
+      },
+      {
+        key: 'E',
+        text: 'Bir düzlemin dışındaki bir noktadan bu düzleme paralel sonsuz sayıda doğru çizilebilir.',
+      },
+    ],
+    answer: 'B',
+    hint: 'Doğruya o noktada dik olan düzlemi düşün; bu düzlemde noktadan kaç doğru geçer?',
+    solution: [
+      {
+        title: 'A, C, D ve E',
+        detail: 'Bunlar uzayda paralellik ve dikliğin temel özellikleridir ve doğrudur.',
+      },
+      {
+        title: 'B',
+        detail:
+          'Noktadan geçen ve doğruya dik olan tek bir düzlem vardır; bu düzlemde noktadan geçen her doğru verilen doğruya diktir. Sonsuz sayıda dik doğru çizilebilir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Yanlış olan önerme B seçeneğidir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 18
+  {
+    id: 'space-18',
+    topic: 'Uzayda doğru ve düzlemlerin durumları',
+    stem: [],
+    ask: 'R³ te (uzayda) aşağıdakilerden hangisi kesinlikle doğrudur?',
+    choices: [
+      { key: 'A', text: 'Aykırı iki doğrunun her ikisini de kesen bir tek doğru vardır.' },
+      { key: 'B', text: 'Aynı düzleme dik olan iki düzlem birbirine paraleldir.' },
+      {
+        key: 'C',
+        text: 'Paralel iki düzlemden birinin içindeki her doğru, diğer düzleme paraleldir.',
+      },
+      { key: 'D', text: 'Aynı düzleme paralel olan iki düzlem kesişebilir.' },
+      { key: 'E', text: 'Doğrusal olmayan dört nokta daima bir düzlem belirtir.' },
+    ],
+    answer: 'C',
+    hint: 'Her seçenek için bir küpün yüzleri ve ayrıtları arasında bir karşı örnek ara.',
+    solution: [
+      {
+        title: 'A ve E',
+        detail:
+          'Aykırı doğruların birinden seçilen her noktayı diğerinin bir noktasına bağlayan doğru ikisini de keser; sonsuz sayıda vardır. Dört noktadan biri diğer üçünün düzleminin dışında olabilir. İkisi de yanlıştır.',
+      },
+      {
+        title: 'B ve D',
+        detail:
+          'Küpün komşu iki yan yüzü tabana diktir ama birbirini keser. Aynı düzleme paralel iki farklı düzlem ise birbirine paraleldir, kesişemez. İkisi de yanlıştır.',
+      },
+      {
+        title: 'C',
+        detail:
+          'Paralel düzlemlerin ortak noktası yoktur; birinin içindeki doğrunun da diğeriyle ortak noktası olamaz, yani ona paraleldir. Doğrudur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Kesinlikle doğru olan C seçeneğidir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 19
+  // Plane of BKC is z = 0; K at the origin, B 6√2 toward the viewer, C 6√2 to
+  // the right, E the midpoint of [BC] and A 2√7 above K. 20 px per cm.
+  {
+    id: 'space-19',
+    topic: 'Üç dikme teoremiyle uzunluk',
+    stem: [],
+    given: ['|BE| = |EC| = 6 cm', '|KB| = |KC|', '|AC| = 10 cm', 'm(BKC) = 90°'],
+    ask: 'Yukarıdaki şekilde [AK], BKC dik üçgeninin bulunduğu düzleme dik olduğuna göre, |AE| kaç cm dir?',
+    choices: [
+      { key: 'A', text: '6' },
+      { key: 'B', text: '2√13' },
+      { key: 'C', text: '8' },
+      { key: 'D', text: '2√17' },
+      { key: 'E', text: '4√5' },
+    ],
+    answer: 'C',
+    hint: 'Önce ikizkenar dik üçgende |KC| ve |KE| yi bul, sonra A nın düzleme uzaklığını hesapla.',
+    solution: [
+      {
+        title: 'BKC üçgeni',
+        detail:
+          '|BC| = 12 cm ve üçgen ikizkenar dik olduğundan |KC| = 12 / √2 = 6√2 cm; hipotenüse ait kenarortay |KE| = 12 / 2 = 6 cm.',
+      },
+      {
+        title: 'AKC dik üçgeni',
+        detail: '[AK] düzleme dik olduğundan [AK] ⊥ [KC]: |AK|² = 10² − (6√2)² = 100 − 72 = 28.',
+      },
+      {
+        title: 'AKE dik üçgeni',
+        detail: '[AK] ⊥ [KE] olduğundan |AE|² = |AK|² + |KE|² = 28 + 36 = 64.',
+      },
+      {
+        title: 'Sonuç',
+        detail: '|AE| = 8 cm dir.',
+      },
+    ],
+    figure: {
+      viewBox: '0 20 400 222',
+      caption: 'Şekil 7',
+      label:
+        'Taralı BKC dik üçgeni K de dik, E noktası [BC] nin orta noktası; K nin üstünde üçgenin düzlemine dik [AK] çizilmiş ve A; B, C, E ile birleştirilmiş. |BE| = |EC| = 6, |AC| = 10.',
+      svg: `
+          <path class="shade" d="M145,150 L85,210 L314.7,150 Z"/>
+          <path class="ln" d="M145,150 L85,210 L314.7,150 Z"/>
+          <path class="ln" d="M145,44.2 L145,150 M145,44.2 L85,210 M145,44.2 L314.7,150 M145,44.2 L199.9,180"/>
+          <path class="ln" d="M138.6,156.4 L156.6,156.4 L163,150"/>
+          <path class="tick" d="M141,189.2 L144,200.8 M255.8,159.2 L258.8,170.8"/>
+          <circle class="pt" cx="145" cy="44.2" r="3.2"/>
+          <circle class="pt" cx="145" cy="150" r="3.2"/>
+          <circle class="pt" cx="85" cy="210" r="3.2"/>
+          <circle class="pt" cx="314.7" cy="150" r="3.2"/>
+          <circle class="pt" cx="199.9" cy="180" r="3.2"/>
+          <text x="145" y="34" text-anchor="middle">A</text>
+          <text x="137" y="146" text-anchor="end">K</text>
+          <text x="77" y="226" text-anchor="end">B</text>
+          <text x="323" y="156">C</text>
+          <text x="202" y="200" text-anchor="middle">E</text>
+          <text class="val" x="238" y="92">10</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 20 400 222',
+      caption: 'Şekil 7',
+      label:
+        'Aynı şekilde [KE] çizilmiş: |KE| = 6, |KC| = 6√2; AKC ve AKE üçgenleri K de dik.',
+      svg: `
+          <path class="shade" d="M145,150 L85,210 L314.7,150 Z"/>
+          <path class="ln" d="M145,150 L85,210 L314.7,150 Z"/>
+          <path class="ln" d="M145,44.2 L145,150 M145,44.2 L85,210 M145,44.2 L314.7,150 M145,44.2 L199.9,180"/>
+          <path class="ln" d="M138.6,156.4 L156.6,156.4 L163,150"/>
+          <path class="tick" d="M141,189.2 L144,200.8 M255.8,159.2 L258.8,170.8"/>
+          <path class="aux" d="M145,150 L199.9,180"/>
+          <circle class="pt" cx="145" cy="44.2" r="3.2"/>
+          <circle class="pt" cx="145" cy="150" r="3.2"/>
+          <circle class="pt" cx="85" cy="210" r="3.2"/>
+          <circle class="pt" cx="314.7" cy="150" r="3.2"/>
+          <circle class="pt" cx="199.9" cy="180" r="3.2"/>
+          <text x="145" y="34" text-anchor="middle">A</text>
+          <text x="137" y="146" text-anchor="end">K</text>
+          <text x="77" y="226" text-anchor="end">B</text>
+          <text x="323" y="156">C</text>
+          <text x="202" y="200" text-anchor="middle">E</text>
+          <text class="val" x="238" y="92">10</text>
+          <text class="val" x="162" y="178" text-anchor="end">6</text>
+          <text class="val" x="232" y="144" text-anchor="middle">6√2</text>
+        `,
+    },
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -928,6 +1220,14 @@ export const UNIT_11_SPACE: Unit = {
       summary:
         'Daima doğru önermeler, üç dikme teoremiyle alan ve uzunluk, doğru parçasının izdüşümü, düzleme uzaklık ve ölçek açısı.',
       questions: pick('space-8', 'space-9', 'space-10', 'space-11', 'space-12', 'space-13'),
+    },
+    {
+      id: 'space-m3',
+      order: 3,
+      title: 'Doğru ve düzlem önermeleri',
+      summary:
+        'Yanlış ve kesinlikle doğru önermeler, düzlemde üç doğru, öncüller ve dik üçgenin düzlemine çıkılan dikme.',
+      questions: pick('space-14', 'space-15', 'space-16', 'space-17', 'space-18', 'space-19'),
     },
   ],
 };
