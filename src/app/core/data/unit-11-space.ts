@@ -12,6 +12,9 @@ import { Question, Unit } from '../models';
  * Questions 14–19 follow a third page ("Uzay Geometri — Test 1"): statements
  * about lines and planes, three lines in one plane, numbered premises, and a
  * perpendicular raised on the plane of a right isosceles triangle.
+ * Questions 20–25 follow a fourth page ("Uzay Geometri — Test 1", p. 620):
+ * premises in the plane and in space, the distance of a projected point to the
+ * line of intersection, and the area of a triangle tilted over a rectangle.
  *
  * All learner-facing text is Turkish by design; only the code around it is English.
  *
@@ -1173,6 +1176,320 @@ const QUESTIONS: Question[] = [
         `,
     },
   },
+  // ---------------------------------------------------------------- 20
+  {
+    id: 'space-20',
+    topic: 'Düzlemde doğrulara ilişkin öncüller',
+    stem: [
+      'Düzlemde;',
+      'I. Farklı iki noktadan bir tek doğru geçer.',
+      'II. Aynı doğruya dik olan farklı iki doğru birbirine paraleldir.',
+      'III. Paralel iki doğrudan birine dik olan doğru diğerine de diktir.',
+      'IV. Kesişmeyen iki doğru aykırı doğrulardır.',
+    ],
+    ask: 'Yukarıda verilen öncüllerden hangisi veya hangileri yanlıştır?',
+    choices: [
+      { key: 'A', text: 'Yalnız II' },
+      { key: 'B', text: 'Yalnız IV' },
+      { key: 'C', text: 'II ve IV' },
+      { key: 'D', text: 'III ve IV' },
+      { key: 'E', text: 'I, II ve IV' },
+    ],
+    answer: 'B',
+    hint: 'Sorunun "düzlemde" dediğine dikkat et; aykırı doğrular bir düzlemde bulunabilir mi?',
+    solution: [
+      {
+        title: 'I ve III',
+        detail:
+          'Farklı iki noktadan bir tek doğru geçer. Düzlemde paralel iki doğrudan birine dik olan doğru diğerini de aynı açıyla keser, yani ona da diktir. İkisi de doğrudur.',
+      },
+      {
+        title: 'II',
+        detail:
+          'Düzlemde aynı doğruya dik olan iki doğru, bu doğruyla eş yöndeş açılar yapar ve birbirine paraleldir. Doğrudur (uzayda bu doğru olmazdı).',
+      },
+      {
+        title: 'IV',
+        detail:
+          'Aykırı doğrular aynı düzlemde bulunmayan doğrulardır. Düzlemde kesişmeyen iki doğru paraleldir. Yanlıştır.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Yanlış olan yalnız IV numaralı öncüldür.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 21
+  {
+    id: 'space-21',
+    topic: 'Uzayda doğru ve düzlemlerin durumları',
+    stem: [],
+    ask: 'R³ te (uzayda) aşağıdaki önermelerden hangisi yanlıştır?',
+    choices: [
+      { key: 'A', text: 'Paralel iki düzlemden birine dik olan düzlem diğerine de diktir.' },
+      { key: 'B', text: 'Aynı düzleme dik olan farklı iki doğru birbirine paraleldir.' },
+      {
+        key: 'C',
+        text: 'Bir düzlemin dışındaki bir noktadan bu düzleme bir tek dik doğru çizilebilir.',
+      },
+      { key: 'D', text: 'Aynı doğruya paralel olan farklı iki düzlem birbirine paraleldir.' },
+      {
+        key: 'E',
+        text: 'Bir doğru parçasının uç noktalarından eşit uzaklıkta bulunan noktaların geometrik yeri bir düzlemdir.',
+      },
+    ],
+    answer: 'D',
+    hint: 'Bir küpün düşey bir ayrıtını ve bu ayrıta paralel olan yüzleri düşün.',
+    solution: [
+      {
+        title: 'A, B ve C',
+        detail: 'Bunlar uzayda diklik ve paralelliğin temel özellikleridir ve doğrudur.',
+      },
+      {
+        title: 'E',
+        detail:
+          'Uzayda bir doğru parçasının uçlarına eşit uzaklıktaki noktalar, parçanın orta noktasından geçen ve ona dik olan düzlemi (orta dikme düzlemini) oluşturur. Doğrudur.',
+      },
+      {
+        title: 'D nin karşı örneği',
+        detail:
+          'Küpün önündeki düşey bir ayrıt, arka yüze ve karşı yan yüze paraleldir; ama bu iki yüz arka düşey ayrıt boyunca kesişir.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Yanlış olan önerme D seçeneğidir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 22
+  {
+    id: 'space-22',
+    topic: 'Düzlemler arasındaki açı ve izdüşüm',
+    stem: [
+      'E₁ ve E₂ kesişen düzlemlerinin ölçek açısının ölçüsü 30° dir. P ∈ E₁ alınıyor. P noktasının E₂ düzlemi üzerindeki dik izdüşümü T noktasıdır.',
+    ],
+    ask: '|PT| = 6 cm olduğuna göre, T noktasının düzlemlerin arakesit doğrusuna uzaklığı kaç cm dir?',
+    choices: [
+      { key: 'A', text: '6' },
+      { key: 'B', text: '6√2' },
+      { key: 'C', text: '6√3' },
+      { key: 'D', text: '12' },
+      { key: 'E', text: '12√3' },
+    ],
+    answer: 'C',
+    hint: 'P den arakesite bir dikme in; P, T ve dikme ayağı T de dik olan bir üçgen oluşturur.',
+    solution: [
+      {
+        title: 'Dik üçgen',
+        detail:
+          'P den arakesit doğrusuna inen dikmenin ayağı H olsun. Üç dikme teoremine göre [TH] de arakesite diktir; PTH üçgeni T de diktir ve m(PHT) = 30° dir.',
+      },
+      {
+        title: '|PH|',
+        detail: '30° nin karşısındaki kenar hipotenüsün yarısıdır: |PH| = 2 · 6 = 12 cm.',
+      },
+      {
+        title: '|TH|',
+        detail: '|TH|² = 12² − 6² = 144 − 36 = 108 ⇒ |TH| = 6√3.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'T noktasının arakesit doğrusuna uzaklığı 6√3 cm dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 23
+  {
+    id: 'space-23',
+    topic: 'Düzlemlerin uzayı bölmesi ve öncüller',
+    stem: [
+      'R³ te,',
+      'I. Kesişen iki düzlem uzayı dört bölgeye ayırır.',
+      'II. Paralel iki düzlemden birini kesen düzlem diğerini de keser.',
+      'III. Aynı düzleme paralel olan iki doğru birbirine paraleldir.',
+    ],
+    ask: 'Yukarıdaki öncüllerden hangisi veya hangileri her zaman doğrudur?',
+    choices: [
+      { key: 'A', text: 'Yalnız I' },
+      { key: 'B', text: 'Yalnız II' },
+      { key: 'C', text: 'I ve II' },
+      { key: 'D', text: 'II ve III' },
+      { key: 'E', text: 'I, II ve III' },
+    ],
+    answer: 'C',
+    hint: 'Açık bir kitabın iki kapağını ve bir masanın üzerinde duran iki kalemi düşün.',
+    solution: [
+      {
+        title: 'I',
+        detail:
+          'Kesişen iki düzlemin her biri uzayı ikiye böler; birlikte 2 · 2 = 4 bölge oluşur. Doğrudur.',
+      },
+      {
+        title: 'II',
+        detail:
+          'Bir düzlem paralel iki düzlemden birini keser de diğerini kesmezse ona paralel olurdu; o zaman ilkine de paralel olurdu. Bu çelişkidir. Doğrudur.',
+      },
+      {
+        title: 'III',
+        detail:
+          'Masanın üstüne dik açıyla konan iki kalem masa düzlemine paraleldir ama birbirine paralel değildir. Yanlıştır.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Her zaman doğru olanlar I ve II dir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 24
+  {
+    id: 'space-24',
+    topic: 'Düzlem belirten durumlar',
+    stem: [],
+    ask: 'R³ te aşağıdaki ifadelerden hangisi yanlıştır?',
+    choices: [
+      { key: 'A', text: 'Aykırı iki doğru bir düzlem belirtmez.' },
+      { key: 'B', text: 'Paralel iki doğruyu içinde bulunduran bir tek düzlem vardır.' },
+      {
+        key: 'C',
+        text: 'Bir doğrunun dışındaki bir noktadan bu doğruya dik olan bir tek düzlem geçer.',
+      },
+      {
+        key: 'D',
+        text: 'Bir düzlemin dışındaki bir noktadan bu düzleme dik olan sonsuz sayıda düzlem geçer.',
+      },
+      {
+        key: 'E',
+        text: 'Bir düzlemin dışındaki bir noktadan bu düzleme paralel birden fazla düzlem çizilebilir.',
+      },
+    ],
+    answer: 'E',
+    hint: 'Bir noktadan, verilen düzleme paralel kaç farklı düzlem geçebilir?',
+    solution: [
+      {
+        title: 'A ve B',
+        detail:
+          'Aykırı doğrular aynı düzlemde bulunmaz. Paralel iki doğru ise bir ve yalnız bir düzlem belirtir. İkisi de doğrudur.',
+      },
+      {
+        title: 'C ve D',
+        detail:
+          'Doğruya dik düzlemin yönü tek türlüdür ve noktadan bir tanesi geçer. Düzleme noktadan inen dikmeyi içeren her düzlem ise o düzleme diktir; sonsuz tanedir. İkisi de doğrudur.',
+      },
+      {
+        title: 'E',
+        detail:
+          'Düzlemin dışındaki bir noktadan bu düzleme paralel bir tek düzlem çizilebilir. Yanlıştır.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Yanlış olan ifade E seçeneğidir.',
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- 25
+  // Rectangle ABCD lies in z = 0 with A at the origin, AB = 6 along x and
+  // AD = 8 into the page. E is the midpoint of [BC], F = E + 6 up, so the plane
+  // ADF meets the base at 45°. H, the midpoint of [AD], sees the 45° angle
+  // drawn true because the plane FHE is a front plane. Depth recedes at 30°
+  // here, not 45°: at 45° the line AF would fall on top of AD. 30 px per cm.
+  {
+    id: 'space-25',
+    topic: 'Düzlemler arasındaki açı ve alan',
+    stem: [
+      'Şekilde ADF üçgeninin bulunduğu düzlem ile ABCD dikdörtgeninin bulunduğu düzlem arasında 45° lik açı vardır.',
+    ],
+    given: ['|AB| = 6 cm', '|AD| = 8 cm', 'E ∈ [BC]'],
+    ask: 'F noktasının ABCD dikdörtgeni üzerindeki dik izdüşümü E noktası olduğuna göre, ADF üçgeninin alanı kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '12√2' },
+      { key: 'B', text: '24' },
+      { key: 'C', text: '24√2' },
+      { key: 'D', text: '48' },
+      { key: 'E', text: '48√2' },
+    ],
+    answer: 'C',
+    hint: 'ADF üçgeninin ABCD düzlemi üzerindeki izdüşümü ADE üçgenidir.',
+    solution: [
+      {
+        title: 'İzdüşüm üçgeni',
+        detail:
+          'A ve D düzlemdedir, F nin izdüşümü E dir; ADF üçgeninin izdüşümü ADE üçgenidir.',
+      },
+      {
+        title: 'ADE nin alanı',
+        detail:
+          'E, [BC] üzerinde olduğundan [AD] ye uzaklığı |AB| = 6 cm dir: Alan(ADE) = 8 · 6 / 2 = 24 cm².',
+      },
+      {
+        title: 'İzdüşüm alanı',
+        detail: 'Alan(ADE) = Alan(ADF) · cos 45° ⇒ Alan(ADF) = 24 / (√2 / 2) = 24√2.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'ADF üçgeninin alanı 24√2 cm² dir.',
+      },
+    ],
+    figure: {
+      viewBox: '0 20 400 280',
+      caption: 'Şekil 8',
+      label:
+        'ABCD dikdörtgeni yatay duruyor; [BC] üzerindeki E noktasının tam üstünde F noktası var ve F; A ve D ile birleştirilerek ADF üçgeni oluşturulmuş. |AB| = 6, |AD| = 8.',
+      svg: `
+          <path class="ln" d="M68,270 L248,270 L351.9,210 L171.9,210 Z"/>
+          <path class="ln" d="M68,270 L300,60 L171.9,210 M300,60 L300,240"/>
+          <circle class="pt" cx="68" cy="270" r="3.2"/>
+          <circle class="pt" cx="248" cy="270" r="3.2"/>
+          <circle class="pt" cx="351.9" cy="210" r="3.2"/>
+          <circle class="pt" cx="171.9" cy="210" r="3.2"/>
+          <circle class="pt" cx="300" cy="240" r="3.2"/>
+          <circle class="pt" cx="300" cy="60" r="3.2"/>
+          <text x="60" y="284" text-anchor="end">A</text>
+          <text x="256" y="286">B</text>
+          <text x="360" y="209">C</text>
+          <text x="164" y="205" text-anchor="end">D</text>
+          <text x="308" y="254">E</text>
+          <text x="300" y="50" text-anchor="middle">F</text>
+          <text class="val" x="158" y="290" text-anchor="middle">6</text>
+          <text class="val" x="104" y="266">8</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 20 400 280',
+      caption: 'Şekil 8',
+      label:
+        'Aynı şekilde [AD] nin orta noktası H den E ye ve F ye doğru parçaları çizilmiş: |HE| = 6, m(FHE) = 45°, FEH üçgeni E de dik.',
+      svg: `
+          <path class="ln" d="M68,270 L248,270 L351.9,210 L171.9,210 Z"/>
+          <path class="ln" d="M68,270 L300,60 L171.9,210 M300,60 L300,240"/>
+          <path class="aux" d="M120,240 L300,240 M120,240 L300,60"/>
+          <path class="aux" d="M290,240 L290,230 L300,230"/>
+          <path class="arc" d="M150,240 A30,30 0 0 0 141.2,218.8"/>
+          <circle class="pt" cx="68" cy="270" r="3.2"/>
+          <circle class="pt" cx="248" cy="270" r="3.2"/>
+          <circle class="pt" cx="351.9" cy="210" r="3.2"/>
+          <circle class="pt" cx="171.9" cy="210" r="3.2"/>
+          <circle class="pt" cx="300" cy="240" r="3.2"/>
+          <circle class="pt" cx="300" cy="60" r="3.2"/>
+          <circle class="pt" cx="120" cy="240" r="3.2"/>
+          <text x="60" y="284" text-anchor="end">A</text>
+          <text x="256" y="286">B</text>
+          <text x="360" y="209">C</text>
+          <text x="164" y="205" text-anchor="end">D</text>
+          <text x="308" y="254">E</text>
+          <text x="300" y="50" text-anchor="middle">F</text>
+          <text x="112" y="234" text-anchor="end">H</text>
+          <text class="val" x="158" y="290" text-anchor="middle">6</text>
+          <text class="val" x="104" y="266">8</text>
+          <text class="val" x="156" y="232">45°</text>
+          <text class="val" x="210" y="256" text-anchor="middle">6</text>
+        `,
+    },
+  },
 ];
 
 function pick(...ids: string[]): Question[] {
@@ -1228,6 +1545,14 @@ export const UNIT_11_SPACE: Unit = {
       summary:
         'Yanlış ve kesinlikle doğru önermeler, düzlemde üç doğru, öncüller ve dik üçgenin düzlemine çıkılan dikme.',
       questions: pick('space-14', 'space-15', 'space-16', 'space-17', 'space-18', 'space-19'),
+    },
+    {
+      id: 'space-m4',
+      order: 4,
+      title: 'Öncüller, ölçek açısı ve izdüşüm alanı',
+      summary:
+        'Düzlemde ve uzayda öncüller, düzlem belirten durumlar, ölçek açısıyla uzaklık ve eğik üçgenin izdüşüm alanı.',
+      questions: pick('space-20', 'space-21', 'space-22', 'space-23', 'space-24', 'space-25'),
     },
   ],
 };

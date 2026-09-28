@@ -48,6 +48,18 @@ describe('unit 11 answer key', () => {
     expect(answerOf('space-18')).toBe('C'));
   it('19 — |KC| = 6√2, |KE| = 6, |AK|² = 100 − 72 = 28, √(28 + 36) = 8 → C', () =>
     expect(answerOf('space-19')).toBe('C'));
+  it('20 — in a plane, non-intersecting lines are parallel, not skew → B', () =>
+    expect(answerOf('space-20')).toBe('B'));
+  it('21 — two planes parallel to one line may intersect → D', () =>
+    expect(answerOf('space-21')).toBe('D'));
+  it('22 — |PH| = 6 / sin 30° = 12, |TH| = √(144 − 36) = 6√3 → C', () =>
+    expect(answerOf('space-22')).toBe('C'));
+  it('23 — I and II true, two lines parallel to a plane may cross → C', () =>
+    expect(answerOf('space-23')).toBe('C'));
+  it('24 — exactly one plane through a point is parallel to a plane → E', () =>
+    expect(answerOf('space-24')).toBe('E'));
+  it('25 — area(ADE) = 8 · 6 / 2 = 24, 24 / cos 45° = 24√2 → C', () =>
+    expect(answerOf('space-25')).toBe('C'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
