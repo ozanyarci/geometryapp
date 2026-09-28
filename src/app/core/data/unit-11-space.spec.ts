@@ -60,6 +60,17 @@ describe('unit 11 answer key', () => {
     expect(answerOf('space-24')).toBe('E'));
   it('25 — area(ADE) = 8 · 6 / 2 = 24, 24 / cos 45° = 24√2 → C', () =>
     expect(answerOf('space-25')).toBe('C'));
+  it('26 — statements 1 and 4 true, 2 true in total → B', () =>
+    expect(answerOf('space-26')).toBe('B'));
+  it('27 — |AD| = 6√3, |AC| = 12/√2 = 6√2, √(108 − 72) = 6 → C', () =>
+    expect(answerOf('space-27')).toBe('C'));
+  it('28 — non-intersecting lines in space may be skew, only I false → A', () =>
+    expect(answerOf('space-28')).toBe('A'));
+  it('29 — lines in two parallel planes may be skew → D', () =>
+    expect(answerOf('space-29')).toBe('D'));
+  it('30 — 1 + 1 + 2 + 3 + 4 + 5 = 16 → C', () => expect(answerOf('space-30')).toBe('C'));
+  it('31 — unfolded, √(12² + (6 + 3)²) = √225 = 15 → D', () =>
+    expect(answerOf('space-31')).toBe('D'));
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)
