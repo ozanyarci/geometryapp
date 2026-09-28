@@ -1300,6 +1300,19 @@ describe('unit 2 answer key', () => {
   it('626 — r = √(13² − 5²) = 12 ⇒ 12 birimlik çember → B', () =>
     expect(answerOf('triangles-626')).toBe('B'));
 
+  it('627 — b = 7 > hₐ = 5 ⇒ C merkezli çember d yi iki noktada keser → D', () =>
+    expect(answerOf('triangles-627')).toBe('D'));
+  it('628 — merkezin d ye uzaklığı r = 4 ⇒ silindir yüzeyi → C', () =>
+    expect(answerOf('triangles-628')).toBe('C'));
+  it('629 — A(OAB) = 6·4/2 = 12, r = 2·12/5 = 4,8 → C', () =>
+    expect(answerOf('triangles-629')).toBe('C'));
+  it('630 — d₁+d₂+d₃ = A/3 = 9√3/3 = 3√3 her iç nokta ⇒ 9√3 → C', () =>
+    expect(answerOf('triangles-630')).toBe('C'));
+  it('631 — iki orta dikme düzleminin kesişimi ⇒ doğru → B', () =>
+    expect(answerOf('triangles-631')).toBe('B'));
+  it('632 — |AB| = 4 → ±90°, |AB| = 8 → 0° ⇒ yarım çember, π·3 = 3π → C', () =>
+    expect(answerOf('triangles-632')).toBe('C'));
+
   // Runs last, once every line above has claimed its question.
   it('checks every question in the unit', () => {
     const missing = unitQuestions(unit)

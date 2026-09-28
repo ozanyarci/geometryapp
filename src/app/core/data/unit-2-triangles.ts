@@ -52652,6 +52652,287 @@ Q4 DE 6.928203230275509 6.928203230275509 AE 10.0 EC 2.0
       },
     ],
   },
+  // ---------------------------------------------------------------- 627
+  {
+    id: 'triangles-627',
+    topic: 'İki üçgen veren eleman',
+    given: ['a = 8 cm', 'hₐ = 5 cm'],
+    stem: ['Çizilecek bir ABC üçgeni için yukarıdakiler veriliyor.'],
+    ask: 'Aşağıdakilerden hangisi verildiğinde iki farklı ABC üçgeni çizilebilir?',
+    choices: [
+      { key: 'A', text: 'Vₐ = 5 cm' },
+      { key: 'B', text: 'm(B) = 45°' },
+      { key: 'C', text: 'c = 5 cm' },
+      { key: 'D', text: 'b = 7 cm' },
+      { key: 'E', text: 'c = 4 cm' },
+    ],
+    answer: 'D',
+    hint: 'A köşesi [BC] ye 5 cm uzaklıktaki paralel doğru üzerindedir; her seçeneğin bu doğruyu kaç noktada kestiğine bak.',
+    solution: [
+      {
+        title: 'A nın doğrusu',
+        detail:
+          '[BC] = 8 cm çizilir. hₐ = 5 cm olduğundan A, [BC] ye paralel ve ondan 5 cm uzaklıktaki d doğrusu üzerindedir.',
+      },
+      {
+        title: 'A, B ve C',
+        detail:
+          'Vₐ = 5 = hₐ ise kenarortay yükseklikle çakışır, A orta dikme üzerindedir: tek üçgen. m(B) = 45° lik ışın d yi bir noktada keser: tek üçgen. c = 5 = hₐ ise [AB] ⊥ [BC] dir: tek üçgen.',
+      },
+      {
+        title: 'E',
+        detail: 'c = 4 < 5 olduğundan B merkezli 4 cm lik çember d ye ulaşmaz: üçgen çizilemez.',
+      },
+      {
+        title: 'D',
+        detail:
+          'b = 7 > 5 olduğundan C merkezli 7 cm lik çember d yi iki noktada keser. İki noktada C den d ye inen dikmenin ayağına uzaklık √(49 − 25) = √24 tür; A noktaları dikmenin iki yanında olduğundan iki farklı üçgen oluşur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'İki farklı ABC üçgeni b = 7 cm verildiğinde çizilebilir.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 628
+  {
+    id: 'triangles-628',
+    topic: 'Uzayda doğruya teğet kürelerin merkezleri',
+    stem: ['Uzayda sabit bir d doğrusu veriliyor.'],
+    ask: 'd doğrusuna teğet olan ve yarıçapı 4 cm olan kürelerin merkezlerinin geometrik yeri aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: 'Bir düzlem' },
+      { key: 'B', text: 'İki paralel düzlem' },
+      { key: 'C', text: 'Silindir yüzeyi' },
+      { key: 'D', text: 'Küre yüzeyi' },
+      { key: 'E', text: 'İki paralel doğru' },
+    ],
+    answer: 'C',
+    hint: 'Küre bir doğruya teğetse merkezinin o doğruya uzaklığı neye eşittir?',
+    solution: [
+      {
+        title: 'Teğetlik',
+        detail: 'Küre d ye teğet ise merkezinin d ye uzaklığı yarıçapa, yani 4 cm ye eşittir.',
+      },
+      {
+        title: 'Uzaklık 4',
+        detail:
+          'd ye dik her düzlemde bu noktalar, d nin kestiği nokta merkezli 4 cm yarıçaplı bir çember oluşturur.',
+      },
+      {
+        title: 'Birleşim',
+        detail: 'Bu çemberler d boyunca üst üste dizilince ekseni d olan, yarıçapı 4 cm olan bir silindir yüzeyi oluşur.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Merkezlerin geometrik yeri bir silindir yüzeyidir.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 629
+  {
+    id: 'triangles-629',
+    topic: 'Küre üzerinde sabit uzaklıktaki noktalar',
+    stem: [
+      'Yarıçapı 5 cm olan bir küre üzerinde sabit bir A noktası ile değişken bir B noktası alınıyor.',
+      '|AB| = 6 cm olduğuna göre, B noktalarının geometrik yeri bir çemberdir.',
+    ],
+    ask: 'Buna göre, bu çemberin yarıçapı kaç cm dir?',
+    choices: [
+      { key: 'A', text: '3' },
+      { key: 'B', text: '4' },
+      { key: 'C', text: '4,8' },
+      { key: 'D', text: '5' },
+      { key: 'E', text: '6' },
+    ],
+    answer: 'C',
+    hint: 'Kürenin merkezi O ile OAB üçgenini kur; çemberin yarıçapı B nin [OA] doğrusuna uzaklığıdır.',
+    solution: [
+      {
+        title: 'İki küre',
+        detail:
+          'B, O merkezli 5 cm lik küre ile A merkezli 6 cm lik kürenin kesişimindedir; bu kesişim ekseni OA doğrusu olan bir çemberdir.',
+      },
+      {
+        title: 'OAB üçgeni',
+        detail:
+          '|OA| = |OB| = 5, |AB| = 6. O dan [AB] ye inen yükseklik √(25 − 9) = 4 olduğundan A(OAB) = 6·4 / 2 = 12.',
+      },
+      {
+        title: 'Yarıçap',
+        detail: 'Çemberin yarıçapı B nin OA ya uzaklığıdır: r = 2·12 / 5 = 24 / 5 = 4,8.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'B noktalarının oluşturduğu çemberin yarıçapı 4,8 cm dir.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 630
+  {
+    id: 'triangles-630',
+    topic: 'Kenarlara uzaklıklar toplamı sabit olan noktalar',
+    figure: {
+      viewBox: '0 0 400 320',
+      caption: 'Şekil 630',
+      label:
+        'ABC eşkenar üçgeninin içinde bir P noktası alınmış ve P den üç kenara dikmeler çizilmiştir; dikmelerin uzunlukları d₁, d₂ ve d₃ tür.',
+      svg: `
+          <path class="ln" d="M50,290 L350,290 L200,30.2 Z"/>
+          <path class="ln" d="M180,200 L180,290"/>
+          <path class="ln" d="M180,200 L121.5,166.2"/>
+          <path class="ln" d="M180,200 L268.5,148.9"/>
+          <text class="val" x="186" y="252">d₁</text>
+          <text class="val" x="148" y="203" text-anchor="middle">d₂</text>
+          <text class="val" x="226" y="192" text-anchor="middle">d₃</text>
+          <circle class="pt" cx="50" cy="290" r="3.2"/>
+          <circle class="pt" cx="350" cy="290" r="3.2"/>
+          <circle class="pt" cx="200" cy="30.2" r="3.2"/>
+          <circle class="pt" cx="180" cy="200" r="3.2"/>
+          <text x="42" y="306" text-anchor="end">B</text>
+          <text x="358" y="306">C</text>
+          <text x="200" y="20" text-anchor="middle">A</text>
+          <text x="172" y="222" text-anchor="end">P</text>
+        `,
+    },
+    solutionFigure: {
+      viewBox: '0 0 400 320',
+      caption: 'Şekil 630 — Üç üçgene ayırma',
+      label:
+        'Aynı şekle P yi A, B ve C köşelerine birleştiren doğru parçaları kesikli çizgiyle eklenmiştir; üçgen PAB, PBC ve PCA üçgenlerine ayrılır.',
+      svg: `
+          <path class="ln" d="M50,290 L350,290 L200,30.2 Z"/>
+          <path class="aux" d="M180,200 L50,290"/>
+          <path class="aux" d="M180,200 L350,290"/>
+          <path class="aux" d="M180,200 L200,30.2"/>
+          <path class="ln" d="M180,200 L180,290"/>
+          <path class="ln" d="M180,200 L121.5,166.2"/>
+          <path class="ln" d="M180,200 L268.5,148.9"/>
+          <text class="val" x="186" y="252">d₁</text>
+          <text class="val" x="148" y="203" text-anchor="middle">d₂</text>
+          <text class="val" x="226" y="192" text-anchor="middle">d₃</text>
+          <circle class="pt" cx="50" cy="290" r="3.2"/>
+          <circle class="pt" cx="350" cy="290" r="3.2"/>
+          <circle class="pt" cx="200" cy="30.2" r="3.2"/>
+          <circle class="pt" cx="180" cy="200" r="3.2"/>
+          <text x="42" y="306" text-anchor="end">B</text>
+          <text x="358" y="306">C</text>
+          <text x="200" y="20" text-anchor="middle">A</text>
+          <text x="172" y="222" text-anchor="end">P</text>
+        `,
+    },
+    given: ['ABC eşkenar üçgen', '|BC| = 6 cm', 'P, üçgenin içinde bir nokta'],
+    stem: [],
+    ask: 'Kenarlara uzaklıkları toplamı d₁ + d₂ + d₃ = 3√3 cm olan P noktalarının oluşturduğu bölgenin alanı kaç cm² dir?',
+    choices: [
+      { key: 'A', text: '3√3' },
+      { key: 'B', text: '6√3' },
+      { key: 'C', text: '9√3' },
+      { key: 'D', text: '12√3' },
+      { key: 'E', text: '18√3' },
+    ],
+    answer: 'C',
+    hint: 'P yi köşelere birleştir ve üç küçük üçgenin alanlarını topla.',
+    solution: [
+      {
+        title: 'Alan toplamı',
+        detail:
+          'A(PBC) + A(PCA) + A(PAB) = A(ABC) ⇒ 6·d₁ / 2 + 6·d₂ / 2 + 6·d₃ / 2 = A(ABC) ⇒ d₁ + d₂ + d₃ = A(ABC) / 3.',
+      },
+      {
+        title: 'Üçgenin alanı',
+        detail: 'A(ABC) = 6²·√3 / 4 = 9√3 olduğundan d₁ + d₂ + d₃ = 3√3, yani yüksekliğe eşittir.',
+      },
+      {
+        title: 'Her iç nokta',
+        detail: 'Bu toplam P nin yerinden bağımsızdır; üçgenin içindeki her nokta koşulu sağlar.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Geometrik yer üçgenin iç bölgesinin tamamıdır; alanı 9√3 cm² dir.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 631
+  {
+    id: 'triangles-631',
+    topic: 'Uzayda üç noktaya eşit uzaklıktaki noktalar',
+    stem: ['Uzayda aynı doğru üzerinde bulunmayan A, B ve C noktaları veriliyor.'],
+    ask: 'A, B ve C noktalarına eşit uzaklıktaki noktaların geometrik yeri aşağıdakilerden hangisidir?',
+    choices: [
+      { key: 'A', text: 'Bir nokta' },
+      { key: 'B', text: 'Doğru' },
+      { key: 'C', text: 'Düzlem' },
+      { key: 'D', text: 'Çember' },
+      { key: 'E', text: 'Küre' },
+    ],
+    answer: 'B',
+    hint: 'Uzayda iki noktaya eşit uzaklıktaki noktalar bir düzlemdir; iki böyle düzlemin kesişimini düşün.',
+    solution: [
+      {
+        title: 'İki orta dikme düzlemi',
+        detail:
+          '|PA| = |PB| olan noktalar [AB] nin orta dikme düzlemi, |PB| = |PC| olanlar [BC] nin orta dikme düzlemidir.',
+      },
+      {
+        title: 'Kesişim',
+        detail:
+          'A, B, C doğrusal olmadığından [AB] ile [BC] paralel değildir; bu iki düzlem paralel olmaz ve bir doğru boyunca kesişir.',
+      },
+      {
+        title: 'Doğrunun yeri',
+        detail:
+          'Bu doğru ABC düzlemine diktir ve ABC üçgeninin çevrel çemberinin merkezinden geçer; üzerindeki her nokta için |PA| = |PC| de sağlanır.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Geometrik yer bir doğrudur.',
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- 632
+  {
+    id: 'triangles-632',
+    topic: 'Değişken uzaklıkta iki çemberin kesişimi',
+    stem: [
+      'Düzlemde A başlangıç noktalı sabit bir ışın üzerinde, 4 ≤ |AB| ≤ 8 olacak şekilde değişken bir B noktası alınıyor.',
+      'A noktasından 3 birim, B noktasından 5 birim uzaklıktaki noktalar bir yay oluşturuyor.',
+    ],
+    ask: 'Buna göre, bu yayın uzunluğu kaç birimdir?',
+    choices: [
+      { key: 'A', text: '3π / 2' },
+      { key: 'B', text: '2π' },
+      { key: 'C', text: '3π' },
+      { key: 'D', text: '4π' },
+      { key: 'E', text: '6π' },
+    ],
+    answer: 'C',
+    hint: 'Noktalar hep A merkezli 3 birimlik çember üzerindedir; |AB| = 4 ve |AB| = 8 uç durumlarında noktaların nerede olduğunu bul.',
+    solution: [
+      {
+        title: 'Çember',
+        detail: 'Aranan noktalar A merkezli 3 birim yarıçaplı çember üzerindedir.',
+      },
+      {
+        title: '|AB| = 4',
+        detail:
+          '3² + 4² = 5² olduğundan A da dik açılı üçgen oluşur: noktalar ışına A da dik doğru üzerinde, ışının iki yanındadır (90° ve −90°).',
+      },
+      {
+        title: '|AB| = 8',
+        detail: '3 + 5 = 8 olduğundan çemberler teğettir: tek nokta, ışın üzerinde A dan 3 birim uzaktadır (0°).',
+      },
+      {
+        title: 'Ara değerler',
+        detail:
+          '|AB| 4 ten 8 e artarken açı 90° den 0° a sürekli azalır; iki yandan birlikte −90° ile 90° arası, yani yarım çember taranır.',
+      },
+      {
+        title: 'Sonuç',
+        detail: 'Yay yarım çemberdir: uzunluğu π·3 = 3π birimdir.',
+      },
+    ],
+  },
 ];
 
 /** Looks questions up by id so the modules below read as a running order. */
@@ -54237,6 +54518,21 @@ export const UNIT_2_TRIANGLES: Unit = {
         'triangles-624',
         'triangles-625',
         'triangles-626',
+      ),
+    },
+    {
+      id: 'triangles-m105',
+      order: 105,
+      title: 'Üçgen çizimleri ve geometrik yer — Test 3',
+      summary:
+        'İki üçgen veren eleman, doğruya teğet kürelerin merkezleri, küre üzerinde sabit uzaklık, eşkenar üçgende uzaklıklar toplamı, üç noktaya eşit uzaklık ve iki çemberin kesişim yayı.',
+      questions: pick(
+        'triangles-627',
+        'triangles-628',
+        'triangles-629',
+        'triangles-630',
+        'triangles-631',
+        'triangles-632',
       ),
     },
   ],
