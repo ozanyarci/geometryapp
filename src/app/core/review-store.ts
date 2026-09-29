@@ -58,6 +58,16 @@ export class ReviewStore {
       .map(([id]) => id),
   );
 
+  /** Question ids whose latest answer was correct. */
+  readonly correctIds = computed<ReadonlySet<string>>(
+    () =>
+      new Set(
+        Object.entries(this.outcomes())
+          .filter(([, correct]) => correct)
+          .map(([id]) => id),
+      ),
+  );
+
   readonly answeredCount = computed(() => Object.keys(this.outcomes()).length);
 
   /** Share of answered questions whose latest answer was correct, 0..1. */

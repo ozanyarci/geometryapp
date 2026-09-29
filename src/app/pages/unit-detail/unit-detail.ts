@@ -38,7 +38,7 @@ export class UnitDetail {
     (this.unit?.modules ?? []).map((module) => ({
       module,
       total: module.questions.length,
-      best: this.progress.bestCorrect(module.id),
+      best: this.progress.bestCorrect(module),
       attempted: this.progress.isAttempted(module.id),
       isLast: module.id === this.lastModuleId,
     })),

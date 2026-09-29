@@ -1,6 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { findQuestion, unitQuestions } from './curriculum';
 import { UNIT_2_TRIANGLES } from './data/unit-2-triangles';
+import { ProgressStore } from './progress-store';
 import { QuizStore } from './quiz-store';
 import {
   PROMPT_INTERVALS_MS,
@@ -115,5 +116,32 @@ describe('ReviewStore', () => {
 
     expect(store.missedIds().length).toBe(20 - REVIEW_SIZE);
     expect(localStorage.getItem('geometry.progress.v2')).toBeNull();
+  });
+
+  it('raises the module and unit correct counts after a review', () => {
+    const quiz = TestBed.inject(QuizStore);
+    const progress = TestBed.inject(ProgressStore);
+    const module = UNIT_2_TRIANGLES.modules[0];
+    const wrong = (answer: string) => (answer === 'A' ? 'B' : 'A');
+
+    quiz.start(UNIT_2_TRIANGLES, module, 'test');
+    for (const question of module.questions) {
+      quiz.answer(wrong(question.answer));
+      quiz.next();
+    }
+    quiz.finish();
+    expect(progress.bestCorrect(module)).toBe(0);
+
+    // Four of the five review questions right, one wrong.
+    const reviewed = module.questions.slice(0, 5);
+    quiz.startReview(reviewed);
+    reviewed.forEach((question, i) => {
+      quiz.answer(i < 4 ? question.answer : wrong(question.answer));
+      quiz.next();
+    });
+    quiz.finish();
+
+    expect(progress.bestCorrect(module)).toBe(4);
+    expect(progress.unitBestCorrect(UNIT_2_TRIANGLES)).toBe(4);
   });
 });

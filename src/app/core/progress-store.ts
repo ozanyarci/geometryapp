@@ -1,5 +1,6 @@
-import { Injectable, signal } from '@angular/core';
-import { ModuleRecord, QuizMode, Unit } from './models';
+import { Injectable, inject, signal } from '@angular/core';
+import { Module, ModuleRecord, QuizMode, Unit } from './models';
+import { ReviewStore } from './review-store';
 
 // v1 was keyed by unit; progress is per module since the split into modules.
 const STORAGE_KEY = 'geometry.progress.v2';
@@ -21,23 +22,31 @@ function recordKey(moduleId: string, mode: QuizMode): string {
  */
 @Injectable({ providedIn: 'root' })
 export class ProgressStore {
+  private readonly review = inject(ReviewStore);
   private readonly records = signal<Records>(this.read());
 
   record(moduleId: string, mode: QuizMode): ModuleRecord | undefined {
     return this.records()[recordKey(moduleId, mode)];
   }
 
-  /** Highest correct count across both modes for a module. */
-  bestCorrect(moduleId: string): number {
+  /**
+   * Highest correct count for a module: its best run in either mode, or how
+   * many of its questions were last answered correctly, whichever is higher.
+   * The second half is what lets a review run of missed questions — which
+   * spans modules and so has no run record of its own — raise the count.
+   */
+  bestCorrect(module: Module): number {
     const records = this.records();
-    const practice = records[recordKey(moduleId, 'practice')]?.bestCorrect ?? 0;
-    const test = records[recordKey(moduleId, 'test')]?.bestCorrect ?? 0;
-    return Math.max(practice, test);
+    const practice = records[recordKey(module.id, 'practice')]?.bestCorrect ?? 0;
+    const test = records[recordKey(module.id, 'test')]?.bestCorrect ?? 0;
+    const correctIds = this.review.correctIds();
+    const latestCorrect = module.questions.filter((question) => correctIds.has(question.id)).length;
+    return Math.max(practice, test, latestCorrect);
   }
 
   /** Best correct answers across every module of a unit. */
   unitBestCorrect(unit: Unit): number {
-    return unit.modules.reduce((sum, module) => sum + this.bestCorrect(module.id), 0);
+    return unit.modules.reduce((sum, module) => sum + this.bestCorrect(module), 0);
   }
 
   /** Whether the student has finished the module at least once, in either mode. */
