@@ -2,10 +2,11 @@ import { inject } from '@angular/core';
 import { CanActivateFn, Router, UrlTree } from '@angular/router';
 import { QuizStore } from './quiz-store';
 
-/** Back to the module the student was trying to open. */
+/** Back to the module the student was trying to open; home for a review run. */
 function moduleUrl(router: Router, route: Parameters<CanActivateFn>[0]): UrlTree {
-  const unitId = route.paramMap.get('id') ?? '';
+  const unitId = route.paramMap.get('id');
   const moduleId = route.paramMap.get('moduleId');
+  if (!unitId) return router.createUrlTree(['/']);
   return moduleId
     ? router.createUrlTree(['/unit', unitId, 'module', moduleId])
     : router.createUrlTree(['/unit', unitId]);

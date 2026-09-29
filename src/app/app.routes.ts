@@ -29,5 +29,17 @@ export const routes: Routes = [
     canActivate: [resultReadyGuard],
     loadComponent: () => import('./pages/result/result').then((m) => m.Result),
   },
+  {
+    path: 'review/question',
+    title: 'Tekrar · Geometri',
+    canActivate: [quizReadyGuard],
+    loadComponent: () => import('./pages/quiz/quiz').then((m) => m.Quiz),
+  },
+  {
+    path: 'review/result',
+    title: 'Tekrar Sonucu · Geometri',
+    canActivate: [resultReadyGuard],
+    loadComponent: () => import('./pages/result/result').then((m) => m.Result),
+  },
   { path: '**', redirectTo: '' },
 ];

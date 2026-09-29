@@ -1,6 +1,10 @@
 import { Injectable, computed, inject, signal, DestroyRef } from '@angular/core';
 import { ChoiceKey, Module, Question, QuizMode, Unit } from './models';
 import { ProgressStore } from './progress-store';
+import { ReviewStore } from './review-store';
+
+/** Id of the synthetic module a review run of missed questions is held in. */
+export const REVIEW_MODULE_ID = 'review';
 
 /** Per-question summary used by the result screen. */
 export interface QuestionResult {
@@ -13,6 +17,7 @@ export interface QuestionResult {
 @Injectable({ providedIn: 'root' })
 export class QuizStore {
   private readonly progress = inject(ProgressStore);
+  private readonly review = inject(ReviewStore);
 
   private readonly _unit = signal<Unit | null>(null);
   private readonly _module = signal<Module | null>(null);
@@ -34,6 +39,17 @@ export class QuizStore {
   readonly index = this._index.asReadonly();
   readonly finished = this._finished.asReadonly();
   readonly elapsedSeconds = this._elapsedSeconds.asReadonly();
+
+  /** A review run mixes missed questions from any unit instead of one module. */
+  readonly isReview = computed(() => this._module()?.id === REVIEW_MODULE_ID);
+
+  /** Route prefix of the current run; `question` and `result` hang off it. */
+  readonly runPath = computed<string[]>(() => {
+    const unit = this._unit();
+    const module = this._module();
+    if (this.isReview() || !unit || !module) return ['/review'];
+    return ['/unit', unit.id, 'module', module.id];
+  });
 
   /** A run covers one module, never the whole unit. */
   readonly questions = computed<readonly Question[]>(() => this._module()?.questions ?? []);
@@ -104,6 +120,10 @@ export class QuizStore {
   // ---- Actions ------------------------------------------------------------
 
   start(unit: Unit, module: Module, mode: QuizMode): void {
+    this.startRun(unit, module, mode);
+  }
+
+  private startRun(unit: Unit | null, module: Module, mode: QuizMode): void {
     this.stopTimer();
     this._unit.set(unit);
     this._module.set(module);
@@ -115,6 +135,18 @@ export class QuizStore {
     this._finished.set(false);
     this._elapsedSeconds.set(0);
     this.startTimer();
+  }
+
+  /** Starts a practice run over questions the student missed before. */
+  startReview(questions: readonly Question[]): void {
+    const module: Module = {
+      id: REVIEW_MODULE_ID,
+      order: 0,
+      title: 'Bilemediğin sorular',
+      summary: 'Daha önce yanlış yaptığın ya da boş bıraktığın sorular.',
+      questions: [...questions],
+    };
+    this.startRun(null, module, 'practice');
   }
 
   answer(choice: ChoiceKey): void {
@@ -166,8 +198,15 @@ export class QuizStore {
     this.stopTimer();
     this._finished.set(true);
 
+    this.review.recordRun(
+      this.results().map((result) => ({
+        questionId: result.question.id,
+        correct: result.isCorrect,
+      })),
+    );
+
     const module = this._module();
-    if (module) {
+    if (module && !this.isReview()) {
       this.progress.saveResult(
         module.id,
         this._mode(),
@@ -178,11 +217,12 @@ export class QuizStore {
     }
   }
 
-  /** Restarts the same module in the same mode. */
+  /** Restarts the same module (or the same review questions) in the same mode. */
   retry(): void {
-    const unit = this._unit();
     const module = this._module();
-    if (unit && module) this.start(unit, module, this._mode());
+    if (module && (this._unit() || this.isReview())) {
+      this.startRun(this._unit(), module, this._mode());
+    }
   }
 
   clear(): void {

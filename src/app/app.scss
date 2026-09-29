@@ -1,3 +1,5 @@
+@use './ui/shell' as s;
+
 .update-bar {
   position: fixed;
   left: calc(12px + var(--safe-left));
@@ -27,5 +29,46 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
     cursor: pointer;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: rgba(10, 17, 22, 0.5);
+}
+
+.dialog {
+  position: fixed;
+  z-index: 51;
+  inset-inline: calc(14px + var(--safe-left));
+  bottom: calc(14px + var(--safe-bottom));
+  max-width: 440px;
+  margin-inline: auto;
+  padding: 18px;
+  background: var(--card);
+  border: 1px solid var(--hair);
+  border-radius: var(--radius);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+
+  &__title {
+    font-size: 19px;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+  }
+
+  &__no {
+    @include s.button-secondary;
+    flex: 1 1 0;
+  }
+
+  &__yes {
+    @include s.button-primary;
+    flex: 1 1 0;
   }
 }

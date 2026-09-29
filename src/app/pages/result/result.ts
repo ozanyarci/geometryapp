@@ -28,8 +28,11 @@ export class Result {
     ),
   );
 
-  protected readonly unitId = computed(() => this.store.unit()?.id ?? '');
-  protected readonly moduleId = computed(() => this.store.module()?.id ?? '');
+  /** Where the back arrow and the list link lead: the unit, or home after a review. */
+  protected readonly listLink = computed(() => {
+    const unit = this.store.unit();
+    return this.store.isReview() || !unit ? ['/'] : ['/unit', unit.id];
+  });
 
   /** Offered at the bottom so the student can chain straight into module n+1. */
   protected readonly next = computed(() => {
@@ -63,9 +66,8 @@ export class Result {
   }
 
   protected retry(): void {
-    const unitId = this.unitId();
-    const moduleId = this.moduleId();
+    const runPath = this.store.runPath();
     this.store.retry();
-    void this.router.navigate(['/unit', unitId, 'module', moduleId, 'question']);
+    void this.router.navigate([...runPath, 'question']);
   }
 }

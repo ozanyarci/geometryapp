@@ -6,3 +6,16 @@
     <button type="button" (click)="reloadApp()">Güncelle</button>
   </div>
 }
+
+@if (reviewPromptOpen()) {
+  <div class="backdrop" (click)="declineReview()"></div>
+  <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="review-heading">
+    <h2 class="dialog__title" id="review-heading">
+      Bilemediğin soruları tekrar etmek ister misin?
+    </h2>
+    <div class="dialog__buttons">
+      <button type="button" class="dialog__no" (click)="declineReview()">Hayır</button>
+      <button type="button" class="dialog__yes" (click)="acceptReview()">Evet</button>
+    </div>
+  </div>
+}

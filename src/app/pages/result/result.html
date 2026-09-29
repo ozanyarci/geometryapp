@@ -1,10 +1,15 @@
 <header class="top-bar">
   <div class="top-bar__inner">
-    <a class="top-bar__back" [routerLink]="['/unit', unitId()]" aria-label="Modül listesine dön"
+    <a
+      class="top-bar__back"
+      [routerLink]="listLink()"
+      [attr.aria-label]="store.isReview() ? 'Ana sayfaya dön' : 'Modül listesine dön'"
       >←</a
     >
     <span class="top-bar__kicker">
-      @if (store.module(); as m) {
+      @if (store.isReview()) {
+        Tekrar · Sonuç
+      } @else if (store.module(); as m) {
         Modül {{ m.order }} · Sonuç
       } @else {
         Sonuç
@@ -124,15 +129,19 @@
 
   <div class="actions">
     @if (next(); as n) {
-      <a class="actions__next" [routerLink]="['/unit', unitId(), 'module', n.id]">
+      <a class="actions__next" [routerLink]="['/unit', store.unit()?.id, 'module', n.id]">
         Sonraki modül →
       </a>
     }
     <button type="button" class="actions__retry" (click)="retry()">Tekrar çöz</button>
-    <a class="actions__unit" [routerLink]="['/unit', unitId()]">Modül listesi</a>
+    <a class="actions__unit" [routerLink]="listLink()">
+      {{ store.isReview() ? 'Ana sayfa' : 'Modül listesi' }}
+    </a>
   </div>
 
-  @if (next(); as n) {
+  @if (store.isReview()) {
+    <p class="next-hint">Doğru yaptığın sorular bilemediklerin listesinden çıkarıldı.</p>
+  } @else if (next(); as n) {
     <p class="next-hint">Sırada: {{ n.order }}. modül — {{ n.title }}</p>
   } @else {
     <p class="next-hint">Bu ünitenin son modülüydü. Tebrikler!</p>

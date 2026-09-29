@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { ChoiceKey } from '../../core/models';
 import { QuizStore, formatDuration } from '../../core/quiz-store';
 import { FigureView } from '../../ui/figure/figure';
@@ -14,11 +14,12 @@ import { ScratchPad } from '../../ui/scratch-pad/scratch-pad';
 })
 export class Quiz {
   private readonly router = inject(Router);
-  private readonly params = inject(ActivatedRoute).snapshot.paramMap;
-  private readonly unitId = this.params.get('id') ?? '';
-  private readonly moduleId = this.params.get('moduleId') ?? '';
 
   protected readonly store = inject(QuizStore);
+
+  /** Taken before the run can be cleared, so leaving still knows where to go. */
+  private readonly runPath = this.store.runPath();
+  private readonly isReview = this.store.isReview();
   protected readonly formatDuration = formatDuration;
 
   /** Confirmation sheets for leaving early and for submitting with blanks. */
@@ -76,13 +77,13 @@ export class Quiz {
   protected finish(): void {
     this.finishDialogOpen.set(false);
     this.store.finish();
-    void this.router.navigate(['/unit', this.unitId, 'module', this.moduleId, 'result']);
+    void this.router.navigate([...this.runPath, 'result']);
   }
 
   protected confirmExit(): void {
     this.exitDialogOpen.set(false);
     this.store.clear();
-    void this.router.navigate(['/unit', this.unitId, 'module', this.moduleId]);
+    void this.router.navigate(this.isReview ? ['/'] : this.runPath);
   }
 
   protected dotClass(index: number): string {

@@ -13,7 +13,9 @@
       <strong>{{ store.index() + 1 }}</strong> / {{ store.total() }}
     </span>
 
-    @if (store.module(); as m) {
+    @if (store.isReview()) {
+      <span class="top-bar__module">Tekrar</span>
+    } @else if (store.module(); as m) {
       <span class="top-bar__module">Modül {{ m.order }}</span>
     }
 

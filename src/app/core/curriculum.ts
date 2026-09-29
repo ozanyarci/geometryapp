@@ -59,3 +59,13 @@ export function unitQuestions(unit: Unit): readonly Question[] {
 export function unitQuestionCount(unit: Unit): number {
   return unit.modules.reduce((sum, module) => sum + module.questions.length, 0);
 }
+
+/** Every question in the app, keyed by id. Built on first use. */
+let questionIndex: ReadonlyMap<string, Question> | undefined;
+
+export function findQuestion(id: string): Question | undefined {
+  questionIndex ??= new Map(
+    UNITS.flatMap(unitQuestions).map((question) => [question.id, question]),
+  );
+  return questionIndex.get(id);
+}
