@@ -18750,7 +18750,7 @@ export const UNIT_4_QUADRILATERALS: Unit = {
   title: 'Dörtgenler',
   subtitle: 'Ünite 4',
   description:
-    'Dörtgende iç ve dış açılar, açıortaylar, köşegenleri dik ya da karşılıklı iki açısı dik dörtgenler, köşegenlerle alan, paralelkenar, eşkenar dörtgen, dikdörtgen, kare ve deltoid.',
+    'Genel dörtgenden yamuğa kadar tüm konu: iç ve dış açılar, açıortaylar, köşegenleri dik dörtgenler, orta noktalar dörtgeni ve köşegenlerle alan; paralelkenar ve eşkenar dörtgende açıortay, yükseklik, benzerlik ve alan oranları; dikdörtgen, kare ve deltoidde Öklit bağıntısı, özel açılar, eşlik ve alan; yamukta orta taban, köşegenler, uzatmayla benzerlik, dik ve ikizkenar yamuk.',
   modules: [
     {
       id: 'quadrilaterals-m1',

@@ -2208,7 +2208,7 @@ export const UNIT_10_SPHERES: Unit = {
   title: 'Küre ve Dönel Cisimler',
   subtitle: 'Ünite 10',
   description:
-    'Kürenin alanı, hacmi ve ara kesiti; düzlemsel bölgelerin bir eksen etrafında döndürülmesiyle oluşan cisimler.',
+    'Küreden dönel cisimlere kadar tüm konu: kürenin alanı, hacmi, ara kesiti ve kuşağı; küre ile küp, silindir, koni ve piramidin iç içe yerleştiği cisimler; eritilen ve suya atılan küreler; dik üçgen, dikdörtgen, dik yamuk ve yarım dairenin bir eksen etrafında tam ya da belli bir açıyla döndürülmesiyle oluşan cisimler.',
   modules: [
     {
       id: 'spheres-m1',

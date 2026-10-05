@@ -17848,7 +17848,7 @@ export const UNIT_5_CIRCLES: Unit = {
   title: 'Çember ve Daire',
   subtitle: 'Ünite 5',
   description:
-    'Merkez açı ve çevre açı, teğet-kiriş açısı, dış noktadan çizilen teğetler, çemberin içinde ve dışında kesişen kiriş ve kesenlerin oluşturduğu açılar.',
+    'Çemberde açılardan dairenin alanına kadar tüm konu: merkez açı, çevre açı ve teğet-kiriş açısı; çemberin içinde ve dışında kesişen kiriş ve kesenlerin oluşturduğu açılar; dış noktadan çizilen teğetler, paralel kirişler, eşit yaylar ve kirişler dörtgeni; kesişen ve teğet çemberler, ortak iç ve dış teğetler; çemberde uzunluklar, nokta kuvveti ve içteğet çember; yay uzunluğu, daire dilimi, daire kesmesi ve daire halkasıyla alanlar.',
   modules: [
     {
       id: 'circles-m1',

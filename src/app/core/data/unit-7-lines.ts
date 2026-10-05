@@ -7854,7 +7854,7 @@ export const UNIT_7_LINES: Unit = {
   title: 'Doğrunun Analitik İncelenmesi',
   subtitle: 'Ünite 7',
   description:
-    'Paralel ve dik doğrular, simetri, eşitsizliklerin belirttiği bölgeler, doğrusal grafikler, açıortaylar ve noktanın doğruya uzaklığı.',
+    'Eğimden en kısa yola kadar tüm konu: eğim, eğim açısı ve doğru denklemi; doğrusal noktalar ve eksen kesim noktaları; paralel ve dik doğrular, kesişim noktaları ve doğruların sınırladığı alanlar; noktanın doğruya uzaklığı ve paralel doğrular arası uzaklık; doğru demeti ve iki doğru arasındaki açı; noktanın ve doğrunun noktaya, eksenlere ve bir doğruya göre simetriği; açıortaylar, eşitsizliklerin belirttiği bölgeler, doğrusal grafikler ve en kısa yol.',
   modules: [
     {
       id: 'lines-m1',
