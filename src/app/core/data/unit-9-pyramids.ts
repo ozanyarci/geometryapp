@@ -2838,7 +2838,7 @@ export const UNIT_9_PYRAMIDS: Unit = {
   title: 'Piramitler',
   subtitle: 'Ünite 9',
   description:
-    'Kare piramit, üçgen piramit ve koni: hacim, tabana paralel kesit, yan yüz yüksekliği ve benzer cisimlerde hacim oranı.',
+    'Piramitten koniye kadar tüm konu: kare, dikdörtgen, üçgen ve altıgen tabanlı piramitlerde hacim, yanal alan ve tüm alan; yan yüz yüksekliği, dik köşeli üçgen piramit ve düzgün dörtyüzlü; tabana paralel kesit, kesik piramit ve kesik koni; daire diliminden koni ve koni yüzeyinde en kısa yol; koni ile silindir arasında sıvı aktarma, iç içe cisimler ve benzer cisimlerde hacim oranı.',
   modules: [
     {
       id: 'pyramids-m1',

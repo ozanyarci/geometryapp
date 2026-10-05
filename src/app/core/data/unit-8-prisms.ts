@@ -2951,7 +2951,7 @@ export const UNIT_8_PRISMS: Unit = {
   title: 'Prizmalar',
   subtitle: 'Ünite 8',
   description:
-    'Küp, dikdörtgenler prizması, üçgen prizma ve silindir: köşegenler, kesitler, hacim, yüzey alanı ve yüzey üzerinde en kısa yol.',
+    'Küpten silindire kadar tüm konu: küp, dikdörtgenler prizması, üçgen ve altıgen prizma ile silindirde hacim, yanal alan ve tüm alan; yüzey ve cisim köşegenleri, köşegen kesitleri ve düzlemle kesilen küp; eğik prizma ve eğik silindir; iç içe yerleşen cisimler, kaptaki ve taşan sıvı; yüzey üzerinde en kısa yol.',
   modules: [
     {
       id: 'prisms-m1',

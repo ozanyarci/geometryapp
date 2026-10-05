@@ -2361,7 +2361,7 @@ export const UNIT_6_ANALYTIC: Unit = {
   title: 'Noktanın Analitik İncelenmesi',
   subtitle: 'Ünite 6',
   description:
-    'Koordinat düzleminin bölgeleri, iki nokta arası uzaklık, orta nokta, koordinatları verilen üçgenin alanı, kenarortay ve ağırlık merkezi.',
+    'Koordinat düzleminden döndürmeye kadar tüm konu: düzlemin bölgeleri ve işaretler; iki nokta arası uzaklık, eşit uzaklıktaki nokta ve orta nokta; içten ve dıştan oranla bölen nokta; koordinatları verilen üçgen ve dörtgenin alanı; paralelkenar, dikdörtgen ve düzgün altıgenin eksik köşesi; kenarortay ve ağırlık merkezi; simetrik noktalar ve orijin etrafında döndürme.',
   modules: [
     {
       id: 'analytic-m1',

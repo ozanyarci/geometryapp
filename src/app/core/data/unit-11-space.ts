@@ -1823,7 +1823,7 @@ export const UNIT_11_SPACE: Unit = {
   title: 'Uzayda Doğru ve Düzlem',
   subtitle: 'Ünite 11',
   description:
-    'Düzlem belirten durumlar, uzayda doğru ve düzlemlerin birbirine göre durumları, dik izdüşüm ve üç dikme teoremi.',
+    'Öncüllerden üç dikme teoremine kadar tüm konu: doğru ve düzlem önermeleri; düzlem belirten durumlar; uzayda doğruların ve düzlemlerin birbirine göre durumları ve doğruların düzlemi bölmesi; düzleme uzaklık, dik izdüşüm, izdüşüm alanı ve ölçek açısı; üç dikme teoremi ve kesişen düzlemlerde en kısa yol.',
   modules: [
     {
       id: 'space-m1',

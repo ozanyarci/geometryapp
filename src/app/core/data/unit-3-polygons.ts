@@ -3066,7 +3066,7 @@ export const UNIT_3_POLYGONS: Unit = {
   title: 'Çokgenler',
   subtitle: 'Ünite 3',
   description:
-    'Çokgende iç ve dış açılar, köşegen sayısı, düzgün çokgenlerin açıları ve alanları, düzgün çokgenle birlikte kurulan üçgen ve kareler.',
+    'Çokgende açılardan alana kadar tüm konu: iç ve dış açılar toplamı, kenar ve köşegen sayısı; düzgün çokgende iç, dış ve merkez açılar, kenar uzantıları ve köşegenlerin kesişme açısı; düzgün beşgen, altıgen, sekizgen ve onikigende köşegen, uzunluk ve alan; düzgün çokgenin içine ya da dışına kurulan eşkenar üçgen ve kareler; alan oranları, paralel kenarlar arası uzaklık ve iç noktanın kenarlara uzaklıkları.',
   modules: [
     {
       id: 'polygons-m1',
